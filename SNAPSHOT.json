@@ -1,0 +1,42 @@
+{
+  "snapshot_date": "2026-09-17",
+  "aliases": [
+    {
+      "snapshot_id": "nested_official/GTS",
+      "branch": "variants/nested_official/GTS",
+      "source_bundle_sha256": "12e9c17af25a6d03058d4a89abb2b5f6730dff347be25a7e9a4f82064c056476",
+      "source_and_build_payload_sha256": "9f388e5854d9a854e1d106560ca7fb808cb5cf4db7085cf0bbc58f0c2e0295e0",
+      "observed_binary_sha256": {}
+    },
+    {
+      "snapshot_id": "tensorjoin_external/GTS",
+      "branch": "variants/tensorjoin_external/GTS",
+      "source_bundle_sha256": "12e9c17af25a6d03058d4a89abb2b5f6730dff347be25a7e9a4f82064c056476",
+      "source_and_build_payload_sha256": "9f388e5854d9a854e1d106560ca7fb808cb5cf4db7085cf0bbc58f0c2e0295e0",
+      "observed_binary_sha256": {}
+    },
+    {
+      "snapshot_id": "backup4080_second_source/GTS",
+      "branch": "variants/backup4080_second_source/GTS",
+      "source_bundle_sha256": "12e9c17af25a6d03058d4a89abb2b5f6730dff347be25a7e9a4f82064c056476",
+      "source_and_build_payload_sha256": "9f388e5854d9a854e1d106560ca7fb808cb5cf4db7085cf0bbc58f0c2e0295e0",
+      "observed_binary_sha256": {
+        "GTS": "61d7fc9566eb11cac5a24ff38f3aed80fb31bd87c0b23c4c4a64a8378b2ab519"
+      }
+    }
+  ],
+  "files": {
+    "CMakeLists.txt": "e556674d0633d91d2d1f42dc34fad48c8ae629c5f54b340f26f7f53a5dfbfb77",
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "captured_src_include_bytes_modified": false,
+  "publication_adjustments": [],
+  "validation": "archival snapshot; not a correctness or performance qualification"
+}
