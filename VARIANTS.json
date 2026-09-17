@@ -1,0 +1,459 @@
+{
+  "snapshot_date": "2026-09-17",
+  "source_branches": 47,
+  "distinct_source_bundles": 30,
+  "distinct_source_and_build_payloads": 36,
+  "identity_scope": "Captured CUDA/C++ src/include bytes; publication also preserves captured CMakeLists.txt and rebuild.sh. The safe-arrival branch includes its separate driver.",
+  "variants": [
+    {
+      "snapshot_id": "archive/GTS_async_update_0529",
+      "branch": "variants/archive/GTS_async_update_0529",
+      "source_bundle_sha256": "38bd1ff922ebe18cd607a7dcfcae9f84ea2027ccc14d76d50922622a3e127e3b",
+      "source_and_build_payload_sha256": "0b81b892e0780b15118e2374b7301aeecceee1517d150000f5e117e78a1bacd0",
+      "observed_binary_sha256": {
+        "GTS": "68c234949b9c29fa68091bb003936ad7bf26318855ed53ecc3460a42be78c77f"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_fft",
+      "branch": "variants/archive/GTS_fft",
+      "source_bundle_sha256": "5b495a327e4467e798dd3b1b542b8f4fbd0c922bcec20d4816621d2bc0675839",
+      "source_and_build_payload_sha256": "c319e033c61caa02ac027a8d582048c8115e4f77b13f16d3b8de4036c04bcaf5",
+      "observed_binary_sha256": {
+        "GTS": "e5b5436c4b897b5c11eceeb64840198b5679091192f5cd84e8adc741e8ac79a7"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_float",
+      "branch": "variants/archive/GTS_float",
+      "source_bundle_sha256": "6643cd1768f28c9cb3bd29238bfbbabd5dbdcc2cc9090ef08eedaf8adb84c27d",
+      "source_and_build_payload_sha256": "7c9de95b2b1efd320ce1ba107c9bff20948385095f0fc561900338728f767805",
+      "observed_binary_sha256": {
+        "GTS": "ea69a76735c8717811becd1e8f7552f9bf71d2f0a8442800840203eca1d3deb6"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_input",
+      "branch": "variants/archive/GTS_hei_input",
+      "source_bundle_sha256": "1a8cccda9497057729620a98c953511009b0b3b77eeadd34f7715104ac278f6e",
+      "source_and_build_payload_sha256": "a8ea004ec9a5a51d153abbff5ee7492d3d483d17f1b53aff7491971d82490baa",
+      "observed_binary_sha256": {
+        "GTS": "d803966b3aa0b1b74e61147c6fcdecaa60d780c402859b7007967502a75d1398"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_input_fixed",
+      "branch": "variants/archive/GTS_hei_input_fixed",
+      "source_bundle_sha256": "a0bf8f773277b0eb8239bd918740e278c76ce1d587f2e655ec6f9e88834259ad",
+      "source_and_build_payload_sha256": "bdcfcde047868d2233454bcad019931c40662003078908ecdd9c5f28d2c6460a",
+      "observed_binary_sha256": {
+        "GTS": "f844d76317db31479496a473a1156073967e494110f0759f7861fbc2d15dcdae"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_input_instrument",
+      "branch": "variants/archive/GTS_hei_input_instrument",
+      "source_bundle_sha256": "a3618826961f76e008d5903162398bf5d2a3685ecc9287271d8c098490fe099c",
+      "source_and_build_payload_sha256": "1fa5e05a6c2cde7bfec89db4013340296b20b995892bde9b051c6a34998fd5fc",
+      "observed_binary_sha256": {
+        "GTS": "4a37851607db071ca307e62476d1c160390cdf0d07ee32f1e8e82c4889ad79a1"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_input_powopt",
+      "branch": "variants/archive/GTS_hei_input_powopt",
+      "source_bundle_sha256": "b1e1e3cdada51babd7ecd517aa3a03e59717915da52c00519b88001c4ef8c6ec",
+      "source_and_build_payload_sha256": "34cadf05006a53146767e43a6a6ccd0d0ef602632cfce1321786a4f8e6e239dc",
+      "observed_binary_sha256": {
+        "GTS": "7b59213669139fa516eb9d47ddc2bf2c9ae0318584eed04b39796a8ea48fc4d5"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_lea_ada",
+      "branch": "variants/archive/GTS_hei_lea_ada",
+      "source_bundle_sha256": "e012ca14d7a31a1f9a4979118f37266aac75ca63a0fedc112000b47d88d31d2c",
+      "source_and_build_payload_sha256": "e2f7fa3b22cc34ce83a70c646198edd529c92ae48e6bc1713c762ba9039d201e",
+      "observed_binary_sha256": {
+        "GTS": "a7dc2f8b20452ce8ad9fd18b06076f72cded4cbf52df939ded21119da8de3665"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_lea_ada_input_prune",
+      "branch": "variants/archive/GTS_hei_lea_ada_input_prune",
+      "source_bundle_sha256": "7e67cf493119e8f5f9d59a76070eb5b3b07f9d6b3f3241a7f7d9b5c6982aef48",
+      "source_and_build_payload_sha256": "d0b843fd1e5260c0ef3a24bae9ed34e77d97f2020f09f174a3418fb147e792c3",
+      "observed_binary_sha256": {
+        "GTS": "1a19635394b01d76dd0dd7afc0157d2aa2bf04c19c17a0488b11f471b36a6eb1"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_lea_ada_input_prune_fixed",
+      "branch": "variants/archive/GTS_hei_lea_ada_input_prune_fixed",
+      "source_bundle_sha256": "b0f545e21f1b0294264fa6f61a1a15484b37788c16e2701169fff22aa77ded14",
+      "source_and_build_payload_sha256": "0616584f1c12e6de72b7468f1d06843a60aaec21f650a88f11bc8c4efda67e25",
+      "observed_binary_sha256": {
+        "GTS": "2838360b255e664242548a8229b3ebe5f88e325476555ccc9798914d20da72dc"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_lea_ada_input_prune_update",
+      "branch": "variants/archive/GTS_hei_lea_ada_input_prune_update",
+      "source_bundle_sha256": "6bd9ce9c9628f8db16457928448120215efc1492fbb16ce610915f13d68e5f8b",
+      "source_and_build_payload_sha256": "36690867122c54e87581f2244c73b4169c720d55fb18447955e88cfa2e92bb48",
+      "observed_binary_sha256": {
+        "GTS": "1f8d85ba04812be2fdebd09a4a1fa7ee56bc3b34fc944ccbccff3f02aa6e9b30"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_hei_random",
+      "branch": "variants/archive/GTS_hei_random",
+      "source_bundle_sha256": "96a976fc3c59dca52db22f2b866a387568e18db4e7af6bb625c625e92ed98b1b",
+      "source_and_build_payload_sha256": "055c4d84c2e8ae545107e6f8f07406b501f0bb1e734e442b6b9897b1c0717d2a",
+      "observed_binary_sha256": {
+        "GTS": "f155260e4845d2c65567cebb56a00a4b297857a6f58d446d626460f26547bd5b"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_incremental",
+      "branch": "variants/archive/GTS_incremental",
+      "source_bundle_sha256": "931349ec587e653833d134ae1233d26808b747bb2dd46ab94584a56fe4774f51",
+      "source_and_build_payload_sha256": "a14bcd2ea2a1149e75444e45b811f375c0f5c09ce885933c4801e4729629252d",
+      "observed_binary_sha256": {
+        "GTS": "2f940b725c510cad7a2cd708d1b59f8ce5004343b0fb0003e4b2b0b3acb5502d"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_incremental.bak_tanimoto_20260601_114814",
+      "branch": "variants/archive/GTS_incremental.bak_tanimoto_20260601_114814",
+      "source_bundle_sha256": "931349ec587e653833d134ae1233d26808b747bb2dd46ab94584a56fe4774f51",
+      "source_and_build_payload_sha256": "a14bcd2ea2a1149e75444e45b811f375c0f5c09ce885933c4801e4729629252d",
+      "observed_binary_sha256": {
+        "GTS": "2f940b725c510cad7a2cd708d1b59f8ce5004343b0fb0003e4b2b0b3acb5502d"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_lea0",
+      "branch": "variants/archive/GTS_lea0",
+      "source_bundle_sha256": "5ceb7bd4ee3cbc78ff72dde4a5895f7e7bdc8c18ffa8f9195ffdda9ff27147bd",
+      "source_and_build_payload_sha256": "038ad4609d9ccbd9dcc89d68c748128088b608d5e5338d00a2b23ca8d11a5929",
+      "observed_binary_sha256": {
+        "GTS": "59bae18525da54baf63d8b9fde240553a676984693e8358e29c82a4a529c63fc"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_lea1",
+      "branch": "variants/archive/GTS_lea1",
+      "source_bundle_sha256": "d943cd23e4c74a2f624f1c403bb28ac2e796bad35c9de9433e4b81df42d7cf8b",
+      "source_and_build_payload_sha256": "af0eee9b62a7942c30c89ac22c025e056237e4cfc492aa8da95cdcbe5031f833",
+      "observed_binary_sha256": {
+        "GTS": "10d092ee8643566dc869245e472c8a0d3131af1490aa74de1febb881f3ac53bd"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_ori",
+      "branch": "variants/archive/GTS_ori",
+      "source_bundle_sha256": "d2bbc99c8e4722b2035d73bd9afb3fbd5c5b3f97990553d32a56c84f5e26dfc5",
+      "source_and_build_payload_sha256": "033633681f42d28e65ddf72ca2f1766cae92c5f05b3d821dcd146908121ed23f",
+      "observed_binary_sha256": {
+        "GTS": "08ecf366510f55a2b6974b551e0e94154e52f2017227d7f3d79dd52c6f2a6ac1"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_pivot_ablation_20260512",
+      "branch": "variants/archive/GTS_pivot_ablation_20260512",
+      "source_bundle_sha256": "e09c8a41be5c794261f6bad44c4fa0acbb1fad63569ca148ac9ed7bdf9120d44",
+      "source_and_build_payload_sha256": "19fce7c463a539a1308daa7660d40bcaebeeb903125c03f12627d43826a210c7",
+      "observed_binary_sha256": {
+        "GTS": "e2b2d7b0dd98021708164298ffac34a17af579493e5ed62919739564bd751af1"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_protein",
+      "branch": "variants/archive/GTS_protein",
+      "source_bundle_sha256": "78b2e71b8a0d58cdd3e8ad178a0ed885fedb59c5da61604d9ee6c6d6798cbd74",
+      "source_and_build_payload_sha256": "147ebbf9eca375f1c15e9ec1609916612c9c707976f573307251775d3a007894",
+      "observed_binary_sha256": {
+        "GTS": "ab91e26fedb6d72b14cdc07a1275ad31baa10086394a639383e6bf9fd3a527c1"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_sort_opt",
+      "branch": "variants/archive/GTS_sort_opt",
+      "source_bundle_sha256": "34aad5e44c8bf7d08b4d8cb3c0fcf7adc8176327ab5e99f7436e8946c43313bc",
+      "source_and_build_payload_sha256": "65fee84726eec724ae9410b7f2f84692bee1a3fa727e57b924b134959e4f4add",
+      "observed_binary_sha256": {
+        "GTS": "ac341bab51b4653059960825e77d3de5b3b1d068628e25831f7dd6daa6d15188"
+      }
+    },
+    {
+      "snapshot_id": "archive/GTS_tanimoto",
+      "branch": "variants/archive/GTS_tanimoto",
+      "source_bundle_sha256": "0c84e40d6a24c0e05f3b14d30122e25311dee9780239e235d8af7145e5419198",
+      "source_and_build_payload_sha256": "45116eb91d86a1b116c476dd310f084f5050c5d329f51397181b1c03aca20c73",
+      "observed_binary_sha256": {
+        "GTS": "ea16b3efc12d84af1e3d28f39cf79fd31516edf00e50d91ef443b230ec9170a7"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_data/GTS",
+      "branch": "variants/backup4080_data/GTS",
+      "source_bundle_sha256": "e481e1d3689f640a0c9710c3184c3f8781818cc03d278da59e1552f8d05ac83e",
+      "source_and_build_payload_sha256": "b82bb53318346bc36184cc17eb8039d492024c54433851f7fedde19e63ed9ea2",
+      "observed_binary_sha256": {
+        "GTS": "f43c7163da0ed7fc0744867f393efa262b7fa46ef7bd71da46ca27af4ac08606"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_data/GTS_hei_input",
+      "branch": "variants/backup4080_data/GTS_hei_input",
+      "source_bundle_sha256": "1a8cccda9497057729620a98c953511009b0b3b77eeadd34f7715104ac278f6e",
+      "source_and_build_payload_sha256": "aab533ca3171d2f5f33ec77564885f0e25850e07f59e902a00b71f1177314366",
+      "observed_binary_sha256": {
+        "GTS": "c00ccd1c87e4a96d4b0917d54deb97bc75e1a212d6cfe7503591a646a741c50c"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_data/GTS_plus_plus",
+      "branch": "variants/backup4080_data/GTS_plus_plus",
+      "source_bundle_sha256": "270a97d075d673e01fef18883a850e78e233f799a7a45e56b4cd89029b3981a6",
+      "source_and_build_payload_sha256": "683d3a125b4e487d465f6a04e250f08f6144f4943f991fe0686bfe63d921b05b",
+      "observed_binary_sha256": {
+        "GTS": "e79977e925cb66a2fb5de5962083ca406801aae0ea089e56e2eccaeceeaf567b"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_home/GTS_hei_lea_ada_input_prune_update",
+      "branch": "variants/backup4080_home/GTS_hei_lea_ada_input_prune_update",
+      "source_bundle_sha256": "af59de0cdca642558eb805007ebc498f50ec8b78299310bec9b12a2e61828ccc",
+      "source_and_build_payload_sha256": "487cfad1c8e6fb4d20d22e52945982f4fa6d5f8124919ba8c2c09eba689088f5",
+      "observed_binary_sha256": {
+        "GTS": "e0de4c955bcb00636133ded917ba0a9b20de3e4b2ca2f7ef193d5e753bf0612b"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_home/GTS_incremental",
+      "branch": "variants/backup4080_home/GTS_incremental",
+      "source_bundle_sha256": "83c5d412b216b7b8830a1c5945ead4832715ee58d5d56cce37c8d1682990cedd",
+      "source_and_build_payload_sha256": "43beda61aeb05acb2dd5821fbece4b4716abb247adf17f8c577dd761956fb21a",
+      "observed_binary_sha256": {
+        "GTS": "59cecca7e45da116b76546598d775f73cbd926a998deb53a1810eb76893866db"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_home/GTS_ori",
+      "branch": "variants/backup4080_home/GTS_ori",
+      "source_bundle_sha256": "d2bbc99c8e4722b2035d73bd9afb3fbd5c5b3f97990553d32a56c84f5e26dfc5",
+      "source_and_build_payload_sha256": "de8db4929b2fa2a5c25daa839560f5de7929c16fbf5c467ecc3317ff8198af4b",
+      "observed_binary_sha256": {
+        "GTS": "1b5a475cac01428fa5f636b3e4ff873227791da2c617b3435cabf0e845615768"
+      }
+    },
+    {
+      "snapshot_id": "backup4080_second_source/GTS",
+      "branch": "variants/backup4080_second_source/GTS",
+      "source_bundle_sha256": "12e9c17af25a6d03058d4a89abb2b5f6730dff347be25a7e9a4f82064c056476",
+      "source_and_build_payload_sha256": "9f388e5854d9a854e1d106560ca7fb808cb5cf4db7085cf0bbc58f0c2e0295e0",
+      "observed_binary_sha256": {
+        "GTS": "61d7fc9566eb11cac5a24ff38f3aed80fb31bd87c0b23c4c4a64a8378b2ab519"
+      }
+    },
+    {
+      "snapshot_id": "gate0_native/native_gts_src",
+      "branch": "variants/gate0_native/native_gts_src",
+      "source_bundle_sha256": "676ae6287be0ec46f1500e408d9856c203a0b8ac5a123bb076ad99bc06c863bc",
+      "source_and_build_payload_sha256": "1f3d33cf22dafa9bbc254acf47d275664e3562f0260d4b9722a46b3f06666cca",
+      "observed_binary_sha256": {}
+    },
+    {
+      "snapshot_id": "minimal_closure/GTSPP",
+      "branch": "variants/minimal_closure/GTSPP",
+      "source_bundle_sha256": "a8c7e05ff9ffcd89362dcc5ecd76c377b04d462f53d8cce67c631e29c69b949e",
+      "source_and_build_payload_sha256": "20ed522952b67b3c8b0358dcfabdeddb271bb4d48a2773434344a103a0153284",
+      "observed_binary_sha256": {
+        "C1MinimalClosure": "fe77d43420dfe134b58240c380997c19c3addeff0ca8190ea72aaf02551203c5",
+        "GTS": "05b90a549f1774e214d1841ad99776727042be967751afc560eea595441c4d2c"
+      }
+    },
+    {
+      "snapshot_id": "nested_official/GTS",
+      "branch": "variants/nested_official/GTS",
+      "source_bundle_sha256": "12e9c17af25a6d03058d4a89abb2b5f6730dff347be25a7e9a4f82064c056476",
+      "source_and_build_payload_sha256": "9f388e5854d9a854e1d106560ca7fb808cb5cf4db7085cf0bbc58f0c2e0295e0",
+      "observed_binary_sha256": {}
+    },
+    {
+      "snapshot_id": "project/GTS_fft",
+      "branch": "variants/project/GTS_fft",
+      "source_bundle_sha256": "5b495a327e4467e798dd3b1b542b8f4fbd0c922bcec20d4816621d2bc0675839",
+      "source_and_build_payload_sha256": "c319e033c61caa02ac027a8d582048c8115e4f77b13f16d3b8de4036c04bcaf5",
+      "observed_binary_sha256": {
+        "GTS": "e5b5436c4b897b5c11eceeb64840198b5679091192f5cd84e8adc741e8ac79a7"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_float",
+      "branch": "variants/project/GTS_float",
+      "source_bundle_sha256": "6643cd1768f28c9cb3bd29238bfbbabd5dbdcc2cc9090ef08eedaf8adb84c27d",
+      "source_and_build_payload_sha256": "7c9de95b2b1efd320ce1ba107c9bff20948385095f0fc561900338728f767805",
+      "observed_binary_sha256": {
+        "GTS": "ea69a76735c8717811becd1e8f7552f9bf71d2f0a8442800840203eca1d3deb6"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei",
+      "branch": "variants/project/GTS_hei",
+      "source_bundle_sha256": "96a976fc3c59dca52db22f2b866a387568e18db4e7af6bb625c625e92ed98b1b",
+      "source_and_build_payload_sha256": "5856c32edc89a16afbf26c02b6dff7c320299deca24be3214646996cd07c484d",
+      "observed_binary_sha256": {
+        "GTS": "f155260e4845d2c65567cebb56a00a4b297857a6f58d446d626460f26547bd5b"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei_input",
+      "branch": "variants/project/GTS_hei_input",
+      "source_bundle_sha256": "1a8cccda9497057729620a98c953511009b0b3b77eeadd34f7715104ac278f6e",
+      "source_and_build_payload_sha256": "d96e05dba76d8d8a2d7eb4ea25f18aad22351ddc2daddd1d8d55d5883d424fc0",
+      "observed_binary_sha256": {
+        "GTS": "51edcf25e7a23a3a5e2a5b2f227f92766fc352f1192983ffb9704acaa1fd3661"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei_lea",
+      "branch": "variants/project/GTS_hei_lea",
+      "source_bundle_sha256": "2de914557fb5d398541ffec725ab8d6ea05ad27c7fa8722736d14d104ce545b8",
+      "source_and_build_payload_sha256": "58e2b6525cac398f015e0a4740a2750cd5de4db8d5cdf0a6152190f70eb6775d",
+      "observed_binary_sha256": {
+        "GTS": "aa239619539d57c08a118fce208966d7748344ba2d34dab0e6205d1107c02408"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei_lea_ada",
+      "branch": "variants/project/GTS_hei_lea_ada",
+      "source_bundle_sha256": "e012ca14d7a31a1f9a4979118f37266aac75ca63a0fedc112000b47d88d31d2c",
+      "source_and_build_payload_sha256": "e2f7fa3b22cc34ce83a70c646198edd529c92ae48e6bc1713c762ba9039d201e",
+      "observed_binary_sha256": {
+        "GTS": "a7dc2f8b20452ce8ad9fd18b06076f72cded4cbf52df939ded21119da8de3665"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei_lea_ada_input",
+      "branch": "variants/project/GTS_hei_lea_ada_input",
+      "source_bundle_sha256": "7e4429045072501cb5f6d725b9e98accf57207437006d2d2cf1288756be25d49",
+      "source_and_build_payload_sha256": "1cd8e03242120b6efc3fcce57d5d0adc3f7211174578359d6fad4b8b1f89d93c",
+      "observed_binary_sha256": {
+        "GTS": "4dff729f38093bad6807e8c1cba18c8f4d15077d4767d70e515d4ebe30b9d265"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei_lea_ada_input_prune",
+      "branch": "variants/project/GTS_hei_lea_ada_input_prune",
+      "source_bundle_sha256": "7e67cf493119e8f5f9d59a76070eb5b3b07f9d6b3f3241a7f7d9b5c6982aef48",
+      "source_and_build_payload_sha256": "e2b60971a87530570d0ee77be1df497790c2a49d0cc5f53b7241c79ea7e8280c",
+      "observed_binary_sha256": {
+        "GTS": "9fcaa6f962f0a16baded9e8fc35d222b49edc5dca42bf9ef774acbfbf4755696"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_hei_random",
+      "branch": "variants/project/GTS_hei_random",
+      "source_bundle_sha256": "96a976fc3c59dca52db22f2b866a387568e18db4e7af6bb625c625e92ed98b1b",
+      "source_and_build_payload_sha256": "055c4d84c2e8ae545107e6f8f07406b501f0bb1e734e442b6b9897b1c0717d2a",
+      "observed_binary_sha256": {
+        "GTS": "f155260e4845d2c65567cebb56a00a4b297857a6f58d446d626460f26547bd5b"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_lea0",
+      "branch": "variants/project/GTS_lea0",
+      "source_bundle_sha256": "5ceb7bd4ee3cbc78ff72dde4a5895f7e7bdc8c18ffa8f9195ffdda9ff27147bd",
+      "source_and_build_payload_sha256": "038ad4609d9ccbd9dcc89d68c748128088b608d5e5338d00a2b23ca8d11a5929",
+      "observed_binary_sha256": {
+        "GTS": "59bae18525da54baf63d8b9fde240553a676984693e8358e29c82a4a529c63fc"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_lea1",
+      "branch": "variants/project/GTS_lea1",
+      "source_bundle_sha256": "d943cd23e4c74a2f624f1c403bb28ac2e796bad35c9de9433e4b81df42d7cf8b",
+      "source_and_build_payload_sha256": "af0eee9b62a7942c30c89ac22c025e056237e4cfc492aa8da95cdcbe5031f833",
+      "observed_binary_sha256": {
+        "GTS": "10d092ee8643566dc869245e472c8a0d3131af1490aa74de1febb881f3ac53bd"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_ori",
+      "branch": "variants/project/GTS_ori",
+      "source_bundle_sha256": "d2bbc99c8e4722b2035d73bd9afb3fbd5c5b3f97990553d32a56c84f5e26dfc5",
+      "source_and_build_payload_sha256": "c58145c7c522000be73baa59c305ff58bc9b07ad5ca8b833daebc0ec4b3174a8",
+      "observed_binary_sha256": {
+        "GTS": "67922c04f77781481c890eb92831b4261fd5fe321f41d78b87c31386bb9c7201"
+      }
+    },
+    {
+      "snapshot_id": "project/GTS_sort_opt",
+      "branch": "variants/project/GTS_sort_opt",
+      "source_bundle_sha256": "34aad5e44c8bf7d08b4d8cb3c0fcf7adc8176327ab5e99f7436e8946c43313bc",
+      "source_and_build_payload_sha256": "65fee84726eec724ae9410b7f2f84692bee1a3fa727e57b924b134959e4f4add",
+      "observed_binary_sha256": {
+        "GTS": "ac341bab51b4653059960825e77d3de5b3b1d068628e25831f7dd6daa6d15188"
+      }
+    },
+    {
+      "snapshot_id": "rttide_adapter/GTSPP",
+      "branch": "variants/rttide_adapter/GTSPP",
+      "source_bundle_sha256": "a8c7e05ff9ffcd89362dcc5ecd76c377b04d462f53d8cce67c631e29c69b949e",
+      "source_and_build_payload_sha256": "20ed522952b67b3c8b0358dcfabdeddb271bb4d48a2773434344a103a0153284",
+      "observed_binary_sha256": {}
+    },
+    {
+      "snapshot_id": "safe_arrival/source",
+      "branch": "variants/safe_arrival/source",
+      "source_bundle_sha256": "8fba88b35f03671bf39f900eb51bac3bba2c249e62abcb3a55490d3341a38ac8",
+      "source_and_build_payload_sha256": "62a09e10c1addb680e04ac97c705da730467cc0d9753f4bcd7623372385be2ea",
+      "observed_binary_sha256": {}
+    },
+    {
+      "snapshot_id": "tensorjoin_external/GTS",
+      "branch": "variants/tensorjoin_external/GTS",
+      "source_bundle_sha256": "12e9c17af25a6d03058d4a89abb2b5f6730dff347be25a7e9a4f82064c056476",
+      "source_and_build_payload_sha256": "9f388e5854d9a854e1d106560ca7fb808cb5cf4db7085cf0bbc58f0c2e0295e0",
+      "observed_binary_sha256": {}
+    }
+  ],
+  "excluded_directory_instances": [
+    {
+      "snapshot_id": "project/GTS_incremental",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    },
+    {
+      "snapshot_id": "archive/GTS",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    },
+    {
+      "snapshot_id": "experiment_results/GTS_baseline",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    },
+    {
+      "snapshot_id": "experiment_results/GTS_hei_input",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    },
+    {
+      "snapshot_id": "experiment_results/GTS_incremental",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    },
+    {
+      "snapshot_id": "experiment_results/GTS_plus_plus",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    },
+    {
+      "snapshot_id": "backup4080_second/GTS",
+      "reason": "No direct captured source bundle; container, results, or binary-only artifact"
+    }
+  ],
+  "unqualified_routes": [
+    "Legacy ANNS restricted source/receipt paths",
+    "Unexpanded historical TIDE archive stages",
+    "High-buffer binary-only campaign",
+    "Later TIDEpro fingerprint-service campaigns outside this source snapshot"
+  ]
+}
