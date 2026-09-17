@@ -1,0 +1,37 @@
+{
+  "snapshot_date": "2026-09-17",
+  "aliases": [
+    {
+      "snapshot_id": "backup4080_home/GTS_incremental",
+      "branch": "variants/backup4080_home/GTS_incremental",
+      "source_bundle_sha256": "83c5d412b216b7b8830a1c5945ead4832715ee58d5d56cce37c8d1682990cedd",
+      "source_and_build_payload_sha256": "43beda61aeb05acb2dd5821fbece4b4716abb247adf17f8c577dd761956fb21a",
+      "observed_binary_sha256": {
+        "GTS": "59cecca7e45da116b76546598d775f73cbd926a998deb53a1810eb76893866db"
+      }
+    }
+  ],
+  "files": {
+    "CMakeLists.txt": "5ffd1354350417503b99ffd923a2b523227fe88fe9a5a4b71853b2b512cae1af",
+    "include/config.cuh": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+    "include/file.cuh": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+    "include/gpu_timer.cuh": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+    "include/incremental_insert.cuh": "79a63dd8cefc68757a688e63060bc33e6d259fa774ce7caec8605fba4080e145",
+    "include/mlp_constant.cuh": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+    "include/residual_pruning.cuh": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+    "include/residual_tuner.cuh": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "9f6025e9f12a2715fe23153cde1792685f11d7f098b9c3cf714cc63be45da242",
+    "include/search_v2.cuh": "591115cebfa0e6207572b91ee7e4f0f73d280d20a8de485d4cde224b8df4075b",
+    "include/tree.cuh": "31c38a4fe54752a95f4151c9ddfda213b413fdd2ea8439a3aaa1956697b87472",
+    "include/update.cuh": "27bd839886dc7036ab7451f2129c2bfe093246ebfc131cd1c90d53e83235d501",
+    "include/update_optimized.cuh": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+    "include/update_user_modified.cuh": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+    "rebuild.sh": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+    "src/main.cu": "b10b9978606d8d780c7b0b74db5d1e349c67907c547e5e408e21ce9d403b32b1",
+    "src/mlp_constant.cuh": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551"
+  },
+  "captured_src_include_bytes_modified": false,
+  "publication_adjustments": [],
+  "validation": "archival snapshot; not a correctness or performance qualification"
+}
