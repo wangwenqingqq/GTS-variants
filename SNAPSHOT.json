@@ -1,0 +1,43 @@
+{
+  "snapshot_date": "2026-09-17",
+  "aliases": [
+    {
+      "snapshot_id": "safe_arrival/source",
+      "branch": "variants/safe_arrival/source",
+      "source_bundle_sha256": "8fba88b35f03671bf39f900eb51bac3bba2c249e62abcb3a55490d3341a38ac8",
+      "source_and_build_payload_sha256": "62a09e10c1addb680e04ac97c705da730467cc0d9753f4bcd7623372385be2ea",
+      "observed_binary_sha256": {}
+    }
+  ],
+  "files": {
+    "CMakeLists.txt": "83a0cb17a0d8970fcbe2f021216d3e3123a8cfc1333f42a4a650119087aba35f",
+    "artifacts/gtspp_gate1_safe_delta.cu": "6e1df7728f965f2746e3ddebdff30a4e068030b12b5fca01fa4c5d6cf797b764",
+    "include/config.cuh": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+    "include/file.cuh": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+    "include/gpu_timer.cuh": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+    "include/incremental_insert.cuh": "1a40be49329fb269bed0704c4a581a6adff3b9e146c84b8e5195a927d42f3c16",
+    "include/mlp_constant.cuh": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+    "include/residual_pruning.cuh": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+    "include/residual_tuner.cuh": "007df1e86a012cc89ffb34d4cec75465ff3d4020800aee41892259e8d194f53b",
+    "include/search.cuh": "e03cda4d5be72bb94b1a4500bb699f6a7bec1729070fe70a629520ed3770ea92",
+    "include/search_naive.cuh": "0f730eed38b0e29401385866cc1a239fa26a0e90a73f83caf3fcafbc376f55a0",
+    "include/search_v2.cuh": "3847a244787dd8d9f3a21d055dc08ba3f396bb9bd79a3281c8579a45b87eb89d",
+    "include/tree.cuh": "f812c385d254d77e84bbd515e4055e94cc8163ee7a7d57216f3659c09f569c2b",
+    "include/update.cuh": "171745cef878aa78ec84e9af7e994e19a7f466720b6b31b8425cc9aff867893d",
+    "include/update_optimized.cuh": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+    "include/update_user_modified.cuh": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+    "rebuild.sh": "ec23414bd837953a5958feb3a868cf721a5e65df1fc302fe86632a25ac1a12c9",
+    "src/main.cu": "cba5c4ea4de6e75c267a94c265b6e347eae9ccd541f007284aabfcc7980586ff",
+    "src/mlp_constant.cuh": "7ce69268f3ea66ebe9970e3bf066668afc4134974322969aa2f7c3291a37c551"
+  },
+  "captured_src_include_bytes_modified": false,
+  "publication_adjustments": [
+    {
+      "file": "artifacts/gtspp_gate1_safe_delta.cu",
+      "change": "Replace the machine-specific default input path with data/sift_base.txt; no algorithm change",
+      "original_sha256": "8504ed43384bb00b98edb3f11e3d44175a56fb4631cab0febc192b2ff3d1efc2",
+      "published_sha256": "6e1df7728f965f2746e3ddebdff30a4e068030b12b5fca01fa4c5d6cf797b764"
+    }
+  ],
+  "validation": "archival snapshot; not a correctness or performance qualification"
+}
