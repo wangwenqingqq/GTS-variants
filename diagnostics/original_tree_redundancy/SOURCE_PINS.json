@@ -1,0 +1,41 @@
+{
+  "audit_date": "2026-09-22",
+  "source_repository": "https://github.com/ZJU-DAILY/GTS",
+  "commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "scope": "18 .cu/.cuh files under Source Code/GTS and Source Code/GPU-Tree; all byte-identical to the user-designated remote SourceCode tree. No binary equivalence or runtime validity is implied.",
+  "sha256": {
+    "GTS/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "GTS/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "GTS/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "GTS/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "GTS/include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "GTS/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "GTS/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "GTS/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b",
+    "GPU-Tree/include/bplus_tree.cuh": "96b8f583d97129a5318a9851569559e5d4f6bf4e9e109459f3189920a8307e06",
+    "GPU-Tree/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "GPU-Tree/include/file.cuh": "b3c7608e4b8afc7f4aa147df99829e2ff5ad0af42ad3e6ffaf9e0174bc0f8dc5",
+    "GPU-Tree/include/partition.cuh": "a7eac14bce203a3e3edce0b2fb471bbda25576b5915ae337238aa031b33a5b0d",
+    "GPU-Tree/include/pivot.cuh": "4a76206d9222afe6a96920d5f55cb5a30fa964f7e3afbdb70a1fe0d7cce2a6c5",
+    "GPU-Tree/include/priority_queue.cuh": "8069614d7c0b961ab4022c33424f8e032e1251b1f71634e6b0961c1217c36544",
+    "GPU-Tree/include/priority_queue_k.cuh": "32f31809daabf3e810af104ea3f2308b6b0ee55e38c8903de6f3cc5260205aac",
+    "GPU-Tree/include/queue.cuh": "55fd52cb3e72b5850e8ec54715d9bedaa260ce3a7e26ce85d1651b18ebf18c3a",
+    "GPU-Tree/include/search.cuh": "a4b90f2b393b5a5ec7dccddc7b6c4bf04267b286d518f2ed4c269d893aa9f793",
+    "GPU-Tree/src/main.cu": "fc118a14a10ce52b6c691057e9304b7986c615bb87bb182a30b5cce9bcc196c1"
+  },
+  "prior_evidence": {
+    "date": "2026-09-17",
+    "scope": "Adapted author V2, Words 611756 byte strings, Q32, inclusive r4, CPU-resident complete IDs, 1 GiB workspace, PRO 6000 Blackwell GPU0; not a new benchmark of the untouched executable.",
+    "sha256": {
+      "RESULTS.md": "b46b13a895fdad5adc7b2962ddc0dac59a519f7f6f6752834f370c257212ac19",
+      "raw/profile_summary.json": "b881fdd2405e188784657a788a052f1d5b36da618043dbe01c1a265edb89621b",
+      "raw/timing_summary.json": "97486095e701ba8fbe56fed5b075def9083a85e3e17768b26183cdb5b35ad46a",
+      "raw/sass_verified.json": "5a7dbc28a8b70ccb8ce6584d63ab5dc6aa3c2d70c04f3e54aead9a616dee212e"
+    }
+  },
+  "manuscript_context": {
+    "filename": "submit-GTS++06012322.pdf",
+    "sha256": "648714d6f6a18fc1f900b4aa5ba41983fba38802b3bfaa1e946340540e6e52f8",
+    "scope": "Read pages 1-3 for existing C1 and task/output scope; claims not independently revalidated."
+  }
+}
