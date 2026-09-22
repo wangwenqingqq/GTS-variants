@@ -1,5 +1,4 @@
 {
-  "time_utc": "2026-09-22T10:57:21Z",
   "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
   "numpy": "1.26.4",
   "scipy": "1.14.1",
@@ -16,12 +15,23 @@
   "cpu_model": "Intel Xeon Gold 6530",
   "logical_cpus": 128,
   "arithmetic": "float64",
-  "accepted_run": "run03_primary",
   "requested_datasets": 9,
-  "validated_datasets": 7,
+  "validated_datasets": 9,
   "seeds": [
     20260922,
     20260923,
     20260924
+  ],
+  "accepted_runs": [
+    {
+      "id": "run03_primary",
+      "time_utc": "2026-09-22T10:57:21Z",
+      "datasets": 7
+    },
+    {
+      "id": "run04_supplementary",
+      "time_utc": "2026-09-22T12:42:04Z",
+      "datasets": 2
+    }
   ]
 }

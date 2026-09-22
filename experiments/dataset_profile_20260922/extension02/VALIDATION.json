@@ -1,5 +1,6 @@
 {
   "fixtures": "PASS",
+  "scope": "all nine requested datasets",
   "datasets": [
     {
       "dataset": "Deep-1M",
@@ -49,7 +50,36 @@
       "n": 611756,
       "input_sha256": "72091b6cdd29532d44790ad049afa58eb8582957061fcf5c98b28b9b30c81c1c",
       "result_sha256": "69aa3108815dc6648f5bb6071f71242c8692b862dbf5303ad499945be2773dd6"
+    },
+    {
+      "dataset": "ChEMBL",
+      "status": "PASS",
+      "n": 50000,
+      "input_sha256": "125f5d8887a8786646b34e278ff71137420bf40b2ba7649031bf1295143eb45c",
+      "result_sha256": "a7c475bde61614e6475d87e17e4d320e6220bce5aa7acf42f031e677989c6972"
+    },
+    {
+      "dataset": "Protein",
+      "status": "PASS",
+      "n": 52799,
+      "input_sha256": "c082541fa5b0725193cd34a6c6457f6aa823524d99c302e38034f6d8639eae40",
+      "result_sha256": "0a859640a64bf87b1fb85942f371e0447ee3bc3ae284b216e1a9db4632a73b67"
     }
   ],
-  "scope": "listed datasets only"
+  "independent_source_checks": {
+    "Protein": {
+      "unique_sequences": 39630,
+      "duplicate_excess_rows": 13169,
+      "largest_exact_group": 114,
+      "independent_edit_pairs": 32,
+      "status": "PASS"
+    },
+    "ChEMBL": {
+      "unique_fingerprints": 48137,
+      "duplicate_excess_rows": 1863,
+      "independent_jaccard_queries": 3,
+      "references_per_query": 20000,
+      "status": "PASS"
+    }
+  }
 }

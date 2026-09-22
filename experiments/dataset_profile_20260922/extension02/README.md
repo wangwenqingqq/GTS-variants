@@ -1,8 +1,9 @@
 # Extended native-metric dataset comparison
 
-The requested comparison contains nine datasets. Accepted coverage and any
-missing source decisions are explicit in `RESULTS.md`; absent rows are not
-estimated. The original five-dataset experiment in the parent directory remains
+All nine requested datasets are now measured and validated. Protein and ChEMBL
+use the explicitly approved older GTS files; see `SUPPLEMENTARY_ADMISSION.md`.
+Accepted source identities and coverage are explicit in `RESULTS.md`. The
+original five-dataset experiment in the parent directory remains
 unchanged. This extension refreshes every included dataset's geometry at a
 matched 20,000-reference budget, including the original five.
 
@@ -27,7 +28,7 @@ Run these commands from the parent experiment directory. `V1_RUN` is the
 original raw output of `profile_datasets.py`, with `<dataset>/results.json`.
 Source files must exactly match its recorded hashes; no raw data is in Git.
 
-Only after confirming the supplementary versions, run:
+The supplementary versions were confirmed on 2026-09-22. Reproduce them with:
 
 ```sh
 python extension02/profile_extended.py \
@@ -35,7 +36,8 @@ python extension02/profile_extended.py \
   --previous-run "$V1_RUN" --out "$NEW_SUPPLEMENTARY_RUN" \
   --datasets Protein ChEMBL
 python extension02/validate_extended.py \
-  --run "$NEW_SUPPLEMENTARY_RUN" --previous-run "$V1_RUN"
+  --run "$NEW_SUPPLEMENTARY_RUN" --previous-run "$V1_RUN" \
+  --supplementary-root "$SUPPLEMENTARY_DATA_ROOT"
 python extension02/summarize_extended.py \
   --runs "$NEW_PRIMARY_RUN" "$NEW_SUPPLEMENTARY_RUN" --out "$REPORT"
 ```
@@ -50,6 +52,7 @@ presumed standard release.
 ## Interpretation and evidence
 
 - `CONTRACT_EXTENDED.md`: registered semantics, budgets, and numerical amendment.
+- `SUPPLEMENTARY_ADMISSION.md`: approved Protein/ChEMBL source versions.
 - `results/*.json`: portable accepted aggregate results; no raw objects.
 - `VALIDATION.json`, `EXECUTION.json`: acceptance coverage and redacted provenance.
 - `RAW_EVIDENCE_MANIFEST.json`: hashes of task-local sample IDs, per-query radii,

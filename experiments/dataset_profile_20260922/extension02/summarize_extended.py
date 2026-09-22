@@ -60,6 +60,27 @@ def main():
     lines += ['', '*RC10 is the median across seeds of the per-query mean RC10; LID50 is the median '
               'across seeds of the per-query median LID50. Spatial coordinate zeros and string alphabets '
               'are not coordinate sparsity. LID is omitted for discrete strings and binary fingerprints.', '',
+              '## Sequence and fingerprint descriptors', '',
+              '| Dataset | Mean sequence length | Symbols | Symbol entropy (bits) | Bigram entropy (bits) | Trigram entropy (bits) | Full duplicate fraction (%) |',
+              '|---|---:|---:|---:|---:|---:|---:|']
+    for name in ['Word', 'Protein']:
+        if name not in results: continue
+        f = results[name]['full']
+        lines.append(f"| {name} | {f['length']['mean']:.3f} | {f['character_vocabulary']} | "
+                     f"{f['character_entropy_bits']:.3f} | {f['2gram_entropy_bits']:.3f} | "
+                     f"{f['3gram_entropy_bits']:.3f} | {100*f['duplicate_fraction_full']:.5f} |")
+    lines += ['', 'Duplicate fraction is 1 − unique-object count / row count: excess copies, '
+              'not all rows belonging to a repeated group.']
+    if 'ChEMBL' in results:
+        f = results['ChEMBL']['full']; bits = f['active_bits']
+        lines += ['', f"ChEMBL: mean active bits {bits['mean']:.3f} / {f['dimension']}; "
+                  f"P10/P50/P90 = {bits['p10']:.0f}/{bits['p50']:.0f}/{bits['p90']:.0f}. "
+                  f"Mean per-bit marginal entropy {f['bit_marginal_entropy_bits']['mean']:.4f} bits; "
+                  f"constant bits {f['constant_dimensions']}; empty fingerprints {f['allzero_rows']}; "
+                  f"full duplicate-fingerprint fraction {100*f['duplicate_fraction_full']:.5f}%.",
+                  'Identical fingerprints do not prove identical molecules. Sequence symbol/gram entropy '
+                  'and per-bit marginal entropy describe different representations; neither is temporal entropy.']
+    lines += ['',
               '## Order sensitivity, abruptness, and representation dimension', '',
               '| Dataset | Adjacent/random median | Excess steps (%) | PCA95 | Effective rank | Expansion10* | Hub top-1% share (%) |',
               '|---|---:|---:|---:|---:|---:|---:|']
@@ -68,14 +89,29 @@ def main():
         r = results[name]
         o, c, h = r['row_order'], r.get('covariance_sample',{}), r['hubness_sample']
         excess = o['excess_step_fraction']
+        bound = (r['full']['length']['max'] if r['metric'] == 'Levenshtein' else
+                 1 if r['metric'] == 'Tanimoto' else 180 if r['metric'] == 'Angular-degrees' else None)
+        saturated = bound is not None and o['mad_step_threshold'] is not None and o['mad_step_threshold'] >= bound
         lines.append(f"| {name} | {fmt(o['adjacent_to_random_median_ratio'],5)} | "
-            f"{fmt(None if excess is None else excess*100,5)} | {c.get('pca95','N/A')} | "
+            f"{fmt(None if excess is None else excess*100,5)}{'†' if saturated else ''} | {c.get('pca95','N/A')} | "
             f"{fmt(c.get('covariance_effective_rank'))} | {np.median(seed(r,'expansion10','p50')):.3f} | {100*h['top1pct_share']:.3f} |")
     lines += ['', 'Adjacent distances cover every neighboring row; the random comparison uses 20,000 '
         'distinct-index pairs. Excess steps exceed median + 6 × 1.4826 × MAD (N/A for zero MAD): '
         'a descriptive heuristic, not an anomaly test. Expansion is median r20/r10. PCA uses 10,000 '
         'stored-coordinate rows, not standardized features. Binary/Angular PCA is a representation '
         'diagnostic, not native-metric intrinsic dimension. Hubness uses 2,048 objects and fractional ties.', '',
+        '† The registered robust threshold reaches or exceeds the metric upper bound, so a zero '
+        'exceedance rate is uninformative about abruptness, not evidence of smoothness. Thresholds '
+        'and quantiles are retained below; no post-hoc threshold replacement is made.', '',
+        '| Dataset | Adjacent P50 | Adjacent P95 | Adjacent P99 | Robust threshold |',
+        '|---|---:|---:|---:|---:|']
+    for name in NAMES:
+        if name not in results: continue
+        o = results[name]['row_order']; q = o['adjacent_distance']
+        lines.append(f"| {name} | {fmt(q['p50'])} | {fmt(q['p95'])} | {fmt(q['p99'])} | {fmt(o['mad_step_threshold'])} |")
+    lines += ['', 'Adjacent quantiles use each dataset\'s native distance units, not a common physical '
+        'scale. For Protein, distance cannot exceed the longest stored sequence (100); for binary '
+        'Tanimoto it cannot exceed 1. These bounds explain their flagged zero exceedance rates.', '',
         '## Sampling sensitivity and native-query workload', '',
         '| Dataset | RC10 seed range | LID50 seed range | Invalid LID50 / 512 by seed | Native queries | Native RC10 mean |',
         '|---|---:|---:|---|---:|---:|']
@@ -92,6 +128,16 @@ def main():
     lines += ['', 'Seed ranges are observed sampling sensitivity, not confidence intervals. Native '
               'query comparisons exclude matching base IDs. Vector provides only 100 query IDs and '
               'is not silently expanded to 512. Native workloads need not represent uniform base queries.', '',
+              '| Dataset | Zero-nearest queries (%) by seed | Invalid RC10 / 512 by seed |',
+              '|---|---|---|']
+    for name in NAMES:
+        if name not in results: continue
+        runs = results[name]['geometry_runs']
+        zero = ' / '.join(f"{100*g['zero_nearest_fraction']:.3f}" for g in runs)
+        invalid = ' / '.join(str(g['rc10']['invalid']) for g in runs)
+        lines.append(f'| {name} | {zero} | {invalid} |')
+    lines += ['', 'Zero-distance and invalid-radius cases are retained, not stabilized by an epsilon. '
+              'RC summaries use valid queries only.', '',
               '## File-order correlations, not temporal periodicity', '',
               '| Dataset / scalar | Median ACF1 | Shuffled ACF1 | Median dominant-bin power share |',
               '|---|---:|---:|---:|']
@@ -115,7 +161,8 @@ def main():
               '- Vector uses the benchmark angular metric, not 1−cos. Coordinate PCA and Hoyer still describe stored amplitudes.',
               '- Full scans, PCA, hubness, and order summaries for the first five datasets are reused only after input SHA verification; all their 20k-reference geometry and native-query diagnostics are freshly measured.',
               '- Full duplicate rates are available for new text datasets. Original vector duplicate estimates remain the original 50k sample, not full-corpus rates.',
-              '- Protein/ChEMBL versions require confirmation when absent from the primary input root. No similarly named version is silently substituted.', '',
+              '- Protein/ChEMBL use the explicitly admitted supplementary-root files when present. '
+              'The upstream release and fingerprint generator remain unverified; no similarly named version is substituted.', '',
               '| Dataset | Source role | Input SHA-256 |', '|---|---|---|']
     for name in NAMES:
         if name in results:
@@ -171,8 +218,9 @@ def main():
     svg.write_text('\n'.join(x.rstrip() for x in svg.read_text().splitlines())+'\n')
     (a.out/'FIGURE_CAPTION.md').write_text('Stored sparsity, matched sampled geometry, and file-order locality '
         'differ across the measured datasets. Geometry dots show three independent 20,000-reference / '
-        '512-query runs; segments show the observed seed range, not a confidence interval. Discrete LID '
-        'and nonnumeric coordinate sparsity are N/A. Pending rows have no measurements. The last panel '
+        '512-query runs; segments show the observed seed range, not a confidence interval. RC10 averages '
+        'exclude undefined zero-r10 cases; see the per-seed invalid counts in the results table. Discrete LID '
+        'and nonnumeric coordinate sparsity are N/A. Any pending row has no measurements. The last panel '
         'uses all adjacent rows versus 20,000 random pairs and does not establish time-series periodicity.\n')
 
 

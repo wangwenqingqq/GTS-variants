@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Independent small-matrix oracles and complete-run consistency gates."""
 import argparse
+from collections import Counter
 import hashlib
 import json
 from pathlib import Path
@@ -109,14 +110,53 @@ def validate(run, previous_run):
     return records
 
 
+def supplementary_sources(run, root):
+    """Recheck real inputs and use scalar edit / SciPy Jaccard oracles."""
+    seq = (root/'dna_barcode/protein.txt').read_text(encoding='ascii').splitlines()[1:]
+    counts = Counter(seq)
+    r = json.loads((run/'Protein/results.json').read_text())
+    assert len(seq) == 52799 and np.isclose(1-len(counts)/len(seq), r['full']['duplicate_fraction_full'])
+    def edit(a, b):
+        row = list(range(len(b)+1))
+        for i, x in enumerate(a, 1):
+            previous, row = row, [i]
+            for j, y in enumerate(b, 1):
+                row.append(min(row[-1]+1, previous[j]+1, previous[j-1]+(x != y)))
+        return row[-1]
+    for a, b in np.random.default_rng(104).integers(0, len(seq), (32, 2)):
+        assert edit(seq[a], seq[b]) == e.p.Levenshtein.distance(seq[a], seq[b])
+    report = {'Protein': dict(unique_sequences=len(counts), duplicate_excess_rows=len(seq)-len(counts),
+                             largest_exact_group=max(counts.values()), independent_edit_pairs=32, status='PASS')}
+    x = np.loadtxt(root/'chembl/chembl_50k.txt', skiprows=1, dtype=np.uint8)
+    r = json.loads((run/'ChEMBL/results.json').read_text())
+    unique = len(set(bytes(row) for row in np.packbits(x, axis=1)))
+    assert x.shape == (50000, 2048) and np.all(x <= 1)
+    assert np.isclose(1-x.sum(dtype=np.int64)/x.size, r['full']['zero_fraction'])
+    assert np.isclose(1-unique/len(x), r['full']['duplicate_fraction_full'])
+    plan = np.load(run/'ChEMBL/sample_plan.npz')
+    raw = np.load(run/'ChEMBL/geometry_20260922.npz')
+    d = cdist(x[plan['query_20260922'][:3]], x[plan['ref_20260922']], 'jaccard')
+    assert np.allclose(np.sort(d, axis=1)[:, :200], raw['nearest200'][:3])
+    assert np.allclose(d.mean(1), raw['mean_distance'][:3])
+    report['ChEMBL'] = dict(unique_fingerprints=unique, duplicate_excess_rows=len(x)-unique,
+                           independent_jaccard_queries=3, references_per_query=20000, status='PASS')
+    for name, rel in [('Protein', 'dna_barcode/protein.txt'), ('ChEMBL', 'chembl/chembl_50k.txt')]:
+        r = json.loads((run/name/'results.json').read_text())
+        assert hashlib.sha256((root/rel).read_bytes()).hexdigest() == r['source']['sha256']
+    return report
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--run', type=Path)
     ap.add_argument('--previous-run', type=Path)
+    ap.add_argument('--supplementary-root', type=Path)
     args = ap.parse_args()
     fixtures()
     if args.run:
         records = validate(args.run, args.previous_run)
         result = dict(fixtures='PASS', datasets=records, scope='listed datasets only')
+        if args.supplementary_root:
+            result['independent_source_checks'] = supplementary_sources(args.run, args.supplementary_root)
         e.p.write_json(args.run/'VALIDATION.json', result)
         print(json.dumps(result, indent=2))
