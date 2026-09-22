@@ -134,5 +134,6 @@ original executable or a GPU-Tree measurement.
    Conversely, absence of a current trace is uncertainty, not proof of no cost.
 
 Local source-audit artifacts are committed separately from algorithm changes.
-Publication remains gated by the unresolved repository visibility/disclosure
-question; no upstream source code is copied into this report.
+Explicit user authorization on 2026-09-22 resolved the initial release hold for
+these diagnostic tools and reports; existing visibility and source licenses are
+unchanged. No upstream source code is copied into this report.

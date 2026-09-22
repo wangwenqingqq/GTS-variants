@@ -192,11 +192,15 @@ python3 diagnostics/original_tree_profile/test_prepare.py "$AUTHOR_SOURCE_ROOT"
 python3 diagnostics/original_tree_profile/prepare.py "$AUTHOR_SOURCE_ROOT" "$SCRATCH/profiled_v2"
 python3 diagnostics/original_tree_profile/make_fixture.py "$WORDS" "$SCRATCH/fixtures"
 # Build each copied main with its matching include directory:
+mkdir -p "$SCRATCH/bin"
 "$CUDA_HOME/bin/nvcc" -std=c++17 -O2 -arch=sm_120 -rdc=true -lineinfo \
   -Xcompiler=-fno-omit-frame-pointer -Xnvlink=--ignore-host-info -DGTS_DIAG_NVTX \
   -I"$SCRATCH/profiled_v2/GTS/include" "$SCRATCH/profiled_v2/GTS/src/main.cu" \
   -ldl -o "$SCRATCH/bin/gts_profiled_v2"
-# Build GPU-Tree analogously as bin/gputree_profiled_v2.
+"$CUDA_HOME/bin/nvcc" -std=c++17 -O2 -arch=sm_120 -rdc=true -lineinfo \
+  -Xcompiler=-fno-omit-frame-pointer -Xnvlink=--ignore-host-info -DGTS_DIAG_NVTX \
+  -I"$SCRATCH/profiled_v2/GPU-Tree/include" "$SCRATCH/profiled_v2/GPU-Tree/src/main.cu" \
+  -ldl -o "$SCRATCH/bin/gputree_profiled_v2"
 python3 diagnostics/original_tree_profile/run.py "$SCRATCH" --gpu "$ADMITTED_UUID" --stage smoke
 python3 diagnostics/original_tree_profile/run.py "$SCRATCH" --gpu "$ADMITTED_UUID" --stage sanitizer
 python3 diagnostics/original_tree_profile/run.py "$SCRATCH" --gpu "$ADMITTED_UUID" --stage paired
@@ -204,11 +208,37 @@ python3 diagnostics/original_tree_profile/run.py "$SCRATCH" --gpu "$ADMITTED_UUI
 python3 diagnostics/original_tree_profile/analyze.py "$SCRATCH"
 ```
 
-The scale extension uses a separate scratch root, `--sizes 65536`, and only the
-predeclared height change in its copied GTS header; `run_large.py` uses the same
-launcher and repeats full-size gates. Raw receipts contain exact commands,
+The scale extension uses a separate, new `$LARGE` scratch root and the same
+launcher, repeating full-size gates. The copied GTS-only tree is named `source/`,
+matching the runner's source-hash inventory. After the preparation above:
+
+```sh
+mkdir -p "$LARGE/bin"
+cp -R "$SCRATCH/profiled_v2/GTS" "$LARGE/source"
+python3 - "$LARGE/source/include/tree.cuh" <<'PY'
+from pathlib import Path
+import sys
+p = Path(sys.argv[1]); text = p.read_text()
+assert text.count('__managed__ int MAX_H = 3;') == 1
+p.write_text(text.replace('__managed__ int MAX_H = 3;', '__managed__ int MAX_H = 5;'))
+PY
+python3 diagnostics/original_tree_profile/make_fixture.py "$WORDS" "$LARGE/fixtures" --sizes 65536
+"$CUDA_HOME/bin/nvcc" -std=c++17 -O2 -arch=sm_120 -rdc=true -lineinfo \
+  -Xcompiler=-fno-omit-frame-pointer -Xnvlink=--ignore-host-info -DGTS_DIAG_NVTX \
+  -I"$LARGE/source/include" "$LARGE/source/src/main.cu" -ldl -o "$LARGE/bin/gts_profiled_v2"
+python3 diagnostics/original_tree_profile/run_large.py "$LARGE" --gpu "$ADMITTED_UUID"
+python3 diagnostics/original_tree_profile/analyze.py "$LARGE"
+```
+
+`test_run_large.py` checks fresh output directories and source-hash coverage
+with mocked launches, without contacting a GPU. Its directory-preparation fix
+and the complete build instructions were added during the publication audit;
+measured binaries and `EVIDENCE.json` are unchanged. Raw receipts contain exact commands,
 input results, source/binary hashes, per-run GPU snapshots and full failure logs.
 Copies of all NSYS reports/SQLite exports and receipts are retained under
 ignored `local/small` and `local/large`; their SHA-256 inventory is checked in.
-No new source, data, or evidence has been publicly uploaded while the existing
-disclosure/visibility question remains unresolved.
+Explicit user authorization on 2026-09-22 resolved the initial disclosure hold
+for task-owned diagnostic tools, reports, numerical summaries and evidence hashes.
+Publication does not include raw logs, datasets, binaries, machine configuration
+or generated original-source copies; it does not alter visibility or merge the
+experimental branch. Upload completion must be verified against the remote SHA.

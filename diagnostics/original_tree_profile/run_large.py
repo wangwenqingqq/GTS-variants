@@ -10,7 +10,7 @@ import run as base
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('root',type=Path);ap.add_argument('--gpu',required=True)
-    a=ap.parse_args();root=a.root.resolve()
+    a=ap.parse_args();root=a.root.resolve();(root/'runs').mkdir(exist_ok=True)
     state=base.snapshot(a.gpu);assert not state['apps'].strip()
     index=state['gpu'].split(',')[0].strip();locks=[]
     for p in [Path(f'/tmp/gtspp_gpu{index}.lock'),root/'run.lock']:

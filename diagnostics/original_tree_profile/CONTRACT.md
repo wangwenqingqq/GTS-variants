@@ -61,9 +61,12 @@ No production algorithm, paper, GPU setting, or foreign process is changed.
 ## Publication / decision ledger
 
 H1-H4 initially **unknown**. Raw logs, source/binary/input hashes, commands,
-failed gates and reports remain in ignored local evidence. A report/manifest
-may be committed locally; public upload remains blocked by the earlier unresolved
-repository visibility/disclosure question. No current result is paper-ready.
+failed gates and reports remain in ignored local evidence. The report/manifest
+was initially local-only pending the repository disclosure decision. Explicit
+user authorization on 2026-09-22 subsequently admitted task-owned diagnostics,
+reports, numerical summaries and evidence hashes for publication. Raw logs,
+data, binaries and generated original-source copies remain excluded. This does
+not change the frozen experiment or promote any result to a paper-ready claim.
 
 ## Predeclared scale extension (after bounded smoke, before scale data)
 

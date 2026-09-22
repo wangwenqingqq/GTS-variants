@@ -244,9 +244,11 @@ oracle. High CPU utilization is a symptom, not a novelty claim.
 
 ## Release boundary
 
-Live repository metadata reported **public** visibility although the inherited
-archive README says private and records no upstream license. No visibility
-change or publication is implied. Until disclosure/rights are confirmed, retain
-the task-owned local checkpoint and remote scratch only; do not publish raw
-machine/process metadata, manuscript material, dataset contents, or generated
-instrumented source. A local compile/diagnostic bundle is not an uploaded release.
+Live repository metadata reports **public** visibility although the inherited
+archive README says private and records no upstream license. The initial release
+hold was resolved by explicit user authorization on 2026-09-22 for task-owned
+diagnostic tools, reports, numerical summaries and evidence hashes on the
+`analysis/cpu-io-attribution-20260922` branch. This does not change visibility,
+merge the branch, or relicense the existing archive. Raw machine/process metadata,
+manuscript material, dataset contents, binaries and generated instrumented source
+remain excluded. A local checkpoint is not proof of a verified remote upload.

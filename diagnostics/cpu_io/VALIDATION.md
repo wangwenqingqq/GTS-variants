@@ -37,7 +37,9 @@ no claim of a warning-free source is made.
   GPU settings were changed.
 - Instrumentation and optional wait-policy control have compile-only GPU
   validation. Their timing is diagnostic, not a promoted optimization result.
-- No manuscript edit, submission, repository visibility change or upload.
+- At this archive-only checkpoint: no manuscript edit, submission, repository
+  visibility change or upload. The later authorization below changes only the
+  permitted publication scope, not this compile-only validation scope.
 
 The inspected machine has RTX PRO 6000 Blackwell Server Edition GPUs, driver
 590.48.01, and two Xeon Gold 6530 sockets / 128 logical CPUs. Exact machine,
@@ -57,5 +59,6 @@ Under `diagnostics/cpu_io/local/` (intentionally ignored by Git):
 
 The generated source and its `INSTRUMENTED_SHA256.json` are retained under
 `diagnostics/cpu_io/work/profiled/`. Large/raw machine artifacts are not part of
-the prospective publish set. The publish gate remains unresolved because live
-repository visibility differs from its inherited private-archive policy.
+the publish set. Explicit user authorization on 2026-09-22 resolved the initial
+release hold for task-owned diagnostics only; see the README release boundary.
+It does not retroactively add GPU runtime validation to this archive checkpoint.
