@@ -1,0 +1,2848 @@
+{
+  "scope": "First query, two level kernels, 34-pass kernel replay, identical sections; no clock/cache control. Setup/cache state differs by layout. Diagnostic only, not hot-query latency or a 64-query average.",
+  "sections": [
+    "SpeedOfLight",
+    "LaunchStats",
+    "Occupancy",
+    "SchedulerStats",
+    "WarpStateStats",
+    "MemoryWorkloadAnalysis",
+    "MemoryWorkloadAnalysis_Tables",
+    "InstructionStats"
+  ],
+  "order": "D/U/V in each dataset",
+  "datasets": {
+    "GIST": {
+      "D": {
+        "kernels": [
+          {
+            "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "2.41",
+                "unit": "ms"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.12",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "91.69",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "10.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "9.89",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "472833",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "50",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.08",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.124749",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "23.452894",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "2.409184",
+                "unit": "ms"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "472833.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1932",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1950.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "1696.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "254.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "254.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.083127",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000318",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "10.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.903526",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.094828",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "0.822986",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "2.70",
+                "unit": "ms"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.45",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.07",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.57",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.07",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "24.72",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "1891168",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "50",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "8.32",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.445893",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "83.827805",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "2.696000",
+                "unit": "ms"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "1891168.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "7728",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "16560.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "15158.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "1402.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "1402.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.074279",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000245",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.904423",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.096454",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.246962",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 2364001.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 9660.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 18510.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 16854.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 1656.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 1656.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 5105.184
+        },
+        "metrics_sha256": "4784261b06250fd374f64cecf90a2b148cf72ce8c7f8ce26254d4e5d5c88f1e9",
+        "raw_metrics_sha256": "82033eb69700e61a16aa1587fd08ca2022860a9acabec07086c55d8f2988abf1",
+        "receipt_sha256": "2bf3eefd42e913287763ac003b0926e02a77f575ba06aef513a1b2a1f09f198e"
+      },
+      "U": {
+        "kernels": [
+          {
+            "kernel": "void findNextLayout<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0.00",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "2.42",
+                "unit": "ms"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.12",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "91.69",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "10.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "9.89",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "474276",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "48",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.08",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.124657",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "23.435560",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "2.418208",
+                "unit": "ms"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "474276.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1932",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1936.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "1685.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "251.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "251.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.083068",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000312",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "10.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.907790",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.107583",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "0.815650",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "void findNextLayout<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "2.70",
+                "unit": "ms"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.45",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.07",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.57",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.07",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "24.72",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "1896940",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "48",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "8.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.446405",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "83.924233",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "2.701248",
+                "unit": "ms"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "1896940.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "7728",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "16417.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "15052.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "1365.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "1365.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.074338",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "0.999358",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.908615",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.111074",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.211982",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 2371216.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 9660.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 18353.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 16737.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 1616.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 1616.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 5119.456
+        },
+        "metrics_sha256": "81a4a2458975cf09e27d058a25c2ccde018992d0b45d5d5d4ac81c4dfc828ee6",
+        "raw_metrics_sha256": "ce255efeb6bf51016ddbeb857a7244007959f39873e2f66196416679d74fe784",
+        "receipt_sha256": "494092ad9f365007ff7a637e015f18946bfe424ff35df5127fe1e5c34e7bc758"
+      },
+      "V": {
+        "kernels": [
+          {
+            "kernel": "void findNextLayout<1>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "2.49",
+                "unit": "ms"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.12",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "91.92",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "10.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "9.89",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "475713",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "44",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.08",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.120962",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "22.740915",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "2.492000",
+                "unit": "ms"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "475713.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1932",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1936.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "845.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "1091.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "1091.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.080848",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000290",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "10.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.887983",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.466071",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "0.809597",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "void findNextLayout<1>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "2.77",
+                "unit": "ms"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.44",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.07",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.73",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.07",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "24.72",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "1902688",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "44",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "8.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.435217",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "81.820814",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "2.770816",
+                "unit": "ms"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "1902688.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "7728",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "8737.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "6652.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "2085.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "2085.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.072709",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000062",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.888804",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.430712",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.216886",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 2378401.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 9660.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 10673.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 7497.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 3176.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 3176.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 5262.816
+        },
+        "metrics_sha256": "61f933e13d031b3c79fb85c72eca9e3c366fdd047e400e18d7ba99a63dc8aea9",
+        "raw_metrics_sha256": "422e9ded8a3cd99d8fb8cf02881930de7f33eda6ab96084a43e9f37b3cb209af",
+        "receipt_sha256": "0d4797562af5aea9d3803a964ee3324ff845e5e132c0f7768d65fd7e58c60e9b"
+      }
+    },
+    "Deep": {
+      "D": {
+        "kernels": [
+          {
+            "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0.00",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "251.87",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.12",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "91.70",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "10.04",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "9.93",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "47942",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "50",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.09",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.123628",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "23.242013",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "251.872000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "47942.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "204",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "222.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "184.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "38.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "38.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "256.000000",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.083048",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.003069",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "10.04",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.870114",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.123024",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "0.915439",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "279.17",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.44",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.07",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.57",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.07",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "24.71",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "191480",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "50",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "8.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.443024",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "83.288518",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "279.168000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "191480.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "816",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1872.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "1658.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "214.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "214.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0.000000",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.074300",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000829",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.881032",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.124352",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.245279",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 239422.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 1020.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 2094.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 1842.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 252.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 252.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 256.0,
+          "replay_duration_us": 531.04
+        },
+        "metrics_sha256": "03c193514f7e9b3bc5de1edb76c8b7af597d35a9a3066b57a6306da9dee8256e",
+        "raw_metrics_sha256": "ffce32ce824386c9b831b8b4184898c2704eece431dd7e58049e0ac04d6a03c6",
+        "receipt_sha256": "c13a0c7b210d0e219fc34798b5257cbf7e341db0d48196d4d13d347ddb494d1d"
+      },
+      "U": {
+        "kernels": [
+          {
+            "kernel": "void findNextLayout<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "249.18",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.12",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "91.70",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "10.04",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "9.93",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "48089",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "48",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.09",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.123455",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "23.209567",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "249.184000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "48089.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "204",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "208.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "173.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "35.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "35.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.082996",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.003099",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "10.04",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.873734",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.136850",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "0.860654",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "void findNextLayout<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "280.51",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.44",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.07",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.58",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.07",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "24.72",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "192068",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "48",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "8.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.442049",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "83.105129",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "280.512000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "192068.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "816",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "1729.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "1552.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "177.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "177.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.074210",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.000475",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.884541",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.139055",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.248084",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 240157.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 1020.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 1937.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 1725.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 212.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 212.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 529.696
+        },
+        "metrics_sha256": "1eada660df2435c0572d4efcbff4f1fe52589399837305f53cbc94522fb5ae5f",
+        "raw_metrics_sha256": "0214173c24b9217fc5b9b570939be1618ec431e603709f0740bb2e33e00646d1",
+        "receipt_sha256": "85cbd8c969bd119f8f05e45b363a0ab6b753320084e56addd65764dccf6b1532"
+      },
+      "V": {
+        "kernels": [
+          {
+            "kernel": "void findNextLayout<1>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "261.15",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.12",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "91.93",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "10.04",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "9.93",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "48230",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "44",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.09",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.119772",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "22.517160",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "261.152000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "48230.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "204",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "208.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "89.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "119.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "119.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.080737",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.002978",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "10.04",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.855132",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.499129",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "0.854095",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "void findNextLayout<1>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "288.22",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.43",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.07",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.74",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.07",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "24.72",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "192632",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "44",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "8.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.431691",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "81.157956",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "288.224000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "192632.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "816",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "961.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "712.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "249.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "249.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.072637",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.001213",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "25.00",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "9.865874",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "0.463147",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.231296",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 240862.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 1020.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 1169.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 801.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 368.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 368.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 549.376
+        },
+        "metrics_sha256": "fbb37b40f4159ec03b6d82e171f5a678babfdae59f96343d38b40aedaf8a7734",
+        "raw_metrics_sha256": "032652502b1cd678ba2e7f439ea6d24857b7eee3eb7950dc0d126bb4b0198cfd",
+        "receipt_sha256": "47cda99ee6d24178dfdb84519d561b621eb6468ec8d2852061c9a5bf741ead00"
+      }
+    },
+    "Tloc": {
+      "D": {
+        "kernels": [
+          {
+            "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "10.91",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.09",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.08",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "11.19",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "10.99",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "1698",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "50",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.35",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.088424",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "16.623661",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "10.912000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "1698.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "16",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "34.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "18.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "16.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "16.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.079543",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.083695",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "11.19",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "8.843934",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "1.170200",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.221437",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "10.78",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.17",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.29",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "16.04",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "15.60",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "3410",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "50",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "4.61",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.174504",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "32.806791",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "10.784000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "3410.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "38",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "99.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "65.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "34.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "34.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.077396",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.039839",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "16.04",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "8.814771",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "1.495604",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "1.779894",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 5108.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 54.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 133.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 83.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 50.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 50.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 21.696
+        },
+        "metrics_sha256": "81806763abc896273fe37d6820335bbd7e3258f96eb2bda32bdf1df436f75a9b",
+        "raw_metrics_sha256": "27549add2b6904da313ed25021c51d729990bc102b677251d00236c70c783b7f",
+        "receipt_sha256": "af94095fabc22828bfb59731074a152677b79823ce24dea711884e4ad37350aa"
+      },
+      "U": {
+        "kernels": [
+          {
+            "kernel": "void findNextLayout<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "10.69",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.09",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.07",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "11.19",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "10.99",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "1701",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "48",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.088407",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "16.620429",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "10.688000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "1701.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "16",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "20.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "7.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "13.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "13.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.079594",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.083788",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "11.19",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "8.827160",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "1.183422",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.236332",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "void findNextLayout<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "10.69",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.18",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.30",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "16.03",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "15.59",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "3414",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "48",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "4.61",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.176861",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "33.249944",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "10.688000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "3414.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "38",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "58.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "33.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "25.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "25.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.077247",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.040888",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "16.03",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "8.801522",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "1.509953",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "1.805621",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 5115.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 54.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 78.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 40.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 38.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 38.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 21.376
+        },
+        "metrics_sha256": "78c153677e3d8c2b552f152483bad7897e01be1a1cc9147c1e4f64053d201490",
+        "raw_metrics_sha256": "ac9a0653d9613455f2d31bdef94d5bbd480b52d77be2e6a9b9e9174f5ff4222e",
+        "receipt_sha256": "e30bbb93beb809b54bbbeea469e2a58c4e05ef2bade585419bc0e9a0a8d4e430"
+      },
+      "V": {
+        "kernels": [
+          {
+            "kernel": "void findNextLayout<1>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "10.78",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.09",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.17",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "11.18",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "10.99",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "1705",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "44",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "2.34",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.087940",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "16.532719",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "10.784000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "1705.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "16",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "20.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "6.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "14.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "14.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.078666",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.083398",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "11.18",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "8.825806",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "1.353666",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "2.208211",
+                "unit": "inst"
+              }
+            }
+          },
+          {
+            "kernel": "void findNextLayout<1>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, const int *, const float *, const float *)",
+            "details": {
+              "DRAM Throughput": {
+                "value": "0",
+                "unit": "%"
+              },
+              "Duration": {
+                "value": "11.01",
+                "unit": "us"
+              },
+              "Compute (SM) Throughput": {
+                "value": "0.18",
+                "unit": "%"
+              },
+              "Issued Warp Per Scheduler": {
+                "value": "0.08",
+                "unit": ""
+              },
+              "No Eligible": {
+                "value": "92.39",
+                "unit": "%"
+              },
+              "Eligible Warps Per Scheduler": {
+                "value": "0.08",
+                "unit": "warp"
+              },
+              "Avg. Active Threads Per Warp": {
+                "value": "16.02",
+                "unit": ""
+              },
+              "Avg. Not Predicated Off Threads Per Warp": {
+                "value": "15.58",
+                "unit": ""
+              },
+              "Executed Instructions": {
+                "value": "3420",
+                "unit": "inst"
+              },
+              "Block Size": {
+                "value": "512",
+                "unit": ""
+              },
+              "Grid Size": {
+                "value": "1",
+                "unit": ""
+              },
+              "Registers Per Thread": {
+                "value": "44",
+                "unit": "register/thread"
+              },
+              "# SMs": {
+                "value": "188",
+                "unit": "SM"
+              },
+              "Achieved Occupancy": {
+                "value": "4.60",
+                "unit": "%"
+              }
+            },
+            "raw": {
+              "sm__pipe_fp64_cycles_active.avg.pct_of_peak_sustained_elapsed": {
+                "value": "0.175165",
+                "unit": "%"
+              },
+              "sm__pipe_fp64_cycles_active.max.pct_of_peak_sustained_elapsed": {
+                "value": "32.930994",
+                "unit": "%"
+              },
+              "gpu__time_duration.sum": {
+                "value": "11.008000",
+                "unit": "us"
+              },
+              "profiler__replayer_passes": {
+                "value": "34.000000",
+                "unit": "pass"
+              },
+              "device__attribute_multiprocessor_count": {
+                "value": "188",
+                "unit": ""
+              },
+              "smsp__inst_executed.sum": {
+                "value": "3420.000000",
+                "unit": "inst"
+              },
+              "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "38",
+                "unit": ""
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": {
+                "value": "54.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": {
+                "value": "30.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": {
+                "value": "24.000000",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read.sum": {
+                "value": "24.000000",
+                "unit": "sector"
+              },
+              "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": {
+                "value": "0",
+                "unit": "sector"
+              },
+              "dram__bytes_op_read.sum": {
+                "value": "0",
+                "unit": "byte"
+              },
+              "smsp__warps_eligible.avg.per_cycle_active": {
+                "value": "0.076388",
+                "unit": "warp"
+              },
+              "smsp__warps_active.avg.per_cycle_active": {
+                "value": "1.039940",
+                "unit": "warp"
+              },
+              "smsp__thread_inst_executed_per_inst_executed.ratio": {
+                "value": "16.02",
+                "unit": ""
+              },
+              "smsp__average_warps_issue_stalled_wait_per_issue_active.ratio": {
+                "value": "8.806254",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+                "value": "1.650789",
+                "unit": "inst"
+              },
+              "smsp__average_warps_issue_stalled_short_scoreboard_per_issue_active.ratio": {
+                "value": "1.789889",
+                "unit": "inst"
+              }
+            }
+          }
+        ],
+        "sum_two_levels": {
+          "smsp__inst_executed.sum": 5125.0,
+          "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum": 54.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum": 74.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum": 36.0,
+          "l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_miss.sum": 38.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum": 0.0,
+          "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum": 0.0,
+          "lts__t_sectors_srcunit_tex_op_read.sum": 38.0,
+          "lts__t_sectors_srcunit_tex_op_read_lookup_miss.sum": 0.0,
+          "dram__bytes_op_read.sum": 0.0,
+          "replay_duration_us": 21.792
+        },
+        "metrics_sha256": "94809f36efa54a5941e0983da453b8c3949d68c520b2d5475b3b8efb0a41c89e",
+        "raw_metrics_sha256": "6c7a15ae86dd0088f1261d53826bdd51fdf758875fe6ddfde4d151ad99d58cdb",
+        "receipt_sha256": "61925795522429cbfe214eac7439b2af04e3b5fb94f0f83dadb19d1a005b32ea"
+      }
+    }
+  }
+}
