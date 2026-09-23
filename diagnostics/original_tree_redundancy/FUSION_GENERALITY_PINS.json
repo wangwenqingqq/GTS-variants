@@ -1,0 +1,62 @@
+{
+  "audit_date": "2026-09-23",
+  "status": "read-only source audit; no new build, correctness, profiling or GPU timing",
+  "sampling": "five purposively selected repositories, six implementation paths; not a population or prevalence estimate",
+  "repositories": [
+    {
+      "name": "GTS",
+      "repository": "https://github.com/ZJU-DAILY/GTS",
+      "commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+      "working_tree_clean": true,
+      "files_sha256": {
+        "Source Code/GTS/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+        "Source Code/GTS/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+        "Source Code/GTS/include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+        "Source Code/GPU-Tree/include/search.cuh": "a4b90f2b393b5a5ec7dccddc7b6c4bf04267b286d518f2ed4c269d893aa9f793"
+      }
+    },
+    {
+      "name": "bufferkdtree",
+      "repository": "https://github.com/gieseke/bufferkdtree",
+      "commit": "fcba7edef2710a6e8bffa00aff2564504655182a",
+      "working_tree_clean": true,
+      "files_sha256": {
+        "bufferkdtree/src/neighbors/buffer_kdtree/gpu_opencl.c": "38dd732def7697efa684b14332d7ba48a0a4cc28fb790a4ff66df61795256be9",
+        "bufferkdtree/src/neighbors/buffer_kdtree/kernels/brute_all_leaves_nearest_neighbors.cl": "4a8f12a3cb5646c9d19adafa32c5740c1b33df26c14fb567feb5df093ff189f1"
+      }
+    },
+    {
+      "name": "ArborX",
+      "repository": "https://github.com/arborx/ArborX",
+      "commit": "041bf18e0bea7ab57f21dc0ee793389738c8cf11",
+      "working_tree_clean": true,
+      "files_sha256": {
+        "src/spatial/detail/ArborX_TraversalPolicy.hpp": "98ed0d5455ce7404ff4afc0ab8f978d727c7e96582e08bab0ffcf4603d06487b",
+        "src/spatial/detail/ArborX_CrsGraphWrapperImpl.hpp": "f5c2bbe1dbc1be3c77cee9b9b28560f01bd8a3ea7588e1d95b4f90f8402cbe05",
+        "src/spatial/detail/ArborX_TreeTraversal.hpp": "5d4ea73df7424b35039af2a9fdf17f0f1542765708a234e9362dfb06f66b6eba"
+      }
+    },
+    {
+      "name": "MVGpuBTree",
+      "repository": "https://github.com/owensgroup/MVGpuBTree",
+      "commit": "f755006d78ccca565f97cda053727d4d48b82d46",
+      "working_tree_clean": true,
+      "files_sha256": {
+        "include/btree_kernels.hpp": "45de9b0b91badc0af152910530785f7651a49c3f4a3591195f6ed43c7bc4bbcf",
+        "include/gpu_versioned_blink_tree.hpp": "8e5436cb9e40a98a9372135487e60cffe6b507a2b301103339cdc8f5d0eb09a6",
+        "include/gpu_blink_tree.hpp": "041783550c9001422525d803ffb96051686e9f63ac2d18da4656c9f2fab12ddb",
+        "README.md": "0c51abc75e4317e4212df704343be9eb059f151931b5b8337e3032bf61a4f03b"
+      }
+    },
+    {
+      "name": "JZ-Tree",
+      "repository": "https://github.com/jstuecker/jztree",
+      "commit": "049c581e4f5d6343dd756669ec7019500c8da9e8",
+      "working_tree_clean": true,
+      "files_sha256": {
+        "src/jztree_cuda/knn.cuh": "4fc69b1ee5e3d8e3e5ad0785bfa5b02a71fa045e587530e338271141c96bcffa",
+        "src/jztree/knn.py": "e14ec4ad32de46680e94131ee778f8a756912fce94c9b3cb8c961f7a5607a1c6"
+      }
+    }
+  ]
+}

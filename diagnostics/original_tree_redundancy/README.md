@@ -3,6 +3,11 @@
 Date: 2026-09-22. Status: source audit and prior-art screening, not a new GPU
 performance result. Original sources and running GPU workloads were not changed.
 
+Follow-up: [cross-index fusion generality audit, 2026-09-23](FUSION_GENERALITY.md)
+adds pinned buffer k-d tree, ArborX, MVGpuBTree and JZ-Tree source evidence,
+including already-integrated negative controls. It does not claim majority
+prevalence or cross-index measured speedup.
+
 ## Conclusion
 
 The inspected GTS and GPU-Tree implementations expose avoidable host allocation
