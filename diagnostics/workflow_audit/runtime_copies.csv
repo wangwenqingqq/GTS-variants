@@ -1,0 +1,95 @@
+run,scope,direction,calls,bytes,gpu_ms
+nsys_all_include,incomplete:main.total,Host-to-Device,5,104,0.001696
+nsys_all_include,incomplete:update.total,Device-to-Device,1,1024000,1.007132
+nsys_all_include,index.fix_leaf_flags,Device-to-Host,2,2664,0.001408
+nsys_all_include,index.padding_total,Device-to-Host,3,10664,0.001536
+nsys_all_include,index.padding_total,Host-to-Device,2,35820,0.002304
+nsys_all_include,thrust::reduce,Device-to-Host,2,8,0.001248
+nsys_all_include,thrust::sort_by_key,Device-to-Device,4,48000,0.00432
+nsys_all_include,uncorrelated,Unified Device-to-Host,38,1048576,0.042409999999999996
+nsys_all_include,uncorrelated,Unified Host-to-Device,55,2097152,0.10319600000000001
+nsys_all_include,update.init_mirrors,Device-to-Host,3,3108,0.001408
+nsys_base_delete,index.fix_leaf_flags,Device-to-Host,2,2664,0.001472
+nsys_base_delete,index.padding_total,Device-to-Host,3,10664,0.001536
+nsys_base_delete,index.padding_total,Host-to-Device,2,35820,0.002272
+nsys_base_delete,main.total,Host-to-Device,5,104,0.0016640000000000001
+nsys_base_delete,thrust::reduce,Device-to-Host,2,8,0.001152
+nsys_base_delete,thrust::sort_by_key,Device-to-Device,4,48000,0.00432
+nsys_base_delete,uncorrelated,Unified Device-to-Host,41,1114112,0.044008000000000005
+nsys_base_delete,uncorrelated,Unified Host-to-Device,60,2162688,0.10133599999999997
+nsys_base_delete,update.init_mirrors,Device-to-Host,3,3108,0.0015040000000000001
+nsys_base_delete,update.total,Device-to-Device,1,1024000,1.007005
+nsys_buffer_delete,index.fix_leaf_flags,Device-to-Host,2,2664,0.001376
+nsys_buffer_delete,index.padding_total,Device-to-Host,3,10664,0.001536
+nsys_buffer_delete,index.padding_total,Host-to-Device,2,35820,0.0022400000000000002
+nsys_buffer_delete,main.total,Host-to-Device,5,104,0.0016320000000000002
+nsys_buffer_delete,op.delete,Device-to-Device,1,4,0.000992
+nsys_buffer_delete,thrust::reduce,Device-to-Host,2,8,0.001216
+nsys_buffer_delete,thrust::sort_by_key,Device-to-Device,4,48000,0.00432
+nsys_buffer_delete,uncorrelated,Unified Device-to-Host,38,983040,0.03981699999999999
+nsys_buffer_delete,uncorrelated,Unified Host-to-Device,49,1966080,0.08812599999999998
+nsys_buffer_delete,update.delete_direct,Device-to-Host,1,336,0.000416
+nsys_buffer_delete,update.delete_direct,Host-to-Device,2,356,0.000608
+nsys_buffer_delete,update.init_mirrors,Device-to-Host,3,3108,0.001344
+nsys_buffer_delete,update.insert_total,Host-to-Device,128,1536,0.042816000000000055
+nsys_buffer_delete,update.total,Device-to-Device,1,1024000,1.008957
+nsys_buffer_query,index.fix_leaf_flags,Device-to-Host,2,2664,0.001408
+nsys_buffer_query,index.padding_total,Device-to-Host,3,10664,0.001568
+nsys_buffer_query,index.padding_total,Host-to-Device,2,35820,0.002336
+nsys_buffer_query,main.total,Host-to-Device,5,104,0.001696
+nsys_buffer_query,query.buffer_scan,Device-to-Host,1,4,0.000576
+nsys_buffer_query,query.buffer_scan,Host-to-Device,1,4,0.00032
+nsys_buffer_query,thrust::reduce,Device-to-Host,2,8,0.001184
+nsys_buffer_query,thrust::sort_by_key,Device-to-Device,4,48000,0.004288
+nsys_buffer_query,uncorrelated,Unified Device-to-Host,51,1376256,0.052834
+nsys_buffer_query,uncorrelated,Unified Host-to-Device,66,2383872,0.12171899999999998
+nsys_buffer_query,update.init_mirrors,Device-to-Host,3,3108,0.001376
+nsys_buffer_query,update.insert_total,Host-to-Device,128,1536,0.04262400000000007
+nsys_buffer_query,update.total,Device-to-Device,1,1024000,1.003388
+nsys_direct_delete,index.fix_leaf_flags,Device-to-Host,2,2664,0.0013440000000000001
+nsys_direct_delete,index.padding_total,Device-to-Host,3,10664,0.001568
+nsys_direct_delete,index.padding_total,Host-to-Device,2,35820,0.002304
+nsys_direct_delete,main.total,Host-to-Device,5,104,0.001696
+nsys_direct_delete,thrust::reduce,Device-to-Host,2,8,0.001216
+nsys_direct_delete,thrust::sort_by_key,Device-to-Device,4,48000,0.004256
+nsys_direct_delete,uncorrelated,Unified Device-to-Host,46,1245184,0.04902899999999999
+nsys_direct_delete,uncorrelated,Unified Host-to-Device,62,2293760,0.11458100000000003
+nsys_direct_delete,update.delete_direct,Device-to-Host,1,84,0.000576
+nsys_direct_delete,update.delete_direct,Host-to-Device,2,104,0.0006720000000000001
+nsys_direct_delete,update.init_mirrors,Device-to-Host,3,3108,0.001344
+nsys_direct_delete,update.insert_total,Host-to-Device,2,24,0.00064
+nsys_direct_delete,update.total,Device-to-Device,1,1024000,1.004828
+nsys_direct_insert,index.fix_leaf_flags,Device-to-Host,2,2664,0.0015040000000000001
+nsys_direct_insert,index.padding_total,Device-to-Host,3,10664,0.001568
+nsys_direct_insert,index.padding_total,Host-to-Device,2,35820,0.002208
+nsys_direct_insert,main.total,Host-to-Device,5,104,0.0016320000000000002
+nsys_direct_insert,thrust::reduce,Device-to-Host,2,8,0.001248
+nsys_direct_insert,thrust::sort_by_key,Device-to-Device,4,48000,0.004288
+nsys_direct_insert,uncorrelated,Unified Device-to-Host,43,1179648,0.045286999999999994
+nsys_direct_insert,uncorrelated,Unified Host-to-Device,57,2228224,0.09877700000000002
+nsys_direct_insert,update.init_mirrors,Device-to-Host,3,3108,0.001344
+nsys_direct_insert,update.insert_total,Host-to-Device,2,24,0.000704
+nsys_direct_insert,update.total,Device-to-Device,1,1024000,1.009405
+nsys_query_only,index.fix_leaf_flags,Device-to-Host,2,2664,0.001568
+nsys_query_only,index.padding_total,Device-to-Host,3,10664,0.0015040000000000001
+nsys_query_only,index.padding_total,Host-to-Device,2,35820,0.0022400000000000002
+nsys_query_only,main.total,Host-to-Device,5,104,0.001632
+nsys_query_only,thrust::reduce,Device-to-Host,2,8,0.001536
+nsys_query_only,thrust::sort_by_key,Device-to-Device,4,48000,0.004352
+nsys_query_only,uncorrelated,Unified Device-to-Host,88,1527808,0.07257799999999996
+nsys_query_only,uncorrelated,Unified Host-to-Device,104,2576384,0.1492669999999999
+nsys_query_only,update.init_mirrors,Device-to-Host,3,3108,0.001536
+nsys_query_only,update.total,Device-to-Device,1,1024000,1.001276
+nsys_rebuild,incomplete:main.total,Host-to-Device,5,104,0.001696
+nsys_rebuild,incomplete:update.total,Device-to-Device,1,1024000,1.002429
+nsys_rebuild,index.fix_leaf_flags,Device-to-Host,4,29328,0.0032640000000000004
+nsys_rebuild,index.padding_total,Device-to-Host,6,45592,0.0035519999999999996
+nsys_rebuild,index.padding_total,Host-to-Device,4,135680,0.007520000000000001
+nsys_rebuild,op.insert,Device-to-Device,2,1024008,1.251964
+nsys_rebuild,op.insert,Host-to-Device,1,256,0.000352
+nsys_rebuild,thrust::reduce,Device-to-Host,5,20,0.0025599999999999998
+nsys_rebuild,thrust::sort_by_key,Device-to-Device,10,122376,0.01072
+nsys_rebuild,uncorrelated,Unified Device-to-Host,67,1499136,0.05987299999999999
+nsys_rebuild,uncorrelated,Unified Host-to-Device,82,2564096,0.14376599999999992
+nsys_rebuild,update.init_mirrors,Device-to-Host,6,34216,0.0038399999999999997
+nsys_rebuild,update.insert_total,Host-to-Device,128,1536,0.04316800000000006

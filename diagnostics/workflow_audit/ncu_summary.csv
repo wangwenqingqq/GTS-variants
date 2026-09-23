@@ -1,0 +1,36 @@
+run,kernel,scope,grid,block,duration_ns,load_requests,load_sectors,store_requests,store_sectors,load_bytes_per_sector,store_bytes_per_sector,atomic_requests,reduction_requests,dram_read_bytes,dram_write_bytes,registers_per_thread,shared_bytes_per_block,eligible_warps_per_active_cycle,active_warps_per_active_cycle
+ncu_buffer_delete_mergeInResult,mergeInResult,native N2000,"(1, 1, 1)","(512, 1, 1)",1728,1,1,0,0,4,0,0,0,0,0,18,1024,0.14,2.31
+ncu_buffer_query_check,check,native N2000,"(1, 1, 1)","(512, 1, 1)",1792,1,1,1,1,4,4,0,0,0,0,26,1024,0.19,2.30
+ncu_buffer_query_getRnn,getRnn,native N2000,"(1, 1, 1)","(512, 1, 1)",2048,4,4,2,2,4,4,0,0,0,0,28,1024,0.09,1.78
+ncu_buffer_query_searchD,searchD,native N2000,"(1, 1, 1)","(512, 1, 1)",5472,259,259,2,2,4,4,0,0,0,0,36,1024,0.09,1.16
+ncu_query_only_collectLeafNodesSingleQuery,collectLeafNodesSingleQuery,native N2000,"(1, 1, 1)","(512, 1, 1)",2144,32,51,8,24,16.63,25.67,4,0,0,0,28,1024,0.07,1.95
+ncu_query_only_compactResultSingleQuery,compactResultSingleQuery,native N2000,"(4, 1, 1)","(512, 1, 1)",2080,53,199,4,4,31.08,6,2,0,0,0,26,1024,0.18,3.30
+ncu_query_only_findNextRnn,findNextRnn,native N2000,"(1, 1, 1)","(512, 1, 1)",6688,269,288,1,2,4.35,20,0,0,0,0,40,1024,0.08,1.15
+ncu_query_only_getPivotDis,getPivotDis,native N2000,"(1, 1, 1)","(512, 1, 1)",139392,16492,264615,64,501,4.03,31.94,0,0,0,0,39,1028,0.10,3.94
+ncu_query_only_initIndexData,initIndexData,native N2000,"(4, 1, 1)","(512, 1, 1)",1824,127,127,70,257,4,31.24,0,0,0,0,16,1024,0.17,3.80
+ncu_query_only_initQnode,initQnode,native N2000,"(1, 1, 1)","(512, 1, 1)",1824,20,20,4,14,4,31.71,0,0,0,0,17,1024,0.14,2.96
+ncu_query_only_initRes,initRes,native N2000,"(4, 1, 1)","(512, 1, 1)",1696,0,0,49,193,0,31.92,0,0,0,0,16,1024,0.51,3.67
+ncu_query_only_leafProcessRnnUpdate,leafProcessRnnUpdate,native N2000,"(77, 1, 1)","(512, 1, 1)",8064,21720,210413,6,9,4.03,4,0,0,0,2048,40,1044,0.08,2.00
+ncu_query_only_mergeTotalResult,mergeTotalResult,native N2000,"(1, 1, 1)","(512, 1, 1)",2208,4,4,2,2,10,12,0,0,0,0,34,1024,0.08,1.65
+ncu_query_only_nodeSplit,nodeSplit,native N2000,"(1, 1, 1)","(512, 1, 1)",10848,584,2906,9,40,4,8.10,0,0,0,0,40,1024,0.09,1.56
+ncu_query_only_updatePnodeFlag,updatePnodeFlag,native N2000,"(1, 1, 1)","(512, 1, 1)",2112,5,6,1,1,9.33,4,0,0,0,0,20,1024,0.08,1.72
+ncu_rebuild_getNewData_envfix,getNewData,native N2000,"(5, 1, 1)","(512, 1, 1)",89696,17540,266618,8448,264448,4.16,4,0,0,0,0,22,1024,0.03,3.90
+static_ids_dataProcessKnn,dataProcessKnn,static N65536 Q128,"(1233116, 1, 1)","(512, 1, 1)",15105440,392130888,1272531693,3699348,18496740,4.08,32,0,0,55543296,607398400,40,1024,0.18,3.00
+static_ids_dataProcessRnn,dataProcessRnn,static N65536 Q128,"(1272163, 1, 1)","(512, 1, 1)",4867776,438162200,1343761640,2813390,5406507,4.02,18.82,0,0,44505344,114348032,40,1024,0.43,5.53
+static_ids_getDisPQ,getDisPQ,static N65536 Q128,"(25, 1, 1)","(512, 1, 1)",39360,106000,1697200,1200,9600,4.08,32,0,0,0,0,40,1024,0.11,3.98
+static_ids_getQCount,getQCount,static N65536 Q128,"(2500, 1, 1)","(512, 1, 1)",14464,40000,160000,40890,1280000,32,4,0,0,256,236288,19,1024,0.25,8.26
+static_ids_getQCountKnn,getQCountKnn,static N65536 Q128,"(2500, 1, 1)","(512, 1, 1)",15008,80000,360000,47210,1280000,28.89,8,0,0,256,250112,19,1024,0.58,8.27
+static_ids_initDisK,initDisK,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",1760,4,4,4,16,4,32,0,0,0,0,24,1024,0.14,1.59
+static_ids_initPList,initPList,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",1664,0,0,4,16,0,32,0,0,0,0,18,1024,0.19,1.98
+static_ids_initPListKnn,initPListKnn,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",1600,0,0,4,32,0,32,0,0,0,0,18,1024,0.23,2.17
+static_ids_labelCNode,labelCNode,static N65536 Q128,"(3, 1, 1)","(512, 1, 1)",2304,128,408,80,640,25.96,32,0,0,0,0,22,1024,0.47,3.52
+static_ids_mergeLNode,mergeLNode,static N65536 Q128,"(2500, 1, 1)","(512, 1, 1)",29504,240000,1592163,80000,2544326,6.81,4,0,0,256,488192,28,1024,0.24,9.31
+static_ids_mergeLNodeKnn,mergeLNodeKnn,static N65536 Q128,"(2500, 1, 1)","(512, 1, 1)",28384,240000,1713116,80000,2466232,12.11,8,0,0,35328,754176,30,1024,0.41,9.31
+static_ids_mergeResKnnIds,mergeResKnnIds,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",53088,1616,26664,800,25600,7.88,4,0,0,0,0,40,1024,0.03,1.00
+static_ids_mergeResRnn,mergeResRnn,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",9940192,798800,25443651,4,16,4,32,0,0,30976,105216,24,1024,0.02,1.00
+static_ids_nodeProcessKnn,nodeProcessKnn,static N65536 Q128,"(250, 1, 1)","(512, 1, 1)",3232,27600,95600,8000,64000,27.43,32,0,0,0,0,33,1024,0.70,5.26
+static_ids_nodeProcessRnn,nodeProcessRnn,static N65536 Q128,"(3, 1, 1)","(512, 1, 1)",32800,10636,169596,80,320,4.05,32,0,0,0,0,38,1024,0.08,3.58
+static_ids_updateDisK,updateDisK,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",2496,20,269,4,16,9.64,32,0,0,0,0,20,1024,0.08,1.20
+static_kth_mergeResKnn,mergeResKnn,static N65536 Q128,"(1, 1, 1)","(512, 1, 1)",2368,28,400,4,16,7.84,32,0,0,0,0,33,1024,0.08,1.19
+static_vec_dataProcessKnnVec,dataProcessKnnVec,static N65536 Q128,"(1233116, 1, 1)","(512, 1, 1)",15130912,390897772,1271314961,3699348,18496740,4.08,32,0,0,54900480,606404864,40,1024,0.18,2.97
+static_vec_getDisPQVec,getDisPQVec,static N65536 Q128,"(25, 1, 1)","(512, 1, 1)",38880,105600,1695600,1200,9600,4.05,32,0,0,0,0,40,1024,0.11,3.98

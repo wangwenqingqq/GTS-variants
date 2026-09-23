@@ -1,0 +1,13 @@
+{
+  "scope": "Separate compile-only reconstruction; not a replacement for measured binary or a runtime validation",
+  "verified_utc": "2026-09-23T15:49:52Z",
+  "compiler": "CUDA13.1.115 nvcc, GCC13.3",
+  "build_exit_code": 0,
+  "command": "$CUDA_HOME/bin/nvcc -std=c++17 -O3 -arch=sm_120 -rdc=true -lineinfo -DGTS_DIAG_NVTX -Xptxas=-v -Xnvlink=--ignore-host-info -Inative/include native/src/main.cu -ldl -o bin/native_verify",
+  "binary_sha256": "6997ba01655a970c1cb9d253ab69459520d3f5bceeb195cbc63493e4a1999d30",
+  "measured_binary_sha256": "040caca811f70450f7b076431786c6b4c8699a1949923f1a3fd4acae1caf67d9",
+  "bit_identical": false,
+  "build_log_sha256": "766fadb48cb24488633acc2f56a9394f2b6ed6dc40bc3a4d3cc300de226c7b2a",
+  "smoke_attempt": "Blocked at advisory-lock admission; no workload launched. Another process now owns GPU0; no interference or retry.",
+  "smoke_admission_log_sha256": "b71cbf5873674b94f47e6cfdb7934470afdf4dc38da3862df1b05397030a146c"
+}

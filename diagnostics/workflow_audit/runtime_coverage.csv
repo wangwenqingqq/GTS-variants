@@ -1,0 +1,70 @@
+file,line,kernel,observed_runs,state
+include/search.cuh,38,findNextRnn,ncu_query_only_findNextRnn;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/search.cuh,156,findNextKnn,,source-only; legacy query API; no native main call
+include/search.cuh,190,updatePnodeFlag,ncu_query_only_updatePnodeFlag;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/search.cuh,208,updateCnodeFlag,,source-only; legacy query API; no native main call
+include/search.cuh,226,getQpDis,,source-only; legacy query API; no native main call
+include/search.cuh,325,updateDisk,,source-only; legacy query API; no native main call
+include/search.cuh,342,leafProcessRnn,,source-only; legacy query API; no native main call
+include/search.cuh,477,leafProcessKnn,,source-only; legacy query API; no native main call
+include/search.cuh,591,getQnodeCount,,source-only; update qnum>1 fallback / legacy API; native main fixes qnum=1
+include/search.cuh,606,getQresultCount,,source-only; update qnum>1 fallback / legacy API; native main fixes qnum=1
+include/search.cuh,621,mergeLeafNode,,source-only; update qnum>1 fallback / legacy API; native main fixes qnum=1
+include/search.cuh,642,mergeResultRnn,,source-only; update qnum>1 fallback / legacy API; native main fixes qnum=1
+include/search.cuh,668,mergeResultKnn,,source-only; legacy query API; no native main call
+include/search.cuh,705,getKnnResult,,source-only; legacy query API; no native main call
+include/search.cuh,720,initQnode,ncu_query_only_initQnode;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/search.cuh,739,initDisk,,source-only; legacy query API; no native main call
+include/search.cuh,750,initRes,ncu_query_only_initRes;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/search.cuh,761,checkRes,,source-only; definition only; no active native launch
+include/search_naive.cuh,24,searchD,ncu_buffer_query_searchD;nsys_buffer_query,representative observed; branches not exhaustive
+include/search_naive.cuh,89,searchS,,source-only; overflow-buffer query; searchS only string metric
+include/search_naive.cuh,130,check,ncu_buffer_query_check;nsys_buffer_query,representative observed; branches not exhaustive
+include/search_naive.cuh,149,getAccu,,source-only; definition only; no active native launch
+include/search_naive.cuh,170,updateUpp,,source-only; definition only; no active native launch
+include/search_naive.cuh,182,getRnn,ncu_buffer_query_getRnn;nsys_buffer_query,representative observed; branches not exhaustive
+include/search_v2.cuh,67,nodeProcessRnn,static_ids_nodeProcessRnn,representative observed; branches not exhaustive
+include/search_v2.cuh,183,nodeProcessKnn,static_ids_nodeProcessKnn,representative observed; branches not exhaustive
+include/search_v2.cuh,285,initPList,static_ids_initPList,representative observed; branches not exhaustive
+include/search_v2.cuh,297,initPListKnn,static_ids_initPListKnn,representative observed; branches not exhaustive
+include/search_v2.cuh,309,getQCount,static_ids_getQCount,representative observed; branches not exhaustive
+include/search_v2.cuh,331,getQCountKnn,static_ids_getQCountKnn,representative observed; branches not exhaustive
+include/search_v2.cuh,355,mergeLNode,static_ids_mergeLNode,representative observed; branches not exhaustive
+include/search_v2.cuh,380,mergeLNodeKnn,static_ids_mergeLNodeKnn,representative observed; branches not exhaustive
+include/search_v2.cuh,405,dataProcessRnn,static_ids_dataProcessRnn,representative observed; branches not exhaustive
+include/search_v2.cuh,519,dataProcessKnn,static_ids_dataProcessKnn,representative observed; branches not exhaustive
+include/search_v2.cuh,634,dataProcessKnnVec,static_vec_dataProcessKnnVec,representative observed; branches not exhaustive
+include/search_v2.cuh,725,mergeResRnn,static_ids_mergeResRnn,representative observed; branches not exhaustive
+include/search_v2.cuh,750,mergeResKnn,static_kth_mergeResKnn,representative observed; branches not exhaustive
+include/search_v2.cuh,766,mergeResKnnIds,static_ids_mergeResKnnIds,representative observed; branches not exhaustive
+include/search_v2.cuh,788,initResV2,,source-only; definition only; no active native launch
+include/search_v2.cuh,800,initDisK,static_ids_initDisK,representative observed; branches not exhaustive
+include/search_v2.cuh,812,labelCNode,static_ids_labelCNode,representative observed; branches not exhaustive
+include/search_v2.cuh,845,getDisPQ,static_ids_getDisPQ,representative observed; branches not exhaustive
+include/search_v2.cuh,955,getDisPQVec,static_vec_getDisPQVec,representative observed; branches not exhaustive
+include/search_v2.cuh,1045,updateDisK,static_ids_updateDisK,representative observed; branches not exhaustive
+include/tree.cuh,55,getPivotDis,ncu_query_only_getPivotDis;nsys_all_include;nsys_base_delete;nsys_buffer_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/tree.cuh,175,nodeSplit,ncu_query_only_nodeSplit;nsys_all_include;nsys_base_delete;nsys_buffer_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/tree.cuh,350,initIndexData,ncu_query_only_initIndexData;nsys_all_include;nsys_base_delete;nsys_buffer_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/tree.cuh,371,showRes,,source-only; definition only; no active native launch
+include/update.cuh,124,mergeTotalResult,ncu_query_only_mergeTotalResult;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/update.cuh,149,findIdx,,source-only; definition only; no active native launch
+include/update.cuh,213,mergeInResult,ncu_buffer_delete_mergeInResult;nsys_buffer_delete,representative observed; branches not exhaustive
+include/update.cuh,227,getNewData,ncu_rebuild_getNewData_envfix;nsys_rebuild,representative observed; branches not exhaustive
+include/update.cuh,289,leafProcessRnnUpdate,ncu_query_only_leafProcessRnnUpdate;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/update.cuh,428,collectLeafNodesSingleQuery,ncu_query_only_collectLeafNodesSingleQuery;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/update.cuh,450,compactResultSingleQuery,ncu_query_only_compactResultSingleQuery;nsys_all_include;nsys_base_delete;nsys_buffer_query;nsys_direct_delete;nsys_direct_insert;nsys_query_only;nsys_rebuild,representative observed; branches not exhaustive
+include/update_optimized.cuh,130,mergeTotalResult,,source-only; alternative header; not included by native main
+include/update_optimized.cuh,151,findIdx,,source-only; alternative header; not included by native main
+include/update_optimized.cuh,216,mergeInResult,,source-only; alternative header; not included by native main
+include/update_optimized.cuh,230,getNewData,,source-only; alternative header; not included by native main
+include/update_optimized.cuh,290,leafProcessRnnUpdate,,source-only; alternative header; not included by native main
+include/update_optimized.cuh,410,collectLeafNodesAndInitRes,,source-only; alternative header; not included by native main
+include/update_optimized.cuh,429,compactResultSingleQuery,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,103,mergeTotalResult,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,124,findIdx,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,188,mergeInResult,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,202,getNewData,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,262,leafProcessRnnUpdate,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,381,collectLeafNodesSingleQuery,,source-only; alternative header; not included by native main
+include/update_user_modified.cuh,399,compactResultSingleQuery,,source-only; alternative header; not included by native main
