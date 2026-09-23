@@ -231,3 +231,10 @@ Only authored instrumentation, curated numerical evidence and manifests are
 published. Raw inputs, generated upstream source, profiler reports/binaries,
 machine configuration, runtime addresses and private receipts stay outside Git.
 Relative raw-file hashes resolve against the task-owned scratch.
+
+## Privileged follow-up
+
+A separately authorized [NCU follow-up](ncu_privileged/README.md) successfully
+collected counters on the same binary without changing driver permissions. It
+identifies general FP64 power-function work as the dominant SIFT leaf mechanism.
+The original denied attempt and measurements above remain unchanged.

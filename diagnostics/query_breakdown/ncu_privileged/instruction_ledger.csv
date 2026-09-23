@@ -1,0 +1,567 @@
+run,source_group,function,opcode,warp_instructions,thread_instructions,predicated_thread_instructions,stall_samples
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",LDC,28,896,896,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",S2R,32,1024,1024,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",LDCU.64,20,640,640,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",LDCU,24,768,768,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",UIADD3,20,640,640,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IMAD,40,1280,1280,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ISETP.GE.AND,28,896,896,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",EXIT,20,640,512,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ULOP3.LUT,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",LDC.64,12,384,384,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",UIMAD,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IMAD.WIDE,28,896,895,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",UMOV,8,256,256,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",MOV,16,512,512,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",LDG.E,798800,25443900,25443899,209
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IADD,36,1152,896,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IABS,12,384,384,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",I2F.RP,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",MUFU.RCP,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",F2I.FTZ.U32.TRUNC.NTZ,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",HFMA2,8,256,256,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IMAD.HI.U32,8,256,256,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ISETP.GT.U32.AND,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ISETP.GE.U32.AND,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",LOP3.LUT,8,256,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ISETP.NE.AND,8,256,256,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IADD3,399394,12721758,12721758,5276
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",BSSY.RECONVERGENT,12,384,384,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",BRA,199719,6361583,6360943,57
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",BSSY.RELIABLE,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",IADD.64,399394,12721758,12721758,57
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ISETP.GT.S64.AND,199707,6361199,6361199,61
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",PLOP3.LUT,8,256,256,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",BSYNC.RECONVERGENT,118,384,384,71
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",ISETP.NE.S64.OR,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",BREAK.RELIABLE,4,128,128,0
+aggregate_q128_r500,0,"mergeResRnn(int, int, int *, int, int *, int, int, int, int *)",STG.E,4,128,128,0
+leaf_q128_r500_0,0,__internal_accurate_pow,ISETP.GT.U32.AND,328218054,2151788886,2151788886,70645
+leaf_q128_r500_0,0,__internal_accurate_pow,MOV,1391708234,8799233444,6007893407,556965
+leaf_q128_r500_0,0,__internal_accurate_pow,UMOV.64,3610398594,23669677746,23669677746,88783
+leaf_q128_r500_0,0,__internal_accurate_pow,BSSY.RECONVERGENT,164109027,1075894443,1075894443,4121
+leaf_q128_r500_0,0,__internal_accurate_pow,DMUL,1352290225,8703194494,7627300051,500092
+leaf_q128_r500_0,0,__internal_accurate_pow,LOP3.LUT,656436108,4303577772,4303577772,272388
+leaf_q128_r500_0,0,__internal_accurate_pow,SHF.R.U32.HI,164109027,1075894443,1075894443,8110
+leaf_q128_r500_0,0,__internal_accurate_pow,LEA.HI,203527036,1171933393,96038950,19172
+leaf_q128_r500_0,0,__internal_accurate_pow,ISETP.GE.U32.AND,164109027,1075894443,1075894443,4051
+leaf_q128_r500_0,0,__internal_accurate_pow,IADD,695854117,4399616722,3024475470,783167
+leaf_q128_r500_0,0,__internal_accurate_pow,NOP,50782088370,331951722144,331951722144,18661363
+leaf_q128_r500_0,0,__internal_accurate_pow,DADD,4962688819,32372872240,32372872240,8970893
+leaf_q128_r500_0,0,__internal_accurate_pow,MUFU.RCP64H,164109027,1075894443,1075894443,229137
+leaf_q128_r500_0,0,__internal_accurate_pow,DFMA,6728470107,44111672163,44111672163,14668196
+leaf_q128_r500_0,0,__internal_accurate_pow,MOV.64,492327081,3227683329,3227683329,400160
+leaf_q128_r500_0,0,__internal_accurate_pow,HFMA2,164109027,1075894443,1075894443,4023
+leaf_q128_r500_0,0,__internal_accurate_pow,IMAD.SHL.U32,164109027,1075894443,1075894443,8096
+leaf_q128_r500_0,0,__internal_accurate_pow,SEL,164109027,1075894443,1075894443,19930
+leaf_q128_r500_0,0,__internal_accurate_pow,FSETP.GEU.AND,203527036,1171933393,1171933393,672746
+leaf_q128_r500_0,0,__internal_accurate_pow,IMAD,203527036,1171933393,1075894443,619246
+leaf_q128_r500_0,0,__internal_accurate_pow,BRA,164109027,1075894443,979855493,150224
+leaf_q128_r500_0,0,__internal_accurate_pow,DSETP.GEU.AND,39418009,96038950,96038950,955
+leaf_q128_r500_0,0,__internal_accurate_pow,SHF.R.S32.HI,39418009,96038950,0,53484
+leaf_q128_r500_0,0,__internal_accurate_pow,FSEL,407054072,2343866786,2343866786,872289
+leaf_q128_r500_0,0,__internal_accurate_pow,LEA,39418009,96038950,0,3755
+leaf_q128_r500_0,0,__internal_accurate_pow,BSYNC.RECONVERGENT,201962201,1075894443,1075894443,21868
+leaf_q128_r500_0,0,__internal_accurate_pow,DSETP.NEU.AND,164109027,1075894443,1075894443,133056
+leaf_q128_r500_0,0,__internal_accurate_pow,RET.ABS.NODEC,164109027,1075894443,1075894443,4086
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDC,63608150,1970723030,1970723030,4367
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDCU.64,20354608,651347456,651347456,154
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD,325550978,6788320352,5468944650,24565
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",UMOV,43791670,1319375702,1319375702,1249
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",MOV,690005735,7106941618,7106941618,149616
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDC.64,68965866,2004084482,2004084482,5050
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDG.E,438162200,5458568536,5458568536,158882
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.WIDE,394639594,4147955560,4147955560,153795
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",S2UR,20354608,651347456,651347456,142
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IABS,65687505,1979063553,1979063553,5457
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",I2F.RP,21895835,659687851,659687851,658
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LOP3.LUT,210445023,2411950679,1752262828,572680
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",MUFU.RCP,21895835,659687851,659687851,1544
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2I.FTZ.U32.TRUNC.NTZ,21895835,659687851,659687851,1364
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD,51962776,1386942756,1386942756,4059
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",HFMA2,185629369,1733241211,1733241211,5332
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.HI.U32,43791670,1319375702,1319375702,4658
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GT.U32.AND,21895835,659687851,659687851,1453
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.AND,44794769,1319375446,1319375446,5998
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.U32.AND,23167998,668028118,668028118,1398
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.NE.AND,250885175,2678839223,2678839223,70776
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD3,20354608,651347456,651347456,905
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",S2R,41981379,1302694912,1302694912,3755
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.OR,20354608,651347456,651347456,2012
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BRA,235350155,2060852835,2007811449,45052
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BSSY.RECONVERGENT,167925516,1100915372,1100915372,4245
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GT.AND,1272163,8340267,8340267,1215
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",VIMNMX.U32,1272163,8340267,8340267,343
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.SHL.U32,1272163,8340267,8340267,152
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",SHF.R.S32.HI,1272163,8340267,8340267,1030
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BRX,1272163,8340267,8340267,123
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD.64,1272163,8340267,8340267,611
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FADD,162836864,1067554176,1067554176,210715
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSEL,657708271,4311918039,4311918039,37456
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2F.F64.F32,449073539,2944114251,2944114251,74863
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",NOP,2732606124,17914893516,17914893516,1005676
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",DADD,491054918,3219343062,3219343062,745785
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",CALL.ABS.NOINC,164109027,1075894443,1075894443,632142
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSETP.NEU.AND,328218054,2151788886,2151788886,24940
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",DSETP.NAN.AND,0,0,0,19876
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BSYNC.RECONVERGENT,167925644,1100915372,1100915372,26634
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2F.F32.F64,164109027,1075894443,1075894443,380351
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDCU,2813390,16680790,16680790,423
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSETP.GTU.AND,1272163,8340395,8340395,284
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",STG.E,2813390,25443260,25443260,671
+leaf_q128_r500_0,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",EXIT,23167998,668450321,651347456,2194
+leaf_q128_r500_1,0,__internal_accurate_pow,ISETP.GT.U32.AND,328218054,2151788886,2151788886,70612
+leaf_q128_r500_1,0,__internal_accurate_pow,MOV,1391708234,8799233444,6007893407,557863
+leaf_q128_r500_1,0,__internal_accurate_pow,UMOV.64,3610398594,23669677746,23669677746,87967
+leaf_q128_r500_1,0,__internal_accurate_pow,BSSY.RECONVERGENT,164109027,1075894443,1075894443,3981
+leaf_q128_r500_1,0,__internal_accurate_pow,DMUL,1352290225,8703194494,7627300051,498939
+leaf_q128_r500_1,0,__internal_accurate_pow,LOP3.LUT,656436108,4303577772,4303577772,273093
+leaf_q128_r500_1,0,__internal_accurate_pow,SHF.R.U32.HI,164109027,1075894443,1075894443,8081
+leaf_q128_r500_1,0,__internal_accurate_pow,LEA.HI,203527036,1171933393,96038950,19159
+leaf_q128_r500_1,0,__internal_accurate_pow,ISETP.GE.U32.AND,164109027,1075894443,1075894443,4029
+leaf_q128_r500_1,0,__internal_accurate_pow,IADD,695854117,4399616722,3024475470,783554
+leaf_q128_r500_1,0,__internal_accurate_pow,NOP,50782088370,331951722144,331951722144,18658623
+leaf_q128_r500_1,0,__internal_accurate_pow,DADD,4962688819,32372872240,32372872240,8971694
+leaf_q128_r500_1,0,__internal_accurate_pow,MUFU.RCP64H,164109027,1075894443,1075894443,229153
+leaf_q128_r500_1,0,__internal_accurate_pow,DFMA,6728470107,44111672163,44111672163,14663969
+leaf_q128_r500_1,0,__internal_accurate_pow,MOV.64,492327081,3227683329,3227683329,400082
+leaf_q128_r500_1,0,__internal_accurate_pow,HFMA2,164109027,1075894443,1075894443,4031
+leaf_q128_r500_1,0,__internal_accurate_pow,IMAD.SHL.U32,164109027,1075894443,1075894443,8019
+leaf_q128_r500_1,0,__internal_accurate_pow,SEL,164109027,1075894443,1075894443,20027
+leaf_q128_r500_1,0,__internal_accurate_pow,FSETP.GEU.AND,203527036,1171933393,1171933393,671763
+leaf_q128_r500_1,0,__internal_accurate_pow,IMAD,203527036,1171933393,1075894443,620688
+leaf_q128_r500_1,0,__internal_accurate_pow,BRA,164109027,1075894443,979855493,149506
+leaf_q128_r500_1,0,__internal_accurate_pow,DSETP.GEU.AND,39418009,96038950,96038950,928
+leaf_q128_r500_1,0,__internal_accurate_pow,SHF.R.S32.HI,39418009,96038950,0,53418
+leaf_q128_r500_1,0,__internal_accurate_pow,FSEL,407054072,2343866786,2343866786,871634
+leaf_q128_r500_1,0,__internal_accurate_pow,LEA,39418009,96038950,0,3700
+leaf_q128_r500_1,0,__internal_accurate_pow,BSYNC.RECONVERGENT,201962201,1075894443,1075894443,21982
+leaf_q128_r500_1,0,__internal_accurate_pow,DSETP.NEU.AND,164109027,1075894443,1075894443,132631
+leaf_q128_r500_1,0,__internal_accurate_pow,RET.ABS.NODEC,164109027,1075894443,1075894443,4020
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDC,63608150,1970723030,1970723030,4437
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDCU.64,20354608,651347456,651347456,137
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD,325550978,6788320352,5468944650,24719
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",UMOV,43791670,1319375702,1319375702,1287
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",MOV,690005735,7106941618,7106941618,149550
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDC.64,68965866,2004084482,2004084482,5099
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDG.E,438162200,5458568536,5458568536,158499
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.WIDE,394639594,4147955560,4147955560,155660
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",S2UR,20354608,651347456,651347456,152
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IABS,65687505,1979063553,1979063553,5469
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",I2F.RP,21895835,659687851,659687851,672
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LOP3.LUT,210445023,2411950679,1752262828,572317
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",MUFU.RCP,21895835,659687851,659687851,1483
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2I.FTZ.U32.TRUNC.NTZ,21895835,659687851,659687851,1306
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD,51962776,1386942756,1386942756,3981
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",HFMA2,185629369,1733241211,1733241211,5300
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.HI.U32,43791670,1319375702,1319375702,4553
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GT.U32.AND,21895835,659687851,659687851,1396
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.AND,44794769,1319375446,1319375446,6105
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.U32.AND,23167998,668028118,668028118,1463
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.NE.AND,250885175,2678839223,2678839223,71505
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD3,20354608,651347456,651347456,958
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",S2R,41981379,1302694912,1302694912,3732
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.OR,20354608,651347456,651347456,2069
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BRA,235350155,2060852835,2007811449,44433
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BSSY.RECONVERGENT,167925516,1100915372,1100915372,4060
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GT.AND,1272163,8340267,8340267,1219
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",VIMNMX.U32,1272163,8340267,8340267,330
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.SHL.U32,1272163,8340267,8340267,170
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",SHF.R.S32.HI,1272163,8340267,8340267,1080
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BRX,1272163,8340267,8340267,118
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD.64,1272163,8340267,8340267,637
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FADD,162836864,1067554176,1067554176,213752
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSEL,657708271,4311918039,4311918039,37650
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2F.F64.F32,449073539,2944114251,2944114251,74533
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",NOP,2732606124,17914893516,17914893516,1005155
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",DADD,491054918,3219343062,3219343062,746809
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",CALL.ABS.NOINC,164109027,1075894443,1075894443,634062
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSETP.NEU.AND,328218054,2151788886,2151788886,24803
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",DSETP.NAN.AND,0,0,0,20053
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BSYNC.RECONVERGENT,167925644,1100915372,1100915372,26329
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2F.F32.F64,164109027,1075894443,1075894443,381838
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDCU,2813390,16680790,16680790,437
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSETP.GTU.AND,1272163,8340395,8340395,296
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",STG.E,2813390,25443260,25443260,677
+leaf_q128_r500_1,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",EXIT,23167998,668450321,651347456,2185
+leaf_q32_r300,0,__internal_accurate_pow,ISETP.GT.U32.AND,69186054,456443538,456443538,18405
+leaf_q32_r300,0,__internal_accurate_pow,MOV,293660132,1865874064,1272574582,145944
+leaf_q32_r300,0,__internal_accurate_pow,UMOV.64,761046594,5020878918,5020878918,23604
+leaf_q32_r300,0,__internal_accurate_pow,BSSY.RECONVERGENT,34593027,228221769,228221769,1082
+leaf_q32_r300,0,__internal_accurate_pow,DMUL,285202174,1845824108,1617602339,129642
+leaf_q32_r300,0,__internal_accurate_pow,LOP3.LUT,138372108,912887076,912887076,73660
+leaf_q32_r300,0,__internal_accurate_pow,SHF.R.U32.HI,34593027,228221769,228221769,2120
+leaf_q32_r300,0,__internal_accurate_pow,LEA.HI,43050985,248271725,20049956,5277
+leaf_q32_r300,0,__internal_accurate_pow,ISETP.GE.U32.AND,34593027,228221769,228221769,1029
+leaf_q32_r300,0,__internal_accurate_pow,IADD,146830066,932937032,639175188,208136
+leaf_q32_r300,0,__internal_accurate_pow,NOP,10705400064,70412604588,70412604588,4941579
+leaf_q32_r300,0,__internal_accurate_pow,DADD,1046248768,6866703026,6866703026,2373700
+leaf_q32_r300,0,__internal_accurate_pow,MUFU.RCP64H,34593027,228221769,228221769,59442
+leaf_q32_r300,0,__internal_accurate_pow,DFMA,1418314107,9357092529,9357092529,3832408
+leaf_q32_r300,0,__internal_accurate_pow,MOV.64,103779081,684665307,684665307,104191
+leaf_q32_r300,0,__internal_accurate_pow,HFMA2,34593027,228221769,228221769,1084
+leaf_q32_r300,0,__internal_accurate_pow,IMAD.SHL.U32,34593027,228221769,228221769,2149
+leaf_q32_r300,0,__internal_accurate_pow,SEL,34593027,228221769,228221769,5256
+leaf_q32_r300,0,__internal_accurate_pow,FSETP.GEU.AND,43050985,248271725,248271725,177051
+leaf_q32_r300,0,__internal_accurate_pow,IMAD,43050985,248271725,228221769,162232
+leaf_q32_r300,0,__internal_accurate_pow,BRA,34593027,228221769,208171813,39170
+leaf_q32_r300,0,__internal_accurate_pow,DSETP.GEU.AND,8457958,20049956,20049956,234
+leaf_q32_r300,0,__internal_accurate_pow,SHF.R.S32.HI,8457958,20049956,0,14485
+leaf_q32_r300,0,__internal_accurate_pow,FSEL,86101970,496543450,496543450,229380
+leaf_q32_r300,0,__internal_accurate_pow,LEA,8457958,20049956,0,1073
+leaf_q32_r300,0,__internal_accurate_pow,BSYNC.RECONVERGENT,42788189,228221769,228221769,5868
+leaf_q32_r300,0,__internal_accurate_pow,DSETP.NEU.AND,34593027,228221769,228221769,35660
+leaf_q32_r300,0,__internal_accurate_pow,RET.ABS.NODEC,34593027,228221769,228221769,1044
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDC,13408150,415436722,415436722,1226
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDCU.64,4290608,137299456,137299456,41
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD,68184448,1432128040,1153990742,6346
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",UMOV,9133330,278137298,278137298,308
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",MOV,145367848,1503835583,1503835583,39339
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDC.64,14488696,422513462,422513462,1346
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDG.E,92263860,1153555976,1153555976,41873
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.WIDE,83138424,877243616,877243616,35732
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",S2UR,4290608,137299456,137299456,35
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IABS,13699995,417205947,417205947,1476
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",I2F.RP,4566665,139068649,139068649,153
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LOP3.LUT,44262683,509897389,370828740,149574
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",MUFU.RCP,4566665,139068649,139068649,340
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2I.FTZ.U32.TRUNC.NTZ,4566665,139068649,139068649,303
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD,10758096,292402140,292402140,1040
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",HFMA2,38899783,365549703,365549703,1400
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.HI.U32,9133330,278137298,278137298,1201
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GT.U32.AND,4566665,139068649,139068649,329
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.AND,9393599,278137234,278137234,1620
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.U32.AND,4834828,140837810,140837810,368
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.NE.AND,52836005,566510541,566510541,18154
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD3,4290608,137299456,137299456,230
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",S2R,8849379,274598912,274598912,1120
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GE.OR,4290608,137299456,137299456,545
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BRA,49610155,436287729,425658492,11666
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BSSY.RECONVERGENT,35397516,233529284,233529284,1096
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",ISETP.GT.AND,268163,1769161,1769161,335
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",VIMNMX.U32,268163,1769161,1769161,93
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IMAD.SHL.U32,268163,1769161,1769161,50
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",SHF.R.S32.HI,268163,1769161,1769161,283
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BRX,268163,1769161,1769161,37
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",IADD.64,268163,1769161,1769161,163
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FADD,34324864,226452608,226452608,54583
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSEL,138640271,914656237,914656237,9898
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2F.F64.F32,94661539,624513833,624513833,19780
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",NOP,576014124,3800157828,3800157828,266595
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",DADD,103510918,682896146,682896146,194063
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",CALL.ABS.NOINC,34593027,228221769,228221769,164533
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSETP.NEU.AND,69186054,456443538,456443538,6532
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",DSETP.NAN.AND,0,0,0,5296
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",BSYNC.RECONVERGENT,35397548,233529284,233529284,6899
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",F2F.F32.F64,34593027,228221769,228221769,98977
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",LDCU,544220,3538386,3538386,107
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",FSETP.GTU.AND,268163,1769193,1769193,72
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",STG.E,544220,5363260,5363260,154
+leaf_q32_r300,1,"dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)",EXIT,4834828,140893523,137299456,575
+node_q128_r500,0,__internal_accurate_pow,ISETP.GT.U32.AND,10320,330240,330240,0
+node_q128_r500,0,__internal_accurate_pow,MOV,45200,1331620,909800,30
+node_q128_r500,0,__internal_accurate_pow,UMOV.64,113520,3632640,3632640,2
+node_q128_r500,0,__internal_accurate_pow,BSSY.RECONVERGENT,5160,165120,165120,1
+node_q128_r500,0,__internal_accurate_pow,DMUL,43240,1326290,1161170,33
+node_q128_r500,0,__internal_accurate_pow,LOP3.LUT,20640,660480,660480,13
+node_q128_r500,0,__internal_accurate_pow,SHF.R.U32.HI,5160,165120,165120,1
+node_q128_r500,0,__internal_accurate_pow,LEA.HI,7120,170450,5330,0
+node_q128_r500,0,__internal_accurate_pow,ISETP.GE.U32.AND,5160,165120,165120,0
+node_q128_r500,0,__internal_accurate_pow,IADD,22600,665810,477320,33
+node_q128_r500,0,__internal_accurate_pow,NOP,1601040,50888940,50888940,453
+node_q128_r500,0,__internal_accurate_pow,DADD,156760,4958930,4958930,473
+node_q128_r500,0,__internal_accurate_pow,MUFU.RCP64H,5160,165120,165120,12
+node_q128_r500,0,__internal_accurate_pow,DFMA,211560,6769920,6769920,714
+node_q128_r500,0,__internal_accurate_pow,MOV.64,15480,495360,495360,43
+node_q128_r500,0,__internal_accurate_pow,HFMA2,5160,165120,165120,0
+node_q128_r500,0,__internal_accurate_pow,IMAD.SHL.U32,5160,165120,165120,0
+node_q128_r500,0,__internal_accurate_pow,SEL,5160,165120,165120,0
+node_q128_r500,0,__internal_accurate_pow,FSETP.GEU.AND,7120,170450,170450,29
+node_q128_r500,0,__internal_accurate_pow,IMAD,7120,170450,165120,12
+node_q128_r500,0,__internal_accurate_pow,BRA,5160,165120,159790,3
+node_q128_r500,0,__internal_accurate_pow,DSETP.GEU.AND,1960,5330,5330,0
+node_q128_r500,0,__internal_accurate_pow,SHF.R.S32.HI,1960,5330,0,7
+node_q128_r500,0,__internal_accurate_pow,FSEL,14240,340900,340900,26
+node_q128_r500,0,__internal_accurate_pow,LEA,1960,5330,0,0
+node_q128_r500,0,__internal_accurate_pow,BSYNC.RECONVERGENT,7120,165120,165120,0
+node_q128_r500,0,__internal_accurate_pow,DSETP.NEU.AND,5160,165120,165120,12
+node_q128_r500,0,__internal_accurate_pow,RET.ABS.NODEC,5160,165120,165120,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC,168,5376,5376,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",S2R,96,3072,3072,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU,464,14848,14848,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD,5008,160256,146322,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UIMAD,128,4096,4096,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD,448,14336,14336,2
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.AND,288,9216,9216,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",EXIT,88,2816,1536,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",HFMA2,5280,168960,168960,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV,18840,602880,602880,6
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU.64,80,2560,2560,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UMOV,160,5120,5120,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDG.E,10640,340480,340352,2
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IABS,320,10240,10240,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",I2F.RP,120,3840,3840,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MUFU.RCP,120,3840,3840,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2I.FTZ.U32.TRUNC.NTZ,120,3840,3840,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.HI.U32,240,7680,7680,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.U32.AND,160,5120,5120,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.U32.AND,120,3840,3840,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LOP3.LUT,5480,175360,170240,25
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.NE.AND,8040,257280,257280,1
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC.64,1520,48640,48640,4
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD3,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.WIDE,2800,89600,89600,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",STG.E,80,2560,2560,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSSY.RECONVERGENT,5280,168960,168960,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRA,6800,217600,208640,2
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.AND,40,1280,1280,1
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",VIMNMX.U32,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.SHL.U32,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SHF.R.S32.HI,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRX,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FADD,5200,166400,166272,8
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSYNC.RECONVERGENT,5280,168960,168960,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSEL,20720,663040,663040,1
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV.64,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",P2R,1280,40960,40960,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F64.F32,15480,495360,495360,3
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",NOP,92600,2963200,2963200,29
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DADD,15440,494080,494080,32
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",CALL.ABS.NOINC,5160,165120,165120,31
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.NEU.AND,10320,330240,330240,1
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F32.F64,5200,166400,166400,20
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.MAX.AND,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SEL,40,1280,1280,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FMNMX,40,1280,1152,0
+node_q128_r500,1,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.GTU.AND,40,1280,1280,0
+node_q128_r500,2,__internal_accurate_pow,ISETP.GT.U32.AND,103200,3302400,3302400,15
+node_q128_r500,2,__internal_accurate_pow,MOV,464120,13507380,9219840,255
+node_q128_r500,2,__internal_accurate_pow,UMOV.64,1135200,36326400,36326400,18
+node_q128_r500,2,__internal_accurate_pow,BSSY.RECONVERGENT,51600,1651200,1651200,1
+node_q128_r500,2,__internal_accurate_pow,DMUL,438460,13358490,11707290,472
+node_q128_r500,2,__internal_accurate_pow,LOP3.LUT,206400,6604800,6604800,171
+node_q128_r500,2,__internal_accurate_pow,SHF.R.U32.HI,51600,1651200,1651200,1
+node_q128_r500,2,__internal_accurate_pow,LEA.HI,77260,1800090,148890,8
+node_q128_r500,2,__internal_accurate_pow,ISETP.GE.U32.AND,51600,1651200,1651200,0
+node_q128_r500,2,__internal_accurate_pow,IADD,232060,6753690,4634520,298
+node_q128_r500,2,__internal_accurate_pow,NOP,16046760,509462940,509462940,3602
+node_q128_r500,2,__internal_accurate_pow,DADD,1573660,49684890,49684890,4718
+node_q128_r500,2,__internal_accurate_pow,MUFU.RCP64H,51600,1651200,1651200,161
+node_q128_r500,2,__internal_accurate_pow,DFMA,2115600,67699200,67699200,7633
+node_q128_r500,2,__internal_accurate_pow,MOV.64,154800,4953600,4953600,479
+node_q128_r500,2,__internal_accurate_pow,HFMA2,51600,1651200,1651200,1
+node_q128_r500,2,__internal_accurate_pow,IMAD.SHL.U32,51600,1651200,1651200,1
+node_q128_r500,2,__internal_accurate_pow,SEL,51600,1651200,1651200,3
+node_q128_r500,2,__internal_accurate_pow,FSETP.GEU.AND,77260,1800090,1800090,263
+node_q128_r500,2,__internal_accurate_pow,IMAD,77260,1800090,1651200,277
+node_q128_r500,2,__internal_accurate_pow,BRA,51600,1651200,1502310,31
+node_q128_r500,2,__internal_accurate_pow,DSETP.GEU.AND,25660,148890,148890,2
+node_q128_r500,2,__internal_accurate_pow,SHF.R.S32.HI,25660,148890,0,76
+node_q128_r500,2,__internal_accurate_pow,FSEL,154520,3600180,3600180,371
+node_q128_r500,2,__internal_accurate_pow,LEA,25660,148890,0,1
+node_q128_r500,2,__internal_accurate_pow,BSYNC.RECONVERGENT,77260,1651200,1651200,5
+node_q128_r500,2,__internal_accurate_pow,DSETP.NEU.AND,51600,1651200,1651200,120
+node_q128_r500,2,__internal_accurate_pow,RET.ABS.NODEC,51600,1651200,1651200,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC,1600,51200,51200,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",S2R,800,25600,25600,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU,4400,140800,140800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD,50000,1600000,1462982,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UIMAD,1200,38400,38400,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD,4400,140800,140800,4
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.AND,2800,89600,89600,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",EXIT,800,25600,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",HFMA2,52800,1689600,1689600,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV,188400,6028800,6028800,74
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU.64,800,25600,25600,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UMOV,1600,51200,51200,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDG.E,106400,3404800,3403520,16
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IABS,3200,102400,102400,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",I2F.RP,1200,38400,38400,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MUFU.RCP,1200,38400,38400,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2I.FTZ.U32.TRUNC.NTZ,1200,38400,38400,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.HI.U32,2400,76800,76800,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.U32.AND,1600,51200,51200,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.U32.AND,1200,38400,38400,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LOP3.LUT,54800,1753600,1702400,228
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.NE.AND,80400,2572800,2572800,7
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC.64,15200,486400,486400,40
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD3,400,12800,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.WIDE,28000,896000,896000,4
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",STG.E,800,25600,25600,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSSY.RECONVERGENT,52800,1689600,1689600,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRA,68000,2176000,2086400,10
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.AND,400,12800,12800,5
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",VIMNMX.U32,400,12800,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.SHL.U32,400,12800,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SHF.R.S32.HI,400,12800,12800,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRX,400,12800,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FADD,52000,1664000,1662720,28
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSYNC.RECONVERGENT,52800,1689600,1689600,3
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSEL,207200,6630400,6630400,10
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV.64,400,12800,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",P2R,12800,409600,409600,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F64.F32,154800,4953600,4953600,60
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",NOP,926000,29632000,29632000,207
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DADD,154400,4940800,4940800,591
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",CALL.ABS.NOINC,51600,1651200,1651200,237
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.NEU.AND,103200,3302400,3302400,5
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.NAN.AND,0,0,0,3
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F32.F64,52000,1664000,1664000,216
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.MAX.AND,400,12800,12800,1
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SEL,400,12800,12800,0
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FMNMX,400,12800,11520,2
+node_q128_r500,3,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.GTU.AND,400,12800,12800,0
+node_q128_r500,4,__internal_accurate_pow,ISETP.GT.U32.AND,1032000,33024000,33024000,114
+node_q128_r500,4,__internal_accurate_pow,MOV,4647700,135044600,92228570,2188
+node_q128_r500,4,__internal_accurate_pow,UMOV.64,11352000,363264000,363264000,142
+node_q128_r500,4,__internal_accurate_pow,BSSY.RECONVERGENT,516000,16512000,16512000,3
+node_q128_r500,4,__internal_accurate_pow,DMUL,4387850,133570300,117058300,7297
+node_q128_r500,4,__internal_accurate_pow,LOP3.LUT,2064000,66048000,66048000,1508
+node_q128_r500,4,__internal_accurate_pow,SHF.R.U32.HI,516000,16512000,16512000,12
+node_q128_r500,4,__internal_accurate_pow,LEA.HI,775850,17986300,1474300,43
+node_q128_r500,4,__internal_accurate_pow,ISETP.GE.U32.AND,516000,16512000,16512000,5
+node_q128_r500,4,__internal_accurate_pow,IADD,2323850,67522300,46463940,2442
+node_q128_r500,4,__internal_accurate_pow,NOP,160487100,5094541800,5094541800,31572
+node_q128_r500,4,__internal_accurate_pow,DADD,15739850,496834300,496834300,50540
+node_q128_r500,4,__internal_accurate_pow,MUFU.RCP64H,516000,16512000,16512000,1479
+node_q128_r500,4,__internal_accurate_pow,DFMA,21156000,676992000,676992000,78335
+node_q128_r500,4,__internal_accurate_pow,MOV.64,1548000,49536000,49536000,4020
+node_q128_r500,4,__internal_accurate_pow,HFMA2,516000,16512000,16512000,3
+node_q128_r500,4,__internal_accurate_pow,IMAD.SHL.U32,516000,16512000,16512000,14
+node_q128_r500,4,__internal_accurate_pow,SEL,516000,16512000,16512000,29
+node_q128_r500,4,__internal_accurate_pow,FSETP.GEU.AND,775850,17986300,17986300,2327
+node_q128_r500,4,__internal_accurate_pow,IMAD,775850,17986300,16512000,2241
+node_q128_r500,4,__internal_accurate_pow,BRA,516000,16512000,15037700,265
+node_q128_r500,4,__internal_accurate_pow,DSETP.GEU.AND,259850,1474300,1474300,189
+node_q128_r500,4,__internal_accurate_pow,SHF.R.S32.HI,259850,1474300,0,762
+node_q128_r500,4,__internal_accurate_pow,FSEL,1551700,35972600,35972600,2764
+node_q128_r500,4,__internal_accurate_pow,LEA,259850,1474300,0,8
+node_q128_r500,4,__internal_accurate_pow,BSYNC.RECONVERGENT,775850,16512000,16512000,42
+node_q128_r500,4,__internal_accurate_pow,DSETP.NEU.AND,516000,16512000,16512000,1036
+node_q128_r500,4,__internal_accurate_pow,RET.ABS.NODEC,516000,16512000,16512000,9
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC,16000,512000,512000,6
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",S2R,8000,256000,256000,2
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU,44000,1408000,1408000,8
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD,500000,16000000,14632142,31
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UIMAD,12000,384000,384000,1
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD,44000,1408000,1408000,36
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.AND,28000,896000,896000,1
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",EXIT,8000,256000,128000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",HFMA2,528000,16896000,16896000,13
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV,1884000,60288000,60287873,535
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU.64,8000,256000,256000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UMOV,16000,512000,512000,4
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDG.E,1064000,34048000,34035200,119
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IABS,32000,1024000,1024000,11
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",I2F.RP,12000,384000,384000,2
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MUFU.RCP,12000,384000,384000,1
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2I.FTZ.U32.TRUNC.NTZ,12000,384000,384000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.HI.U32,24000,768000,768000,4
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.U32.AND,16000,512000,512000,5
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.U32.AND,12000,384000,384000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LOP3.LUT,548000,17536000,17024000,2275
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.NE.AND,804000,25728000,25728000,57
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC.64,152000,4864000,4864000,322
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD3,4000,128000,128000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.WIDE,280000,8960000,8960000,50
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",STG.E,8000,256000,255873,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSSY.RECONVERGENT,528000,16896000,16896000,5
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRA,680000,21760000,20864000,76
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.AND,4000,128000,128000,4
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",VIMNMX.U32,4000,128000,128000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.SHL.U32,4000,128000,128000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SHF.R.S32.HI,4000,128000,128000,3
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRX,4000,128000,128000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FADD,520000,16640000,16627200,263
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSYNC.RECONVERGENT,528000,16896000,16896000,35
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSEL,2072000,66304000,66304000,99
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV.64,4000,128000,128000,0
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",P2R,128000,4096000,4096000,7
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F64.F32,1548000,49536000,49536000,1731
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",NOP,9260000,296320000,296320000,1827
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DADD,1544000,49408000,49408000,6086
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",CALL.ABS.NOINC,516000,16512000,16512000,2181
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.NEU.AND,1032000,33024000,33024000,30
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.NAN.AND,0,0,0,26
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F32.F64,520000,16640000,16640000,2196
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.MAX.AND,4000,128000,128000,1
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SEL,4000,128000,128000,1
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FMNMX,4000,128000,115200,15
+node_q128_r500,5,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.GTU.AND,4000,128000,128000,2
+node_q128_r500,6,__internal_accurate_pow,ISETP.GT.U32.AND,10320000,329912340,329912340,745
+node_q128_r500,6,__internal_accurate_pow,MOV,46423000,1348888680,920881710,15203
+node_q128_r500,6,__internal_accurate_pow,UMOV.64,113520000,3629035740,3629035740,984
+node_q128_r500,6,__internal_accurate_pow,BSSY.RECONVERGENT,5160000,164956170,164956170,44
+node_q128_r500,6,__internal_accurate_pow,DMUL,43851500,1334269020,1169312850,128045
+node_q128_r500,6,__internal_accurate_pow,LOP3.LUT,20640000,659824680,659824680,10493
+node_q128_r500,6,__internal_accurate_pow,SHF.R.U32.HI,5160000,164956170,164956170,87
+node_q128_r500,6,__internal_accurate_pow,LEA.HI,7731500,179575830,14619660,332
+node_q128_r500,6,__internal_accurate_pow,ISETP.GE.U32.AND,5160000,164956170,164956170,35
+node_q128_r500,6,__internal_accurate_pow,IADD,23211500,674444340,463635420,15802
+node_q128_r500,6,__internal_accurate_pow,NOP,1604709000,50894218320,50894218320,197916
+node_q128_r500,6,__internal_accurate_pow,DADD,157371500,4963304760,4963304760,564121
+node_q128_r500,6,__internal_accurate_pow,MUFU.RCP64H,5160000,164956170,164956170,10184
+node_q128_r500,6,__internal_accurate_pow,DFMA,211560000,6763202970,6763202970,848468
+node_q128_r500,6,__internal_accurate_pow,MOV.64,15480000,494868510,494868510,29458
+node_q128_r500,6,__internal_accurate_pow,HFMA2,5160000,164956170,164956170,45
+node_q128_r500,6,__internal_accurate_pow,IMAD.SHL.U32,5160000,164956170,164956170,79
+node_q128_r500,6,__internal_accurate_pow,SEL,5160000,164956170,164956170,221
+node_q128_r500,6,__internal_accurate_pow,FSETP.GEU.AND,7731500,179575830,179575830,15254
+node_q128_r500,6,__internal_accurate_pow,IMAD,7731500,179575830,164956170,14920
+node_q128_r500,6,__internal_accurate_pow,BRA,5160000,164956170,150336510,1634
+node_q128_r500,6,__internal_accurate_pow,DSETP.GEU.AND,2571500,14619660,14619660,4280
+node_q128_r500,6,__internal_accurate_pow,SHF.R.S32.HI,2571500,14619660,0,4885
+node_q128_r500,6,__internal_accurate_pow,FSEL,15463000,359151660,359151660,18074
+node_q128_r500,6,__internal_accurate_pow,LEA,2571500,14619660,0,101
+node_q128_r500,6,__internal_accurate_pow,BSYNC.RECONVERGENT,7731500,164956170,164956170,286
+node_q128_r500,6,__internal_accurate_pow,DSETP.NEU.AND,5160000,164956170,164956170,8932
+node_q128_r500,6,__internal_accurate_pow,RET.ABS.NODEC,5160000,164956170,164956170,46
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC,160000,5118730,5118730,10
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",S2R,80000,2560000,2560000,2
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU,440000,14077460,14077460,10
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD,5000000,159866650,146194075,102
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UIMAD,120000,3840000,3840000,20
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD,440000,14074920,14074920,61
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.AND,280000,8956190,8956190,16
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",EXIT,80000,2560000,1280000,15
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",HFMA2,5280000,168793630,168793630,55
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV,18840000,602293260,602286693,3729
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDCU.64,80000,2560000,2560000,1
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",UMOV,160000,5117460,5117460,10
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDG.E,10640000,340144720,340016847,752
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IABS,320000,10236190,10236190,28
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",I2F.RP,120000,3838730,3838730,5
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MUFU.RCP,120000,3838730,3838730,19
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2I.FTZ.U32.TRUNC.NTZ,120000,3838730,3838730,7
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.HI.U32,240000,7677460,7677460,9
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.U32.AND,160000,5117460,5117460,9
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GE.U32.AND,120000,3838730,3838730,4
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LOP3.LUT,5480000,175191090,170073630,15052
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.NE.AND,8040000,257028540,257028540,306
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",LDC.64,1520000,48593010,48593010,2243
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IADD3,40000,1280000,1280000,2
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.WIDE,2800000,89513640,89513640,300
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",STG.E,80000,2558730,2552163,5
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSSY.RECONVERGENT,5280000,168793630,168793630,41
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRA,6800000,217386640,208434260,429
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",ISETP.GT.AND,40000,1278730,1278730,19
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",VIMNMX.U32,40000,1278730,1278730,3
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",IMAD.SHL.U32,40000,1278730,1278730,0
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SHF.R.S32.HI,40000,1278730,1278730,23
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BRX,40000,1278730,1278730,2
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FADD,5200000,166234900,166107027,1237
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",BSYNC.RECONVERGENT,5280230,168793630,168793630,286
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSEL,20720000,662382140,662382140,619
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",MOV.64,40000,1278730,1278730,0
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",P2R,1280000,40919360,40919360,59
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F64.F32,15480000,494868510,494868510,39586
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",NOP,92600000,2960259950,2960259950,11411
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DADD,15440000,493589780,493589780,68248
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",CALL.ABS.NOINC,5160000,164956170,164956170,14873
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.NEU.AND,10320000,329912340,329912340,197
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.NAN.AND,0,0,0,207
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",F2F.F32.F64,5200000,166234900,166234900,22071
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",DSETP.MAX.AND,40000,1278730,1278730,9
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",SEL,40000,1278730,1278730,1
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FMNMX,40000,1278730,1150857,150
+node_q128_r500,7,"nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)",FSETP.GTU.AND,40000,1278730,1278730,1
