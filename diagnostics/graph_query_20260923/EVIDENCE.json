@@ -1,0 +1,970 @@
+{
+  "experiment": "gts_20260923_graph_single_query",
+  "scope": "Words N=2000, batch=1, radius=4, immutable H=3 tree; full ordered host results; common-driver A/B/C, not native executable ratios",
+  "hardware": {
+    "gpu": "RTX PRO 6000 Blackwell Server Edition",
+    "cuda": "13.1.115",
+    "arch": "sm_120",
+    "nsys": "2025.5.2",
+    "driver": "590.48.01"
+  },
+  "source_revision": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "original_source_hashes_verified": true,
+  "binary_sha256": "2727cfe94a57a8dfc31b71e6645ad2fb85e9e54093e2ccbbee24a35bb88366c7",
+  "benchmark_source_sha256": "6065bd4b9f2de6cb231ca416afeea55dce395f5d2713c37aae1c79c0a60ee3a5",
+  "data_sha256": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+  "qids_sha256": "31cd4bbbfde9214177af8ca9c735ad07000cf489f95c95f4226322d256d531de",
+  "raw_archive_sha256": "5d059b83d1b57e488a1466b4814bc5b31cb8c23de0a75ae7db09c56979cd727e",
+  "timing_orders": [
+    "ABC",
+    "CBA",
+    "BCA",
+    "ACB",
+    "CAB",
+    "BAC"
+  ],
+  "queries_per_process": 4096,
+  "warmup_queries": 64,
+  "results": {
+    "A": {
+      "process_mean_query_us": [
+        544.6016982421875,
+        479.52431665039063,
+        497.2456611328125,
+        490.3721572265625,
+        484.84690673828123,
+        539.7817380371094
+      ],
+      "median_process_mean_query_us": 493.8089091796875,
+      "process_query_p10_p50_p90_us": [
+        [
+          469.53,
+          492.218,
+          503.068
+        ],
+        [
+          411.762,
+          435.742,
+          444.96
+        ],
+        [
+          416.522,
+          439.107,
+          494.706
+        ],
+        [
+          414.077,
+          437.47,
+          484.045
+        ],
+        [
+          412.375,
+          436.558,
+          445.5
+        ],
+        [
+          442.595,
+          493.118,
+          505.618
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        515.63134765625,
+        453.731689453125,
+        469.524658203125,
+        463.3203125,
+        457.279296875,
+        511.09155273437494
+      ],
+      "loop_cpu_one_core_percent": [
+        94.65912445792598,
+        94.60215535777164,
+        94.40434287594027,
+        94.45570565815493,
+        94.28645182081848,
+        94.65507876327167
+      ],
+      "setup_us": [
+        0.647,
+        0.422,
+        0.54,
+        0.503,
+        0.432,
+        0.453
+      ],
+      "capture_instantiate_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_query_us": [
+        7816.785,
+        8220.486,
+        8178.923,
+        8191.093999999999,
+        8206.814,
+        7744.799999999999
+      ]
+    },
+    "B": {
+      "process_mean_query_us": [
+        145.88792626953125,
+        142.63731762695312,
+        146.30054125976562,
+        144.57634423828125,
+        146.28794042968752,
+        146.29066528320314
+      ],
+      "median_process_mean_query_us": 146.0879333496094,
+      "process_query_p10_p50_p90_us": [
+        [
+          138.102,
+          150.108,
+          152.435
+        ],
+        [
+          132.01,
+          142.374,
+          152.333
+        ],
+        [
+          138.127,
+          150.391,
+          152.489
+        ],
+        [
+          136.077,
+          144.283,
+          152.493
+        ],
+        [
+          138.202,
+          150.397,
+          152.508
+        ],
+        [
+          138.109,
+          150.373,
+          152.514
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        145.96923828125,
+        142.765625,
+        146.473388671875,
+        144.74755859375,
+        146.447021484375,
+        146.44775390625
+      ],
+      "loop_cpu_one_core_percent": [
+        99.97962498552181,
+        100.02800903307822,
+        100.04141291454494,
+        100.03778190088056,
+        100.02098825502613,
+        100.01743656485581
+      ],
+      "setup_us": [
+        1483.141,
+        1217.2489999999998,
+        1483.31,
+        1420.513,
+        1437.877,
+        1426.9199999999998
+      ],
+      "capture_instantiate_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_query_us": [
+        423.678,
+        342.57899999999995,
+        397.133,
+        411.935,
+        406.26300000000003,
+        427.755
+      ]
+    },
+    "C": {
+      "process_mean_query_us": [
+        108.40257617187501,
+        108.89075512695312,
+        109.37964916992188,
+        108.71992333984375,
+        108.81661206054689,
+        110.418732421875
+      ],
+      "median_process_mean_query_us": 108.85368359375,
+      "process_query_p10_p50_p90_us": [
+        [
+          98.329,
+          108.665,
+          112.595
+        ],
+        [
+          99.261,
+          109.636,
+          113.276
+        ],
+        [
+          99.334,
+          110.548,
+          113.526
+        ],
+        [
+          98.371,
+          108.908,
+          112.667
+        ],
+        [
+          98.421,
+          109.61,
+          112.747
+        ],
+        [
+          100.362,
+          112.098,
+          114.557
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        108.510498046875,
+        109.038818359375,
+        109.5048828125,
+        108.847900390625,
+        108.97705078125,
+        110.570556640625
+      ],
+      "loop_cpu_one_core_percent": [
+        100.01461225638694,
+        100.03286423270126,
+        100.00765020664355,
+        100.02082005065662,
+        100.04842924941079,
+        100.03337081462125
+      ],
+      "setup_us": [
+        1863.926,
+        2178.784,
+        2137.661,
+        1844.917,
+        2196.6730000000002,
+        2312.368
+      ],
+      "capture_instantiate_us": [
+        608.365,
+        751.078,
+        734.706,
+        636.942,
+        779.001,
+        763.17
+      ],
+      "first_query_us": [
+        220.757,
+        217.85399999999998,
+        215.021,
+        212.982,
+        226.173,
+        226.048
+      ]
+    }
+  },
+  "ratios_of_medians": {
+    "A_over_B": 3.3802169546606695,
+    "B_over_C": 1.342057783683466,
+    "A_over_C": 4.536446474541172
+  },
+  "paired_B_over_C": {
+    "geomean": 1.3319904122462527,
+    "bootstrap_95": [
+      1.3215297608464267,
+      1.341262994020525
+    ],
+    "wins": 6,
+    "method": "Exact percentile bootstrap of paired process log ratios; 6^6 resamples"
+  },
+  "sustained": [
+    {
+      "order": "BC",
+      "query_us": {
+        "B": 145.19676141357422,
+        "C": 109.40869201660156
+      },
+      "B_over_C": 1.327104444238692
+    },
+    {
+      "order": "CB",
+      "query_us": {
+        "B": 144.1185306396484,
+        "C": 108.84773284912109
+      },
+      "B_over_C": 1.3240379644784868
+    }
+  ],
+  "capture_only_amortization_queries": 20,
+  "amortization_caveat": "Descriptive capture+instantiate cost divided by steady saving; not a measured cold-start crossover",
+  "gates": {
+    "full_output_runs": [
+      "boundary_0_A",
+      "boundary_0_B",
+      "boundary_0_C",
+      "boundary_256_A",
+      "boundary_256_B",
+      "boundary_256_C",
+      "boundary_negative_B",
+      "boundary_negative_C",
+      "edge_memcheck_-1_B",
+      "edge_memcheck_-1_C",
+      "edge_memcheck_256_B",
+      "edge_memcheck_256_C",
+      "gate_initcheck_B",
+      "gate_initcheck_C",
+      "gate_memcheck_A",
+      "gate_memcheck_B",
+      "gate_memcheck_C",
+      "gate_synccheck_A",
+      "gate_synccheck_B",
+      "gate_synccheck_C",
+      "smoke_A",
+      "smoke_B",
+      "smoke_C"
+    ],
+    "sanitizer_runs": [
+      "edge_memcheck_-1_B",
+      "edge_memcheck_-1_C",
+      "edge_memcheck_256_B",
+      "edge_memcheck_256_C",
+      "gate_initcheck_B",
+      "gate_initcheck_C",
+      "gate_memcheck_A",
+      "gate_memcheck_B",
+      "gate_memcheck_C",
+      "gate_synccheck_A",
+      "gate_synccheck_B",
+      "gate_synccheck_C"
+    ],
+    "stress_queries_per_mode": 16384,
+    "normal_six_round_wins": true,
+    "paired_lower_bound_gt_1_05": true,
+    "sustained_no_regression_gt_5_percent": true
+  },
+  "nsys": {
+    "scope": "Mechanism evidence only; timings include profiler perturbation. 1 first + 64 warmup + 128 sampled queries.",
+    "B_C_sequence_geometry_resources_equal": true,
+    "query_kernel_signature": [
+      [
+        "initQnode(int *, int, int *)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        17,
+        0,
+        0
+      ],
+      [
+        "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        50,
+        0,
+        0
+      ],
+      [
+        "updatePnodeFlag(int *, int, int, int *, int *)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        20,
+        0,
+        0
+      ],
+      [
+        "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        50,
+        0,
+        0
+      ],
+      [
+        "updatePnodeFlag(int *, int, int, int *, int *)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        20,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+        1,
+        1,
+        1,
+        256,
+        1,
+        1,
+        30,
+        44,
+        0
+      ],
+      [
+        "initRes(int *, int)",
+        5,
+        1,
+        1,
+        512,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "getQnodeCount(int, int *, int *, int *, int)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        1,
+        1,
+        1,
+        128,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        1,
+        1,
+        1,
+        384,
+        1,
+        1,
+        64,
+        33808,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        1,
+        1,
+        1,
+        128,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        1,
+        1,
+        1,
+        384,
+        1,
+        1,
+        64,
+        33808,
+        0
+      ],
+      [
+        "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        26,
+        0,
+        0
+      ],
+      [
+        "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+        111,
+        1,
+        1,
+        512,
+        1,
+        1,
+        48,
+        16,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+        1,
+        1,
+        1,
+        256,
+        1,
+        1,
+        30,
+        44,
+        0
+      ],
+      [
+        "getQresultCount(int, int *, int *, int *, int *)",
+        1,
+        1,
+        1,
+        512,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        1,
+        1,
+        1,
+        128,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        1,
+        1,
+        1,
+        384,
+        1,
+        1,
+        64,
+        33808,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        1,
+        1,
+        1,
+        128,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+        1,
+        1,
+        1,
+        384,
+        1,
+        1,
+        64,
+        33808,
+        0
+      ],
+      [
+        "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+        5,
+        1,
+        1,
+        512,
+        1,
+        1,
+        26,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        1,
+        1,
+        1,
+        128,
+        1,
+        1,
+        16,
+        0,
+        0
+      ],
+      [
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+        1,
+        1,
+        1,
+        384,
+        1,
+        1,
+        64,
+        33808,
+        0
+      ],
+      [
+        "projectBounded(const int *, int *, float *, const int *, const float *, const int *)",
+        5,
+        1,
+        1,
+        512,
+        1,
+        1,
+        18,
+        0,
+        0
+      ]
+    ],
+    "traces": {
+      "B": {
+        "query_instances": 193,
+        "kernels_per_query": 24,
+        "query_kernel_sum_us_mean": 97.04654404145077,
+        "getQresultCount_us_mean": 42.232870466321245,
+        "whole_trace_api_counts": {
+          "cudaLaunchKernel_v7000": 4641,
+          "cudaMemcpyAsync_v3020": 778,
+          "cudaStreamSynchronize_v3020": 203
+        },
+        "sqlite_sha256": "63a43dbe77f02aa06bb2e455e55a1f5664ab91f9c2d06b8e4d27fc0d6bc08148"
+      },
+      "C": {
+        "query_instances": 193,
+        "kernels_per_query": 24,
+        "query_kernel_sum_us_mean": 100.6358238341969,
+        "getQresultCount_us_mean": 42.239321243523314,
+        "whole_trace_api_counts": {
+          "cudaLaunchKernel_v7000": 33,
+          "cudaMemcpyAsync_v3020": 10,
+          "cudaStreamSynchronize_v3020": 203,
+          "cudaGraphLaunch_v10000": 193
+        },
+        "sqlite_sha256": "96b3dd39e057db4bfeb8f8aedd8c5e6ef363a799b305378e943764d067868af4"
+      }
+    }
+  },
+  "native_anchor": {
+    "scope": "Original main; older 32-query sample repeated 128 times; native count-only check and lifecycle, NOT the A/B/C denominator",
+    "wall_s": 2.547395425848663,
+    "cpu_s": 2.330724,
+    "count_validation": {
+      "pass": true,
+      "actual_count": 4096,
+      "expected_count": 4096,
+      "scope": "counts/kth distances, not full IDs"
+    },
+    "binary_sha256": "03597b5f9bb7266ee21acfd5999f7fceade68e64a3b0ac578c9d6aa4b015caf6",
+    "receipt_sha256": "115e06dc8caaf4a45e7d878d2a521db809ae5765f69ece433efb2192f1614fc9"
+  },
+  "negative_evidence": {
+    "target": "Native A at radius -1",
+    "effect": "65 invalid-argument leaf launches despite exit code zero",
+    "decision": "Reject this boundary run; B/C independently validated empty output; do not claim native A supports every boundary",
+    "reopen_condition": "Fix native zero-grid handling in a separately pinned correctness variant"
+  },
+  "run_inventory": {
+    "boundary_0_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "530fb5bbc66007d212f3c12855089123541fc3cc9bd33f269435693e0884755f",
+      "samples_sha256": "f0f58349973bf1e9d0f6c2899f140fb2f8efe522f9acca92bc84f4e648eed978"
+    },
+    "boundary_0_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "00bdd418e82975edc14f743c05a044092382dc840e297ce4eac75c42aa3c1874",
+      "samples_sha256": "38d290d5e73d9ab1e9e1218fe15103e56152974c0005798e095403cf93b89f8e"
+    },
+    "boundary_0_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "c29d6c33466b836af838a4dee1f824ec8b94c45c71753546ea89adcb7ee48ca3",
+      "samples_sha256": "29812dbeccfbfb7d14a92ae24880641087704f30e21536a7ad413682025e11bd"
+    },
+    "boundary_256_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "dbfd6b56ae986ce20ecae44ac9dfb0929b4baa5c2f5d5ee6da807feec661e86d",
+      "samples_sha256": "f59702f8c6afe4dfb6c468749a1b0fe67590de87c11ea3b9685dad2df908f2a2"
+    },
+    "boundary_256_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "b17aa5cdb2ce44478d7b5a7fa8daf3050edd73f4a5d85d27cbfbbebc9cbefaeb",
+      "samples_sha256": "14d549b3cead7f2c179068cea32fc8fa1bde03c252c420d16f825bdfcb2f2ee9"
+    },
+    "boundary_256_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "995e14ec63cf1b9cc34aee8d98b2a31e3fc65e087f960c2c458382edd1c5d1c0",
+      "samples_sha256": "f182fc3eed04f4021c4446212d9019f6ce9e643fb4742a3e39e876a8de7250c0"
+    },
+    "boundary_negative_A": {
+      "verdict": "rejected: original zero-grid leaf launch",
+      "receipt_sha256": "ad21586902a2a15c38395958e321077edc24bfde07d698c6a0956f3bc6858e7b",
+      "samples_sha256": "4532f1f01dccecfe87b5443404bed620df6229ab1c438a826d9020f3e3c0db00"
+    },
+    "boundary_negative_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "7435e56852161e15d4e994f1ec013455b05ad74890120bb1a282fb452124aa04",
+      "samples_sha256": "9f63cd42a94370d080cc013ff91717af7014caebcac6153e3e5b6bb2bde3c69b"
+    },
+    "boundary_negative_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "031870c68275ce69cf03650ee7611d7ea8135609db4cd614111306b3854102c6",
+      "samples_sha256": "982cd2c2d6c63e1c62464d0c7b8875a4f837d2e5c66bf6a162b59f4cac46c79b"
+    },
+    "edge_memcheck_-1_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "26574b07f862a6b5027faf0c0a04692e482ebcb4fc8b814eef3c0e161b752c85",
+      "samples_sha256": "d5d4096a446c8b7da8cee682970df507f20258219045600597a31b8433f2c160"
+    },
+    "edge_memcheck_-1_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "cac14192c512cb8188d69445093e089e1dc609813c31311075bed9c10ff4596a",
+      "samples_sha256": "27a5bc274a9843e2740405aef93ee999de5732e79593b3b564daa3a5ff0bf37d"
+    },
+    "edge_memcheck_256_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "01afeec1ce5d8e23f4f2e0cb760f961445a386179e12dd08667c7a7529f96b2b",
+      "samples_sha256": "a6a3648c9e99048121ec76f6b235d8872c526b90eb8da3f3aabcdf372ed4e58e"
+    },
+    "edge_memcheck_256_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "fe94e555fd923c3c685d9c818fed122781d8ac57b06d8fd33e1f655994927daa",
+      "samples_sha256": "8833d3cbbd55d63ccab73e141f510335e015b3236605a6889944bd32e1fc25e6"
+    },
+    "gate_initcheck_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "03448b38ee8648fe147fe04f6f55c8b55dbe5c38c83bff6bd9c5cad491428f02",
+      "samples_sha256": "d9cc1ff9d98ac0f5a1104a09790e120b646be7e92949263ca2518f6aefd65e91"
+    },
+    "gate_initcheck_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "830faf60498294e502768614c9345f3ee9cdad587f2126f6e3ec527659ec58cd",
+      "samples_sha256": "d90c680734007137e0141425d8f408e7b42924b885ab6830c359464e388637d5"
+    },
+    "gate_memcheck_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "8984931fab0c2ee839e04d8d76c8ab538397184e7e3fde38ab4e67ae3f4cc8a6",
+      "samples_sha256": "0f7f8f4a8ca2e303901a0bfcfc7f72cdd9001c35d7d1a8a31c6a9ff94072c27d"
+    },
+    "gate_memcheck_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "b7fd14b1f3d4d10f1520cbfcb55183cbe3440c4bf5d5e71d6d7e0efa0821a2e3",
+      "samples_sha256": "679d8bba79abcd9f136008e1d5dd768cbfa3e9b62f9e2f379974f22d78b61a45"
+    },
+    "gate_memcheck_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "6ff8ae051522523f0b89c0883f317eba6e0d49fde6bdc9320d7a215b39a8f02c",
+      "samples_sha256": "486ce2a889313759eb193328b2a449089640006974176e6609c3d225d0297069"
+    },
+    "gate_synccheck_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "c0618c2bc8117215b112bc8307b712b1bf3ba246e327405cc0dcb35a55144e0b",
+      "samples_sha256": "885c806a2976b3d30c1ae68d7dfc062e0198feb77997f69f039d998f41451da9"
+    },
+    "gate_synccheck_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "0e322fdc5ec6fe62819520632d7017020510fabd0cd041829674324d21b397e4",
+      "samples_sha256": "78aa6181e9ebe981fe09e7ca62c0a458554863658cc72e67694d7135f334611e"
+    },
+    "gate_synccheck_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "0e85dcb566df3848b1d6821edfbc6925f1c7bd91ade3d57e5a21ef81a1d4cf61",
+      "samples_sha256": "5c33431815caa0cc73e715389912a30c3bfca044a4d1d3bd6fc363776c4f9d83"
+    },
+    "nsys_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "9c8069ac660e89d7d907ab24dcab7f4f68b36a57dcaef8e8d062b5442777a48f",
+      "samples_sha256": "9da9ab4f328d630b76b60353c36b29a216d2d8d3d039d1db158240535de62949"
+    },
+    "nsys_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "e1eae2821bd3598fc805b666e417ac5b55498fac4b9ce33a3b7955d4c8d5e158",
+      "samples_sha256": "34cab43ca7e0d7646a5a0e912ac8826f10a387f8a11ea6e68ee835550383fef0"
+    },
+    "nsys_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "1b4746b3eb72ab78e86b8e66df951503eef758fbebf8e3a1c4ce98d0c183d58f",
+      "samples_sha256": "4b5880fb5a94d93f21519aba71fe0809eace41438ae519a094745f7e84904c9c"
+    },
+    "nsys_node_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "9f636fea9e4874b57d5301656597d0d817303a50f9fd2d727883efc8d29ca345",
+      "samples_sha256": "b40c8cad9450f2a14995d659dd747f658fc39bb05994a7c1028b85b76f0b00ea"
+    },
+    "nsys_node_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "37426a107b1060dd854fa9b2401494f86526074c19f9d870761cd5efa3df1eae",
+      "samples_sha256": "c1baf46833a41c4ee2fa97d93a8bc96bd8ef7ce4a2715b821d578e6035b4c689"
+    },
+    "smoke_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "883f05783dfcaf0e6d2ef186a45c671f51092293a903171d18e6c3d2191b5856",
+      "samples_sha256": "a770cc0ec388f5f671503b6774b06b822c78800f1ce24752cf81d62dfd92ec6b"
+    },
+    "smoke_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "906fb209c263edc899b2428af22f0eb54ad3c0a76e54e2d364bd0dfdb573611e",
+      "samples_sha256": "62401d921c3595caa84207ec7bcd7b4043aa6b17e202fd683391a05668b5eb7a"
+    },
+    "smoke_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "11bc94ed38d4bb987f24cd5b2b78f3f044be9b4a1aafe40846bad852deca6133",
+      "samples_sha256": "8782b0e0aa41c6528b54c12370333b45663424383aaff4a3288120e11b8ff349"
+    },
+    "stress_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "56846ac58d771d3caa013f4cb265b1567261c5d056a47fb0aa18868f7d5be121",
+      "samples_sha256": "05e0f9f487cce0c3a09dd73187de3d4891e5b5c2db39c9caf2d3bfb9d355bdc0"
+    },
+    "stress_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "6d1aa7fc71554d6a909f5238002ca10aba3b8cd36dbc449bce66062220baea88",
+      "samples_sha256": "aeee9cdc86bc46d917c6b07b0780e8ab1892aeeef2d87db663f14e35c1127531"
+    },
+    "stress_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "83bfcbf90f2062044a6b391cb35e7c63c0499a6df1e227e093054ed256e3f948",
+      "samples_sha256": "8a1d02cc86ba13dbeaac9407ca11c8884ca49685004597944fd27c05b00d66ce"
+    },
+    "sustained_0_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "16f4fbeb4757b35269e1bcccf0e4658b6d4ad81fd6023dd59f424e4525fdcbc2",
+      "samples_sha256": "e8765398aaaf7b932b273a4cb7351f2e9ed2fc5011baef7035bf4203154595dd"
+    },
+    "sustained_0_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "a0b608d9e2030a107f6676fda842847b8325cdc92026ee2b67ac91fd68938f0e",
+      "samples_sha256": "a38724494eafd30f81966b770faad5964e1f1983372ce537b434dff0024a5e65"
+    },
+    "sustained_1_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "f05846b5010c7b9702e532cbacd64690da24f0d887d6ecf39420728ef0cbb7cc",
+      "samples_sha256": "900f3bee3dda87f1e778202e09859eb999751c0eb55730ba0c2f638ce98ae57d"
+    },
+    "sustained_1_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "afe6bdc5c831386754e39d876343300338cb2b40dbcd8be84b91f27f9696edd2",
+      "samples_sha256": "46736b51f880bd1dacd807ef5645c0b389834da1bd75f74fde65dc54cc13b733"
+    },
+    "timing_0_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "9e9b6ba741105306c435e24c69e6b2b613e947104359961b08c62304e2fd44d5",
+      "samples_sha256": "6abd22727dffdc9f8169fed3e7dffbce55b38750ef4cd50b0ca606ff9a75a005"
+    },
+    "timing_0_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "6435464dea2a4c1d8c82991f3866256dbec2374a5e270ff36f1c46f983415f6e",
+      "samples_sha256": "a1f481c8e475845c5f5bea4c6930b4d79e3e5b53712969158ae33c62ac6ae31c"
+    },
+    "timing_0_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "536b16ab814a89b0005f9a66fffb89cd6e120c39570ccf9fe90196f487cd9616",
+      "samples_sha256": "5f0a27fbc3beb73a32ec80baa47b32e3ad52a125d5e6020d0524b50f60aca206"
+    },
+    "timing_1_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "1e1c48910faa536647e7595f2118802f6ac34866f431ead9d32490c2599d00ea",
+      "samples_sha256": "6caaa372685cb53af99335eee194246b3696a3e48815a50079ae9b421e26f7bc"
+    },
+    "timing_1_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "3b07159cf234a44d12623d8b4af95114fd0a0bc7b1bae20c2ebcaf517866fa13",
+      "samples_sha256": "969ca680ea6cc120e2d6a877a24d88c491cb8484b951fcfe0636fde583694744"
+    },
+    "timing_1_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "6b323c1f5d1f880069deb69c47836f742ad5720d73a3183ba718635c659aef6b",
+      "samples_sha256": "0a3624ba6d6e95bf16f76c209d1497de1e431f533d8e14cd530b30f445736095"
+    },
+    "timing_2_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "f04be6cac136a607b8f2a40cc507ae735c53821b980360b492f1e6570da39f48",
+      "samples_sha256": "9a2d262cceaf517620a54271372116b997bb25a4660ff83bac75774e8ef329fe"
+    },
+    "timing_2_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "6812153c451676f82c0a0545fd6e2663f66994b311bbcd8ad0a47288b5257f53",
+      "samples_sha256": "b6b74fca76960750734a3751b305bb7eb362fa0c60d720227516acfa4b39c339"
+    },
+    "timing_2_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "9f596a2a6cc8248e8abe29571bd95b214b4aea276284c1dc74925509c1504d45",
+      "samples_sha256": "7f341cfa7962f361c1efa95c3cbdb57b18fe47351d338824576ccba906b2b5a1"
+    },
+    "timing_3_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "bb4690f5a36f4fb42df344a0896a66c760a03da50c57ee1aff2411a6c9fb95e4",
+      "samples_sha256": "b7e911c447c7e6695a27377eedfe0689d677278183212401ab3b799e47f67175"
+    },
+    "timing_3_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "ff5f6fc5d2da108698d4c6178ed54cf4fde3def1d5c039e4d7ebe3feba5f4d8f",
+      "samples_sha256": "b8a34d16cbea2f2a76bba7ed8196e06d5894e16da709c840376a94fac8981327"
+    },
+    "timing_3_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "a4ce0f687986b5d20eb4dcfe98152ef711695bcc5954870adf5e5a2c4949998c",
+      "samples_sha256": "c2bb73472bc9aeb9b072191b4507203930bf041f5b88eb2e9a386ed6ea6cf431"
+    },
+    "timing_4_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "a7acd54da440d54910f510f1338a8d914b18bd333fc51a4b3bd757f4b84f3b2f",
+      "samples_sha256": "28d4cb964f05795f21fb3c68425b1772885983a186a00e73ba782625b2efb016"
+    },
+    "timing_4_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "a00c6330a0bff3213ba495fbcc9c07763a3f05bfa04a73c7750ebfc46619aeb1",
+      "samples_sha256": "1d09e3005757bff032e87105ecb8784959c85b456534918ebc99b2296236e976"
+    },
+    "timing_4_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "1989e0e566523eb36381eb9062a0b70b71e6b399576016fefa4dd8b4557197d1",
+      "samples_sha256": "6e0634a7ac5370dbb0d9e9232f71e55a5b42f58ac5cdf4b7c681bdeed10307d8"
+    },
+    "timing_5_A": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "380b590584ac490e0a1035a9b072242e11d91f4493772b22c49ea10033276ef0",
+      "samples_sha256": "ff54da41250952b470ba9cc125ad33ede4418520337d1062528c5af4c4b27f07"
+    },
+    "timing_5_B": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "57bc9ef86e2ce54b648b7b5097a4ff226a249bf57ad2f85f62c918eacf9f748c",
+      "samples_sha256": "e73021f967d00b7e3587708900ef9ff0b0fd743f34fa43e67ca05e85e0501981"
+    },
+    "timing_5_C": {
+      "verdict": "pass: external oracle/order/hash admission",
+      "receipt_sha256": "1cc6cc5bb90ef8f1de0d09fc614cc5f01a9d564376c9fa4c4c82e6734c916077",
+      "samples_sha256": "8cf85baa15840a2e9eafe4e108f8e5bc204c7903858b12bd6a3044e3a7fd682c"
+    }
+  }
+}
