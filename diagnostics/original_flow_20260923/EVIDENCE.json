@@ -1,0 +1,2188 @@
+{
+  "experiment": "gts_20260923_original_flow_words",
+  "date": "2026-09-23",
+  "state": "NSYS diagnostic evidence; NCU hardware counters blocked",
+  "source_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "source_sha256": {
+    "GTS/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "GTS/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "GTS/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "GTS/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "GTS/include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "GTS/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "GTS/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "GTS/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "source_modifications": [],
+  "hardware": {
+    "gpu": "RTX PRO 6000 Blackwell Server Edition",
+    "sm_count": 188,
+    "driver": "590.48.01",
+    "cuda": "13.1.115",
+    "nsys": "2025.5.2",
+    "ncu": "2025.4.1"
+  },
+  "scope": "Words N2000; Q32 smoke then 4096 repeated queries; native MAX_H3, fanout10, leafcap20; r4/k4; update entry is query-only; counts/kth validation",
+  "clean": [
+    {
+      "label": "clean_knn_0",
+      "wall_s": 0.505284063052386,
+      "cpu_user_s": 0.027927999999999998,
+      "cpu_system_s": 0.424106,
+      "cpu_percent_one_core": 89.46136105486761,
+      "cpu_sample_after_0p7s_percent": null,
+      "native_query_total_s_rounded": 0.02048,
+      "peak_device_used_mib": 13570.0,
+      "device_capacity_mib": 97887.0,
+      "gpu_sample_percent": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 18.000000000000004,
+        "max": 30.0
+      },
+      "gpu_samples": 5,
+      "correct": true,
+      "warning": "100%=one CPU core. Device samples are windowed/coarse and can miss sub-100ms peaks. Process wall polling adds up to 100ms plus monitoring admission latency. Native timing printed to 6 decimals per query."
+    },
+    {
+      "label": "clean_knn_1",
+      "wall_s": 0.5061564610805362,
+      "cpu_user_s": 0.03025,
+      "cpu_system_s": 0.40473699999999996,
+      "cpu_percent_one_core": 85.93923686588833,
+      "cpu_sample_after_0p7s_percent": null,
+      "native_query_total_s_rounded": 0.02048,
+      "peak_device_used_mib": 13576.0,
+      "device_capacity_mib": 97887.0,
+      "gpu_sample_percent": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0.0
+      },
+      "gpu_samples": 4,
+      "correct": true,
+      "warning": "100%=one CPU core. Device samples are windowed/coarse and can miss sub-100ms peaks. Process wall polling adds up to 100ms plus monitoring admission latency. Native timing printed to 6 decimals per query."
+    },
+    {
+      "label": "clean_knn_2",
+      "wall_s": 0.5058676858898252,
+      "cpu_user_s": 0.031952,
+      "cpu_system_s": 0.39064899999999997,
+      "cpu_percent_one_core": 83.5398290477166,
+      "cpu_sample_after_0p7s_percent": null,
+      "native_query_total_s_rounded": 0.016384,
+      "peak_device_used_mib": 13444.0,
+      "device_capacity_mib": 97887.0,
+      "gpu_sample_percent": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 0.0,
+        "p90": 2.0,
+        "max": 2.0
+      },
+      "gpu_samples": 5,
+      "correct": true,
+      "warning": "100%=one CPU core. Device samples are windowed/coarse and can miss sub-100ms peaks. Process wall polling adds up to 100ms plus monitoring admission latency. Native timing printed to 6 decimals per query."
+    },
+    {
+      "label": "clean_update_0",
+      "wall_s": 2.8355444699991494,
+      "cpu_user_s": 2.052893,
+      "cpu_system_s": 0.5589609999999999,
+      "cpu_percent_one_core": 92.11119866516442,
+      "cpu_sample_after_0p7s_percent": {
+        "min": 79.78661712068876,
+        "p10": 84.39281690663132,
+        "median": 89.7610712625501,
+        "p90": 103.73370881955978,
+        "max": 109.70794872871157
+      },
+      "native_query_total_s_rounded": 2.318336,
+      "peak_device_used_mib": 13576.0,
+      "device_capacity_mib": 97887.0,
+      "gpu_sample_percent": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 36.0,
+        "p90": 38.0,
+        "max": 41.0
+      },
+      "gpu_samples": 28,
+      "correct": true,
+      "warning": "100%=one CPU core. Device samples are windowed/coarse and can miss sub-100ms peaks. Process wall polling adds up to 100ms plus monitoring admission latency. Native timing printed to 6 decimals per query."
+    },
+    {
+      "label": "clean_update_1",
+      "wall_s": 2.8449405669234693,
+      "cpu_user_s": 2.162719,
+      "cpu_system_s": 0.45664099999999996,
+      "cpu_percent_one_core": 92.07081618694716,
+      "cpu_sample_after_0p7s_percent": {
+        "min": 69.77884496525155,
+        "p10": 79.7600288638105,
+        "median": 89.7590221705148,
+        "p90": 109.68963663704197,
+        "max": 109.72970610916293
+      },
+      "native_query_total_s_rounded": 2.367488,
+      "peak_device_used_mib": 13576.0,
+      "device_capacity_mib": 97887.0,
+      "gpu_sample_percent": {
+        "min": 0.0,
+        "p10": 6.300000000000002,
+        "median": 36.0,
+        "p90": 38.0,
+        "max": 39.0
+      },
+      "gpu_samples": 28,
+      "correct": true,
+      "warning": "100%=one CPU core. Device samples are windowed/coarse and can miss sub-100ms peaks. Process wall polling adds up to 100ms plus monitoring admission latency. Native timing printed to 6 decimals per query."
+    },
+    {
+      "label": "clean_update_2",
+      "wall_s": 2.83965484588407,
+      "cpu_user_s": 2.1697319999999998,
+      "cpu_system_s": 0.479688,
+      "cpu_percent_one_core": 93.30077575590549,
+      "cpu_sample_after_0p7s_percent": {
+        "min": 89.65905535010276,
+        "p10": 89.72391871557755,
+        "median": 89.77669566894467,
+        "p90": 99.75766282058824,
+        "max": 99.76091518847271
+      },
+      "native_query_total_s_rounded": 2.392064,
+      "peak_device_used_mib": 13576.0,
+      "device_capacity_mib": 97887.0,
+      "gpu_sample_percent": {
+        "min": 0.0,
+        "p10": 0.0,
+        "median": 35.0,
+        "p90": 38.0,
+        "max": 38.0
+      },
+      "gpu_samples": 28,
+      "correct": true,
+      "warning": "100%=one CPU core. Device samples are windowed/coarse and can miss sub-100ms peaks. Process wall polling adds up to 100ms plus monitoring admission latency. Native timing printed to 6 decimals per query."
+    }
+  ],
+  "traces": {
+    "nsys_knn": {
+      "scope": "first query kernel start through last query kernel end; excludes initial query setup/final cleanup; diagnostic only",
+      "query_span_ms": 11.842134,
+      "kernel_union_ms": 6.822102,
+      "gpu_work_union_ms": 6.851056,
+      "gpu_work_fraction": 0.5785322138729387,
+      "no_recorded_gpu_work_ms": 4.991078,
+      "gap_us": {
+        "min": 0.001,
+        "p10": 0.3525,
+        "median": 15.968,
+        "p90": 152.87900000000002,
+        "max": 1003.226
+      },
+      "gaps_at_least_100us": 6,
+      "sm_count": 188,
+      "single_block_kernel_calls": 7,
+      "all_query_kernel_calls": 27,
+      "single_block_kernel_ms": 0.205087,
+      "kernels": {
+        "dataProcessKnn": {
+          "calls": 1,
+          "ms": 4.428772,
+          "grids": {
+            "409600": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            50
+          ]
+        },
+        "DeviceRadixSortOnesweepKernel": {
+          "calls": 8,
+          "ms": 1.285656,
+          "grids": {
+            "1778": 8
+          },
+          "blocks": {
+            "384": 8
+          },
+          "registers": [
+            80
+          ]
+        },
+        "labelCNode": {
+          "calls": 2,
+          "ms": 0.364445,
+          "grids": {
+            "80": 1,
+            "800": 1
+          },
+          "blocks": {
+            "512": 2
+          },
+          "registers": [
+            22
+          ]
+        },
+        "mergeResKnn": {
+          "calls": 1,
+          "ms": 0.227871,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            27
+          ]
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 6,
+          "ms": 0.20422300000000002,
+          "grids": {
+            "1": 6
+          },
+          "blocks": {
+            "256": 6
+          },
+          "registers": [
+            30
+          ]
+        },
+        "mergeLNodeKnn": {
+          "calls": 1,
+          "ms": 0.086367,
+          "grids": {
+            "800": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            30
+          ]
+        },
+        "getQCountKnn": {
+          "calls": 1,
+          "ms": 0.081824,
+          "grids": {
+            "800": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            19
+          ]
+        },
+        "initDisK": {
+          "calls": 1,
+          "ms": 0.070592,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            24
+          ]
+        },
+        "DeviceRadixSortHistogramKernel": {
+          "calls": 1,
+          "ms": 0.05696,
+          "grids": {
+            "1128": 1
+          },
+          "blocks": {
+            "128": 1
+          },
+          "registers": [
+            78
+          ]
+        },
+        "DeviceScanKernel": {
+          "calls": 1,
+          "ms": 0.009312,
+          "grids": {
+            "90": 1
+          },
+          "blocks": {
+            "416": 1
+          },
+          "registers": [
+            62
+          ]
+        },
+        "DeviceReduceKernel": {
+          "calls": 1,
+          "ms": 0.00256,
+          "grids": {
+            "100": 1
+          },
+          "blocks": {
+            "256": 1
+          },
+          "registers": [
+            48
+          ]
+        },
+        "initPListKnn": {
+          "calls": 1,
+          "ms": 0.001472,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            18
+          ]
+        },
+        "DeviceRadixSortExclusiveSumKernel": {
+          "calls": 1,
+          "ms": 0.001184,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "256": 1
+          },
+          "registers": [
+            37
+          ]
+        },
+        "DeviceScanInitKernel": {
+          "calls": 1,
+          "ms": 0.000864,
+          "grids": {
+            "1": 1
+          },
+          "blocks": {
+            "128": 1
+          },
+          "registers": [
+            16
+          ]
+        }
+      },
+      "cuda_api": {
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 8,
+          "inclusive_ms": 5.298306
+        },
+        "cuKernelGetName": {
+          "calls": 26,
+          "inclusive_ms": 0.00505
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 26,
+          "inclusive_ms": 0.43651199999999996
+        },
+        "cudaMalloc_v3020": {
+          "calls": 8,
+          "inclusive_ms": 0.236545
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 14,
+          "inclusive_ms": 0.25406
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 6,
+          "inclusive_ms": 0.08083900000000001
+        },
+        "cudaFree_v3020": {
+          "calls": 8,
+          "inclusive_ms": 1.486754
+        },
+        "cudaMemsetAsync_v3020": {
+          "calls": 10,
+          "inclusive_ms": 0.056486999999999996
+        }
+      },
+      "copy_activity": {
+        "Unified Host-to-Device": {
+          "calls": 18,
+          "bytes": 532480,
+          "ms": 0.029623999999999998
+        },
+        "Device-to-Host": {
+          "calls": 6,
+          "bytes": 24,
+          "ms": 0.002624
+        },
+        "Unified Device-to-Host": {
+          "calls": 14,
+          "bytes": 401408,
+          "ms": 0.013082
+        }
+      },
+      "tracked_explicit_peak_live_bytes": 9629296303,
+      "largest_explicit_allocation_bytes": 9496100864,
+      "cpu_um_fault_events": 8,
+      "gpu_um_fault_count": 640,
+      "warning": "Traced GPU work fraction is temporal coverage, not SM utilization. API durations overlap kernels. Trace gaps include instrumentation/driver/host/UVM effects. Explicit allocation tracking excludes device context/local-stack backing; missing counters are unknown."
+    },
+    "nsys_light_knn": {
+      "scope": "first query kernel start through last query kernel end; excludes initial query setup/final cleanup; diagnostic only",
+      "query_span_ms": 9.644207,
+      "kernel_union_ms": 6.764221,
+      "gpu_work_union_ms": 6.789467,
+      "gpu_work_fraction": 0.7039943252980779,
+      "no_recorded_gpu_work_ms": 2.8547399999999996,
+      "gap_us": {
+        "min": 0.001,
+        "p10": 1.0816000000000001,
+        "median": 21.184,
+        "p90": 58.5152,
+        "max": 723.388
+      },
+      "gaps_at_least_100us": 4,
+      "sm_count": 188,
+      "single_block_kernel_calls": 7,
+      "all_query_kernel_calls": 27,
+      "single_block_kernel_ms": 0.139456,
+      "kernels": {
+        "dataProcessKnn": {
+          "calls": 1,
+          "ms": 4.713128,
+          "grids": {
+            "409600": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            50
+          ]
+        },
+        "DeviceRadixSortOnesweepKernel": {
+          "calls": 8,
+          "ms": 1.2840900000000002,
+          "grids": {
+            "1778": 8
+          },
+          "blocks": {
+            "384": 8
+          },
+          "registers": [
+            80
+          ]
+        },
+        "mergeResKnn": {
+          "calls": 1,
+          "ms": 0.267966,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            27
+          ]
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 6,
+          "ms": 0.138592,
+          "grids": {
+            "1": 6
+          },
+          "blocks": {
+            "256": 6
+          },
+          "registers": [
+            30
+          ]
+        },
+        "labelCNode": {
+          "calls": 2,
+          "ms": 0.112319,
+          "grids": {
+            "80": 1,
+            "800": 1
+          },
+          "blocks": {
+            "512": 2
+          },
+          "registers": [
+            22
+          ]
+        },
+        "initDisK": {
+          "calls": 1,
+          "ms": 0.061248,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            24
+          ]
+        },
+        "mergeLNodeKnn": {
+          "calls": 1,
+          "ms": 0.061183,
+          "grids": {
+            "800": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            30
+          ]
+        },
+        "DeviceRadixSortHistogramKernel": {
+          "calls": 1,
+          "ms": 0.056863,
+          "grids": {
+            "1128": 1
+          },
+          "blocks": {
+            "128": 1
+          },
+          "registers": [
+            78
+          ]
+        },
+        "getQCountKnn": {
+          "calls": 1,
+          "ms": 0.053696,
+          "grids": {
+            "800": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            19
+          ]
+        },
+        "DeviceScanKernel": {
+          "calls": 1,
+          "ms": 0.009152,
+          "grids": {
+            "90": 1
+          },
+          "blocks": {
+            "416": 1
+          },
+          "registers": [
+            62
+          ]
+        },
+        "DeviceReduceKernel": {
+          "calls": 1,
+          "ms": 0.00256,
+          "grids": {
+            "100": 1
+          },
+          "blocks": {
+            "256": 1
+          },
+          "registers": [
+            48
+          ]
+        },
+        "initPListKnn": {
+          "calls": 1,
+          "ms": 0.001376,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "512": 1
+          },
+          "registers": [
+            18
+          ]
+        },
+        "DeviceRadixSortExclusiveSumKernel": {
+          "calls": 1,
+          "ms": 0.001184,
+          "grids": {
+            "8": 1
+          },
+          "blocks": {
+            "256": 1
+          },
+          "registers": [
+            37
+          ]
+        },
+        "DeviceScanInitKernel": {
+          "calls": 1,
+          "ms": 0.000864,
+          "grids": {
+            "1": 1
+          },
+          "blocks": {
+            "128": 1
+          },
+          "registers": [
+            16
+          ]
+        }
+      },
+      "cuda_api": {
+        "cuKernelGetName": {
+          "calls": 26,
+          "inclusive_ms": 0.004596999999999999
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 26,
+          "inclusive_ms": 0.418217
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 7,
+          "inclusive_ms": 5.3005189999999995
+        },
+        "cudaMalloc_v3020": {
+          "calls": 8,
+          "inclusive_ms": 0.19251600000000002
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 14,
+          "inclusive_ms": 0.183626
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 6,
+          "inclusive_ms": 0.074893
+        },
+        "cudaFree_v3020": {
+          "calls": 8,
+          "inclusive_ms": 1.470112
+        },
+        "cudaMemsetAsync_v3020": {
+          "calls": 10,
+          "inclusive_ms": 0.049099000000000004
+        }
+      },
+      "copy_activity": {
+        "Unified Host-to-Device": {
+          "calls": 21,
+          "bytes": 225280,
+          "ms": 0.027902
+        },
+        "Device-to-Host": {
+          "calls": 6,
+          "bytes": 24,
+          "ms": 0.002624
+        },
+        "Unified Device-to-Host": {
+          "calls": 10,
+          "bytes": 155648,
+          "ms": 0.00723
+        }
+      },
+      "tracked_explicit_peak_live_bytes": null,
+      "largest_explicit_allocation_bytes": null,
+      "cpu_um_fault_events": null,
+      "gpu_um_fault_count": null,
+      "warning": "Traced GPU work fraction is temporal coverage, not SM utilization. API durations overlap kernels. Trace gaps include instrumentation/driver/host/UVM effects. Explicit allocation tracking excludes device context/local-stack backing; missing counters are unknown."
+    },
+    "nsys_light_update": {
+      "scope": "first query kernel start through last query kernel end; excludes initial query setup/final cleanup; diagnostic only",
+      "query_span_ms": 2831.62279,
+      "kernel_union_ms": 731.473408,
+      "gpu_work_union_ms": 735.204325,
+      "gpu_work_fraction": 0.2596406299583427,
+      "no_recorded_gpu_work_ms": 2096.4184649999997,
+      "gap_us": {
+        "min": 0.001,
+        "p10": 5.888,
+        "median": 12.416,
+        "p90": 31.2,
+        "max": 4587.368
+      },
+      "gaps_at_least_100us": 382,
+      "sm_count": 188,
+      "single_block_kernel_calls": 86272,
+      "all_query_kernel_calls": 98304,
+      "single_block_kernel_ms": 548.66376,
+      "kernels": {
+        "getQresultCount": {
+          "calls": 4096,
+          "ms": 188.10246100000052,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            16
+          ]
+        },
+        "findNextRnn": {
+          "calls": 8192,
+          "ms": 162.99739800000012,
+          "grids": {
+            "1": 8192
+          },
+          "blocks": {
+            "512": 8192
+          },
+          "registers": [
+            50
+          ]
+        },
+        "leafProcessRnnUpdate": {
+          "calls": 4096,
+          "ms": 153.3406439999993,
+          "grids": {
+            "96": 128,
+            "97": 512,
+            "99": 1536,
+            "88": 128,
+            "98": 512,
+            "63": 128,
+            "90": 256,
+            "59": 128,
+            "30": 128,
+            "7": 128,
+            "52": 128,
+            "41": 128,
+            "91": 128,
+            "81": 128
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            48
+          ]
+        },
+        "DeviceScanKernel": {
+          "calls": 20480,
+          "ms": 54.575965999997756,
+          "grids": {
+            "1": 20480
+          },
+          "blocks": {
+            "384": 20480
+          },
+          "registers": [
+            64
+          ]
+        },
+        "getQnodeCount": {
+          "calls": 4096,
+          "ms": 28.885004000001018,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            16
+          ]
+        },
+        "mergeResultRnn": {
+          "calls": 4096,
+          "ms": 26.32943799999949,
+          "grids": {
+            "4": 3328,
+            "3": 384,
+            "2": 256,
+            "1": 128
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            26
+          ]
+        },
+        "mergeTotalResult": {
+          "calls": 4096,
+          "ms": 24.032649999999823,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            24
+          ]
+        },
+        "mergeLeafNode": {
+          "calls": 4096,
+          "ms": 22.649816999998688,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            26
+          ]
+        },
+        "initQnode": {
+          "calls": 4096,
+          "ms": 21.124216000000423,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            17
+          ]
+        },
+        "DeviceScanInitKernel": {
+          "calls": 20480,
+          "ms": 17.70100799999948,
+          "grids": {
+            "1": 20480
+          },
+          "blocks": {
+            "128": 20480
+          },
+          "registers": [
+            16
+          ]
+        },
+        "updatePnodeFlag": {
+          "calls": 8192,
+          "ms": 16.22782299999928,
+          "grids": {
+            "1": 8192
+          },
+          "blocks": {
+            "512": 8192
+          },
+          "registers": [
+            20
+          ]
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 8192,
+          "ms": 11.885148000000694,
+          "grids": {
+            "1": 8192
+          },
+          "blocks": {
+            "256": 8192
+          },
+          "registers": [
+            30
+          ]
+        },
+        "initRes": {
+          "calls": 4096,
+          "ms": 3.6218349999999857,
+          "grids": {
+            "4": 3328,
+            "3": 384,
+            "2": 256,
+            "1": 128
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            16
+          ]
+        }
+      },
+      "cuda_api": {
+        "cuKernelGetName": {
+          "calls": 98303,
+          "inclusive_ms": 9.506541999999804
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 98303,
+          "inclusive_ms": 377.4898580000002
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 49151,
+          "inclusive_ms": 891.3599290000078
+        },
+        "cudaMalloc_v3020": {
+          "calls": 65532,
+          "inclusive_ms": 188.43673999999905
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 36864,
+          "inclusive_ms": 191.13736199999906
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 8192,
+          "inclusive_ms": 79.35655900000022
+        },
+        "cudaFree_v3020": {
+          "calls": 98298,
+          "inclusive_ms": 438.7626719999927
+        },
+        "cudaMallocManaged_v6000": {
+          "calls": 32764,
+          "inclusive_ms": 107.18101699999951
+        }
+      },
+      "copy_activity": {
+        "Unified Host-to-Device": {
+          "calls": 740,
+          "bytes": 3313664,
+          "ms": 0.851136999999995
+        },
+        "Unified Device-to-Host": {
+          "calls": 738,
+          "bytes": 3194880,
+          "ms": 0.385044000000001
+        },
+        "Device-to-Host": {
+          "calls": 8192,
+          "bytes": 32768,
+          "ms": 3.3458729999997976
+        }
+      },
+      "tracked_explicit_peak_live_bytes": null,
+      "largest_explicit_allocation_bytes": null,
+      "cpu_um_fault_events": null,
+      "gpu_um_fault_count": null,
+      "warning": "Traced GPU work fraction is temporal coverage, not SM utilization. API durations overlap kernels. Trace gaps include instrumentation/driver/host/UVM effects. Explicit allocation tracking excludes device context/local-stack backing; missing counters are unknown."
+    },
+    "nsys_update_retry": {
+      "scope": "first query kernel start through last query kernel end; excludes initial query setup/final cleanup; diagnostic only",
+      "query_span_ms": 4789.398708,
+      "kernel_union_ms": 850.115458,
+      "gpu_work_union_ms": 854.478345,
+      "gpu_work_fraction": 0.17841035944088704,
+      "no_recorded_gpu_work_ms": 3934.9203629999997,
+      "gap_us": {
+        "min": 0.001,
+        "p10": 5.856,
+        "median": 14.368,
+        "p90": 45.74939999999991,
+        "max": 20511.831
+      },
+      "gaps_at_least_100us": 1685,
+      "sm_count": 188,
+      "single_block_kernel_calls": 86272,
+      "all_query_kernel_calls": 98304,
+      "single_block_kernel_ms": 590.349697,
+      "kernels": {
+        "leafProcessRnnUpdate": {
+          "calls": 4096,
+          "ms": 227.87993900000038,
+          "grids": {
+            "96": 128,
+            "97": 512,
+            "99": 1536,
+            "88": 128,
+            "98": 512,
+            "63": 128,
+            "90": 256,
+            "59": 128,
+            "30": 128,
+            "7": 128,
+            "52": 128,
+            "41": 128,
+            "91": 128,
+            "81": 128
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            48
+          ]
+        },
+        "getQresultCount": {
+          "calls": 4096,
+          "ms": 189.15755499999983,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            16
+          ]
+        },
+        "findNextRnn": {
+          "calls": 8192,
+          "ms": 162.56702900000053,
+          "grids": {
+            "1": 8192
+          },
+          "blocks": {
+            "512": 8192
+          },
+          "registers": [
+            50
+          ]
+        },
+        "DeviceScanKernel": {
+          "calls": 20480,
+          "ms": 55.30115599999966,
+          "grids": {
+            "1": 20480
+          },
+          "blocks": {
+            "384": 20480
+          },
+          "registers": [
+            64
+          ]
+        },
+        "getQnodeCount": {
+          "calls": 4096,
+          "ms": 39.08595900000054,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            16
+          ]
+        },
+        "mergeLeafNode": {
+          "calls": 4096,
+          "ms": 34.19218799999733,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            26
+          ]
+        },
+        "mergeTotalResult": {
+          "calls": 4096,
+          "ms": 31.81969500000083,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            24
+          ]
+        },
+        "initQnode": {
+          "calls": 4096,
+          "ms": 31.261253000003403,
+          "grids": {
+            "1": 4096
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            17
+          ]
+        },
+        "mergeResultRnn": {
+          "calls": 4096,
+          "ms": 28.86556099999963,
+          "grids": {
+            "4": 3328,
+            "3": 384,
+            "2": 256,
+            "1": 128
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            26
+          ]
+        },
+        "DeviceScanInitKernel": {
+          "calls": 20480,
+          "ms": 17.703474999999514,
+          "grids": {
+            "1": 20480
+          },
+          "blocks": {
+            "128": 20480
+          },
+          "registers": [
+            16
+          ]
+        },
+        "updatePnodeFlag": {
+          "calls": 8192,
+          "ms": 16.76652200000013,
+          "grids": {
+            "1": 8192
+          },
+          "blocks": {
+            "512": 8192
+          },
+          "registers": [
+            20
+          ]
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 8192,
+          "ms": 11.890707000000699,
+          "grids": {
+            "1": 8192
+          },
+          "blocks": {
+            "256": 8192
+          },
+          "registers": [
+            30
+          ]
+        },
+        "initRes": {
+          "calls": 4096,
+          "ms": 3.6244189999999885,
+          "grids": {
+            "4": 3328,
+            "3": 384,
+            "2": 256,
+            "1": 128
+          },
+          "blocks": {
+            "512": 4096
+          },
+          "registers": [
+            16
+          ]
+        }
+      },
+      "cuda_api": {
+        "cuKernelGetName": {
+          "calls": 98303,
+          "inclusive_ms": 9.48475699999921
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 98303,
+          "inclusive_ms": 383.79193399999986
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 49151,
+          "inclusive_ms": 1007.879494999993
+        },
+        "cudaMalloc_v3020": {
+          "calls": 65532,
+          "inclusive_ms": 233.22516700000017
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 36864,
+          "inclusive_ms": 194.65611599999946
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 8192,
+          "inclusive_ms": 77.00277099999981
+        },
+        "cudaFree_v3020": {
+          "calls": 98298,
+          "inclusive_ms": 495.8799799999966
+        },
+        "cudaMallocManaged_v6000": {
+          "calls": 32764,
+          "inclusive_ms": 122.74647899999965
+        }
+      },
+      "copy_activity": {
+        "Unified Host-to-Device": {
+          "calls": 1945,
+          "bytes": 8863744,
+          "ms": 2.297742999999998
+        },
+        "Unified Device-to-Host": {
+          "calls": 1949,
+          "bytes": 8646656,
+          "ms": 1.0185259999999827
+        },
+        "Device-to-Host": {
+          "calls": 8192,
+          "bytes": 32768,
+          "ms": 3.344360999999797
+        }
+      },
+      "tracked_explicit_peak_live_bytes": 541539,
+      "largest_explicit_allocation_bytes": 222000,
+      "cpu_um_fault_events": 1926,
+      "gpu_um_fault_count": 38265,
+      "warning": "Traced GPU work fraction is temporal coverage, not SM utilization. API durations overlap kernels. Trace gaps include instrumentation/driver/host/UVM effects. Explicit allocation tracking excludes device context/local-stack backing; missing counters are unknown."
+    }
+  },
+  "receipts": [
+    {
+      "label": "clean_knn_0",
+      "kind": "knn",
+      "mode": "clean",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.505284063052386,
+      "user_s": 0.027927999999999998,
+      "system_s": 0.424106,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "clean_knn_1",
+      "kind": "knn",
+      "mode": "clean",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.5061564610805362,
+      "user_s": 0.03025,
+      "system_s": 0.40473699999999996,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "clean_knn_2",
+      "kind": "knn",
+      "mode": "clean",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.5058676858898252,
+      "user_s": 0.031952,
+      "system_s": 0.39064899999999997,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "clean_update_0",
+      "kind": "update",
+      "mode": "clean",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 2.8355444699991494,
+      "user_s": 2.052893,
+      "system_s": 0.5589609999999999,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "clean_update_1",
+      "kind": "update",
+      "mode": "clean",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 2.8449405669234693,
+      "user_s": 2.162719,
+      "system_s": 0.45664099999999996,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "clean_update_2",
+      "kind": "update",
+      "mode": "clean",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 2.83965484588407,
+      "user_s": 2.1697319999999998,
+      "system_s": 0.479688,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "gate_knn_memcheck",
+      "kind": "knn",
+      "mode": "memcheck",
+      "long": false,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.8195579859893769,
+      "user_s": 0.327397,
+      "system_s": 0.51149,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.qid": "0172ab342dcafaed216a5a16a738d2e3db2b6821ab860a86047f2802ffaabae9"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "gate_knn_synccheck",
+      "kind": "knn",
+      "mode": "synccheck",
+      "long": false,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.7165705650113523,
+      "user_s": 0.300448,
+      "system_s": 0.43796999999999997,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.qid": "0172ab342dcafaed216a5a16a738d2e3db2b6821ab860a86047f2802ffaabae9"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "gate_memcheck",
+      "kind": "update",
+      "mode": "memcheck",
+      "long": false,
+      "exit_code": -15,
+      "stop_reason": "foreign GPU activity",
+      "wall_s": 1.3126483231317252,
+      "user_s": 0.765828,
+      "system_s": 0.603818,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.updates": "3dac7d5ecdc560ccdcd3e11a6e3e03c32fe24c06752dfdd90ca1e744877d0f70"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "gate_memcheck_retry",
+      "kind": "update",
+      "mode": "memcheck",
+      "long": false,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 1.3492528561037034,
+      "user_s": 0.776903,
+      "system_s": 0.600421,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.updates": "3dac7d5ecdc560ccdcd3e11a6e3e03c32fe24c06752dfdd90ca1e744877d0f70"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "gate_synccheck_retry",
+      "kind": "update",
+      "mode": "synccheck",
+      "long": false,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.9062835038639605,
+      "user_s": 0.351857,
+      "system_s": 0.45522599999999996,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.updates": "3dac7d5ecdc560ccdcd3e11a6e3e03c32fe24c06752dfdd90ca1e744877d0f70"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "long_gate_knn_memcheck",
+      "kind": "knn",
+      "mode": "memcheck",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 1.3404997140169144,
+      "user_s": 0.848233,
+      "system_s": 0.422824,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "long_gate_knn_synccheck",
+      "kind": "knn",
+      "mode": "synccheck",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.7170484350062907,
+      "user_s": 0.308376,
+      "system_s": 0.434452,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "long_gate_update_memcheck",
+      "kind": "update",
+      "mode": "memcheck",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 54.86631035595201,
+      "user_s": 52.821966,
+      "system_s": 1.053689,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "long_gate_update_synccheck",
+      "kind": "update",
+      "mode": "synccheck",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 8.529072436038405,
+      "user_s": 7.63673,
+      "system_s": 0.571174,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "ncu_launch_only",
+      "kind": "update",
+      "mode": "ncu-launch",
+      "long": false,
+      "exit_code": 1,
+      "stop_reason": null,
+      "wall_s": 1.7617646870203316,
+      "user_s": 1.457975,
+      "system_s": 1.1078649999999999,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.updates": "3dac7d5ecdc560ccdcd3e11a6e3e03c32fe24c06752dfdd90ca1e744877d0f70"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": true
+    },
+    {
+      "label": "ncu_update",
+      "kind": "update",
+      "mode": "ncu",
+      "long": false,
+      "exit_code": 1,
+      "stop_reason": null,
+      "wall_s": 1.58369892090559,
+      "user_s": 1.305066,
+      "system_s": 0.964982,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.updates": "3dac7d5ecdc560ccdcd3e11a6e3e03c32fe24c06752dfdd90ca1e744877d0f70"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": true
+    },
+    {
+      "label": "nsys_knn",
+      "kind": "knn",
+      "mode": "nsys",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 8.555674022994936,
+      "user_s": 0.047452,
+      "system_s": 1.729153,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "nsys_light_knn",
+      "kind": "knn",
+      "mode": "nsys-light",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 8.562252867035568,
+      "user_s": 0.053273,
+      "system_s": 1.796922,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.qid": "1be6d7a33acc42541ceeb9c35068c614cb8323bf264ae1ed5884fd614169a6ac"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "nsys_light_update",
+      "kind": "update",
+      "mode": "nsys-light",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 17.01134541607462,
+      "user_s": 0.053181,
+      "system_s": 1.942101,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "nsys_range_failure",
+      "kind": "range",
+      "mode": "nsys",
+      "long": false,
+      "exit_code": 1,
+      "stop_reason": null,
+      "wall_s": 8.55179250286892,
+      "user_s": 0.055217999999999996,
+      "system_s": 1.8157079999999999,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.qid": "0172ab342dcafaed216a5a16a738d2e3db2b6821ab860a86047f2802ffaabae9"
+      },
+      "validation": {
+        "pass": false,
+        "actual_count": 0,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "nsys_update",
+      "kind": "update",
+      "mode": "nsys",
+      "long": true,
+      "exit_code": 143,
+      "stop_reason": "foreign GPU activity",
+      "wall_s": 9.239601674955338,
+      "user_s": 0.055555,
+      "system_s": 1.739728,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": false,
+        "actual_count": 491,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "nsys_update_retry",
+      "kind": "update",
+      "mode": "nsys",
+      "long": true,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 20.79133002110757,
+      "user_s": 0.06726,
+      "system_s": 1.964957,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000_long.updates": "803fd3f3d3626b428fe8773b04433e61616d4329b022073405a2402d013cc9e1"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 4096,
+        "expected_count": 4096,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "smoke_knn",
+      "kind": "knn",
+      "mode": "clean",
+      "long": false,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.7038708119653165,
+      "user_s": 0.0298,
+      "system_s": 0.5415449999999999,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.qid": "0172ab342dcafaed216a5a16a738d2e3db2b6821ab860a86047f2802ffaabae9"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "smoke_range",
+      "kind": "range",
+      "mode": "clean",
+      "long": false,
+      "exit_code": 1,
+      "stop_reason": null,
+      "wall_s": 0.6035443069413304,
+      "user_s": 0.027492000000000003,
+      "system_s": 0.5152079999999999,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.qid": "0172ab342dcafaed216a5a16a738d2e3db2b6821ab860a86047f2802ffaabae9"
+      },
+      "validation": {
+        "pass": false,
+        "actual_count": 0,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    },
+    {
+      "label": "smoke_update",
+      "kind": "update",
+      "mode": "clean",
+      "long": false,
+      "exit_code": 0,
+      "stop_reason": null,
+      "wall_s": 0.6043455309700221,
+      "user_s": 0.058415999999999996,
+      "system_s": 0.448883,
+      "binary_sha256": "0e55ca2ec490644913759e6d864ea077e048adfa2f7352feb26feed73da03293",
+      "input_sha256": {
+        "words_2000.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+        "words_2000.updates": "3dac7d5ecdc560ccdcd3e11a6e3e03c32fe24c06752dfdd90ca1e744877d0f70"
+      },
+      "validation": {
+        "pass": true,
+        "actual_count": 32,
+        "expected_count": 32,
+        "scope": "counts/kth distances, not full IDs"
+      },
+      "post_gpu_clear": true,
+      "ncu_permission_denied": false
+    }
+  ],
+  "static_stack_bytes_per_thread": {
+    "getPivotDis": 47528,
+    "findNextRnn": 47528,
+    "leafProcessRnnUpdate": 47528,
+    "dataProcessKnn": 47528
+  },
+  "raw_archive_sha256": "c33b88bf3e1924bdf483ca3a006a4d3733d5d81a0e33b7f84d05c00388c7361a",
+  "raw_file_sha256": {
+    "CONTRACT.md": "dab6774477b460c5df6e69bc34891d7a6a56087ddaa506dfa542a6289066ced1",
+    "logs/build.log": "8a9025a82cd2cf74eecfb43c3bbf2341d73a15125cdc1b4d9bdb06be421797da",
+    "logs/resources.txt": "d082b86a7ddbc27f7107fe7ba30831915c2726c4caadf58e6918b0744e23162e",
+    "run.py": "6a54876d598df1ee138b25a622dd90725a1b0bfd65ae7ea6245262be31f977ef",
+    "runs/clean_knn_0/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/clean_knn_0/command.json": "5997c0eb48d5d07fdafcbab466217985db80633776577396f55430f2dc89c914",
+    "runs/clean_knn_0/cost.txt": "7374931efaee94d595a70951960474f25492e15401058059524653903c292cd5",
+    "runs/clean_knn_0/cpu_samples.json": "f832a6937078ba59fb64a600f80af6d3aef8d8945ce649d42d009c6e4ebf2388",
+    "runs/clean_knn_0/gpu_after.json": "e7af268664c97edc0476e631594dbef119627c6fde1308e273959a9654af341a",
+    "runs/clean_knn_0/gpu_before.json": "f3cb2c099f51e39dbfd5d728a536fe83bd768f2872ee6882260bd1efc483cc30",
+    "runs/clean_knn_0/gpu_samples.csv": "4c524c2a7424835f30bf13b4e692939a0b895d5225a881e95fcc1a7a264a6f7f",
+    "runs/clean_knn_0/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_knn_0/pid.txt": "61e853e720cb041e35bec61f464fe3eb887d0905af9e826d6add1146fab4d691",
+    "runs/clean_knn_0/receipt.json": "adba1515a76aa3fceebd36c0c1d69187fb76f6719a8872b83c952ee968b56fc1",
+    "runs/clean_knn_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_knn_0/stdout.log": "76acdd3c2696a1de71a8eb6d5ff2e9245fa1c41622a28befb7f50bcd68a4abd0",
+    "runs/clean_knn_1/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/clean_knn_1/command.json": "e4e0dc4772563c2ddb5f82b0ab1b3392fb7f9a457e1d68e8b956519a83e5b662",
+    "runs/clean_knn_1/cost.txt": "2668d5c2de3f015ea0aca4e8a02e694f738f35a7fa74f9a95f3b4c32856df547",
+    "runs/clean_knn_1/cpu_samples.json": "dfcb427f39c307a7b75bb0262f3744d0ffc15e29ea11308ae71a3c57fc0293f3",
+    "runs/clean_knn_1/gpu_after.json": "28b0e83312f5cd1ad87e97747830589e1bc62282eaeaf490257244c9f01c859f",
+    "runs/clean_knn_1/gpu_before.json": "0b632e10767fb9b61b27cfcd0b26d28fd9c494fb93aefdba0bc92e7e497d8c6a",
+    "runs/clean_knn_1/gpu_samples.csv": "2706206d8e85d3c4eb0dc00348d29821727b70e54f7fbe4d15c94756a4dff054",
+    "runs/clean_knn_1/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_knn_1/pid.txt": "6c170e7b52f5306842556dbe94680c72069957f55beb704a009cb4ea04eb0abc",
+    "runs/clean_knn_1/receipt.json": "25aecbf5c3f9c103b232747e582592005720db1c7d5fb324a2a91ef034b1174a",
+    "runs/clean_knn_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_knn_1/stdout.log": "bfc4986397ccfde9f58a84143cd74d1e423ee54376ef05ca9710f82a779ee5a5",
+    "runs/clean_knn_2/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/clean_knn_2/command.json": "8be4e7d13b6c24ee40b263d305d798240c0e3d809e20cc6e0274f9fa4170e37a",
+    "runs/clean_knn_2/cost.txt": "6bb45a86e44a568f7cedbcefdfaa199059e5cf94bfac784d1742dcc3c64a7b5f",
+    "runs/clean_knn_2/cpu_samples.json": "a27e900ef64ed9913ffb1d7dd70d4b9e159792752a4402ea2d3b11e89007bccc",
+    "runs/clean_knn_2/gpu_after.json": "512fec98146c30b5bbec3c028da34f2553c3d685119e96964da8a668e208b725",
+    "runs/clean_knn_2/gpu_before.json": "3779d02d16e2a1cbeaf2a0310467cb20cba818c10231376fe042c151cefe6cec",
+    "runs/clean_knn_2/gpu_samples.csv": "f968705b2dc6f5deca599f5ede9290d90d4fe334ec188c0328da67830bd223b6",
+    "runs/clean_knn_2/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_knn_2/pid.txt": "378dcdde5777a80a14049400402c131f3b8e99b52381fa774947a64e332d39d8",
+    "runs/clean_knn_2/receipt.json": "ea47d02fd9367de3f9ea19b4cb749c228db62f4787ddc6b50e86de10eef93ddd",
+    "runs/clean_knn_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_knn_2/stdout.log": "d89fea7b8f6174ae853e3855ff9ba398f03c4e7403b3e67c725f7c0ec51ee5e8",
+    "runs/clean_update_0/admission_checks.json": "7187c34245ab3c27d952c4a390818a46189651884d9a8e68c1addb7230bc055e",
+    "runs/clean_update_0/command.json": "f8dc685398011cc869ab6f20ac937c12478ddeda9ffd259629ac7bbe2e7c17a3",
+    "runs/clean_update_0/cost.txt": "5ae01a38d9760353d57e65deea6d55bd647056eeacc07adac4834bb04afca21d",
+    "runs/clean_update_0/cpu_samples.json": "3a04bf3b90c662ad8944a4e8fdb22464c611bb8dad22bd2d048c414702d861c3",
+    "runs/clean_update_0/gpu_after.json": "30bc730badeef9a3da8568971071a139cb8d5ac41aa056fa8e4f3ec4a67bf79e",
+    "runs/clean_update_0/gpu_before.json": "7bc845b17b65fc7945d0127e89211669c88decba6fa015d5577779a7921f6e7c",
+    "runs/clean_update_0/gpu_samples.csv": "229d6ada48db8c343f5b5526cce3e27e710aee49f48b9b1f87d0cf6ac7dbba5d",
+    "runs/clean_update_0/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_update_0/pid.txt": "e23e0aae70ca27d22663c1a49a077d220c1ef1ca897fc3bbda9bf0cde5df29c1",
+    "runs/clean_update_0/receipt.json": "7f2bf19d1446e503c8c317c1f6e6c76a882088548dffd93d6861d7a73408e0aa",
+    "runs/clean_update_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_update_0/stdout.log": "008d3978887ea8ae33aea405824c1703e410183fea51d060faa2a360d935d1e9",
+    "runs/clean_update_1/admission_checks.json": "97e1494f68cbb5c241c28f1a60cf26c2cf88bbe8ba365c24ec71694b0abf8413",
+    "runs/clean_update_1/command.json": "20bc5461482420ab471313c7b7525a3a4e908775cd11f1e66e3839921061cfbe",
+    "runs/clean_update_1/cost.txt": "9598180fbe5ea6c575473794fb2b745d810f47c482e125d5eedbb54e82d57781",
+    "runs/clean_update_1/cpu_samples.json": "60602534cf1eb7de961d996bbdb5a0e761bd407758b776e8527f232402e59c87",
+    "runs/clean_update_1/gpu_after.json": "fbd1b86bc57adfeacdee646c67ede5ca2f1e4a6226661409028d43b5d1ae8fef",
+    "runs/clean_update_1/gpu_before.json": "4f41dd96126d5a1c105ace7b056ec23e444b208dd15a2e8448d2b1f39d0bce33",
+    "runs/clean_update_1/gpu_samples.csv": "af94b1b6f44d53704857509773b93769bf48305334bdaaa8c17fa8e484f8627c",
+    "runs/clean_update_1/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_update_1/pid.txt": "62149a0c194f4608316d21ae13f6e13796409ed05590c92582b2a2389ff3625f",
+    "runs/clean_update_1/receipt.json": "d2d70bddacff090a9cb6a3aa57023494c33bffe3066a0c313caf7cb2ce73cbda",
+    "runs/clean_update_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_update_1/stdout.log": "0f89bd844fb55a6666f64a2420f35b0ae13446f0a327502d377912df31fbdb55",
+    "runs/clean_update_2/admission_checks.json": "c37cee9dfe28c6f44bfe47a93d1e50592f2793002da816491f880b9dc16c423f",
+    "runs/clean_update_2/command.json": "bf8b3d40bf88509a5cfe0ab2825985a63b3c77ff6af7fb8f4fe0660b932a3c5e",
+    "runs/clean_update_2/cost.txt": "c90c56c984781fd1b42c7ab864da052f342768d5d5d109468d02009af46bbcbc",
+    "runs/clean_update_2/cpu_samples.json": "54ef3d0c3c1ccbf9bb6f809e8ee8d8aa8dd560c42900611cec56dcde8ce55c85",
+    "runs/clean_update_2/gpu_after.json": "df0b7881dbe26dd8e73a250566402281c8d4243052d40dfab6753bcda49f984d",
+    "runs/clean_update_2/gpu_before.json": "776fa548a90b91b67e3840610b97b6b165f803545a6b0ae68c2131220ca4c80f",
+    "runs/clean_update_2/gpu_samples.csv": "64ed97f0a33ba92f9e83ada5f7df6a0c5061035f731a46d940d9b85ce85240a2",
+    "runs/clean_update_2/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_update_2/pid.txt": "f708d766e8bd5e5ba272d263a6ca3227787a15e104d881d9efa646be11332407",
+    "runs/clean_update_2/receipt.json": "03e14227e221edcd138ae0c6058cf3864a88dc62151c27fb7eb316ce5f2ac60a",
+    "runs/clean_update_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/clean_update_2/stdout.log": "553cb909a2eb2e9bf4483249a48c5fbc881c7d49384d36cdb62d848e59ae5616",
+    "runs/gate_knn_memcheck/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/gate_knn_memcheck/command.json": "ce17ea1505433ca2d7538aa241c818f4a7de5b30425c1911fdb805293ecad91e",
+    "runs/gate_knn_memcheck/cost.txt": "1bef50beeb4e7d59367106b61c2664848eaaeb20695157eab6883d56aa0bcc27",
+    "runs/gate_knn_memcheck/cpu_samples.json": "a534b7875e6abe2e841cc73b6a981bbd3fd032b5903ebcf0e198535e800d45f7",
+    "runs/gate_knn_memcheck/gpu_after.json": "6da6233e0d6f824b22a8082cb063829f8bc5592d86033edec426978c74d1948f",
+    "runs/gate_knn_memcheck/gpu_before.json": "841f0a90d5769242ede3ea1a9afd60cfd0d42035c8f3739bebcf33713783f44e",
+    "runs/gate_knn_memcheck/gpu_samples.csv": "73911d4ae9e70be467614fe437fff07b977abda6a77ad65bb8791646280842c5",
+    "runs/gate_knn_memcheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_knn_memcheck/pid.txt": "54daf47dd0c27ec0e8cc1527ed2bddf68630e9f728cd5cc00a32cde9c91830c3",
+    "runs/gate_knn_memcheck/receipt.json": "fa9d4b031724e237feb720d5542b39f81ef01eefb672d7c5f3729f8a35e4611f",
+    "runs/gate_knn_memcheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_knn_memcheck/stdout.log": "d4931780c808010f877659ebaaaea890cfee1c7321d269424221d39503522196",
+    "runs/gate_knn_synccheck/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/gate_knn_synccheck/command.json": "ece4870f13bde9ded92b63cb16280411f99054f4b70a96891d3efb27d2e59351",
+    "runs/gate_knn_synccheck/cost.txt": "e79daa3a5407ca993dc9b4158fa35e49d0347118b2c4c49c4d50bd44bc3a2e89",
+    "runs/gate_knn_synccheck/cpu_samples.json": "45903e707bc668431324125b9b0e61c315f608ca6cb097b61714e1fe2a61690e",
+    "runs/gate_knn_synccheck/gpu_after.json": "138a03da98c4aab67a696550f0dff780db1decf1877e26008234b4667d35250f",
+    "runs/gate_knn_synccheck/gpu_before.json": "1ce0fa6f3740a719ec175637f5c8ef0f431d89df15c0ec1cb320c41caec33ada",
+    "runs/gate_knn_synccheck/gpu_samples.csv": "d078cb70ffba5071bd9eebe59aa8688bbc15fd2c91239448108ca5a33c35c0ac",
+    "runs/gate_knn_synccheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_knn_synccheck/pid.txt": "516c47b5ff8ad66d95bc8bf1f5a6b7cdf3bd0ef506c63a9442fb4072e0b07713",
+    "runs/gate_knn_synccheck/receipt.json": "24c78b32d8136b4163a45f2e66d9b83a71ef0a3cb65c4e63f5a94da7f3516623",
+    "runs/gate_knn_synccheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_knn_synccheck/stdout.log": "e0295a0974256a32d36d611fef95b881e144423f7dfbf45dd946dbfbe5fcd54a",
+    "runs/gate_memcheck/command.json": "e7b7de0fc5d56c1faecda3e72f09c0e5cb5579cec98b3a3fecfe592302c9ab38",
+    "runs/gate_memcheck/cost.txt": "9bcd89cc074aee54fafa7060aafb47220d3fce2aa37c23edbbc3eeb8115d1a62",
+    "runs/gate_memcheck/cpu_samples.json": "393477cd81871af19ccec6d665bf400f385026fe4adabfb1551b4a7b6089378f",
+    "runs/gate_memcheck/gpu_after.json": "2dce03d4767898fac6a7def5c4b93abdea4c3590cd117b4d14a988e919e929a3",
+    "runs/gate_memcheck/gpu_before.json": "fa7b3f4c8890fee3e15a24f61ed09eb302ec949dabdcd3cb5ff330ea5cf5aac0",
+    "runs/gate_memcheck/gpu_samples.csv": "c5006ea540c64b98f46847339a969e73b7d1559a4a56de256ff20d5b21c4a39e",
+    "runs/gate_memcheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_memcheck/pid.txt": "f95042946c0160f84fb929f1af3a0e840311a50a6b25a06a70ad414174fb6663",
+    "runs/gate_memcheck/receipt.json": "0534e87b325c727df073b441cd85135f67ef8a0b49dc9cf4bd11221a526fadf3",
+    "runs/gate_memcheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_memcheck/stdout.log": "1d592ddb43d60f616601a0022fc1b41cbabe31ea6920e3825beb3b49cdf846fa",
+    "runs/gate_memcheck_retry/admission_checks.json": "d9adbcfe441c0fb711520b3414facf586626d06b6d5ecc9de76ee00c69f9c9ab",
+    "runs/gate_memcheck_retry/command.json": "21ebbcbf9bc972efcfc18ffb69bb3f79fb665285976679a0aa3a902c2607fcb1",
+    "runs/gate_memcheck_retry/cost.txt": "e668081ed693312f02502636f5c961d9dc744d76de31b35e9bac50cea5061537",
+    "runs/gate_memcheck_retry/cpu_samples.json": "3fd40deb414c74714afc380c38945d4910cc64c4abe4dc690fe1ce909e47a23c",
+    "runs/gate_memcheck_retry/gpu_after.json": "5eb96d2501839f9f70240743eb4af18f7e66b0a9c85e808fce5ccb1b7b7a6d5a",
+    "runs/gate_memcheck_retry/gpu_before.json": "027b106003951445cef74b1369a7a7649bd7367c17c8fad882f0d80e14cc7aaa",
+    "runs/gate_memcheck_retry/gpu_samples.csv": "d6b1babf6932fb23918f2cd70e3ee8b02640d825faca6f293eeca50dcddc111b",
+    "runs/gate_memcheck_retry/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_memcheck_retry/pid.txt": "8309f22ae4300ed2e0902b3fc5067507f5958e98fd2feeef0b5a5556546e125e",
+    "runs/gate_memcheck_retry/receipt.json": "db130a2c3c72b82f32ba58b4897b362508d09f158a5b1158f9da01fbf6c5ac77",
+    "runs/gate_memcheck_retry/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_memcheck_retry/stdout.log": "08f923b9387294458ae99896fb2b409323e582a299e34d30dc716bac23cf29b2",
+    "runs/gate_synccheck_retry/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/gate_synccheck_retry/command.json": "8bcf834bf841c3b30b9d8e8c065d0f2e7c4441b2986acae57ba18f69290afc68",
+    "runs/gate_synccheck_retry/cost.txt": "20a6cffbf254b122f216d79cf0f0c98ba839bb42d1f29a3ab9942963f9dbff3f",
+    "runs/gate_synccheck_retry/cpu_samples.json": "45ff8b1c0a13cab124ea1b68b92fb5a74ebf3e2c72464ba252e93c6a8b846d62",
+    "runs/gate_synccheck_retry/gpu_after.json": "4acdc4d00a14795516b018ae483fcc77839d541fd96a9eb2af4102c162902896",
+    "runs/gate_synccheck_retry/gpu_before.json": "6e5e724b8861ac9da441e97d6089684ca1c1fa33e725b30883bcbe388aedb4da",
+    "runs/gate_synccheck_retry/gpu_samples.csv": "4bab3003bbc95e03b88cf539c26d792319ec808183dccb145dd5fc9d172a7675",
+    "runs/gate_synccheck_retry/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_synccheck_retry/pid.txt": "069dceeb79a5b5b093b5b12fbaa6eef2b607eb854c57d0b4276c94cd1c5c4abf",
+    "runs/gate_synccheck_retry/receipt.json": "21cf391948af0028a3b7391e3b3d6822c55ca3abf97b3eec335bd9404ed3cb3c",
+    "runs/gate_synccheck_retry/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/gate_synccheck_retry/stdout.log": "46df12c94302b07ecd4938cd59a40b358ffce284869db42b5234945745132732",
+    "runs/long_gate_knn_memcheck/admission_checks.json": "b48b845c65b4c7b5e9b4e353e9f43dfadef018dc323ca0de91ac80d0105e1ea2",
+    "runs/long_gate_knn_memcheck/command.json": "be6b0b53b7ce8d8665a47a40c95cfeab307841a705a0751f855cbfc25d3df95c",
+    "runs/long_gate_knn_memcheck/cost.txt": "0f908d99d1b63c8d26f4a9167834afb354970650c0113e74ff470f4d07e66855",
+    "runs/long_gate_knn_memcheck/cpu_samples.json": "2508c962d2b86ae6098cd5b3aa56c9f472fe53808d6698ec5b3bdf453fa27dee",
+    "runs/long_gate_knn_memcheck/gpu_after.json": "993299bbccb028163e4ab6763d39c3591ebbf71dbd92784b4c33632e67cb29a8",
+    "runs/long_gate_knn_memcheck/gpu_before.json": "72b983d4be7cf0327e8a6a37272fa2e3f936679fc18a1e898430ea0ae5bd44bf",
+    "runs/long_gate_knn_memcheck/gpu_samples.csv": "72d52c4221bfc60e8638406be24211e7e782ac38ad7248b479ba982dc0fa5636",
+    "runs/long_gate_knn_memcheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_knn_memcheck/pid.txt": "c1b4565237df16bf9ea3d3b920081da176565d9ac617d3dd530c7d06215a6282",
+    "runs/long_gate_knn_memcheck/receipt.json": "22755569eb89beaca101db65b0890c5c9d44f173b38d512f95e4e00617163115",
+    "runs/long_gate_knn_memcheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_knn_memcheck/stdout.log": "8383b08cf8dac0ff2688309833e7d3bb65df29876acd6afa527516719c7c6b28",
+    "runs/long_gate_knn_synccheck/admission_checks.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "runs/long_gate_knn_synccheck/command.json": "aa9cfc0bd65b91c2947db9f655dd5eeedc66b853c537b5b1c53e1e78f1452c0e",
+    "runs/long_gate_knn_synccheck/cost.txt": "596025beb6eb7d535c62b79cd5906b367e5f2b6f914f250195561ea180d3ff25",
+    "runs/long_gate_knn_synccheck/cpu_samples.json": "ee43f04b23087e0d18d4aaea55ee48223d2825045723fd47a6b552114e806954",
+    "runs/long_gate_knn_synccheck/gpu_after.json": "11893c3ee4712347f3567bc1984c7f9d813d38833996bf1268ed22d7514bceb1",
+    "runs/long_gate_knn_synccheck/gpu_before.json": "04f07611bc2fdbfcbf1980898c2b639716911cc2ad4dd1dcc9984a7dc597790c",
+    "runs/long_gate_knn_synccheck/gpu_samples.csv": "f454fc654454625cdbd42207bec09dd72334d0ef3fbb60f4a3497d7b35c227f8",
+    "runs/long_gate_knn_synccheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_knn_synccheck/pid.txt": "2d295ad08ef0840426579f000ed5cb6127bf32ea0a3c1c140a6065079282ffb7",
+    "runs/long_gate_knn_synccheck/receipt.json": "85d031796e9740331f68e91ff88cb323d6b357d64423dab8c14e456b2a18c65e",
+    "runs/long_gate_knn_synccheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_knn_synccheck/stdout.log": "d75f84f19b35e93951bd7410e0be1bcf2797c9cf32c6250e434e135ae8720a30",
+    "runs/long_gate_update_memcheck/admission_checks.json": "91f0781f62d68ea1ee818b70e0553c467ff368b655a45cc3c7e844c4871da0f6",
+    "runs/long_gate_update_memcheck/command.json": "a7459ffb4ac4f233db0a3ab4ccffff18a25d988a4eb004ae3e28bebdccb5fe6b",
+    "runs/long_gate_update_memcheck/cost.txt": "34eca5d535700a7bf15eca4df86e93a0efbd72cf752a1189126dc0445529d2c6",
+    "runs/long_gate_update_memcheck/cpu_samples.json": "33344fb024c59cc214c0d2e9611f8c689c510a921e5b478101f5e8d88795d397",
+    "runs/long_gate_update_memcheck/gpu_after.json": "4b86e0147718a7d22f1176b033bb7d052f7bf0145407e1ac2070a7c562860412",
+    "runs/long_gate_update_memcheck/gpu_before.json": "c46dc0963c43f4009c42174c9d69fcfab2e0cdb3be65c339d67db062c845ce28",
+    "runs/long_gate_update_memcheck/gpu_samples.csv": "8dec021eaffc45665b60a575ba268925e17ad5e03d7e0963c0a748606b5363af",
+    "runs/long_gate_update_memcheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_update_memcheck/pid.txt": "010f238fbbbf2ccd44de6935279efdcedc35239dd31c7db2031202cb1f406d73",
+    "runs/long_gate_update_memcheck/receipt.json": "f465a452c0ccded226c94fb083b1c79bc337a123bfb7cf573b06e4480f728dbd",
+    "runs/long_gate_update_memcheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_update_memcheck/stdout.log": "6d17efe076e914ad7c52b45d3bfeba9ab798729f88b8d6310bb5f2a76cd764ef",
+    "runs/long_gate_update_synccheck/admission_checks.json": "224699cdf4797825f7e2ef4801e1b5cd432578bee3c0571c752dfd3cc32b3c13",
+    "runs/long_gate_update_synccheck/command.json": "ca96131fd59ece8443291f6b8011ff650674fa0831b231396eca3478cf26ed2a",
+    "runs/long_gate_update_synccheck/cost.txt": "5f9765b69e7b030c9afc7e4e485389c041cb213c4bc32344b9e537534d8447e2",
+    "runs/long_gate_update_synccheck/cpu_samples.json": "93043217b6a2929bf0a0bed068a83c2306a120544eab714ad6f63c3978c308b1",
+    "runs/long_gate_update_synccheck/gpu_after.json": "205461f34c7ce83035ef40e26cba4f4e4bde739f56b60ae7149c16b080559af9",
+    "runs/long_gate_update_synccheck/gpu_before.json": "2f2bd207557872ee6ce880193c559065eda33e82d4309608c6bb62f7a3936311",
+    "runs/long_gate_update_synccheck/gpu_samples.csv": "c469427fd306f51e59639d88f69d009d4b63bfbdbe3968e2538264dc26816bfc",
+    "runs/long_gate_update_synccheck/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_update_synccheck/pid.txt": "7e142b469711d10e7b97a78490f9909364e06f9e96d8bccbf4ff93f9b151ce02",
+    "runs/long_gate_update_synccheck/receipt.json": "d1b0818daf07e419ee4b250457adc8747dffd2c2b4a1a8249d5b878bbd55f1da",
+    "runs/long_gate_update_synccheck/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/long_gate_update_synccheck/stdout.log": "13564e5b3674f9c89b1be3d43812f5644293f47c1423c73104fdd4804c91f778",
+    "runs/ncu_launch_only/admission_checks.json": "d92bb93011ac22254462d8c78e8147285868cfb11c9c76e1999a736ecdaca5ce",
+    "runs/ncu_launch_only/command.json": "6a4bc4300f8b82fca6b828c717724573aad8a049f68c61a129478511376a967a",
+    "runs/ncu_launch_only/cost.txt": "0782a350b425af3c28ced7bd04de8915f6ae07b51fb0133a77f9af4a684e9a00",
+    "runs/ncu_launch_only/cpu_samples.json": "263176056f528457fcd8e1d946d5338a39d019694d2bab175c81ed3b35217bc0",
+    "runs/ncu_launch_only/gpu_after.json": "3a6de6f9ff40abfd49efd960456a5c7d8475f0d78e3c7a45a9e348322787c2c2",
+    "runs/ncu_launch_only/gpu_before.json": "5d0b3f941ae5c79e3453085b8c7cd2ac1e3659ed2f574e3b7dbb90c8474e82c9",
+    "runs/ncu_launch_only/gpu_samples.csv": "28048e88ed604d4b333b47ca81752536b0d762dd055c5d9aa7cdd233f4b7d484",
+    "runs/ncu_launch_only/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/ncu_launch_only/pid.txt": "545eb88c0e419a8cfe0e1fc886f70ad64cd08d4347f21e339b8141da1861cf2f",
+    "runs/ncu_launch_only/receipt.json": "95e1270a0a5738d0d10630476e020320686bf91cee3a915e21125601343864e1",
+    "runs/ncu_launch_only/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/ncu_launch_only/stdout.log": "e9b7ea1117a049765a0db2a3d67665ebeb6810aafc80df6961a8e432838d042c",
+    "runs/ncu_update/admission_checks.json": "ff29d74f7d2f97ab17168a39042eae2d235da6417056d4881cc763045d8aaded",
+    "runs/ncu_update/command.json": "c71fe661c937e1b9751642aff552b703cc8802c91af272cecb6e0940f02ca298",
+    "runs/ncu_update/cost.txt": "e3f6efd6c5d4a670386d2a37ba1697271ba7b53e7fe72ae7e3a5c7c383b68159",
+    "runs/ncu_update/cpu_samples.json": "a88c5aa20620fc65a2c495a9aff5e9ff4c0d79dc836f793d0057666a207d4111",
+    "runs/ncu_update/gpu_after.json": "713b3d7471a4dfdb94e36fb5c3a1398e9ddea1e1bc20998afbc384cb2a97ca9a",
+    "runs/ncu_update/gpu_before.json": "374e9f9940fab7e5fae8e2808c55a93a5f73302e9358346e53fba47eb3dc609c",
+    "runs/ncu_update/gpu_samples.csv": "892f62e1ba522da2eea06055f6ee45c2e41b348bf46ada7a52ca79da418b8e31",
+    "runs/ncu_update/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/ncu_update/pid.txt": "44b40005084d6eac81643832ed681404c757c3ecba04e7ae5e11c5a74e0f8067",
+    "runs/ncu_update/receipt.json": "48012538aac9cb065f7be4e550c9c03f0dbdfc6581678f18439946f76ce98b06",
+    "runs/ncu_update/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/ncu_update/stdout.log": "224a95b2398a51241a9a5416c4f972400d97a5d415ae0d55952190e0be45ab37",
+    "runs/nsys_knn/admission_checks.json": "3f99cf2f5806e120ca4d520dc659c0ba49da26048ad09ae02cca8f220431b63c",
+    "runs/nsys_knn/command.json": "f52dcd4c95347e8323fa7ed2d5cbccafaecb7feae1ae2c8eb3b800232c927655",
+    "runs/nsys_knn/cost.txt": "87fd18ebe32a898922a7001bfb0680d9bf076d23602aa56da7350dfdee9fb0d4",
+    "runs/nsys_knn/cpu_samples.json": "fa85aaff76a5509ef7a08f827fae7d2a5ae3465a8813fa7500925cc742dbfdec",
+    "runs/nsys_knn/gpu_after.json": "a3a696832e40a47a84430665833b4c03bfdad093bacae07f613ab1d48a5359df",
+    "runs/nsys_knn/gpu_before.json": "96728d43bc42c00576c97f54b9b333a8813abb3848ea7a0b7c57d26df67f15c0",
+    "runs/nsys_knn/gpu_samples.csv": "50fe4650541692f00816ee3208d32f52992a3d07a1724c8227eaf66902b1a207",
+    "runs/nsys_knn/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_knn/pid.txt": "0d4203a3af68b2ba0a9d3325ee5e210fd3a3e7247d228789786d35b3f5024011",
+    "runs/nsys_knn/receipt.json": "b0c9474082d523500ea616fb6fc81c5c15a647497d3967b0f229c4671e49e648",
+    "runs/nsys_knn/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_knn/stdout.log": "61c00f71a2f139d755e4b729e47e871a21c860a7e46c63436de8e56bcc892313",
+    "runs/nsys_knn/trace.nsys-rep": "fa6502ec6a57caca956cb9613957b5db44d47fe44dae43ae0a1f87e3f5625bf2",
+    "runs/nsys_knn/trace.sqlite": "48cda47ff2c1b1f72ecc38228a27f14a9188b0c6e013a144236d53577a1d0513",
+    "runs/nsys_light_knn/admission_checks.json": "1a214563d7b49cc3d461c330a6c22162666c212635f261e999f7ecb68c68e3da",
+    "runs/nsys_light_knn/command.json": "07638ecbb508ca70cb2932f60938b52b316de36b42eb533fbe6c7f2252a6bef4",
+    "runs/nsys_light_knn/cost.txt": "446320702a2b91c993a27cd9ed6cc7d11875c297a867ca8cc5826f527fa574da",
+    "runs/nsys_light_knn/cpu_samples.json": "7417b0f5f6d3e43787b1d6d8b0365516c4642cd3b06925ee787f753fe0f96dd4",
+    "runs/nsys_light_knn/gpu_after.json": "514a3572d7548d4f20b10b1e149709ae23f362921e354c040bcf97b80545c5b9",
+    "runs/nsys_light_knn/gpu_before.json": "da12d59f9ec24648828edf7823cc38b92130353d711d541d2275acdd7c1ac132",
+    "runs/nsys_light_knn/gpu_samples.csv": "5cdddac719f1cfd3e0d103efa1e3c64ca88554415c7cf3330fcb27f11646a074",
+    "runs/nsys_light_knn/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_light_knn/pid.txt": "1002285d4894fab546d3ad357a57bccaf63c968210ab15c4d978a855e34ca3c6",
+    "runs/nsys_light_knn/receipt.json": "95be997b02e03d66df1762bd0a1a3c5fe5acafa5bdd67d56cb705f7dee7bac6b",
+    "runs/nsys_light_knn/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_light_knn/stdout.log": "58369fc4da9a400dca77f062e854938a2af9dbd2114704ff515a85d4b0cc3816",
+    "runs/nsys_light_knn/trace.nsys-rep": "37addee19fd27a195e2af4bf83e41d226579b71f3336dac15a1b7c294b620be7",
+    "runs/nsys_light_knn/trace.sqlite": "6251a78d1defb4537a8c8124668b31096b0bbfdd3feded882231c19ff84c610a",
+    "runs/nsys_light_update/admission_checks.json": "24e582bdcd9797666ded6e4023e094c3d6ac899d70febc9e33da20ef8be6ae09",
+    "runs/nsys_light_update/command.json": "bb2fb768b3302cb1f901dd87d61533ba2c8c0f9c657c08cb31964a7abadaa204",
+    "runs/nsys_light_update/cost.txt": "390fc101be49d550b7890e499e3b7f6c27ad801edc39e74119bf74e9141e4490",
+    "runs/nsys_light_update/cpu_samples.json": "27ba93059f33cfae893a4a774030febe8857003f72691610090c27b890111b63",
+    "runs/nsys_light_update/gpu_after.json": "6f70d7e00f573f05c7e117c03840339a265c867d98ceb7fa0f09190dc1be292b",
+    "runs/nsys_light_update/gpu_before.json": "078dfcaf66e0edb06535cea952222f9ca68e34d9bc1e0c14fb25cb95e270551e",
+    "runs/nsys_light_update/gpu_samples.csv": "d9335a5ef65aca936820d0b195e08e72f13d931656facb47c4d5845594bf9c2e",
+    "runs/nsys_light_update/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_light_update/pid.txt": "a169a25f217a0b76f33dba53ec24b0357428b083cdf2687125d78c440f2130b1",
+    "runs/nsys_light_update/receipt.json": "9858ffa6f2009fd2208eb131eae52f80ac2c7fb352a5dc4f497f5f959095e3fe",
+    "runs/nsys_light_update/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_light_update/stdout.log": "a756021ef1607fd0b0163ac3c95a9ebd3c2d3482020233527274569039a14bff",
+    "runs/nsys_light_update/trace.nsys-rep": "9e2f93e698546a21fb5cfa2edf18f8cad38a3f5e2b8dd7e8c1c26b08d5f15d2e",
+    "runs/nsys_light_update/trace.sqlite": "0cb02048775fdd5990079e329f904b76e4e633b8fc4d71437eb35c73368ce422",
+    "runs/nsys_range_failure/admission_checks.json": "17d374635800bdcea2c3a82b50ef982776135ed65dc0504a53fc1fb2a6cf0a77",
+    "runs/nsys_range_failure/command.json": "ce3cbf3ed798ae922264b01d7f436403d27588e36194987c97876575f8a01d2f",
+    "runs/nsys_range_failure/cost.txt": "d8033cc47fc81dbea48686c1ff4f39889ac3b731e2d3a5a89df3acb5d7501798",
+    "runs/nsys_range_failure/cpu_samples.json": "1634743a0cb3b40ba77639b5ee8d1ffbf0ebbc1018abe52f0f62e5630b20120c",
+    "runs/nsys_range_failure/gpu_after.json": "c753807799a1a007434c9a56f2fb75fca0813905ade1438af9cdcda4759c600d",
+    "runs/nsys_range_failure/gpu_before.json": "c0d30d683a31af40d84440ab240aba54ead74a0451e2ec236013b29f378cfb07",
+    "runs/nsys_range_failure/gpu_samples.csv": "f1f3598b2ee43e71fcf9075c7f7442acd603fdad2b9cfbab5065f41a8279c08a",
+    "runs/nsys_range_failure/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_range_failure/pid.txt": "b82ead5c1480e3547f44a0289b30f1854d73c36c4a78df4dc254eb50c02b686d",
+    "runs/nsys_range_failure/receipt.json": "a2a42d44506c851f3a9b3558c61535aa09a8ccd9bfed843682d6ea07e2dc97ea",
+    "runs/nsys_range_failure/stderr.log": "cc7bedae90fdf88c6742bf48935106775ddbdd7a81309f956fe73a9218f010dc",
+    "runs/nsys_range_failure/stdout.log": "49cbbb899555c53b5f0439988d0ff344dadb89017b07c23500cf1d79ccb7c55f",
+    "runs/nsys_range_failure/trace.nsys-rep": "da20850d082713d178ecc33748375a25d66e9ba39e9b93bbe629bc473aac10d2",
+    "runs/nsys_range_failure/trace.sqlite": "df43cc5cf0d73cb64783ac6b6cda9934b105395b06dccfdfc17912778248bd4f",
+    "runs/nsys_update/admission_checks.json": "f6149235486d5095bc3d04b746f17ddcbd7a6ada21bf0a9c83014ee2225c210f",
+    "runs/nsys_update/command.json": "8c2b77f5ee75b7f8339af9bc0c65b5efb46b2aba891afdc8eeb1acad5cfeead2",
+    "runs/nsys_update/cost.txt": "393731de3602f27f537b9d209181aa2a4f1c4e8de3ed037f4d296195b192e069",
+    "runs/nsys_update/cpu_samples.json": "0d21a2eecbbb63c076a67a0c676f3704082d155fc78a3a1e4f09f7f0dfb9590d",
+    "runs/nsys_update/gpu_after.json": "2b6581e90d1eca364a62e6e3eb02d1cc8fa3ba5e689383a34684ea0472b6601f",
+    "runs/nsys_update/gpu_before.json": "6212c4097183f6931272a4d0bf6df708e2365393cd272c67e51744d7f32f136d",
+    "runs/nsys_update/gpu_samples.csv": "1ca49473f08cca2cbb6218f9546d0e721aad3cc9a26cee1a0a424bfd638a7209",
+    "runs/nsys_update/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_update/pid.txt": "5e47da8163167dc5439ff0da0eb3e457d80e0fa073873167c9ec38bf2be90bc1",
+    "runs/nsys_update/receipt.json": "ff0391b0484fff51025af9aaa36cee1066e7529f2f570bfccdca5819d6c64c71",
+    "runs/nsys_update/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_update/stdout.log": "ddedbbb40b223d570d8d7c62decc52da21857ef160e4618f859a5db4f370d4c2",
+    "runs/nsys_update/trace.nsys-rep": "0d72c3c6695108113942eef889025a1a239887ff4ba362df7180744fb8f70c21",
+    "runs/nsys_update/trace.sqlite": "3ffacd52bddfcee95279f2e75d0b572dd901e15fdf74b35d3bfc6c7175237c4b",
+    "runs/nsys_update_retry/admission_checks.json": "b1f9379739404eb61e8bd3633de0e9d48f3ee77079a976a07b0e1dc9f77bb558",
+    "runs/nsys_update_retry/command.json": "6394e1e9fe0574b8a8c1ed1ed776a61e92beabce9d26627c945f522c2dab264e",
+    "runs/nsys_update_retry/cost.txt": "2e559a1570743a4439de6e062ed5f4326aa928abc9228a0bd84d3842b6f2c9cf",
+    "runs/nsys_update_retry/cpu_samples.json": "518958a16a04d6771b25dadfaee8596203868ec7a9839609c7d8cada199130ec",
+    "runs/nsys_update_retry/gpu_after.json": "3eb51d635086246c2d0658c2f6e182d888c2e10d96b914542942dae83c608f88",
+    "runs/nsys_update_retry/gpu_before.json": "5f22a3e711cf034d47c48623cb971babaa9eabf3c0a8c659a54ab79d2d17c3a1",
+    "runs/nsys_update_retry/gpu_samples.csv": "cb86ca591f70f90322750476d52154d0f270e53360ed9daf42e46d41b990e2c1",
+    "runs/nsys_update_retry/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_update_retry/pid.txt": "ba1fb966346c3050ed88714f3eb0d37c08d188bc888186e9cc057303fdb08415",
+    "runs/nsys_update_retry/receipt.json": "c953247f9d3b566b7b60a76071c219709b3daa6e3b79ce86cee6cdd79ba794d2",
+    "runs/nsys_update_retry/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/nsys_update_retry/stdout.log": "f545ab6d800efad0f0bef632261e185512202953eaf04b8bcb60b3ddde1b6d1b",
+    "runs/nsys_update_retry/trace.nsys-rep": "eb55da3f80a13a9baa773be06094d8a27d24ec972442518688bb58f39c82e9ba",
+    "runs/nsys_update_retry/trace.sqlite": "b8b566f03eb97a9dcfc0e207b1183928aabf6dbf852fe117a0f49cf342705378",
+    "runs/smoke_knn/command.json": "cc42fccefd78b86c3fa837285a980eed228464c90112c7a47966fdb97a7cb2d3",
+    "runs/smoke_knn/cost.txt": "5bfbdcecbc2d22d99ae2bdb362406c0f66cb5e889b0afa64dd685533dd164203",
+    "runs/smoke_knn/cpu_samples.json": "8dd4ee2f18ea040e6f7d00d0d550c7d1d4ca709c0ed6c4661ce0c483abba7d28",
+    "runs/smoke_knn/gpu_after.json": "9971cb837bffa883be2a266376bc6721f1db1e8ca7d810f76eb54dee84219204",
+    "runs/smoke_knn/gpu_before.json": "11179c7576aa3285038b4c1c33ad7707355b39c96049dd72bb321e5cd475e791",
+    "runs/smoke_knn/gpu_samples.csv": "96577112343680b47e83918d2cc26082f1f34c1902ac3bd4f6ea19c323ff8308",
+    "runs/smoke_knn/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/smoke_knn/pid.txt": "15d99b71e7593aa0c4c064d8f58a000d8b56777c2ffab4338479d941aa8a82b9",
+    "runs/smoke_knn/receipt.json": "75e485dfd13e29baa40b52bbe2baa69eae0a68e7200ee1153ce2d956a9c5eaa2",
+    "runs/smoke_knn/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/smoke_knn/stdout.log": "14f9b58227e79a551c81d75b8891090f83218b12efa78bd71f303335f8a64ad9",
+    "runs/smoke_range/command.json": "80ac7f6e16fdc8102e5192f13cde77796b9dabd237887d550d221e9a13f6dc84",
+    "runs/smoke_range/cost.txt": "d8033cc47fc81dbea48686c1ff4f39889ac3b731e2d3a5a89df3acb5d7501798",
+    "runs/smoke_range/cpu_samples.json": "f05c0dd85c062d6c7d036998a46f5cbc2924765cb1bfc854a4b8f34a7187dbef",
+    "runs/smoke_range/gpu_after.json": "09071c100a6d8e7819c3b818d431820c70626cda1efacace7c4d5b115479dcb0",
+    "runs/smoke_range/gpu_before.json": "92906deb17d2a00bd88e68335bb1884ef02c2780394a3b8379afc95324bffdf1",
+    "runs/smoke_range/gpu_samples.csv": "cc7f9fe7de190cfef1b17e4971fa795d9b0d3f2894f9062752379973449084e8",
+    "runs/smoke_range/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/smoke_range/pid.txt": "ac2919c2175fe31a64e3dde8e16e58b6a5521e39cc64c5122c31b461585d952b",
+    "runs/smoke_range/receipt.json": "7bf4ca1b9c947b259756c912ac68ac10a0f2e5f006b7cc7fc23d71729363ea89",
+    "runs/smoke_range/stderr.log": "cc7bedae90fdf88c6742bf48935106775ddbdd7a81309f956fe73a9218f010dc",
+    "runs/smoke_range/stdout.log": "12a0fe7f8acb92d0b8809ac059491881cb67a1770aaa7673b00efb1346b634ff",
+    "runs/smoke_update/command.json": "0e176b8bbb31734f8b81e10e046c5be3928d79bc338255d181919238680386c2",
+    "runs/smoke_update/cost.txt": "6e3fc613fdeb94c7bc03f2d795ee15a00b9adb22749f85de17103c6de61fe70b",
+    "runs/smoke_update/cpu_samples.json": "ecc298ba6ab283e345890a105dc2c752feebd67555d0af5b5b9c7d2edb224f89",
+    "runs/smoke_update/gpu_after.json": "6d19c9d3d83d604e75926a498db34d98ef4e4e0e7f363e177ffde0eb4f238028",
+    "runs/smoke_update/gpu_before.json": "63a6444c4d33b2afdf82530d8fd6317882e89e63eb34d6feac17ea9e5b90448c",
+    "runs/smoke_update/gpu_samples.csv": "5bb2ba26a0fb204d403b0fa1b3ae1f671f3251004770e02021e1f14c32d7efdb",
+    "runs/smoke_update/monitor_errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/smoke_update/pid.txt": "acf75d9268189b53e2b19b07dae18f7e370927815d8526e7016c9d170d5f1677",
+    "runs/smoke_update/receipt.json": "a1c8f95c7057f40b9baea6d44bd2968ed4ef69e8d07557c4fe1314d1124a6178",
+    "runs/smoke_update/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/smoke_update/stdout.log": "b9afc39f9dd9815ed86c631c98d2740e37373bdff88dbccab8ca7d1e70387615",
+    "source_pins.json": "6a6c4b6d4c9afbe951e1a90e1094bcb1797e713d772e5e722e6f9de0893d9d54"
+  }
+}
