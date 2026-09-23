@@ -1,0 +1,1804 @@
+{
+  "experiment": "gts_20260923_fused_result",
+  "state": "accepted bounded prototype",
+  "scope": "Words N=2000, H=3, batch one, immutable tree, full stable ordered host results; normal radius 4, sustained radii 0/4/256; no larger shape, update or concurrency claim",
+  "source_revision": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "comparator_revision": "7938ed6",
+  "hardware": {
+    "gpu": "RTX PRO 6000 Blackwell Server Edition",
+    "arch": "sm_120",
+    "cuda": "13.1.115",
+    "driver": "590.48.01"
+  },
+  "binary_sha256": "af7a0256a72416d36e794d13d4de4ec2452a7d960c3ea1ff19fc5d7281923952",
+  "selector_test_binary_sha256": "bd181d45fba42a45e584236c2f50baf5a3411fb11760c81e8a959155e78ba2cd",
+  "generated_source_sha256": "b4d5b004860a90524c38fc7b1efe4af682d99a43ed4a997581a0a2e6c0a5672a",
+  "kernel_source_sha256": "9cfe596b73d80a4632d66eaef5ea7283d6fd0230041dd93f2fff391eb572a8f4",
+  "runner_sha256": "1e533fc728af75230a22dc80c8d1d90c721b782d13911758ee51aceb45b3532d",
+  "data_sha256": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+  "qids_sha256": "31cd4bbbfde9214177af8ca9c735ad07000cf489f95c95f4226322d256d531de",
+  "raw_archive_sha256": "7ce2524e82eb8b6cf64b3109d539191ee993836956480537c551446c811ffd7b",
+  "timing_orders": [
+    "BCDE",
+    "EDCB",
+    "CEBD",
+    "DBEC",
+    "DEBC",
+    "CBED"
+  ],
+  "results": {
+    "B": {
+      "process_mean_query_us": [
+        147.04480834960938,
+        143.07699853515626,
+        143.04776928710936,
+        143.72613159179687,
+        143.02470654296874,
+        146.37594311523438
+      ],
+      "median_process_mean_query_us": 143.40156506347657,
+      "process_query_p10_p50_p90_us": [
+        [
+          137.191,
+          148.35,
+          153.553
+        ],
+        [
+          132.058,
+          143.265,
+          152.401
+        ],
+        [
+          132.0,
+          143.247,
+          152.342
+        ],
+        [
+          133.003,
+          144.269,
+          153.516
+        ],
+        [
+          132.022,
+          143.256,
+          151.579
+        ],
+        [
+          138.927,
+          148.445,
+          152.733
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        147.243896484375,
+        143.23779296875,
+        143.206787109375,
+        143.89599609375,
+        143.170654296875,
+        146.538818359375
+      ],
+      "loop_cpu_one_core_percent": [
+        100.02815763671134,
+        100.03337918513392,
+        100.03039870226564,
+        100.03640427738243,
+        100.03394668997342,
+        100.02937937948197
+      ],
+      "setup_us": [
+        1223.158,
+        939.519,
+        915.729,
+        1116.918,
+        923.466,
+        1097.606
+      ],
+      "capture_instantiate_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_query_us": [
+        466.715,
+        348.91,
+        363.579,
+        410.288,
+        342.051,
+        402.979
+      ]
+    },
+    "C": {
+      "process_mean_query_us": [
+        108.60816137695313,
+        108.63969750976563,
+        108.51881298828125,
+        109.13977514648438,
+        109.15649462890624,
+        108.78006982421876
+      ],
+      "median_process_mean_query_us": 108.7098836669922,
+      "process_query_p10_p50_p90_us": [
+        [
+          98.459,
+          108.824,
+          112.681
+        ],
+        [
+          98.377,
+          108.985,
+          112.68
+        ],
+        [
+          98.354,
+          108.715,
+          112.645
+        ],
+        [
+          99.246,
+          110.257,
+          113.51
+        ],
+        [
+          99.276,
+          110.462,
+          113.523
+        ],
+        [
+          98.413,
+          109.118,
+          112.745
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        108.75341796875,
+        108.76318359375,
+        108.643310546875,
+        109.302490234375,
+        109.310791015625,
+        108.9111328125
+      ],
+      "loop_cpu_one_core_percent": [
+        100.03605420176703,
+        100.01220861319973,
+        100.01626658088549,
+        100.03424289732475,
+        100.03635910559701,
+        100.03411340417831
+      ],
+      "setup_us": [
+        1584.384,
+        1571.625,
+        3130.448,
+        1945.001,
+        1876.483,
+        1619.215
+      ],
+      "capture_instantiate_us": [
+        631.811,
+        643.44,
+        845.427,
+        790.954,
+        752.005,
+        653.651
+      ],
+      "first_query_us": [
+        226.166,
+        223.714,
+        222.838,
+        231.196,
+        215.611,
+        232.695
+      ]
+    },
+    "D": {
+      "process_mean_query_us": [
+        81.67963110351563,
+        83.41092382812501,
+        81.67205102539062,
+        81.72580224609375,
+        81.55639526367187,
+        83.834607421875
+      ],
+      "median_process_mean_query_us": 81.70271667480469,
+      "process_query_p10_p50_p90_us": [
+        [
+          75.619,
+          83.764,
+          87.033
+        ],
+        [
+          80.757,
+          82.042,
+          88.949
+        ],
+        [
+          75.644,
+          81.706,
+          87.109
+        ],
+        [
+          75.666,
+          80.986,
+          87.14
+        ],
+        [
+          75.564,
+          83.829,
+          86.752
+        ],
+        [
+          80.881,
+          82.834,
+          88.948
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        81.8095703125,
+        83.56640625,
+        81.795166015625,
+        81.846923828125,
+        81.6865234375,
+        83.97705078125
+      ],
+      "loop_cpu_one_core_percent": [
+        100.03300391777225,
+        100.03303193071342,
+        100.02338853868578,
+        100.02052054886234,
+        100.03390571422592,
+        100.0309867188908
+      ],
+      "setup_us": [
+        922.785,
+        1105.4769999999999,
+        951.845,
+        930.5799999999999,
+        929.4200000000001,
+        1097.761
+      ],
+      "capture_instantiate_us": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_query_us": [
+        290.28499999999997,
+        371.846,
+        283.65999999999997,
+        282.304,
+        302.49600000000004,
+        346.15200000000004
+      ]
+    },
+    "E": {
+      "process_mean_query_us": [
+        60.42154418945313,
+        60.38872216796875,
+        60.33508447265625,
+        60.33575415039063,
+        60.36771459960938,
+        61.411803466796876
+      ],
+      "median_process_mean_query_us": 60.37821838378906,
+      "process_query_p10_p50_p90_us": [
+        [
+          58.788,
+          59.34,
+          63.512
+        ],
+        [
+          58.666,
+          59.339,
+          63.483
+        ],
+        [
+          58.394,
+          59.334,
+          63.507
+        ],
+        [
+          58.49,
+          59.34,
+          63.503
+        ],
+        [
+          58.67,
+          59.334,
+          63.5
+        ],
+        [
+          59.295,
+          61.347,
+          64.502
+        ]
+      ],
+      "loop_cpu_us_per_query": [
+        60.5283203125,
+        60.50146484375,
+        60.446533203125,
+        60.4462890625,
+        60.48486328125,
+        61.548828125
+      ],
+      "loop_cpu_one_core_percent": [
+        100.00930008556442,
+        100.01695994855399,
+        100.02924450142469,
+        100.01760330501324,
+        100.03392527185642,
+        100.0332703553008
+      ],
+      "setup_us": [
+        1512.78,
+        1546.3700000000001,
+        1486.5569999999998,
+        1504.973,
+        1512.027,
+        1830.421
+      ],
+      "capture_instantiate_us": [
+        558.1959999999999,
+        609.685,
+        551.039,
+        572.219,
+        564.222,
+        676.1080000000001
+      ],
+      "first_query_us": [
+        163.818,
+        169.392,
+        181.048,
+        170.858,
+        173.468,
+        160.625
+      ]
+    }
+  },
+  "ratios_of_medians": {
+    "C_over_E": 1.8004818058059775,
+    "B_over_D": 1.7551627522282676
+  },
+  "paired": {
+    "C_E": {
+      "geomean": 1.7972073357526792,
+      "bootstrap_95": [
+        1.7863114159609579,
+        1.8052846438053587
+      ],
+      "wins": 6,
+      "method": "Exact percentile bootstrap of paired process log ratios; 6^6 resamples",
+      "order_split": {
+        "CE": [
+          1.7975072109446553,
+          1.7986021555577962,
+          1.771321858069714
+        ],
+        "EC": [
+          1.7990063973797752,
+          1.8088739700583951,
+          1.808193259474702
+        ]
+      }
+    },
+    "B_D": {
+      "geomean": 1.7540598213603502,
+      "bootstrap_95": [
+        1.7344911092583672,
+        1.7759867493946504
+      ],
+      "wins": 6,
+      "method": "Exact percentile bootstrap of paired process log ratios; 6^6 resamples",
+      "order_split": {
+        "BD": [
+          1.800262885164773,
+          1.751489860866087,
+          1.7460085711219115
+        ],
+        "DB": [
+          1.7153268656990068,
+          1.7586383692999055,
+          1.753690879551135
+        ]
+      }
+    }
+  },
+  "sustained": [
+    {
+      "radius": 0,
+      "order": "BCDE",
+      "query_us": {
+        "B": 103.75711846923829,
+        "C": 69.64510491943359,
+        "D": 77.53916265869141,
+        "E": 53.723785522460936
+      },
+      "C_over_E": 1.2963551291506858,
+      "B_over_D": 1.3381253409448328
+    },
+    {
+      "radius": 0,
+      "order": "EDCB",
+      "query_us": {
+        "B": 102.81939605712891,
+        "C": 70.49182312011719,
+        "D": 76.49610205078125,
+        "E": 53.67132580566407
+      },
+      "C_over_E": 1.3133982077386657,
+      "B_over_D": 1.3441128802729476
+    },
+    {
+      "radius": 4,
+      "order": "BCDE",
+      "query_us": {
+        "B": 142.89562420654295,
+        "C": 109.0325557861328,
+        "D": 81.65974249267578,
+        "E": 60.609969665527345
+      },
+      "C_over_E": 1.7989211409908754,
+      "B_over_D": 1.7498907031130981
+    },
+    {
+      "radius": 4,
+      "order": "EDCB",
+      "query_us": {
+        "B": 146.4776150512695,
+        "C": 109.54994830322265,
+        "D": 81.87637811279298,
+        "E": 60.61360882568359
+      },
+      "C_over_E": 1.807349049588406,
+      "B_over_D": 1.7890094606955111
+    },
+    {
+      "radius": 256,
+      "order": "BCDE",
+      "query_us": {
+        "B": 153.90781079101563,
+        "C": 118.23104791259765,
+        "D": 87.05814031982422,
+        "E": 63.899716735839846
+      },
+      "C_over_E": 1.850259343110431,
+      "B_over_D": 1.7678738625199981
+    },
+    {
+      "radius": 256,
+      "order": "EDCB",
+      "query_us": {
+        "B": 154.07181854248046,
+        "C": 118.37856823730469,
+        "D": 87.01349792480468,
+        "E": 63.22430987548828
+      },
+      "C_over_E": 1.8723584088214684,
+      "B_over_D": 1.7706657267775423
+    }
+  ],
+  "gates": {
+    "all_six_C_E_wins": true,
+    "C_E_lower_bound_gt_1_05": true,
+    "all_sustained_no_regression_gt_5_percent": true
+  },
+  "full_output_checks": {
+    "full_-1_B": "65080991bd616046191d983a4225a102c24d55990e1d001da04e17fc246f10c1",
+    "full_-1_C": "65080991bd616046191d983a4225a102c24d55990e1d001da04e17fc246f10c1",
+    "full_-1_D": "65080991bd616046191d983a4225a102c24d55990e1d001da04e17fc246f10c1",
+    "full_-1_E": "65080991bd616046191d983a4225a102c24d55990e1d001da04e17fc246f10c1",
+    "full_0_A": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+    "full_0_B": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+    "full_0_C": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+    "full_0_D": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+    "full_0_E": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+    "full_4_A": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+    "full_4_B": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+    "full_4_C": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+    "full_4_D": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+    "full_4_E": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+    "full_256_A": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+    "full_256_B": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+    "full_256_C": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+    "full_256_D": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+    "full_256_E": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b"
+  },
+  "sanitizers": [
+    "gate_initcheck_D",
+    "gate_initcheck_E",
+    "gate_memcheck_B",
+    "gate_memcheck_C",
+    "gate_memcheck_D",
+    "gate_memcheck_E",
+    "gate_racecheck_D",
+    "gate_racecheck_E",
+    "gate_synccheck_B",
+    "gate_synccheck_C",
+    "gate_synccheck_D",
+    "gate_synccheck_E",
+    "selector_initcheck",
+    "selector_memcheck",
+    "selector_racecheck",
+    "selector_synccheck"
+  ],
+  "standalone_cases_per_run": 132,
+  "stress_queries_per_mode": 16384,
+  "nsys": {
+    "C": {
+      "queries": 193,
+      "kernels_per_query": 24,
+      "signature": [
+        [
+          "initQnode(int *, int, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          17,
+          0,
+          0
+        ],
+        [
+          "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          50,
+          0,
+          0
+        ],
+        [
+          "updatePnodeFlag(int *, int, int, int *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          20,
+          0,
+          0
+        ],
+        [
+          "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          50,
+          0,
+          0
+        ],
+        [
+          "updatePnodeFlag(int *, int, int, int *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          20,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+          1,
+          1,
+          1,
+          256,
+          1,
+          1,
+          30,
+          44,
+          0
+        ],
+        [
+          "initRes(int *, int)",
+          5,
+          1,
+          1,
+          512,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "getQnodeCount(int, int *, int *, int *, int)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          26,
+          0,
+          0
+        ],
+        [
+          "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+          111,
+          1,
+          1,
+          512,
+          1,
+          1,
+          48,
+          16,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+          1,
+          1,
+          1,
+          256,
+          1,
+          1,
+          30,
+          44,
+          0
+        ],
+        [
+          "getQresultCount(int, int *, int *, int *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+          5,
+          1,
+          1,
+          512,
+          1,
+          1,
+          26,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "projectBounded(const int *, int *, float *, const int *, const float *, const int *)",
+          5,
+          1,
+          1,
+          512,
+          1,
+          1,
+          18,
+          0,
+          0
+        ]
+      ],
+      "whole_trace_api_counts": {
+        "cudaLaunchKernel_v7000": 33,
+        "cudaMemcpyAsync_v3020": 10,
+        "cudaStreamSynchronize_v3020": 203,
+        "cudaGraphLaunch_v10000": 193
+      },
+      "sum_kernel_us_per_query": 101.22505699481864,
+      "selection_kernel_us_per_query": 42.449626943005185,
+      "sqlite_sha256": "d774db7aab6d8db60527e8e8f3c2cb7bd627b9c3f67b29264fdf563fbe0d71c5"
+    },
+    "E": {
+      "queries": 193,
+      "kernels_per_query": 17,
+      "signature": [
+        [
+          "initQnode(int *, int, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          17,
+          0,
+          0
+        ],
+        [
+          "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          50,
+          0,
+          0
+        ],
+        [
+          "updatePnodeFlag(int *, int, int, int *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          20,
+          0,
+          0
+        ],
+        [
+          "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          50,
+          0,
+          0
+        ],
+        [
+          "updatePnodeFlag(int *, int, int, int *, int *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          20,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+          1,
+          1,
+          1,
+          256,
+          1,
+          1,
+          30,
+          44,
+          0
+        ],
+        [
+          "initRes(int *, int)",
+          5,
+          1,
+          1,
+          512,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "getQnodeCount(int, int *, int *, int *, int)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          26,
+          0,
+          0
+        ],
+        [
+          "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+          111,
+          1,
+          1,
+          512,
+          1,
+          1,
+          48,
+          16,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+          1,
+          1,
+          1,
+          128,
+          1,
+          1,
+          16,
+          0,
+          0
+        ],
+        [
+          "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+          1,
+          1,
+          1,
+          384,
+          1,
+          1,
+          64,
+          33808,
+          0
+        ],
+        [
+          "fusedResultSelect(const int *, const int *, const int *, const float *, const int *, int *, int *, float *)",
+          1,
+          1,
+          1,
+          512,
+          1,
+          1,
+          40,
+          2208,
+          0
+        ]
+      ],
+      "whole_trace_api_counts": {
+        "cudaLaunchKernel_v7000": 26,
+        "cudaMemcpyAsync_v3020": 10,
+        "cudaStreamSynchronize_v3020": 203,
+        "cudaGraphLaunch_v10000": 193
+      },
+      "sum_kernel_us_per_query": 50.459367875647665,
+      "selection_kernel_us_per_query": 3.8353160621761657,
+      "sqlite_sha256": "b7da0b57066215175c838299008798a4f26e0872b7d4c255d9ba0401efdfb65f"
+    }
+  },
+  "run_inventory": {
+    "full_-1_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": -1,
+      "repeats": 1,
+      "receipt_sha256": "730d8b939c5ac2c976f309dbf3a591e9960775ee49ca068c48aaeaf419bee472",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_-1_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": -1,
+      "repeats": 1,
+      "receipt_sha256": "dead857993d40c577a1d8a2bb24561eb7fd553f38a8ca3b8414830906daab17a",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_-1_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": -1,
+      "repeats": 1,
+      "receipt_sha256": "4048f6d43b6b643b0c89cd044b4f7d4466c98626fd48db215dbf10f6778ebe1d",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_-1_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": -1,
+      "repeats": 1,
+      "receipt_sha256": "59bfe1ffa7f97ace0d77ab82dec9ae681fe50c344bb4eb1911f9816359f9021d",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_0_A": {
+      "mode": "A",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 1,
+      "receipt_sha256": "7c0a15f822ac4e48f442000d07a27e5d793087afaba3a3dcd423145929c3426b",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_0_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 1,
+      "receipt_sha256": "b7b2627cd0e05496873a7cf6d1ef319e73de231499fdcd565f6120493c9210a7",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_0_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 1,
+      "receipt_sha256": "a2151b7f983fc04ed8f067ca2b3d1992a3beb237e30e39583be99b8fc4feecec",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_0_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 1,
+      "receipt_sha256": "7cd2a94b32023bf2eb81a548b2d4676b4d0f538ba7c9087b67d5e9a769bca10d",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_0_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 1,
+      "receipt_sha256": "58e056f00ec474284710c0a8de18e064601b54bb8e77cdf356c5cbe9afb32384",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_256_A": {
+      "mode": "A",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 1,
+      "receipt_sha256": "13eef1e0f6ba03aa35fad9fedf9142a029e2db60e0bcaa2b35dc08f00d17873f",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_256_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 1,
+      "receipt_sha256": "bfad747f777856bd7beac109b685adabe1031742f18c9c52730a926a099e4a33",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_256_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 1,
+      "receipt_sha256": "2e4fa4e0b1dc0a366810c5bac3520df26934fe6e71faa7498952c99e358453ca",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_256_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 1,
+      "receipt_sha256": "37043e27175c0f5757fa54e0f5109507fabc2659d0d14a39970a646671321997",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_256_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 1,
+      "receipt_sha256": "22ba19cbecab0ae0f090a6c5be9e72c99c3f5eaca994951e71c74a327c258ae6",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_4_A": {
+      "mode": "A",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "21c3239afbeaca4de232bef65e55d8116697471ed4a1946ae4063d3b4fbc3933",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_4_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "abe8e919b473eb468833ebe53037bcebaeceb8ea03d980834bc258f2976f6b98",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_4_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "861b3cd0757e199acf2dd40e6dfcd944df355e20ed54fa353aa7f700735fd016",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_4_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "fa45bb6aaffdc9ae4a7aee505e7a016eaf90f51d03a8125851f4baf15f5d0eaf",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "full_4_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "e4cfb1b4aa7458b795fe3bd1a6ad7d83daefe70d44e024799047f4d688f530cb",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_initcheck_D": {
+      "mode": "D",
+      "tool": "initcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "93e340c4742bb9639b5a624f5de4f0a1b8f458e557b42582554aee09f40d802c",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_initcheck_E": {
+      "mode": "E",
+      "tool": "initcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "302068695d4244579564e4e12d93dfe00d6ce8e4df743d8fa0fa0ba89292a47c",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_memcheck_B": {
+      "mode": "B",
+      "tool": "memcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "0296e1aa305a5bd688e0dbefac413d6c6308dd4880adfc52b5605f71c4d89328",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_memcheck_C": {
+      "mode": "C",
+      "tool": "memcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "85830f88e8c5b46c9dc8f29b5cb783f0e93e3c3d65483c2bc212694ee594dae1",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_memcheck_D": {
+      "mode": "D",
+      "tool": "memcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "45a0744fea9712a0c58c315badb86fad51b504e7731e45dee646198c7e5fc0e0",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_memcheck_E": {
+      "mode": "E",
+      "tool": "memcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "b0a02eda74299dbfbc699367f2cecab5f96a689008df4c9a6d9a395ae78c30af",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_racecheck_D": {
+      "mode": "D",
+      "tool": "racecheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "257c45dc3d16472604f89eb15fe9c017d44e6072d02bfbef8ce17274c7e363c7",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_racecheck_E": {
+      "mode": "E",
+      "tool": "racecheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "983851505604997a8c9cdc71e24473fba0c04805604c42ef049c43758d346a6f",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_synccheck_B": {
+      "mode": "B",
+      "tool": "synccheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "f88aa4a176ff983c0aae2ed944eecd62c4b5cc032cbcd085f0df191345e7277f",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_synccheck_C": {
+      "mode": "C",
+      "tool": "synccheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "d6c0cff499707555fdae301436af59611060eed55bd870166a90220fa99c1ea3",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_synccheck_D": {
+      "mode": "D",
+      "tool": "synccheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "54db6743449d52f09aa0952f8ad9dabedfd0bd9bb2996cb818cb6fcde17dc842",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "gate_synccheck_E": {
+      "mode": "E",
+      "tool": "synccheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "9fd6bf25c35609ef416305acdb299500186bc9e362e1d69a34258cd89a88c916",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "nsys_C": {
+      "mode": "C",
+      "tool": "nsys-node",
+      "radius": 4,
+      "repeats": 2,
+      "receipt_sha256": "2a3d96a490c62b589dc6f3c807aaec9da89ace7fe23cf2353b4e13042a269cfb",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "nsys_E": {
+      "mode": "E",
+      "tool": "nsys-node",
+      "radius": 4,
+      "repeats": 2,
+      "receipt_sha256": "135c1e624fd7e309dde7baa2a902b5b0ede3dfcb8304801c09b452f41c7717a5",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "selector_clean": {
+      "mode": "T",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "fc9be38843f5c61d4c561885f0d3879466221f28cdd4658e7f9090006139dadc",
+      "verdict": "pass: standalone selector cases"
+    },
+    "selector_initcheck": {
+      "mode": "T",
+      "tool": "initcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "5e8b4f9762852c33db4aa5781d1bb211144079d023a5a87d1235004632864ed8",
+      "verdict": "pass: standalone selector cases"
+    },
+    "selector_memcheck": {
+      "mode": "T",
+      "tool": "memcheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "dfde3f42bbcf3e274d9bfcc54607abe8b31e54aab755c35c5d429b98f50921f0",
+      "verdict": "pass: standalone selector cases"
+    },
+    "selector_racecheck": {
+      "mode": "T",
+      "tool": "racecheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "9d2f6d7b3c2e629f372dd2555c9faa7c28e8510214e9287fdb399bb533dcfc7e",
+      "verdict": "pass: standalone selector cases"
+    },
+    "selector_synccheck": {
+      "mode": "T",
+      "tool": "synccheck",
+      "radius": 4,
+      "repeats": 1,
+      "receipt_sha256": "51571417bc92b524cc2ddb05c6325feccf90750d5658d8d6603ebddd22bf80bd",
+      "verdict": "pass: standalone selector cases"
+    },
+    "stress_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "a7e4d42d073065c2ba6b190cde46bb3a849cd01ec95587fc4d92fa27406f6139",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "stress_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "f8db252869f81dfbc83e1859672fe9064283194d12df86e657d183513f04f5b2",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "stress_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "ac85609ad181fe952a9f3e9e4096f451ed6bff4b3877dfb48aafb79c068ba003",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "stress_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "02a868c1880d898dfea0cb2af9253616cfda1035f10f5a5fb7483952b8277edb",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_0_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "8aa9b92349c656cc36afed72aa507482fceb0d71badf4d72357b233f74a9503c",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_0_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "9cbc4970ec3342374892ab1e644eef44e80e69e2c80daacbe1c21a383e8770e7",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_0_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "fa54070cc5b4987330431c2e9579b77213c1e018d4ac7f35183acab2f08a52bf",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_0_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "cb5288fb75c7b34f8da663aecaba6a32280df1698dd8215aaa8f40c4a94717c1",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_1_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "1f9ff2f353afe448967fcf73f7263534c4a5ad8fe46d344c507d7fbed289aa01",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_1_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "467eaaa1a0e6150bd0101b91e15f8c54f5038a9c85fe04de95225b206ba8374b",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_1_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "ce9bb71094476a054de4442d7d3b8eea25e06b01500632e1173ca89487e9caa4",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_0_1_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 0,
+      "repeats": 256,
+      "receipt_sha256": "b9d1d2c44ef1c9efcc92a87c8056ab12992047bed55ad35ae3d53289cba560df",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_0_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "e267cbcc627fa3c4d6cf6e6de40199f8a3fc06395a65bf01c39fef302d22f6e6",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_0_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "e61cd8e3f9b7bd6dea001fd40ae1fb3f4c71cb09d550d3e3d05ff8e43bb8be92",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_0_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "62a00d0c4f2e8bee35c5ee5fead5cac3ffc0ef90f4ed706e8d77fbe0b2c5a8b5",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_0_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "08ecbb6dae0add7937a005c464930816d3adccf74879f2a73693b058fe442c97",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_1_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "5788487e78bcf18d18b82d23642218dfd38ffa55ac6c0271a710dc534366dcc0",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_1_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "d619bbb9a8394109342393d0fa13991173bdb76109a37c4b2c74b509d6b6c467",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_1_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "269e0b833375f1870bb0b2f0293318abbcdc025d87572982373437e89cda18dc",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_256_1_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 256,
+      "repeats": 256,
+      "receipt_sha256": "974ec0f916aec0eac8a4b126c58fa25a8a8eef1ee01b821d191bb64f6d903623",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_0_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "de51302ff91226185f541640ef444c61ab18184639fe90cc05683f51dea73b2e",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_0_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "9696c245bed0a700631658ef1b32f2d9da9fe6f77ae1de4a3c27f7225e9ba61c",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_0_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "d7ccd35eebd986b056932f280ce03db7f4c186a991f8cee079be05cd29812295",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_0_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "cf79a6a16e23ee31b8f623cef327f1540712157739923c9da598c2a72bde1d5f",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_1_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "1b210e440db0912cdc8062944bc241da9789e837566136432de8ae7c2c2a056f",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_1_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "b4ff7818fd5cec372b62dd0b59a27a7dd4919f72544c5c28250a4a78e6f851b4",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_1_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "892963498995770a96f699aa13d085666239dd341b8997730c5c0e8a1a02b926",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "sustained_4_1_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 256,
+      "receipt_sha256": "5832fb2eb982d06538be6f6689b308ef4fff4df0ae7f05caf3724cdd798795dc",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_0_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "546b51f5092ee0322ff90c7c864134d53e5573903431df0165b38a7afb411234",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_0_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "9f5969d9b5609c6e265ddc961f129a357656b738297247097c859862a4e02aa6",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_0_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "32146b15f44a713474bd550221b117fcc4a40745996e6641ba7f99e024fc157e",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_0_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "544d525686e3bdfeee123741cd5e1772b8da293cf96015f18d040d93b0f93fd0",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_1_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "48c29d79d350ba844efbcc8e676f1e60c5d70d7374e5870846b976d5f3c079de",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_1_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "0c7d8bfdae7fd0d1acad4e7249ece662a8ac4a8c052d2219119acb059cd954b7",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_1_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "aeaba8b35efd5ae91d283125f8a81575a25ca756b21b44ae7ad30534c1025f5d",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_1_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "0162d0f8471e4d057bf32dfc8690dc2d6041c4f00c8e2655a8f92ee23a0768bd",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_2_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "127a7d573d1c897048b870fe88bc38d9b1c3651db6862d22785366d62cdada91",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_2_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "362dc2ced3c17859563a71f73c4a7dab8b4cbdc2b59f3c5ab86be3d7a04de600",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_2_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "59ede15394f5425d6afb3f95f4121e84f24386f46ae6451566036ef511f48919",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_2_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "fdb004e2cfaba96a4fbc67a5ae854ee2d89453ed665a49c703f65449fba465d6",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_3_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "f250c1de3be34dc477160bb3243c06454a7932c85485ef09fa70862df69dc66d",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_3_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "ecb58a521222b533d295fe83f74b5618e8b1ecbd08fe57c83f4216ba89ec9bdd",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_3_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "7f7814769b2296ef44abeb0bd92a8c92b699ac5d99f5cf54dd7d85f517916c77",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_3_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "62052cd0e0ca77a689f30a898504db180b45e1179f26ff15aff75fa3e4211920",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_4_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "baa6909ac4133ed4178017b54a381043c3ed87032ad30ed3fb4550f7a0b65254",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_4_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "53887323b5b0a94cc2ae4861de260518a7994233a87580560fea0eded9880b8e",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_4_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "5dec82a84d7d54b95393b64c48b6a5e947f0f735bbccd2286a993a1c596e5f86",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_4_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "d497d9914b7c1666c7c58766e4360da1392395c2477872d5b83a7320d1fc93f1",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_5_B": {
+      "mode": "B",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "ec4e59308f6d47ff15cf96d2fd4ce0e23f86568b5a71777888a2f9bf0d2cb6e9",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_5_C": {
+      "mode": "C",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "459c4167f75c0d9f4ab039276e8f3e10d55305b02b3c1b76034aec740ba20daf",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_5_D": {
+      "mode": "D",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "44d1f539b8ca3a482887a647fa10304eec340d55d188ba07f053a2d7092be9ce",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    },
+    "timing_5_E": {
+      "mode": "E",
+      "tool": "clean",
+      "radius": 4,
+      "repeats": 64,
+      "receipt_sha256": "715a3f5db620e47dd32fb21b90fdd5705008545a70c2e0ea5744ca1b9c327f0d",
+      "verdict": "pass: independent full output or validated ordered hashes"
+    }
+  },
+  "static_selector": {
+    "final_resource_line": "REG:40 STACK:0 SHARED:3232 LOCAL:0 CONSTANT[0]:960 TEXTURE:0 SURFACE:0 SAMPLER:0",
+    "ptxas_shared_bytes": 2208,
+    "stack_bytes": 0,
+    "spill_load_store_bytes": 0,
+    "static_LDL_STL": 0,
+    "raw_selected_sass_sha256": "66ea1a0c1b9fc80ae73de76e9de317b5cd53bdcf1c6f1e6f5a1cc68355a81c2d",
+    "normalization": {
+      "function_count": 1,
+      "instruction_count": 235,
+      "line_count": 236,
+      "normalization": "sass-normalize-v1",
+      "sha256": "ec5bc6b45e6a6274e1ccebc6d41d2d4c73efbead91af374a5eeb348231eb0913"
+    }
+  },
+  "negative_evidence": [
+    {
+      "target": "First compile via relocated nvcc launcher",
+      "effect": "Header resolution failed before GPU execution",
+      "decision": "Use the verified toolkit absolute executable; failed build log retained"
+    },
+    {
+      "target": "Native A at negative radius",
+      "effect": "Prior campaign exposed zero-grid fault",
+      "decision": "Do not rerun/promote this known-invalid boundary; independent B/C/D/E zero-output checks retained"
+    }
+  ]
+}
