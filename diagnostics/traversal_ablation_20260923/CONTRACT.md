@@ -102,3 +102,16 @@ failed observation. Public Git contains generators/tests/contracts/summaries onl
 external author source, data, binaries, machine details and profiler files remain
 private with hashes. Rollback is selecting the unchanged D/E comparator; no
 production dispatch or original source is changed.
+
+## Device-admission amendment before first execution
+
+2026-09-23: the user explicitly authorized another idle GPU. A new live preflight
+found GPU 1 idle (no compute process, 14 MiB device usage, 0% utilization), with
+the same RTX PRO 6000 Blackwell Server Edition model, driver 590.48.01 and 600 W
+power limit. This campaign now admits **GPU 1 only**, under its own advisory lock
+and UUID-based process monitoring. GPU 0 had also become idle, but is not used;
+the unrelated GPU 6 process remains untouched. No clocks or power settings are
+changed. Every keeper and candidate observation will be newly collected on GPU 1;
+no cross-device or previous-campaign timing supplies a denominator. All other
+contracts and acceptance rules above remain unchanged. The earlier zero-run
+`CHECKPOINT.json` is retained as historical evidence, not rewritten into a pass.

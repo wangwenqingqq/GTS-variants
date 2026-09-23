@@ -27,7 +27,7 @@ def trace(path,mode):
     width=13 if mode=='F' else 17
     with sqlite3.connect(path) as db:
         rows=db.execute('SELECT s.value,k.gridX,k.gridY,k.gridZ,k.blockX,k.blockY,k.blockZ,k.registersPerThread,k.staticSharedMemory,k.dynamicSharedMemory,k.end-k.start FROM CUPTI_ACTIVITY_KIND_KERNEL k JOIN StringIds s ON s.id=k.demangledName ORDER BY k.start').fetchall()
-        first=next(i for i,r in enumerate(rows) if ('fusedTraversal<false>' in r[0] if mode=='F' else r[0].startswith('initQnode(')))
+        first=next(i for i,r in enumerate(rows) if (r[0].startswith('void fusedTraversal<(bool)0>(') if mode=='F' else r[0].startswith('initQnode(')))
         assert first==9
         rows=rows[first:];assert len(rows)==193*width
         sig=[list(r[:-1]) for r in rows[:width]]
@@ -42,6 +42,11 @@ def trace(path,mode):
 
 def summarize(root,oracle,archive):
     full=verify(root,oracle);o=read(oracle);runs=root/'runs'
+    admission=read(root/'logs/admission.json')
+    assert admission['gpu_index']==1 and admission['arch']=='sm_120'
+    assert admission['cuda']=='13.1.115' and admission['driver']=='590.48.01'
+    assert admission['gpu_name']=='NVIDIA RTX PRO 6000 Blackwell Server Edition'
+    assert admission['clocks_locked'] is False
     expected={r:read(root/'fixtures'/f'expected_{r}.json') for r in [-1,0,4,256]}
     required=set(full['full_output_checks'])|set(gate_labels())|{'traversal_clean'}
     required.update(f'timing_{i}_{m}' for i in range(6) for m in MODES)
@@ -63,6 +68,11 @@ def summarize(root,oracle,archive):
     inventory={};sanitizers=[]
     for p in sorted(runs.iterdir()):
         r=read(p/'receipt.json');clean(r)
+        for phase in ['before','after']:
+            state=read(p/(phase+'.json'));assert not state['apps'].strip()
+            fields=[x.strip() for x in state['gpu'].split(',')]
+            assert int(fields[0])==admission['gpu_index'] and fields[1]==admission['gpu_uuid'] and fields[2]==admission['gpu_name']
+        assert all(not x['foreign'] for x in read(p/'checks.json'))
         assert r['label']==p.name and r['runner_sha256']==sha(root/'run_ablation.py')
         assert r['tool']==expected_tool(p.name),p.name
         mode='V' if p.name.startswith('traversal_') else p.name[-1]
@@ -108,7 +118,7 @@ def summarize(root,oracle,archive):
     traces={m:trace(runs/f'nsys_{m}/trace.sqlite',m) for m in 'EFP'}
     assert traces['E']['signature'][5:]==traces['F']['signature'][1:]==traces['P']['signature'][5:]
     assert all(traces['E']['signature'][i]==traces['P']['signature'][i] for i in [0,2,4])
-    assert all('dedupLevel<false>' in traces['P']['signature'][i][0] for i in [1,3])
+    assert all(traces['P']['signature'][i][0].startswith('void dedupLevel<(bool)0>(') for i in [1,3])
     work=[dict(zip(['pattern','radius','child','fused','parent'],map(int,x))) for x in re.findall(r'WORK pattern=(\d+) radius=(-?\d+) child=(\d+) fused=(\d+) parent=(\d+)',(runs/'traversal_clean/stdout.log').read_text())]
     assert len(work)==16 and all(x['child']==x['fused'] and x['parent']<=x['child'] for x in work)
     resources={}
@@ -127,6 +137,7 @@ def summarize(root,oracle,archive):
         decisions[candidate]={'state':'accepted bounded prototype' if all(gate.values()) else 'not promoted: performance gate not met','gates':gate}
     return {'experiment':'gts_20260923_traversal_ablation_words2000','scope':'Words N=2000, H=3, batch one, immutable tree, full ordered host results; excludes construction; no combined F+P or cross-index claim',
             'source_revision':'3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639','comparator_revision':'6221ae9','decisions':decisions,
+            'hardware':{k:v for k,v in admission.items() if k!='gpu_uuid'},'admission_sha256':sha(root/'logs/admission.json'),
             'binary_sha256':sha(root/'bin/graph_bench'),'test_binary_sha256':sha(root/'bin/test_traversal'),
             'generated_driver_sha256':sha(root/'graph_bench.cu'),'generated_kernels_sha256':sha(root/'traversal_generated.cuh'),
             'runner_sha256':sha(root/'run_ablation.py'),'data_sha256':o['data_sha256'],'qids_sha256':o['qids_sha256'],'raw_archive_sha256':sha(archive),

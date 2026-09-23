@@ -1,0 +1,682 @@
+{
+  "experiment": "gts_20260923_traversal_ablation_words2000_ncu",
+  "state": "diagnostic-only; same first query, 16-pass kernel replay, no clock/cache control",
+  "scope": "D and Q profile two level kernels; G profiles the fused traversal including init/clear. Not public latency or a 64-query average.",
+  "sections": [
+    "SpeedOfLight",
+    "LaunchStats",
+    "Occupancy",
+    "SchedulerStats",
+    "WarpStateStats",
+    "MemoryWorkloadAnalysis",
+    "InstructionStats"
+  ],
+  "order": [
+    "D",
+    "G",
+    "Q"
+  ],
+  "runs": {
+    "D": {
+      "binary_sha256": "6811e8ea55bc596e833f4c347d028f1a4822c4c3e1d349e2abb5745a0b492109",
+      "runner_sha256": "77f8be792932d83fd844ff0979f574e7b69e5cb698da33dcb726fdb72da537ca",
+      "validation": {
+        "pass": true,
+        "scope": "count and ordered full-output hash against CPU-validated native outputs",
+        "rows": 64
+      },
+      "kernels": [
+        {
+          "id": 0,
+          "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+          "detail_metrics": {
+            "DRAM Throughput": {
+              "value": "0",
+              "unit": "%"
+            },
+            "Duration": {
+              "value": "6.62",
+              "unit": "us"
+            },
+            "Compute (SM) Throughput": {
+              "value": "0.03",
+              "unit": "%"
+            },
+            "Issued Warp Per Scheduler": {
+              "value": "0.16",
+              "unit": ""
+            },
+            "No Eligible": {
+              "value": "83.95",
+              "unit": "%"
+            },
+            "Eligible Warps Per Scheduler": {
+              "value": "0.16",
+              "unit": "warp"
+            },
+            "Avg. Active Threads Per Warp": {
+              "value": "11.06",
+              "unit": ""
+            },
+            "Avg. Not Predicated Off Threads Per Warp": {
+              "value": "9.67",
+              "unit": ""
+            },
+            "Executed Instructions": {
+              "value": "2000",
+              "unit": "inst"
+            },
+            "Block Size": {
+              "value": "512",
+              "unit": ""
+            },
+            "Grid Size": {
+              "value": "1",
+              "unit": ""
+            },
+            "Registers Per Thread": {
+              "value": "50",
+              "unit": "register/thread"
+            },
+            "# SMs": {
+              "value": "188",
+              "unit": "SM"
+            },
+            "Achieved Occupancy": {
+              "value": "3.73",
+              "unit": "%"
+            }
+          },
+          "raw_metrics": {
+            "profiler__replayer_passes": {
+              "value": "16.000000",
+              "unit": "pass"
+            },
+            "gpu__time_duration.sum": {
+              "value": "6.624000",
+              "unit": "us"
+            },
+            "device__attribute_multiprocessor_count": {
+              "value": "188",
+              "unit": ""
+            },
+            "smsp__inst_executed.sum": {
+              "value": "2000.000000",
+              "unit": "inst"
+            },
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+              "value": "0.033487",
+              "unit": "%"
+            },
+            "sm__warps_active.avg.pct_of_peak_sustained_active": {
+              "value": "3.728194",
+              "unit": "%"
+            },
+            "smsp__thread_inst_executed_per_inst_executed.ratio": {
+              "value": "11.06",
+              "unit": ""
+            },
+            "smsp__thread_inst_executed_pred_on_per_inst_executed.ratio": {
+              "value": "9.67",
+              "unit": ""
+            },
+            "smsp__warps_active.avg.per_cycle_active": {
+              "value": "1.145058",
+              "unit": "warp"
+            },
+            "smsp__warps_eligible.avg.per_cycle_active": {
+              "value": "0.161024",
+              "unit": "warp"
+            },
+            "smsp__average_warp_latency_per_inst_issued.ratio": {
+              "value": "7.136000",
+              "unit": "cycle"
+            },
+            "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+              "value": "1.852500",
+              "unit": "inst"
+            },
+            "smsp__average_warps_issue_stalled_barrier_per_issue_active.ratio": {
+              "value": "0",
+              "unit": "inst"
+            }
+          }
+        },
+        {
+          "id": 1,
+          "kernel": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+          "detail_metrics": {
+            "DRAM Throughput": {
+              "value": "0",
+              "unit": "%"
+            },
+            "Duration": {
+              "value": "8.58",
+              "unit": "us"
+            },
+            "Compute (SM) Throughput": {
+              "value": "0.13",
+              "unit": "%"
+            },
+            "Issued Warp Per Scheduler": {
+              "value": "0.16",
+              "unit": ""
+            },
+            "No Eligible": {
+              "value": "83.66",
+              "unit": "%"
+            },
+            "Eligible Warps Per Scheduler": {
+              "value": "0.16",
+              "unit": "warp"
+            },
+            "Avg. Active Threads Per Warp": {
+              "value": "19.86",
+              "unit": ""
+            },
+            "Avg. Not Predicated Off Threads Per Warp": {
+              "value": "17.03",
+              "unit": ""
+            },
+            "Executed Instructions": {
+              "value": "9603",
+              "unit": "inst"
+            },
+            "Block Size": {
+              "value": "512",
+              "unit": ""
+            },
+            "Grid Size": {
+              "value": "1",
+              "unit": ""
+            },
+            "Registers Per Thread": {
+              "value": "50",
+              "unit": "register/thread"
+            },
+            "# SMs": {
+              "value": "188",
+              "unit": "SM"
+            },
+            "Achieved Occupancy": {
+              "value": "7.51",
+              "unit": "%"
+            }
+          },
+          "raw_metrics": {
+            "profiler__replayer_passes": {
+              "value": "16.000000",
+              "unit": "pass"
+            },
+            "gpu__time_duration.sum": {
+              "value": "8.576000",
+              "unit": "us"
+            },
+            "device__attribute_multiprocessor_count": {
+              "value": "188",
+              "unit": ""
+            },
+            "smsp__inst_executed.sum": {
+              "value": "9603.000000",
+              "unit": "inst"
+            },
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+              "value": "0.127384",
+              "unit": "%"
+            },
+            "sm__warps_active.avg.pct_of_peak_sustained_active": {
+              "value": "7.514683",
+              "unit": "%"
+            },
+            "smsp__thread_inst_executed_per_inst_executed.ratio": {
+              "value": "19.86",
+              "unit": ""
+            },
+            "smsp__thread_inst_executed_pred_on_per_inst_executed.ratio": {
+              "value": "17.03",
+              "unit": ""
+            },
+            "smsp__warps_active.avg.per_cycle_active": {
+              "value": "1.035031",
+              "unit": "warp"
+            },
+            "smsp__warps_eligible.avg.per_cycle_active": {
+              "value": "0.163891",
+              "unit": "warp"
+            },
+            "smsp__average_warp_latency_per_inst_issued.ratio": {
+              "value": "6.333784",
+              "unit": "cycle"
+            },
+            "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+              "value": "1.911088",
+              "unit": "inst"
+            },
+            "smsp__average_warps_issue_stalled_barrier_per_issue_active.ratio": {
+              "value": "0",
+              "unit": "inst"
+            }
+          }
+        }
+      ]
+    },
+    "G": {
+      "binary_sha256": "6811e8ea55bc596e833f4c347d028f1a4822c4c3e1d349e2abb5745a0b492109",
+      "runner_sha256": "77f8be792932d83fd844ff0979f574e7b69e5cb698da33dcb726fdb72da537ca",
+      "validation": {
+        "pass": true,
+        "scope": "count and ordered full-output hash against CPU-validated native outputs",
+        "rows": 64
+      },
+      "kernels": [
+        {
+          "id": 0,
+          "kernel": "void fusedTraversal<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, int, int *)",
+          "detail_metrics": {
+            "DRAM Throughput": {
+              "value": "0",
+              "unit": "%"
+            },
+            "Duration": {
+              "value": "13.79",
+              "unit": "us"
+            },
+            "Compute (SM) Throughput": {
+              "value": "0.10",
+              "unit": "%"
+            },
+            "Issued Warp Per Scheduler": {
+              "value": "0.11",
+              "unit": ""
+            },
+            "No Eligible": {
+              "value": "88.94",
+              "unit": "%"
+            },
+            "Eligible Warps Per Scheduler": {
+              "value": "0.12",
+              "unit": "warp"
+            },
+            "Avg. Active Threads Per Warp": {
+              "value": "19.54",
+              "unit": ""
+            },
+            "Avg. Not Predicated Off Threads Per Warp": {
+              "value": "17.03",
+              "unit": ""
+            },
+            "Executed Instructions": {
+              "value": "12902",
+              "unit": "inst"
+            },
+            "Block Size": {
+              "value": "512",
+              "unit": ""
+            },
+            "Grid Size": {
+              "value": "1",
+              "unit": ""
+            },
+            "Registers Per Thread": {
+              "value": "52",
+              "unit": "register/thread"
+            },
+            "# SMs": {
+              "value": "188",
+              "unit": "SM"
+            },
+            "Achieved Occupancy": {
+              "value": "33.30",
+              "unit": "%"
+            }
+          },
+          "raw_metrics": {
+            "profiler__replayer_passes": {
+              "value": "16.000000",
+              "unit": "pass"
+            },
+            "gpu__time_duration.sum": {
+              "value": "13.792000",
+              "unit": "us"
+            },
+            "device__attribute_multiprocessor_count": {
+              "value": "188",
+              "unit": ""
+            },
+            "smsp__inst_executed.sum": {
+              "value": "12902.000000",
+              "unit": "inst"
+            },
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+              "value": "0.099626",
+              "unit": "%"
+            },
+            "sm__warps_active.avg.pct_of_peak_sustained_active": {
+              "value": "33.302031",
+              "unit": "%"
+            },
+            "smsp__thread_inst_executed_per_inst_executed.ratio": {
+              "value": "19.54",
+              "unit": ""
+            },
+            "smsp__thread_inst_executed_pred_on_per_inst_executed.ratio": {
+              "value": "17.03",
+              "unit": ""
+            },
+            "smsp__warps_active.avg.per_cycle_active": {
+              "value": "4.046651",
+              "unit": "warp"
+            },
+            "smsp__warps_eligible.avg.per_cycle_active": {
+              "value": "0.116742",
+              "unit": "warp"
+            },
+            "smsp__average_warp_latency_per_inst_issued.ratio": {
+              "value": "36.577859",
+              "unit": "cycle"
+            },
+            "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+              "value": "1.820809",
+              "unit": "inst"
+            },
+            "smsp__average_warps_issue_stalled_barrier_per_issue_active.ratio": {
+              "value": "30.045321",
+              "unit": "inst"
+            }
+          }
+        }
+      ]
+    },
+    "Q": {
+      "binary_sha256": "6811e8ea55bc596e833f4c347d028f1a4822c4c3e1d349e2abb5745a0b492109",
+      "runner_sha256": "77f8be792932d83fd844ff0979f574e7b69e5cb698da33dcb726fdb72da537ca",
+      "validation": {
+        "pass": true,
+        "scope": "count and ordered full-output hash against CPU-validated native outputs",
+        "rows": 64
+      },
+      "kernels": [
+        {
+          "id": 0,
+          "kernel": "void dedupLevel<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, int *)",
+          "detail_metrics": {
+            "DRAM Throughput": {
+              "value": "0",
+              "unit": "%"
+            },
+            "Duration": {
+              "value": "7.26",
+              "unit": "us"
+            },
+            "Compute (SM) Throughput": {
+              "value": "0.03",
+              "unit": "%"
+            },
+            "Issued Warp Per Scheduler": {
+              "value": "0.05",
+              "unit": ""
+            },
+            "No Eligible": {
+              "value": "94.67",
+              "unit": "%"
+            },
+            "Eligible Warps Per Scheduler": {
+              "value": "0.06",
+              "unit": "warp"
+            },
+            "Avg. Active Threads Per Warp": {
+              "value": "9.35",
+              "unit": ""
+            },
+            "Avg. Not Predicated Off Threads Per Warp": {
+              "value": "8.61",
+              "unit": ""
+            },
+            "Executed Instructions": {
+              "value": "2693",
+              "unit": "inst"
+            },
+            "Block Size": {
+              "value": "512",
+              "unit": ""
+            },
+            "Grid Size": {
+              "value": "1",
+              "unit": ""
+            },
+            "Registers Per Thread": {
+              "value": "48",
+              "unit": "register/thread"
+            },
+            "# SMs": {
+              "value": "188",
+              "unit": "SM"
+            },
+            "Achieved Occupancy": {
+              "value": "30.20",
+              "unit": "%"
+            }
+          },
+          "raw_metrics": {
+            "profiler__replayer_passes": {
+              "value": "16.000000",
+              "unit": "pass"
+            },
+            "gpu__time_duration.sum": {
+              "value": "7.264000",
+              "unit": "us"
+            },
+            "device__attribute_multiprocessor_count": {
+              "value": "188",
+              "unit": ""
+            },
+            "smsp__inst_executed.sum": {
+              "value": "2693.000000",
+              "unit": "inst"
+            },
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+              "value": "0.031658",
+              "unit": "%"
+            },
+            "sm__warps_active.avg.pct_of_peak_sustained_active": {
+              "value": "30.201929",
+              "unit": "%"
+            },
+            "smsp__thread_inst_executed_per_inst_executed.ratio": {
+              "value": "9.35",
+              "unit": ""
+            },
+            "smsp__thread_inst_executed_pred_on_per_inst_executed.ratio": {
+              "value": "8.61",
+              "unit": ""
+            },
+            "smsp__warps_active.avg.per_cycle_active": {
+              "value": "3.915294",
+              "unit": "warp"
+            },
+            "smsp__warps_eligible.avg.per_cycle_active": {
+              "value": "0.058728",
+              "unit": "warp"
+            },
+            "smsp__average_warp_latency_per_inst_issued.ratio": {
+              "value": "73.399406",
+              "unit": "cycle"
+            },
+            "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+              "value": "3.213437",
+              "unit": "inst"
+            },
+            "smsp__average_warps_issue_stalled_barrier_per_issue_active.ratio": {
+              "value": "64.179287",
+              "unit": "inst"
+            }
+          }
+        },
+        {
+          "id": 1,
+          "kernel": "void dedupLevel<0>(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *, int *)",
+          "detail_metrics": {
+            "DRAM Throughput": {
+              "value": "0",
+              "unit": "%"
+            },
+            "Duration": {
+              "value": "9.22",
+              "unit": "us"
+            },
+            "Compute (SM) Throughput": {
+              "value": "0.04",
+              "unit": "%"
+            },
+            "Issued Warp Per Scheduler": {
+              "value": "0.06",
+              "unit": ""
+            },
+            "No Eligible": {
+              "value": "94.42",
+              "unit": "%"
+            },
+            "Eligible Warps Per Scheduler": {
+              "value": "0.06",
+              "unit": "warp"
+            },
+            "Avg. Active Threads Per Warp": {
+              "value": "13.14",
+              "unit": ""
+            },
+            "Avg. Not Predicated Off Threads Per Warp": {
+              "value": "11.67",
+              "unit": ""
+            },
+            "Executed Instructions": {
+              "value": "4029",
+              "unit": "inst"
+            },
+            "Block Size": {
+              "value": "512",
+              "unit": ""
+            },
+            "Grid Size": {
+              "value": "1",
+              "unit": ""
+            },
+            "Registers Per Thread": {
+              "value": "48",
+              "unit": "register/thread"
+            },
+            "# SMs": {
+              "value": "188",
+              "unit": "SM"
+            },
+            "Achieved Occupancy": {
+              "value": "31.34",
+              "unit": "%"
+            }
+          },
+          "raw_metrics": {
+            "profiler__replayer_passes": {
+              "value": "16.000000",
+              "unit": "pass"
+            },
+            "gpu__time_duration.sum": {
+              "value": "9.216000",
+              "unit": "us"
+            },
+            "device__attribute_multiprocessor_count": {
+              "value": "188",
+              "unit": ""
+            },
+            "smsp__inst_executed.sum": {
+              "value": "4029.000000",
+              "unit": "inst"
+            },
+            "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+              "value": "0.039082",
+              "unit": "%"
+            },
+            "sm__warps_active.avg.pct_of_peak_sustained_active": {
+              "value": "31.337275",
+              "unit": "%"
+            },
+            "smsp__thread_inst_executed_per_inst_executed.ratio": {
+              "value": "13.14",
+              "unit": ""
+            },
+            "smsp__thread_inst_executed_pred_on_per_inst_executed.ratio": {
+              "value": "11.67",
+              "unit": ""
+            },
+            "smsp__warps_active.avg.per_cycle_active": {
+              "value": "3.764956",
+              "unit": "warp"
+            },
+            "smsp__warps_eligible.avg.per_cycle_active": {
+              "value": "0.059685",
+              "unit": "warp"
+            },
+            "smsp__average_warp_latency_per_inst_issued.ratio": {
+              "value": "67.493674",
+              "unit": "cycle"
+            },
+            "smsp__average_warps_issue_stalled_long_scoreboard_per_issue_active.ratio": {
+              "value": "2.770776",
+              "unit": "inst"
+            },
+            "smsp__average_warps_issue_stalled_barrier_per_issue_active.ratio": {
+              "value": "59.206648",
+              "unit": "inst"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "raw_archive_sha256": "5dcf3f5e9c1a085fb420c2536e8056ebd3647e620d02676fa60b01d1f21ed3f7",
+  "raw_file_sha256": {
+    "NCU_FOLLOWUP.md": "87b2bb8fcc7b8c4e84a72edfcedbb8b2dd1d19579eada64785529893721579b2",
+    "logs/ncu.txt": "ce74f8a7fceba15914cd804c292686fefb107a73592bf21882265d4bb0e1d309",
+    "logs/ncu_closure.txt": "4b4465e6a89eafc402df46735d4fee28825b43738966c39e854e3ca7571d1b0c",
+    "ncu/__pycache__/run_ncu.cpython-312.pyc": "f17438292c5d7a5d6a8b95a15f67b7e4b44d1ed66e4c0d89a499abf0d5607d84",
+    "ncu/run_ncu.py": "77f8be792932d83fd844ff0979f574e7b69e5cb698da33dcb726fdb72da537ca",
+    "ncu/runs/ncu_D/after.json": "7de29ed5ca1e3535c956f1bce5e203233391090d5947472c63839bfe1ed5478c",
+    "ncu/runs/ncu_D/before.json": "7de29ed5ca1e3535c956f1bce5e203233391090d5947472c63839bfe1ed5478c",
+    "ncu/runs/ncu_D/checks.json": "90fe1353ab791d7f19b597899798e99ee0e135054d7174c69a1b958ad04eb4f2",
+    "ncu/runs/ncu_D/command.json": "b8942fd8edf6db2b18354262b8a21bc2fe72c6b0b8eb4ec011ef9e033bd978a0",
+    "ncu/runs/ncu_D/gpu.csv": "52bab9fb1a24ae453b29d246739863cf01ce3abc4ccdb128c81ebe4ae2958d47",
+    "ncu/runs/ncu_D/metrics.csv": "31f3603bf5bdb05510d330d24a004210c686584bb99b58ae4ae3fb7893c97e2e",
+    "ncu/runs/ncu_D/metrics_raw.csv": "ca2e637bdb08e4c294811df17e1b80cf159b936701eb085a8269606ab682fcae",
+    "ncu/runs/ncu_D/profile.ncu-rep": "d8b6338ae87870d440667719547577f3bdb5b6e633441bb56f914fe90e063a77",
+    "ncu/runs/ncu_D/receipt.json": "c5e659e302802d45eb921ad9e2766f864feaa86afabca2de0f351f654eee483e",
+    "ncu/runs/ncu_D/result.csv": "2dbfe0774c3316e37741b54014bf044829ad1e34b0282ff93d1b3dcd616d2c38",
+    "ncu/runs/ncu_D/result.json": "94697bec8532cfea2607fbab310b767533e4b8391dc93cba01a20f7522021130",
+    "ncu/runs/ncu_D/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ncu/runs/ncu_D/stdout.log": "00050423d17732aec924cbe432281d4e3bbff3e0df6caa24b85718bda9bcc703",
+    "ncu/runs/ncu_G/after.json": "7de29ed5ca1e3535c956f1bce5e203233391090d5947472c63839bfe1ed5478c",
+    "ncu/runs/ncu_G/before.json": "7de29ed5ca1e3535c956f1bce5e203233391090d5947472c63839bfe1ed5478c",
+    "ncu/runs/ncu_G/checks.json": "28280532b51ee9fd9fc75f4a0249268809f362deb0758fed86ad456232d8a10a",
+    "ncu/runs/ncu_G/command.json": "706a942b62ddb7ccd4000db7c983a6b6b1bb2ec4c3a6423b85c691af3516c7e9",
+    "ncu/runs/ncu_G/gpu.csv": "22d251e83f91799573bea1f7a2045ea99e45af811b09169b658889c1a11e6c69",
+    "ncu/runs/ncu_G/metrics.csv": "63360e207115c8f6441daad1387c1e06f909f2b0f2864a7ceeec59396801cfea",
+    "ncu/runs/ncu_G/metrics_raw.csv": "0bfe1f6f4922b66052b434b1a0c679bb2527bbf53f96a3ce0d95b63ca514170b",
+    "ncu/runs/ncu_G/profile.ncu-rep": "a9f0c409f49874a42231c15c67ad4f3ea9f327aacbd53eb6d6b003ebdb227a6f",
+    "ncu/runs/ncu_G/receipt.json": "81e0909b6de495dbd5e03b798c4be8b372e8257382e91431e9664584f8549eb8",
+    "ncu/runs/ncu_G/result.csv": "7b2d1c789fabfba2b22f544ac62a02024347c0a22f3f4b7de3229f81daa90844",
+    "ncu/runs/ncu_G/result.json": "bd177e9e9121f58183d1f05dbd1c3b4c77a3310b61713c76b9e2b00b4b6bae2b",
+    "ncu/runs/ncu_G/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ncu/runs/ncu_G/stdout.log": "ac06405e79f09e583f74ae13003fe8a1aa66d155173899226523d9d26ae5fd3a",
+    "ncu/runs/ncu_Q/after.json": "7de29ed5ca1e3535c956f1bce5e203233391090d5947472c63839bfe1ed5478c",
+    "ncu/runs/ncu_Q/before.json": "7de29ed5ca1e3535c956f1bce5e203233391090d5947472c63839bfe1ed5478c",
+    "ncu/runs/ncu_Q/checks.json": "efa6ce667d3d90587ba2f4eef243757f0f2f68cc09813b69461560bbf79dc733",
+    "ncu/runs/ncu_Q/command.json": "83b7faa981d65d48c5761f63ea5979a4837ec044641937b51a9926070da6a819",
+    "ncu/runs/ncu_Q/gpu.csv": "4de2cfa6963214fc99f87665f0476435b6a92aef111fa5a2e91809289740a13b",
+    "ncu/runs/ncu_Q/metrics.csv": "2160247718845ba7e89aa2de89f346404865eb1dee0bde3cc2643bebed3ea24b",
+    "ncu/runs/ncu_Q/metrics_raw.csv": "d396de59e4301cf1f42863c9a0f46d040e6d40e588054c65f80d66e002220be2",
+    "ncu/runs/ncu_Q/profile.ncu-rep": "8e1e1fdfee3d67fc09644705437dc2e6245edc80c814f3c201b9c8de01803b29",
+    "ncu/runs/ncu_Q/receipt.json": "50ae4c03390ac0dba6910eea98a431d28a2f3f47e9d0871d1305b6102ca0573b",
+    "ncu/runs/ncu_Q/result.csv": "82de45a71f9f0b965cf0d57b0d704a6e5e9544024be901182c4f8aadf7ec1061",
+    "ncu/runs/ncu_Q/result.json": "900505e46687b50cbc84282ca2d07447fd81299822e9803b3030e8c44452242f",
+    "ncu/runs/ncu_Q/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ncu/runs/ncu_Q/stdout.log": "ef3aa1286a83011246710dba134a01421dacf37f18f2d45cc0eae0eaa6af57a0",
+    "profile_ncu.py": "3175c17f13e24eba4f9beeb7ed124778c63e60f305b09c94d3996504f1df8c46"
+  }
+}
