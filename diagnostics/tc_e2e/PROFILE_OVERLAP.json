@@ -1,0 +1,266 @@
+{
+  "scope": "One diagnostic trace, Q128/r500; five calls per variant, not timing campaign. Rows retain chronological launch order. Fault counts include entire overlapping events; interval union is clipped to the kernel. Temporal overlap is not causal stalled time.",
+  "trace_sqlite_sha256": "35737aa16195fe0a5863e481d6e3c227c773bba1343999459dfd48d7b39fe110",
+  "leaf_kernel_calls": [
+    {
+      "variant": "O",
+      "kernel": "dataProcessRnn",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 584.896546,
+      "overlapping_fault_events": 0,
+      "fault_count_in_overlapping_events": 0,
+      "fault_interval_union_ms": 0.0
+    },
+    {
+      "variant": "S",
+      "kernel": "simt",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 1.744535,
+      "overlapping_fault_events": 13,
+      "fault_count_in_overlapping_events": 1428,
+      "fault_interval_union_ms": 0.604094
+    },
+    {
+      "variant": "T",
+      "kernel": "tensor",
+      "grid": [
+        10000,
+        8,
+        1
+      ],
+      "duration_ms": 1.021403,
+      "overlapping_fault_events": 4,
+      "fault_count_in_overlapping_events": 491,
+      "fault_interval_union_ms": 0.222815
+    },
+    {
+      "variant": "D",
+      "kernel": "tensor",
+      "grid": [
+        4096,
+        8,
+        1
+      ],
+      "duration_ms": 0.37171,
+      "overlapping_fault_events": 0,
+      "fault_count_in_overlapping_events": 0,
+      "fault_interval_union_ms": 0.0
+    },
+    {
+      "variant": "O",
+      "kernel": "dataProcessRnn",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 584.765899,
+      "overlapping_fault_events": 1,
+      "fault_count_in_overlapping_events": 1,
+      "fault_interval_union_ms": 0.050048
+    },
+    {
+      "variant": "S",
+      "kernel": "simt",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 1.359738,
+      "overlapping_fault_events": 4,
+      "fault_count_in_overlapping_events": 527,
+      "fault_interval_union_ms": 0.312383
+    },
+    {
+      "variant": "T",
+      "kernel": "tensor",
+      "grid": [
+        10000,
+        8,
+        1
+      ],
+      "duration_ms": 129.334341,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 65,
+      "fault_interval_union_ms": 2.118709
+    },
+    {
+      "variant": "D",
+      "kernel": "tensor",
+      "grid": [
+        4096,
+        8,
+        1
+      ],
+      "duration_ms": 0.365438,
+      "overlapping_fault_events": 0,
+      "fault_count_in_overlapping_events": 0,
+      "fault_interval_union_ms": 0.0
+    },
+    {
+      "variant": "O",
+      "kernel": "dataProcessRnn",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 584.243886,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 3,
+      "fault_interval_union_ms": 0.057376
+    },
+    {
+      "variant": "S",
+      "kernel": "simt",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 155.139047,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 103,
+      "fault_interval_union_ms": 1.743479
+    },
+    {
+      "variant": "T",
+      "kernel": "tensor",
+      "grid": [
+        10000,
+        8,
+        1
+      ],
+      "duration_ms": 157.007806,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 93,
+      "fault_interval_union_ms": 2.205365
+    },
+    {
+      "variant": "D",
+      "kernel": "tensor",
+      "grid": [
+        4096,
+        8,
+        1
+      ],
+      "duration_ms": 0.367679,
+      "overlapping_fault_events": 0,
+      "fault_count_in_overlapping_events": 0,
+      "fault_interval_union_ms": 0.0
+    },
+    {
+      "variant": "O",
+      "kernel": "dataProcessRnn",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 584.287091,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 2,
+      "fault_interval_union_ms": 0.056255
+    },
+    {
+      "variant": "S",
+      "kernel": "simt",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 156.325667,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 94,
+      "fault_interval_union_ms": 1.778135
+    },
+    {
+      "variant": "T",
+      "kernel": "tensor",
+      "grid": [
+        10000,
+        8,
+        1
+      ],
+      "duration_ms": 156.879264,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 90,
+      "fault_interval_union_ms": 2.118037
+    },
+    {
+      "variant": "D",
+      "kernel": "tensor",
+      "grid": [
+        4096,
+        8,
+        1
+      ],
+      "duration_ms": 0.367774,
+      "overlapping_fault_events": 0,
+      "fault_count_in_overlapping_events": 0,
+      "fault_interval_union_ms": 0.0
+    },
+    {
+      "variant": "O",
+      "kernel": "dataProcessRnn",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 584.273299,
+      "overlapping_fault_events": 1,
+      "fault_count_in_overlapping_events": 1,
+      "fault_interval_union_ms": 0.046431
+    },
+    {
+      "variant": "S",
+      "kernel": "simt",
+      "grid": [
+        1272163,
+        1,
+        1
+      ],
+      "duration_ms": 156.076612,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 101,
+      "fault_interval_union_ms": 1.740087
+    },
+    {
+      "variant": "T",
+      "kernel": "tensor",
+      "grid": [
+        10000,
+        8,
+        1
+      ],
+      "duration_ms": 156.66861,
+      "overlapping_fault_events": 2,
+      "fault_count_in_overlapping_events": 49,
+      "fault_interval_union_ms": 2.09023
+    },
+    {
+      "variant": "D",
+      "kernel": "tensor",
+      "grid": [
+        4096,
+        8,
+        1
+      ],
+      "duration_ms": 0.370559,
+      "overlapping_fault_events": 0,
+      "fault_count_in_overlapping_events": 0,
+      "fault_interval_union_ms": 0.0
+    }
+  ]
+}

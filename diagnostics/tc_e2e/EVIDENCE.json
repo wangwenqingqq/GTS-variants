@@ -1,0 +1,4413 @@
+{
+  "scope": "warm query dispatch to CPU counts; resident inputs; excludes index build and one-time setup",
+  "batch16_scope": "mean of sixteen separately timed and validated CPU-delivered queries; not uninterrupted throughput",
+  "cases": {
+    "n65536_q32_r300": {
+      "shape": {
+        "n": 65536,
+        "q": 32,
+        "radius": 300
+      },
+      "phase_ms": {
+        "input_ms": {
+          "p10": 2433.8016775,
+          "median": 2684.6677835,
+          "p90": 2763.2554265
+        },
+        "norms_and_input_check_ms": {
+          "p10": 22.6869255,
+          "median": 29.096377,
+          "p90": 29.1370465
+        },
+        "oracle_ms": {
+          "p10": 92.61932999999999,
+          "median": 118.526237,
+          "p90": 121.721713
+        },
+        "index_ms": {
+          "p10": 226.5430255,
+          "median": 227.280573,
+          "p90": 229.173549
+        },
+        "bridge_setup_ms": {
+          "p10": 2.681753,
+          "median": 3.0631744999999997,
+          "p90": 3.723282
+        }
+      },
+      "timing": {
+        "1": {
+          "O": {
+            "wall_us": {
+              "p10": 149912.2514,
+              "median": 152070.65600000002,
+              "p90": 156277.2701
+            },
+            "thread_cpu_us": {
+              "p10": 1836.4008000000001,
+              "median": 2082.4030000000002,
+              "p90": 2307.9957999999997
+            },
+            "event_us": {
+              "p10": 149917.5703125,
+              "median": 152080.921875,
+              "p90": 156283.528125
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 173657.177,
+              "median": 175938.7665,
+              "p90": 176241.2728
+            },
+            "thread_cpu_us": {
+              "p10": 2135.371,
+              "median": 2237.2455,
+              "p90": 2435.2363000000005
+            },
+            "event_us": {
+              "p10": 173663.69062500002,
+              "median": 175946.234375,
+              "p90": 176247.52031249998
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 170233.0799,
+              "median": 175889.3835,
+              "p90": 176116.7958
+            },
+            "thread_cpu_us": {
+              "p10": 2143.9924,
+              "median": 2250.004,
+              "p90": 2387.0168
+            },
+            "event_us": {
+              "p10": 170238.9515625,
+              "median": 175895.5859375,
+              "p90": 176122.9890625
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 148.8286,
+              "median": 154.90699999999998,
+              "p90": 164.3201
+            },
+            "thread_cpu_us": {
+              "p10": 17.6675,
+              "median": 27.3875,
+              "p90": 36.926100000000005
+            },
+            "event_us": {
+              "p10": 151.3248032,
+              "median": 159.3759995,
+              "p90": 170.5311998
+            }
+          }
+        },
+        "16": {
+          "O": {
+            "wall_us": {
+              "p10": 147609.2214437,
+              "median": 153775.9755315,
+              "p90": 153963.34151199998
+            },
+            "thread_cpu_us": {
+              "p10": 2017.8987812,
+              "median": 2061.061625,
+              "p90": 2145.013425
+            },
+            "event_us": {
+              "p10": 147614.9233394,
+              "median": 153783.5126955,
+              "p90": 153969.3117184
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 171990.37991249998,
+              "median": 175975.654687,
+              "p90": 176007.1044817
+            },
+            "thread_cpu_us": {
+              "p10": 2194.7117442000003,
+              "median": 2274.1190935,
+              "p90": 2318.4425245
+            },
+            "event_us": {
+              "p10": 171996.1628903,
+              "median": 175982.3876955,
+              "p90": 176014.29052769998
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 170899.88247500002,
+              "median": 175977.7436875,
+              "p90": 176037.474025
+            },
+            "thread_cpu_us": {
+              "p10": 2212.5703558,
+              "median": 2260.8875310000003,
+              "p90": 2330.5720067
+            },
+            "event_us": {
+              "p10": 170907.765149,
+              "median": 175983.8828125,
+              "p90": 176044.2736328
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 146.10166289999998,
+              "median": 147.5015935,
+              "p90": 151.8679379
+            },
+            "thread_cpu_us": {
+              "p10": 17.130437,
+              "median": 18.0367815,
+              "p90": 27.208175000000004
+            },
+            "event_us": {
+              "p10": 148.95620000000002,
+              "median": 150.7360015,
+              "p90": 156.11839899999998
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "TC_vs_SIMT": {
+          "1": {
+            "marginal_ratio": 1.0002807616867906,
+            "paired_geomean_ratio": 1.0057656518293596,
+            "paired_ci95": [
+              0.9999900840649258,
+              1.0132491454747752
+            ],
+            "arithmetic_mean_ratio": 1.005803084967322,
+            "denominator_process_wins": 4,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 175902.36349999998,
+                "denominator_us": 172034.663,
+                "ratio": 1.0224821000172504
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175964.532,
+                "denominator_us": 175942.20500000002,
+                "ratio": 1.0001268996259312
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 174444.428,
+                "denominator_us": 172326.14500000002,
+                "ratio": 1.0122922902964027
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175962.187,
+                "denominator_us": 175967.978,
+                "ratio": 0.9999670906032687
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175963.08049999998,
+                "denominator_us": 175975.52049999998,
+                "ratio": 0.999929308349453
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175956.57400000002,
+                "denominator_us": 175952.9105,
+                "ratio": 1.000020820911627
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0115258371509395,
+              "denominator_first": 1.000038268176032
+            }
+          },
+          "16": {
+            "marginal_ratio": 0.9999881291778367,
+            "paired_geomean_ratio": 1.0005128223277073,
+            "paired_ci95": [
+              0.9999794430507419,
+              1.0015374298812014
+            ],
+            "arithmetic_mean_ratio": 1.0005134665226172,
+            "denominator_process_wins": 2,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 171991.2455,
+                "denominator_us": 171993.130875,
+                "ratio": 0.9999890380796581
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175982.752062,
+                "denominator_us": 175989.038625,
+                "ratio": 0.9999642786673018
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 172479.512,
+                "denominator_us": 171954.7095,
+                "ratio": 1.003051980963627
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175978.171688,
+                "denominator_us": 175980.114437,
+                "ratio": 0.9999889604060878
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175979.75175,
+                "denominator_us": 175982.382437,
+                "ratio": 0.9999850514184229
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 176000.787687,
+                "denominator_us": 175982.92725,
+                "ratio": 1.0001014896006055
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.001007648153397,
+              "denominator_first": 1.0000182411081386
+            }
+          }
+        },
+        "dense_vs_tree_TC": {
+          "1": {
+            "marginal_ratio": 1135.4514870212452,
+            "paired_geomean_ratio": 1123.5944659509198,
+            "paired_ci95": [
+              1100.8635824592393,
+              1143.085304995262
+            ],
+            "arithmetic_mean_ratio": 1123.901126680911,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 172034.663,
+                "denominator_us": 151.4635,
+                "ratio": 1135.8159754660362
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175942.20500000002,
+                "denominator_us": 151.5315,
+                "ratio": 1161.0932710360553
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 172326.14500000002,
+                "denominator_us": 152.594,
+                "ratio": 1129.31140805012
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175967.978,
+                "denominator_us": 156.94299999999998,
+                "ratio": 1121.22221443454
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175975.52049999998,
+                "denominator_us": 156.797,
+                "ratio": 1122.314333182395
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175952.9105,
+                "denominator_us": 163.883,
+                "ratio": 1073.6495579163184
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1122.9123979817286,
+              "denominator_first": 1124.2769482148642
+            }
+          },
+          "16": {
+            "marginal_ratio": 1193.0565596737094,
+            "paired_geomean_ratio": 1176.5377726850516,
+            "paired_ci95": [
+              1164.8892092184624,
+              1188.746072030596
+            ],
+            "arithmetic_mean_ratio": 1176.6363022642918,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 171993.130875,
+                "denominator_us": 146.921125,
+                "ratio": 1170.6494275414786
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175989.038625,
+                "denominator_us": 146.904562,
+                "ratio": 1197.9821200174845
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 171954.7095,
+                "denominator_us": 146.420875,
+                "ratio": 1174.3865722698351
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175980.114437,
+                "denominator_us": 147.151812,
+                "ratio": 1195.9085793452548
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175982.382437,
+                "denominator_us": 151.820563,
+                "ratio": 1159.1472127329682
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175982.92725,
+                "denominator_us": 151.481688,
+                "ratio": 1161.7439016787298
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1176.691270512955,
+              "denominator_first": 1176.384294880737
+            }
+          }
+        },
+        "SIMT_vs_original": {
+          "1": {
+            "marginal_ratio": 0.8643385367829097,
+            "paired_geomean_ratio": 0.869989136844353,
+            "paired_ci95": [
+              0.8571177460701577,
+              0.8783138111930653
+            ],
+            "arithmetic_mean_ratio": 0.8701001178824956,
+            "denominator_process_wins": 0,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 147736.35749999998,
+                "denominator_us": 175902.36349999998,
+                "ratio": 0.8398770463365605
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 153918.3505,
+                "denominator_us": 175964.532,
+                "ratio": 0.8747123568060863
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 153855.584,
+                "denominator_us": 174444.428,
+                "ratio": 0.8819747684918889
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 153921.98950000003,
+                "denominator_us": 175962.187,
+                "ratio": 0.8747446944382432
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 153940.7835,
+                "denominator_us": 175963.08049999998,
+                "ratio": 0.8748470591818265
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 153864.30800000002,
+                "denominator_us": 175956.57400000002,
+                "ratio": 0.8744447820403687
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.8628549366700209,
+              "denominator_first": 0.8771823235411751
+            }
+          },
+          "16": {
+            "marginal_ratio": 0.8738480092886396,
+            "paired_geomean_ratio": 0.8743809401343055,
+            "paired_ci95": [
+              0.8660740164795999,
+              0.883256609119785
+            ],
+            "arithmetic_mean_ratio": 0.8744376485519323,
+            "denominator_process_wins": 0,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 147606.563687,
+                "denominator_us": 171991.2455,
+                "ratio": 0.8582213778258847
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 153870.041187,
+                "denominator_us": 175982.752062,
+                "ratio": 0.8743472833791714
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 153962.552187,
+                "denominator_us": 172479.512,
+                "ratio": 0.8926425544791662
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 153666.601125,
+                "denominator_us": 175978.171688,
+                "ratio": 0.873213988138499
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 153770.222375,
+                "denominator_us": 175979.75175,
+                "ratio": 0.8737949726934992
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 153896.094562,
+                "denominator_us": 176000.787687,
+                "ratio": 0.8744057147953735
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.8689579487112742,
+              "denominator_first": 0.8798377753538263
+            }
+          }
+        },
+        "TC_vs_original": {
+          "1": {
+            "marginal_ratio": 0.864581209928455,
+            "paired_geomean_ratio": 0.8750051913027226,
+            "paired_ci95": [
+              0.8667008555110356,
+              0.883706910850592
+            ],
+            "arithmetic_mean_ratio": 0.8750604954411565,
+            "denominator_process_wins": 0,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 147736.35749999998,
+                "denominator_us": 172034.663,
+                "ratio": 0.858759246094492
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 153918.3505,
+                "denominator_us": 175942.20500000002,
+                "ratio": 0.8748233574769623
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 153855.584,
+                "denominator_us": 172326.14500000002,
+                "ratio": 0.8928162583802939
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 153921.98950000003,
+                "denominator_us": 175967.978,
+                "ratio": 0.8747159071180555
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 153940.7835,
+                "denominator_us": 175975.52049999998,
+                "ratio": 0.8747852147992369
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 153864.30800000002,
+                "denominator_us": 175952.9105,
+                "ratio": 0.8744629887778982
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.8753431083093419,
+              "denominator_first": 0.874667404745412
+            }
+          },
+          "16": {
+            "marginal_ratio": 0.8738376359943235,
+            "paired_geomean_ratio": 0.8748293422033282,
+            "paired_ci95": [
+              0.8660796028371223,
+              0.8845912626732113
+            ],
+            "arithmetic_mean_ratio": 0.8748959366590181,
+            "denominator_process_wins": 0,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 147606.563687,
+                "denominator_us": 171993.130875,
+                "ratio": 0.8582119700715053
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 153870.041187,
+                "denominator_us": 175989.038625,
+                "ratio": 0.874316050528968
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 153962.552187,
+                "denominator_us": 171954.7095,
+                "ratio": 0.8953668825627599
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 153666.601125,
+                "denominator_us": 175980.114437,
+                "ratio": 0.8732043482106716
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 153770.222375,
+                "denominator_us": 175982.382437,
+                "ratio": 0.8737819106980682
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 153896.094562,
+                "denominator_us": 175982.92725,
+                "ratio": 0.8744944578821353
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.8756546965727463,
+              "denominator_first": 0.8740047657773593
+            }
+          }
+        },
+        "dense_vs_original": {
+          "1": {
+            "marginal_ratio": 981.6900204638914,
+            "paired_geomean_ratio": 983.1509906260655,
+            "paired_ci95": [
+              963.3050771393212,
+              1001.796229695383
+            ],
+            "arithmetic_mean_ratio": 983.4688771845456,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 147736.35749999998,
+                "denominator_us": 151.4635,
+                "ratio": 975.3924707932932
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 153918.3505,
+                "denominator_us": 151.5315,
+                "ratio": 1015.7515137116706
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 153855.584,
+                "denominator_us": 152.594,
+                "ratio": 1008.2675858814895
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 153921.98950000003,
+                "denominator_us": 156.94299999999998,
+                "ratio": 980.7509063800236
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 153940.7835,
+                "denominator_us": 156.797,
+                "ratio": 981.7839850252236
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 153864.30800000002,
+                "denominator_us": 163.883,
+                "ratio": 938.8668013155727
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 973.7625373370743,
+              "denominator_first": 992.6299619333414
+            }
+          },
+          "16": {
+            "marginal_ratio": 1042.537723712795,
+            "paired_geomean_ratio": 1029.2697657554322,
+            "paired_ci95": [
+              1014.9205081027268,
+              1043.0819633761541
+            ],
+            "arithmetic_mean_ratio": 1029.44003879226,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 147606.563687,
+                "denominator_us": 146.921125,
+                "ratio": 1004.6653514734521
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 153870.041187,
+                "denominator_us": 146.904562,
+                "ratio": 1047.414995778007
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 153962.552187,
+                "denominator_us": 146.420875,
+                "ratio": 1051.5068441368076
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 153666.601125,
+                "denominator_us": 147.151812,
+                "ratio": 1044.2725715467234
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 153770.222375,
+                "denominator_us": 151.820563,
+                "ratio": 1012.8418663221531
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 153896.094562,
+                "denominator_us": 151.481688,
+                "ratio": 1015.9386034964175
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1023.8437035743498,
+              "denominator_first": 1034.7245844260945
+            }
+          }
+        }
+      },
+      "dense_control_gate": true,
+      "tree_TC_continuation_gate": false
+    },
+    "n65536_q32_r500": {
+      "shape": {
+        "n": 65536,
+        "q": 32,
+        "radius": 500
+      },
+      "phase_ms": {
+        "input_ms": {
+          "p10": 2405.7480105,
+          "median": 2533.55497,
+          "p90": 2759.967149
+        },
+        "norms_and_input_check_ms": {
+          "p10": 22.646021,
+          "median": 22.7346095,
+          "p90": 29.1378535
+        },
+        "oracle_ms": {
+          "p10": 93.1654385,
+          "median": 100.236498,
+          "p90": 119.8152475
+        },
+        "index_ms": {
+          "p10": 226.256791,
+          "median": 226.9215635,
+          "p90": 228.299889
+        },
+        "bridge_setup_ms": {
+          "p10": 2.4973875,
+          "median": 2.9810790000000003,
+          "p90": 3.8242145
+        }
+      },
+      "timing": {
+        "1": {
+          "O": {
+            "wall_us": {
+              "p10": 174008.38509999998,
+              "median": 181242.2595,
+              "p90": 181629.40089999998
+            },
+            "thread_cpu_us": {
+              "p10": 2178.6984,
+              "median": 2360.3375,
+              "p90": 2567.8624000000004
+            },
+            "event_us": {
+              "p10": 174015.3515625,
+              "median": 181249.578125,
+              "p90": 181638.66874999998
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 175023.8734,
+              "median": 175979.3785,
+              "p90": 176935.82669999998
+            },
+            "thread_cpu_us": {
+              "p10": 2205.3927000000003,
+              "median": 2301.175,
+              "p90": 2555.6305
+            },
+            "event_us": {
+              "p10": 175030.44843750002,
+              "median": 175987.875,
+              "p90": 176945.97187500002
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 175534.5037,
+              "median": 175958.606,
+              "p90": 176198.99829999998
+            },
+            "thread_cpu_us": {
+              "p10": 2170.4779,
+              "median": 2338.902,
+              "p90": 2519.5396
+            },
+            "event_us": {
+              "p10": 175543.8015625,
+              "median": 175970.3671875,
+              "p90": 176209.04218750002
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 150.71299999999997,
+              "median": 154.957,
+              "p90": 162.4862
+            },
+            "thread_cpu_us": {
+              "p10": 16.9883,
+              "median": 26.283,
+              "p90": 35.706399999999995
+            },
+            "event_us": {
+              "p10": 154.3008012,
+              "median": 158.97600599999998,
+              "p90": 168.8831982
+            }
+          }
+        },
+        "16": {
+          "O": {
+            "wall_us": {
+              "p10": 173681.6894183,
+              "median": 181272.619406,
+              "p90": 181404.60604369998
+            },
+            "thread_cpu_us": {
+              "p10": 2267.0214188,
+              "median": 2357.0319375,
+              "p90": 2472.6537808
+            },
+            "event_us": {
+              "p10": 173688.39072260002,
+              "median": 181280.47753899998,
+              "p90": 181412.88339849998
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 175920.73222540002,
+              "median": 175976.036594,
+              "p90": 176045.72451869998
+            },
+            "thread_cpu_us": {
+              "p10": 2240.6411129,
+              "median": 2317.3024375,
+              "p90": 2422.0799121
+            },
+            "event_us": {
+              "p10": 175927.4171874,
+              "median": 175983.713867,
+              "p90": 176052.9729493
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 175936.9038817,
+              "median": 175975.6093435,
+              "p90": 176038.6569188
+            },
+            "thread_cpu_us": {
+              "p10": 2233.0615183,
+              "median": 2377.9769690000003,
+              "p90": 2436.2525561999996
+            },
+            "event_us": {
+              "p10": 175944.0372067,
+              "median": 175983.5737305,
+              "p90": 176046.68134799998
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 142.5135817,
+              "median": 149.39881250000002,
+              "p90": 157.40573750000001
+            },
+            "thread_cpu_us": {
+              "p10": 16.113393300000002,
+              "median": 18.3125625,
+              "p90": 27.0314817
+            },
+            "event_us": {
+              "p10": 145.5348024,
+              "median": 152.3609995,
+              "p90": 162.178999
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "TC_vs_SIMT": {
+          "1": {
+            "marginal_ratio": 1.000118053333521,
+            "paired_geomean_ratio": 1.000132529339482,
+            "paired_ci95": [
+              0.9999673203814364,
+              1.0002693496698003
+            ],
+            "arithmetic_mean_ratio": 1.000132548323118,
+            "denominator_process_wins": 5,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 175977.95,
+                "denominator_us": 175943.2265,
+                "ratio": 1.0001973562761737
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 176001.101,
+                "denominator_us": 175965.822,
+                "ratio": 1.0002004877969997
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 175970.21600000001,
+                "denominator_us": 175955.538,
+                "ratio": 1.0000834188009473
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175938.9165,
+                "denominator_us": 175983.979,
+                "ratio": 0.9997439397594254
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175990.288,
+                "denominator_us": 175922.973,
+                "ratio": 1.0003826390541957
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175985.544,
+                "denominator_us": 175952.562,
+                "ratio": 1.0001874482509665
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0002211304431727,
+              "denominator_first": 1.0000439360842115
+            }
+          },
+          "16": {
+            "marginal_ratio": 1.000002427896125,
+            "paired_geomean_ratio": 0.9999910820449448,
+            "paired_ci95": [
+              0.9999346393215969,
+              1.0000338287542128
+            ],
+            "arithmetic_mean_ratio": 0.9999910840448956,
+            "denominator_process_wins": 4,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 175974.17825,
+                "denominator_us": 175976.580813,
+                "ratio": 0.9999863472571809
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175978.320938,
+                "denominator_us": 175978.239062,
+                "ratio": 1.000000465262071
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 175979.475375,
+                "denominator_us": 175976.143125,
+                "ratio": 1.0000189358053928
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175981.593813,
+                "denominator_us": 175969.769813,
+                "ratio": 1.0000671933594765
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175975.895813,
+                "denominator_us": 176000.322687,
+                "ratio": 0.999861211197644
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175974.223687,
+                "denominator_us": 175972.050188,
+                "ratio": 1.0000123513876078
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.9999554957755694,
+              "denominator_first": 1.0000266695807591
+            }
+          }
+        },
+        "dense_vs_tree_TC": {
+          "1": {
+            "marginal_ratio": 1135.531831411295,
+            "paired_geomean_ratio": 1126.1635259844381,
+            "paired_ci95": [
+              1106.8807343022058,
+              1145.1698365445652
+            ],
+            "arithmetic_mean_ratio": 1126.4272245523632,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 175943.2265,
+                "denominator_us": 154.07549999999998,
+                "ratio": 1141.9286421267498
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175965.822,
+                "denominator_us": 154.78199999999998,
+                "ratio": 1136.8623095708804
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 175955.538,
+                "denominator_us": 151.547,
+                "ratio": 1161.0624954634536
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175983.979,
+                "denominator_us": 161.309,
+                "ratio": 1090.9743349720102
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 175922.973,
+                "denominator_us": 155.8835,
+                "ratio": 1128.554163846719
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175952.562,
+                "denominator_us": 160.076,
+                "ratio": 1099.1814013343662
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1125.8280597769353,
+              "denominator_first": 1126.4990921517665
+            }
+          },
+          "16": {
+            "marginal_ratio": 1177.8916204136494,
+            "paired_geomean_ratio": 1179.6279848110396,
+            "paired_ci95": [
+              1147.579567240222,
+              1212.5569318412627
+            ],
+            "arithmetic_mean_ratio": 1180.349660937705,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 175976.580813,
+                "denominator_us": 150.005688,
+                "ratio": 1173.1327202272491
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 175978.239062,
+                "denominator_us": 148.439937,
+                "ratio": 1185.5181470603832
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 175976.143125,
+                "denominator_us": 142.34275,
+                "ratio": 1236.2845534809467
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 175969.769813,
+                "denominator_us": 143.905625,
+                "ratio": 1222.8137003887098
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 176000.322687,
+                "denominator_us": 157.7285,
+                "ratio": 1115.843507590575
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 175972.050188,
+                "denominator_us": 153.218313,
+                "ratio": 1148.5053368783665
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1168.9505077925237,
+              "denominator_first": 1190.4029924903668
+            }
+          }
+        },
+        "SIMT_vs_original": {
+          "1": {
+            "marginal_ratio": 1.0299062369969672,
+            "paired_geomean_ratio": 1.0231975994682367,
+            "paired_ci95": [
+              1.0091080482105221,
+              1.0309137194452376
+            ],
+            "arithmetic_mean_ratio": 1.0233171705618864,
+            "denominator_process_wins": 5,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 181257.2875,
+                "denominator_us": 175977.95,
+                "ratio": 1.0299999943174698
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 181009.285,
+                "denominator_us": 176001.101,
+                "ratio": 1.028455412901082
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 173987.739,
+                "denominator_us": 175970.21600000001,
+                "ratio": 0.9887340196252301
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 181437.3985,
+                "denominator_us": 175938.9165,
+                "ratio": 1.031252221562931
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 181573.152,
+                "denominator_us": 175990.288,
+                "ratio": 1.031722568690836
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 181219.144,
+                "denominator_us": 175985.544,
+                "ratio": 1.0297388062737698
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0293978497738179,
+              "denominator_first": 1.0170346943969208
+            }
+          },
+          "16": {
+            "marginal_ratio": 1.0300983185808414,
+            "paired_geomean_ratio": 1.022720751147544,
+            "paired_ci95": [
+              1.0081462856791967,
+              1.0304455974911184
+            ],
+            "arithmetic_mean_ratio": 1.0228497376030286,
+            "denominator_process_wins": 5,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 181281.206625,
+                "denominator_us": 175974.17825,
+                "ratio": 1.030157994927304
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 181042.378188,
+                "denominator_us": 175978.320938,
+                "ratio": 1.0287765971570109
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 173673.597125,
+                "denominator_us": 175979.475375,
+                "ratio": 0.9868968909863702
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 181371.731563,
+                "denominator_us": 175981.593813,
+                "ratio": 1.0306289858684177
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 181365.3235,
+                "denominator_us": 175975.895813,
+                "ratio": 1.030625942616181
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 181255.564563,
+                "denominator_us": 175974.223687,
+                "ratio": 1.0300120140628877
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0296486822030932,
+              "denominator_first": 1.015839434271705
+            }
+          }
+        },
+        "TC_vs_original": {
+          "1": {
+            "marginal_ratio": 1.0300278208614586,
+            "paired_geomean_ratio": 1.023333203170254,
+            "paired_ci95": [
+              1.0092091190623833,
+              1.0310573412944275
+            ],
+            "arithmetic_mean_ratio": 1.0234531182491986,
+            "denominator_process_wins": 5,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 181257.2875,
+                "denominator_us": 175943.2265,
+                "ratio": 1.0302032712808074
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 181009.285,
+                "denominator_us": 175965.822,
+                "ratio": 1.0286616056611266
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 173987.739,
+                "denominator_us": 175955.538,
+                "ratio": 0.9888164986316031
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 181437.3985,
+                "denominator_us": 175983.979,
+                "ratio": 1.0309881588709846
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 181573.152,
+                "denominator_us": 175922.973,
+                "ratio": 1.032117346038712
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 181219.144,
+                "denominator_us": 175952.562,
+                "ratio": 1.0299318290119583
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0168476795265742,
+              "denominator_first": 1.029860091924736
+            }
+          },
+          "16": {
+            "marginal_ratio": 1.0301008195525574,
+            "paired_geomean_ratio": 1.0227116305698514,
+            "paired_ci95": [
+              1.0081302933916223,
+              1.0304019206254007
+            ],
+            "arithmetic_mean_ratio": 1.0228404102725854,
+            "denominator_process_wins": 5,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 181281.206625,
+                "denominator_us": 175976.580813,
+                "ratio": 1.0301439304451363
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 181042.378188,
+                "denominator_us": 175978.239062,
+                "ratio": 1.0287770758077412
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 173673.597125,
+                "denominator_us": 175976.143125,
+                "ratio": 0.9869155786738407
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 181371.731563,
+                "denominator_us": 175969.769813,
+                "ratio": 1.0306982372923519
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 181365.3235,
+                "denominator_us": 176000.322687,
+                "ratio": 1.0304829032759284
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 181255.564563,
+                "denominator_us": 175972.050188,
+                "ratio": 1.0300247361405142
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0156394643652142,
+              "denominator_first": 1.0298330421382034
+            }
+          }
+        },
+        "dense_vs_original": {
+          "1": {
+            "marginal_ratio": 1169.6293778273973,
+            "paired_geomean_ratio": 1152.4405283391618,
+            "paired_ci95": [
+              1137.103460253887,
+              1167.395175266118
+            ],
+            "arithmetic_mean_ratio": 1152.6011405757674,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 181257.2875,
+                "denominator_us": 154.07549999999998,
+                "ratio": 1176.4186226882277
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 181009.285,
+                "denominator_us": 154.78199999999998,
+                "ratio": 1169.4466087787987
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 173987.739,
+                "denominator_us": 151.547,
+                "ratio": 1148.077751456644
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 181437.3985,
+                "denominator_us": 161.309,
+                "ratio": 1124.7816209882897
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 181573.152,
+                "denominator_us": 155.8835,
+                "ratio": 1164.8003284504134
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 181219.144,
+                "denominator_us": 160.076,
+                "ratio": 1132.0819110922312
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1152.047398527081,
+              "denominator_first": 1152.833792304621
+            }
+          },
+          "16": {
+            "marginal_ratio": 1213.34712353219,
+            "paired_geomean_ratio": 1206.4192598119253,
+            "paired_ci95": [
+              1178.3789305198384,
+              1233.218185683717
+            ],
+            "arithmetic_mean_ratio": 1206.9060698179815,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 181281.206625,
+                "denominator_us": 150.005688,
+                "ratio": 1208.495551348693
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 181042.378188,
+                "denominator_us": 148.439937,
+                "ratio": 1219.6338926497929
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 173673.597125,
+                "denominator_us": 142.34275,
+                "ratio": 1220.1084855041793
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 181371.731563,
+                "denominator_us": 143.905625,
+                "ratio": 1260.3519255275812
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 181365.3235,
+                "denominator_us": 157.7285,
+                "ratio": 1149.8576573035311
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 181255.564563,
+                "denominator_us": 153.218313,
+                "ratio": 1182.9889065741118
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1203.7641130684915,
+              "denominator_first": 1209.0802630218825
+            }
+          }
+        }
+      },
+      "dense_control_gate": true,
+      "tree_TC_continuation_gate": false
+    },
+    "n65536_q128_r300": {
+      "shape": {
+        "n": 65536,
+        "q": 128,
+        "radius": 300
+      },
+      "phase_ms": {
+        "input_ms": {
+          "p10": 2147.5829894999997,
+          "median": 2277.2512635,
+          "p90": 2601.5829139999996
+        },
+        "norms_and_input_check_ms": {
+          "p10": 22.615652,
+          "median": 22.664796,
+          "p90": 22.7156725
+        },
+        "oracle_ms": {
+          "p10": 369.1726465,
+          "median": 370.364993,
+          "p90": 384.8511965
+        },
+        "index_ms": {
+          "p10": 225.9315615,
+          "median": 226.40633300000002,
+          "p90": 226.67558100000002
+        },
+        "bridge_setup_ms": {
+          "p10": 2.5616045,
+          "median": 2.97907,
+          "p90": 3.319033
+        }
+      },
+      "timing": {
+        "1": {
+          "O": {
+            "wall_us": {
+              "p10": 534236.0109999999,
+              "median": 557759.4595,
+              "p90": 559999.4301
+            },
+            "thread_cpu_us": {
+              "p10": 2265.2142,
+              "median": 2468.87,
+              "p90": 2750.261
+            },
+            "event_us": {
+              "p10": 534243.6749999999,
+              "median": 557767.6875,
+              "p90": 560016.1875
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 191462.32460000002,
+              "median": 191965.3885,
+              "p90": 192470.70620000002
+            },
+            "thread_cpu_us": {
+              "p10": 2142.1299,
+              "median": 2332.8644999999997,
+              "p90": 2602.4191
+            },
+            "event_us": {
+              "p10": 191471.6484375,
+              "median": 191972.5859375,
+              "p90": 192479.07343750002
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 32080.108099999998,
+              "median": 191949.032,
+              "p90": 192452.5651
+            },
+            "thread_cpu_us": {
+              "p10": 2179.3379,
+              "median": 2362.3105,
+              "p90": 2672.2428000000004
+            },
+            "event_us": {
+              "p10": 32087.7546874,
+              "median": 191955.90625,
+              "p90": 192462.1
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 368.5846,
+              "median": 397.7685,
+              "p90": 405.7642
+            },
+            "thread_cpu_us": {
+              "p10": 19.5806,
+              "median": 22.8975,
+              "p90": 27.46560000000001
+            },
+            "event_us": {
+              "p10": 371.44640200000003,
+              "median": 401.520004,
+              "p90": 410.27520130000005
+            }
+          }
+        },
+        "16": {
+          "O": {
+            "wall_us": {
+              "p10": 534942.64775,
+              "median": 535796.1452815,
+              "p90": 558478.6103630001
+            },
+            "thread_cpu_us": {
+              "p10": 2296.0045062,
+              "median": 2396.3623125,
+              "p90": 2648.3754812
+            },
+            "event_us": {
+              "p10": 534950.9839845999,
+              "median": 535805.470703,
+              "p90": 558485.4445315
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 191925.64573750002,
+              "median": 191980.806594,
+              "p90": 192043.64803699998
+            },
+            "thread_cpu_us": {
+              "p10": 2253.3759933,
+              "median": 2342.4179999999997,
+              "p90": 2467.8477692
+            },
+            "event_us": {
+              "p10": 191933.9487306,
+              "median": 191989.63134750002,
+              "p90": 192051.8865231
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 63296.6474442,
+              "median": 191978.88612500002,
+              "p90": 192026.8595875
+            },
+            "thread_cpu_us": {
+              "p10": 2262.6063567,
+              "median": 2446.1055939999997,
+              "p90": 2581.0685621000002
+            },
+            "event_us": {
+              "p10": 63305.2110105,
+              "median": 191986.9257815,
+              "p90": 192036.3719728
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 363.26190579999997,
+              "median": 399.2663745,
+              "p90": 401.51233120000006
+            },
+            "thread_cpu_us": {
+              "p10": 19.1283125,
+              "median": 26.160844,
+              "p90": 27.2553808
+            },
+            "event_us": {
+              "p10": 366.31280530000004,
+              "median": 404.06199749999996,
+              "p90": 405.9185975
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "TC_vs_SIMT": {
+          "1": {
+            "marginal_ratio": 1.0000852127245945,
+            "paired_geomean_ratio": 1.3497832433764778,
+            "paired_ci95": [
+              0.9997915792594586,
+              2.4594138229079476
+            ],
+            "arithmetic_mean_ratio": 1.8413794298984265,
+            "denominator_process_wins": 3,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 191972.668,
+                "denominator_us": 191993.68300000002,
+                "ratio": 0.9998905432737596
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 191941.0545,
+                "denominator_us": 31734.148999999998,
+                "ratio": 6.048407174870201
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191997.9465,
+                "denominator_us": 191978.31449999998,
+                "ratio": 1.0001022615499628
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 192065.3775,
+                "denominator_us": 191969.7365,
+                "ratio": 1.000498208737188
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191972.87,
+                "denominator_us": 192006.4165,
+                "ratio": 0.9998252844846984
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 191946.501,
+                "denominator_us": 192032.31900000002,
+                "ratio": 0.999553106474749
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.999939356113817,
+              "denominator_first": 1.8220252987947665
+            }
+          },
+          "16": {
+            "marginal_ratio": 1.0000100035427788,
+            "paired_geomean_ratio": 1.2258451124993353,
+            "paired_ci95": [
+              0.9998974001977065,
+              1.8422588253401575
+            ],
+            "arithmetic_mean_ratio": 1.3989519983116043,
+            "denominator_process_wins": 2,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 192015.724188,
+                "denominator_us": 191989.013375,
+                "ratio": 1.0001391267788216
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 191979.749938,
+                "denominator_us": 56565.913125,
+                "ratio": 3.3939123286803654
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191990.118125,
+                "denominator_us": 191992.607187,
+                "ratio": 0.9999870356362339
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 191981.86325,
+                "denominator_us": 192018.736688,
+                "ratio": 0.9998079695834062
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191970.128312,
+                "denominator_us": 191986.628312,
+                "ratio": 0.999914056514534
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 191967.58025,
+                "denominator_us": 191976.896375,
+                "ratio": 0.999951472676265
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1.0000134019147935,
+              "denominator_first": 1.5026761011014391
+            }
+          }
+        },
+        "dense_vs_tree_TC": {
+          "1": {
+            "marginal_ratio": 482.5646877517953,
+            "paired_geomean_ratio": 361.1253939343779,
+            "paired_ci95": [
+              194.3718979478881,
+              502.01753571625926
+            ],
+            "arithmetic_mean_ratio": 421.8384255941751,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 191993.68300000002,
+                "denominator_us": 398.839,
+                "ratio": 481.3814170630255
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 31734.148999999998,
+                "denominator_us": 405.3735,
+                "ratio": 78.28372846276335
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191978.31449999998,
+                "denominator_us": 398.1705,
+                "ratio": 482.151024498299
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 191969.7365,
+                "denominator_us": 397.6615,
+                "ratio": 482.7465985517834
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 192006.4165,
+                "denominator_us": 367.2895,
+                "ratio": 522.7658740584743
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 192032.31900000002,
+                "denominator_us": 397.0055,
+                "ratio": 483.7019109307051
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 263.17595567978907,
+              "denominator_first": 495.5298815478941
+            }
+          },
+          "16": {
+            "marginal_ratio": 480.8290865100137,
+            "paired_geomean_ratio": 398.0558053885465,
+            "paired_ci95": [
+              260.26021403560657,
+              504.047766946969
+            ],
+            "arithmetic_mean_ratio": 432.09098226849454,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 191989.013375,
+                "denominator_us": 400.539562,
+                "ratio": 479.32596824230814
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 56565.913125,
+                "denominator_us": 401.552437,
+                "ratio": 140.86806083809174
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191992.607187,
+                "denominator_us": 399.385437,
+                "ratio": 480.72009993444
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 192018.736688,
+                "denominator_us": 399.060437,
+                "ratio": 481.1770821771541
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191986.628312,
+                "denominator_us": 363.025375,
+                "ratio": 528.8518145928504
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 191976.896375,
+                "denominator_us": 398.62075,
+                "ratio": 481.602867826123
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 319.1862587163493,
+              "denominator_first": 496.4136765810226
+            }
+          }
+        },
+        "SIMT_vs_original": {
+          "1": {
+            "marginal_ratio": 2.905520958013741,
+            "paired_geomean_ratio": 2.867853064680562,
+            "paired_ci95": [
+              2.8262800042382175,
+              2.910009675007008
+            ],
+            "arithmetic_mean_ratio": 2.868456982356342,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 558715.361,
+                "denominator_us": 191972.668,
+                "ratio": 2.9103901447053913
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 558314.0555,
+                "denominator_us": 191941.0545,
+                "ratio": 2.9087787235221216
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 558747.7069999999,
+                "denominator_us": 191997.9465,
+                "ratio": 2.910175432527347
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 535037.4565,
+                "denominator_us": 192065.3775,
+                "ratio": 2.785704865000981
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 534748.921,
+                "denominator_us": 191972.87,
+                "ratio": 2.7855442334117315
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 558592.821,
+                "denominator_us": 191946.501,
+                "ratio": 2.9101484949704814
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 2.9097723678743765,
+              "denominator_first": 2.826537667139181
+            }
+          },
+          "16": {
+            "marginal_ratio": 2.7908839158833145,
+            "paired_geomean_ratio": 2.8053894589999895,
+            "paired_ci95": [
+              2.7889876877917383,
+              2.824650855171248
+            ],
+            "arithmetic_mean_ratio": 2.8054827020947433,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 546569.839625,
+                "denominator_us": 192015.724188,
+                "ratio": 2.846484796681864
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 536547.581187,
+                "denominator_us": 191979.749938,
+                "ratio": 2.7948134183958384
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 535870.686813,
+                "denominator_us": 191990.118125,
+                "ratio": 2.791136814990175
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 535052.76375,
+                "denominator_us": 191981.86325,
+                "ratio": 2.7869964104538925
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 534950.514875,
+                "denominator_us": 191970.128312,
+                "ratio": 2.786634147608477
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 542659.83475,
+                "denominator_us": 191967.58025,
+                "ratio": 2.826830624438212
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 2.822629169475093,
+              "denominator_first": 2.7882550431276902
+            }
+          }
+        },
+        "TC_vs_original": {
+          "1": {
+            "marginal_ratio": 2.9057685453709396,
+            "paired_geomean_ratio": 3.8709800111717008,
+            "paired_ci95": [
+              2.8264645816342995,
+              7.103989530787813
+            ],
+            "arithmetic_mean_ratio": 5.315836827922817,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 558715.361,
+                "denominator_us": 191993.68300000002,
+                "ratio": 2.9100715829280697
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 558314.0555,
+                "denominator_us": 31734.148999999998,
+                "ratio": 17.593478101460985
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 558747.7069999999,
+                "denominator_us": 191978.31449999998,
+                "ratio": 2.910473031577741
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 535037.4565,
+                "denominator_us": 191969.7365,
+                "ratio": 2.787092727503952
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 534748.921,
+                "denominator_us": 192006.4165,
+                "ratio": 2.785057555615596
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 558592.821,
+                "denominator_us": 192032.31900000002,
+                "ratio": 2.9088479684505604
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 2.8679207227382038,
+              "denominator_first": 5.2248606902160555
+            }
+          },
+          "16": {
+            "marginal_ratio": 2.7909118346099575,
+            "paired_geomean_ratio": 3.4389729569722913,
+            "paired_ci95": [
+              2.7938900282502996,
+              5.171801216980185
+            ],
+            "arithmetic_mean_ratio": 3.9204804147528907,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 546569.839625,
+                "denominator_us": 191989.013375,
+                "ratio": 2.8468808189425907
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 536547.581187,
+                "denominator_us": 56565.913125,
+                "ratio": 9.485351717054952
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 535870.686813,
+                "denominator_us": 191992.607187,
+                "ratio": 2.7911006296771848
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 535052.76375,
+                "denominator_us": 192018.736688,
+                "ratio": 2.7864612223721474
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 534950.514875,
+                "denominator_us": 191986.628312,
+                "ratio": 2.7863946545571125
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 542659.83475,
+                "denominator_us": 191976.896375,
+                "ratio": 2.826693445913356
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 2.8079915924654633,
+              "denominator_first": 4.211741598700034
+            }
+          }
+        },
+        "dense_vs_original": {
+          "1": {
+            "marginal_ratio": 1402.221290775916,
+            "paired_geomean_ratio": 1397.9091814464834,
+            "paired_ci95": [
+              1372.4698933441193,
+              1424.918836299281
+            ],
+            "arithmetic_mean_ratio": 1398.3054835111507,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 558715.361,
+                "denominator_us": 398.839,
+                "ratio": 1400.8543823447558
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 558314.0555,
+                "denominator_us": 405.3735,
+                "ratio": 1377.283062410345
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 558747.7069999999,
+                "denominator_us": 398.1705,
+                "ratio": 1403.287553949878
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 535037.4565,
+                "denominator_us": 397.6615,
+                "ratio": 1345.4595340509452
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 534748.921,
+                "denominator_us": 367.2895,
+                "ratio": 1455.9330473645448
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 558592.821,
+                "denominator_us": 397.0055,
+                "ratio": 1407.0153209464354
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1403.7167998982457,
+              "denominator_first": 1392.1255909411589
+            }
+          },
+          "16": {
+            "marginal_ratio": 1341.9515879654923,
+            "paired_geomean_ratio": 1368.9031500970368,
+            "paired_ci95": [
+              1342.5711609790026,
+              1411.9584003968548
+            ],
+            "arithmetic_mean_ratio": 1369.7033335361239,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 546569.839625,
+                "denominator_us": 400.539562,
+                "ratio": 1364.5839050101124
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 536547.581187,
+                "denominator_us": 401.552437,
+                "ratio": 1336.183102748795
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 535870.686813,
+                "denominator_us": 399.385437,
+                "ratio": 1341.7381736254945
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 535052.76375,
+                "denominator_us": 399.060437,
+                "ratio": 1340.781280580816
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 534950.514875,
+                "denominator_us": 363.025375,
+                "ratio": 1473.5898692343476
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 542659.83475,
+                "denominator_us": 398.62075,
+                "ratio": 1361.343670017178
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1355.85089551176,
+              "denominator_first": 1382.0810537122495
+            }
+          }
+        }
+      },
+      "dense_control_gate": true,
+      "tree_TC_continuation_gate": false
+    },
+    "n65536_q128_r500": {
+      "shape": {
+        "n": 65536,
+        "q": 128,
+        "radius": 500
+      },
+      "phase_ms": {
+        "input_ms": {
+          "p10": 2300.038453,
+          "median": 2682.6866529999998,
+          "p90": 2787.3746455
+        },
+        "norms_and_input_check_ms": {
+          "p10": 22.689201,
+          "median": 25.902594,
+          "p90": 29.146394
+        },
+        "oracle_ms": {
+          "p10": 370.62667150000004,
+          "median": 429.281033,
+          "p90": 475.0616835
+        },
+        "index_ms": {
+          "p10": 222.34385550000002,
+          "median": 227.84891800000003,
+          "p90": 236.752337
+        },
+        "bridge_setup_ms": {
+          "p10": 2.2511015,
+          "median": 2.8758670000000004,
+          "p90": 3.3229965
+        }
+      },
+      "timing": {
+        "1": {
+          "O": {
+            "wall_us": {
+              "p10": 639536.7335,
+              "median": 643452.763,
+              "p90": 668674.9723
+            },
+            "thread_cpu_us": {
+              "p10": 2229.8176,
+              "median": 2430.2555,
+              "p90": 10196.933100000002
+            },
+            "event_us": {
+              "p10": 639550.84375,
+              "median": 643466.28125,
+              "p90": 668682.15
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 40919.9861,
+              "median": 191937.9625,
+              "p90": 192618.18500000003
+            },
+            "thread_cpu_us": {
+              "p10": 2176.6387,
+              "median": 2368.623,
+              "p90": 11410.1244
+            },
+            "event_us": {
+              "p10": 40924.6249998,
+              "median": 191946.625,
+              "p90": 192629.60625
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 40447.170600000005,
+              "median": 191783.1895,
+              "p90": 192926.41650000002
+            },
+            "thread_cpu_us": {
+              "p10": 2338.8642,
+              "median": 2650.8325,
+              "p90": 14672.627400000001
+            },
+            "event_us": {
+              "p10": 40451.7492192,
+              "median": 191794.1015625,
+              "p90": 192935.1859375
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 367.489,
+              "median": 395.06600000000003,
+              "p90": 400.8931
+            },
+            "thread_cpu_us": {
+              "p10": 19.1857,
+              "median": 22.585,
+              "p90": 25.899300000000004
+            },
+            "event_us": {
+              "p10": 370.6880126,
+              "median": 398.5759885,
+              "p90": 405.09121120000003
+            }
+          }
+        },
+        "16": {
+          "O": {
+            "wall_us": {
+              "p10": 639717.2511503999,
+              "median": 640032.0287810001,
+              "p90": 667606.0539625001
+            },
+            "thread_cpu_us": {
+              "p10": 2386.1632499999996,
+              "median": 2488.2459065000003,
+              "p90": 2671.4820192
+            },
+            "event_us": {
+              "p10": 639732.8363279,
+              "median": 640044.421875,
+              "p90": 667619.1261716001
+            }
+          },
+          "S": {
+            "wall_us": {
+              "p10": 189501.8322688,
+              "median": 191977.24384349998,
+              "p90": 191999.118725
+            },
+            "thread_cpu_us": {
+              "p10": 2204.0551620999995,
+              "median": 2276.869219,
+              "p90": 2539.0468625
+            },
+            "event_us": {
+              "p10": 189510.9112183,
+              "median": 191986.6640625,
+              "p90": 192009.1044919
+            }
+          },
+          "T": {
+            "wall_us": {
+              "p10": 48019.8514563,
+              "median": 191975.15437499998,
+              "p90": 192005.5867375
+            },
+            "thread_cpu_us": {
+              "p10": 2240.3892874999997,
+              "median": 2584.477,
+              "p90": 14648.588638000001
+            },
+            "event_us": {
+              "p10": 48024.540942600004,
+              "median": 191984.30322250002,
+              "p90": 192013.90458960002
+            }
+          },
+          "D": {
+            "wall_us": {
+              "p10": 365.1767438,
+              "median": 393.78112550000003,
+              "p90": 399.3651438
+            },
+            "thread_cpu_us": {
+              "p10": 20.234337,
+              "median": 25.298125,
+              "p90": 27.020599999999998
+            },
+            "event_us": {
+              "p10": 368.4980002,
+              "median": 397.40399449999995,
+              "p90": 403.6960038
+            }
+          }
+        }
+      },
+      "comparisons": {
+        "TC_vs_SIMT": {
+          "1": {
+            "marginal_ratio": 1.000807020679985,
+            "paired_geomean_ratio": 1.2824148011578576,
+            "paired_ci95": [
+              0.9999359725577733,
+              2.1010969152280303
+            ],
+            "arithmetic_mean_ratio": 1.568141737714364,
+            "denominator_process_wins": 5,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 191971.77049999998,
+                "denominator_us": 192080.1725,
+                "ratio": 0.9994356419062462
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 191970.39549999998,
+                "denominator_us": 191942.54200000002,
+                "ratio": 1.0001451137392978
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191995.31900000002,
+                "denominator_us": 191955.7235,
+                "ratio": 1.0002062741307114
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 40621.7845,
+                "denominator_us": 40157.7075,
+                "ratio": 1.0115563618764842
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191957.6755,
+                "denominator_us": 191919.3035,
+                "ratio": 1.0001999381995466
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 191963.1265,
+                "denominator_us": 43654.701,
+                "ratio": 4.397307096433899
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.9999472192829418,
+              "denominator_first": 1.644674529329733
+            }
+          },
+          "16": {
+            "marginal_ratio": 1.000010884056881,
+            "paired_geomean_ratio": 1.3258301971164475,
+            "paired_ci95": [
+              0.9999717748634768,
+              2.0141639914617686
+            ],
+            "arithmetic_mean_ratio": 1.5092136464500985,
+            "denominator_process_wins": 3,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 191979.249812,
+                "denominator_us": 191988.354437,
+                "ratio": 0.9999525772017438
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 191980.776062,
+                "denominator_us": 191982.994937,
+                "ratio": 0.9999884423357353
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191976.092813,
+                "denominator_us": 191983.899375,
+                "ratio": 0.9999593374130569
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 168306.881938,
+                "denominator_us": 48005.266563,
+                "ratio": 3.5060086942152786
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191981.693375,
+                "denominator_us": 191979.462813,
+                "ratio": 1.000011618753211
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 191978.150563,
+                "denominator_us": 123907.936687,
+                "ratio": 1.5493612087815656
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 0.9999745107746134,
+              "denominator_first": 1.7578705183436807
+            }
+          }
+        },
+        "dense_vs_tree_TC": {
+          "1": {
+            "marginal_ratio": 485.44594953754563,
+            "paired_geomean_ratio": 297.9228235696016,
+            "paired_ci95": [
+              178.10116845171962,
+              496.104271269913
+            ],
+            "arithmetic_mean_ratio": 365.0141770012387,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 192080.1725,
+                "denominator_us": 400.9255,
+                "ratio": 479.09193229166016
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 191942.54200000002,
+                "denominator_us": 394.4285,
+                "ratio": 486.6345662141555
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191955.7235,
+                "denominator_us": 366.86,
+                "ratio": 523.2397195115302
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 40157.7075,
+                "denominator_us": 373.7885,
+                "ratio": 107.43430442616612
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191919.3035,
+                "denominator_us": 397.1105,
+                "ratio": 483.28942070280186
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 43654.701,
+                "denominator_us": 395.4405,
+                "ratio": 110.39511886111818
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 295.25044512823445,
+              "denominator_first": 300.61939031161893
+            }
+          },
+          "16": {
+            "marginal_ratio": 487.5174099094802,
+            "paired_geomean_ratio": 365.66869081739827,
+            "paired_ci95": [
+              232.51669865280735,
+              498.30097762617567
+            ],
+            "arithmetic_mean_ratio": 403.3023607436602,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 191988.354437,
+                "denominator_us": 399.991938,
+                "ratio": 479.9805601006888
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 191982.994937,
+                "denominator_us": 390.95125,
+                "ratio": 491.06632844120594
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 191983.899375,
+                "denominator_us": 364.820063,
+                "ratio": 526.2427120818736
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 48005.266563,
+                "denominator_us": 374.66975,
+                "ratio": 128.12688124141326
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 191979.462813,
+                "denominator_us": 397.596063,
+                "ratio": 482.8505125640542
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 123907.936687,
+                "denominator_us": 397.718062,
+                "ratio": 311.5471700327254
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 418.7574421552591,
+              "denominator_first": 319.31036438639404
+            }
+          }
+        },
+        "SIMT_vs_original": {
+          "1": {
+            "marginal_ratio": 3.3523996744521036,
+            "paired_geomean_ratio": 4.414003960629314,
+            "paired_ci95": [
+              3.380329706462511,
+              7.355375114456322
+            ],
+            "arithmetic_mean_ratio": 5.478306513511371,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 668001.193,
+                "denominator_us": 191971.77049999998,
+                "ratio": 3.479684493507341
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 639659.895,
+                "denominator_us": 191970.39549999998,
+                "ratio": 3.332075726228319
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 639598.491,
+                "denominator_us": 191995.31900000002,
+                "ratio": 3.3313233589825177
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 639961.208,
+                "denominator_us": 40621.7845,
+                "ratio": 15.75413822600531
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 667969.574,
+                "denominator_us": 191957.6755,
+                "ratio": 3.4797752799418533
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 670496.87,
+                "denominator_us": 191963.1265,
+                "ratio": 3.492841996402887
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 3.434086447366459,
+              "denominator_first": 5.673541206102361
+            }
+          },
+          "16": {
+            "marginal_ratio": 3.333895288666373,
+            "paired_geomean_ratio": 3.4331432382948277,
+            "paired_ci95": [
+              3.3326721117113904,
+              3.5910293628475656
+            ],
+            "arithmetic_mean_ratio": 3.437478018198535,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 640114.045688,
+                "denominator_us": 191979.249812,
+                "ratio": 3.334287670750074
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 639695.052312,
+                "denominator_us": 191980.776062,
+                "ratio": 3.332078687427595
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 639745.950312,
+                "denominator_us": 191976.092813,
+                "ratio": 3.3324251001147496
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 642010.49875,
+                "denominator_us": 168306.881938,
+                "ratio": 3.8145231576834777
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 667868.743375,
+                "denominator_us": 191981.693375,
+                "ratio": 3.478814732977922
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 639813.0235,
+                "denominator_us": 191978.150563,
+                "ratio": 3.332738760237392
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 3.333034910897038,
+              "denominator_first": 3.5362583380434303
+            }
+          }
+        },
+        "TC_vs_original": {
+          "1": {
+            "marginal_ratio": 3.3551051303169612,
+            "paired_geomean_ratio": 5.660584011480438,
+            "paired_ci95": [
+              3.3808728380542004,
+              9.52753506968352
+            ],
+            "arithmetic_mean_ratio": 7.486343192042817,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 668001.193,
+                "denominator_us": 192080.1725,
+                "ratio": 3.4777207053997206
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 639659.895,
+                "denominator_us": 191942.54200000002,
+                "ratio": 3.332559256196576
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 639598.491,
+                "denominator_us": 191955.7235,
+                "ratio": 3.33201052481251
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 639961.208,
+                "denominator_us": 40157.7075,
+                "ratio": 15.93619874839718
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 667969.574,
+                "denominator_us": 191919.3035,
+                "ratio": 3.4804710199461515
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 670496.87,
+                "denominator_us": 43654.701,
+                "ratio": 15.359098897504762
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 3.4293596149293455,
+              "denominator_first": 9.343497022457392
+            }
+          },
+          "16": {
+            "marginal_ratio": 3.333931574972331,
+            "paired_geomean_ratio": 4.55176497635743,
+            "paired_ci95": [
+              3.3565062354514823,
+              7.181907633068094
+            ],
+            "arithmetic_mean_ratio": 5.3357803304458145,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 640114.045688,
+                "denominator_us": 191988.354437,
+                "ratio": 3.334129549498536
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 639695.052312,
+                "denominator_us": 191982.994937,
+                "ratio": 3.332040176380822
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 639745.950312,
+                "denominator_us": 191983.899375,
+                "ratio": 3.332289595089385
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 642010.49875,
+                "denominator_us": 48005.266563,
+                "ratio": 13.37375135512379
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 667868.743375,
+                "denominator_us": 191979.462813,
+                "ratio": 3.4788551524677715
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 639813.0235,
+                "denominator_us": 123907.936687,
+                "ratio": 5.163616154114582
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 3.381067579854892,
+              "denominator_first": 6.12781729754226
+            }
+          }
+        },
+        "dense_vs_original": {
+          "1": {
+            "marginal_ratio": 1628.7221957850081,
+            "paired_geomean_ratio": 1686.4171717531954,
+            "paired_ci95": [
+              1656.0355626342778,
+              1716.9202791151251
+            ],
+            "arithmetic_mean_ratio": 1686.8442520464641,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 668001.193,
+                "denominator_us": 400.9255,
+                "ratio": 1666.1479327206675
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 639659.895,
+                "denominator_us": 394.4285,
+                "ratio": 1621.7385280221893
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 639598.491,
+                "denominator_us": 366.86,
+                "ratio": 1743.4402524123643
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 639961.208,
+                "denominator_us": 373.7885,
+                "ratio": 1712.09442773119
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 667969.574,
+                "denominator_us": 397.1105,
+                "ratio": 1682.0748230026657
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 670496.87,
+                "denominator_us": 395.4405,
+                "ratio": 1695.5695483897073
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1701.4221349033648,
+              "denominator_first": 1671.5445384431737
+            }
+          },
+          "16": {
+            "marginal_ratio": 1625.349686245945,
+            "paired_geomean_ratio": 1664.4379398131075,
+            "paired_ci95": [
+              1622.1008986955032,
+              1709.6260753683987
+            ],
+            "arithmetic_mean_ratio": 1665.3628772162488,
+            "denominator_process_wins": 6,
+            "processes": [
+              {
+                "process": 0,
+                "order": "OSTD",
+                "numerator_us": 640114.045688,
+                "denominator_us": 399.991938,
+                "ratio": 1600.3173686165646
+              },
+              {
+                "process": 1,
+                "order": "TDOS",
+                "numerator_us": 639695.052312,
+                "denominator_us": 390.95125,
+                "ratio": 1636.2527356339183
+              },
+              {
+                "process": 2,
+                "order": "SODT",
+                "numerator_us": 639745.950312,
+                "denominator_us": 364.820063,
+                "ratio": 1753.5931139620466
+              },
+              {
+                "process": 3,
+                "order": "DTSO",
+                "numerator_us": 642010.49875,
+                "denominator_us": 374.66975,
+                "ratio": 1713.5370516301357
+              },
+              {
+                "process": 4,
+                "order": "DSOT",
+                "numerator_us": 667868.743375,
+                "denominator_us": 397.596063,
+                "ratio": 1679.7669935051645
+              },
+              {
+                "process": 5,
+                "order": "TOSD",
+                "numerator_us": 639813.0235,
+                "denominator_us": 397.718062,
+                "ratio": 1608.709999949663
+              }
+            ],
+            "precedence_ratio": {
+              "numerator_first": 1652.7388548791232,
+              "denominator_first": 1676.2198379440413
+            }
+          }
+        }
+      },
+      "dense_control_gate": true,
+      "tree_TC_continuation_gate": false
+    }
+  },
+  "runs": {
+    "check_n2000_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "862abcf876a567d505c04521ec45a04efb2443f55abeb26b37c6d15dfff52515",
+      "wall_s": 0.8276572227478027,
+      "user_s": 0.092692,
+      "system_s": 0.43595799999999996,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "check_n65536_q128_r300": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 8.59182357788086,
+      "user_s": 3.290018,
+      "system_s": 0.410876,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "check_n65536_q128_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 8.885748386383057,
+      "user_s": 3.061986000000001,
+      "system_s": 0.40096299999999996,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "check_n65536_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 5.536789417266846,
+      "user_s": 2.937268,
+      "system_s": 0.39290800000000004,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "check_n65536_q32_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 6.3374316692352295,
+      "user_s": 2.9363399999999995,
+      "system_s": 0.3895050000000002,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "initcheck_n2000_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "862abcf876a567d505c04521ec45a04efb2443f55abeb26b37c6d15dfff52515",
+      "wall_s": 1.328099250793457,
+      "user_s": 0.3908539999999999,
+      "system_s": 0.699152,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "memcheck_n2000_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "862abcf876a567d505c04521ec45a04efb2443f55abeb26b37c6d15dfff52515",
+      "wall_s": 1.1309845447540283,
+      "user_s": 0.365861,
+      "system_s": 0.44256299999999993,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "memcheck_n65536_q128_r300": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 17.595488786697388,
+      "user_s": 3.0063379999999995,
+      "system_s": 0.48372400000000226,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "memcheck_n65536_q128_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 19.004263162612915,
+      "user_s": 2.914718999999998,
+      "system_s": 0.46861200000000025,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "memcheck_n65536_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 10.242085218429565,
+      "user_s": 3.294865999999999,
+      "system_s": 0.4780770000000025,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "memcheck_n65536_q32_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 10.592074871063232,
+      "user_s": 2.867161000000003,
+      "system_s": 0.4822430000000004,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "profile_n65536_q128_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 15.157546520233154,
+      "user_s": 0.03843299999999772,
+      "system_s": 1.493218000000006,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "racecheck_n2000_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "862abcf876a567d505c04521ec45a04efb2443f55abeb26b37c6d15dfff52515",
+      "wall_s": 5.039122819900513,
+      "user_s": 33.991954,
+      "system_s": 21.780413,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= RACECHECK SUMMARY: 0 hazards displayed (0 errors, 0 warnings)"
+      ]
+    },
+    "synccheck_n2000_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "862abcf876a567d505c04521ec45a04efb2443f55abeb26b37c6d15dfff52515",
+      "wall_s": 1.025796890258789,
+      "user_s": 0.36905299999999996,
+      "system_s": 0.43786099999999994,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "synccheck_n65536_q128_r300": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 7.238025903701782,
+      "user_s": 2.881031,
+      "system_s": 0.4560159999999982,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "synccheck_n65536_q128_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 7.6429057121276855,
+      "user_s": 2.8204370000000054,
+      "system_s": 0.4573830000000001,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "synccheck_n65536_q32_r300": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 5.634821653366089,
+      "user_s": 3.108218000000001,
+      "system_s": 0.46108300000000213,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "synccheck_n65536_q32_r500": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 4.684160947799683,
+      "user_s": 2.641621999999998,
+      "system_s": 0.4579909999999998,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": [
+        "========= ERROR SUMMARY: 0 errors"
+      ]
+    },
+    "timing_n65536_q128_r300_0": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 103.66905808448792,
+      "user_s": 3.3534950000000023,
+      "system_s": 1.177054,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r300_1": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 89.9106342792511,
+      "user_s": 2.892133000000001,
+      "system_s": 1.1431439999999995,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r300_2": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 102.32593321800232,
+      "user_s": 3.2770049999999955,
+      "system_s": 1.1999870000000001,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r300_3": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 101.82023549079895,
+      "user_s": 2.853895999999999,
+      "system_s": 1.2012189999999983,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r300_4": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 101.6705207824707,
+      "user_s": 2.879219000000006,
+      "system_s": 1.2428139999999992,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r300_5": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 103.02084946632385,
+      "user_s": 2.9661310000000043,
+      "system_s": 1.1705000000000005,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r500_0": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 114.63384199142456,
+      "user_s": 3.4571420000000046,
+      "system_s": 1.2175440000000002,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r500_1": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 113.42629933357239,
+      "user_s": 3.4776310000000024,
+      "system_s": 1.2905890000000007,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r500_2": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 112.8819329738617,
+      "user_s": 2.8936330000000012,
+      "system_s": 1.2493090000000002,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r500_3": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 89.55128812789917,
+      "user_s": 2.8375449999999915,
+      "system_s": 2.6785700000000006,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r500_4": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 116.1315016746521,
+      "user_s": 3.304378,
+      "system_s": 1.2075429999999976,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q128_r500_5": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 103.46390104293823,
+      "user_s": 3.545068999999998,
+      "system_s": 2.8263389999999973,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r300_0": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 55.901654958724976,
+      "user_s": 3.009825,
+      "system_s": 1.0740120000000002,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r300_1": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 57.506491899490356,
+      "user_s": 3.2305790000000005,
+      "system_s": 1.0437720000000001,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r300_2": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 55.85856246948242,
+      "user_s": 3.0231790000000007,
+      "system_s": 1.016397,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r300_3": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 57.15733098983765,
+      "user_s": 2.6718589999999995,
+      "system_s": 1.1169250000000002,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r300_4": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 57.51350116729736,
+      "user_s": 3.220217999999999,
+      "system_s": 1.07695,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r300_5": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 57.5103394985199,
+      "user_s": 3.2178010000000015,
+      "system_s": 1.0576670000000004,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r500_0": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 60.76127743721008,
+      "user_s": 3.280034999999998,
+      "system_s": 1.0272200000000007,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r500_1": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 60.35972785949707,
+      "user_s": 3.0273649999999996,
+      "system_s": 1.0175169999999998,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r500_2": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 59.52001905441284,
+      "user_s": 2.824805999999999,
+      "system_s": 1.2287150000000011,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r500_3": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 60.116138219833374,
+      "user_s": 2.9124230000000004,
+      "system_s": 1.132441,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r500_4": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 60.471243143081665,
+      "user_s": 3.254951000000002,
+      "system_s": 1.14513,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    },
+    "timing_n65536_q32_r500_5": {
+      "exit_code": 0,
+      "binary_sha256": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477",
+      "wall_s": 60.01539421081543,
+      "user_s": 2.7885009999999966,
+      "system_s": 1.1226310000000002,
+      "post_clear": true,
+      "correct": true,
+      "sanitizer_summaries": []
+    }
+  },
+  "files": {
+    "logs/artifacts.sha256": "c8aa57b92522a383e59a8326a13884e9db97b7dad2a98a956f9477f4d9816670",
+    "logs/bench5.sass": "d3e52bfa8c6f1ae670ce8e2e7f29a49b71e3266f0984298ff55d06ec986e74fd",
+    "logs/build3.log": "2d4f8eb7aeeb2fd9765252c51f3cc9d0c75ff5de6e38b003452b86b3bd8897fe",
+    "logs/build5.log": "8084d2daf5fff511b940b4b0389b84fe4507f8741dcc469af8da06809cc3790b",
+    "logs/gcc.txt": "59d1cbef41d4ae78d5063d525b7aa13d18dc0493ea00537efc19b2ee398cb5a8",
+    "logs/gpu-properties.txt": "fe3172244957021c2730a854342b64953b70e12df9f079ad97d86534d501bfdc",
+    "logs/nsys-stats.log": "cba6d9c461b0684e36aadf1963b460480b31e41e6d4ab8cd359609ba219e4f72",
+    "logs/nvcc.txt": "d51da6fa301a0c63b030c6a9e45b942c5fe2228e63c0ec276a445943cf0bc6f6",
+    "runs/check_n2000_q32_r300/before.json": "8c24cbf02ec7ceafcd277b1423b4ad2183380f045854230441d99eb94cc019bf",
+    "runs/check_n2000_q32_r300/after.json": "f68152762acaabdf481762163cb6e40ea9392afb595d2365d956286002a9c44f",
+    "runs/check_n2000_q32_r300/stdout.log": "72534065ac1749980a4eee25cb6f50284b251f4d9b44cc3b3549fa145a61a68f",
+    "runs/check_n2000_q32_r300/receipt.json": "8aed933e5efbd6e03c62b8e5c2333aa8b3ad7a2d94350d052186d05e8d75298b",
+    "runs/check_n2000_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/check_n65536_q128_r300/before.json": "1c928a7b6db45d4b98a20a7dc43bb9841828fc4b2467b645c80672886d39bc19",
+    "runs/check_n65536_q128_r300/after.json": "849bfcb338666c8c3fc1550202c57b566764a76fc25359e06c3b2a45dca3bad3",
+    "runs/check_n65536_q128_r300/stdout.log": "0e2191c3532bdc053919abbcef1f7aeaa840c5f899ed6979944cd893e6e1fc76",
+    "runs/check_n65536_q128_r300/receipt.json": "d9414d3da942698bd2a60b57f5af84cdbfb0213a89d20d82015b11f5ee343188",
+    "runs/check_n65536_q128_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/check_n65536_q128_r500/before.json": "9390e1e4a02a231a47aefaa8f59b3d72fb99dce4870d3f7b4dca32767fb4a730",
+    "runs/check_n65536_q128_r500/after.json": "1fd35ae44726e8e12b83d716ec708e885574764c5e844d45946c3aadc78d0a82",
+    "runs/check_n65536_q128_r500/stdout.log": "98e060639748ef56564c3f858f4dcc526917838524ac8dd497400f8b9d323d2e",
+    "runs/check_n65536_q128_r500/receipt.json": "b90ca786a45e034531b93e0620c9ac2a14ce71266128c9b8f0f1380ff7ae7344",
+    "runs/check_n65536_q128_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/check_n65536_q32_r300/before.json": "518e9219c2d21d369caa8a88689ffe6b0d85997eccf0e57bbb9b83ac84703264",
+    "runs/check_n65536_q32_r300/after.json": "566eb380b38719919f7000cda507841f656f73c434ebccef5ae328ebf0e9c08a",
+    "runs/check_n65536_q32_r300/stdout.log": "fd090e380705dfa094058ec283d8af46d4aac6112895e1aa29fed4f84d0f2061",
+    "runs/check_n65536_q32_r300/receipt.json": "e94561ae815298ca431584361fb22ea012a3a8b103596a5819ddc2712f85a5a9",
+    "runs/check_n65536_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/check_n65536_q32_r500/before.json": "295422196565d7a00351471e67b3d9867fe110c3e30e7a6ab746876388a2a53a",
+    "runs/check_n65536_q32_r500/after.json": "0ccdc888c97d6b4d2a03886df4d666658b04ded9211121f8a04106c15297dac8",
+    "runs/check_n65536_q32_r500/stdout.log": "968b97f192d5ce3e2b383b3b4a82dd413fc48b65343c52a5f000e6bf9455efb8",
+    "runs/check_n65536_q32_r500/receipt.json": "d69c2d1ad91795409f79893d4c886b44cf396b9be89906c8fb74ec58f2f19e48",
+    "runs/check_n65536_q32_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/initcheck_n2000_q32_r300/before.json": "981080b8df02d8bc76f2714808c65a73e6ea0aa33cd3ad5a0c675a3300cbdda0",
+    "runs/initcheck_n2000_q32_r300/after.json": "65accd40faa4898a88fbbe66ae8da659a367c5b9a1a055a9d89286946b632e00",
+    "runs/initcheck_n2000_q32_r300/stdout.log": "77d4f6ad7d97067740a39dee8888472c455f095c0ba6c118716407bdda90bbe1",
+    "runs/initcheck_n2000_q32_r300/receipt.json": "04bf945755b3e885c95ba6facfb3f0da8a5cc7a4a229564099f560b2ab1ea047",
+    "runs/initcheck_n2000_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/memcheck_n2000_q32_r300/before.json": "987ea2143042fcd0fd2ef9f7343de5cfbca04bf1e78d3d2cf8de3ddcb9d3a850",
+    "runs/memcheck_n2000_q32_r300/after.json": "a9b271535da507d7a24e3851150fb1d7e764d7d2e6edea3ddb80c674992ece20",
+    "runs/memcheck_n2000_q32_r300/stdout.log": "2a8aa81a6f6f75f5873dbd6c5083a65be21638ca4e0a28ae8e1997f238cb5226",
+    "runs/memcheck_n2000_q32_r300/receipt.json": "b91c27536a18b9c59cc2318d6732968af67aa9ae464eed3b6c37599283374117",
+    "runs/memcheck_n2000_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/memcheck_n65536_q128_r300/before.json": "b005607fe50ba11b991dc61da698c0f21049e7a2b897b415b394dbaf074caff2",
+    "runs/memcheck_n65536_q128_r300/after.json": "4dd0d76ba778d1e00d38549a1bba4cad73cc407b8de3ff0f9e77c02582264127",
+    "runs/memcheck_n65536_q128_r300/stdout.log": "c76d36e44efcfa3f895bc7ca8efdfeed2576fec518dcb8db01d95e2f96682f5a",
+    "runs/memcheck_n65536_q128_r300/receipt.json": "22bb56f942351a07c6bbac29ae653f63dfc77e122d8974be1b8f230d21d5efa1",
+    "runs/memcheck_n65536_q128_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/memcheck_n65536_q128_r500/before.json": "a4cc97b0a01ee3d90a412b4d4cb4e3ef17519df93679356d82bd618b9c99115d",
+    "runs/memcheck_n65536_q128_r500/after.json": "d1c8ef69e4fba80d3e12c972e34053681736f75dc0b8aaa4fdecd40a243d4783",
+    "runs/memcheck_n65536_q128_r500/stdout.log": "6347ab818e4c958e91b4103a6d73c2dd6b41e6b9a4ae925bf636b189aa42e6f1",
+    "runs/memcheck_n65536_q128_r500/receipt.json": "1ee8cab5699c6797f9d18dc112f935e6066a905217f098654e5506fea398f3bc",
+    "runs/memcheck_n65536_q128_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/memcheck_n65536_q32_r300/before.json": "0461254fcda3151491dc10f7cf3f575f54038f6525d3b4a0b4480ae75a76a71e",
+    "runs/memcheck_n65536_q32_r300/after.json": "c18737c028d9ddb1e76a1370dfe74028605f7a5a3bcdd2be44a1e5c5dec75147",
+    "runs/memcheck_n65536_q32_r300/stdout.log": "96d5cb23eb945e501413442235417378a86c95c4ff183cd2d12a62c94f5a3997",
+    "runs/memcheck_n65536_q32_r300/receipt.json": "36f5148be34bbfbb66bcaa3beaedfb712368cd5eb9ab84220debb3c49c9bc803",
+    "runs/memcheck_n65536_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/memcheck_n65536_q32_r500/before.json": "6a6733da34435aa8d36f822f77a912e87bbea78619e99c469df37b7c26c82ec0",
+    "runs/memcheck_n65536_q32_r500/after.json": "9459cbce3d9f807ddcc1307fbf6580fd4e0fc3003dc34369d069c586b1d72a64",
+    "runs/memcheck_n65536_q32_r500/stdout.log": "ea48bbb965020b86cc042795514eaab8481a3fa21c25f8629f82d60b1da3898a",
+    "runs/memcheck_n65536_q32_r500/receipt.json": "f32b4ec10dc5085a2b3cbf87037b14c8609ea16499486f9853e306fe0f93632b",
+    "runs/memcheck_n65536_q32_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/profile_n65536_q128_r500/before.json": "bafc200c08c035d3d470ed24f874a35aa4c67f233776935b909d3afa8b0dfe9f",
+    "runs/profile_n65536_q128_r500/trace.nsys-rep": "de7f45a16886d8f10bd4b967208b5cf69664abe97bad1dca751111575e67d2f1",
+    "runs/profile_n65536_q128_r500/after.json": "c1f132506729539b09ca874195e240bd5676cef0f2596e9b1da6f827358d2d2a",
+    "runs/profile_n65536_q128_r500/trace_cuda_gpu_mem_time_sum.csv": "148efbb8fc5a257c65ff7b0e88627c5a02a31ad466e87d6d7980855ebfa17808",
+    "runs/profile_n65536_q128_r500/trace_um_cpu_page_faults_sum.csv": "ee9e37e291df71a44b1760fdab0ced194fb2b81118fd6c4e349ff3fda85a72a2",
+    "runs/profile_n65536_q128_r500/trace_cuda_gpu_mem_size_sum.csv": "b252d7135d9022187da3ae946011bc3fd384d1e66de56918c2919f70df28f1eb",
+    "runs/profile_n65536_q128_r500/stdout.log": "ae748725d855c77b9994b3e82c2a5c4fcbcc6d08a84868664935e9030632c74d",
+    "runs/profile_n65536_q128_r500/trace_cuda_api_sum.csv": "e20b02554b6487a3459497c5fe3ea500f3923623ef1d70869f72a9d7f47b3657",
+    "runs/profile_n65536_q128_r500/trace_cuda_gpu_kern_sum.csv": "627768dd3a96a2f55e0535d9f79865405e5c8460c5283f3d7033d39bea62ffbe",
+    "runs/profile_n65536_q128_r500/trace_um_total_sum.csv": "08811b0a91c949eb10af5a8d14e0e48217da9413615046eba562d0965e81e29d",
+    "runs/profile_n65536_q128_r500/receipt.json": "04cf8fdcf5a1f2ef720a88f1d00115e8e43e7f6b63b2a8f58ca199b8ffe59b33",
+    "runs/profile_n65536_q128_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/profile_n65536_q128_r500/trace.sqlite": "35737aa16195fe0a5863e481d6e3c227c773bba1343999459dfd48d7b39fe110",
+    "runs/racecheck_n2000_q32_r300/before.json": "5cb6969a8969b4ce70fdc49ffb1e680abcc0cdac4c11096a91cdcccee6cae5e7",
+    "runs/racecheck_n2000_q32_r300/after.json": "7afa124bee632b2af10d4a0b99b3eef39d1e3d217a85eddd19157dca9c73eb06",
+    "runs/racecheck_n2000_q32_r300/stdout.log": "203d55490adf6bc4621e72f8948b373bd94dcf9a691b6512efd806b3149926fe",
+    "runs/racecheck_n2000_q32_r300/receipt.json": "8d45ea38e6b3714192eb78eb12a5ed565997a150db9f67eb8b2bdffa269f451e",
+    "runs/racecheck_n2000_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/synccheck_n2000_q32_r300/before.json": "052a91d0ceb5b5995ea6880d7537d3d3fefd57ca1794a42d3dcebf1d90c5c37b",
+    "runs/synccheck_n2000_q32_r300/after.json": "1c6d943454b7e6993fbc4aa6d1b375e4740c4853eac9802f71e0417d56ebabe8",
+    "runs/synccheck_n2000_q32_r300/stdout.log": "de320977ee235504d6a620e1fba9bee0173f5a9ab14b3c4e399a4a86ec292ce9",
+    "runs/synccheck_n2000_q32_r300/receipt.json": "d25804f8f17b542b1b1ca49267b264362d7a022cdc653c975c61a5deddf27598",
+    "runs/synccheck_n2000_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/synccheck_n65536_q128_r300/before.json": "7c9f401263965c9a08c8097f7398f367b493efe5d1de94c16daf0d4f7468cfaf",
+    "runs/synccheck_n65536_q128_r300/after.json": "fcffd6b0f302d62fdde88cf5a1ce2fa4865386a81f66484948965f5c6b271ccb",
+    "runs/synccheck_n65536_q128_r300/stdout.log": "d2b24b2811bdaac8f72c78ca99c34b7d3fd36beb3afcbed55c1873ce15b67420",
+    "runs/synccheck_n65536_q128_r300/receipt.json": "dc17f3579d18438777724f6f02f8285a46525f07c06bbbec5fb83599426246d2",
+    "runs/synccheck_n65536_q128_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/synccheck_n65536_q128_r500/before.json": "7be7925651897eaadbc2efa0f11e28918d409fdff9807f802cf401d27e18f9db",
+    "runs/synccheck_n65536_q128_r500/after.json": "3d2247b5d708fb4504cfdb75bb8fb5fee631a6e8f012c84d91df173a64f14662",
+    "runs/synccheck_n65536_q128_r500/stdout.log": "86b49a9cef93d633d0f4835dd592494c8a73cadb86134b978271cf8c15c32d6c",
+    "runs/synccheck_n65536_q128_r500/receipt.json": "10806354ed747950fdd6dcea080c52e5b2a044d808d2ac6adc8facd4aee24644",
+    "runs/synccheck_n65536_q128_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/synccheck_n65536_q32_r300/before.json": "f905c61bf098ac1e48de63ecd66d0a0ca08f6074add6b7f9f8fe5dec3520435c",
+    "runs/synccheck_n65536_q32_r300/after.json": "7ada36afea564164fea56b544a2e294a194711191e3854b2fe72f6e48672b3f6",
+    "runs/synccheck_n65536_q32_r300/stdout.log": "fafcc4d1df06c238222a1fdaf66c5391e015bf0bc385ffddd5800f47575c8999",
+    "runs/synccheck_n65536_q32_r300/receipt.json": "d28444508b936c1086486c46bbb323e2c7ea61d1a19a3b4ff267509499668402",
+    "runs/synccheck_n65536_q32_r300/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/synccheck_n65536_q32_r500/before.json": "a48072a8867cc1f56dda9d74664c6e6c086d121d2277d9c45d6d6c5107264439",
+    "runs/synccheck_n65536_q32_r500/after.json": "97d634b48ec4747a6c10cb44fe020d1d8996b0b702c54b5af264aa4c2d7417e7",
+    "runs/synccheck_n65536_q32_r500/stdout.log": "8c3971e3173b31270333b88a0e59adadd472a093bd75b26f97806ee1042a6bc5",
+    "runs/synccheck_n65536_q32_r500/receipt.json": "60e6e4bd7e414ae5745611c1a6d49d3baf06318e14f0fa1576bdbe93f2df6ffc",
+    "runs/synccheck_n65536_q32_r500/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r300_0/before.json": "cafde5252159d8c0d9a8933121f0a15fd7d7d71463fb4e64902784b4476b39d2",
+    "runs/timing_n65536_q128_r300_0/after.json": "20e0f8174af47c94927a31eb428bd5d8d7013c4d3d913cd99903d82a04fa1ebf",
+    "runs/timing_n65536_q128_r300_0/stdout.log": "89b04192e5a621dfe6cdd81538dfc9f642e56ea6372b0cd8fa175426f08b8072",
+    "runs/timing_n65536_q128_r300_0/receipt.json": "e7f0c9e38174b5b02202c1d99f2de6134c15a791bddb4f0937b5772996772911",
+    "runs/timing_n65536_q128_r300_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r300_1/before.json": "ee2fd9e61b9d1597722ba35c482b0e12b0d3ca403e80b33b428f30aaebf17bfe",
+    "runs/timing_n65536_q128_r300_1/after.json": "c32a479b0e4714c82a723e816bd98d78fb2977fe18e804ac4246be03989d662c",
+    "runs/timing_n65536_q128_r300_1/stdout.log": "4546b8cb3c21fbef2c79bb7543883e09838f26ff34201001244bc8f32debef12",
+    "runs/timing_n65536_q128_r300_1/receipt.json": "de9377d6a10555df31d764c117eb3f16bfb03b2adf4b00f48349c18df9b88e33",
+    "runs/timing_n65536_q128_r300_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r300_2/before.json": "c50290aaa904f941b4454226169c7ed1f7397065975d22c4bf01b29a160061a9",
+    "runs/timing_n65536_q128_r300_2/after.json": "b8b9b55c26588d495b1db62c43e25faa9f06db680dcfb98a16eb8523857e8c39",
+    "runs/timing_n65536_q128_r300_2/stdout.log": "f7f7ebb82384b52b056524e38126234b0b5fecdf6cd711d4974abaafd205a829",
+    "runs/timing_n65536_q128_r300_2/receipt.json": "f77aaf25d6834d4c3a3d1f96b8c2badc2064b9b90f47e54dd10a21dad08bfc99",
+    "runs/timing_n65536_q128_r300_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r300_3/before.json": "598d82ee56a6e60ef433508759d22330eb098705739fbcbfaf99aa7f272de162",
+    "runs/timing_n65536_q128_r300_3/after.json": "5c6c9f0315851d9d4e2522b14d058f81ed5d102945689448c3c6947dcab2553b",
+    "runs/timing_n65536_q128_r300_3/stdout.log": "18ea98f3e3a8ab09ab61cc4653610ec5ea2d0346fd095e3d49c1176846e86785",
+    "runs/timing_n65536_q128_r300_3/receipt.json": "2b3c0366c47e492032fe6b2a63c700b1f080a157e7cc1783cb3050338383e215",
+    "runs/timing_n65536_q128_r300_3/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r300_4/before.json": "0aec0c0031d275a777f40e72d63e5ca1f00676385b898deace84d688c9173413",
+    "runs/timing_n65536_q128_r300_4/after.json": "ee19f163c44b97e8fb370c2678709a1447a576353c1f4b26777d5b9bd121715d",
+    "runs/timing_n65536_q128_r300_4/stdout.log": "ddebf69ac5b88adb8d2a9c93bd59ef011a648d7012f88786b6805a3eeda99429",
+    "runs/timing_n65536_q128_r300_4/receipt.json": "fbca89020cae8bc28c8b1aea5a3a6b1268583cc2bbf2c093ef2f1ad233fe8813",
+    "runs/timing_n65536_q128_r300_4/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r300_5/before.json": "9b9ab4b375aec30992e202c421edf8c4b5447a6508712bafdd45298fefcf1108",
+    "runs/timing_n65536_q128_r300_5/after.json": "e8422f22a7db3647fe0d55b7fcc7e829581ca60425c9ac1052a58b1fc5d0be71",
+    "runs/timing_n65536_q128_r300_5/stdout.log": "a1111d0c333631c7bb8232238f77db48f6723546ab303a9f6f45d1a08d012889",
+    "runs/timing_n65536_q128_r300_5/receipt.json": "1e94c9f1a815b202d22f55a338b596b119b641004e92a3cb31bbcd9164e0222c",
+    "runs/timing_n65536_q128_r300_5/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r500_0/before.json": "c683e2d9be32960442cb0c39ed0eaf287bc1e06f605ebe58a12f3cf20e292dbb",
+    "runs/timing_n65536_q128_r500_0/after.json": "3da3f3e814ee56240f26af2c65b3d879dc9e23ce117e9069cdcf3f2c359cd08b",
+    "runs/timing_n65536_q128_r500_0/stdout.log": "bfd8406b0d646e1f8f35250d444ab46939ea97eb61945085277e17767715ca11",
+    "runs/timing_n65536_q128_r500_0/receipt.json": "5e22c44bb0121d8171666ca12212c92e3a9e17e0081e790f4461dfc810b2fef4",
+    "runs/timing_n65536_q128_r500_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r500_1/before.json": "78b51cf6f9304ea828d40dbc98e603dfded92b2f7d0d193fb62ae146e277345c",
+    "runs/timing_n65536_q128_r500_1/after.json": "95602f0190264ccefba359a3820bc81a4a59c09b50c374dec3b0ff1885ca6e60",
+    "runs/timing_n65536_q128_r500_1/stdout.log": "5a58dc18c6346234dd34ea7765d13a22a3920c7377f52b0f8ea8917aafb4cac1",
+    "runs/timing_n65536_q128_r500_1/receipt.json": "fd3b9014f5df6bdf313f2098d605192208e70bfd69cbc2c6d8481c4b4e91e51b",
+    "runs/timing_n65536_q128_r500_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r500_2/before.json": "0edbda2c44a16aa2160223f463ba4b67faae089737b37159960767dd41604003",
+    "runs/timing_n65536_q128_r500_2/after.json": "c3fb565db8608f8a1c38af51b473aeac5cb8dae581b6c816415fe26a1ff6974d",
+    "runs/timing_n65536_q128_r500_2/stdout.log": "2566074676e29ae01aa802c771beda93e27bfe6293eead2e2ea6a83edc8b0310",
+    "runs/timing_n65536_q128_r500_2/receipt.json": "8654409f94ffce3c8cb24e0dedbb0fc0bc189b5d4a90cd5445f039669c261cea",
+    "runs/timing_n65536_q128_r500_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r500_3/before.json": "c03386f29e3fc580f18ef5afd019540b589a256af16a0558f72c717195717370",
+    "runs/timing_n65536_q128_r500_3/after.json": "0543d1df7b080c31203ed5a6b4168d0223a7df867134f61f44397f2a8235a979",
+    "runs/timing_n65536_q128_r500_3/stdout.log": "d5455bf1467f161803a7c0b94bab050806e2d45c5e9faa7a22ba4a39f7c90eb9",
+    "runs/timing_n65536_q128_r500_3/receipt.json": "7d3f1ec9b24cd462539effb400f6315122453a88d036ae78bea4f80eacad536e",
+    "runs/timing_n65536_q128_r500_3/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r500_4/before.json": "54e8fa5e36be832c74db72191c10f708b92df1fd4605be5c93aebbba1ceae58e",
+    "runs/timing_n65536_q128_r500_4/after.json": "8f0f5b14c06daa843eff035c0a6c96001cd984140aafd102bb543b355f09759e",
+    "runs/timing_n65536_q128_r500_4/stdout.log": "2ec6314d0857a82462059a50f3cae091c561e48cb023bfa96ce05e5d26ac6751",
+    "runs/timing_n65536_q128_r500_4/receipt.json": "fc28708c61cbcb9633de6ce1db07976f4764dec0a426e29141e8ca384926181f",
+    "runs/timing_n65536_q128_r500_4/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q128_r500_5/before.json": "6acba20f8f2684685f3c18488cc4217051c8f3863f2dc5de532c76bdcbccad27",
+    "runs/timing_n65536_q128_r500_5/after.json": "5e63f0af85bad28dacfbd5363ca11662976ca8bc401e700e5b722c3c7b4a311c",
+    "runs/timing_n65536_q128_r500_5/stdout.log": "5c9deb0219b0f9ac27ef702bc655a1359bf862b42a367d379293a08075b21ada",
+    "runs/timing_n65536_q128_r500_5/receipt.json": "924c3780c7f81ad0c68ef0cff5ad424b4796f3aa412720d671d8fb4de2a28135",
+    "runs/timing_n65536_q128_r500_5/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r300_0/before.json": "411a376ba5be312691ea389dc3513421a38c23627fcd41ddda2527f283516697",
+    "runs/timing_n65536_q32_r300_0/after.json": "141c27838f83903c17113d091e188c0bf77bbcdbf1e0f83780f979f65fe3eeb7",
+    "runs/timing_n65536_q32_r300_0/stdout.log": "87a19fde62a2264e9e33dbf6ea6627fa39f24b44592eab3e3cdf0a2e1e7134ea",
+    "runs/timing_n65536_q32_r300_0/receipt.json": "bd7055cfe5a2fd0651c10788ed733bddd7c62e1496b249dabe74ad18b26a8b91",
+    "runs/timing_n65536_q32_r300_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r300_1/before.json": "488a336bf5f6bd6a3e746831d56e2c892510059a0943826ff9ef50b1321e134e",
+    "runs/timing_n65536_q32_r300_1/after.json": "399c4f5486dce20f7be9fda76eb823cdf138dec465d01cfd0a54601f8e39f7fa",
+    "runs/timing_n65536_q32_r300_1/stdout.log": "9989f189c4b7112f5e6e1a61a39e02303c17aa8db2de77a3bca5455bbf08a615",
+    "runs/timing_n65536_q32_r300_1/receipt.json": "0ae20adc533000bf148b1345da03b8b0501621f7d23f353a4fb63ae235186e36",
+    "runs/timing_n65536_q32_r300_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r300_2/before.json": "24f9e284b49426a3c863a5f1ec5f45f46ec1cebd04730a7815c53501f04b2e8d",
+    "runs/timing_n65536_q32_r300_2/after.json": "10c50520f87dda1806109cffe5855b37d9775c487a3a6ea59ac1eace785491c1",
+    "runs/timing_n65536_q32_r300_2/stdout.log": "6d38b5bf74212929ee2c389be471894d0212c0bc9407ec9bf1b9076c2c575e44",
+    "runs/timing_n65536_q32_r300_2/receipt.json": "72f785dc30b8b69d85c6bd83beb656f9056a9bf824a8cda4a93a20dbd1a6f4fc",
+    "runs/timing_n65536_q32_r300_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r300_3/before.json": "4510c3e8377436bc0040fb278bc30e0609b6e509882566435d1b0707e46c737f",
+    "runs/timing_n65536_q32_r300_3/after.json": "02a8507f57a864becf6491d2817796b01b47bbcd596c8b3506ea979511611f0c",
+    "runs/timing_n65536_q32_r300_3/stdout.log": "a6a5d26f601564dd600086bdc4bfa157ea1bc9e5a280591fe0678c5c264519c4",
+    "runs/timing_n65536_q32_r300_3/receipt.json": "98ab853096beeea9744fc411299439bd015ee77f3c9be926ef8f140ad2abb776",
+    "runs/timing_n65536_q32_r300_3/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r300_4/before.json": "f3c8b10bf5bf630acd77cd4238430173a57e09e300a5c95e0fba6f27db9ce55d",
+    "runs/timing_n65536_q32_r300_4/after.json": "06ac919e1a3bce1905a98c10fbe846e86d65017d7767db172ec6eeca0645e68e",
+    "runs/timing_n65536_q32_r300_4/stdout.log": "05f0b5304866832383ce5215a508504f14f3283a058c69579fa955570ff42c02",
+    "runs/timing_n65536_q32_r300_4/receipt.json": "d56ab3e7c630d08c45659d8f044ac4c6b0ff23f4e0df847429d454cc854df868",
+    "runs/timing_n65536_q32_r300_4/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r300_5/before.json": "eeffa6cf769231588e6082c3240a42955387bdf2e9a911f35916c91340fe9697",
+    "runs/timing_n65536_q32_r300_5/after.json": "16564243c6c687bddd6ba37679747990c5ca00df808b9eddd73df7fa60497a37",
+    "runs/timing_n65536_q32_r300_5/stdout.log": "5b0a2d29af50b4cd2df8b5cb40729ee3a8aaf32a919011aa06579547750f20af",
+    "runs/timing_n65536_q32_r300_5/receipt.json": "d6c874844037c38ca0e86bcacf16be252d5e005d9de486e3674db1944810e16d",
+    "runs/timing_n65536_q32_r300_5/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r500_0/before.json": "4344f65548b5ceabd4aaa72c49b4233741a0e1be4a3fba954f839aa17e98af42",
+    "runs/timing_n65536_q32_r500_0/after.json": "d0a1c12ce61edd4b024615f1958cf09aa9ec3c8572ffea8a478d8311be26d690",
+    "runs/timing_n65536_q32_r500_0/stdout.log": "659ce8a15059cb6e37dee5d81a62668b78694923d2e98860c3b4b94e30e846cb",
+    "runs/timing_n65536_q32_r500_0/receipt.json": "cffc8e0bc58cb82b47fa87ddbb68ad136a1cfe5b2ad9672b89702f4a879a8bcb",
+    "runs/timing_n65536_q32_r500_0/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r500_1/before.json": "c423254af6723d7fec7dcb71bb3d6f3ad16efd80ac8c98ef0d38b0d27884b5ba",
+    "runs/timing_n65536_q32_r500_1/after.json": "6c985c7689c4c68471c036b50ef51dac56447d7847bf71db4818a51c6ef7bcd6",
+    "runs/timing_n65536_q32_r500_1/stdout.log": "0b48a88b56baa7b575470cfe2804d541a25d47deeb9d8d6812525ccc6004cb31",
+    "runs/timing_n65536_q32_r500_1/receipt.json": "50792992ae998336e629bec0b05c06770ff0c6d5985a5db85d71c866c09b6f27",
+    "runs/timing_n65536_q32_r500_1/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r500_2/before.json": "26bef40f4f5169a3b52329237d577cb22f3c5a67be776493d719129d2ca99c6c",
+    "runs/timing_n65536_q32_r500_2/after.json": "e78039e066b05ecec822e3484f246419d91359422804144d272587d48b4f158f",
+    "runs/timing_n65536_q32_r500_2/stdout.log": "2dd31168ab8692ed14aa10868164776888018c6c5c5dfd1b07e99e0bac744104",
+    "runs/timing_n65536_q32_r500_2/receipt.json": "499b894b8e43de6dd9ecda7fe97431d3e7437fa19cf3436cdbae4e529331737e",
+    "runs/timing_n65536_q32_r500_2/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r500_3/before.json": "f17f5367926530a880486f023160bde8c339aef021bdfc98bde17184e42b07ce",
+    "runs/timing_n65536_q32_r500_3/after.json": "072d1857f3fa82f3aaa09b50acb7a6f82c309faa56c1ba9d0b751dd1bf91a3c9",
+    "runs/timing_n65536_q32_r500_3/stdout.log": "cb14cfd85fc273d44a3b14c899dae74accfa9479f7b998f73307bad6bc6ff3d5",
+    "runs/timing_n65536_q32_r500_3/receipt.json": "731be1e15797fefffb9bf227459eb1b0f6402a696001a88fd1e4c68be855955b",
+    "runs/timing_n65536_q32_r500_3/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r500_4/before.json": "dc76c87079fd06b825ab56d71ac55e2eabe85735f564e395eec2f8c93265dbe1",
+    "runs/timing_n65536_q32_r500_4/after.json": "b0f755a62987087cb7c42781ce1b6062a35f43f43753121547c958227615567d",
+    "runs/timing_n65536_q32_r500_4/stdout.log": "ddb6eea210b8156657bd5adb082bd79110c0e95068dbcfa3e3a8a20392dddf16",
+    "runs/timing_n65536_q32_r500_4/receipt.json": "549092f13e4039b98f34aff593ea2b3a153734512e0f4cf3a3140f0221cd0dde",
+    "runs/timing_n65536_q32_r500_4/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runs/timing_n65536_q32_r500_5/before.json": "3c58352a06d61e84e07db536bf2cc12499353706fd683e3b0967ab8ea50bc338",
+    "runs/timing_n65536_q32_r500_5/after.json": "2a11b153ddea794279c515810d3b5182c266a823ee8f3443b65578c5e634df41",
+    "runs/timing_n65536_q32_r500_5/stdout.log": "9e11b841551ffd82c1d77c0e1f146130feca29a3681f292d1f1227cd254d9921",
+    "runs/timing_n65536_q32_r500_5/receipt.json": "37fdaf8dc01b2188aa41b8e56bb7c85eba9340ff36dabdc6956e285e894bdf77",
+    "runs/timing_n65536_q32_r500_5/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_sha256": {
+    "CONTRACT.md": "5eb53f1ad879acbd16e5cdea6df7287f4da52a9c979177c2ef29d20debd61b16",
+    "analyze.py": "21f21b27e4708d33a48279c41d96e747afae1dd51578beced4a7de64ec0e497e",
+    "bridge.cuh": "924339f660d9993676b554dae55b091c563891d745fb01992170a157eaf5ba69",
+    "driver.cu": "a6d63c00b67f6f55ea292e24b54a8c04acdf9dce90387cc834bb850bd90758b5",
+    "prepare.py": "619ab5a55e9cc925d0b1abdb5057c88510189cac106832d5bc9330dbdc0d3dea",
+    "run.py": "26894920ed2e6d1913d2c191e0c7869f4e75e3577cb66c0e69cf8afd3c0f0bcc",
+    "test_prepare.py": "5e363b7e804b913f10579289db6e56c9feb9c00e6c911d8aea1dc10fac4e2b4c"
+  },
+  "binary_sha256": {
+    "bench3": "862abcf876a567d505c04521ec45a04efb2443f55abeb26b37c6d15dfff52515",
+    "bench5": "e834a196a10a1e79e64aa107dc6e7985e999de537d857b172ccfdd5073d49477"
+  },
+  "source_generation_manifest_sha256": {
+    "source3": "675edee88b89b74000af13083d0e75d5bcb7e32d6952fae1ef11569155a63755",
+    "source5": "0a9c9c6c1f486d5bf1cb61f9063622008feb187415294205a019d31ecfc05495"
+  },
+  "fixtures": {
+    "n2000": {
+      "n": 2000,
+      "d": 128,
+      "metric": 2,
+      "selection": "first N; floor(i*N/Q)",
+      "canonical_rows_sha256": "64c0befe7b43e0131a9119aed369c7086295f9217709ac83a2825837b92c0a23",
+      "file_sha256": {
+        "q32.txt": "0353bb9f2d799b37241bb294d4fba2f26970012524a5ee582d76eaa0e84e0c7e",
+        "q128.txt": "189fe944ed09d38c1482c758dc45e8be2308c940f9eb0fb4e403a4834965d48e",
+        "data.txt": "0802338213ec367f87996f56e23c5357be4fb8f5fb3b63190fca560fa1a879a9"
+      }
+    },
+    "n65536": {
+      "n": 65536,
+      "d": 128,
+      "metric": 2,
+      "selection": "first N; floor(i*N/Q)",
+      "canonical_rows_sha256": "f54d2fc26cd71c5f78ebaa3eb4d35b240d9f8e1f09aaa7dffcc0c408fdf27671",
+      "file_sha256": {
+        "q32.txt": "aaba2f7b3c8743f7a9a9c3ef6eff487d8bc8cddb716f5caca82477f9ce43e78d",
+        "q128.txt": "fec8b53defacf4dc385ef310a754b50d1b6c43661f705367b6ea030a4aba6998",
+        "data.txt": "9f52f677707001aef51fe464937dd1e9ef4bce706f8944d4510250bc2db85868"
+      }
+    }
+  },
+  "static_sass": {
+    "_Z11mergeResRnniiPiiS_iiiS_": {
+      "normalized_instruction_sha256": "ee1448cab814d472b4bbd2c1afa7348c2c8a5657c50f75d63e4d8889e0a0052b",
+      "instruction_count": 136,
+      "hmma": 0,
+      "local": 0
+    },
+    "_Z14nodeProcessRnnP2TNfPfPiS2_S2_PcS2_iiiS2_iiiii": {
+      "normalized_instruction_sha256": "ab5739fe69f0c244024f9d727e7eec695cfb84bc86dd4ebd5cc183aeadaad284",
+      "instruction_count": 1432,
+      "hmma": 0,
+      "local": 67
+    },
+    "_Z15translate_pairsPKiS0_S0_P4Pairiii": {
+      "normalized_instruction_sha256": "7a6b0a0b1e814840c2a49fe81729c8d957b232f90cdd551788be7e33be58e761",
+      "instruction_count": 72,
+      "hmma": 0,
+      "local": 0
+    },
+    "_Z6tensorPKfS0_PKiS2_PK4LeafPK5ChunkPKjiiiPiSB_": {
+      "normalized_instruction_sha256": "949da8aac4f38879fd6acbd6e9db2b4366bf799742b50a5c4a25212000faf048",
+      "instruction_count": 656,
+      "hmma": 16,
+      "local": 0
+    },
+    "_Z10make_masksPK4PairiPji": {
+      "normalized_instruction_sha256": "7edba46d7872687b0e0e393eeb6a19d720a76c5c1d0e3cb3edcab39e323b7daf",
+      "instruction_count": 40,
+      "hmma": 0,
+      "local": 0
+    },
+    "_Z4simtPKfPKiS2_PK4LeafPK4PairiiPiS9_": {
+      "normalized_instruction_sha256": "64a8ddced370eb1cae820d3bd15758e4bb8eb8898fa014e9bf21ae1df7fa2aa8",
+      "instruction_count": 416,
+      "hmma": 0,
+      "local": 0
+    }
+  },
+  "diagnostic_profile": {
+    "trace_cuda_api_sum": [
+      {
+        "Time (%)": "98.4",
+        "Total Time (ns)": "4724345663",
+        "Num Calls": "137",
+        "Avg (ns)": "34484274.9",
+        "Med (ns)": "1566109.0",
+        "Min (ns)": "2187",
+        "Max (ns)": "584957234",
+        "StdDev (ns)": "113567504.5",
+        "Name": "cudaDeviceSynchronize"
+      },
+      {
+        "Time (%)": "0.4",
+        "Total Time (ns)": "21426147",
+        "Num Calls": "207",
+        "Avg (ns)": "103508.0",
+        "Med (ns)": "5725.0",
+        "Min (ns)": "1214",
+        "Max (ns)": "528815",
+        "StdDev (ns)": "174016.1",
+        "Name": "cudaStreamSynchronize"
+      },
+      {
+        "Time (%)": "0.4",
+        "Total Time (ns)": "17583511",
+        "Num Calls": "337",
+        "Avg (ns)": "52176.6",
+        "Med (ns)": "10708.0",
+        "Min (ns)": "4426",
+        "Max (ns)": "7575919",
+        "StdDev (ns)": "510607.5",
+        "Name": "cudaLaunchKernel"
+      },
+      {
+        "Time (%)": "0.3",
+        "Total Time (ns)": "13540798",
+        "Num Calls": "182",
+        "Avg (ns)": "74400.0",
+        "Med (ns)": "10066.0",
+        "Min (ns)": "2602",
+        "Max (ns)": "1121656",
+        "StdDev (ns)": "198854.2",
+        "Name": "cudaFree"
+      },
+      {
+        "Time (%)": "0.1",
+        "Total Time (ns)": "6665028",
+        "Num Calls": "1",
+        "Avg (ns)": "6665028.0",
+        "Med (ns)": "6665028.0",
+        "Min (ns)": "6665028",
+        "Max (ns)": "6665028",
+        "StdDev (ns)": "0.0",
+        "Name": "cuLibraryLoadData"
+      },
+      {
+        "Time (%)": "0.1",
+        "Total Time (ns)": "6068663",
+        "Num Calls": "146",
+        "Avg (ns)": "41566.2",
+        "Med (ns)": "7887.0",
+        "Min (ns)": "2289",
+        "Max (ns)": "402403",
+        "StdDev (ns)": "95081.8",
+        "Name": "cudaMalloc"
+      },
+      {
+        "Time (%)": "0.1",
+        "Total Time (ns)": "3806671",
+        "Num Calls": "32",
+        "Avg (ns)": "118958.5",
+        "Med (ns)": "71045.5",
+        "Min (ns)": "14293",
+        "Max (ns)": "426385",
+        "StdDev (ns)": "135601.9",
+        "Name": "cudaMemcpy"
+      },
+      {
+        "Time (%)": "0.1",
+        "Total Time (ns)": "3749247",
+        "Num Calls": "94",
+        "Avg (ns)": "39885.6",
+        "Med (ns)": "40803.5",
+        "Min (ns)": "16628",
+        "Max (ns)": "95380",
+        "StdDev (ns)": "10213.7",
+        "Name": "cudaMemcpyAsync"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "1569289",
+        "Num Calls": "42",
+        "Avg (ns)": "37364.0",
+        "Med (ns)": "39009.5",
+        "Min (ns)": "6437",
+        "Max (ns)": "129377",
+        "StdDev (ns)": "24632.5",
+        "Name": "cudaMemset"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "709770",
+        "Num Calls": "35",
+        "Avg (ns)": "20279.1",
+        "Med (ns)": "14263.0",
+        "Min (ns)": "4997",
+        "Max (ns)": "94869",
+        "StdDev (ns)": "22973.3",
+        "Name": "cudaMallocManaged"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "497877",
+        "Num Calls": "50",
+        "Avg (ns)": "9957.5",
+        "Med (ns)": "7554.5",
+        "Min (ns)": "3634",
+        "Max (ns)": "35618",
+        "StdDev (ns)": "6151.8",
+        "Name": "cudaMemsetAsync"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "435633",
+        "Num Calls": "15",
+        "Avg (ns)": "29042.2",
+        "Med (ns)": "30878.0",
+        "Min (ns)": "16049",
+        "Max (ns)": "40618",
+        "StdDev (ns)": "6396.1",
+        "Name": "cudaMemGetInfo"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "147511",
+        "Num Calls": "337",
+        "Avg (ns)": "437.7",
+        "Med (ns)": "302.0",
+        "Min (ns)": "98",
+        "Max (ns)": "7092",
+        "StdDev (ns)": "660.5",
+        "Name": "cuKernelGetName"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "21593",
+        "Num Calls": "50",
+        "Avg (ns)": "431.9",
+        "Med (ns)": "360.0",
+        "Min (ns)": "146",
+        "Max (ns)": "1072",
+        "StdDev (ns)": "266.2",
+        "Name": "cuLibraryGetKernel"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "5348",
+        "Num Calls": "1",
+        "Avg (ns)": "5348.0",
+        "Med (ns)": "5348.0",
+        "Min (ns)": "5348",
+        "Max (ns)": "5348",
+        "StdDev (ns)": "0.0",
+        "Name": "cuModuleGetLoadingMode"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "1394",
+        "Num Calls": "5",
+        "Avg (ns)": "278.8",
+        "Med (ns)": "160.0",
+        "Min (ns)": "138",
+        "Max (ns)": "770",
+        "StdDev (ns)": "274.9",
+        "Name": "cuLibraryGetManaged"
+      }
+    ],
+    "trace_cuda_gpu_kern_sum": [
+      {
+        "Time (%)": "61.7",
+        "Total Time (ns)": "2922466721",
+        "Instances": "5",
+        "Avg (ns)": "584493344.2",
+        "Med (ns)": "584287091.0",
+        "Min (ns)": "584243886",
+        "Max (ns)": "584896546",
+        "StdDev (ns)": "312268.9",
+        "Name": "dataProcessRnn(TN *, float, float *, int *, int *, char *, int *, int *, int, int *, int, int *, int)"
+      },
+      {
+        "Time (%)": "12.7",
+        "Total Time (ns)": "602754584",
+        "Instances": "10",
+        "Avg (ns)": "60275458.4",
+        "Med (ns)": "696556.5",
+        "Min (ns)": "365438",
+        "Max (ns)": "157007806",
+        "StdDev (ns)": "77606839.3",
+        "Name": "tensor(const float *, const float *, const int *, const int *, const Leaf *, const Chunk *, const unsigned int *, int, int, int, int *, int *)"
+      },
+      {
+        "Time (%)": "9.9",
+        "Total Time (ns)": "470645599",
+        "Instances": "5",
+        "Avg (ns)": "94129119.8",
+        "Med (ns)": "155139047.0",
+        "Min (ns)": "1359738",
+        "Max (ns)": "156325667",
+        "StdDev (ns)": "84512104.5",
+        "Name": "simt(const float *, const int *, const int *, const Leaf *, const Pair *, int, int, int *, int *)"
+      },
+      {
+        "Time (%)": "8.5",
+        "Total Time (ns)": "400401465",
+        "Instances": "60",
+        "Avg (ns)": "6673357.8",
+        "Med (ns)": "2468020.0",
+        "Min (ns)": "1441177",
+        "Max (ns)": "20876986",
+        "StdDev (ns)": "7886219.9",
+        "Name": "nodeProcessRnn(TN *, float, float *, int *, int *, int *, char *, int *, int, int, int, int *, int, int, int, int, int)"
+      },
+      {
+        "Time (%)": "4.5",
+        "Total Time (ns)": "212259991",
+        "Instances": "4",
+        "Avg (ns)": "53064997.8",
+        "Med (ns)": "10409517.0",
+        "Min (ns)": "2050134",
+        "Max (ns)": "189390823",
+        "StdDev (ns)": "91207547.7",
+        "Name": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)"
+      },
+      {
+        "Time (%)": "2.2",
+        "Total Time (ns)": "106354870",
+        "Instances": "5",
+        "Avg (ns)": "21270974.0",
+        "Med (ns)": "21228792.0",
+        "Min (ns)": "21223736",
+        "Max (ns)": "21440791",
+        "StdDev (ns)": "95015.0",
+        "Name": "mergeResRnn(int, int, int *, int, int *, int, int, int, int *)"
+      },
+      {
+        "Time (%)": "0.4",
+        "Total Time (ns)": "17528233",
+        "Instances": "75",
+        "Avg (ns)": "233709.8",
+        "Med (ns)": "298430.0",
+        "Min (ns)": "1888",
+        "Max (ns)": "480190",
+        "StdDev (ns)": "191631.1",
+        "Name": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)"
+      },
+      {
+        "Time (%)": "0.1",
+        "Total Time (ns)": "2385716",
+        "Instances": "4",
+        "Avg (ns)": "596429.0",
+        "Med (ns)": "417278.0",
+        "Min (ns)": "407326",
+        "Max (ns)": "1143834",
+        "StdDev (ns)": "364968.9",
+        "Name": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "1845272",
+        "Instances": "15",
+        "Avg (ns)": "123018.1",
+        "Med (ns)": "89311.0",
+        "Min (ns)": "76256",
+        "Max (ns)": "225151",
+        "StdDev (ns)": "57099.0",
+        "Name": "mergeLNode(int, int, int *, int, int, int, int, int *, int, int, int)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "530526",
+        "Instances": "1",
+        "Avg (ns)": "530526.0",
+        "Med (ns)": "530526.0",
+        "Min (ns)": "530526",
+        "Max (ns)": "530526",
+        "StdDev (ns)": "0.0",
+        "Name": "initIndexData(int *, TN *, int *, int *, int *)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "280800",
+        "Instances": "32",
+        "Avg (ns)": "8775.0",
+        "Med (ns)": "9120.0",
+        "Min (ns)": "6272",
+        "Max (ns)": "9504",
+        "StdDev (ns)": "887.5",
+        "Name": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, int, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "200127",
+        "Instances": "15",
+        "Avg (ns)": "13341.8",
+        "Med (ns)": "13600.0",
+        "Min (ns)": "12671",
+        "Max (ns)": "13728",
+        "StdDev (ns)": "425.4",
+        "Name": "getQCount(int, int, int *, int, int, int, int)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "79295",
+        "Instances": "15",
+        "Avg (ns)": "5286.3",
+        "Med (ns)": "5248.0",
+        "Min (ns)": "4896",
+        "Max (ns)": "5696",
+        "StdDev (ns)": "247.5",
+        "Name": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "79072",
+        "Instances": "5",
+        "Avg (ns)": "15814.4",
+        "Med (ns)": "16032.0",
+        "Min (ns)": "14752",
+        "Max (ns)": "16192",
+        "StdDev (ns)": "598.4",
+        "Name": "make_masks(const Pair *, int, unsigned int *, int)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "63168",
+        "Instances": "10",
+        "Avg (ns)": "6316.8",
+        "Med (ns)": "6288.0",
+        "Min (ns)": "5856",
+        "Max (ns)": "7040",
+        "StdDev (ns)": "297.2",
+        "Name": "translate_pairs(const int *, const int *, const int *, Pair *, int, int, int)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "41312",
+        "Instances": "19",
+        "Avg (ns)": "2174.3",
+        "Med (ns)": "2208.0",
+        "Min (ns)": "1984",
+        "Max (ns)": "2304",
+        "StdDev (ns)": "96.9",
+        "Name": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "25600",
+        "Instances": "19",
+        "Avg (ns)": "1347.4",
+        "Med (ns)": "1344.0",
+        "Min (ns)": "1216",
+        "Max (ns)": "1472",
+        "StdDev (ns)": "86.6",
+        "Name": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "18464",
+        "Instances": "15",
+        "Avg (ns)": "1230.9",
+        "Med (ns)": "1376.0",
+        "Min (ns)": "832",
+        "Max (ns)": "1920",
+        "StdDev (ns)": "369.8",
+        "Name": "initPList(int *, int)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "12672",
+        "Instances": "4",
+        "Avg (ns)": "3168.0",
+        "Med (ns)": "3088.0",
+        "Min (ns)": "3008",
+        "Max (ns)": "3488",
+        "StdDev (ns)": "226.3",
+        "Name": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "12000",
+        "Instances": "15",
+        "Avg (ns)": "800.0",
+        "Med (ns)": "800.0",
+        "Min (ns)": "736",
+        "Max (ns)": "832",
+        "StdDev (ns)": "32.0",
+        "Name": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)"
+      },
+      {
+        "Time (%)": "0.0",
+        "Total Time (ns)": "4640",
+        "Instances": "4",
+        "Avg (ns)": "1160.0",
+        "Med (ns)": "1152.0",
+        "Min (ns)": "1120",
+        "Max (ns)": "1216",
+        "StdDev (ns)": "40.3",
+        "Name": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, unsigned long long>(T2 *)"
+      }
+    ],
+    "trace_cuda_gpu_mem_size_sum": [
+      {
+        "Total (MB)": "4028.688",
+        "Count": "92",
+        "Avg (MB)": "43.790",
+        "Med (MB)": "0.012",
+        "Min (MB)": "0.000",
+        "Max (MB)": "268.435",
+        "StdDev (MB)": "99.694",
+        "Operation": "[CUDA memset]"
+      },
+      {
+        "Total (MB)": "35.500",
+        "Count": "539",
+        "Avg (MB)": "0.066",
+        "Med (MB)": "0.004",
+        "Min (MB)": "0.004",
+        "Max (MB)": "0.901",
+        "StdDev (MB)": "0.151",
+        "Operation": "[CUDA memcpy Unified Host-to-Device]"
+      },
+      {
+        "Total (MB)": "1.819",
+        "Count": "248",
+        "Avg (MB)": "0.007",
+        "Med (MB)": "0.004",
+        "Min (MB)": "0.004",
+        "Max (MB)": "0.061",
+        "StdDev (MB)": "0.013",
+        "Operation": "[CUDA memcpy Unified Device-to-Host]"
+      },
+      {
+        "Total (MB)": "1.187",
+        "Count": "9",
+        "Avg (MB)": "0.132",
+        "Med (MB)": "0.080",
+        "Min (MB)": "0.033",
+        "Max (MB)": "0.262",
+        "StdDev (MB)": "0.102",
+        "Operation": "[CUDA memcpy Host-to-Device]"
+      },
+      {
+        "Total (MB)": "0.539",
+        "Count": "117",
+        "Avg (MB)": "0.005",
+        "Med (MB)": "0.000",
+        "Min (MB)": "0.000",
+        "Max (MB)": "0.262",
+        "StdDev (MB)": "0.032",
+        "Operation": "[CUDA memcpy Device-to-Host]"
+      }
+    ],
+    "trace_cuda_gpu_mem_time_sum": [
+      {
+        "Time (%)": "57.3",
+        "Total Time (ns)": "2117141",
+        "Count": "92",
+        "Avg (ns)": "23012.4",
+        "Med (ns)": "928.0",
+        "Min (ns)": "320",
+        "Max (ns)": "144607",
+        "StdDev (ns)": "49156.3",
+        "Operation": "[CUDA memset]"
+      },
+      {
+        "Time (%)": "33.5",
+        "Total Time (ns)": "1239564",
+        "Count": "539",
+        "Avg (ns)": "2299.7",
+        "Med (ns)": "1279.0",
+        "Min (ns)": "1088",
+        "Max (ns)": "17152",
+        "StdDev (ns)": "2685.1",
+        "Operation": "[CUDA memcpy Unified Host-to-Device]"
+      },
+      {
+        "Time (%)": "5.3",
+        "Total Time (ns)": "196529",
+        "Count": "248",
+        "Avg (ns)": "792.5",
+        "Med (ns)": "512.0",
+        "Min (ns)": "448",
+        "Max (ns)": "5120",
+        "StdDev (ns)": "788.5",
+        "Operation": "[CUDA memcpy Unified Device-to-Host]"
+      },
+      {
+        "Time (%)": "2.6",
+        "Total Time (ns)": "96928",
+        "Count": "117",
+        "Avg (ns)": "828.4",
+        "Med (ns)": "448.0",
+        "Min (ns)": "352",
+        "Max (ns)": "13952",
+        "StdDev (ns)": "1574.6",
+        "Operation": "[CUDA memcpy Device-to-Host]"
+      },
+      {
+        "Time (%)": "1.2",
+        "Total Time (ns)": "45471",
+        "Count": "9",
+        "Avg (ns)": "5052.3",
+        "Med (ns)": "4064.0",
+        "Min (ns)": "1440",
+        "Max (ns)": "9151",
+        "StdDev (ns)": "3268.1",
+        "Operation": "[CUDA memcpy Host-to-Device]"
+      }
+    ],
+    "trace_um_cpu_page_faults_sum": [
+      {
+        "CPU Page Faults": "221",
+        "CPU Instruction Address": "searchIndexRnnV2(float*, TN*, int*, int*, int*, int, float, int, int*, int*, char*, int*)",
+        "Source File": "",
+        "Source Line": "0"
+      },
+      {
+        "CPU Page Faults": "97",
+        "CPU Instruction Address": "load(char*, int*&, float*&, char*&, int*&)",
+        "Source File": "",
+        "Source Line": "0"
+      },
+      {
+        "CPU Page Faults": "13",
+        "CPU Instruction Address": "indexConstru(float*, char*, int*, int*, int*&, TN*&, int*&, int&, int*&)",
+        "Source File": "",
+        "Source Line": "0"
+      },
+      {
+        "CPU Page Faults": "1",
+        "CPU Instruction Address": "unresolved instruction",
+        "Source File": "",
+        "Source Line": "0"
+      }
+    ],
+    "trace_um_total_sum": [
+      {
+        "Total HtoD Migration Size (MB)": "35.500",
+        "Total DtoH Migration Size (MB)": "1.819",
+        "Total CPU Page Faults": "332",
+        "Total GPU PageFaults": "56791"
+      }
+    ]
+  },
+  "provenance_note": "source_sha256 preserves collection-time source hashes; CONTRACT.md is now that exact prefix plus appended outcome. The measured driver/bridge/preparation and parent leaf kernels are unchanged. Final report, offline profile_overlap.py, profile address redaction and its CPU regression check were added after collection. delivery_source_sha256 identifies final portable files, excluding this self-referencing evidence file. run.py collection snapshot includes the optional profile-only UM fault flags; the timing launch path was unchanged.",
+  "frozen_contract_prefix_bytes": 6634,
+  "delivery_source_sha256": {
+    ".gitignore": "7fe900632e902dce612cbd13a9bc389da711fdf2f341d9edc6fff158b76e8486",
+    "CONTRACT.md": "c0ca5ccf3b085354c85e0a38608dfd672038e3a17067622278df821ab1b35c65",
+    "PROFILE_OVERLAP.json": "38c8287b4008040915bf85a8feaf50077f826bca424ed58f751b5930f434d818",
+    "README.md": "62ffbb2f66afc64897966a11908b909d5f01aaa2e59793db7ea245670deb3b2b",
+    "analyze.py": "3793489012d270287b6dfa81510d5e9d061f7ebe9eda8540571f58c7eea0ba24",
+    "bridge.cuh": "924339f660d9993676b554dae55b091c563891d745fb01992170a157eaf5ba69",
+    "driver.cu": "a6d63c00b67f6f55ea292e24b54a8c04acdf9dce90387cc834bb850bd90758b5",
+    "prepare.py": "619ab5a55e9cc925d0b1abdb5057c88510189cac106832d5bc9330dbdc0d3dea",
+    "profile_overlap.py": "ed313ebb09839c2a82f37f08dfe4c13dd94bd7307112617f2c19388208b82371",
+    "run.py": "26894920ed2e6d1913d2c191e0c7869f4e75e3577cb66c0e69cf8afd3c0f0bcc",
+    "samples.csv": "62bb8541c9e9a5ba691d0528dec3428219a85e6a8b5430299e31e5d67e0321fb",
+    "test_prepare.py": "43ace3e67d508ae1886886af194de9ac4c8f7b7c46a95e8179a100188c6157c0"
+  }
+}
