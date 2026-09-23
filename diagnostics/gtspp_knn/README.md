@@ -72,8 +72,9 @@ The primary Q128/k100 clean stage median falls **14.889 ->5.484 ms (2.715x)**.
 Main-thread CPU time falls **31.793 ->22.188 ms/query**; the unchanged default
 wait policy can still occupy close to a CPU core while a query runs. This reduces
 CPU time per query, not necessarily the instantaneous utilization percentage.
-Separate three-query NSYS diagnostics show summed `cudaDeviceSynchronize` API
-duration **17.219 ->7.761 ms**, and leaf kernel mean **14.871 ->5.454 ms**.
+Separate three-query NSYS diagnostics show mean per-query summed
+`cudaDeviceSynchronize` API duration **17.219 ->7.761 ms**, and leaf kernel mean
+**14.871 ->5.454 ms**.
 API waits overlap GPU work: do not add these times or use profiler durations as
 the clean speedup denominator.
 
@@ -149,7 +150,8 @@ and explicitly check returned float order; both binaries were rebuilt and all
 anchor mismatch was fixed before generation; the failed partial is retained.
 B512's first analysis incorrectly required cross-collector instruction equality:
 source-PC totals equal `sass__inst_executed_per_opcode`, but the hardware total
-is 0.624% higher. Both totals and the unresolved discrepancy remain, without
+exceeds the source total by 0.624% of the hardware total (0.628% of source).
+Both totals and the unresolved discrepancy remain, without
 normalization. All D source/opcode/hardware totals match exactly. NVIDIA documents
 [software-patched source metrics and collection overhead](https://docs.nvidia.com/nsight-compute/ProfilingGuide/#overhead);
 that distinction does not explain this particular B512 gap. No timing or

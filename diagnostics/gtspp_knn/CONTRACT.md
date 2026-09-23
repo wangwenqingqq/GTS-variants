@@ -201,3 +201,7 @@ Require the identical full32gates,64-query stresses, four6-pair matrices, scoped
 profilers and two sustained endpoints. No further candidate is planned here;
 if D64 does not pass, keep the native keeper and report bounded negative or
 inconclusive evidence rather than relaxing the acceptance threshold.
+
+Final reporting clarification: the B512 hardware/source gap is 0.624% of the
+hardware total, or 0.628% of the source total. The earlier percentage used the
+hardware denominator. Counts, collection and every decision are unchanged.
