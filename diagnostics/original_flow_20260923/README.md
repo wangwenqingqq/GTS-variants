@@ -1,7 +1,9 @@
 # Original GTS: CPU, device memory, and intermittent GPU work
 
-Date: 2026-09-23. **NSYS completed; NCU hardware-counter collection was attempted
-but denied. No optimization or source repair was applied.**
+Date: 2026-09-23. **NSYS completed. Initial non-elevated NCU calls were denied;
+[a privileged follow-up](NCU_PRIVILEGE_RETRY.md) now successfully collected four
+selected kernels without driver changes. No optimization or GTS source repair
+was applied.**
 
 ## Conclusion
 
@@ -158,8 +160,10 @@ bottleneck here. See EVIDENCE.json for counts, transfer duration and UVM events.
   No workspace cap or source fix was substituted into this original-only campaign.
 - **NCU:** the targeted SpeedOfLight/LaunchStats/Occupancy/SchedulerStats/
   WarpStateStats run returns `ERR_NVGPUCTRPERM`. A LaunchStats-only attempt is
-  also denied. There is **no successful NCU report, achieved occupancy, SM/DRAM
-  throughput, or stall-counter result**. No elevation or driver change attempted.
+  also denied. Those initial runs produced no hardware-counter report. The later
+  [privileged follow-up](NCU_PRIVILEGE_RETRY.md) successfully collected four
+  selected kernels through the account's existing sudo policy. No driver change
+  was necessary; the initial availability conclusion was too broad.
 - **Sanitizers:** kNN and query-only update pass memcheck and synccheck at both
   32 and all 4,096 queries. Every retained clean/full/light observation matches
   the native oracle. No insertion/deletion, full-ID, full-dataset or long-running
@@ -178,12 +182,12 @@ bottleneck here. See EVIDENCE.json for counts, transfer duration and UVM events.
 | Original GTS consumes high CPU | measured, path/scope-qualified | About one CPU core in this lifecycle; not whole-host saturation or proof of expensive CPU distance arithmetic |
 | It uses almost no device memory | rejected in this absolute form | Small explicit update workspace coexists with a roughly 13-GiB sampled device footprint; kNN reserves a large workspace |
 | GPU work is intermittent | measured in NSYS, overhead-qualified | Gaps remain in the lighter trace; management sampling did not show repeated 100% spikes |
-| The query-only update path has insufficient launch parallelism | measured launch geometry | Most launches have one block; hardware achieved-utilization percentages remain unknown |
+| The query-only update path has insufficient launch parallelism | measured launch geometry | Most launches have one block; later selected-kernel NCU measurements are in [the privileged follow-up](NCU_PRIVILEGE_RETRY.md), not whole-query utilization |
 | All original GTS paths share that bottleneck | rejected for this workload | Batched kNN launches large grids and has substantially greater temporal GPU coverage |
 
-Next steps: repeat the user's actual dataset/command; obtain an administrator-
-approved NCU collection under the same frozen contract; isolate dispatch/working-
-set reuse separately from aggregation. Preserve the untouched baseline. Do not
+Next steps: repeat the user's actual dataset/command; use the now-verified
+privileged NCU path for representative selections; isolate dispatch/working-set
+reuse separately from aggregation. Preserve the untouched baseline. Do not
 turn small-N, one-query dispatch behavior into a universal GPU-tree limitation.
 
 ## 6. Reproduce without editing originals

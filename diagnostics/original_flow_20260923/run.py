@@ -127,7 +127,7 @@ def main():
     state=snapshot(a.gpu);assert not state['apps'].strip()
     index=state['gpu'].split(',')[0].strip()
     for p in [Path(f'/tmp/gtspp_gpu{index}.lock'),root/'run.lock']:
-        f=p.open('a');fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB);locks.append(f)
+        f=p.open('r+' if p.exists() else 'a');fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB);locks.append(f)
     ok=run(root,a.gpu,a.label,a.kind,a.mode,a.long,a.kernel)
     raise SystemExit(0 if ok else 1)
 

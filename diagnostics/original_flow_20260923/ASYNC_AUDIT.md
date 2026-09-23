@@ -170,7 +170,9 @@ stream and contains synchronization, but does not suffer the same per-query
 alone is a sufficient bottleneck diagnosis.
 
 This remains Words N=2,000, repeated checked queries, no insertions/deletions.
-NCU counters remain unavailable. No new GPU job or optimized executable was run;
+NCU was unavailable to the initial non-elevated calls; a later
+[privileged follow-up](NCU_PRIVILEGE_RETRY.md) successfully collected counters.
+This async audit itself introduced no GPU job or optimized executable;
 no speedup, whole-host CPU saturation, full-dataset result, or universal GPU-tree
 claim is established by this follow-up.
 
