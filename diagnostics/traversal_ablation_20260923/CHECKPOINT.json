@@ -1,0 +1,79 @@
+{
+  "experiment": "gts_20260923_traversal_ablation_words2000",
+  "date": "2026-09-23",
+  "state": "built and statically reviewed; runtime unvalidated",
+  "gpu_executions": 0,
+  "reason": "GPU 0 occupied and its advisory lock held by another campaign; no alternate GPU authorized at checkpoint",
+  "hardware_target": "RTX PRO 6000 Blackwell Server Edition, sm_120, CUDA 13.1.115; not a runtime validation",
+  "source_revision": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "comparator_revision": "6221ae9",
+  "artifacts_sha256": {
+    "graph_bench.cu": "bab5f5a657bb53de4722d8b27f7f742aee1c011b65a20dc09b299e0d155bbec1",
+    "traversal_generated.cuh": "16004f30c9a961a63a5bf76f5718d8ee56e2ecfd9fc0a67367d5d054f6f93c1a",
+    "test_traversal.cu": "d19e964ddd9f0f371812d2176b7fbd02c3ab677e920c97f720c3bddb915c0e16",
+    "fused_result.cuh": "9cfe596b73d80a4632d66eaef5ea7283d6fd0230041dd93f2fff391eb572a8f4",
+    "run_ablation.py": "913518ea283b048b299aa96edfde9a96725e19182cac96a60930dad61b850658",
+    "bin/graph_bench": "6811e8ea55bc596e833f4c347d028f1a4822c4c3e1d349e2abb5745a0b492109",
+    "bin/test_traversal": "1079fda69d0372678440c690b3ae2043081f7a6af94c364e228953c9763e8bd7",
+    "logs/build.txt": "ada7d60bfca4468add96b9e4b021ad5ae75d7aa585fa24e3c39878c620688bfb",
+    "logs/build_test.txt": "91418c20234f273696383765e9ad4c40bad1149f688a439c6b4bec7eadb92ff6",
+    "logs/resources.txt": "7d3519bcbe3d61bc8903ee3a1c72bc212276a1e69d311d070ad9c910630d206a",
+    "suite.py": "8bad93420495c7b19fab046ae8e7a256e46a0b9aa6acb35388b0a8e2da397f67"
+  },
+  "compiled_archive_sha256": "177c3a46985ab192e237924041ed7a4b22a04be50b41eba2748894753739c77c",
+  "static_resources": {
+    "findNextRnn": {
+      "final_resource_line": "REG:50 STACK:47528 SHARED:0 LOCAL:0 CONSTANT[2]:24 CONSTANT[0]:992 TEXTURE:0 SURFACE:0 SAMPLER:0",
+      "normalization": {
+        "function_count": 1,
+        "instruction_count": 1392,
+        "line_count": 1393,
+        "normalization": "sass-normalize-v1",
+        "sha256": "4c3c5d7e5667cff44c90deaa42cae8de273d207572279b908b51a37db68d5dea"
+      },
+      "static_LDL": 12,
+      "static_STL": 55
+    },
+    "fusedTraversal": {
+      "final_resource_line": "REG:52 STACK:47528 SHARED:0 LOCAL:0 CONSTANT[2]:24 CONSTANT[0]:1008 TEXTURE:0 SURFACE:0 SAMPLER:0",
+      "normalization": {
+        "function_count": 1,
+        "instruction_count": 1536,
+        "line_count": 1537,
+        "normalization": "sass-normalize-v1",
+        "sha256": "9b41548b2981c3600feda922a8f9d3b82a8ea3e722525f10c0986d738d4b192c"
+      },
+      "static_LDL": 12,
+      "static_STL": 55
+    },
+    "dedupLevel": {
+      "final_resource_line": "REG:48 STACK:47528 SHARED:1064 LOCAL:0 CONSTANT[2]:24 CONSTANT[0]:1000 TEXTURE:0 SURFACE:0 SAMPLER:0",
+      "normalization": {
+        "function_count": 1,
+        "instruction_count": 1520,
+        "line_count": 1521,
+        "normalization": "sass-normalize-v1",
+        "sha256": "fcad5318ae5548ca790141e3e95688f806a1e84347e2769269e8cb4b7ccb2dc3"
+      },
+      "static_LDL": 12,
+      "static_STL": 55
+    }
+  },
+  "validated": [
+    "CPU generator comparator-drift and dispatch check",
+    "six-mode direction-balanced order check",
+    "fresh main and diagnostic executable compilation",
+    "selected SASS/resources and source identity",
+    "independent read-only source review",
+    "label-specific profiler/sanitizer tool and gate binary/runner identity checks"
+  ],
+  "pending": [
+    "352-case traversal differential regression",
+    "27 full-output/oracle/order checks",
+    "24 sanitizer runs",
+    "six 16384-query stress runs",
+    "same-campaign paired and sustained timing",
+    "NSYS launch and downstream-invariance checks"
+  ],
+  "allowed_claim": "Two independent candidates are implemented and compile. No runtime correctness, reduced work count, removed runtime launches, or speedup is yet measured."
+}
