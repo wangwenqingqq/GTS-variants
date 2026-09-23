@@ -1,0 +1,1288 @@
+{
+  "parent_experiment": "gts_20260923_original_flow_words",
+  "scope": "Diagnostic reanalysis only; same first/last-query-kernel spans; no new GPU run or clean latency.",
+  "caveats": [
+    "API/GPU temporal overlap is not CPU arithmetic or removable overhead.",
+    "Launch start is a host submission proxy, not a hardware queue-depth counter.",
+    "Init-to-next-init cycles contain previous cleanup and next setup; omit the last incomplete cycle.",
+    "One stream is not inherently wrong; device ordering and host synchronization are distinct."
+  ],
+  "traces": {
+    "nsys_knn": {
+      "sqlite_sha256": "48cda47ff2c1b1f72ecc38228a27f14a9188b0c6e013a144236d53577a1d0513",
+      "kernel_count": 27,
+      "kernel_us": {
+        "min": 0.864,
+        "p10": 1.216,
+        "median": 81.824,
+        "p90": 197.4006000000001,
+        "max": 4428.772
+      },
+      "kernel_duration_le_us": {
+        "2": 6,
+        "5": 7,
+        "10": 8
+      },
+      "kernel_stream_ids": [
+        7
+      ],
+      "kernel_sum_minus_union_us": 0.0,
+      "next_launch_api_starts_after_previous_kernel_end": 16,
+      "adjacent_kernel_pairs": 26,
+      "query_span_ms": 11.842134,
+      "gpu_work_ms": 6.851056,
+      "gpu_gap_ms": 4.991078,
+      "gap_overlapping_cuda_api_ms": {
+        "launch": 0.347851,
+        "synchronize": 0.077415,
+        "allocation_free": 0.505315,
+        "copy_api": 0.078215,
+        "other": 0.021267
+      },
+      "gap_outside_recorded_cuda_api_ms": 3.9610149999999997,
+      "async_copy_immediately_followed_by_stream_sync": 6,
+      "d2h_bytes_histogram": {
+        "4": 6
+      },
+      "by_kernel": {
+        "initPListKnn": {
+          "calls": 1,
+          "us": {
+            "min": 1.472,
+            "p10": 1.472,
+            "median": 1.472,
+            "p90": 1.472,
+            "max": 1.472
+          }
+        },
+        "initDisK": {
+          "calls": 1,
+          "us": {
+            "min": 70.592,
+            "p10": 70.592,
+            "median": 70.592,
+            "p90": 70.592,
+            "max": 70.592
+          }
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 6,
+          "us": {
+            "min": 1.216,
+            "p10": 1.216,
+            "median": 33.1515,
+            "p90": 67.744,
+            "max": 68.96
+          }
+        },
+        "labelCNode": {
+          "calls": 2,
+          "us": {
+            "min": 110.367,
+            "p10": 124.7381,
+            "median": 182.2225,
+            "p90": 239.70690000000002,
+            "max": 254.078
+          }
+        },
+        "getQCountKnn": {
+          "calls": 1,
+          "us": {
+            "min": 81.824,
+            "p10": 81.824,
+            "median": 81.824,
+            "p90": 81.824,
+            "max": 81.824
+          }
+        },
+        "DeviceReduceKernel": {
+          "calls": 1,
+          "us": {
+            "min": 2.56,
+            "p10": 2.56,
+            "median": 2.56,
+            "p90": 2.56,
+            "max": 2.56
+          }
+        },
+        "DeviceScanInitKernel": {
+          "calls": 1,
+          "us": {
+            "min": 0.864,
+            "p10": 0.864,
+            "median": 0.864,
+            "p90": 0.864,
+            "max": 0.864
+          }
+        },
+        "DeviceScanKernel": {
+          "calls": 1,
+          "us": {
+            "min": 9.312,
+            "p10": 9.312,
+            "median": 9.312,
+            "p90": 9.312,
+            "max": 9.312
+          }
+        },
+        "mergeLNodeKnn": {
+          "calls": 1,
+          "us": {
+            "min": 86.367,
+            "p10": 86.367,
+            "median": 86.367,
+            "p90": 86.367,
+            "max": 86.367
+          }
+        },
+        "dataProcessKnn": {
+          "calls": 1,
+          "us": {
+            "min": 4428.772,
+            "p10": 4428.772,
+            "median": 4428.772,
+            "p90": 4428.772,
+            "max": 4428.772
+          }
+        },
+        "DeviceRadixSortHistogramKernel": {
+          "calls": 1,
+          "us": {
+            "min": 56.96,
+            "p10": 56.96,
+            "median": 56.96,
+            "p90": 56.96,
+            "max": 56.96
+          }
+        },
+        "DeviceRadixSortExclusiveSumKernel": {
+          "calls": 1,
+          "us": {
+            "min": 1.184,
+            "p10": 1.184,
+            "median": 1.184,
+            "p90": 1.184,
+            "max": 1.184
+          }
+        },
+        "DeviceRadixSortOnesweepKernel": {
+          "calls": 8,
+          "us": {
+            "min": 153.951,
+            "p10": 155.2278,
+            "median": 159.391,
+            "p90": 166.20059999999998,
+            "max": 177.087
+          }
+        },
+        "mergeResKnn": {
+          "calls": 1,
+          "us": {
+            "min": 227.871,
+            "p10": 227.871,
+            "median": 227.871,
+            "p90": 227.871,
+            "max": 227.871
+          }
+        }
+      }
+    },
+    "nsys_light_knn": {
+      "sqlite_sha256": "6251a78d1defb4537a8c8124668b31096b0bbfdd3feded882231c19ff84c610a",
+      "kernel_count": 27,
+      "kernel_us": {
+        "min": 0.864,
+        "p10": 1.184,
+        "median": 56.863,
+        "p90": 167.62780000000004,
+        "max": 4713.128
+      },
+      "kernel_duration_le_us": {
+        "2": 6,
+        "5": 7,
+        "10": 8
+      },
+      "kernel_stream_ids": [
+        7
+      ],
+      "kernel_sum_minus_union_us": 0.0,
+      "next_launch_api_starts_after_previous_kernel_end": 16,
+      "adjacent_kernel_pairs": 26,
+      "query_span_ms": 9.644207,
+      "gpu_work_ms": 6.789467,
+      "gpu_gap_ms": 2.85474,
+      "gap_overlapping_cuda_api_ms": {
+        "synchronize": 0.071425,
+        "launch": 0.329458,
+        "allocation_free": 0.441173,
+        "copy_api": 0.072269,
+        "other": 0.016373
+      },
+      "gap_outside_recorded_cuda_api_ms": 1.924042,
+      "async_copy_immediately_followed_by_stream_sync": 6,
+      "d2h_bytes_histogram": {
+        "4": 6
+      },
+      "by_kernel": {
+        "initPListKnn": {
+          "calls": 1,
+          "us": {
+            "min": 1.376,
+            "p10": 1.376,
+            "median": 1.376,
+            "p90": 1.376,
+            "max": 1.376
+          }
+        },
+        "initDisK": {
+          "calls": 1,
+          "us": {
+            "min": 61.248,
+            "p10": 61.248,
+            "median": 61.248,
+            "p90": 61.248,
+            "max": 61.248
+          }
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 6,
+          "us": {
+            "min": 1.152,
+            "p10": 1.168,
+            "median": 20.416,
+            "p90": 47.712,
+            "max": 55.264
+          }
+        },
+        "labelCNode": {
+          "calls": 2,
+          "us": {
+            "min": 53.12,
+            "p10": 53.7279,
+            "median": 56.159499999999994,
+            "p90": 58.5911,
+            "max": 59.199
+          }
+        },
+        "getQCountKnn": {
+          "calls": 1,
+          "us": {
+            "min": 53.696,
+            "p10": 53.696,
+            "median": 53.696,
+            "p90": 53.696,
+            "max": 53.696
+          }
+        },
+        "DeviceReduceKernel": {
+          "calls": 1,
+          "us": {
+            "min": 2.56,
+            "p10": 2.56,
+            "median": 2.56,
+            "p90": 2.56,
+            "max": 2.56
+          }
+        },
+        "DeviceScanInitKernel": {
+          "calls": 1,
+          "us": {
+            "min": 0.864,
+            "p10": 0.864,
+            "median": 0.864,
+            "p90": 0.864,
+            "max": 0.864
+          }
+        },
+        "DeviceScanKernel": {
+          "calls": 1,
+          "us": {
+            "min": 9.152,
+            "p10": 9.152,
+            "median": 9.152,
+            "p90": 9.152,
+            "max": 9.152
+          }
+        },
+        "mergeLNodeKnn": {
+          "calls": 1,
+          "us": {
+            "min": 61.183,
+            "p10": 61.183,
+            "median": 61.183,
+            "p90": 61.183,
+            "max": 61.183
+          }
+        },
+        "dataProcessKnn": {
+          "calls": 1,
+          "us": {
+            "min": 4713.128,
+            "p10": 4713.128,
+            "median": 4713.128,
+            "p90": 4713.128,
+            "max": 4713.128
+          }
+        },
+        "DeviceRadixSortHistogramKernel": {
+          "calls": 1,
+          "us": {
+            "min": 56.863,
+            "p10": 56.863,
+            "median": 56.863,
+            "p90": 56.863,
+            "max": 56.863
+          }
+        },
+        "DeviceRadixSortExclusiveSumKernel": {
+          "calls": 1,
+          "us": {
+            "min": 1.184,
+            "p10": 1.184,
+            "median": 1.184,
+            "p90": 1.184,
+            "max": 1.184
+          }
+        },
+        "DeviceRadixSortOnesweepKernel": {
+          "calls": 8,
+          "us": {
+            "min": 154.592,
+            "p10": 155.1968,
+            "median": 159.119,
+            "p90": 165.9286,
+            "max": 177.823
+          }
+        },
+        "mergeResKnn": {
+          "calls": 1,
+          "us": {
+            "min": 267.966,
+            "p10": 267.966,
+            "median": 267.966,
+            "p90": 267.966,
+            "max": 267.966
+          }
+        }
+      }
+    },
+    "nsys_light_update": {
+      "sqlite_sha256": "0cb02048775fdd5990079e329f904b76e4e633b8fc4d71437eb35c73368ce422",
+      "kernel_count": 98304,
+      "kernel_us": {
+        "min": 0.831,
+        "p10": 0.864,
+        "median": 2.112,
+        "p90": 9.398399999999906,
+        "max": 533.501
+      },
+      "kernel_duration_le_us": {
+        "2": 46300,
+        "5": 81685,
+        "10": 88730
+      },
+      "kernel_stream_ids": [
+        7
+      ],
+      "kernel_sum_minus_union_us": 0.0,
+      "next_launch_api_starts_after_previous_kernel_end": 85556,
+      "adjacent_kernel_pairs": 98303,
+      "query_span_ms": 2831.62279,
+      "gpu_work_ms": 735.204325,
+      "gpu_gap_ms": 2096.418465,
+      "gap_overlapping_cuda_api_ms": {
+        "synchronize": 370.07958,
+        "launch": 374.211614,
+        "allocation_free": 734.380429,
+        "copy_api": 76.010686
+      },
+      "gap_outside_recorded_cuda_api_ms": 541.7361560000002,
+      "async_copy_immediately_followed_by_stream_sync": 8192,
+      "d2h_bytes_histogram": {
+        "4": 8192
+      },
+      "by_kernel": {
+        "initQnode": {
+          "calls": 4096,
+          "us": {
+            "min": 1.472,
+            "p10": 1.536,
+            "median": 1.568,
+            "p90": 1.664,
+            "max": 457.63
+          }
+        },
+        "findNextRnn": {
+          "calls": 8192,
+          "us": {
+            "min": 5.215,
+            "p10": 6.208,
+            "median": 7.616,
+            "p90": 11.104,
+            "max": 494.398
+          }
+        },
+        "updatePnodeFlag": {
+          "calls": 8192,
+          "us": {
+            "min": 1.248,
+            "p10": 1.888,
+            "median": 1.984,
+            "p90": 2.048,
+            "max": 42.56
+          }
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 8192,
+          "us": {
+            "min": 1.151,
+            "p10": 1.152,
+            "median": 1.216,
+            "p90": 1.792,
+            "max": 1.856
+          }
+        },
+        "initRes": {
+          "calls": 4096,
+          "us": {
+            "min": 0.832,
+            "p10": 0.864,
+            "median": 0.896,
+            "p90": 0.896,
+            "max": 1.024
+          }
+        },
+        "getQnodeCount": {
+          "calls": 4096,
+          "us": {
+            "min": 4.191,
+            "p10": 4.224,
+            "median": 4.288,
+            "p90": 4.384,
+            "max": 408.798
+          }
+        },
+        "DeviceScanInitKernel": {
+          "calls": 20480,
+          "us": {
+            "min": 0.831,
+            "p10": 0.832,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.928
+          }
+        },
+        "DeviceScanKernel": {
+          "calls": 20480,
+          "us": {
+            "min": 2.239,
+            "p10": 2.272,
+            "median": 2.4,
+            "p90": 3.2,
+            "max": 80.735
+          }
+        },
+        "mergeLeafNode": {
+          "calls": 4096,
+          "us": {
+            "min": 1.759,
+            "p10": 1.824,
+            "median": 1.856,
+            "p90": 1.952,
+            "max": 533.501
+          }
+        },
+        "leafProcessRnnUpdate": {
+          "calls": 4096,
+          "us": {
+            "min": 14.752,
+            "p10": 27.2155,
+            "median": 34.144,
+            "p90": 45.535,
+            "max": 330.366
+          }
+        },
+        "getQresultCount": {
+          "calls": 4096,
+          "us": {
+            "min": 4.96,
+            "p10": 25.536,
+            "median": 47.136,
+            "p90": 48.32,
+            "max": 493.086
+          }
+        },
+        "mergeResultRnn": {
+          "calls": 4096,
+          "us": {
+            "min": 2.016,
+            "p10": 2.08,
+            "median": 2.24,
+            "p90": 2.432,
+            "max": 457.053
+          }
+        },
+        "mergeTotalResult": {
+          "calls": 4096,
+          "us": {
+            "min": 2.976,
+            "p10": 3.072,
+            "median": 3.168,
+            "p90": 3.392,
+            "max": 442.558
+          }
+        }
+      },
+      "query_count": 4096,
+      "complete_init_to_next_init_cycles": 4095,
+      "cycle_api_counts": {
+        "cudaDeviceSynchronize_v3020": {
+          "12": 4095
+        },
+        "cudaFree_v3020": {
+          "24": 4095
+        },
+        "cudaLaunchKernel_v7000": {
+          "24": 4095
+        },
+        "cudaMallocManaged_v6000": {
+          "8": 4095
+        },
+        "cudaMalloc_v3020": {
+          "16": 4095
+        },
+        "cudaMemcpyAsync_v3020": {
+          "2": 4095
+        },
+        "cudaStreamSynchronize_v3020": {
+          "9": 4095
+        }
+      },
+      "kernel_positions": [
+        {
+          "position": 1,
+          "name": "initQnode",
+          "us": {
+            "min": 1.472,
+            "p10": 1.536,
+            "median": 1.568,
+            "p90": 1.664,
+            "max": 457.63
+          }
+        },
+        {
+          "position": 2,
+          "name": "findNextRnn",
+          "us": {
+            "min": 5.215,
+            "p10": 6.144,
+            "median": 6.912,
+            "p90": 9.088,
+            "max": 494.398
+          }
+        },
+        {
+          "position": 3,
+          "name": "updatePnodeFlag",
+          "us": {
+            "min": 1.376,
+            "p10": 1.984,
+            "median": 2.016,
+            "p90": 2.08,
+            "max": 42.56
+          }
+        },
+        {
+          "position": 4,
+          "name": "findNextRnn",
+          "us": {
+            "min": 5.312,
+            "p10": 7.2475000000000005,
+            "median": 8.416,
+            "p90": 11.712,
+            "max": 474.494
+          }
+        },
+        {
+          "position": 5,
+          "name": "updatePnodeFlag",
+          "us": {
+            "min": 1.248,
+            "p10": 1.856,
+            "median": 1.92,
+            "p90": 1.984,
+            "max": 35.263
+          }
+        },
+        {
+          "position": 6,
+          "name": "DeviceReduceSingleTileKernel",
+          "us": {
+            "min": 1.151,
+            "p10": 1.152,
+            "median": 1.184,
+            "p90": 1.184,
+            "max": 1.248
+          }
+        },
+        {
+          "position": 7,
+          "name": "initRes",
+          "us": {
+            "min": 0.832,
+            "p10": 0.864,
+            "median": 0.896,
+            "p90": 0.896,
+            "max": 1.024
+          }
+        },
+        {
+          "position": 8,
+          "name": "getQnodeCount",
+          "us": {
+            "min": 4.191,
+            "p10": 4.224,
+            "median": 4.288,
+            "p90": 4.384,
+            "max": 408.798
+          }
+        },
+        {
+          "position": 9,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.832,
+            "median": 0.864,
+            "p90": 0.864,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 10,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.239,
+            "p10": 2.272,
+            "median": 2.272,
+            "p90": 2.336,
+            "max": 2.368
+          }
+        },
+        {
+          "position": 11,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.863,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 12,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.239,
+            "p10": 2.272,
+            "median": 2.272,
+            "p90": 2.336,
+            "max": 2.368
+          }
+        },
+        {
+          "position": 13,
+          "name": "mergeLeafNode",
+          "us": {
+            "min": 1.759,
+            "p10": 1.824,
+            "median": 1.856,
+            "p90": 1.952,
+            "max": 533.501
+          }
+        },
+        {
+          "position": 14,
+          "name": "leafProcessRnnUpdate",
+          "us": {
+            "min": 14.752,
+            "p10": 27.2155,
+            "median": 34.144,
+            "p90": 45.535,
+            "max": 330.366
+          }
+        },
+        {
+          "position": 15,
+          "name": "DeviceReduceSingleTileKernel",
+          "us": {
+            "min": 1.151,
+            "p10": 1.568,
+            "median": 1.76,
+            "p90": 1.792,
+            "max": 1.856
+          }
+        },
+        {
+          "position": 16,
+          "name": "getQresultCount",
+          "us": {
+            "min": 4.96,
+            "p10": 25.536,
+            "median": 47.136,
+            "p90": 48.32,
+            "max": 493.086
+          }
+        },
+        {
+          "position": 17,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.832,
+            "median": 0.864,
+            "p90": 0.864,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 18,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.272,
+            "p10": 2.848,
+            "median": 2.88,
+            "p90": 2.944,
+            "max": 31.008
+          }
+        },
+        {
+          "position": 19,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.863,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 20,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.304,
+            "p10": 2.368,
+            "median": 2.4,
+            "p90": 2.432,
+            "max": 2.464
+          }
+        },
+        {
+          "position": 21,
+          "name": "mergeResultRnn",
+          "us": {
+            "min": 2.016,
+            "p10": 2.08,
+            "median": 2.24,
+            "p90": 2.432,
+            "max": 457.053
+          }
+        },
+        {
+          "position": 22,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.832,
+            "p10": 0.864,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.928
+          }
+        },
+        {
+          "position": 23,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.272,
+            "p10": 3.136,
+            "median": 3.2,
+            "p90": 3.328,
+            "max": 80.735
+          }
+        },
+        {
+          "position": 24,
+          "name": "mergeTotalResult",
+          "us": {
+            "min": 2.976,
+            "p10": 3.072,
+            "median": 3.168,
+            "p90": 3.392,
+            "max": 442.558
+          }
+        }
+      ]
+    },
+    "nsys_update_retry": {
+      "sqlite_sha256": "b8b566f03eb97a9dcfc0e207b1183928aabf6dbf852fe117a0f49cf342705378",
+      "kernel_count": 98304,
+      "kernel_us": {
+        "min": 0.831,
+        "p10": 0.864,
+        "median": 2.24,
+        "p90": 11.04,
+        "max": 579.357
+      },
+      "kernel_duration_le_us": {
+        "2": 42425,
+        "5": 81258,
+        "10": 88130
+      },
+      "kernel_stream_ids": [
+        7
+      ],
+      "kernel_sum_minus_union_us": 0.0,
+      "next_launch_api_starts_after_previous_kernel_end": 82509,
+      "adjacent_kernel_pairs": 98303,
+      "query_span_ms": 4789.398708,
+      "gpu_work_ms": 854.478345,
+      "gpu_gap_ms": 3934.920363,
+      "gap_overlapping_cuda_api_ms": {
+        "synchronize": 380.208574,
+        "launch": 372.332022,
+        "allocation_free": 851.851626,
+        "copy_api": 73.65841
+      },
+      "gap_outside_recorded_cuda_api_ms": 2256.8697310000002,
+      "async_copy_immediately_followed_by_stream_sync": 8192,
+      "d2h_bytes_histogram": {
+        "4": 8192
+      },
+      "by_kernel": {
+        "initQnode": {
+          "calls": 4096,
+          "us": {
+            "min": 1.599,
+            "p10": 1.632,
+            "median": 1.664,
+            "p90": 1.664,
+            "max": 478.109
+          }
+        },
+        "findNextRnn": {
+          "calls": 8192,
+          "us": {
+            "min": 4.992,
+            "p10": 6.368,
+            "median": 7.744,
+            "p90": 11.968,
+            "max": 465.468
+          }
+        },
+        "updatePnodeFlag": {
+          "calls": 8192,
+          "us": {
+            "min": 1.248,
+            "p10": 1.984,
+            "median": 2.08,
+            "p90": 2.112,
+            "max": 36.032
+          }
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 8192,
+          "us": {
+            "min": 1.151,
+            "p10": 1.152,
+            "median": 1.216,
+            "p90": 1.792,
+            "max": 1.856
+          }
+        },
+        "initRes": {
+          "calls": 4096,
+          "us": {
+            "min": 0.831,
+            "p10": 0.864,
+            "median": 0.896,
+            "p90": 0.896,
+            "max": 1.024
+          }
+        },
+        "getQnodeCount": {
+          "calls": 4096,
+          "us": {
+            "min": 4.287,
+            "p10": 4.32,
+            "median": 4.352,
+            "p90": 4.416,
+            "max": 419.421
+          }
+        },
+        "DeviceScanInitKernel": {
+          "calls": 20480,
+          "us": {
+            "min": 0.831,
+            "p10": 0.832,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.928
+          }
+        },
+        "DeviceScanKernel": {
+          "calls": 20480,
+          "us": {
+            "min": 2.239,
+            "p10": 2.272,
+            "median": 2.4,
+            "p90": 3.328,
+            "max": 100.159
+          }
+        },
+        "mergeLeafNode": {
+          "calls": 4096,
+          "us": {
+            "min": 1.856,
+            "p10": 1.92,
+            "median": 1.92,
+            "p90": 1.952,
+            "max": 579.357
+          }
+        },
+        "leafProcessRnnUpdate": {
+          "calls": 4096,
+          "us": {
+            "min": 20.256,
+            "p10": 36.544,
+            "median": 55.551500000000004,
+            "p90": 62.319500000000005,
+            "max": 343.518
+          }
+        },
+        "getQresultCount": {
+          "calls": 4096,
+          "us": {
+            "min": 5.12,
+            "p10": 25.6635,
+            "median": 47.296,
+            "p90": 48.448,
+            "max": 454.205
+          }
+        },
+        "mergeResultRnn": {
+          "calls": 4096,
+          "us": {
+            "min": 2.112,
+            "p10": 2.304,
+            "median": 2.688,
+            "p90": 2.816,
+            "max": 466.685
+          }
+        },
+        "mergeTotalResult": {
+          "calls": 4096,
+          "us": {
+            "min": 1.504,
+            "p10": 3.2,
+            "median": 3.392,
+            "p90": 3.456,
+            "max": 468.221
+          }
+        }
+      },
+      "query_count": 4096,
+      "complete_init_to_next_init_cycles": 4095,
+      "cycle_api_counts": {
+        "cudaDeviceSynchronize_v3020": {
+          "12": 4095
+        },
+        "cudaFree_v3020": {
+          "24": 4095
+        },
+        "cudaLaunchKernel_v7000": {
+          "24": 4095
+        },
+        "cudaMallocManaged_v6000": {
+          "8": 4095
+        },
+        "cudaMalloc_v3020": {
+          "16": 4095
+        },
+        "cudaMemcpyAsync_v3020": {
+          "2": 4095
+        },
+        "cudaStreamSynchronize_v3020": {
+          "9": 4095
+        }
+      },
+      "kernel_positions": [
+        {
+          "position": 1,
+          "name": "initQnode",
+          "us": {
+            "min": 1.599,
+            "p10": 1.632,
+            "median": 1.664,
+            "p90": 1.664,
+            "max": 478.109
+          }
+        },
+        {
+          "position": 2,
+          "name": "findNextRnn",
+          "us": {
+            "min": 4.992,
+            "p10": 6.336,
+            "median": 7.04,
+            "p90": 9.984,
+            "max": 465.468
+          }
+        },
+        {
+          "position": 3,
+          "name": "updatePnodeFlag",
+          "us": {
+            "min": 1.344,
+            "p10": 2.08,
+            "median": 2.112,
+            "p90": 2.112,
+            "max": 2.56
+          }
+        },
+        {
+          "position": 4,
+          "name": "findNextRnn",
+          "us": {
+            "min": 5.44,
+            "p10": 7.264,
+            "median": 8.576,
+            "p90": 12.0155,
+            "max": 406.333
+          }
+        },
+        {
+          "position": 5,
+          "name": "updatePnodeFlag",
+          "us": {
+            "min": 1.248,
+            "p10": 1.984,
+            "median": 2.016,
+            "p90": 2.048,
+            "max": 36.032
+          }
+        },
+        {
+          "position": 6,
+          "name": "DeviceReduceSingleTileKernel",
+          "us": {
+            "min": 1.151,
+            "p10": 1.152,
+            "median": 1.184,
+            "p90": 1.216,
+            "max": 1.216
+          }
+        },
+        {
+          "position": 7,
+          "name": "initRes",
+          "us": {
+            "min": 0.831,
+            "p10": 0.864,
+            "median": 0.896,
+            "p90": 0.896,
+            "max": 1.024
+          }
+        },
+        {
+          "position": 8,
+          "name": "getQnodeCount",
+          "us": {
+            "min": 4.287,
+            "p10": 4.32,
+            "median": 4.352,
+            "p90": 4.416,
+            "max": 419.421
+          }
+        },
+        {
+          "position": 9,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.832,
+            "median": 0.864,
+            "p90": 0.864,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 10,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.239,
+            "p10": 2.272,
+            "median": 2.272,
+            "p90": 2.336,
+            "max": 2.368
+          }
+        },
+        {
+          "position": 11,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.864,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 12,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.239,
+            "p10": 2.272,
+            "median": 2.272,
+            "p90": 2.336,
+            "max": 2.336
+          }
+        },
+        {
+          "position": 13,
+          "name": "mergeLeafNode",
+          "us": {
+            "min": 1.856,
+            "p10": 1.92,
+            "median": 1.92,
+            "p90": 1.952,
+            "max": 579.357
+          }
+        },
+        {
+          "position": 14,
+          "name": "leafProcessRnnUpdate",
+          "us": {
+            "min": 20.256,
+            "p10": 36.544,
+            "median": 55.551500000000004,
+            "p90": 62.319500000000005,
+            "max": 343.518
+          }
+        },
+        {
+          "position": 15,
+          "name": "DeviceReduceSingleTileKernel",
+          "us": {
+            "min": 1.151,
+            "p10": 1.568,
+            "median": 1.76,
+            "p90": 1.792,
+            "max": 1.856
+          }
+        },
+        {
+          "position": 16,
+          "name": "getQresultCount",
+          "us": {
+            "min": 5.12,
+            "p10": 25.6635,
+            "median": 47.296,
+            "p90": 48.448,
+            "max": 454.205
+          }
+        },
+        {
+          "position": 17,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.832,
+            "median": 0.864,
+            "p90": 0.864,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 18,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.24,
+            "p10": 2.848,
+            "median": 2.88,
+            "p90": 2.912,
+            "max": 100.159
+          }
+        },
+        {
+          "position": 19,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.831,
+            "p10": 0.864,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.896
+          }
+        },
+        {
+          "position": 20,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.304,
+            "p10": 2.368,
+            "median": 2.4,
+            "p90": 2.432,
+            "max": 2.464
+          }
+        },
+        {
+          "position": 21,
+          "name": "mergeResultRnn",
+          "us": {
+            "min": 2.112,
+            "p10": 2.304,
+            "median": 2.688,
+            "p90": 2.816,
+            "max": 466.685
+          }
+        },
+        {
+          "position": 22,
+          "name": "DeviceScanInitKernel",
+          "us": {
+            "min": 0.832,
+            "p10": 0.864,
+            "median": 0.864,
+            "p90": 0.896,
+            "max": 0.928
+          }
+        },
+        {
+          "position": 23,
+          "name": "DeviceScanKernel",
+          "us": {
+            "min": 2.24,
+            "p10": 3.296,
+            "median": 3.328,
+            "p90": 3.424,
+            "max": 87.423
+          }
+        },
+        {
+          "position": 24,
+          "name": "mergeTotalResult",
+          "us": {
+            "min": 1.504,
+            "p10": 3.2,
+            "median": 3.392,
+            "p90": 3.456,
+            "max": 468.221
+          }
+        }
+      ]
+    }
+  }
+}

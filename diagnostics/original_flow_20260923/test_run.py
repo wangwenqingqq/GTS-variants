@@ -27,6 +27,13 @@ for rejected in ({'exit_code':1},{'stop_reason':'monitor stop'},
                  {'runtime_errors':['CUDA error']}):
     assert not admitted(accepted | rejected)
 print('PASS: failed, stopped, invalid and unsafe receipts excluded from summaries')
+from analyze_async import overlap,category
+assert overlap([(0,4),(2,6),(8,10)],[(1,3),(5,9)])==4
+assert overlap([],[(1,3)])==0
+assert overlap([(0,2)],[(2,4)])==0
+assert category('cudaDeviceSynchronize_v3020')=='synchronize'
+assert category('cudaMallocManaged_v6000')=='allocation_free'
+print('PASS: gap/API intersections merge overlaps and preserve touching boundaries')
 
 # Optional release check against the separately supplied original sources/data.
 import hashlib

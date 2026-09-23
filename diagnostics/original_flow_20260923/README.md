@@ -41,6 +41,9 @@ insertion/deletion throughput. Valid results are counts/kth distances, not full 
   0% utilization and no compute processes at closure.
 - Contract: [CONTRACT.md](CONTRACT.md). Numeric results, all receipts and hashes:
   [EVIDENCE.json](EVIDENCE.json). Raw data/source copies/logs remain excluded.
+- Follow-up: [small-kernel and asynchronous-execution audit](ASYNC_AUDIT.md)
+  maps the same traces to per-query waits, scalar feedback and source dependencies;
+  no optimized executable or new GPU run is implied.
 
 ## 1. Clean runs: high CPU means one core, not the whole host
 
