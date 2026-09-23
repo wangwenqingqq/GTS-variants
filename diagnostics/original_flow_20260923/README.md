@@ -44,6 +44,9 @@ insertion/deletion throughput. Valid results are counts/kth distances, not full 
 - Follow-up: [small-kernel and asynchronous-execution audit](ASYNC_AUDIT.md)
   maps the same traces to per-query waits, scalar feedback and source dependencies;
   no optimized executable or new GPU run is implied.
+- Before implementation: [fusion ownership and readiness plan](FUSION_PLAN.md)
+  separates local producer/consumer fusion from cross-block completion and
+  preserves full-result semantics; its three/four-kernel target is unmeasured.
 
 ## 1. Clean runs: high CPU means one core, not the whole host
 
