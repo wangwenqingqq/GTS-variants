@@ -1,0 +1,174 @@
+variant,function,opcode,warp_instructions,thread_instructions,predicated_thread_instructions,stall_samples
+A,__cuda_sm20_div_rn_f64_full,MOV,1664,1664,1408,0
+A,__cuda_sm20_div_rn_f64_full,FSETP.GEU.AND,256,256,256,0
+A,__cuda_sm20_div_rn_f64_full,LOP3.LUT,1536,1536,1280,2
+A,__cuda_sm20_div_rn_f64_full,BSSY.RECONVERGENT,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,ISETP.GE.U32.AND,256,256,256,0
+A,__cuda_sm20_div_rn_f64_full,DMUL,256,256,128,2
+A,__cuda_sm20_div_rn_f64_full,MUFU.RCP64H,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,SEL,256,256,256,0
+A,__cuda_sm20_div_rn_f64_full,IADD,256,256,256,0
+A,__cuda_sm20_div_rn_f64_full,NOP,4352,4352,4352,3
+A,__cuda_sm20_div_rn_f64_full,DFMA,1024,1024,1024,0
+A,__cuda_sm20_div_rn_f64_full,ISETP.GT.U32.AND,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,ISETP.GT.U32.OR,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,BRA,640,640,256,2
+A,__cuda_sm20_div_rn_f64_full,DSETP.NAN.AND,256,256,256,0
+A,__cuda_sm20_div_rn_f64_full,ISETP.NE.AND,256,256,256,0
+A,__cuda_sm20_div_rn_f64_full,MOV.64,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,ISETP.EQ.OR,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,BSYNC.RECONVERGENT,128,128,128,0
+A,__cuda_sm20_div_rn_f64_full,RET.ABS.NODEC,128,128,128,0
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDC,62888916,1951495366,1951495366,7220
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDCU.64,19729856,631355392,631355392,159
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IADD,249089432,6014850904,4604166200,25576
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",UMOV,44392176,1361360064,1361360064,423
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MOV,115913416,3452376898,3452376898,7619
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDC.64,88784352,2154806840,2154806840,20590
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDG.E,371167916,3575297278,3575297278,55994
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD.WIDE,128244064,2932392802,2932392802,84341
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",HFMA2,24662320,696889132,696889132,733
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",S2UR,19729856,631355392,631355392,173
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD,75220076,2181560796,2181560796,5992
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IABS,67821380,2066702416,2066702416,2865
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",I2F.RP,22196088,680680032,680680032,695
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MUFU.RCP,22196088,680680032,680680032,4717
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LOP3.LUT,48091524,1402231484,746213772,2338
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2I.FTZ.U32.TRUNC.NTZ,22196088,680680032,680680032,1822
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD.HI.U32,45625292,1386022384,1386022384,4155
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GT.U32.AND,24662320,713446902,713446902,2336
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GE.AND,45625292,1369464614,1369464614,1900
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GE.U32.AND,24662320,713446902,713446902,837
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.NE.AND,46858408,859328930,859328930,14908
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",S2R,19729856,631355392,631355392,172
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IADD3,19729856,631355392,631355392,2360
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDG.E.64,20962972,656017712,656017712,8789
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2I.F64.TRUNC,20962972,656017712,656017712,150650
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",EXIT,20962972,656017712,631355392,6213
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",I2F.F64,4932464,65533996,65533996,975
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BSSY.RECONVERGENT,6165580,73638418,73638418,164
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MOV.64,6165580,73638418,73638418,6420
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GE.OR,1233116,24662320,24662320,65
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BRA,33294132,268496288,195206412,5650
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GT.AND,1233116,8104550,8104550,1356
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",VIMNMX.U32,1233116,8104550,8104550,375
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD.SHL.U32,1233116,8104550,8104550,196
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",SHF.R.S32.HI,1233116,8104550,8104550,1168
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BRX,1233116,8104550,8104550,167
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FADD,157838848,1037382400,1037382400,177173
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2F.F64.F32,160305080,1053591628,1053591628,32034
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",NOP,1192423172,8284161176,8284161176,487355
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DADD,159071964,1062044720,1062044720,396570
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BSYNC.RECONVERGENT,7398952,73638418,73638418,4232
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FSEL,2466232,16209356,16209356,4486
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FMUL,157838848,1037382400,1037382400,35485
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2F.F32.F64,1233116,8104550,8104550,4229
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MUFU.RSQ,1233116,8104550,8104550,46
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",CALL.ABS.NOINC,128,128,128,0
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FMUL.FTZ,2466232,16209100,16209100,205
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FFMA,3699348,40871420,40871420,4801
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DSETP.GT.AND,1233116,8104678,8104678,3865
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DMUL,1233116,24662320,24662320,3019
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DFMA,8631812,172636240,172636240,17108
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MUFU.RCP64H,1233116,24662320,24662320,347
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FSETP.GEU.AND,1233116,24662320,24662320,37
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FSETP.GT.AND,1233116,24662320,24662320,170
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDCU,1233116,24662320,24662320,41
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",SEL,2466232,49324640,49324640,348
+A,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",STG.E.64,3699348,73986960,73986960,3412
+B,__cuda_sm20_div_rn_f64_full,MOV,1664,1664,1408,0
+B,__cuda_sm20_div_rn_f64_full,FSETP.GEU.AND,256,256,256,0
+B,__cuda_sm20_div_rn_f64_full,LOP3.LUT,1536,1536,1280,0
+B,__cuda_sm20_div_rn_f64_full,BSSY.RECONVERGENT,128,128,128,0
+B,__cuda_sm20_div_rn_f64_full,ISETP.GE.U32.AND,256,256,256,0
+B,__cuda_sm20_div_rn_f64_full,DMUL,256,256,128,0
+B,__cuda_sm20_div_rn_f64_full,MUFU.RCP64H,128,128,128,1
+B,__cuda_sm20_div_rn_f64_full,SEL,256,256,256,0
+B,__cuda_sm20_div_rn_f64_full,IADD,256,256,256,0
+B,__cuda_sm20_div_rn_f64_full,NOP,4352,4352,4352,0
+B,__cuda_sm20_div_rn_f64_full,DFMA,1024,1024,1024,1
+B,__cuda_sm20_div_rn_f64_full,ISETP.GT.U32.AND,128,128,128,0
+B,__cuda_sm20_div_rn_f64_full,ISETP.GT.U32.OR,128,128,128,0
+B,__cuda_sm20_div_rn_f64_full,BRA,640,640,256,0
+B,__cuda_sm20_div_rn_f64_full,DSETP.NAN.AND,256,256,256,0
+B,__cuda_sm20_div_rn_f64_full,ISETP.NE.AND,256,256,256,0
+B,__cuda_sm20_div_rn_f64_full,MOV.64,128,128,128,0
+B,__cuda_sm20_div_rn_f64_full,ISETP.EQ.OR,128,128,128,0
+B,__cuda_sm20_div_rn_f64_full,BSYNC.RECONVERGENT,128,128,128,0
+B,__cuda_sm20_div_rn_f64_full,RET.ABS.NODEC,128,128,128,0
+B,__cuda_sm20_sqrt_rn_f32_slowpath,MOV,256,256,256,0
+B,__cuda_sm20_sqrt_rn_f32_slowpath,LOP3.LUT,128,128,128,0
+B,__cuda_sm20_sqrt_rn_f32_slowpath,BSSY.RECONVERGENT,128,128,128,0
+B,__cuda_sm20_sqrt_rn_f32_slowpath,BRA,128,128,128,0
+B,__cuda_sm20_sqrt_rn_f32_slowpath,BSYNC.RECONVERGENT,128,128,128,0
+B,__cuda_sm20_sqrt_rn_f32_slowpath,RET.ABS.NODEC,128,128,128,0
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDC,9864928,315677696,315677696,341
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDCU.64,13037014,417184448,417184448,106
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDC.64,32239736,970721734,970721734,1765
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IADD,59546880,1829752950,1671914102,6222
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDG.E,131603512,4150362566,4150362566,161649
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.NE.AND,40165566,1285298112,1285298112,6301
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BRA,123141778,3879583110,2572671088,10376
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",UMOV,144980554,2225642582,2225642582,7015
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MOV,149216958,4700931888,4700931888,8617
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",S2UR,28361668,128244064,128244064,1498
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD.WIDE,33472852,995384054,995384054,11025
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",HFMA2,2466232,78919424,78919424,12
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD,24135058,698334896,698334896,811
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IABS,7398696,236758272,236758272,183
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",I2F.RP,2466232,78919424,78919424,34
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MUFU.RCP,2466232,78919424,78919424,237
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LOP3.LUT,20435710,653942720,575023296,747
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2I.FTZ.U32.TRUNC.NTZ,2466232,78919424,78919424,16
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IMAD.HI.U32,4932464,157838848,157838848,221
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",S2R,2466232,78919424,78919424,16
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GT.U32.AND,3699348,87024102,87024102,123
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GE.AND,41398810,1309964528,1309964528,7545
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GE.U32.AND,18675332,597610624,597610624,550
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IADD3,2466232,78919424,78919424,89
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDG.E.64,4932464,157838848,157838848,181
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",SHF.R.U32.HI,2466232,78919424,78919424,18
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2I.F64.TRUNC,4932464,157838848,157838848,51716
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",NOP,350954520,10609054176,10609054176,38302
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",SHF.R.S32.HI,2466232,78919424,78919424,113
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",IADD.64,13037014,417184448,417184448,395
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LEA,62361654,420356662,420356662,3121
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LEA.HI.X,10570782,338265024,338265024,266
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LEA.HI,35233102,1127459264,1127459264,524
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.GE.OR,24662320,789194240,789194240,1268
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BSSY,24662320,789194240,789194240,173
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MOV.64,40871548,1307889536,1307889536,292
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BSSY.RECONVERGENT,52675446,1624664454,1624664454,388
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ISETP.EQ.OR,8104678,259349696,259349696,7213
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FADD,32418200,1037382400,1037382400,18977
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FMUL,32418200,1037382400,1037382400,789
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2F.F64.F32,33651316,1062044720,1062044720,33759
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DADD,74174706,2358793200,2358793200,82169
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BSYNC.RECONVERGENT,78571138,1624664454,1624664454,2770
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BRA.DIV,8104678,259349696,259349696,187
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",SHFL.DOWN,81046780,2593496960,2593496960,71553
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BSYNC,24662320,789194240,789194240,801
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",UIADD3,51790872,82091638,82091638,863
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",ULEA,51790872,82091638,82091638,6757
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",STS,24662320,24662320,24662320,912
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",STS.64,24662320,24662320,24662320,9486
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",WARPSYNC.ALL,2466232,78919424,78919424,966
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",BAR.SYNC.DEFER_BLOCKING,2466232,78919424,78919424,87
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",EXIT,3699348,103581744,78919424,295
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDS,1233116,24662320,24662320,51
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",I2FP.F32.S32,1233116,24662320,24662320,31
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDS.64,1233116,8104678,8104678,60
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",F2F.F32.F64,1233116,8104678,8104678,638
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MUFU.RSQ,1233116,8104678,8104678,11
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",CALL.ABS.NOINC,256,256,256,0
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FMUL.FTZ,2466232,16209100,16209100,71
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FFMA,3699348,40871420,40871420,2772
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FSETP.GT.AND,2466232,32766998,32766998,409
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FSEL,1233116,8104678,8104678,51
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",I2F.F64,3699348,73986960,73986960,1379
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",LDCU,1233116,24662320,24662320,6
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",MUFU.RCP64H,1233116,24662320,24662320,880
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DFMA,8631812,172636240,172636240,13432
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",STG.E.64,3699348,73986960,73986960,7252
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",FSETP.GEU.AND,1233116,24662320,24662320,10
+B,"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",DMUL,1233116,24662320,24662320,225
