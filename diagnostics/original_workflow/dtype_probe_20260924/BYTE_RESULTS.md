@@ -81,14 +81,25 @@ does not promote the scratch variants as a production implementation.
   including both 128 and 129; those two collapse under direct E4M3 rounding.
   Using it for tree pruning or final range membership would require an
   error-bound/refinement design to avoid false negatives.
-- FP8 E3M4: the IEEE-like format in the StableHLO proposal has a maximum finite
-  value of 15.5 before scaling; NVIDIA's exposed FP8 MMA formats are E4M3 and
-  E5M2. An E3M4 software representation is therefore not a native 4090 FP8 MMA
-  input and also cannot losslessly encode all 213 observed coordinate values.
+- FP8 E3M4: CUDA 13.1 Tile IR lists `e3m4` as a hardware-accelerated type on
+  Blackwell (including the RTX PRO 6000's `sm_120`), but not on Ada/RTX 4090.
+  The installed CUDA 13.1 `tileiras` on pro6000-8 also contains
+  `builtin.f8E3M4`. This corrects the earlier inference from CUDA's usual FP8
+  APIs that E3M4 is merely a software type on all NVIDIA GPUs. The Tile IR
+  documentation is internally inconsistent: its 13.1 type/support tables say
+  E3M4, while its FP8 operation and bytecode tables say E4M3FN; later type
+  documentation also says E4M3FN. The exact encoding and whether a GTS kernel
+  lowers to native FP8 instructions on that GPU have not been verified. Direct
+  E3M4 storage cannot be assumed to preserve all SIFT coordinate values or
+  exact range-query results. No pro6000-8 GPU workload was run for this report.
 
 Source format references: [NVIDIA CUDA FP8 types](https://docs.nvidia.com/cuda/cuda-math-api/cuda_math_api/group__CUDA__MATH__FP8__MISC.html),
 [NVIDIA cuBLASDx supported MMA types](https://docs.nvidia.com/cuda/cublasdx/requirements_func.html),
-[StableHLO E3M4 proposal](https://fuchsia.googlesource.com/third_party/github.com/openxla/stablehlo/+/refs/tags/v1.8.8/rfcs/20240808-f8E4M3_f8E3M4.md).
+[CUDA 13.1 Tile IR types](https://docs.nvidia.com/cuda/archive/13.1.1/tile-ir/latest/13.1/sections/types.html),
+[CUDA 13.1 Tile IR hardware matrix](https://docs.nvidia.com/cuda/tile-ir/latest/13.1/sections/stability.html),
+[CUDA 13.1 Tile IR operations](https://docs.nvidia.com/cuda/tile-ir/13.1/sections/operations.html),
+[CUDA 13.1 Tile IR bytecode](https://docs.nvidia.com/cuda/archive/13.2.0/tile-ir/13.1/sections/bytecode.html),
+[CUDA 13.3 Tile IR types](https://docs.nvidia.com/cuda/tile-ir/13.3/sections/types.html).
 
 Provenance: the SIFT1M `.fvecs` file SHA-256 is
 `21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816`;
