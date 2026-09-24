@@ -1,0 +1,39 @@
+{
+  "experiment": "gts_20260924_graph_fusion_scale_words",
+  "state": "unvalidated: blocked before GPU admission",
+  "base_commit": "0b9eabae1fa3eede87395e7693a8d6ee79febb09",
+  "new_gpu_benchmark_runs": 0,
+  "cuda_compile_verified": false,
+  "gpu_correctness_verified": false,
+  "performance_results": null,
+  "offline_checks": {
+    "cpu_regression_tests": 3,
+    "tests_pass": true,
+    "generated_python_syntax_pass": true,
+    "source_pins_checked": true,
+    "deterministic_32_query_fixture_pass": true,
+    "original_continuation_receipt_sample_input_oracle_pins_pass": true
+  },
+  "generated_sha256": {
+    "graph_bench.cu": "cd6d7e146f3c17a4dec51113cec5fc21dc87911b2086385c2b19020ebebaeb76",
+    "fused_result.cuh": "35eb653b9027be8d9f24ab83a1cab7f0b68fbeca60cf54a9a2d657e368536567",
+    "run_fusion.py": "1aa319c8a63de07d426df023225398738aeb73028eb1d04d5ec6e11912074211",
+    "test_selector.cu": "1c4d722b793600a6c77320c20590594a7ef3bb271274cb3aee04e59b3958f5ec"
+  },
+  "continuation_manifest_sha256": "bdb99cbe33690005bedd84d7a5a88cab1c5a9b24d061925013e96bc7db3c1c22",
+  "connection_probe": {
+    "gateway_success": true,
+    "target_success": false,
+    "target_error": "SSH banner exchange timeout",
+    "raw_record_sha256": "2315db59a0ef81c696a695e5ae361d4bd75cda3ee89590e577f02c81ee420ba8"
+  },
+  "pending": [
+    "Target GPU admission",
+    "Four original Graph NSYS traces",
+    "Fresh full six-round K32 continuation and sustained checks",
+    "CUDA compilation and resource inspection",
+    "352-case selector and full-query gates",
+    "Four-mode multi-shape profiling/timing/sustained tests",
+    "Raw-evidence analysis and promotion audit"
+  ]
+}
