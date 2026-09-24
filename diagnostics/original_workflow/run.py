@@ -31,7 +31,7 @@ def proc(pid):
     return {'process_cpu_s':total,'main_cpu_s':main,'threads':threads,'rss_bytes':rss}
 
 
-def run(root,gpu,label,case,mode,binary_name):
+def run(root,gpu,label,case,mode,binary_name,timeout_s=60):
     path=root/'runs'/label;path.mkdir()
     before=snapshot(gpu);(path/'gpu_before.json').write_text(json.dumps(before,indent=2)+'\n')
     assert not before['apps'].strip(),'GPU occupied; no foreign process is touched'
@@ -45,7 +45,7 @@ def run(root,gpu,label,case,mode,binary_name):
         cmd=['compute-sanitizer','--tool',mode,'--error-exitcode','90']+(['--leak-check','no'] if mode=='memcheck' else [])+cmd
     env={**os.environ,'CUDA_VISIBLE_DEVICES':gpu}
     (path/'command.json').write_text(json.dumps({'command':cmd,'visible_gpu':gpu},indent=2)+'\n')
-    limit=180 if mode in ['memcheck','synccheck'] else 60
+    limit=max(timeout_s,180) if mode in ['memcheck','synccheck'] else timeout_s
     samples=[];admission_checks=[];start=time.monotonic();wall_start=time.time();usage=None
     with (path/'stdout.log').open('w') as out,(path/'stderr.log').open('w') as err,(path/'gpu_samples.csv').open('w') as gs,(path/'monitor_errors.log').open('w') as ge:
         monitor=subprocess.Popen(['nvidia-smi','-i',gpu,'--query-gpu=timestamp,index,memory.used,memory.total,utilization.gpu,utilization.memory,power.draw,clocks.current.graphics','--format=csv,noheader,nounits','-lms','100'],stdout=gs,stderr=ge)
@@ -120,6 +120,7 @@ def main():
     ap.add_argument('--label',required=True);ap.add_argument('--case',required=True)
     ap.add_argument('--mode',choices=['clean','memcheck','synccheck'],default='clean')
     ap.add_argument('--binary',default='gts_original')
+    ap.add_argument('--timeout-s',type=int,default=60)
     a=ap.parse_args();root=a.root.resolve();locks=[]
     assert all(c.isalnum() or c in '_-' for c in a.label)
     assert Path(a.binary).name==a.binary
@@ -129,7 +130,8 @@ def main():
         try:f=p.open('r')
         except FileNotFoundError:f=p.open('x')
         fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB);locks.append(f)
-    ok=run(root,a.gpu,a.label,a.case,a.mode,a.binary)
+    assert 1 <= a.timeout_s <= 3600
+    ok=run(root,a.gpu,a.label,a.case,a.mode,a.binary,a.timeout_s)
     raise SystemExit(0 if ok else 1)
 
 
