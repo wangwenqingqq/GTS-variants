@@ -117,7 +117,7 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('root',type=Path);ap.add_argument('--gpu',required=True)
     ap.add_argument('--admitted-index',type=int,default=0,help='Requires operator authorization if not GPU0')
-    ap.add_argument('--label',required=True);ap.add_argument('--case',choices=prepare.CASES,required=True)
+    ap.add_argument('--label',required=True);ap.add_argument('--case',required=True)
     ap.add_argument('--mode',choices=['clean','memcheck','synccheck'],default='clean')
     ap.add_argument('--binary',default='gts_original')
     a=ap.parse_args();root=a.root.resolve();locks=[]
