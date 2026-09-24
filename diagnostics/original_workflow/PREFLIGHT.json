@@ -1,0 +1,112 @@
+{
+  "source_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "source_sha256": {
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "scope": "Prepared only. Synthetic integer-L2 correctness probes, not benchmark data or GPU validation.",
+  "n": 1000,
+  "dimensions": 128,
+  "metric": "L2",
+  "storage": "FP32 integer coordinates [0,255]",
+  "native_height": 3,
+  "native_leaf_limit": 20,
+  "native_buffer_threshold": 10,
+  "peak_live_rows": 1010,
+  "cases": {
+    "query_only": {
+      "radius": 0,
+      "operations": 3,
+      "expected_counts": [
+        1,
+        1,
+        1
+      ],
+      "updates_sha256": "0624f8063fb81cb310103ccb0395dced30778db37eefd5ecc80db8ee2bbf8f5f"
+    },
+    "all_include": {
+      "radius": 10000,
+      "operations": 1,
+      "expected_counts": [
+        1000
+      ],
+      "updates_sha256": "03825f6d566b55f989f92de99922fba862067ad9a90d558258fecfc42d8d1321"
+    },
+    "buffer_insert": {
+      "radius": 0,
+      "operations": 3,
+      "expected_counts": [
+        1,
+        2
+      ],
+      "updates_sha256": "cc000494d0212b9ca798a24966716a304bce3e93a3888860199364687bbdc5bd"
+    },
+    "base_delete": {
+      "radius": 10000,
+      "operations": 3,
+      "expected_counts": [
+        1000,
+        999
+      ],
+      "updates_sha256": "a155bac7b67c0f103fcedd6bef29688dab8fa67c2fe9d2e32eb76f991febf0a8"
+    },
+    "buffer_delete": {
+      "radius": 0,
+      "operations": 4,
+      "expected_counts": [
+        2,
+        1
+      ],
+      "updates_sha256": "0c35f3d2f9c8a03a25a2b664360cf570d08719382d23ccf592ba91d49e3354a8"
+    },
+    "rebuild_no_prior_buffer_query": {
+      "radius": 0,
+      "operations": 11,
+      "expected_counts": [
+        11
+      ],
+      "updates_sha256": "b9b840dbbb934e8b1a99870086ceff50be1ddf9423d33a18da97e3d2bde821da"
+    },
+    "rebuild_after_buffer_query": {
+      "radius": 0,
+      "operations": 13,
+      "expected_counts": [
+        2,
+        11,
+        11
+      ],
+      "updates_sha256": "b3a7bcbc59112e4d35d383aaf53da8fdb832aa1881928e6799059299ce31f251"
+    },
+    "mixed_delete_rebuild": {
+      "radius": 10000,
+      "operations": 12,
+      "expected_counts": [
+        1009
+      ],
+      "updates_sha256": "886898a89bdb02b37d18703094d790481c0684bcf853810fc31485bf655481cd"
+    },
+    "rebuild_then_delete": {
+      "radius": 0,
+      "operations": 13,
+      "expected_counts": [
+        11,
+        10
+      ],
+      "updates_sha256": "87a86f4e849e520f738036badd658241053ddb981516662abeb89e06fe092662"
+    }
+  },
+  "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+  "status": "CPU-only preparation and regression tests passed; remote route unavailable; no CUDA build or GPU execution",
+  "decision_date": "2026-09-24",
+  "delivery_sha256": {
+    "README.md": "bddd404dc2fc1e1688e210ef4f73ab4fe579b579d4c9ae3c84c54a5019150c0f",
+    "prepare.py": "3ccfa04b851c1c051c56e44cda74fa6d9b42bf90ff77f1438222f964647b9766",
+    "test_prepare.py": "4e2b1ce0d7e31f725aa00892c653ad14c1865d0ae01f6034be52f2f0fdfe92d9"
+  }
+}
