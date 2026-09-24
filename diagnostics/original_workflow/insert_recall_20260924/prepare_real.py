@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare exact-insertion probes from real fvecs for GTS's short-valued L2 path."""
+"""Prepare insertion probes from fvecs for GTS's macro-expanded float L2 path."""
 import argparse
 import hashlib
 import json
@@ -25,11 +25,14 @@ def prepare(source, out, n, scale, radius, binary):
     assert n <= len(raw) and np.all(raw[:n, 0].view('<i4') == dim)
     values = raw[:n, 1:]
     assert np.isfinite(values).all()
-    scaled = np.rint(values * scale)
-    assert scaled.min() >= -32768 and scaled.max() <= 32767
-    if scale == 1:
-        assert np.array_equal(values, scaled), 'SIFT values must be exact integers'
-    vectors = scaled.astype(np.int16)
+    if scale == 0:
+        vectors = values  # Original float32 descriptors; config.cuh maps short to float.
+    else:
+        scaled = np.rint(values * scale)
+        assert scaled.min() >= -32768 and scaled.max() <= 32767
+        if scale == 1:
+            assert np.array_equal(values, scaled), 'SIFT values must be exact integers'
+        vectors = scaled.astype(np.int16)
 
     sources = [0, n//4, n//2, 3*n//4, n-1, 31, n//3, n//5, n//7, 0]
     ops = []
@@ -38,13 +41,14 @@ def prepare(source, out, n, scale, radius, binary):
     ops += [(2, n), (2, n+4), (2, 0), (2, n-1), (1, n),
             (2, 0), (2, n//4), (0, n//2), (2, n//2)]
     base_hits = {}
-    wide = vectors.astype(np.int32) if radius else None
+    wide = vectors.astype(np.float64) if scale == 0 else vectors.astype(np.int32)
     for s in set(sources):
         if radius:
             delta = wide - wide[s]
-            d2 = np.einsum('ij,ij->i', delta, delta, dtype=np.int64)
+            d2 = np.einsum('ij,ij->i', delta, delta,
+                           dtype=np.float64 if scale == 0 else np.int64)
             ids = np.flatnonzero(d2 <= radius*radius)
-            base_hits[s] = {int(i): math.sqrt(int(d2[i])) for i in ids}
+            base_hits[s] = {int(i): math.sqrt(float(d2[i])) for i in ids}
         else:
             base_hits[s] = {int(i): 0.0 for i in np.flatnonzero(np.all(vectors == vectors[s], axis=1))}
     active, buffered, rebuilds, deleted, queries = [], 0, 0, False, []
@@ -63,8 +67,9 @@ def prepare(source, out, n, scale, radius, binary):
             hits = dict(base_hits[qsource])
             inserted = []
             for j, (s, token) in enumerate(active):
-                delta = vectors[s].astype(np.int32) - vectors[qsource].astype(np.int32)
-                d2 = int(np.dot(delta.astype(np.int64), delta.astype(np.int64)))
+                delta = wide[s] - wide[qsource]
+                delta = delta.astype(np.float64)
+                d2 = float(np.dot(delta, delta))
                 if d2 <= radius*radius:
                     inserted.append((n+j, token))
                     hits[n+j] = math.sqrt(d2)
@@ -82,12 +87,13 @@ def prepare(source, out, n, scale, radius, binary):
     with (out/'fixtures/data.txt').open('w', buffering=8 << 20) as f:
         f.write(f'{dim} {n} 2\n')
         for start in range(0, n, 10000):
-            np.savetxt(f, vectors[start:start+10000], fmt='%d')
+            np.savetxt(f, vectors[start:start+10000], fmt='%.9g' if scale == 0 else '%d')
     updates = out/'fixtures/realdata.updates'
     updates.write_text(str(len(ops))+'\n'+''.join(f'{flag} {idx}\n' for flag, idx in ops))
     (out/'bin/gts_h6_audit').symlink_to(binary.resolve())
     manifest = {'dataset_source': str(source), 'source_sha256': sha(source),
-                'n': n, 'dimensions': dim, 'metric': 'integer L2 after quantization',
+                'n': n, 'dimensions': dim,
+                'metric': 'float32 L2' if scale == 0 else 'integer L2 after input quantization',
                 'quantization_scale': scale, 'data_sha256': sha(out/'fixtures/data.txt'),
                 'cases': {'realdata': {'radius': radius, 'operations': len(ops),
                            'updates_sha256': sha(updates),
@@ -106,7 +112,7 @@ if __name__ == '__main__':
     p.add_argument('out', type=Path)
     p.add_argument('--n', type=int, required=True)
     p.add_argument('--scale', type=int, required=True)
-    p.add_argument('--radius', type=int, default=0)
+    p.add_argument('--radius', type=float, default=0)
     p.add_argument('--binary', type=Path, required=True)
     a = p.parse_args()
     prepare(a.source, a.out, a.n, a.scale, a.radius, a.binary)

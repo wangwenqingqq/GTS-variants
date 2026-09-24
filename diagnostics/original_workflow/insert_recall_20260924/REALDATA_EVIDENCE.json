@@ -13,8 +13,6 @@
     "include/update.cuh": "1f4cd918586c48d47a23aa5093cf2f33eed11cb9faf705dbfdd8e54152bbe439",
     "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
   },
-  "gpu_index": 3,
-  "gpu_uuid": "GPU-a149f5af-55ab-ce33-8d3d-371a7ae61dd2",
   "runs": {
     "sift10k": {
       "source_fvecs_sha256": "21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816",
@@ -61,7 +59,10 @@
       "post_gpu_clear": true,
       "receipt_sha256": "dd1bda5f2fd3f81df2c9585bb7459526f9db4d4528d5b3bbca44c8c5dad6a134",
       "stderr_sha256": "9fe581e2901fe01a2f6df5fa26663fd7cd915a70c8dd55c3dae7182ff1562834",
-      "cost_sha256": "89f8916631addf1fdf40582115f1fafc3ac9ec43039a6c9e471a4ee6040cdb03"
+      "cost_sha256": "89f8916631addf1fdf40582115f1fafc3ac9ec43039a6c9e471a4ee6040cdb03",
+      "gpu_index": 3,
+      "gpu_uuid": "GPU-a149f5af-55ab-ce33-8d3d-371a7ae61dd2",
+      "representation": "integer values stored as float32"
     },
     "sift100k": {
       "source_fvecs_sha256": "21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816",
@@ -108,7 +109,10 @@
       "post_gpu_clear": true,
       "receipt_sha256": "b09ee64015bb923a5476f94a5196f2df6acff59368e7620dd69bc0d6d76563ad",
       "stderr_sha256": "66596181ad83fdc7c9ec968e9391abea6b16eea8a206eb134af9749dcb6ec989",
-      "cost_sha256": "e3ae6699c221ab844ef3f505a0be02facd5e88b5c5e7e69e03050377b552fde7"
+      "cost_sha256": "e3ae6699c221ab844ef3f505a0be02facd5e88b5c5e7e69e03050377b552fde7",
+      "gpu_index": 3,
+      "gpu_uuid": "GPU-a149f5af-55ab-ce33-8d3d-371a7ae61dd2",
+      "representation": "integer values stored as float32"
     },
     "sift1m": {
       "source_fvecs_sha256": "21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816",
@@ -155,7 +159,10 @@
       "post_gpu_clear": true,
       "receipt_sha256": "ed6562cb283043a20147bd3ee3dda0cd1bd8d737d7da0dcb79577bebd71c1c70",
       "stderr_sha256": "f47b97fa1960873dbe0003131ac3c768cd9ae8b90c2b3318b9d8a0df6150111c",
-      "cost_sha256": "9028077222e26c73b31ff2bc42e25c56b37fb513677f747499ac18cc625eff2f"
+      "cost_sha256": "9028077222e26c73b31ff2bc42e25c56b37fb513677f747499ac18cc625eff2f",
+      "gpu_index": 3,
+      "gpu_uuid": "GPU-a149f5af-55ab-ce33-8d3d-371a7ae61dd2",
+      "representation": "integer values stored as float32"
     },
     "sift1m_r200": {
       "source_fvecs_sha256": "21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816",
@@ -202,7 +209,10 @@
       "post_gpu_clear": true,
       "receipt_sha256": "09e8209aee28c3cb76cbda7c520e614bc0e3315df5c2d3da7e806f11f1ba99cb",
       "stderr_sha256": "1ef21561936d2f1c18493727fa417a70b3551c09ec14285755d92cdc57cf0308",
-      "cost_sha256": "8481303d23dddd9b96d8e8732ca6191379767ef5485e2a99531a92ace9362cc7"
+      "cost_sha256": "8481303d23dddd9b96d8e8732ca6191379767ef5485e2a99531a92ace9362cc7",
+      "gpu_index": 3,
+      "gpu_uuid": "GPU-a149f5af-55ab-ce33-8d3d-371a7ae61dd2",
+      "representation": "integer values stored as float32"
     },
     "gist100k_q1000_r1500": {
       "source_fvecs_sha256": "73418110328f5aa522d9f6b0cd9115a6c515dc44e3c48420e506ddeddbdbdbc0",
@@ -249,9 +259,95 @@
       "post_gpu_clear": true,
       "receipt_sha256": "6ece87ef59b9748e6a4956c373687f1b2ab49caafff60a512868df8610613c73",
       "stderr_sha256": "e39ba4cf686c0a5df83ae95f8c0bebcdb2536dd419ed9a80fc33cfc91ec54545",
-      "cost_sha256": "8cd6ac8e789047b18c749426a07196843c35cbb7c0eb525cc9ff8768061b5937"
+      "cost_sha256": "8cd6ac8e789047b18c749426a07196843c35cbb7c0eb525cc9ff8768061b5937",
+      "gpu_index": 3,
+      "gpu_uuid": "GPU-a149f5af-55ab-ce33-8d3d-371a7ae61dd2",
+      "representation": "quantized GIST values stored as float32"
+    },
+    "gist100k_float_r1p5": {
+      "source_fvecs_sha256": "73418110328f5aa522d9f6b0cd9115a6c515dc44e3c48420e506ddeddbdbdbc0",
+      "input_text_sha256": "f2aa9c5d8a22ff4ea5ab2c92c7a18dbecafbbad1a8e7eb95c828350844b39d9b",
+      "updates_sha256": "c0a5ebe90e7c87fd91a46559b1d8568231d46fb190028d3e729d002119859035",
+      "manifest_sha256": "f277629aaf21d65cf138ad7983c202b050f87d9a1fb0d4a4ddccbea2c309dde9",
+      "n": 100000,
+      "dimensions": 960,
+      "scale": 0,
+      "representation": "original GIST float32, no quantization",
+      "radius": 1.5,
+      "queries": 17,
+      "expected_hits": 100654,
+      "inserted_found_pairs": 23,
+      "inserted_eligible_pairs": 23,
+      "inserted_distinct_found": 11,
+      "inserted_distinct_eligible": 11,
+      "phase_stats": {
+        "before_rebuild": {
+          "eligible": 11,
+          "found": 11,
+          "queries": 9
+        },
+        "after_rebuild": {
+          "eligible": 8,
+          "found": 8,
+          "queries": 5
+        },
+        "after_rebuild_post_delete": {
+          "eligible": 4,
+          "found": 4,
+          "queries": 3
+        }
+      },
+      "full_result_pass": true,
+      "max_distance_error": 1.6693993303285026e-06,
+      "distance_tolerance_abs": 0.001,
+      "tree_heights": [
+        5,
+        5
+      ],
+      "exit_code": 0,
+      "runtime_errors": [],
+      "stop_reason": null,
+      "post_gpu_clear": true,
+      "gpu_index": 4,
+      "gpu_uuid": "GPU-863c06a5-9f33-0265-b098-013fa840d5db",
+      "receipt_sha256": "d3696d9c9b32d8c35a5e30aeb7c365a3db81da0eba7e93f9bcc0b35d01e529c3",
+      "stderr_sha256": "96157ea8d272d4ad97a98dda73b9e47494ca8595988ebe6cc1dbb044e282f9da",
+      "cost_sha256": "0ab5675765dbffe1189ed5bbd76a20ae34d6993786cef7f2cba0ee6299d95f7b"
     }
   },
   "raw_archive_sha256": "ee1972162145339e177c31be57711512f350e050f1a010f43d45303f7dc7dadb",
-  "scope": "Correctness of five deterministic update sequences on quantized real datasets; no latency or universal-recall claim."
+  "scope": "Five primary full-ID correctness runs: unmodified SIFT float32 values and original GIST float32 values; fixed update sequence and no latency claim.",
+  "primary_runs": [
+    "sift10k",
+    "sift100k",
+    "sift1m",
+    "sift1m_r200",
+    "gist100k_float_r1p5"
+  ],
+  "superseded_interpretation": {
+    "run": "gist100k_q1000_r1500",
+    "reason": "GTS compiled data_d as float32 via #define short float; GIST quantization was experiment-side preprocessing, not required by GTS."
+  },
+  "macro_evidence": {
+    "file": "include/config.cuh",
+    "directive": "#define short float",
+    "expanded_examples": [
+      "short *data_d -> float *data_d",
+      "sizeof(short) -> sizeof(float)"
+    ],
+    "numeric_element_bytes": 4
+  },
+  "correction_archive_sha256": "bc0fd1dfb1352223c2f4e5a11d646deb54d48faaee5282b619834db271f94472",
+  "raw_gist_float32_roundtrip": {
+    "n": 100000,
+    "dimensions": 960,
+    "text_to_float32_exact": true,
+    "mismatched_coordinates": 0
+  },
+  "oracle_correction": {
+    "initial_error": "CPU oracle cast float squared distances to int before sqrt",
+    "corrected_rule": "sqrt(float squared distance)",
+    "old_and_corrected_input_sha256_identical": true,
+    "gpu_rerun_with_corrected_manifest": true
+  }
 }
