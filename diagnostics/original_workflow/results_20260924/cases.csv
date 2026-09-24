@@ -1,0 +1,10 @@
+case,expected,original,original_pass,rnum_reset,memcheck,synccheck
+query_only,"[1, 1, 1]","[1, 1, 1]",True,"[1, 1, 1]",PASS,PASS
+all_include,[1000],[1000],True,[1000],PASS,PASS
+buffer_insert,"[1, 2]","[1, 2]",True,"[1, 2]",PASS,PASS
+base_delete,"[1000, 999]","[1000, 999]",True,"[1000, 999]",PASS,PASS
+buffer_delete,"[2, 1]","[2, 2]",False,"[2, 1]",PASS,PASS
+rebuild_no_prior_buffer_query,[11],[11],True,[11],PASS,PASS
+rebuild_after_buffer_query,"[2, 11, 11]","[2, 12, 12]",False,"[2, 11, 11]",PASS,PASS
+mixed_delete_rebuild,[1009],[1009],True,[1009],PASS,PASS
+rebuild_then_delete,"[11, 10]","[11, 10]",True,"[11, 10]",PASS,PASS

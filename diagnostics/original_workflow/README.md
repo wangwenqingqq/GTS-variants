@@ -1,5 +1,28 @@
 # Original GTS is the active baseline
 
+## Continuation — 2026-09-24
+
+The next bounded round also completed on user-authorized idle GPU2: 36 processes,
+3,648 query counts, and four NSYS traces. Blocking synchronization cut main-thread
+CPU time by roughly70–73% but increased workflow wall time by roughly20% on the
+two synthetic repeated workloads. See [the GPU2 attribution report](profile_20260924/RESULTS.md).
+The current AGENTS.md records authorization to use other idle GPUs with per-device
+admission and locks; earlier GPU0-only wording below is historical.
+
+GPU0 execution is now complete: original GTS passed 7/9 count probes and failed
+2/9 because an empty insert buffer retained its previous result count. A separate
+one-line `rnum_reset` variant passed all nine probes, plus nine memcheck and nine
+synccheck runs. An independent original build reproduced all nine original
+outcomes. See [the continuation report](RESULTS_20260924.md) and
+[validated evidence](results_20260924/EVIDENCE.json). No performance claim is made.
+
+The preparation record below and `PREFLIGHT.json` are historical snapshots from
+commit `1ab7b08`; its delivery hashes refer to files at that commit, including the
+README before this continuation note. The pinned original CUDA files remain
+unchanged. This branch packages the continuation for `wangwenqingqq/GTS-variants`;
+raw runtime artifacts remain under ignored `local/` directories. The upstream
+`ZJU-DAILY/GTS` reference identifies source provenance, not the push destination.
+
 ## Decision — 2026-09-24
 
 Stop developing the legacy unsafe `archive/GTS_incremental` variant. Preserve
@@ -18,7 +41,7 @@ append records into padded leaves. Keep the unmodified original as a distinct
 reference even if a separately named correctness/portability repair is needed.
 This is baseline selection and preparation, not a new novelty or speedup claim.
 
-## Current status and next gate
+## Preparation-time status and next gate (historical)
 
 - Local source identity and deterministic probe/oracle tests: checked; see
   `PREFLIGHT.json`. No original CUDA source or kernel is edited by these tools.

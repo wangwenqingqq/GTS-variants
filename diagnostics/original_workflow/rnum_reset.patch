@@ -1,0 +1,10 @@
+--- original/include/update.cuh
++++ rnum_reset/include/update.cuh
+@@ -589,6 +589,7 @@
+ 
+ 			searchIndexRnnUpdate(data_d, node_list, id_list, max_node_num, qid_list, qnum, r, tree_h, data_info, empty_list,
+ 								 qresult_count, qresult_count_prefix, result_id, result_dis, data_s, size_s);
++			rnum[0] = 0;
+ 			if (in_size > 0)
+ 			{
+ 				searchNaiveRnn(data_info, obj_r, data_d, data_s, size_s, qid_list[0], in_size, r, insert_list, rnum);
