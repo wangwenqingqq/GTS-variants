@@ -97,6 +97,34 @@ the full-flow benchmark metric. The follow-up FP32 and `uint8` binaries have
 SHA-256 hashes `3a979d489f56317c5a7cc15a7a736129e928573a906437abc2448fbdedc79aba`
 and `f135ea46d017f03027cc47a772e2e551b22ab3bfd155f0eb4a98b3eb529d5437`.
 
+## One leaf node per block: 512 versus 32 threads
+
+A separate 2026-09-25 control changed exactly one scratch-source launch:
+`dataProcessRnn<<<block_num, THREAD_NUM>>>` to
+`dataProcessRnn<<<block_num, 32>>>`. `block_num` still equals the number of
+candidate leaf nodes, so **one block still owns one node**; this does not pack
+multiple nodes into a 512-thread block. With MAX_SIZE=20, 32 threads still
+cover every point/flag slot. Build, other query stages, arithmetic and data
+format were unchanged within each comparison. On the same idle-checked 4090
+GPU0 under its lock, three fresh-process pairs per format alternated launch
+order. Every run passed the independent SIFT1M full-table integer count oracle.
+Each process retained eight complete Q32/r500 queries after three warmups.
+
+| SIFT1M Q32/r500 | 512-thread mean of process medians | 32-thread mean of process medians | Paired 512/32 speedup |
+|---|---:|---:|---:|
+| FP32 complete query | 173.904 ms | 170.337 ms | 1.021× |
+| FP32 leaf stage | 75.458 ms | 72.377 ms | 1.043× |
+| `uint8` complete query | 119.810 ms | 115.844 ms | 1.034× |
+| `uint8` leaf stage | 21.265 ms | 17.825 ms | 1.193× |
+
+All six complete-query pair ratios favored 32 threads, but the measured
+end-to-end query benefit is modest: 2.05% lower latency for FP32 and 3.31%
+for `uint8`. No build-plus-query or multi-node-per-block benefit is implied.
+Raw observations are in [leaf32 SIFT1M samples](leaf32_sift1m_q32.json).
+The FP32 and `uint8` 32-thread binary SHA-256 hashes are
+`e541ef604e2f213a0d93bc3c29300dcd890b627e7686423953824160642d7e7e`
+and `fe5f13eaa0a6cc8660ae3027d93d1f7b0877ec4be189592c1d8e5c22250cb976`.
+
 These results establish a lossless SIFT range-query opportunity on this 4090
 workload. They do **not** certify GIST/other real-valued data, kNN, insertions,
 deletions, rebuilds, result IDs, concurrency, arbitrary radii or other GPUs.
