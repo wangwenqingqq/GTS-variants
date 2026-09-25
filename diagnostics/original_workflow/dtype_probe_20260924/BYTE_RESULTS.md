@@ -65,6 +65,38 @@ stage reduction. This diagnoses the effect's location, but does not distinguish
 cache behavior, memory transactions, occupancy or instructions inside that
 kernel. No hardware-counter attribution was collected in this campaign.
 
+## Load, build, and first query
+
+On 2026-09-25, a follow-up measured the continuous path from reading SIFT1M
+and Q32 through index construction and its GPU synchronization to delivery of
+the **first** Q32/r500 query's counts to the CPU. The same FP32 and `uint8`
+scratch variants, data, 4090 GPU0, MAX_H=6 and query source were used. Only
+phase timers were added to the scratch harness; its full-table integer oracle
+was moved after the first query so that validation did not enter the timed
+path. Every process still passed that oracle. Six fresh-process pairs alternated
+variant order under the GPU0 lock, with no other compute process observed.
+The data file was read from a warm host file cache. Process launch, CUDA
+context initialization, validation, later warmups and later queries are outside
+this timing.
+
+| SIFT1M Q32/r500 phase | FP32 mean ms | `uint8` mean ms | Difference ms |
+|---|---:|---:|---:|
+| Load data and query IDs | 184.954 | 165.401 | 19.554 |
+| Build index and synchronize | 2677.523 | 2615.534 | 61.989 |
+| First complete query | 170.727 | 117.153 | 53.573 |
+| **Load + build + first query** | **3033.204** | **2898.088** | **135.116** |
+
+Thus this measured full path improves by **1.0466×**, or **4.45% lower
+latency**; a seed-0, 10,000-resample bootstrap 95% interval over the six
+paired ratios is [1.0445, 1.0495]. Index construction accounts for most of
+the elapsed time, so the 1.454× steady-query speedup does not transfer to a
+one-query cold index lifecycle. Raw phase samples are in
+[full-flow SIFT1M samples](fullflow_sift1m_q32.json). The `process_s` field
+in that file includes the diagnostic oracle and later queries and is **not**
+the full-flow benchmark metric. The follow-up FP32 and `uint8` binaries have
+SHA-256 hashes `3a979d489f56317c5a7cc15a7a736129e928573a906437abc2448fbdedc79aba`
+and `f135ea46d017f03027cc47a772e2e551b22ab3bfd155f0eb4a98b3eb529d5437`.
+
 These results establish a lossless SIFT range-query opportunity on this 4090
 workload. They do **not** certify GIST/other real-valued data, kNN, insertions,
 deletions, rebuilds, result IDs, concurrency, arbitrary radii or other GPUs.
