@@ -1,0 +1,337 @@
+{
+  "host": "4090-left",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "metric": "mean of eight complete host-ready queries per process; median across four processes",
+  "warmup_queries_per_process": 8,
+  "measured_queries_per_process": 8,
+  "rounds": 4,
+  "datasets": {
+    "GIST": {
+      "modes": {
+        "F": {
+          "rounds": [
+            {
+              "round": 0,
+              "mean_ms": 115.95784150000001,
+              "setup_s": 0.008802313,
+              "process_before_cleanup_s": 23.080837804,
+              "receipt_sha256": "dc63b9ff02d7eec6dac3550148fec2676c7ad2f918c9e0844f816057f44f72da"
+            },
+            {
+              "round": 1,
+              "mean_ms": 116.06814675,
+              "setup_s": 0.00843542,
+              "process_before_cleanup_s": 23.105776675,
+              "receipt_sha256": "033d98af0207063e91e537e56b5ce1932ea34ec57649ad0ed44d3180404cb845"
+            },
+            {
+              "round": 2,
+              "mean_ms": 115.81582775,
+              "setup_s": 0.008881334,
+              "process_before_cleanup_s": 23.044443726,
+              "receipt_sha256": "9ef4756bf7b29431cd9c3dcdc9783e895ba26310bd5ff15802dd05cc31f1101f"
+            },
+            {
+              "round": 3,
+              "mean_ms": 115.14653299999999,
+              "setup_s": 0.009171046,
+              "process_before_cleanup_s": 23.023377858,
+              "receipt_sha256": "d69b73c577da0315eb7aebcd1ab810c191d74be09e579e4a6d68f4e3d8f42e03"
+            }
+          ],
+          "median_ms": 115.886834625,
+          "median_setup_s": 0.0088418235,
+          "median_process_before_cleanup_s": 23.062640765
+        },
+        "P32": {
+          "rounds": [
+            {
+              "round": 0,
+              "mean_ms": 88.039902875,
+              "setup_s": 0.187499807,
+              "process_before_cleanup_s": 22.72729506,
+              "receipt_sha256": "596d46d05604ffa7d9d3cf4353a5722445dff62b1bde4525fe3aed9b78e64862"
+            },
+            {
+              "round": 1,
+              "mean_ms": 87.60881912500001,
+              "setup_s": 0.184641214,
+              "process_before_cleanup_s": 22.725812819,
+              "receipt_sha256": "d508e78db703e44dfa653fe306a188d3697ccdf5c9fa08e0bc4b01387f6a9424"
+            },
+            {
+              "round": 2,
+              "mean_ms": 86.84984375,
+              "setup_s": 0.190042608,
+              "process_before_cleanup_s": 22.680459078,
+              "receipt_sha256": "76ec13f7a3701e5930ff7cef14ed9e6c5a2bedee536cae6ab5b9a5f2c95e010b"
+            },
+            {
+              "round": 3,
+              "mean_ms": 87.53759912500001,
+              "setup_s": 0.200505557,
+              "process_before_cleanup_s": 22.692035793,
+              "receipt_sha256": "cc9187bed27ab8351a1d2e04a36714883c77d9bd73be0eb163c4c8e2b7225425"
+            }
+          ],
+          "median_ms": 87.573209125,
+          "median_setup_s": 0.18877120749999998,
+          "median_process_before_cleanup_s": 22.708924306,
+          "paired_speedups": [
+            1.3171055136741598,
+            1.3248454654364683,
+            1.3335179748092523,
+            1.3153951462111222
+          ],
+          "median_paired_speedup": 1.320975489555314,
+          "wins": 4
+        },
+        "P64": {
+          "rounds": [
+            {
+              "round": 0,
+              "mean_ms": 77.23754912499999,
+              "setup_s": 0.186516095,
+              "process_before_cleanup_s": 22.535304498,
+              "receipt_sha256": "f0c3758a2ac037252113cd735a2fb9714e1dfd3b58eb56a4346f86a7ac1f0d13"
+            },
+            {
+              "round": 1,
+              "mean_ms": 77.64450525000001,
+              "setup_s": 0.197345011,
+              "process_before_cleanup_s": 22.519272534,
+              "receipt_sha256": "cb584fbc16c6b9d3b30bd9856d33b55d26e15b047226c9cfacc5d16e9877ca1f"
+            },
+            {
+              "round": 2,
+              "mean_ms": 78.21257925,
+              "setup_s": 0.204009585,
+              "process_before_cleanup_s": 22.53652302,
+              "receipt_sha256": "59cb100bf4a0a6afb9a11666724ad1b6670e6f57db32a415a67e35299cf8685f"
+            },
+            {
+              "round": 3,
+              "mean_ms": 77.66964912499999,
+              "setup_s": 0.207311347,
+              "process_before_cleanup_s": 22.557960206,
+              "receipt_sha256": "1978c9034096417f54eadd75818d0c44f0d6e65af8fcd259f684bdd9e8b8a49e"
+            }
+          ],
+          "median_ms": 77.6570771875,
+          "median_setup_s": 0.200677298,
+          "median_process_before_cleanup_s": 22.535913759,
+          "paired_speedups": [
+            1.5013143582836341,
+            1.4948662030401692,
+            1.4807826165635625,
+            1.482516456520686
+          ],
+          "median_paired_speedup": 1.4886913297804276,
+          "wins": 4
+        }
+      },
+      "projection_build": {
+        "n": 1000000,
+        "dimensions": 960,
+        "input_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+        "projection_sha256": "e47941d3813d5276a41559a0bbdbe066929f033ac4f31a50b6153507f89caf4d",
+        "basis_sha256": "ef1deba2124f9f0398cc09b15c59a89a4ee28ac43163c0b9f08d3e82ee3aa080",
+        "training_ids_sha256": "71aa56a6c504a9e9e652e3b916d60cb7d87ca9099c75ebf3c6a68e25f1bbd00d",
+        "orthogonality_max_error": 2.4424906541753444e-15,
+        "build_seconds": 4.234377967193723,
+        "projection_bytes": 256000012
+      },
+      "p64_extra_setup_s": 0.1918354745,
+      "p64_approx_break_even_queries": 115.77927087112509
+    },
+    "Deep": {
+      "modes": {
+        "F": {
+          "rounds": [
+            {
+              "round": 0,
+              "mean_ms": 17.026902375,
+              "setup_s": 0.008166405,
+              "process_before_cleanup_s": 2.697415255,
+              "receipt_sha256": "7f7d0f44b9ddedba5dc370fa2aeae631105c0a645f0298707ec083ae600ecd96"
+            },
+            {
+              "round": 1,
+              "mean_ms": 16.960632625,
+              "setup_s": 0.008997189,
+              "process_before_cleanup_s": 2.573494496,
+              "receipt_sha256": "b990e0baeb9c693bf82c6488f0bcdfce8e4c26234e7bb94b0ed0ac922c5148df"
+            },
+            {
+              "round": 2,
+              "mean_ms": 16.898319750000002,
+              "setup_s": 0.00958521,
+              "process_before_cleanup_s": 2.569932606,
+              "receipt_sha256": "42daadac9e79a8e60390bb2dedbdd6d8d361d1439372d1b15d845bd99340853a"
+            },
+            {
+              "round": 3,
+              "mean_ms": 16.9417245,
+              "setup_s": 0.009446931,
+              "process_before_cleanup_s": 2.57590511,
+              "receipt_sha256": "2cf43651ec72dd7b7637c6ac2edbd7041595b5c2f96eafb54d7ed559173c0e4b"
+            }
+          ],
+          "median_ms": 16.951178562499997,
+          "median_setup_s": 0.00922206,
+          "median_process_before_cleanup_s": 2.5746998029999997
+        },
+        "P32": {
+          "rounds": [
+            {
+              "round": 0,
+              "mean_ms": 16.157440625,
+              "setup_s": 0.18840578,
+              "process_before_cleanup_s": 2.730736874,
+              "receipt_sha256": "4a02932bae4e1a3f9ccf4bdf52141bcc041b170866156789618f17df40cde1c7"
+            },
+            {
+              "round": 1,
+              "mean_ms": 16.253145000000004,
+              "setup_s": 0.178213892,
+              "process_before_cleanup_s": 2.716879442,
+              "receipt_sha256": "e6a07b8513ea455515b7e9e8192ed9178facd85136beb4874a851939f29fb3a8"
+            },
+            {
+              "round": 2,
+              "mean_ms": 16.382019125,
+              "setup_s": 0.197578869,
+              "process_before_cleanup_s": 2.784731972,
+              "receipt_sha256": "d610c21dbb590b965c35108f9bbb4257942a47efd1b1cec2d264d9f700d97c5f"
+            },
+            {
+              "round": 3,
+              "mean_ms": 16.27337275,
+              "setup_s": 0.194541133,
+              "process_before_cleanup_s": 2.739781871,
+              "receipt_sha256": "29f8fa77c061da8bc81ee579b4c714fa3e46c4c74941aa9edcfa61bbb0e805f3"
+            }
+          ],
+          "median_ms": 16.263258875000002,
+          "median_setup_s": 0.1914734565,
+          "median_process_before_cleanup_s": 2.7352593725,
+          "paired_speedups": [
+            1.0538118486819443,
+            1.0435292754110048,
+            1.0315162997345118,
+            1.0410702661499596
+          ],
+          "median_paired_speedup": 1.0422997707804822,
+          "wins": 4
+        },
+        "P64": {
+          "rounds": [
+            {
+              "round": 0,
+              "mean_ms": 10.901096500000001,
+              "setup_s": 0.179596093,
+              "process_before_cleanup_s": 2.626741018,
+              "receipt_sha256": "e16f6017bafe4bdeed32210303027539f5443de9cc703722b4202782aa7e7fc5"
+            },
+            {
+              "round": 1,
+              "mean_ms": 10.9907705,
+              "setup_s": 0.179550189,
+              "process_before_cleanup_s": 2.629936864,
+              "receipt_sha256": "be687b2b87fa098bdae35a7f4fbb8f4eaba6d716912bb2953ad8f3b4ff3c8a54"
+            },
+            {
+              "round": 2,
+              "mean_ms": 10.890642,
+              "setup_s": 0.198773744,
+              "process_before_cleanup_s": 2.656473178,
+              "receipt_sha256": "8522e44b218a4f1244afab23b82e1df0c9c5b0331c2ac0af4ad2f0f86bd26fe9"
+            },
+            {
+              "round": 3,
+              "mean_ms": 10.923384125,
+              "setup_s": 0.193728964,
+              "process_before_cleanup_s": 2.64578369,
+              "receipt_sha256": "a3f7a6f97cd0a36f9a1ef92ba01c832a07baa804e988cf27dd0e7b4bdbf20a10"
+            }
+          ],
+          "median_ms": 10.9122403125,
+          "median_setup_s": 0.1866625285,
+          "median_process_before_cleanup_s": 2.6378602769999997,
+          "paired_speedups": [
+            1.561944009485651,
+            1.5431704833614712,
+            1.5516366941453041,
+            1.5509593278172848
+          ],
+          "median_paired_speedup": 1.5512980109812946,
+          "wins": 4
+        }
+      },
+      "projection_build": {
+        "n": 1000000,
+        "dimensions": 96,
+        "input_sha256": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+        "projection_sha256": "2cec3b7fdd45e9ce53c47793a3f5f6967e7d3213a84b9ed3f72999a704be6ca3",
+        "basis_sha256": "97b36e0fe4eeaa78a493f83424064ceeb339721fd87ccbc3296b4b58cdcea069",
+        "training_ids_sha256": "aca6a74a443dc7d26fbe49b0645f7791c434da2dbf10ba3b7a701df45d13274b",
+        "orthogonality_max_error": 2.3314683517128287e-15,
+        "build_seconds": 0.725907415850088,
+        "projection_bytes": 256000012
+      },
+      "p64_extra_setup_s": 0.1774404685,
+      "p64_approx_break_even_queries": 149.58720340452035
+    }
+  },
+  "binary_sha256": "b2447ebb6a47d7d40922e757d0b0e5464cec9e3bdbecc85738bf4fcb47de1b3f",
+  "validation": {
+    "timing_runs": 24,
+    "all_timing_receipts_pass": true,
+    "all_round_results_identical": true,
+    "no_foreign_gpu_apps": true,
+    "special": {
+      "deep_P64_zero": {
+        "pass": true,
+        "rows": 2,
+        "tool": "clean",
+        "receipt_sha256": "f7401053087f83a2d40993673182c739a401b26ed368a7a716a6df66542fccf1"
+      },
+      "deep_P64_all": {
+        "pass": true,
+        "rows": 1,
+        "tool": "clean",
+        "receipt_sha256": "2ede1622f8742fbcaade92329a4a0c51d739f6769bfa132b4ee065772fea0721"
+      },
+      "deep_P64_empty": {
+        "pass": true,
+        "rows": 2,
+        "tool": "clean",
+        "receipt_sha256": "42be9770e558f4c5c50ada7c1cc20fa203e79b481976cc121b74c9c89b5c600a"
+      },
+      "deep_P64_memcheck": {
+        "pass": true,
+        "rows": 1,
+        "tool": "memcheck",
+        "receipt_sha256": "d40ca96b8ec3e10aadd2adb367ed9f69a71daf7912054f257042925dac8b3e59"
+      },
+      "deep_P64_synccheck": {
+        "pass": true,
+        "rows": 1,
+        "tool": "synccheck",
+        "receipt_sha256": "44fba144b081684f507e5802a31370b1d81415dd51a40954ea85376e165e7721"
+      },
+      "gist_P64_memcheck": {
+        "pass": true,
+        "rows": 1,
+        "tool": "memcheck",
+        "receipt_sha256": "95beeed982348c01157b7c9eeb148c2dab33eb950023ed7adc2c38d6e1340bd4"
+      },
+      "gist_P64_synccheck": {
+        "pass": true,
+        "rows": 1,
+        "tool": "synccheck",
+        "receipt_sha256": "2d1bf96cc00b33f0b7d4c8a3facd2712537e108dffa16b9b7d1ff1476abb0b67"
+      }
+    }
+  }
+}

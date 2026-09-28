@@ -1,0 +1,68 @@
+{
+  "state": "interrupted before timing by foreign GPU 6 process",
+  "gpu_uuid": "GPU-865ae1f0-780e-d04c-5ec3-4deccea65f82",
+  "binary_sha256": "86df4537088ee63fba478c4785b4813f00cd1b69a49e473d3e875bdb4b51837c",
+  "dataset": {
+    "GIST": {
+      "n": 1000000,
+      "full_output_pass": true,
+      "pilot": {
+        "S": {
+          "mean_ms": 2616.243800125,
+          "ordered_output_sha256": "494af304f88728e8601bbe043513c90ede87b9ad70f221b17bbc24daaca4d451",
+          "boundary_count": 239
+        },
+        "P": {
+          "mean_ms": 401.92187750000005,
+          "ordered_output_sha256": "494af304f88728e8601bbe043513c90ede87b9ad70f221b17bbc24daaca4d451",
+          "boundary_count": 239
+        }
+      },
+      "S_over_P_exploratory": 6.5093341432378224
+    },
+    "Deep": {
+      "n": 1000000,
+      "full_output_pass": true,
+      "pilot": {
+        "S": {
+          "mean_ms": 278.441438375,
+          "ordered_output_sha256": "548694473354e8bfc4f4484f25c973bdac78375bbb18847341d7a451bf84f7fb",
+          "boundary_count": 83
+        },
+        "P": {
+          "mean_ms": 49.707180125,
+          "ordered_output_sha256": "548694473354e8bfc4f4484f25c973bdac78375bbb18847341d7a451bf84f7fb",
+          "boundary_count": 83
+        }
+      },
+      "S_over_P_exploratory": 5.601634163812869
+    },
+    "Tloc": {
+      "n": 1000000,
+      "full_output_pass": true,
+      "pilot": {
+        "S": {
+          "mean_ms": 3.8538955,
+          "ordered_output_sha256": "0e4a61c523416cf7045056644287e7816b3624e1def45bf94006939a07995645",
+          "boundary_count": 10
+        },
+        "P": {
+          "mean_ms": 3.538519625,
+          "ordered_output_sha256": "0e4a61c523416cf7045056644287e7816b3624e1def45bf94006939a07995645",
+          "boundary_count": 10
+        }
+      },
+      "S_over_P_exploratory": 1.0891265015945757
+    }
+  },
+  "receipts": {
+    "GIST/full_normal_S": "a5e06e12e2619830d3707b030e215a9221a732e83ee59ae296a6edae3c202324",
+    "GIST/full_normal_P": "36094ba5cb19783126f22a35acca6e641022324376101deff26f142c09041d3a",
+    "Deep/full_normal_S": "045f1ecfdb26e801dc73b4080c433ff1741e707682658c7c4e1635a742d932f9",
+    "Deep/full_normal_P": "c24afcad4e26c903266c025274cdb38a87c3da6e2b6873250cce5d882cc72439",
+    "Tloc/full_normal_S": "432b999829bdcb3d7eada0dd3cc47f7798554e4e86a5117ce17dd53cbe7c9958",
+    "Tloc/full_normal_P": "c3e0a8a3bd13713e9e29eada8a291d00d21c44346fd5873b26c4a0e770cf1c88",
+    "GIST/gate_memcheck_S": "f849726638c11f6f9c30a0f46c2cec2ce5f41646cb165e55594537acd76a1800",
+    "GIST/gate_memcheck_P": "91113241ce2e4521c353213450c73d0d739f713743f67c9997362b22f236c798"
+  }
+}

@@ -1,0 +1,4109 @@
+{
+  "experiment": "result_fusion_datasets_20260924",
+  "state": "complete bounded four-dataset result-fusion comparison",
+  "scope": "N2000 batch1 Graph C/E, original traversal and layout, complete hot host-ready query, no setup/tree",
+  "hardware": {
+    "gpu_index": 5,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "driver": "590.48.01",
+    "compute_cap": "12.0",
+    "cuda": "13.1.115",
+    "cpu": "shared/unpinned",
+    "clocks": "unchanged/uncontrolled"
+  },
+  "binary_sha256": {
+    "graph_bench": "40a51e0ad1113e938a7ccc8662740bb5e6bd5da482df820526d19bec9102f7a5",
+    "graph_bench_anchor": "af7a0256a72416d36e794d13d4de4ec2452a7d960c3ea1ff19fc5d7281923952"
+  },
+  "static_sha256": {
+    "sass.txt": "e79126b85d5720c88131faa3ffbf629f472d29bc4335f7179babadb36929d74a",
+    "resources.txt": "e2c13ecaeccc46787075cc8cb864c51d22f07235ae1524ad7a16dae947172d9f"
+  },
+  "selector_resource": "REG:40 STACK:0 SHARED:3232 LOCAL:0 CONSTANT[0]:960 TEXTURE:0 SURFACE:0 SAMPLER:0",
+  "runs": 162,
+  "orders": [
+    "CE",
+    "EC",
+    "CE",
+    "EC",
+    "CE",
+    "EC"
+  ],
+  "data": {
+    "Words": {
+      "dataset": "Words",
+      "n": 2000,
+      "dimension": null,
+      "metric": "byte edit distance",
+      "normal_radius": 4,
+      "query_ids_sha256": "31cd4bbbfde9214177af8ca9c735ad07000cf489f95c95f4226322d256d531de",
+      "data_sha256": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+      "oracle_sha256": "7b753aba1a1c0a1c1ef43bb77d4fcb8e471d5b72d42033f928db687283985e52",
+      "full_verification": {
+        "dataset": "Words",
+        "full_checks": {
+          "full_normal_A": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+          "full_normal_C": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+          "full_normal_E": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+          "full_zero_A": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+          "full_zero_C": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+          "full_zero_E": "3bdd1d6ba75ea645c68b86f376a77336f463df8513d3c5aaec8d3978daf51bf0",
+          "full_all_A": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+          "full_all_C": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+          "full_all_E": "c3891630e4b7803e43b48f6b44259526496135483990ac4e8fe33ae9ffa0d20b",
+          "full_empty_C": "65080991bd616046191d983a4225a102c24d55990e1d001da04e17fc246f10c1",
+          "full_empty_E": "65080991bd616046191d983a4225a102c24d55990e1d001da04e17fc246f10c1",
+          "anchor_full_C": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a",
+          "anchor_full_E": "27d1404ac5d60439d3d939c619dbd98c72f3d4249ad6da4d070d69250930a38a"
+        },
+        "oracle_sha256": "7b753aba1a1c0a1c1ef43bb77d4fcb8e471d5b72d42033f928db687283985e52",
+        "binary_sha256": "40a51e0ad1113e938a7ccc8662740bb5e6bd5da482df820526d19bec9102f7a5"
+      },
+      "hit_median": 2.0,
+      "hit_min": 1,
+      "hit_max": 114,
+      "primary": {
+        "C": [
+          {
+            "mean_us": 108.4087294921875,
+            "query_p10_p50_p90_us": [
+              99.078,
+              109.694,
+              111.879
+            ],
+            "queries": 4096,
+            "setup_us": 4382.662,
+            "capture_us": 1801.132,
+            "first_us": 224.827,
+            "setup_first_amortized_us": 109.53360473632813,
+            "cpu_one_core_percent": 100.02381576195118
+          },
+          {
+            "mean_us": 108.32784497070313,
+            "query_p10_p50_p90_us": [
+              98.83,
+              109.604,
+              111.885
+            ],
+            "queries": 4096,
+            "setup_us": 1865.0839999999998,
+            "capture_us": 749.6379999999999,
+            "first_us": 238.642,
+            "setup_first_amortized_us": 108.84144995117187,
+            "cpu_one_core_percent": 100.03795157753096
+          },
+          {
+            "mean_us": 108.50262060546875,
+            "query_p10_p50_p90_us": [
+              99.099,
+              109.693,
+              111.87
+            ],
+            "queries": 4096,
+            "setup_us": 2205.654,
+            "capture_us": 757.347,
+            "first_us": 228.68,
+            "setup_first_amortized_us": 109.09694042968749,
+            "cpu_one_core_percent": 100.03665824763904
+          },
+          {
+            "mean_us": 107.75984252929688,
+            "query_p10_p50_p90_us": [
+              98.143,
+              108.543,
+              112.077
+            ],
+            "queries": 4096,
+            "setup_us": 1525.221,
+            "capture_us": 595.0029999999999,
+            "first_us": 230.05700000000002,
+            "setup_first_amortized_us": 108.18837719726564,
+            "cpu_one_core_percent": 100.0282583258822
+          },
+          {
+            "mean_us": 108.41710375976562,
+            "query_p10_p50_p90_us": [
+              98.912,
+              109.638,
+              111.883
+            ],
+            "queries": 4096,
+            "setup_us": 1952.44,
+            "capture_us": 848.9259999999999,
+            "first_us": 231.453,
+            "setup_first_amortized_us": 108.95028076171874,
+            "cpu_one_core_percent": 100.02928420919145
+          },
+          {
+            "mean_us": 107.67148364257812,
+            "query_p10_p50_p90_us": [
+              97.941,
+              108.541,
+              111.546
+            ],
+            "queries": 4096,
+            "setup_us": 1572.609,
+            "capture_us": 648.698,
+            "first_us": 231.078,
+            "setup_first_amortized_us": 108.11183691406251,
+            "cpu_one_core_percent": 100.03673585968237
+          }
+        ],
+        "E": [
+          {
+            "mean_us": 61.05758666992188,
+            "query_p10_p50_p90_us": [
+              53.16,
+              61.32,
+              65.384
+            ],
+            "queries": 4096,
+            "setup_us": 7463.840999999999,
+            "capture_us": 3228.889,
+            "first_us": 427.281,
+            "setup_first_amortized_us": 62.98413012695314,
+            "cpu_one_core_percent": 100.06063634187295
+          },
+          {
+            "mean_us": 60.077282470703125,
+            "query_p10_p50_p90_us": [
+              53.127,
+              61.264,
+              63.494
+            ],
+            "queries": 4096,
+            "setup_us": 2628.4379999999996,
+            "capture_us": 699.646,
+            "first_us": 162.181,
+            "setup_first_amortized_us": 60.7585859375,
+            "cpu_one_core_percent": 100.03556977080994
+          },
+          {
+            "mean_us": 61.21716650390625,
+            "query_p10_p50_p90_us": [
+              53.491,
+              60.175,
+              65.81
+            ],
+            "queries": 4096,
+            "setup_us": 5162.542,
+            "capture_us": 2103.317,
+            "first_us": 157.698,
+            "setup_first_amortized_us": 62.51605322265625,
+            "cpu_one_core_percent": 100.04649559633731
+          },
+          {
+            "mean_us": 60.19318115234375,
+            "query_p10_p50_p90_us": [
+              58.509,
+              59.336,
+              63.403
+            ],
+            "queries": 4096,
+            "setup_us": 1570.961,
+            "capture_us": 623.659,
+            "first_us": 182.50300000000001,
+            "setup_first_amortized_us": 60.62127294921875,
+            "cpu_one_core_percent": 100.03494702287469
+          },
+          {
+            "mean_us": 60.089341552734375,
+            "query_p10_p50_p90_us": [
+              58.395,
+              59.33,
+              63.403
+            ],
+            "queries": 4096,
+            "setup_us": 3208.815,
+            "capture_us": 615.0749999999999,
+            "first_us": 151.106,
+            "setup_first_amortized_us": 60.909634765625,
+            "cpu_one_core_percent": 100.04159740441347
+          },
+          {
+            "mean_us": 60.02963134765625,
+            "query_p10_p50_p90_us": [
+              58.335,
+              59.331,
+              63.387
+            ],
+            "queries": 4096,
+            "setup_us": 1505.754,
+            "capture_us": 580.153,
+            "first_us": 158.625,
+            "setup_first_amortized_us": 60.43597387695312,
+            "cpu_one_core_percent": 100.02045519512785
+          }
+        ]
+      },
+      "paired": {
+        "ratio_of_medians": 1.8018958165211512,
+        "paired_geomean": 1.7898271000700918,
+        "bootstrap_95": [
+          1.7798908126399189,
+          1.7993983924975265
+        ],
+        "wins": 6,
+        "round_ratios": [
+          1.775516121825229,
+          1.8031415622623999,
+          1.772421475903254,
+          1.7902333863459718,
+          1.8042651318556857,
+          1.7936389283986827
+        ],
+        "method": "exact 6^6 paired log-ratio bootstrap"
+      },
+      "sustained": [
+        {
+          "C": {
+            "mean_us": 107.70183276367189,
+            "query_p10_p50_p90_us": [
+              97.844,
+              108.53,
+              111.447
+            ],
+            "queries": 8192,
+            "setup_us": 1619.575,
+            "capture_us": 673.767,
+            "first_us": 236.233,
+            "setup_first_amortized_us": 107.92837182617188,
+            "cpu_one_core_percent": 100.04178227734195
+          },
+          "E": {
+            "mean_us": 60.13902722167968,
+            "query_p10_p50_p90_us": [
+              53.146,
+              61.272,
+              64.09
+            ],
+            "queries": 8192,
+            "setup_us": 2497.3199999999997,
+            "capture_us": 703.01,
+            "first_us": 161.689,
+            "setup_first_amortized_us": 60.46361328125,
+            "cpu_one_core_percent": 100.03974472972784
+          },
+          "C_over_E": 1.7908808595568064
+        },
+        {
+          "C": {
+            "mean_us": 107.80562255859375,
+            "query_p10_p50_p90_us": [
+              98.191,
+              108.535,
+              111.76
+            ],
+            "queries": 8192,
+            "setup_us": 3056.828,
+            "capture_us": 631.588,
+            "first_us": 197.142,
+            "setup_first_amortized_us": 108.20283569335938,
+            "cpu_one_core_percent": 100.05071919008901
+          },
+          "E": {
+            "mean_us": 60.1297138671875,
+            "query_p10_p50_p90_us": [
+              58.421,
+              59.333,
+              63.395
+            ],
+            "queries": 8192,
+            "setup_us": 1516.501,
+            "capture_us": 568.512,
+            "first_us": 133.919,
+            "setup_first_amortized_us": 60.331181152343746,
+            "cpu_one_core_percent": 100.03451650792363
+          },
+          "C_over_E": 1.7928843432834423
+        }
+      ],
+      "nsys": {
+        "C": {
+          "kernels_per_query": 24,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "getQresultCount(int, int *, int *, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "projectBounded(const int *, int *, float *, const int *, const float *, const int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              18,
+              0,
+              0
+            ]
+          ],
+          "kernel_sum_us": 104.58311764705883,
+          "selected_kernel_us": {
+            "getQresultCount(": 44.83558823529412,
+            "fusedResultSelect(": 0.0
+          },
+          "sqlite_sha256": "d24790116942a125eca99eb8602d75d3f521d70b3bf822d64f7abf9cac24a759"
+        },
+        "E": {
+          "kernels_per_query": 17,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "fusedResultSelect(const int *, const int *, const int *, const float *, const int *, int *, int *, float *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              40,
+              2208,
+              0
+            ]
+          ],
+          "kernel_sum_us": 54.01758823529412,
+          "selected_kernel_us": {
+            "getQresultCount(": 0.0,
+            "fusedResultSelect(": 3.9849411764705884
+          },
+          "sqlite_sha256": "300daf1898e0596852a135b38836c575ae2d3ebd0fd64a032884b79120a0ec47"
+        }
+      },
+      "host_output_bytes": 17764,
+      "legacy_anchor": {
+        "primary": {
+          "C": [
+            {
+              "mean_us": 108.45070458984375,
+              "query_p10_p50_p90_us": [
+                98.842,
+                109.754,
+                112.137
+              ],
+              "queries": 4096,
+              "setup_us": 1873.71,
+              "capture_us": 754.352,
+              "first_us": 239.188,
+              "setup_first_amortized_us": 108.966548828125,
+              "cpu_one_core_percent": 100.03802089238683
+            },
+            {
+              "mean_us": 107.80545898437501,
+              "query_p10_p50_p90_us": [
+                97.272,
+                108.55,
+                112.248
+              ],
+              "queries": 4096,
+              "setup_us": 1514.126,
+              "capture_us": 593.889,
+              "first_us": 220.929,
+              "setup_first_amortized_us": 108.22905639648438,
+              "cpu_one_core_percent": 100.04227496212447
+            },
+            {
+              "mean_us": 107.69993798828125,
+              "query_p10_p50_p90_us": [
+                98.165,
+                108.543,
+                111.517
+              ],
+              "queries": 4096,
+              "setup_us": 1548.027,
+              "capture_us": 612.744,
+              "first_us": 225.395,
+              "setup_first_amortized_us": 108.13290234375,
+              "cpu_one_core_percent": 100.03463688545503
+            },
+            {
+              "mean_us": 107.8530244140625,
+              "query_p10_p50_p90_us": [
+                98.212,
+                108.542,
+                112.17
+              ],
+              "queries": 4096,
+              "setup_us": 1596.093,
+              "capture_us": 630.134,
+              "first_us": 187.452,
+              "setup_first_amortized_us": 108.28846020507812,
+              "cpu_one_core_percent": 100.01609074060588
+            },
+            {
+              "mean_us": 108.35221044921876,
+              "query_p10_p50_p90_us": [
+                99.096,
+                109.621,
+                111.832
+              ],
+              "queries": 4096,
+              "setup_us": 1876.0300000000002,
+              "capture_us": 758.501,
+              "first_us": 216.90800000000002,
+              "setup_first_amortized_us": 108.863181640625,
+              "cpu_one_core_percent": 100.03640745988707
+            },
+            {
+              "mean_us": 109.64204516601562,
+              "query_p10_p50_p90_us": [
+                99.338,
+                110.397,
+                113.62
+              ],
+              "queries": 4096,
+              "setup_us": 2702.313,
+              "capture_us": 769.1080000000001,
+              "first_us": 213.13500000000002,
+              "setup_first_amortized_us": 110.35382446289063,
+              "cpu_one_core_percent": 100.05325608932804
+            }
+          ],
+          "E": [
+            {
+              "mean_us": 60.16311547851563,
+              "query_p10_p50_p90_us": [
+                53.121,
+                61.271,
+                63.578
+              ],
+              "queries": 4096,
+              "setup_us": 1837.152,
+              "capture_us": 734.524,
+              "first_us": 160.566,
+              "setup_first_amortized_us": 60.65083959960938,
+              "cpu_one_core_percent": 100.0340326392495
+            },
+            {
+              "mean_us": 60.000294921875,
+              "query_p10_p50_p90_us": [
+                58.285,
+                59.32,
+                63.378
+              ],
+              "queries": 4096,
+              "setup_us": 2281.407,
+              "capture_us": 564.075,
+              "first_us": 155.15900000000002,
+              "setup_first_amortized_us": 60.59515966796875,
+              "cpu_one_core_percent": 100.0220209313242
+            },
+            {
+              "mean_us": 60.058405273437494,
+              "query_p10_p50_p90_us": [
+                53.117,
+                61.27,
+                63.543
+              ],
+              "queries": 4096,
+              "setup_us": 1761.171,
+              "capture_us": 680.609,
+              "first_us": 159.906,
+              "setup_first_amortized_us": 60.52741821289062,
+              "cpu_one_core_percent": 100.03673920669725
+            },
+            {
+              "mean_us": 60.088810546874996,
+              "query_p10_p50_p90_us": [
+                53.115,
+                61.263,
+                63.56
+              ],
+              "queries": 4096,
+              "setup_us": 2421.659,
+              "capture_us": 715.66,
+              "first_us": 160.112,
+              "setup_first_amortized_us": 60.71912573242187,
+              "cpu_one_core_percent": 100.03874048667682
+            },
+            {
+              "mean_us": 60.04362133789063,
+              "query_p10_p50_p90_us": [
+                53.121,
+                61.246,
+                63.577
+              ],
+              "queries": 4096,
+              "setup_us": 1775.126,
+              "capture_us": 692.035,
+              "first_us": 184.309,
+              "setup_first_amortized_us": 60.5219990234375,
+              "cpu_one_core_percent": 100.0367290980177
+            },
+            {
+              "mean_us": 60.105384765625004,
+              "query_p10_p50_p90_us": [
+                53.129,
+                61.286,
+                63.607
+              ],
+              "queries": 4096,
+              "setup_us": 1783.416,
+              "capture_us": 686.181,
+              "first_us": 185.269,
+              "setup_first_amortized_us": 60.58602075195313,
+              "cpu_one_core_percent": 100.03490382465488
+            }
+          ]
+        },
+        "paired": {
+          "ratio_of_medians": 1.7995026633545086,
+          "paired_geomean": 1.8026748860278246,
+          "bootstrap_95": [
+            1.795939478689958,
+            1.8120590527764138
+          ],
+          "wins": 6,
+          "round_ratios": [
+            1.8026111800771307,
+            1.7967488180640778,
+            1.7932533755756341,
+            1.7948936487921803,
+            1.8045582200892822,
+            1.8241634354983987
+          ],
+          "method": "exact 6^6 paired log-ratio bootstrap"
+        }
+      }
+    },
+    "GIST": {
+      "dataset": "GIST",
+      "n": 2000,
+      "dimension": 960,
+      "metric": "float32 L2",
+      "normal_radius": 1.411250114440918,
+      "query_ids_sha256": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "data_sha256": "c1e6757672d3f43d9b58ab0821b9b295a3463cb7360dc78b3d82bf416d79f436",
+      "oracle_sha256": "f928468a7818eabf6f1d35969ad1175656417546624f92dd41f6293fc32c2af1",
+      "full_verification": {
+        "dataset": "GIST",
+        "full_checks": {
+          "full_empty_C": "6aa4c91345a08a06b7fd4790123fc130afc692f93ad485728dae1709078463ec",
+          "full_empty_E": "6aa4c91345a08a06b7fd4790123fc130afc692f93ad485728dae1709078463ec",
+          "full_zero_A": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_zero_C": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_zero_E": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_normal_A": "a70f758019f1ddf05d736dfb29e8269ff6fe86e924c439a42a632252443c6fa9",
+          "full_normal_C": "a70f758019f1ddf05d736dfb29e8269ff6fe86e924c439a42a632252443c6fa9",
+          "full_normal_E": "a70f758019f1ddf05d736dfb29e8269ff6fe86e924c439a42a632252443c6fa9",
+          "full_all_A": "9e5ae93bfa438e2fafb5b13df10014acf46b9fc33158128005d181f89ce15988",
+          "full_all_C": "9e5ae93bfa438e2fafb5b13df10014acf46b9fc33158128005d181f89ce15988",
+          "full_all_E": "9e5ae93bfa438e2fafb5b13df10014acf46b9fc33158128005d181f89ce15988"
+        },
+        "oracle_sha256": "f928468a7818eabf6f1d35969ad1175656417546624f92dd41f6293fc32c2af1",
+        "binary_sha256": "40a51e0ad1113e938a7ccc8662740bb5e6bd5da482df820526d19bec9102f7a5"
+      },
+      "hit_median": 50.5,
+      "hit_min": 1,
+      "hit_max": 702,
+      "primary": {
+        "C": [
+          {
+            "mean_us": 7630.4365859375,
+            "query_p10_p50_p90_us": [
+              7628.853,
+              7635.796,
+              7643.997
+            ],
+            "queries": 512,
+            "setup_us": 1980.064,
+            "capture_us": 867.157,
+            "first_us": 7739.968,
+            "setup_first_amortized_us": 7649.4210234375005,
+            "cpu_one_core_percent": 100.03655734938647
+          },
+          {
+            "mean_us": 7625.8799140625,
+            "query_p10_p50_p90_us": [
+              7628.521,
+              7631.146,
+              7641.874
+            ],
+            "queries": 512,
+            "setup_us": 1689.003,
+            "capture_us": 740.7629999999999,
+            "first_us": 7738.221,
+            "setup_first_amortized_us": 7644.2924609374995,
+            "cpu_one_core_percent": 100.03512419539567
+          },
+          {
+            "mean_us": 7628.4704375,
+            "query_p10_p50_p90_us": [
+              7628.585,
+              7633.374,
+              7642.358
+            ],
+            "queries": 512,
+            "setup_us": 1557.3970000000002,
+            "capture_us": 636.337,
+            "first_us": 7726.2880000000005,
+            "setup_first_amortized_us": 7646.602634765625,
+            "cpu_one_core_percent": 100.03885530007919
+          },
+          {
+            "mean_us": 7623.64684765625,
+            "query_p10_p50_p90_us": [
+              7621.617,
+              7629.962,
+              7636.05
+            ],
+            "queries": 512,
+            "setup_us": 4267.263,
+            "capture_us": 1575.627,
+            "first_us": 7723.5289999999995,
+            "setup_first_amortized_us": 7647.06636328125,
+            "cpu_one_core_percent": 100.03585134495249
+          },
+          {
+            "mean_us": 7622.5500410156255,
+            "query_p10_p50_p90_us": [
+              7619.243,
+              7629.537,
+              7641.287
+            ],
+            "queries": 512,
+            "setup_us": 1683.611,
+            "capture_us": 727.4,
+            "first_us": 7724.868,
+            "setup_first_amortized_us": 7640.925976562501,
+            "cpu_one_core_percent": 100.03736142503955
+          },
+          {
+            "mean_us": 7623.0979140624995,
+            "query_p10_p50_p90_us": [
+              7620.584,
+              7629.662,
+              7640.971
+            ],
+            "queries": 512,
+            "setup_us": 4467.012000000001,
+            "capture_us": 2005.6470000000002,
+            "first_us": 7726.0779999999995,
+            "setup_first_amortized_us": 7646.912542968749,
+            "cpu_one_core_percent": 100.03836665983881
+          }
+        ],
+        "E": [
+          {
+            "mean_us": 7575.834337890626,
+            "query_p10_p50_p90_us": [
+              7571.765,
+              7581.316,
+              7592.219
+            ],
+            "queries": 512,
+            "setup_us": 1545.8239999999998,
+            "capture_us": 589.0920000000001,
+            "first_us": 7679.799,
+            "setup_first_amortized_us": 7593.8531328125,
+            "cpu_one_core_percent": 100.03602833033058
+          },
+          {
+            "mean_us": 7574.96112109375,
+            "query_p10_p50_p90_us": [
+              7571.426,
+              7580.099,
+              7591.807
+            ],
+            "queries": 512,
+            "setup_us": 2430.228,
+            "capture_us": 1491.586,
+            "first_us": 7679.924,
+            "setup_first_amortized_us": 7594.7075117187505,
+            "cpu_one_core_percent": 100.02948406664062
+          },
+          {
+            "mean_us": 7577.7529550781255,
+            "query_p10_p50_p90_us": [
+              7579.103,
+              7581.672,
+              7592.421
+            ],
+            "queries": 512,
+            "setup_us": 5109.670999999999,
+            "capture_us": 1917.724,
+            "first_us": 7674.119,
+            "setup_first_amortized_us": 7602.721294921875,
+            "cpu_one_core_percent": 100.03474110232037
+          },
+          {
+            "mean_us": 7573.73348046875,
+            "query_p10_p50_p90_us": [
+              7569.491,
+              7579.93,
+              7585.977
+            ],
+            "queries": 512,
+            "setup_us": 1999.5109999999997,
+            "capture_us": 842.944,
+            "first_us": 7666.148999999999,
+            "setup_first_amortized_us": 7592.61172265625,
+            "cpu_one_core_percent": 100.04073351039338
+          },
+          {
+            "mean_us": 7567.5113613281255,
+            "query_p10_p50_p90_us": [
+              7567.054,
+              7571.517,
+              7581.208
+            ],
+            "queries": 512,
+            "setup_us": 2949.631,
+            "capture_us": 1971.7269999999999,
+            "first_us": 7675.441,
+            "setup_first_amortized_us": 7588.263455078125,
+            "cpu_one_core_percent": 100.03928557871895
+          },
+          {
+            "mean_us": 7569.873033203125,
+            "query_p10_p50_p90_us": [
+              7567.656,
+              7579.33,
+              7582.314
+            ],
+            "queries": 512,
+            "setup_us": 1884.8,
+            "capture_us": 730.1220000000001,
+            "first_us": 7671.139,
+            "setup_first_amortized_us": 7588.5369765625,
+            "cpu_one_core_percent": 100.02923573928263
+          }
+        ]
+      },
+      "paired": {
+        "ratio_of_medians": 1.0066561616567178,
+        "paired_geomean": 1.0069194402159294,
+        "bootstrap_95": [
+          1.0067199346408642,
+          1.0071299171867436
+        ],
+        "wins": 6,
+        "round_ratios": [
+          1.0072074237122346,
+          1.006721987367956,
+          1.0066929448244795,
+          1.0065903252756672,
+          1.0072730224058548,
+          1.0070311457835448
+        ],
+        "method": "exact 6^6 paired log-ratio bootstrap"
+      },
+      "sustained": [
+        {
+          "C": {
+            "mean_us": 7622.683342773437,
+            "query_p10_p50_p90_us": [
+              7619.36,
+              7629.696,
+              7640.566
+            ],
+            "queries": 1024,
+            "setup_us": 2011.75,
+            "capture_us": 897.9599999999999,
+            "first_us": 7728.8369999999995,
+            "setup_first_amortized_us": 7632.195634765624,
+            "cpu_one_core_percent": 100.03410212546659
+          },
+          "E": {
+            "mean_us": 7572.830747070313,
+            "query_p10_p50_p90_us": [
+              7569.602,
+              7580.185,
+              7584.478
+            ],
+            "queries": 1024,
+            "setup_us": 1933.026,
+            "capture_us": 816.9749999999999,
+            "first_us": 7672.221,
+            "setup_first_amortized_us": 7582.21087109375,
+            "cpu_one_core_percent": 100.03829942152925
+          },
+          "C_over_E": 1.0065830859513678
+        },
+        {
+          "C": {
+            "mean_us": 7623.424380859375,
+            "query_p10_p50_p90_us": [
+              7620.28,
+              7629.792,
+              7641.361
+            ],
+            "queries": 1024,
+            "setup_us": 2045.64,
+            "capture_us": 903.251,
+            "first_us": 7721.894,
+            "setup_first_amortized_us": 7632.96298828125,
+            "cpu_one_core_percent": 100.03257472770476
+          },
+          "E": {
+            "mean_us": 7569.606176757813,
+            "query_p10_p50_p90_us": [
+              7567.34,
+              7579.14,
+              7581.595
+            ],
+            "queries": 1024,
+            "setup_us": 2059.081,
+            "capture_us": 892.038,
+            "first_us": 7676.502,
+            "setup_first_amortized_us": 7579.11358203125,
+            "cpu_one_core_percent": 100.03679236701542
+          },
+          "C_over_E": 1.0071097759704868
+        }
+      ],
+      "nsys": {
+        "C": {
+          "kernels_per_query": 24,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "getQresultCount(int, int *, int *, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "projectBounded(const int *, int *, float *, const int *, const float *, const int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              18,
+              0,
+              0
+            ]
+          ],
+          "kernel_sum_us": 7624.414705882353,
+          "selected_kernel_us": {
+            "getQresultCount(": 46.86464705882353,
+            "fusedResultSelect(": 0.0
+          },
+          "sqlite_sha256": "2d237d5cf54a7ba6eed13b3b8311b50915faf6df4384ada78e1861860c4182ef"
+        },
+        "E": {
+          "kernels_per_query": 17,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "fusedResultSelect(const int *, const int *, const int *, const float *, const int *, int *, int *, float *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              40,
+              2208,
+              0
+            ]
+          ],
+          "kernel_sum_us": 7577.329764705883,
+          "selected_kernel_us": {
+            "getQresultCount(": 0.0,
+            "fusedResultSelect(": 3.9849411764705884
+          },
+          "sqlite_sha256": "801250b75e37af697331bfdcba0b2afb5c25afa7e30c1ee43f9ebc2b98177166"
+        }
+      },
+      "host_output_bytes": 17764
+    },
+    "Deep": {
+      "dataset": "Deep",
+      "n": 2000,
+      "dimension": 96,
+      "metric": "float32 L2",
+      "normal_radius": 1.0798368453979492,
+      "query_ids_sha256": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "data_sha256": "bdb38be393b14dc258edfa6156e50b8e290d23b36fc2ac6585063a751f157b24",
+      "oracle_sha256": "bed601558b8e76bb69d87054e84c69b68a161d727167eee0a023838870f42a54",
+      "full_verification": {
+        "dataset": "Deep",
+        "full_checks": {
+          "full_empty_C": "6aa4c91345a08a06b7fd4790123fc130afc692f93ad485728dae1709078463ec",
+          "full_empty_E": "6aa4c91345a08a06b7fd4790123fc130afc692f93ad485728dae1709078463ec",
+          "full_zero_A": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_zero_C": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_zero_E": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_normal_A": "1c2d3614822e3d5a6943871c987ad85625badb41239aa2f595564d4bcdf14091",
+          "full_normal_C": "1c2d3614822e3d5a6943871c987ad85625badb41239aa2f595564d4bcdf14091",
+          "full_normal_E": "1c2d3614822e3d5a6943871c987ad85625badb41239aa2f595564d4bcdf14091",
+          "full_all_A": "73d37e592a7e0ad029be75adbb4c087c1beae36065c0f2af0cce696c44591c04",
+          "full_all_C": "73d37e592a7e0ad029be75adbb4c087c1beae36065c0f2af0cce696c44591c04",
+          "full_all_E": "73d37e592a7e0ad029be75adbb4c087c1beae36065c0f2af0cce696c44591c04"
+        },
+        "oracle_sha256": "bed601558b8e76bb69d87054e84c69b68a161d727167eee0a023838870f42a54",
+        "binary_sha256": "40a51e0ad1113e938a7ccc8662740bb5e6bd5da482df820526d19bec9102f7a5"
+      },
+      "hit_median": 50.5,
+      "hit_min": 3,
+      "hit_max": 183,
+      "primary": {
+        "C": [
+          {
+            "mean_us": 860.14348046875,
+            "query_p10_p50_p90_us": [
+              859.029,
+              860.667,
+              861.326
+            ],
+            "queries": 512,
+            "setup_us": 1933.873,
+            "capture_us": 805.6899999999999,
+            "first_us": 947.43,
+            "setup_first_amortized_us": 865.771025390625,
+            "cpu_one_core_percent": 100.03219287053169
+          },
+          {
+            "mean_us": 858.5443789062499,
+            "query_p10_p50_p90_us": [
+              857.749,
+              858.285,
+              859.882
+            ],
+            "queries": 512,
+            "setup_us": 2367.991,
+            "capture_us": 644.586,
+            "first_us": 936.2479999999999,
+            "setup_first_amortized_us": 864.9979707031249,
+            "cpu_one_core_percent": 100.02521388340445
+          },
+          {
+            "mean_us": 859.44212890625,
+            "query_p10_p50_p90_us": [
+              858.112,
+              859.838,
+              861.039
+            ],
+            "queries": 512,
+            "setup_us": 1903.949,
+            "capture_us": 787.3309999999999,
+            "first_us": 940.291,
+            "setup_first_amortized_us": 864.99728515625,
+            "cpu_one_core_percent": 100.03361706726933
+          },
+          {
+            "mean_us": 858.3835390625001,
+            "query_p10_p50_p90_us": [
+              857.646,
+              858.212,
+              859.686
+            ],
+            "queries": 512,
+            "setup_us": 1566.41,
+            "capture_us": 638.933,
+            "first_us": 935.115,
+            "setup_first_amortized_us": 863.269330078125,
+            "cpu_one_core_percent": 100.03407211197259
+          },
+          {
+            "mean_us": 859.202998046875,
+            "query_p10_p50_p90_us": [
+              852.849,
+              859.918,
+              861.199
+            ],
+            "queries": 512,
+            "setup_us": 2558.608,
+            "capture_us": 826.127,
+            "first_us": 955.946,
+            "setup_first_amortized_us": 866.067361328125,
+            "cpu_one_core_percent": 100.04344018989838
+          },
+          {
+            "mean_us": 859.1697910156249,
+            "query_p10_p50_p90_us": [
+              852.797,
+              859.952,
+              861.175
+            ],
+            "queries": 512,
+            "setup_us": 1875.3719999999998,
+            "capture_us": 772.106,
+            "first_us": 942.881,
+            "setup_first_amortized_us": 864.67419140625,
+            "cpu_one_core_percent": 100.03635024687689
+          }
+        ],
+        "E": [
+          {
+            "mean_us": 805.315935546875,
+            "query_p10_p50_p90_us": [
+              799.373,
+              803.186,
+              811.624
+            ],
+            "queries": 512,
+            "setup_us": 4350.119000000001,
+            "capture_us": 1425.314,
+            "first_us": 888.648,
+            "setup_first_amortized_us": 815.54790234375,
+            "cpu_one_core_percent": 100.04072457707474
+          },
+          {
+            "mean_us": 805.25078125,
+            "query_p10_p50_p90_us": [
+              798.498,
+              808.343,
+              809.697
+            ],
+            "queries": 512,
+            "setup_us": 1538.4940000000001,
+            "capture_us": 606.411,
+            "first_us": 873.429,
+            "setup_first_amortized_us": 809.961568359375,
+            "cpu_one_core_percent": 100.03343588783679
+          },
+          {
+            "mean_us": 804.37308984375,
+            "query_p10_p50_p90_us": [
+              798.342,
+              805.315,
+              809.306
+            ],
+            "queries": 512,
+            "setup_us": 1492.081,
+            "capture_us": 569.346,
+            "first_us": 881.157,
+            "setup_first_amortized_us": 809.0083203125,
+            "cpu_one_core_percent": 100.03874663260885
+          },
+          {
+            "mean_us": 803.9533671874999,
+            "query_p10_p50_p90_us": [
+              798.291,
+              801.4,
+              809.566
+            ],
+            "queries": 512,
+            "setup_us": 1547.828,
+            "capture_us": 605.562,
+            "first_us": 883.4150000000001,
+            "setup_first_amortized_us": 808.701888671875,
+            "cpu_one_core_percent": 100.03662848990382
+          },
+          {
+            "mean_us": 803.8651015625001,
+            "query_p10_p50_p90_us": [
+              798.341,
+              801.259,
+              809.659
+            ],
+            "queries": 512,
+            "setup_us": 1749.457,
+            "capture_us": 604.84,
+            "first_us": 886.607,
+            "setup_first_amortized_us": 809.0136640625,
+            "cpu_one_core_percent": 100.02775802892516
+          },
+          {
+            "mean_us": 803.32137890625,
+            "query_p10_p50_p90_us": [
+              798.223,
+              800.704,
+              809.142
+            ],
+            "queries": 512,
+            "setup_us": 1500.605,
+            "capture_us": 564.463,
+            "first_us": 893.1959999999999,
+            "setup_first_amortized_us": 807.9967714843749,
+            "cpu_one_core_percent": 100.03690284004675
+          }
+        ]
+      },
+      "paired": {
+        "ratio_of_medians": 1.068422882400617,
+        "paired_geomean": 1.068131408101577,
+        "bootstrap_95": [
+          1.0672582073162622,
+          1.0688904635880556
+        ],
+        "wins": 6,
+        "round_ratios": [
+          1.068082031537899,
+          1.066182609066857,
+          1.068462060401843,
+          1.0677031456008639,
+          1.0688397796804623,
+          1.0695218795065737
+        ],
+        "method": "exact 6^6 paired log-ratio bootstrap"
+      },
+      "sustained": [
+        {
+          "C": {
+            "mean_us": 859.06685546875,
+            "query_p10_p50_p90_us": [
+              852.732,
+              860.506,
+              861.25
+            ],
+            "queries": 1024,
+            "setup_us": 1901.037,
+            "capture_us": 800.542,
+            "first_us": 940.387,
+            "setup_first_amortized_us": 861.84168359375,
+            "cpu_one_core_percent": 100.0447073134569
+          },
+          "E": {
+            "mean_us": 803.5516777343751,
+            "query_p10_p50_p90_us": [
+              798.267,
+              800.774,
+              809.097
+            ],
+            "queries": 1024,
+            "setup_us": 1538.4299999999998,
+            "capture_us": 596.864,
+            "first_us": 897.099,
+            "setup_first_amortized_us": 805.9301240234375,
+            "cpu_one_core_percent": 100.03869981429506
+          },
+          "C_over_E": 1.0690872525969963
+        },
+        {
+          "C": {
+            "mean_us": 858.4765859375,
+            "query_p10_p50_p90_us": [
+              857.254,
+              858.604,
+              860.134
+            ],
+            "queries": 1024,
+            "setup_us": 2067.26,
+            "capture_us": 627.624,
+            "first_us": 935.827,
+            "setup_first_amortized_us": 861.4092880859374,
+            "cpu_one_core_percent": 100.03865459888372
+          },
+          "E": {
+            "mean_us": 803.673046875,
+            "query_p10_p50_p90_us": [
+              798.25,
+              801.008,
+              809.633
+            ],
+            "queries": 1024,
+            "setup_us": 1557.118,
+            "capture_us": 616.326,
+            "first_us": 881.4390000000001,
+            "setup_first_amortized_us": 806.0544501953124,
+            "cpu_one_core_percent": 100.03780612894634
+          },
+          "C_over_E": 1.0681913363594784
+        }
+      ],
+      "nsys": {
+        "C": {
+          "kernels_per_query": 24,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "getQresultCount(int, int *, int *, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "projectBounded(const int *, int *, float *, const int *, const float *, const int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              18,
+              0,
+              0
+            ]
+          ],
+          "kernel_sum_us": 850.868705882353,
+          "selected_kernel_us": {
+            "getQresultCount(": 46.927,
+            "fusedResultSelect(": 0.0
+          },
+          "sqlite_sha256": "69bb64ba6b2e7704f4d1e5ea414f8c19bb4e0730f0d36fcaaedd2f2c3f45ac99"
+        },
+        "E": {
+          "kernels_per_query": 17,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "fusedResultSelect(const int *, const int *, const int *, const float *, const int *, int *, int *, float *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              40,
+              2208,
+              0
+            ]
+          ],
+          "kernel_sum_us": 795.9756470588235,
+          "selected_kernel_us": {
+            "getQresultCount(": 0.0,
+            "fusedResultSelect(": 4.340705882352941
+          },
+          "sqlite_sha256": "dd1efa5745e7df149dc65b2c68af0431aec541b94f2c7f3645ac49ef5756310c"
+        }
+      },
+      "host_output_bytes": 17764
+    },
+    "Tloc": {
+      "dataset": "Tloc",
+      "n": 2000,
+      "dimension": 2,
+      "metric": "float32 L2",
+      "normal_radius": 3.089289426803589,
+      "query_ids_sha256": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "data_sha256": "a2c292f2f011f139fe27e8d35488decc5c8812e47847d22ad870da6694ed3fcb",
+      "oracle_sha256": "c31542c2b9953005bb72191d0fb3881ca0201b0e60752a9286db73c1ac829d28",
+      "full_verification": {
+        "dataset": "Tloc",
+        "full_checks": {
+          "full_empty_C": "6aa4c91345a08a06b7fd4790123fc130afc692f93ad485728dae1709078463ec",
+          "full_empty_E": "6aa4c91345a08a06b7fd4790123fc130afc692f93ad485728dae1709078463ec",
+          "full_zero_A": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_zero_C": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_zero_E": "46001842c4ddc456c53716649565e190e489470854221fc0185482435386ead5",
+          "full_normal_A": "f4c8f7651cad6776e6d546e7a426dc23cccf8084bcf2f31881137533ebac37c0",
+          "full_normal_C": "f4c8f7651cad6776e6d546e7a426dc23cccf8084bcf2f31881137533ebac37c0",
+          "full_normal_E": "f4c8f7651cad6776e6d546e7a426dc23cccf8084bcf2f31881137533ebac37c0",
+          "full_all_A": "504a42942546ef100fc847e3cb9cb3965b011d327622f06ebf9ac7c56ea359e3",
+          "full_all_C": "504a42942546ef100fc847e3cb9cb3965b011d327622f06ebf9ac7c56ea359e3",
+          "full_all_E": "504a42942546ef100fc847e3cb9cb3965b011d327622f06ebf9ac7c56ea359e3"
+        },
+        "oracle_sha256": "c31542c2b9953005bb72191d0fb3881ca0201b0e60752a9286db73c1ac829d28",
+        "binary_sha256": "40a51e0ad1113e938a7ccc8662740bb5e6bd5da482df820526d19bec9102f7a5"
+      },
+      "hit_median": 50.5,
+      "hit_min": 1,
+      "hit_max": 223,
+      "primary": {
+        "C": [
+          {
+            "mean_us": 77.62777661132813,
+            "query_p10_p50_p90_us": [
+              72.276,
+              75.608,
+              83.961
+            ],
+            "queries": 4096,
+            "setup_us": 1861.431,
+            "capture_us": 868.3249999999999,
+            "first_us": 206.729,
+            "setup_first_amortized_us": 78.13269848632812,
+            "cpu_one_core_percent": 100.02550329086414
+          },
+          {
+            "mean_us": 77.42672631835939,
+            "query_p10_p50_p90_us": [
+              71.99,
+              75.585,
+              83.945
+            ],
+            "queries": 4096,
+            "setup_us": 1845.446,
+            "capture_us": 688.952,
+            "first_us": 198.93,
+            "setup_first_amortized_us": 77.92584155273438,
+            "cpu_one_core_percent": 100.04004750174946
+          },
+          {
+            "mean_us": 77.57674926757812,
+            "query_p10_p50_p90_us": [
+              72.038,
+              75.597,
+              84.019
+            ],
+            "queries": 4096,
+            "setup_us": 1574.884,
+            "capture_us": 640.774,
+            "first_us": 208.142,
+            "setup_first_amortized_us": 78.01205834960938,
+            "cpu_one_core_percent": 100.04006224900355
+          },
+          {
+            "mean_us": 77.3036845703125,
+            "query_p10_p50_p90_us": [
+              72.759,
+              76.097,
+              84.886
+            ],
+            "queries": 4096,
+            "setup_us": 1913.417,
+            "capture_us": 800.394,
+            "first_us": 254.76500000000001,
+            "setup_first_amortized_us": 77.83302587890624,
+            "cpu_one_core_percent": 100.01792000703934
+          },
+          {
+            "mean_us": 77.67756225585939,
+            "query_p10_p50_p90_us": [
+              72.171,
+              75.61,
+              83.944
+            ],
+            "queries": 4096,
+            "setup_us": 1554.85,
+            "capture_us": 615.14,
+            "first_us": 196.486,
+            "setup_first_amortized_us": 78.10513452148437,
+            "cpu_one_core_percent": 100.0355362370756
+          },
+          {
+            "mean_us": 77.12996264648437,
+            "query_p10_p50_p90_us": [
+              73.596,
+              76.263,
+              84.893
+            ],
+            "queries": 4096,
+            "setup_us": 3463.205,
+            "capture_us": 923.5759999999999,
+            "first_us": 352.016,
+            "setup_first_amortized_us": 78.0614130859375,
+            "cpu_one_core_percent": 100.02605059104071
+          }
+        ],
+        "E": [
+          {
+            "mean_us": 61.763191650390624,
+            "query_p10_p50_p90_us": [
+              61.152,
+              61.684,
+              62.358
+            ],
+            "queries": 4096,
+            "setup_us": 1776.667,
+            "capture_us": 687.691,
+            "first_us": 186.523,
+            "setup_first_amortized_us": 62.242486083984375,
+            "cpu_one_core_percent": 100.0358103592127
+          },
+          {
+            "mean_us": 61.21953295898437,
+            "query_p10_p50_p90_us": [
+              60.721,
+              61.228,
+              61.522
+            ],
+            "queries": 4096,
+            "setup_us": 1522.5620000000001,
+            "capture_us": 602.0939999999999,
+            "first_us": 227.483,
+            "setup_first_amortized_us": 61.64679003906249,
+            "cpu_one_core_percent": 100.03512938529484
+          },
+          {
+            "mean_us": 61.644099121093745,
+            "query_p10_p50_p90_us": [
+              60.37,
+              61.629,
+              62.33
+            ],
+            "queries": 4096,
+            "setup_us": 5830.434,
+            "capture_us": 1542.7830000000001,
+            "first_us": 209.844,
+            "setup_first_amortized_us": 63.1187763671875,
+            "cpu_one_core_percent": 100.0171875186405
+          },
+          {
+            "mean_us": 61.60896801757812,
+            "query_p10_p50_p90_us": [
+              60.738,
+              61.506,
+              62.308
+            ],
+            "queries": 4096,
+            "setup_us": 1806.87,
+            "capture_us": 697.443,
+            "first_us": 175.169,
+            "setup_first_amortized_us": 62.092864257812494,
+            "cpu_one_core_percent": 100.03028153710713
+          },
+          {
+            "mean_us": 61.32951025390625,
+            "query_p10_p50_p90_us": [
+              60.654,
+              61.248,
+              62.095
+            ],
+            "queries": 4096,
+            "setup_us": 1510.134,
+            "capture_us": 573.631,
+            "first_us": 183.327,
+            "setup_first_amortized_us": 61.74295288085938,
+            "cpu_one_core_percent": 100.02581549144914
+          },
+          {
+            "mean_us": 61.6783876953125,
+            "query_p10_p50_p90_us": [
+              60.841,
+              61.647,
+              62.336
+            ],
+            "queries": 4096,
+            "setup_us": 1815.55,
+            "capture_us": 710.735,
+            "first_us": 183.636,
+            "setup_first_amortized_us": 62.16647021484375,
+            "cpu_one_core_percent": 100.03498734655726
+          }
+        ]
+      },
+      "paired": {
+        "ratio_of_medians": 1.2576033942550355,
+        "paired_geomean": 1.2586359674004421,
+        "bootstrap_95": [
+          1.2543056261550265,
+          1.2629812586348483
+        ],
+        "wins": 6,
+        "round_ratios": [
+          1.2568614823330162,
+          1.2647389252419396,
+          1.2584618864359791,
+          1.254747272316855,
+          1.2665609416131263,
+          1.2505184640607292
+        ],
+        "method": "exact 6^6 paired log-ratio bootstrap"
+      },
+      "sustained": [
+        {
+          "C": {
+            "mean_us": 77.14054089355469,
+            "query_p10_p50_p90_us": [
+              73.494,
+              76.164,
+              84.894
+            ],
+            "queries": 8192,
+            "setup_us": 1883.43,
+            "capture_us": 793.475,
+            "first_us": 224.228,
+            "setup_first_amortized_us": 77.39782336425782,
+            "cpu_one_core_percent": 100.0374275848607
+          },
+          "E": {
+            "mean_us": 61.21934814453125,
+            "query_p10_p50_p90_us": [
+              60.744,
+              61.225,
+              61.52
+            ],
+            "queries": 8192,
+            "setup_us": 1542.194,
+            "capture_us": 600.154,
+            "first_us": 242.683,
+            "setup_first_amortized_us": 61.43722863769531,
+            "cpu_one_core_percent": 100.02803719651425
+          },
+          "C_over_E": 1.2600679888233288
+        },
+        {
+          "C": {
+            "mean_us": 77.36517810058595,
+            "query_p10_p50_p90_us": [
+              72.101,
+              75.57,
+              84.034
+            ],
+            "queries": 8192,
+            "setup_us": 1945.5049999999999,
+            "capture_us": 989.899,
+            "first_us": 209.917,
+            "setup_first_amortized_us": 77.62829113769531,
+            "cpu_one_core_percent": 100.03105395448074
+          },
+          "E": {
+            "mean_us": 61.245373413085936,
+            "query_p10_p50_p90_us": [
+              60.761,
+              61.225,
+              61.567
+            ],
+            "queries": 8192,
+            "setup_us": 1522.165,
+            "capture_us": 581.764,
+            "first_us": 240.147,
+            "setup_first_amortized_us": 61.46049938964843,
+            "cpu_one_core_percent": 100.03064806699186
+          },
+          "C_over_E": 1.2632003658264217
+        }
+      ],
+      "nsys": {
+        "C": {
+          "kernels_per_query": 24,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "getQresultCount(int, int *, int *, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "projectBounded(const int *, int *, float *, const int *, const float *, const int *)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              18,
+              0,
+              0
+            ]
+          ],
+          "kernel_sum_us": 75.25423529411765,
+          "selected_kernel_us": {
+            "getQresultCount(": 5.251764705882353,
+            "fusedResultSelect(": 0.0
+          },
+          "sqlite_sha256": "db27776411f9a697cc9af9d1b8e815b9a60abba2ec352371adbf3a5765823548"
+        },
+        "E": {
+          "kernels_per_query": 17,
+          "query_instances": 17,
+          "signature": [
+            [
+              "initQnode(int *, int, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              17,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              50,
+              0,
+              0
+            ],
+            [
+              "updatePnodeFlag(int *, int, int, int *, int *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              20,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<void>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+              1,
+              1,
+              1,
+              256,
+              1,
+              1,
+              30,
+              44,
+              0
+            ],
+            [
+              "initRes(int *, int)",
+              5,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "getQnodeCount(int, int *, int *, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              26,
+              0,
+              0
+            ],
+            [
+              "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+              111,
+              1,
+              1,
+              512,
+              1,
+              1,
+              48,
+              16,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+              1,
+              1,
+              1,
+              128,
+              1,
+              1,
+              16,
+              0,
+              0
+            ],
+            [
+              "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+              1,
+              1,
+              1,
+              384,
+              1,
+              1,
+              64,
+              33808,
+              0
+            ],
+            [
+              "fusedResultSelect(const int *, const int *, const int *, const float *, const int *, int *, int *, float *)",
+              1,
+              1,
+              1,
+              512,
+              1,
+              1,
+              40,
+              2208,
+              0
+            ]
+          ],
+          "kernel_sum_us": 62.09664705882353,
+          "selected_kernel_us": {
+            "getQresultCount(": 0.0,
+            "fusedResultSelect(": 2.091235294117647
+          },
+          "sqlite_sha256": "befa639270b9a0569607246839d3045461cf55683e8bcd01c924e606b9299323"
+        }
+      },
+      "host_output_bytes": 17764
+    }
+  },
+  "ledger": {
+    "Words/full_normal_A": {
+      "receipt_sha256": "c2d3885fc65394acb769791d12e245f2db491c9903df29e8d24197ff67201da3",
+      "samples_sha256": "b2be0d47699c505da4bf89c8891b482fe5cce2f7a552c297609a8002351219a4"
+    },
+    "Words/full_normal_C": {
+      "receipt_sha256": "e0dfdf2be454e631e43027985661e78c134f880a5c1cab3afe2a383aff2da8fa",
+      "samples_sha256": "c28834b22fb46104d529bed384ca93b080c0b0a7b7420632fbd10fad9bc81f15"
+    },
+    "Words/full_normal_E": {
+      "receipt_sha256": "c3e9683bfa801605802ecd5e2382de40d3eb62f12f2f245c88a5ec1a03a65402",
+      "samples_sha256": "0930ae01037fc4c6f8dcb4ab9ecf6e254c2be154a97d137a2f2e05f3c5e0ce01"
+    },
+    "Words/full_zero_A": {
+      "receipt_sha256": "0f8ba2c38828ca26dd2f500a2f921c66161add3b93686eeb09dcaa328b7ebb49",
+      "samples_sha256": "32b1d32f151d07f2082b229f32927d0c35e84290ca2928254555ab7f63af9b75"
+    },
+    "Words/full_zero_C": {
+      "receipt_sha256": "2d08a52fb05466c893aa646abc066298b85f8c5eca46e5e0bbcf2558dc3c75de",
+      "samples_sha256": "e0bc4c4ce5db39ba1acced8394687668ed6981040d8bfde45af4a158370c4050"
+    },
+    "Words/full_zero_E": {
+      "receipt_sha256": "7cc8c678335541773dd33bc8582eef6bfa38eb228676ab6b55aac2ea9db1531f",
+      "samples_sha256": "036078ba6bdf443dcdd084fca023f25e7955c2c3bb34b7f7dabb9681b28aec67"
+    },
+    "Words/full_all_A": {
+      "receipt_sha256": "99499b7aa0f3043a89cc975e03e5d181c968198fb6f5fce0703a7de123425167",
+      "samples_sha256": "f9f1a62f4153947e37322c44f69fb0613d7a9b27f9e23fcdb4a856c5cbf8789d"
+    },
+    "Words/full_all_C": {
+      "receipt_sha256": "eace70eff59276637253479a45654cfd092950f091e6097764479002802337cb",
+      "samples_sha256": "9f6c1747d2e99bb8de90b97256e99dd0d6ba2302c6d67c7d14eb582fd03ca4c7"
+    },
+    "Words/full_all_E": {
+      "receipt_sha256": "9447b627dd927a32e4bbd34fcc1fbe1707d40049cf6cd38100be8fffb9606bc4",
+      "samples_sha256": "03b96c621b509185bc6a0a893eac54212c38bc35fb2c5604058fbb7a589a269f"
+    },
+    "Words/full_empty_C": {
+      "receipt_sha256": "16c93b4b5d6e276f17c3aab48c42456873e08dfe71022f7d3a428741b24386f3",
+      "samples_sha256": "a8e049fe24a15b6962ff19161c70249a2cecab7ce959c02f6938391acae6fb6c"
+    },
+    "Words/full_empty_E": {
+      "receipt_sha256": "bb984f13efb791c9c56306fd91e97266fa459077fa32fdcdac3e8eb9db886574",
+      "samples_sha256": "b05cb2303a85a2bc2e1c5b2e860e9ebe2b61bcb04ee6fdac65b4ba562425e696"
+    },
+    "Words/anchor_full_C": {
+      "receipt_sha256": "00a2346d04c14b00d4bf4eb05efa223f6a847cf9dfd25ab06c50775748ed607f",
+      "samples_sha256": "1f2c99c726d0d871d1da46aa14978cec092ad9619e0d622174c290cd01b5c032"
+    },
+    "Words/anchor_full_E": {
+      "receipt_sha256": "bb96f31424ebf0e255cc5089c624de4ec83d9ca3d0237d3c86d4d7b356332316",
+      "samples_sha256": "cb2b70ccbe743cda032e1b94b90a33f3c58e89b3e0f1bd65f69950ad0c189111"
+    },
+    "Words/gate_memcheck_C": {
+      "receipt_sha256": "0326176affb043cd22b288d583cbb5177a4fc179b2580eea71f109df746b4bac",
+      "samples_sha256": "731bdce644c0201e2705f6a9a3882994f6d1091a1007f8e5f3554e929f3f81b7"
+    },
+    "Words/gate_memcheck_E": {
+      "receipt_sha256": "a325027b90756da5530e237660fbe0919cea7835a67d751a3c5c73040b364ecb",
+      "samples_sha256": "51131ea61807a75b946cb798e2df0eb3daa3eb006edc96201386a30c023ad15e"
+    },
+    "Words/gate_synccheck_C": {
+      "receipt_sha256": "8cf25f79ca0bd6f83b8ecc5eaad3657b4bb54ca139e77747762075b4b4bc9bb8",
+      "samples_sha256": "2965e3c2fe892a2e7861af4ab5963faa877dd5d6255ea16624dd2d41a169623a"
+    },
+    "Words/gate_synccheck_E": {
+      "receipt_sha256": "7637eb14cdb369a699958e20d321fac74bed0f3b81b1c1da3f813cd7b81bd879",
+      "samples_sha256": "0e9e05d23908122c9d9a5a01cf77057cbdabfe1dd6574d445b6b599d73a547dd"
+    },
+    "Words/gate_initcheck_E": {
+      "receipt_sha256": "f4903ee9e5df82ecfb89fc9e17ed1ff2c21dd2572d26837add5d9756b5173383",
+      "samples_sha256": "40377f8c659bb62afbd7b6253c5c09f35e4a81364dfa78a83f7a94f046d76f8c"
+    },
+    "Words/gate_racecheck_E": {
+      "receipt_sha256": "23c2e853b90360b478e8942685f7ca4e17f95b922cbf7b41b0810c2bab474a73",
+      "samples_sha256": "31755eb3c398ccf9b55d8543844b475ded2f920eb5495f223c95766ebcb92f4e"
+    },
+    "Words/stress_C": {
+      "receipt_sha256": "5eeb2c9a405886b31d58a77a62afa12d65e1716bdaba5fb8d6de7e6b90ca7105",
+      "samples_sha256": "161fb8175143af402a5cebb2f74a995c9f97d4c24040bbb8151d58d84ba4b24f"
+    },
+    "Words/stress_E": {
+      "receipt_sha256": "c77307d3e7e062698bb43352bb0d4a5783088fd68198e5b3afbaab05db2403e7",
+      "samples_sha256": "0e37abe5ecb7b248ac70aade0e94741cd788cf491a896358ef4388f7cb2dbf78"
+    },
+    "Words/timing_0_C": {
+      "receipt_sha256": "b167769af6d9c701f627b2898374e1eda38f0c48afb420832d22208519a56eb3",
+      "samples_sha256": "b4329d9098c0be9664e8448ee3c3d4d31a8d90da2c74646ad77111f51db597b1"
+    },
+    "Words/timing_0_E": {
+      "receipt_sha256": "8980adf7543f080435bc7add9d3ba340c7b5a6192aaf029b1ad26ea73ff302ed",
+      "samples_sha256": "2e35002edf32398e5be78ef8bfe3711ad7bb3874e3e843a0684cc55fc48cdef1"
+    },
+    "Words/anchor_timing_0_C": {
+      "receipt_sha256": "81c836c9ab86f16b5a91a2167e106859f22af43858f9e634700a0c526660b76b",
+      "samples_sha256": "60d18c23fafbf30dc70347730438c199f1c6bf4f92371cab2f85ef08d099bb37"
+    },
+    "Words/anchor_timing_0_E": {
+      "receipt_sha256": "3023052384d1a46a71bbc8bc5f984f3435673c73499fd8ee52a7f1b13312ed4a",
+      "samples_sha256": "692fbe83f8d098ef6b4f2dc9a3f64bfed103659abf5efb79cc243c27385d81a9"
+    },
+    "Words/timing_1_E": {
+      "receipt_sha256": "9416476f31c3a049d449b7ad469a07081c47c55c80434336f1709dc449dcd491",
+      "samples_sha256": "58524659e83bbf02f525c5965d688ca179746ff91e5d1bf4bcf746536a42172b"
+    },
+    "Words/timing_1_C": {
+      "receipt_sha256": "91e34c408145407a7f0c7b9f4971b02ad84398be0a33a46f67da346d6a862958",
+      "samples_sha256": "d59432dacf4c645edeb16d06002d526ea3dc52ccd7275a8966509ec89cf7b444"
+    },
+    "Words/anchor_timing_1_E": {
+      "receipt_sha256": "5d10e37c274e454085759ab9b4b60e01d40672ef3924dfbdec2423b42ee71ae3",
+      "samples_sha256": "bace842b70b15858a1215916fbd6fed3a0c3f19ad5863851b5875f6845905e61"
+    },
+    "Words/anchor_timing_1_C": {
+      "receipt_sha256": "358e3a5e13be46a13074cd6a5a1ffeacbfd34fff200c43536da24c3e91d1a56b",
+      "samples_sha256": "cb38750172b563eadf32893208e317e73d361824483908e7da1d925ab8464454"
+    },
+    "Words/timing_2_C": {
+      "receipt_sha256": "aed1b389368ee4c694740a8dd4ba03f6baa0afa40da36c6ea69a9e06c3299ba3",
+      "samples_sha256": "d201a95d54f6a119bf304889532b3147b1ecdec7bdb9325075d705edb7451065"
+    },
+    "Words/timing_2_E": {
+      "receipt_sha256": "2078706f5f627498cdbadf035efdfe268c9b6a79349d626a2b50e5ecec70a02c",
+      "samples_sha256": "0ad5ae425fb11bf57954bed796c4d56c02ee6eafeb003c1a8623d65a46b1daae"
+    },
+    "Words/anchor_timing_2_C": {
+      "receipt_sha256": "c0798b56dbf1c879e47c10ed4c60a1ffb7d3dab3a209575a0bd1373eb89d02fe",
+      "samples_sha256": "17638dda701f97525b7c545034aca86ca8a7b6b1b63b06b1b0d28e34a7ba5784"
+    },
+    "Words/anchor_timing_2_E": {
+      "receipt_sha256": "adaee8995114637eaa569fc0b1129c553088c7bb6bba6ddf4672b7b6db70adbc",
+      "samples_sha256": "59bc7eb916d1b47953331f9f25dd3c51ceea234ef6d14d6da3231fe1cb65192b"
+    },
+    "Words/timing_3_E": {
+      "receipt_sha256": "106f52a4d9609dbd11cdb2420537ba84e0af92d00114859e8f612c7c858cc50f",
+      "samples_sha256": "ab8440ba0397352bb81176e1d7bf2d23005430a7c1b4915853b2ec2b2005cfa0"
+    },
+    "Words/timing_3_C": {
+      "receipt_sha256": "8b17728494a47cc6d25f35d2e4665119ef14f0aeda5beaf082848ddd2a1f9c89",
+      "samples_sha256": "d505ae1413f03594123f3507e36821642d15d88194ca95c277acd035cdb04939"
+    },
+    "Words/anchor_timing_3_E": {
+      "receipt_sha256": "688f3d9907d498ef8d0c8b0613f6a971766466ef16a152aae5d2e93468eededb",
+      "samples_sha256": "8c68aa282ead1d176349ec75e7262f9df749b0b4922bc00da0b1f9380c336c47"
+    },
+    "Words/anchor_timing_3_C": {
+      "receipt_sha256": "0a902cc4a089f3da136b47274ef5f0cab820937887a66dad4400c3f4be40b4b4",
+      "samples_sha256": "235dc9e6def22cbb93d33fcc49364cc6e17fa66f4e051c3b3eb14d41073f2c63"
+    },
+    "Words/timing_4_C": {
+      "receipt_sha256": "d0d1be5a732b501994573a901676cb94f66517ed230b3a31da60cf3f89a2fae8",
+      "samples_sha256": "f832d121a67d192760ff807730a0068a3994a680b9eace55716dd86ab7cdb003"
+    },
+    "Words/timing_4_E": {
+      "receipt_sha256": "459a0c31097e1070ccb352a978acff862fe1af926312f588ff177b23d81a6136",
+      "samples_sha256": "21252023def31c5b7470d9899be5be6e5b9b95d6a4a2082fd3167d00e9308e8d"
+    },
+    "Words/anchor_timing_4_C": {
+      "receipt_sha256": "a4c5cfe2afeb8dd2203be6b820a9d9b745665fd50b3471024d4bac478093b3c9",
+      "samples_sha256": "8260b9780cf2dd687929c061bc27aefd6e970e1f3d5353792828536787a01205"
+    },
+    "Words/anchor_timing_4_E": {
+      "receipt_sha256": "8b77e8f5aa6758782363b46947d9a20b967eb83b04d47f3aceddbbe8e0b820b7",
+      "samples_sha256": "a4d972747c91af9a983d95444323f51241dedb2d7c795676bf2d7a731a901227"
+    },
+    "Words/timing_5_E": {
+      "receipt_sha256": "9c6f3633630d76d7b60de69c2aba153174cde8c83743331ad84180f8e5be1a9b",
+      "samples_sha256": "7a90f7fbc9d687ea36bf281fd8c7a56688c63a4a7a2f0306f260636583ca6198"
+    },
+    "Words/timing_5_C": {
+      "receipt_sha256": "8c2fb923f78af37869bdea77477eb5f7d2cbdf8fdcc9ab424cbe93b4ad57238a",
+      "samples_sha256": "f940e1d8ba14beec3d059d6f977675293db2ceaf8c823ba0945c446ca5e10492"
+    },
+    "Words/anchor_timing_5_E": {
+      "receipt_sha256": "2eb18fe5735112297582c07b5fc26e3a281caa346f0b50c339b02b505bd0e715",
+      "samples_sha256": "e07621b2fc967febdf94f92e53bf2605689a2ab819bc141b9f4011d6d13b5944"
+    },
+    "Words/anchor_timing_5_C": {
+      "receipt_sha256": "537e506763ae129f56fe2df23bd705d8e8d9564431f64e1e9df78f339d814776",
+      "samples_sha256": "e10d3cba9cbaaf8ec6d9c312770b02b3ff78b2d73c6249ab6ffd324e7085251f"
+    },
+    "Words/sustained_0_C": {
+      "receipt_sha256": "536572635fa90c7083c71dac1544fce6121b426819dcf91f7d1b7635b4356519",
+      "samples_sha256": "2e920d4b7fe5c1838738ac7d551f58147ba16fcca35e79fa5aee859b716cdf61"
+    },
+    "Words/sustained_0_E": {
+      "receipt_sha256": "70043650c0631952159fe7419743ee59e6762d4608f040f8c1b31c77911dcdd5",
+      "samples_sha256": "dd15fa356bf7afbab54262183f88ca46760bfdf8f01ddf1e42fe1ce723f05f65"
+    },
+    "Words/sustained_1_E": {
+      "receipt_sha256": "d29cc18ffc2face978b7b606c547d8b7ee233fe5105c67fb35dca2f9d727efe3",
+      "samples_sha256": "dd8b7ea3435121ea6bd09e8ab1150cb5c2364b05044146809846b01c501f6440"
+    },
+    "Words/sustained_1_C": {
+      "receipt_sha256": "3c2da2e5d3e658625130d5a90fe41d1dae2405f835b11264deefbeaaa88ab1d9",
+      "samples_sha256": "0f3d66159a59cc552d2266b20a6587c15a9a2c6dfb84cefb239ff75e34de52a3"
+    },
+    "Words/nsys_C": {
+      "receipt_sha256": "d2562f55208366ace60daef6331c16fc45439c1ba5740f085850b30187ecf30a",
+      "samples_sha256": "7ac18775b3530ca0a3749fad07a704fd7dba0500f976a3b6e7579d9b785bee1c"
+    },
+    "Words/nsys_E": {
+      "receipt_sha256": "6b9435a600bb96616e1cbfdb626034f41c8d790bf1ff2c986859ba3fb0ef8432",
+      "samples_sha256": "4ed8bf623a32467ceaebfbf8f7d18e61ad0f6044c00100749261a3b7ff2669f4"
+    },
+    "GIST/full_normal_A": {
+      "receipt_sha256": "2e71aba30dd949be9228e3b346ddeaa0073c70a0b288629ce49a29be2d39c9cd",
+      "samples_sha256": "b0912a17644dcf17a45a8a310ae52dfd3bc099e945bbf6567ad7c84ba32944ad"
+    },
+    "GIST/full_normal_C": {
+      "receipt_sha256": "a41f5eb47e74a2e6224a448f24aa0e16c0bef319f1bdcf24d2685101936bf798",
+      "samples_sha256": "7b2c35ae7216ec06e1b904fa09cba237de59ea2d924eef6903149ff7a5ab6e82"
+    },
+    "GIST/full_normal_E": {
+      "receipt_sha256": "0d29d9bcb246a5160bc7e983311c7dc43572aeccf05a3faa8f5d455d2b6a31f2",
+      "samples_sha256": "8cc4c4e0f744553f3d87e9095ac372dc195c37fc7c44af148ccd46d19c202bc9"
+    },
+    "GIST/full_zero_A": {
+      "receipt_sha256": "96b60e9317d35ac8ed2c3124fc3c1ca7458ef3be24121d74a1d6810d2a9ee80a",
+      "samples_sha256": "ddb0d19d5324a8ab9c06134391a72ce1d41d316c5b38cf4d044f06d6e3faa91a"
+    },
+    "GIST/full_zero_C": {
+      "receipt_sha256": "e919648593abeaa57b64679ef69165516102a932c2736069430544cf075e0e5c",
+      "samples_sha256": "84c55772ba90ea60d8dbabc4325c40a8dea311ec89162c3f2a510ea06b51ddc7"
+    },
+    "GIST/full_zero_E": {
+      "receipt_sha256": "589fa8c46a1d2e771585ab0ec42cabe207fe028ec291b788efb403cc78feb525",
+      "samples_sha256": "7e125910c859459de77c8e2706af3176449b42985e2811c11d333d13611daed1"
+    },
+    "GIST/full_all_A": {
+      "receipt_sha256": "30ec26abead83a21903d59716fecf84f67296ad5019eba3c6646f163e9934973",
+      "samples_sha256": "cd60b51c751c0a128df714e5030a8efb6650d1d744972110fdcaea657e6cb076"
+    },
+    "GIST/full_all_C": {
+      "receipt_sha256": "4e6232f40bc798bc0bc97e3072f89a7c47c0fc747d16d1e4a811368d3252d94f",
+      "samples_sha256": "b373a6b005b86e5607a00a3a08164f37e0772e4d2e30a9129a1805a85627d18b"
+    },
+    "GIST/full_all_E": {
+      "receipt_sha256": "b444fb200b51090b4168632196f5e39ec7101f8bf60c023c594f30db2c87f3b7",
+      "samples_sha256": "4c96fd24af144415915caf1ee7a0cd5f72ee8459afd5b029e4b6479694029de5"
+    },
+    "GIST/full_empty_C": {
+      "receipt_sha256": "4096595c0b23462c5a12787392e9b79e395b503394e9b74d64361ca34f95070c",
+      "samples_sha256": "65ac43b2fa2b6a66394f91aa8226c157a4ab529257f63798c6ff8e4ef9b40b50"
+    },
+    "GIST/full_empty_E": {
+      "receipt_sha256": "82cdd2f9125a7dac81242bb34d2c6c9f36a214770eaadb8a84f43a877497d3da",
+      "samples_sha256": "d31b70f20e6a75a819f6e49433d59c69cd551589701ef3a9912d5e94556f01dc"
+    },
+    "GIST/gate_memcheck_C": {
+      "receipt_sha256": "1265d9d1017618cb5f8eb2397051c7f370289c80f604c49e1aececb9e84dd626",
+      "samples_sha256": "5ad5fad3356a91d9c5ebd3f94d4776e5c1b1be5ffc8110192ae24005bc754bde"
+    },
+    "GIST/gate_memcheck_E": {
+      "receipt_sha256": "66a840f1ee18c97b7d835547c91327e48f0188264c58383bb05940d4567d3a99",
+      "samples_sha256": "b2cf08088686108010061fcebb7b390f06762cac97bf0c08267b63c46602d214"
+    },
+    "GIST/gate_synccheck_C": {
+      "receipt_sha256": "d2582befdc3813fe04a4d455d28553c9db892ae92bdb79afc2f1a20801ac66a0",
+      "samples_sha256": "3b5d64723da2e5f75becde83d3b1366874c613700c7fe545328df8786b0cda38"
+    },
+    "GIST/gate_synccheck_E": {
+      "receipt_sha256": "8b38fb78ffc0a6cb9464f32653653a3024ab739eefc10edd101e98112dfbf3e4",
+      "samples_sha256": "edc507045c6302d3af7cb71d0047e25ce65afb5a76d65612a80b511622df534b"
+    },
+    "GIST/gate_initcheck_E": {
+      "receipt_sha256": "2e224ddebba878f521474e0fa96a3e94d9b485af8f501b69dc55cf9310fbb80f",
+      "samples_sha256": "41892e89a9cd492b80bb56c541aade306295fc96f2aa648272456eb02803493f"
+    },
+    "GIST/gate_racecheck_E": {
+      "receipt_sha256": "f409bd31692f4ee507f12331ae4a89785f0ee1f01ccd628d729fc4233131d26c",
+      "samples_sha256": "61f674c7540c9f7a408d8a975e9a2237247850fd69f18e45c96767afdfb12480"
+    },
+    "GIST/stress_C": {
+      "receipt_sha256": "f960bccd04e3c8785cbe60899ea3d7324a0e6c0fb83397ab6e5cdcb64bf52ad1",
+      "samples_sha256": "ab06bbd7e4ee5fec81e7f2f7dbfd88d46ceab2a9f1c1071234804ebab1773d7f"
+    },
+    "GIST/stress_E": {
+      "receipt_sha256": "7861c188a58354c67087b3287bd1e5a84e129ab43cbd9a07513bb850c361e891",
+      "samples_sha256": "fee081bc1d2c16824c57074eb599ab2eb08f697784ebb96ce2a2c438bb737b6e"
+    },
+    "GIST/timing_0_C": {
+      "receipt_sha256": "c0b315d8c67a39c375668c5eeb49db353bd6c74ad20f4d6e92de2e96cbb26ee3",
+      "samples_sha256": "2546f6b1961284710918a35927b4d2d68a19190da28f09e6d4304f04e06f011b"
+    },
+    "GIST/timing_0_E": {
+      "receipt_sha256": "41704b1570d96762dc08f1ff2d2454c07775096e5abff0c6ae8405d734a1b72f",
+      "samples_sha256": "d3206e2b5e386525035c018a20ac152b0e6ca5fd2ffb0a1d39dea0a35b38eb99"
+    },
+    "GIST/timing_1_E": {
+      "receipt_sha256": "6061ef4f088d57a5205e762ef4609db8aa1673b64bfd505be2180f5fa02d2752",
+      "samples_sha256": "01637e432af785854fb670010463c20d2c39b046b8c92ed0f032841457835f6b"
+    },
+    "GIST/timing_1_C": {
+      "receipt_sha256": "fadbffb8366e62d8756bce9cbe63f184361b92b88fbf942eb7c4f9399a8fbe1a",
+      "samples_sha256": "4717f582a98b5582e525371eb24e5e5748cfa1b0d70c7f3641788364d68884fe"
+    },
+    "GIST/timing_2_C": {
+      "receipt_sha256": "0336f230c7418d25eacf4d434ed5020a5423fdb7a8df7ee6098be0c2567daaff",
+      "samples_sha256": "dd039d89de5f3c1cce65dfd3eb28b409e04e10641a8f254e7b18b4f1984c77e1"
+    },
+    "GIST/timing_2_E": {
+      "receipt_sha256": "39189d39dada13a7231da027d043c5dcd29669a359841f34a6d7a6147daaa798",
+      "samples_sha256": "d33086b16b23765c4f74097c484c85eeac96f02dfd12214c462ea8e81428e076"
+    },
+    "GIST/timing_3_E": {
+      "receipt_sha256": "4601556710b5fa4d5a7681485b8d6bd7dff0f24e5427df694da69ead055647af",
+      "samples_sha256": "37e7a55d5dde89c839929c92ca073bfc116441f669468a770bb35f04abe6112b"
+    },
+    "GIST/timing_3_C": {
+      "receipt_sha256": "86125388e3297e8bcd4d72bf176d311c33efb7c7c0f5aec98e98394616b39129",
+      "samples_sha256": "2a0df295791ec1f39d29adffe225f5795fe8badc1c59af5d73d27797918e03b7"
+    },
+    "GIST/timing_4_C": {
+      "receipt_sha256": "b9d210d0e859b73e6837655b062be6a8a8a8e984c63f5db6e81ebb45230c7c32",
+      "samples_sha256": "0d9f3994c30717c32335a2866b5f33e082796b0ce7e61e986138647cfc2523b2"
+    },
+    "GIST/timing_4_E": {
+      "receipt_sha256": "d6ce6ce5ced5f0585f2d794ba33589ba24c8838056dbdc7ec8e3b43d20e4f95d",
+      "samples_sha256": "f83757d4dcec4075021cb8170f70ee94cb2ef81244a7671eadbcdf6c928e7622"
+    },
+    "GIST/timing_5_E": {
+      "receipt_sha256": "9419b5b34b3ec71f2fa4ca6e4d9c46ecd1848a52646f98f3905b32f39d79f527",
+      "samples_sha256": "e013938bd3d6844cd47ef43ab1183bd6b41ed208e05dce23e2b193e3e78a384a"
+    },
+    "GIST/timing_5_C": {
+      "receipt_sha256": "b74f7ba061c58170bc74ccb5c0cd6aebb6fa45edd2faa11d3dbafbc533bcc83e",
+      "samples_sha256": "c3cfe05d5a209befefe27f5b85e1ccc15351418f9592f7f45e7bff77c3444b70"
+    },
+    "GIST/sustained_0_C": {
+      "receipt_sha256": "02aa875115facbfe36b99bd33fad584f5a1e9fe4d1008ac200e64e7d64bef84f",
+      "samples_sha256": "31581eb835347ce22186e45648aad2247efa40cac411050e5ffefb9af5424a31"
+    },
+    "GIST/sustained_0_E": {
+      "receipt_sha256": "29c42d0c93e84ade369249411ed57b28dbb203f03fe7ee604bda839d0e648b01",
+      "samples_sha256": "3f8e8b90a476e26c2713d5a525494d5195f8d6d9113d5a2767b1c8f2b5d558c3"
+    },
+    "GIST/sustained_1_E": {
+      "receipt_sha256": "ba1cd8b2ca754da838ba034d0a45d314c6c1480b9d0593bff0f424f992df3afb",
+      "samples_sha256": "c3599c31ee30fb4e434c194ed99bfca66343309f4860952c324b5f87aaa860a5"
+    },
+    "GIST/sustained_1_C": {
+      "receipt_sha256": "accf89002bd78bd6765482dbdc6edc18a209c4e221272de6e497c56b2b25dceb",
+      "samples_sha256": "3e09643ceba66fd2c3759be017cf9df0db277194f329df052fa5cb3ee0220d10"
+    },
+    "GIST/nsys_C": {
+      "receipt_sha256": "038910628e0f867ba3e595476a1c2e82d473e7efe35351912e764422916e9c31",
+      "samples_sha256": "6bfb251f623c26d69fc85007d48e2e980862d0a44940bb0eab55afed79d90752"
+    },
+    "GIST/nsys_E": {
+      "receipt_sha256": "d953b5c969b9cd9caab4a9cd0ea6b028648ad90e103247015aa75ec03588c3b7",
+      "samples_sha256": "de36807895686f334b428c31121f6ac3c3d42d974caf35fab03f3a71196ac137"
+    },
+    "Deep/full_normal_A": {
+      "receipt_sha256": "66b605b99619e4aa132b59d323cb1c45f2a9f0ab6b07fdd37471162c8897be1e",
+      "samples_sha256": "393c20e911d37224d5f72e6b7eb62d745ce12afc5e553a44f2b9578c3246a8e7"
+    },
+    "Deep/full_normal_C": {
+      "receipt_sha256": "de1e2ce9a833b304d961b021944d23e469a8a58d51f906f50c760c1e42ac677e",
+      "samples_sha256": "aff1ced2caf6ad6253b1eef277c914ba1cde162d7f1f8c7ead3cd8cb43d115b5"
+    },
+    "Deep/full_normal_E": {
+      "receipt_sha256": "ba79897be09665ec315c90d200effcc3e670178114e33ecd33d150dbf8d747fb",
+      "samples_sha256": "c7b0bae3badfc803e5456fd75a1914481ff2793103f86049e779c14555bbcaee"
+    },
+    "Deep/full_zero_A": {
+      "receipt_sha256": "3945df445b8f85ffb3a81172adbf6036ab20657f23be79350767290c125b1ce4",
+      "samples_sha256": "e24beb1cdfc0a6052e3f1b165498c7f4b83a6c834e666a3a9d4c26057ba60f8c"
+    },
+    "Deep/full_zero_C": {
+      "receipt_sha256": "4b521ef736e20965e5e9d28ac6b5e8d5d7cc3ea887215b10833acb8274a0b092",
+      "samples_sha256": "cbc85dc4cfeeeffe4fb4a71d778ba3e2b56fa39525dfb56b7f83e0de7f612bfc"
+    },
+    "Deep/full_zero_E": {
+      "receipt_sha256": "f849c0783c094439a7a57ad883a061871acb4e73f165e05437830108a14d1a70",
+      "samples_sha256": "0f19ad52e301a245edb1fa5cc80853afce0d0d998cdf5c4d50452d3e941346a0"
+    },
+    "Deep/full_all_A": {
+      "receipt_sha256": "e51dda3fd51f867e6411ea96b54b812d73ae0f652d06cfdf052d0897ff40ebc2",
+      "samples_sha256": "dbdaacd9c39531241d27aa6e028b13e4fcf34039063b0e69450b9bc500991f98"
+    },
+    "Deep/full_all_C": {
+      "receipt_sha256": "580ba536aa18591ef17e95af8deaa7227d19a3fd7179e91e03e3d5b56d2f3ab6",
+      "samples_sha256": "20675233ea4228833d4c8267ff76a8ed4cbbe2c305472a81c11f04c3612703fe"
+    },
+    "Deep/full_all_E": {
+      "receipt_sha256": "37442b667267736f40cb66a9ddd932e4c33d3ecac6e25f49daaa3aba7941318c",
+      "samples_sha256": "685fd7709617f95a9b7b0cc7d71fb79e365c15b5fe7315560987adfa65a390f8"
+    },
+    "Deep/full_empty_C": {
+      "receipt_sha256": "616d844ffc660f38fd080aef786d6c3d13b3ff4285a5af1055210637dcd9ddbc",
+      "samples_sha256": "c1559127f67aa3399661850f8f444a233ad9f7ee5adeb63fdf8166bc6562d653"
+    },
+    "Deep/full_empty_E": {
+      "receipt_sha256": "c011ab46164460e98365ce6e28256ce9b5117055247551733a22755e69b47d9a",
+      "samples_sha256": "4f52d65477a1c0da5d22e0429fcbe747bf5cbda3699affc8347435e29ca0ed48"
+    },
+    "Deep/gate_memcheck_C": {
+      "receipt_sha256": "554d745c96e143c93342daf7553034fba3910c7df3428c0dd8514219db273d72",
+      "samples_sha256": "a8d8076b03cbd3946351d3f0c5c776d423f9bbcdfb0ff355f8521f585972be51"
+    },
+    "Deep/gate_memcheck_E": {
+      "receipt_sha256": "788aa83ba1766bac5649a478e9e7604952d0f0eff0f7d5b664042f79b7f73370",
+      "samples_sha256": "c10d029fc78aed824ae0944877dd068d82e5c80e7b57308014dd06e298f8a0c5"
+    },
+    "Deep/gate_synccheck_C": {
+      "receipt_sha256": "87c1991397bfb29f4535778dae366eafebb9b89843da9111f99c73dbcecaac55",
+      "samples_sha256": "9c559ef46cfcf8fbf8b1533df230dc1798a73e0c12b01a1f07fb3fe07edb92f4"
+    },
+    "Deep/gate_synccheck_E": {
+      "receipt_sha256": "79eadd2584d02b4fe93ccddef862ad6b475519b034452d1a88831462374059c4",
+      "samples_sha256": "9f926f8e9a8de03a35c917ca007c069c2182b0ec82537fda92576acf10385465"
+    },
+    "Deep/gate_initcheck_E": {
+      "receipt_sha256": "a515d654fef64ad68eb1cbb4818adaad8a857d99e25adddc1812d9cfd88d39a3",
+      "samples_sha256": "f89f8b62090f568d9cc3e6bfcf4424191dc3b2b7ed600a902c0c4756761e3e1f"
+    },
+    "Deep/gate_racecheck_E": {
+      "receipt_sha256": "b4727048ac926feae8941955dcb62abe7d6f8cfbb84a2f49d9988507a088c8ce",
+      "samples_sha256": "8163dee1a7ff6a37997bd6d258690f376d26e4625e1323190c7d5879de817a10"
+    },
+    "Deep/stress_C": {
+      "receipt_sha256": "b0f460aefe8c5bf43a1e3e0c3da1236f7cac12e67ecb27f87f955c1666f06015",
+      "samples_sha256": "6b7b4011e05d939147f6645c2ea5b8aadb8d40fa743ec4c1d42455681af941c5"
+    },
+    "Deep/stress_E": {
+      "receipt_sha256": "028eb49d5807a2a5e7b2308481f4f65d22cd298eca512660554ccff907b2d4f7",
+      "samples_sha256": "dfac46d5004c95c36f1a714483c9d7a55185eb66d57e7b44d639cc5bf53f8a92"
+    },
+    "Deep/timing_0_C": {
+      "receipt_sha256": "013506deb2439a06672e6c78eaf877f8753c37a6c5cff4367d1558e1cde66da2",
+      "samples_sha256": "bd29f841c3b24cde91c20c55c6afe95a3e7d2923965e539ebf8b0af820599163"
+    },
+    "Deep/timing_0_E": {
+      "receipt_sha256": "d003eb9d5c0693a615e9b119f17882ede677411bba50ef85823e31ce1986386f",
+      "samples_sha256": "b19158ffb2403124a0d544006120b985b01f3d1dee68ebc6b78661bbf3d613f5"
+    },
+    "Deep/timing_1_E": {
+      "receipt_sha256": "4c9155fd7f68cfb092e3b1ebc10420b0f795419147e7e2b95b66bbd6c51b09e6",
+      "samples_sha256": "c475d7e8254f801d412accc51aeb98830666c6d7c36bf0cfcf485b5623108610"
+    },
+    "Deep/timing_1_C": {
+      "receipt_sha256": "e5db8f5ad44fd887b80728063774dc051c75918fdd58043d3e75a5c65190894d",
+      "samples_sha256": "d789aa48f303830f59cafa4539b50de75a15efceddcc44af307be9d01d268401"
+    },
+    "Deep/timing_2_C": {
+      "receipt_sha256": "6043b7576a44562afadedf97bb7f43ab1f89ec588d11108904e8e23a3d5d5e0e",
+      "samples_sha256": "c554949065696681ec8b43c4601f074c13633bfef754867a77b786d5f3c9501e"
+    },
+    "Deep/timing_2_E": {
+      "receipt_sha256": "299c04716a7e4b59f6b9551969ffad2d61472af52dedad1a6e8c56d95002c798",
+      "samples_sha256": "291b6b97fce341f6845da7123b3ee3a87abc7d7f813571c9ed17546cc966677d"
+    },
+    "Deep/timing_3_E": {
+      "receipt_sha256": "443c77b5123848b323800afda42221c85aba9086134a06467274ad2925208384",
+      "samples_sha256": "1847f50d81380a4b09135047b014ce8a1b01f5ba3ce78105d6b89d2ad15b40ba"
+    },
+    "Deep/timing_3_C": {
+      "receipt_sha256": "5a6bfa181f2acca5f7930f531f53f95a10c87097b32c97abb8ad5d64291db681",
+      "samples_sha256": "12f0b238646047a38ff508f3c10c934d2260ce741685e934bf224ae3c804ecc5"
+    },
+    "Deep/timing_4_C": {
+      "receipt_sha256": "d19140d15f7258bf69cee064466264f84dc2da613e96cbf14c1d1c4ccd27b35e",
+      "samples_sha256": "a4c8acffb4067a59815bb45d077987c586201140fb8a3d5e866fad1e9ace311b"
+    },
+    "Deep/timing_4_E": {
+      "receipt_sha256": "e6f7433d1ae4194170021b282b850d948d1e3540bdb7bec53817135075e21a9e",
+      "samples_sha256": "a467abce817f040ef531965c71e6a6825b463e258b5f799178fcb3d5cd43382a"
+    },
+    "Deep/timing_5_E": {
+      "receipt_sha256": "aa018b470bfb5392b8bfe33726821ad6b3109f45b7727f65469a05cacfcca224",
+      "samples_sha256": "492d90ebfb4873c15b5eca6ae182688b41de736dd9da195da6c43b6cf85692c6"
+    },
+    "Deep/timing_5_C": {
+      "receipt_sha256": "a2e10c6c5194c9ec0f33e2b125ab3c3af42f4a622f722fb7fc22cbfe1cf57719",
+      "samples_sha256": "e5060a072b3f1c918e976a60d5302fcd1d5f1a967e8ecd951829d74d24162170"
+    },
+    "Deep/sustained_0_C": {
+      "receipt_sha256": "f67d4fbb9c027f3b7531db25fd97f769d40eaaf840dafc52552bde41ad537451",
+      "samples_sha256": "dfe1525752584b90838572defc737518d4618608a214c5d7c9c1511bef8c2672"
+    },
+    "Deep/sustained_0_E": {
+      "receipt_sha256": "1497b4377e07193f18e9e7969ce757227384a90ef75d712d47c464afc43a1959",
+      "samples_sha256": "c9491670f3042e5ca95001d8e41333b454bd6d3b91dcf07d1e366d20c3d348a8"
+    },
+    "Deep/sustained_1_E": {
+      "receipt_sha256": "38e1bc6c7ba8e442e85ff32719b7c1b6f3c7979474a8daedd739723e71306652",
+      "samples_sha256": "a3369c6741de07becbed71be4c79353de74503fa96f66ef9148230125a9941c9"
+    },
+    "Deep/sustained_1_C": {
+      "receipt_sha256": "1c776b31b877fc2eab2b74709f3c83bb9f0fbbc89853eb641f4bf027434b39f0",
+      "samples_sha256": "2e33e6722ce77ac3c9b898461f11a6348c6a608b104a869737cf14bb8594bfbe"
+    },
+    "Deep/nsys_C": {
+      "receipt_sha256": "a6491018096ed46a53f083819cbaaf8239af1ab794f92cb46d69c1de21cc1422",
+      "samples_sha256": "152703c478e23885836fa4c463eb2bdfbf01f39ec1cbb561fb78fb2c2cb9a8ba"
+    },
+    "Deep/nsys_E": {
+      "receipt_sha256": "d616bfb4c1fd0db1743191eb1ba33b87fdc90d93fe27b57c3ef8023f58d5ac68",
+      "samples_sha256": "a20953cc3c26535aae55badcecf5466b5f95c5433a643d66ed011b6e8bcdab6f"
+    },
+    "Tloc/full_normal_A": {
+      "receipt_sha256": "cd0052886f7eacbd30f0cb3994836ca5e7e7e34987d7362ce9e0a0cdd95b1e63",
+      "samples_sha256": "fae3104b48933501215105c1fbe4752035cefbf4e3911f7e8e53091ec4b6f14f"
+    },
+    "Tloc/full_normal_C": {
+      "receipt_sha256": "a4986966cad49994b1d7fc4dbdb2fbe9a67beaae9e30665d4423ebe7c6cabee0",
+      "samples_sha256": "2d00269463b530ac4f051c0eaef0e4f35ec3a51cec6583e30f53caf54814d067"
+    },
+    "Tloc/full_normal_E": {
+      "receipt_sha256": "ad7266409023f1f239fc4ba0b3074a0812129827e29f9f989e9d7078fa2db76f",
+      "samples_sha256": "9da39c800879677c44fc4b9c95ea1e8571e8aa016d3fe06c12e4defe7b4a8a4f"
+    },
+    "Tloc/full_zero_A": {
+      "receipt_sha256": "7866aa42e07bf09389b8d2e6e53db1f86fa257d69dcfe249f8ce626acf1e26b8",
+      "samples_sha256": "ac8f2e7e3466468ab18d69e54a850d7194e21151e047d6109bf869af57aba4c7"
+    },
+    "Tloc/full_zero_C": {
+      "receipt_sha256": "67b13fc3f94c9405e307d33aa01a6079a241c8c76ba849af6b5fed579059af38",
+      "samples_sha256": "23d4ee2c38b747b6c0a14ca2728eda984dc19c7056c4c16a4bbaa72e632469ad"
+    },
+    "Tloc/full_zero_E": {
+      "receipt_sha256": "e75ee4fadd38c5daff6464a9ef13e0179cb9984b5aa7c92b12e639f1154d6fb8",
+      "samples_sha256": "7c429042ce3ac6a5f7bbfbb6e9c5df38c84d634764249461df4700a9d5c4ab82"
+    },
+    "Tloc/full_all_A": {
+      "receipt_sha256": "a07185944b2839fbfb884ae108f7fe1be733d2107b260ec4108b851296d08be3",
+      "samples_sha256": "9295afd27dbb1219699d2577cee486c5c5f1b63824b0bcfb3c3818d191c6fad6"
+    },
+    "Tloc/full_all_C": {
+      "receipt_sha256": "05728f30a9f04e476050d2582fa9bab46135051b9ef3983d229eabac8032d207",
+      "samples_sha256": "a93a6ed9d6ee71353537d20e7640d84151c8f3c0a98e31546273066933d9c79b"
+    },
+    "Tloc/full_all_E": {
+      "receipt_sha256": "8575c8ca0f7a7dff4fa77eb361cdfb709eecc1c2a5b39db474a1b9c99661d848",
+      "samples_sha256": "ac66f5e4291806fe52187ac0a5209b4111b219ef4ea7fcdbd193df21946b5d44"
+    },
+    "Tloc/full_empty_C": {
+      "receipt_sha256": "1e04a364a5093dc41a3f4a9568db26fa51dc81ca0cf0d4c6831a05955cef164c",
+      "samples_sha256": "532505b71a948ef699f5f9386c468719fd225d3804feeed81dcc155e2c96ee13"
+    },
+    "Tloc/full_empty_E": {
+      "receipt_sha256": "9c2e386f99c748d02d52db846905abb449680639aa1dc5a38dd1f9814d9a944b",
+      "samples_sha256": "3576dc5031144ceee5a77227e6e04fbf2384c13a485966779e2d1a8e57b52fd4"
+    },
+    "Tloc/gate_memcheck_C": {
+      "receipt_sha256": "e7bb2f1528cc7bdee87361d458fa836f1e1ba4bb6137a604b4105225b636e3d3",
+      "samples_sha256": "753423a361592c3b8703194aa719b292d12f2b4ff6e06258645614e0700a929b"
+    },
+    "Tloc/gate_memcheck_E": {
+      "receipt_sha256": "2a6a73f2aeee765a4be3b1cdf8029d32fa5ff1cd89fa361751ace98662518ae9",
+      "samples_sha256": "9ec357ff43f731597c8b594e9e7356b1492e0198066fbc3667ce05041bc34631"
+    },
+    "Tloc/gate_synccheck_C": {
+      "receipt_sha256": "0b42bff3d7dd0583e8fda8d14b0e2e9451d1655a7a58fa993b779be43f29b5dd",
+      "samples_sha256": "1631d760b256e3959141b7f0c59aa9cbeb18a79de01fd2818a63c46106cee0ae"
+    },
+    "Tloc/gate_synccheck_E": {
+      "receipt_sha256": "ff3cca6327bdd853e119be71f113ef2682fd1851f07ea3fa592eef627052fea9",
+      "samples_sha256": "4cef75dde115ee37bdc53f9d0a9a0e30e6018fb19bc427be0a54faad7ca464e0"
+    },
+    "Tloc/gate_initcheck_E": {
+      "receipt_sha256": "b4ac1dcc397797cc9f96cc3b2990db02baaebd88d0b86f786c6297473ec7e3b6",
+      "samples_sha256": "4237af842c940bd7c74e46bbecbc560aa76301a6fcc3dc646152e56a897cf0b6"
+    },
+    "Tloc/gate_racecheck_E": {
+      "receipt_sha256": "b7f9b430abb951150ba590bd2f10fbcc8ef8f606de415a81b51e0364bf0dd099",
+      "samples_sha256": "c6c51568a25aae1be940de3c5bb0d77e69ee7e76b64cdd585274e0f419cfb736"
+    },
+    "Tloc/stress_C": {
+      "receipt_sha256": "9f1c910393555b99aecbdeab807504f2d336d66ab66c92b31aeb170591dd9b15",
+      "samples_sha256": "c53dd4ddda9844839d3a5990c8571c7ba7822aa73cdc148e768217efd3e3fe7c"
+    },
+    "Tloc/stress_E": {
+      "receipt_sha256": "40b5b57283e12ef9eb71d96fce7fa4a8e40dc8fcbeb9a1859ac7ce5822329bc7",
+      "samples_sha256": "6c7e1db3b552fb6a112fa52b79d92d9fb3a04f6e876bd3e72363c2b05645e28c"
+    },
+    "Tloc/timing_0_C": {
+      "receipt_sha256": "1f78976751e383989945a51fb58b8a13051d067132b57e189b4bbf9221844f4b",
+      "samples_sha256": "f291fde2e5aeefd1cef9b51482f10f73220ce6e0d833c382359ae1cd57f890db"
+    },
+    "Tloc/timing_0_E": {
+      "receipt_sha256": "125e2d329fff54cbfdb224197b121ca2cb54fe3887df83eb6ae566497ab46aa7",
+      "samples_sha256": "1302bcd81962422f46e90fe63405befe1490d9c3dfc0d9504925873942bd8404"
+    },
+    "Tloc/timing_1_E": {
+      "receipt_sha256": "285e106718fe6e1abe2dfbe1fa81ad5e42bc1c86539ff4bc9e7e04fe4f84cfe3",
+      "samples_sha256": "f4c8c7154f9f1b628da609fb2967cd1b124d5604178cfa14300998c353c2fbfd"
+    },
+    "Tloc/timing_1_C": {
+      "receipt_sha256": "09ce4ed86cdf87268d81f4ffa0aec33135453ab95be3c0f621a3ead5be2ed309",
+      "samples_sha256": "f308a69f67751e124ba72bfefbe9c39e182debd3bfcb289c95df55f3978a90d2"
+    },
+    "Tloc/timing_2_C": {
+      "receipt_sha256": "9328fd9189c621e7edb0cda0d25a36ef7d20a2121dded876b069f82cacd2c821",
+      "samples_sha256": "bbf38e1c9c8461360f09d7ec809728127eceb7151985b86f1cd6673ad3296181"
+    },
+    "Tloc/timing_2_E": {
+      "receipt_sha256": "7d86691dec388fd64ae6263877ce06d0ff23b6780d77469c160e959886577cb5",
+      "samples_sha256": "3be00c601cbdc549f5cfcfa5a0333a2b918cc69702061902d30b74b786bbd91c"
+    },
+    "Tloc/timing_3_E": {
+      "receipt_sha256": "add52efad581d4e605d376861104c470c0f3d036794afe3d67afa272d7528a5b",
+      "samples_sha256": "0b4cf74054d261c13813b3df8acfc876ae95f0f8d21b509cdaff6118b045a4ac"
+    },
+    "Tloc/timing_3_C": {
+      "receipt_sha256": "682be5c6f8ec78737f96d12c1dcd5406807f53f880916df5fccff644aabe163a",
+      "samples_sha256": "99564686d34d3f2fe4c036a915da4d8eeca03c2ff230084ae66320f7a03f7a52"
+    },
+    "Tloc/timing_4_C": {
+      "receipt_sha256": "bb36b7f42de9c3d7ab3027cf7caf879413f044513d57ae8a20ae4002490a0792",
+      "samples_sha256": "34033b90c4fe0a2cb7af3dee09f2a807a2be5218ce556ca066a75e99500e29cd"
+    },
+    "Tloc/timing_4_E": {
+      "receipt_sha256": "18a4aff240d8e942209c674b69b257c534fe58a36c03e2f3a5244ced94eebc7c",
+      "samples_sha256": "f4aff455ab4c6fe15be6606282a91f79c4575276d978e26ec9b62329f8a5ff0a"
+    },
+    "Tloc/timing_5_E": {
+      "receipt_sha256": "9393028faed3adeb420e7f07555529ae7c3198f8141002ecc61f71a1e985f1b0",
+      "samples_sha256": "2f9a40537d3c1a224880b6da23a047c5ebb90f6dc594420948b8718012a9ba14"
+    },
+    "Tloc/timing_5_C": {
+      "receipt_sha256": "d1272f949d40d04d7b087d1f02a76550da611f2acb99bae5feadc94f25bda190",
+      "samples_sha256": "f73fb9ce0b4e832a3f238e1106236b3a7ab4073d9ffcce85341b6aef7d7c97f9"
+    },
+    "Tloc/sustained_0_C": {
+      "receipt_sha256": "4563725b57ccdd98687ee7f6ac78bc9e3eff59e338230503856befe0d936104f",
+      "samples_sha256": "8609ec2f69b30e13b2a8e3cc9f3cfd37c4acd89f43cc593e8aa8f1c30c1db492"
+    },
+    "Tloc/sustained_0_E": {
+      "receipt_sha256": "c179efdbb1a153e9af3bec2cf6d0eeb2a1333bc3b5c1cb907e5ecabd253fe164",
+      "samples_sha256": "d4e3d87f9abbe0f5e5a43737fe9fd21781b3ccb8a9dbf62a8a39f6207819bf79"
+    },
+    "Tloc/sustained_1_E": {
+      "receipt_sha256": "ac4140bcfc523a10970e77ce08b7bf59b4f1bc59869c62de2ac91f4f019259ed",
+      "samples_sha256": "e018b85e5b434a450ce033964e2dbffcb4983664b3f8a88a29b3190b653bde67"
+    },
+    "Tloc/sustained_1_C": {
+      "receipt_sha256": "dbd7491f68fd379ed11e6f16db02ac04833a123c5e84a7ff18ff49191c69d4c3",
+      "samples_sha256": "04d41f86d2cfcaa69c67ea57de164abbecbf811b239ba1246ed5cfa25c61f0da"
+    },
+    "Tloc/nsys_C": {
+      "receipt_sha256": "a5e0ddf821638dc3c4a5c067035a0a7b88c57ad1519b30c2d780582c055d8f62",
+      "samples_sha256": "1633a52df133919568a6d2cda878fdcd9ae700f91c14e528b2ceee71bb13ada4"
+    },
+    "Tloc/nsys_E": {
+      "receipt_sha256": "7c2a747801aedd9a2d3742462ad5c064c8405f5950cdedecbcfab348ea36fe0c",
+      "samples_sha256": "8eb07aeeb570824e11b7f50db5dbf043ad197aa348e5f04b79252602b7184443"
+    }
+  },
+  "safety": {
+    "max_sample_gap_s": 1.8967551790010475,
+    "median_sample_gap_s": 0.3726370885005963,
+    "runs_without_inprocess_checks": 0
+  }
+}

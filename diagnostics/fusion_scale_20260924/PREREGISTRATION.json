@@ -1,0 +1,88 @@
+{
+  "experiment": "words_result_fusion_scale_20260924",
+  "utc": "2026-09-24T03:17:33.498629+00:00",
+  "base_commit": "e1ccb98fa2dfb3765e987f2f70a768c06eda0939",
+  "sizes": [
+    2000,
+    4000,
+    8000,
+    16000,
+    32000,
+    64000,
+    128000,
+    256000
+  ],
+  "capacities": {
+    "2000": {
+      "height": 3,
+      "nodes": 111,
+      "slots": 2220
+    },
+    "4000": {
+      "height": 4,
+      "nodes": 1111,
+      "slots": 22220
+    },
+    "8000": {
+      "height": 4,
+      "nodes": 1111,
+      "slots": 22220
+    },
+    "16000": {
+      "height": 4,
+      "nodes": 1111,
+      "slots": 22220
+    },
+    "32000": {
+      "height": 5,
+      "nodes": 11111,
+      "slots": 222220
+    },
+    "64000": {
+      "height": 5,
+      "nodes": 11111,
+      "slots": 222220
+    },
+    "128000": {
+      "height": 5,
+      "nodes": 11111,
+      "slots": 222220
+    },
+    "256000": {
+      "height": 6,
+      "nodes": 111111,
+      "slots": 2222220
+    }
+  },
+  "stages": {
+    "selector": 5,
+    "full": 90,
+    "gates": 40,
+    "stress": 16,
+    "timing": 108,
+    "sustained": 32,
+    "trace": 16
+  },
+  "generated_sha256": {
+    "suite.py": "41b4bfa93ae646351f186a1f51247f7041ac89b5643178daca0c3b080c73150d",
+    "CONTRACT.md": "27e775bec73ce9865230a498474edbea79d6bcd490b2133fd2c08d6a82a466b8",
+    "run.py": "bf57e3ae7f4d8d40702cbb11259309768a1719da5a381778f02a0dc9b00fd3a4",
+    "graph_bench.cu": "777d301dc051f95764c5e5b94065a0a53aac3a2d4ba46341210e2121e6080112",
+    "test_selector.cu": "395d8ce3ed078857bcc49f4140444935b95439a78d0cfdf4ba1d5d261f3cf86d",
+    "source_pins.json": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57",
+    "fused_result.cuh": "d427b55c972fe653b137b59e573bc7e8152514d66e7948de84cdd7346a85662f",
+    "verify.py": "44f7124b5bdf79566b081da7779bcc36b914cbd98d6fafa20fe323cba7b3763e"
+  },
+  "fixture_meta_sha256": {
+    "2000": "7b753aba1a1c0a1c1ef43bb77d4fcb8e471d5b72d42033f928db687283985e52",
+    "4000": "17f8cfd6140e83811d2506ce9a4d310637f840ccddc5745f62bc2afa85b2eb25",
+    "8000": "8c29c509efa18668f84e8de34fdbb5d162f938f5cf40545f454c2c2ac403db7a",
+    "16000": "90163ccd104c18947fd81f77024882d5b851bcf40c00096b2155e2d43bf5513b",
+    "32000": "3d0a7c674ad2cd4f135f954092b759ead7a82dc7e9d30fd7599ba100e851c1f3",
+    "64000": "9ee092a60c1261889a610865cf3ae9099be364ebd2c502e0c9fadc7e85d53ae2",
+    "128000": "1d4640dd22340905249ad8d0fcfa8af40ea878f9f5a7c72b0dcede5e2067ac55",
+    "256000": "1cd58b1e2bcb9ea686001253cdda91caca06b6f2d1627454cb5c1be3ce2005dd"
+  },
+  "cpu_checks": "selector arithmetic/body preserved; exhaustive leaf-size partition bound; independent oracle + Python sample cross-check; source/fixture pins",
+  "state": "CPU preflight passed; CUDA/GPU pending"
+}

@@ -1,0 +1,939 @@
+{
+  "seed": 250925,
+  "datasets": {
+    "GIST": {
+      "n": 1000000,
+      "dimensions": 960,
+      "radius": 1.411250114440918,
+      "train_points": 8192,
+      "test_points": 20000,
+      "query_ids": [
+        728999,
+        133791,
+        64023,
+        356678,
+        947731,
+        238099,
+        346554,
+        301735
+      ],
+      "rows": [
+        {
+          "qid": 728999,
+          "true_empty": 20000,
+          "true_distance_median": 2.2573760590738505,
+          "baseline_scalar_dims": 12206656,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 15058,
+              "pca_filter_plus_exact_scalar_dims": 3715072,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.5901829777888343
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 17485,
+              "pca_filter_plus_exact_scalar_dims": 2191712,
+              "original_prefix_pruned": 8,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.705982945557646
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 19292,
+              "pca_filter_plus_exact_scalar_dims": 1190880,
+              "original_prefix_pruned": 20,
+              "variance_order_pruned": 30,
+              "pca_bound_median": 1.8522636338024685
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19831,
+              "pca_filter_plus_exact_scalar_dims": 1416704,
+              "original_prefix_pruned": 70,
+              "variance_order_pruned": 169,
+              "pca_bound_median": 1.9725997099187094
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19929,
+              "pca_filter_plus_exact_scalar_dims": 1978592,
+              "original_prefix_pruned": 224,
+              "variance_order_pruned": 440,
+              "pca_bound_median": 2.0211483755857946
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 19968,
+              "pca_filter_plus_exact_scalar_dims": 2586816,
+              "original_prefix_pruned": 334,
+              "variance_order_pruned": 755,
+              "pca_bound_median": 2.0614301712286642
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 19997,
+              "pca_filter_plus_exact_scalar_dims": 5122656,
+              "original_prefix_pruned": 1398,
+              "variance_order_pruned": 6662,
+              "pca_bound_median": 2.1450612093567596
+            }
+          ]
+        },
+        {
+          "qid": 133791,
+          "true_empty": 17188,
+          "true_distance_median": 1.8407399410308452,
+          "baseline_scalar_dims": 12731840,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 7007,
+              "pca_filter_plus_exact_scalar_dims": 9947392,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.2052340161075321
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 9786,
+              "pca_filter_plus_exact_scalar_dims": 8569952,
+              "original_prefix_pruned": 7,
+              "variance_order_pruned": 13,
+              "pca_bound_median": 1.3991908723070714
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 12499,
+              "pca_filter_plus_exact_scalar_dims": 7151872,
+              "original_prefix_pruned": 17,
+              "variance_order_pruned": 78,
+              "pca_bound_median": 1.5557119868007065
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 14207,
+              "pca_filter_plus_exact_scalar_dims": 6541152,
+              "original_prefix_pruned": 56,
+              "variance_order_pruned": 371,
+              "pca_bound_median": 1.6524175721894072
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 15220,
+              "pca_filter_plus_exact_scalar_dims": 6370112,
+              "original_prefix_pruned": 207,
+              "variance_order_pruned": 747,
+              "pca_bound_median": 1.707539014330624
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 15859,
+              "pca_filter_plus_exact_scalar_dims": 6468416,
+              "original_prefix_pruned": 320,
+              "variance_order_pruned": 1217,
+              "pca_bound_median": 1.744952976732351
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 16513,
+              "pca_filter_plus_exact_scalar_dims": 8450080,
+              "original_prefix_pruned": 1405,
+              "variance_order_pruned": 4153,
+              "pca_bound_median": 1.7892372814694353
+            }
+          ]
+        },
+        {
+          "qid": 64023,
+          "true_empty": 16469,
+          "true_distance_median": 1.6190927554559114,
+          "baseline_scalar_dims": 14360096,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 2854,
+              "pca_filter_plus_exact_scalar_dims": 13267968,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.9796626375750055
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 4191,
+              "pca_filter_plus_exact_scalar_dims": 12735584,
+              "original_prefix_pruned": 4,
+              "variance_order_pruned": 3,
+              "pca_bound_median": 1.122197209039968
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 5508,
+              "pca_filter_plus_exact_scalar_dims": 12320128,
+              "original_prefix_pruned": 7,
+              "variance_order_pruned": 30,
+              "pca_bound_median": 1.212063393824434
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 7972,
+              "pca_filter_plus_exact_scalar_dims": 11415776,
+              "original_prefix_pruned": 14,
+              "variance_order_pruned": 140,
+              "pca_bound_median": 1.3323692554794957
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 9504,
+              "pca_filter_plus_exact_scalar_dims": 11007072,
+              "original_prefix_pruned": 48,
+              "variance_order_pruned": 272,
+              "pca_bound_median": 1.3937221597991094
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 10616,
+              "pca_filter_plus_exact_scalar_dims": 10846528,
+              "original_prefix_pruned": 63,
+              "variance_order_pruned": 445,
+              "pca_bound_median": 1.4322523023148999
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 12783,
+              "pca_filter_plus_exact_scalar_dims": 11729664,
+              "original_prefix_pruned": 488,
+              "variance_order_pruned": 1447,
+              "pca_bound_median": 1.501858527351026
+            }
+          ]
+        },
+        {
+          "qid": 356678,
+          "true_empty": 20000,
+          "true_distance_median": 2.326349567580138,
+          "baseline_scalar_dims": 4507584,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 15854,
+              "pca_filter_plus_exact_scalar_dims": 1242080,
+              "original_prefix_pruned": 1,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.6376545925685118
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 18890,
+              "pca_filter_plus_exact_scalar_dims": 638304,
+              "original_prefix_pruned": 5,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.7994689581233052
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 19810,
+              "pca_filter_plus_exact_scalar_dims": 703296,
+              "original_prefix_pruned": 8,
+              "variance_order_pruned": 7,
+              "pca_bound_median": 1.9530270494698185
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19976,
+              "pca_filter_plus_exact_scalar_dims": 1290016,
+              "original_prefix_pruned": 14,
+              "variance_order_pruned": 284,
+              "pca_bound_median": 2.0758534467450134
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19994,
+              "pca_filter_plus_exact_scalar_dims": 1923008,
+              "original_prefix_pruned": 58,
+              "variance_order_pruned": 1748,
+              "pca_bound_median": 2.131050666830039
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 19997,
+              "pca_filter_plus_exact_scalar_dims": 2561472,
+              "original_prefix_pruned": 123,
+              "variance_order_pruned": 4065,
+              "pca_bound_median": 2.166275393253497
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 19999,
+              "pca_filter_plus_exact_scalar_dims": 5120608,
+              "original_prefix_pruned": 18341,
+              "variance_order_pruned": 15057,
+              "pca_bound_median": 2.2281449217440707
+            }
+          ]
+        },
+        {
+          "qid": 947731,
+          "true_empty": 19949,
+          "true_distance_median": 2.00127161095873,
+          "baseline_scalar_dims": 11568192,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 11779,
+              "pca_filter_plus_exact_scalar_dims": 5911264,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.4738532554387191
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 14386,
+              "pca_filter_plus_exact_scalar_dims": 4379808,
+              "original_prefix_pruned": 7,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.5661133068405204
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 16314,
+              "pca_filter_plus_exact_scalar_dims": 3385344,
+              "original_prefix_pruned": 17,
+              "variance_order_pruned": 28,
+              "pca_bound_median": 1.6425271231576504
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 18686,
+              "pca_filter_plus_exact_scalar_dims": 2319360,
+              "original_prefix_pruned": 67,
+              "variance_order_pruned": 171,
+              "pca_bound_median": 1.7786009088143317
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19087,
+              "pca_filter_plus_exact_scalar_dims": 2658240,
+              "original_prefix_pruned": 225,
+              "variance_order_pruned": 378,
+              "pca_bound_median": 1.816577918284755
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 19361,
+              "pca_filter_plus_exact_scalar_dims": 3088800,
+              "original_prefix_pruned": 348,
+              "variance_order_pruned": 689,
+              "pca_bound_median": 1.8504315808643113
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 19702,
+              "pca_filter_plus_exact_scalar_dims": 5381440,
+              "original_prefix_pruned": 2014,
+              "variance_order_pruned": 2969,
+              "pca_bound_median": 1.90884117798933
+            }
+          ]
+        },
+        {
+          "qid": 238099,
+          "true_empty": 16407,
+          "true_distance_median": 1.8435359089124097,
+          "baseline_scalar_dims": 13112192,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 8906,
+              "pca_filter_plus_exact_scalar_dims": 9095872,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.3347823365365392
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 10803,
+              "pca_filter_plus_exact_scalar_dims": 8106208,
+              "original_prefix_pruned": 6,
+              "variance_order_pruned": 11,
+              "pca_bound_median": 1.4653473878862404
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 12632,
+              "pca_filter_plus_exact_scalar_dims": 7188672,
+              "original_prefix_pruned": 12,
+              "variance_order_pruned": 58,
+              "pca_bound_median": 1.5765082021859147
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 14178,
+              "pca_filter_plus_exact_scalar_dims": 6667264,
+              "original_prefix_pruned": 47,
+              "variance_order_pruned": 291,
+              "pca_bound_median": 1.6726305238417973
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 14854,
+              "pca_filter_plus_exact_scalar_dims": 6755200,
+              "original_prefix_pruned": 174,
+              "variance_order_pruned": 602,
+              "pca_bound_median": 1.7177911829965549
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 15252,
+              "pca_filter_plus_exact_scalar_dims": 7058496,
+              "original_prefix_pruned": 274,
+              "variance_order_pruned": 978,
+              "pca_bound_median": 1.7456995197233303
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 15814,
+              "pca_filter_plus_exact_scalar_dims": 9121696,
+              "original_prefix_pruned": 1205,
+              "variance_order_pruned": 3753,
+              "pca_bound_median": 1.79117583422921
+            }
+          ]
+        },
+        {
+          "qid": 346554,
+          "true_empty": 19769,
+          "true_distance_median": 1.8477071708071982,
+          "baseline_scalar_dims": 12464928,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 7568,
+              "pca_filter_plus_exact_scalar_dims": 8964032,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.3120329436399865
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 10046,
+              "pca_filter_plus_exact_scalar_dims": 7657408,
+              "original_prefix_pruned": 7,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.4128283978406704
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 13280,
+              "pca_filter_plus_exact_scalar_dims": 5859520,
+              "original_prefix_pruned": 16,
+              "variance_order_pruned": 20,
+              "pca_bound_median": 1.519464620179307
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 16028,
+              "pca_filter_plus_exact_scalar_dims": 4540480,
+              "original_prefix_pruned": 44,
+              "variance_order_pruned": 131,
+              "pca_bound_median": 1.6119503652580778
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 17542,
+              "pca_filter_plus_exact_scalar_dims": 4021408,
+              "original_prefix_pruned": 171,
+              "variance_order_pruned": 355,
+              "pca_bound_median": 1.6711241745338559
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 18311,
+              "pca_filter_plus_exact_scalar_dims": 4046816,
+              "original_prefix_pruned": 262,
+              "variance_order_pruned": 632,
+              "pca_bound_median": 1.7072369068882054
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 19231,
+              "pca_filter_plus_exact_scalar_dims": 5833952,
+              "original_prefix_pruned": 1045,
+              "variance_order_pruned": 2972,
+              "pca_bound_median": 1.7702742541177363
+            }
+          ]
+        },
+        {
+          "qid": 301735,
+          "true_empty": 17127,
+          "true_distance_median": 1.701100108363262,
+          "baseline_scalar_dims": 13655424,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 4845,
+              "pca_filter_plus_exact_scalar_dims": 11840032,
+              "original_prefix_pruned": 2,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 1.1377676280372442
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 7308,
+              "pca_filter_plus_exact_scalar_dims": 10608224,
+              "original_prefix_pruned": 6,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.292407980940006
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 9469,
+              "pca_filter_plus_exact_scalar_dims": 9545824,
+              "original_prefix_pruned": 13,
+              "variance_order_pruned": 15,
+              "pca_bound_median": 1.3887393622215942
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 12311,
+              "pca_filter_plus_exact_scalar_dims": 8138464,
+              "original_prefix_pruned": 46,
+              "variance_order_pruned": 94,
+              "pca_bound_median": 1.5018045067364127
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 13695,
+              "pca_filter_plus_exact_scalar_dims": 7686496,
+              "original_prefix_pruned": 165,
+              "variance_order_pruned": 217,
+              "pca_bound_median": 1.552635149785004
+            },
+            {
+              "dimensions": 128,
+              "pca_pruned": 14370,
+              "pca_filter_plus_exact_scalar_dims": 7775680,
+              "original_prefix_pruned": 272,
+              "variance_order_pruned": 397,
+              "pca_bound_median": 1.5793990126960722
+            },
+            {
+              "dimensions": 256,
+              "pca_pruned": 15606,
+              "pca_filter_plus_exact_scalar_dims": 9278304,
+              "original_prefix_pruned": 1171,
+              "variance_order_pruned": 1468,
+              "pca_bound_median": 1.6317054310341736
+            }
+          ]
+        }
+      ]
+    },
+    "Deep": {
+      "n": 1000000,
+      "dimensions": 96,
+      "radius": 1.0798368453979492,
+      "train_points": 8192,
+      "test_points": 20000,
+      "query_ids": [
+        728999,
+        133791,
+        64023,
+        356678,
+        947731,
+        238099,
+        346554,
+        301735
+      ],
+      "rows": [
+        {
+          "qid": 728999,
+          "true_empty": 19908,
+          "true_distance_median": 1.4096063118705262,
+          "baseline_scalar_dims": 1441472,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 11,
+              "pca_filter_plus_exact_scalar_dims": 1600768,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.7180020291037048
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 367,
+              "pca_filter_plus_exact_scalar_dims": 1737760,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.8601919921451333
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 13488,
+              "pca_filter_plus_exact_scalar_dims": 1172480,
+              "original_prefix_pruned": 7,
+              "variance_order_pruned": 7,
+              "pca_bound_median": 1.1353124111364672
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19535,
+              "pca_filter_plus_exact_scalar_dims": 1324416,
+              "original_prefix_pruned": 14947,
+              "variance_order_pruned": 17158,
+              "pca_bound_median": 1.3268030279614775
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19908,
+              "pca_filter_plus_exact_scalar_dims": 1928832,
+              "original_prefix_pruned": 19908,
+              "variance_order_pruned": 19908,
+              "pca_bound_median": 1.4096063118705264
+            }
+          ]
+        },
+        {
+          "qid": 133791,
+          "true_empty": 19560,
+          "true_distance_median": 1.3436993423118921,
+          "baseline_scalar_dims": 1569504,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 161,
+              "pca_filter_plus_exact_scalar_dims": 1719040,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.744179445761106
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 2742,
+              "pca_filter_plus_exact_scalar_dims": 1709440,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.925612811298719
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 11524,
+              "pca_filter_plus_exact_scalar_dims": 1397792,
+              "original_prefix_pruned": 3,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.104913344573089
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 18732,
+              "pca_filter_plus_exact_scalar_dims": 1401696,
+              "original_prefix_pruned": 10950,
+              "variance_order_pruned": 12694,
+              "pca_bound_median": 1.2789230418138158
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19560,
+              "pca_filter_plus_exact_scalar_dims": 1962240,
+              "original_prefix_pruned": 19560,
+              "variance_order_pruned": 19560,
+              "pca_bound_median": 1.3436993423118926
+            }
+          ]
+        },
+        {
+          "qid": 64023,
+          "true_empty": 19198,
+          "true_distance_median": 1.3975316331016043,
+          "baseline_scalar_dims": 1483040,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 637,
+              "pca_filter_plus_exact_scalar_dims": 1601376,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.8013714552020981
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 6475,
+              "pca_filter_plus_exact_scalar_dims": 1373312,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.9999343864354382
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 15148,
+              "pca_filter_plus_exact_scalar_dims": 1081472,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 34,
+              "pca_bound_median": 1.196362259815559
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 18372,
+              "pca_filter_plus_exact_scalar_dims": 1436224,
+              "original_prefix_pruned": 13655,
+              "variance_order_pruned": 14808,
+              "pca_bound_median": 1.3241434800293446
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19198,
+              "pca_filter_plus_exact_scalar_dims": 1996992,
+              "original_prefix_pruned": 19198,
+              "variance_order_pruned": 19198,
+              "pca_bound_median": 1.3975316331016048
+            }
+          ]
+        },
+        {
+          "qid": 356678,
+          "true_empty": 19885,
+          "true_distance_median": 1.4066967052102413,
+          "baseline_scalar_dims": 1404256,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 25,
+              "pca_filter_plus_exact_scalar_dims": 1562720,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.7154842659889968
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 2416,
+              "pca_filter_plus_exact_scalar_dims": 1569760,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.9250750157233362
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 10196,
+              "pca_filter_plus_exact_scalar_dims": 1384192,
+              "original_prefix_pruned": 7,
+              "variance_order_pruned": 444,
+              "pca_bound_median": 1.0829715680770358
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19373,
+              "pca_filter_plus_exact_scalar_dims": 1339264,
+              "original_prefix_pruned": 16110,
+              "variance_order_pruned": 16277,
+              "pca_bound_median": 1.3055418210578296
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19885,
+              "pca_filter_plus_exact_scalar_dims": 1931040,
+              "original_prefix_pruned": 19885,
+              "variance_order_pruned": 19885,
+              "pca_bound_median": 1.4066967052102415
+            }
+          ]
+        },
+        {
+          "qid": 947731,
+          "true_empty": 19391,
+          "true_distance_median": 1.3558681431552175,
+          "baseline_scalar_dims": 1494848,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 752,
+              "pca_filter_plus_exact_scalar_dims": 1606688,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.7607474464438843
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 3973,
+              "pca_filter_plus_exact_scalar_dims": 1558464,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.9511617610223786
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 12583,
+              "pca_filter_plus_exact_scalar_dims": 1286816,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 63,
+              "pca_bound_median": 1.1243452222910264
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 18447,
+              "pca_filter_plus_exact_scalar_dims": 1428896,
+              "original_prefix_pruned": 13286,
+              "variance_order_pruned": 14504,
+              "pca_bound_median": 1.2804365271054785
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19391,
+              "pca_filter_plus_exact_scalar_dims": 1978464,
+              "original_prefix_pruned": 19391,
+              "variance_order_pruned": 19391,
+              "pca_bound_median": 1.3558681431552178
+            }
+          ]
+        },
+        {
+          "qid": 238099,
+          "true_empty": 19745,
+          "true_distance_median": 1.3462483573645065,
+          "baseline_scalar_dims": 1500608,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 20,
+              "pca_filter_plus_exact_scalar_dims": 1659328,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.6895816598223767
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 1492,
+              "pca_filter_plus_exact_scalar_dims": 1724736,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.893779910974345
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 10384,
+              "pca_filter_plus_exact_scalar_dims": 1438880,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 23,
+              "pca_bound_median": 1.0857792521152465
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19030,
+              "pca_filter_plus_exact_scalar_dims": 1372832,
+              "original_prefix_pruned": 13106,
+              "variance_order_pruned": 15493,
+              "pca_bound_median": 1.275808033681655
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19745,
+              "pca_filter_plus_exact_scalar_dims": 1944480,
+              "original_prefix_pruned": 19745,
+              "variance_order_pruned": 19745,
+              "pca_bound_median": 1.3462483573645068
+            }
+          ]
+        },
+        {
+          "qid": 346554,
+          "true_empty": 19883,
+          "true_distance_median": 1.3547897874068786,
+          "baseline_scalar_dims": 1427488,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 0,
+              "pca_filter_plus_exact_scalar_dims": 1587488,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.6382707230854509
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 1463,
+              "pca_filter_plus_exact_scalar_dims": 1653920,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.8895894254599963
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 9417,
+              "pca_filter_plus_exact_scalar_dims": 1460096,
+              "original_prefix_pruned": 9,
+              "variance_order_pruned": 309,
+              "pca_bound_median": 1.0706695880398143
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19269,
+              "pca_filter_plus_exact_scalar_dims": 1349280,
+              "original_prefix_pruned": 15382,
+              "variance_order_pruned": 12964,
+              "pca_bound_median": 1.2879847230782837
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19883,
+              "pca_filter_plus_exact_scalar_dims": 1931232,
+              "original_prefix_pruned": 19883,
+              "variance_order_pruned": 19883,
+              "pca_bound_median": 1.354789787406879
+            }
+          ]
+        },
+        {
+          "qid": 301735,
+          "true_empty": 19610,
+          "true_distance_median": 1.3805645234287618,
+          "baseline_scalar_dims": 1418624,
+          "bounds": [
+            {
+              "dimensions": 8,
+              "pca_pruned": 95,
+              "pca_filter_plus_exact_scalar_dims": 1572544,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.7481916423993251
+            },
+            {
+              "dimensions": 16,
+              "pca_pruned": 3643,
+              "pca_filter_plus_exact_scalar_dims": 1507136,
+              "original_prefix_pruned": 0,
+              "variance_order_pruned": 0,
+              "pca_bound_median": 0.9642930795065429
+            },
+            {
+              "dimensions": 32,
+              "pca_pruned": 13529,
+              "pca_filter_plus_exact_scalar_dims": 1170176,
+              "original_prefix_pruned": 248,
+              "variance_order_pruned": 1,
+              "pca_bound_median": 1.1369011935136997
+            },
+            {
+              "dimensions": 64,
+              "pca_pruned": 19132,
+              "pca_filter_plus_exact_scalar_dims": 1363200,
+              "original_prefix_pruned": 15420,
+              "variance_order_pruned": 15616,
+              "pca_bound_median": 1.312781829746878
+            },
+            {
+              "dimensions": 96,
+              "pca_pruned": 19610,
+              "pca_filter_plus_exact_scalar_dims": 1957440,
+              "original_prefix_pruned": 19610,
+              "variance_order_pruned": 19610,
+              "pca_bound_median": 1.3805645234287625
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

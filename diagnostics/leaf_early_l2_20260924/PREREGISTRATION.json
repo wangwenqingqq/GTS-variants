@@ -1,0 +1,31 @@
+{
+  "experiment": "leaf_early_l2_20260924",
+  "modes": {
+    "Q": "grid+dead-count skip+generic leaf",
+    "H": "same with L2 full-sum leaf",
+    "J": "same with L2 early-reject leaf"
+  },
+  "dataset_order": [
+    "GIST",
+    "Deep"
+  ],
+  "timing_orders": [
+    "QHJ",
+    "JHQ",
+    "HJQ",
+    "QJH"
+  ],
+  "normal_radius": {
+    "GIST": 1.411250114440918,
+    "Deep": 1.0798368453979492
+  },
+  "sha256": {
+    "graph_bench.cu": "707507874d8844fe0eceb6db13092df578d75f8416a4e71a092f679cb8c46988",
+    "leaf_l2.cuh": "b267d409c29bbc971c05165adb9c23122fa27712cb79bf7ea3532a3c993e3aee",
+    "l2_traversal.cuh": "2b488d33715d501982c2f3e488fa313793c0f3c65a51fcb5d7f21575e5c38ff2",
+    "run.py": "980aadf531a47069f0cfdb1dc368a1a171b262c171372d749af71b98e0b41e46",
+    "bin/graph_bench": "08adfa2891c54b30e31e8a03e508087a0a64027d8685861fc006795648aa58b7"
+  },
+  "timing_gpu": "4",
+  "timing_scope": "hot complete query, eight warmups and eight measured fixed queries per process; four alternating orders"
+}

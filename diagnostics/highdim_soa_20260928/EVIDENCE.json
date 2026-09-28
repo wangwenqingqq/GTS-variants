@@ -1,0 +1,103 @@
+{
+  "host": "4090-left",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "n": 1000000,
+  "queries": 24,
+  "warmup": 8,
+  "input_sha256": {
+    "GIST": {
+      "data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "queries.qid": "5a0e35293095c32a8c4e5e1ac16096504e61d6f6ba04aef8225216e045b802f4"
+    },
+    "Deep": {
+      "data.f32bin": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+      "queries.qid": "5a0e35293095c32a8c4e5e1ac16096504e61d6f6ba04aef8225216e045b802f4"
+    }
+  },
+  "soa_screen": {
+    "GIST": {
+      "F_ms": 119.99477133333333,
+      "S_ms": 119.71820029166666
+    },
+    "Deep": {
+      "F_ms": 16.958891875000003,
+      "S_ms": 16.857770375
+    }
+  },
+  "paired": {
+    "GIST": {
+      "F_round_ms": [
+        119.67404741666667,
+        119.70252608333332,
+        119.678080625
+      ],
+      "M_round_ms": [
+        48.52254729166666,
+        48.75773479166667,
+        48.29367275
+      ],
+      "F_over_M_round": [
+        2.4663595399745155,
+        2.4550469088607465,
+        2.4781316849628094
+      ],
+      "F_median_ms": 119.678080625,
+      "M_median_ms": 48.52254729166666,
+      "median_speedup": 2.4663595399745155,
+      "M_wins_rounds": 3,
+      "M_wins_queries_per_round": [
+        24,
+        24,
+        24
+      ]
+    },
+    "Deep": {
+      "F_round_ms": [
+        17.076435208333333,
+        16.91084504166667,
+        16.901165041666665
+      ],
+      "M_round_ms": [
+        8.042590416666666,
+        8.074824541666667,
+        8.090932791666667
+      ],
+      "F_over_M_round": [
+        2.12325063488821,
+        2.094267801660025,
+        2.088901919822419
+      ],
+      "F_median_ms": 16.91084504166667,
+      "M_median_ms": 8.074824541666667,
+      "median_speedup": 2.094267801660025,
+      "M_wins_rounds": 3,
+      "M_wins_queries_per_round": [
+        24,
+        24,
+        24
+      ]
+    }
+  },
+  "half_screen": {
+    "GIST": {
+      "F_ms": 46.93576666666667,
+      "M_ms": 7.400899125,
+      "speedup": 6.34190060882186,
+      "M_wins_queries": 24
+    },
+    "Deep": {
+      "F_ms": 7.782130833333333,
+      "M_ms": 2.407762041666667,
+      "speedup": 3.2321013034770236,
+      "M_wins_queries": 24
+    }
+  },
+  "binary_sha256": "a2f7495b279da2fe4bf49f769b443409ffffda7bd37b21010acab047c74e1321",
+  "soa_screen_binary_sha256": "65a3f639ff01f79ca72f4066274947ea0405904ace0099b681fb3e56c4dd72b7",
+  "excluded_run": {
+    "dataset": "GIST",
+    "label": "normal_m_0",
+    "reason": "foreign GPU activity"
+  },
+  "validated_runs": 22
+}

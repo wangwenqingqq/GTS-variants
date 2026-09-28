@@ -1,0 +1,63 @@
+{
+  "experiment": "result_fusion_datasets_20260924",
+  "registered_utc": "2026-09-24T03:50:01.825795+00:00",
+  "stages": {
+    "full": 46,
+    "gates": 24,
+    "stress": 8,
+    "timing": 60,
+    "sustained": 16,
+    "trace": 8
+  },
+  "runs": 162,
+  "dataset_order": [
+    "Words",
+    "GIST",
+    "Deep",
+    "Tloc"
+  ],
+  "generated_sha256": {
+    "graph_bench.cu": "3ab6b69d2054dc7772a04cf42413b3f9bb106cb870633241d05877bf3d1e4725",
+    "fused_result.cuh": "9cfe596b73d80a4632d66eaef5ea7283d6fd0230041dd93f2fff391eb572a8f4",
+    "run.py": "bf57e3ae7f4d8d40702cbb11259309768a1719da5a381778f02a0dc9b00fd3a4",
+    "suite.py": "f08b54273f3c757bc84f3721fe1c59b564d6f6a811a419d19250cfe042bc35a9",
+    "verify.py": "99ae0528813b26f666986cd543078b99af5a90767872d977fe433f0af17552b0",
+    "CONTRACT.md": "29a6248b18c6f1e0ea5ab5df20c771630893295300124028f9012aa54ccd2931",
+    "source_pins.json": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57",
+    "input_sha256.json": "34976ca6461df30660f7b5a30d36c8debc0ff95034b2a21a6ac8e211991278cd"
+  },
+  "fixture_sha256": {
+    "Words": {
+      "check_queries.qid": "4c29030fce284bd117d420ed9691f84336ed54cbebe95bd258adefc971cd947a",
+      "data.txt": "82df4ec8b38d7118d9388cfd5057f73b628fae0f22cfb26616caa9f7144d0e9f",
+      "indices.json": "196faf841dcee15212295aaa6f0c2f3f2d2bc66e7c48bbc1029e9d9f4478b387",
+      "oracle.bin": "1d87fae11a61ac45c07c46d781173bea8df717ae2fb23e35306a728a717ae431",
+      "oracle.json": "7b753aba1a1c0a1c1ef43bb77d4fcb8e471d5b72d42033f928db687283985e52",
+      "queries.qid": "31cd4bbbfde9214177af8ca9c735ad07000cf489f95c95f4226322d256d531de"
+    },
+    "GIST": {
+      "check_queries.qid": "b66b6f2b34ec6d0fd0abc4c7ad278b809c5302eafa5926593f235dda4caa43e3",
+      "data.txt": "c1e6757672d3f43d9b58ab0821b9b295a3463cb7360dc78b3d82bf416d79f436",
+      "oracle.json": "f928468a7818eabf6f1d35969ad1175656417546624f92dd41f6293fc32c2af1",
+      "queries.qid": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "source_indices.json": "2be86b60c87a56b8799aaf6b50cd8bbd52ebb1cd3ab72e4372ae10fa324a3161"
+    },
+    "Deep": {
+      "check_queries.qid": "b66b6f2b34ec6d0fd0abc4c7ad278b809c5302eafa5926593f235dda4caa43e3",
+      "data.txt": "bdb38be393b14dc258edfa6156e50b8e290d23b36fc2ac6585063a751f157b24",
+      "oracle.json": "bed601558b8e76bb69d87054e84c69b68a161d727167eee0a023838870f42a54",
+      "queries.qid": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "source_indices.json": "2be86b60c87a56b8799aaf6b50cd8bbd52ebb1cd3ab72e4372ae10fa324a3161"
+    },
+    "Tloc": {
+      "check_queries.qid": "b66b6f2b34ec6d0fd0abc4c7ad278b809c5302eafa5926593f235dda4caa43e3",
+      "data.txt": "a2c292f2f011f139fe27e8d35488decc5c8812e47847d22ad870da6694ed3fcb",
+      "oracle.json": "c31542c2b9953005bb72191d0fb3881ca0201b0e60752a9286db73c1ac829d28",
+      "queries.qid": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "source_indices.json": "2be86b60c87a56b8799aaf6b50cd8bbd52ebb1cd3ab72e4372ae10fa324a3161"
+    }
+  },
+  "legacy_binary_sha256": "af7a0256a72416d36e794d13d4de4ec2452a7d960c3ea1ff19fc5d7281923952",
+  "previous_words_2k_binary_sha256": "bd67bb8675447ab32d2709a5ea4cd204ba90c257035a407c241e5d1fe508df25",
+  "state_at_registration": "before compilation and GPU work"
+}

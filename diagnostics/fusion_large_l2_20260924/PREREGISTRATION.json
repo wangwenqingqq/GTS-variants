@@ -1,0 +1,48 @@
+{
+  "experiment": "fusion_large_l2_20260924",
+  "utc": "2026-09-24T04:40:26.261167+00:00",
+  "datasets": [
+    "GIST",
+    "Deep",
+    "Tloc"
+  ],
+  "sizes": [
+    65536,
+    1000000
+  ],
+  "stages": {
+    "full": 42,
+    "gates": 30,
+    "stress": 12,
+    "timing": 72,
+    "sustained": 24,
+    "trace": 12
+  },
+  "runs": 192,
+  "generated_sha256": {
+    "graph_bench.cu": "ca7b38d5824557009466bfe38478d1118ff2e141e2c5296ea90df4e923f54c7f",
+    "fused_result.cuh": "d427b55c972fe653b137b59e573bc7e8152514d66e7948de84cdd7346a85662f",
+    "run.py": "baf70ce84881595638618017e22522c2bd855c8b27c7a09728fb4ca3b6796732",
+    "suite.py": "788a3f2fb07191e420b9f95c2d54b3dace511bb7135af4a6abb1315f1d84763e",
+    "verify.py": "50891df1b9789481ba187a367e2d249a1970edafa5290d21557a155d89d9c065",
+    "fixtures.py": "313ff5665791887a6ac75a627971afb46c545a137e81d4a52242e81cc09ce588",
+    "CONTRACT.md": "75a3b08659db587acc09afe9860c60114684b265eb86b8abaefc5c71fa0e74b7",
+    "source_pins.json": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57"
+  },
+  "fixture_meta_sha256": {
+    "GIST": {
+      "65536": "f36afd6811c3121818d7a05d3bd72c58a0d8b6e6184c07de92e49f8c6b571c9c",
+      "1000000": "b9d8f6a5901c0c5fdc61489d9c83c7a7109d40aa71eeda8c8ba7814441213682"
+    },
+    "Deep": {
+      "65536": "a6a41e682d163a10bbfec3d89161f420e885ca4bebe2b49103d2cbbd7d22fc76",
+      "1000000": "ae5972b24b8564ee503183a80895304ec049cf90fa758726178d0be6439cf24e"
+    },
+    "Tloc": {
+      "65536": "4939ffa1419cacf819a9b7467a7567c2d66d5b460506975ab72974e61fb26441",
+      "1000000": "8db2cad5543f57d5c8881be5e69d068c559a727c7990051d364323b734c168fa"
+    }
+  },
+  "source_pins_sha256": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57",
+  "state_at_registration": "CPU fixtures complete; before CUDA compile/GPU run"
+}

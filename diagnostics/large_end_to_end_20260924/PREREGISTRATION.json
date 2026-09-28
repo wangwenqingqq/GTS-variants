@@ -1,0 +1,84 @@
+{
+  "experiment": "large_end_to_end_20260924",
+  "registered_utc": "2026-09-24T09:23:11.414942+00:00",
+  "source_campaign": "fusion_large_l2_20260924",
+  "source_evidence_sha256": "19a52f343f06464de1e9a1812de044afec9d9ef8eaca9e56e0ac73bd76775f8b",
+  "source_binary_sha256": "c6fc6e3102b5809f5a6214c7d996d0e7fdd571e514cb930b3a1ba40c593356bc",
+  "source_cuda_sha256": "ca7b38d5824557009466bfe38478d1118ff2e141e2c5296ea90df4e923f54c7f",
+  "source_run_py_sha256": "baf70ce84881595638618017e22522c2bd855c8b27c7a09728fb4ca3b6796732",
+  "source_pins_sha256": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57",
+  "contract_sha256": "3f5f02a923b05a7a4398b8f93095eaab8295720064fd72ae2ed519cc389b578a",
+  "suite_sha256": "336c66ad840d14d9de0a8a9bcefcd70a02df78e8b5f7a2e32377eff7c1bb7ed9",
+  "verify_sha256": "50891df1b9789481ba187a367e2d249a1970edafa5290d21557a155d89d9c065",
+  "fixture": {
+    "GIST": {
+      "65536": {
+        "oracle_json_sha256": "f36afd6811c3121818d7a05d3bd72c58a0d8b6e6184c07de92e49f8c6b571c9c",
+        "expected_sha256": {
+          "normal": "dba64d2377dd81ab3efa1c67c106cfa809d9e16f5236ba012babb284f090219a"
+        }
+      },
+      "1000000": {
+        "oracle_json_sha256": "b9d8f6a5901c0c5fdc61489d9c83c7a7109d40aa71eeda8c8ba7814441213682",
+        "expected_sha256": {
+          "normal": "8cbb07003e2f621e8f4fdaf68597752ebc17267b4c8d295507b78c2a9937d29c",
+          "zero": "19a40061b5c62fc1dade597d68b618f20e7d7f66b5b0609534be4e6925f57d1a",
+          "all": "79db398dc12c9342a516270e9db6b65ab9d58c9b34398afce959a855ac2f971d",
+          "empty": "df7d402da1732386ab5d0f37d7a7f311df39716a39b5c80c04eb596e22c6ef24"
+        }
+      }
+    },
+    "Deep": {
+      "65536": {
+        "oracle_json_sha256": "a6a41e682d163a10bbfec3d89161f420e885ca4bebe2b49103d2cbbd7d22fc76",
+        "expected_sha256": {
+          "normal": "2422b0ad616817261251c4d6ef48219466d8a50f82172743943dc201c59693f3"
+        }
+      },
+      "1000000": {
+        "oracle_json_sha256": "ae5972b24b8564ee503183a80895304ec049cf90fa758726178d0be6439cf24e",
+        "expected_sha256": {
+          "normal": "4985ce1fd3801197bfb515f34acce1af7193f77e7a7355f2d75bc9bc3d956a31",
+          "zero": "6b24aa3367e86d5865f91df95fca84034c4d73241bca312e59c1532a79b862a0",
+          "all": "aa3aeed29657cd8aaf5c8624d5b737350d76ea9e7f41c2599c2001f8862238d6",
+          "empty": "df7d402da1732386ab5d0f37d7a7f311df39716a39b5c80c04eb596e22c6ef24"
+        }
+      }
+    },
+    "Tloc": {
+      "65536": {
+        "oracle_json_sha256": "4939ffa1419cacf819a9b7467a7567c2d66d5b460506975ab72974e61fb26441",
+        "expected_sha256": {
+          "normal": "a14648db7e7bcd904e0a807bfb50b18d73b14135875fcdf820d6ab5da34c9933"
+        }
+      },
+      "1000000": {
+        "oracle_json_sha256": "8db2cad5543f57d5c8881be5e69d068c559a727c7990051d364323b734c168fa",
+        "expected_sha256": {
+          "normal": "74cdddb7ac19214850d4baa213c99b654480208e3f4aa0f525a318a68ca16f07",
+          "zero": "6b24aa3367e86d5865f91df95fca84034c4d73241bca312e59c1532a79b862a0",
+          "all": "43556887887c91e88f7f4d03344a447d36be17bb4409a2de5f3e6835ea585cec",
+          "empty": "df7d402da1732386ab5d0f37d7a7f311df39716a39b5c80c04eb596e22c6ef24"
+        }
+      }
+    }
+  },
+  "stage_counts": {
+    "full": 30,
+    "gates": 30,
+    "stress": 12,
+    "timing": 120,
+    "sustained": 60,
+    "trace": 12
+  },
+  "stage_rows_sha256": {
+    "full": "e10b92bb1a976454a9064643d5e432cc493bc7065febf8764d2b160e88d2da64",
+    "gates": "6970e47afd96314e8cecbc2af630c6cfb651ec1d4d558a0e49a65a9977bb470d",
+    "stress": "f2c0ed86dcce271d6f8c8b99182fadbdb08470fd45189ce369b4841314c731de",
+    "timing": "d948588a1af379f60df0af85b37fb2cc9f7c974b1aa3899353a73d0e17df89e5",
+    "sustained": "8b203294181679215a7028487171dd97d54003e3e89b99632ee3c3d4f366bad7",
+    "trace": "4da93a4f3047e7e6d8a2e16f895d182c7c01fdff36ebc60fbcef3591cb96ca9f"
+  },
+  "runs": 264,
+  "state_at_registration": "previous large L2 campaign verified, new five-mode GPU work not started"
+}

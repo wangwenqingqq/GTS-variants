@@ -1,0 +1,78 @@
+{
+  "experiment": "gts_20260924_traversal_layout_l2_2000",
+  "state": "complete: all 423 GPU 5 runs and independent audit passed; no layout combination promoted",
+  "checked_at_utc": "2026-09-24T02:44:39.110791+00:00",
+  "base_commit": "e1ccb98fa2dfb3765e987f2f70a768c06eda0939",
+  "previous_layout_commit": "5ff0a7428e5c7c308e1c91f89456d6d553788a30",
+  "cpu_checks": "passed: source composition, inherited C++ offset checks, modes, balanced schedule; not CUDA correctness",
+  "cuda_compilation": "reused original pinned compiled executable; CPU generator recovery exactly matched",
+  "gpu_admission": "GPU 5 admitted idle under existing advisory lock; pre-run amendment recorded in fresh raw root",
+  "gpu_measurements": 423,
+  "binary_sha256": "588a7d2a8690e1c724dc3825dd1b423e854003dc1001dadc405b347652634929",
+  "sass_audit": "passed: exact binary/dump/function hashes; NSYS function identity and register association",
+  "sanitizer": "108/108 passed",
+  "stress": "36/36 passed; 147456 validated measured queries",
+  "paired_timing": "72/72 passed; four balanced process rounds; 36864 validated measured queries",
+  "sustained": "36/36 passed; both orders; 147456 validated measured queries",
+  "nsys": "18/18 passed; 193 graph executions per trace, 17/13 kernels per query, common downstream signatures",
+  "production_admitted": false,
+  "planned_receipts": {
+    "per_dataset": 141,
+    "datasets": 3,
+    "total": 423
+  },
+  "fixture_sha256": {
+    "GIST": {
+      "data.txt": "c1e6757672d3f43d9b58ab0821b9b295a3463cb7360dc78b3d82bf416d79f436",
+      "queries.qid": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "oracle.json": "f928468a7818eabf6f1d35969ad1175656417546624f92dd41f6293fc32c2af1",
+      "source_indices.json": "2be86b60c87a56b8799aaf6b50cd8bbd52ebb1cd3ab72e4372ae10fa324a3161"
+    },
+    "Deep": {
+      "data.txt": "bdb38be393b14dc258edfa6156e50b8e290d23b36fc2ac6585063a751f157b24",
+      "queries.qid": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "oracle.json": "bed601558b8e76bb69d87054e84c69b68a161d727167eee0a023838870f42a54",
+      "source_indices.json": "2be86b60c87a56b8799aaf6b50cd8bbd52ebb1cd3ab72e4372ae10fa324a3161"
+    },
+    "Tloc": {
+      "data.txt": "a2c292f2f011f139fe27e8d35488decc5c8812e47847d22ad870da6694ed3fcb",
+      "queries.qid": "1f42769f7f9d95f550355c6b29a3942a488e792cda8479118408d2aa7c51cdd6",
+      "oracle.json": "c31542c2b9953005bb72191d0fb3881ca0201b0e60752a9286db73c1ac829d28",
+      "source_indices.json": "2be86b60c87a56b8799aaf6b50cd8bbd52ebb1cd3ab72e4372ae10fa324a3161"
+    }
+  },
+  "generated_sha256": {
+    "graph_bench.cu": "0e079a5e1ce663dd5db9853b1984ebf845da54e935ffe31bc157004ff0a8b912",
+    "source_pins.json": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57",
+    "traversal_layout_generated.cuh": "c80e2b22d18533de4b0c7ca0ab6d1aeb9237ea88e3e40263a3fda3121202387f",
+    "suite.py": "19802723ae0ca0cb8a96f77d4c5800e4c931b22f454d0167497fc35a0c157092",
+    "audit_combo.cuh": "58f6eda60f3c39e93901353d6d9b9ddb1e98cc9956a1d5475359c68cdabc7124",
+    "fused_result.cuh": "9cfe596b73d80a4632d66eaef5ea7283d6fd0230041dd93f2fff391eb572a8f4",
+    "layout_generated.cuh": "d66d8b0de703220b51aafbf5d6e7c166dcb9b6109b40a4a19b1cbb31881faf23",
+    "CONTRACT.md": "f9b8f6b814d844a66960f3eaf312b9b89447fc8e205d62773d36722c5d3bf37c",
+    "verify_full.py": "2d2781137e0d5f80692fcd8100ec763aea42c945c44eb0d05b2d2637d9df0957",
+    "layout_support.cuh": "3062987b0d59f131be68679841497bcb5d4d7cff3caa68ad8ea2b983d06f44b2",
+    "run_layout.py": "070ad245e8676d025669e5738210da7693a49d3971a84ac60ee84f081a47fedb",
+    "layout_index.cuh": "02881b7e513ae1fcb634383ca36245c0be6fde8a5631113095332c4d8dcf742b"
+  },
+  "pending_action": null,
+  "full_correctness": "153/153 passed: membership, distances, native float32 bits and order; layout/poisoned-flag audits",
+  "evidence_sha256": "5024a17ab1a0f50acea2fd3f66047761142ee8ba006eb8b2cef5a06b4fd8eeb7",
+  "result": {
+    "GIST": {
+      "X": false,
+      "Y": false
+    },
+    "Deep": {
+      "X": false,
+      "Y": false
+    },
+    "Tloc": {
+      "X": false,
+      "Y": false
+    }
+  },
+  "raw_evidence": "local/raw",
+  "interrupted_attempt": "local/interrupted_gpu0",
+  "final_gpu_state": "selected GPU 5 had no compute processes after suite completion"
+}

@@ -1,0 +1,27 @@
+{
+  "experiment": "flat_scan_l2_20260924",
+  "gpu": "4",
+  "dataset_order": [
+    "GIST",
+    "Deep"
+  ],
+  "modes": {
+    "Q": "tree generic leaf",
+    "J": "tree early-reject leaf",
+    "F": "flat id_list order early-reject"
+  },
+  "timing_orders": [
+    "QJF",
+    "FJQ",
+    "JFQ",
+    "QFJ"
+  ],
+  "sha256": {
+    "graph_bench.cu": "18d865e6155803e54ed9f61daab848c9c9e0a218eddda0d7aae1bde423f393c8",
+    "flat_l2.cuh": "69b0de1d1936c234e19f213563600535398d60ffa7e5959ebcf2c3fdd5e4f13e",
+    "leaf_l2.cuh": "b267d409c29bbc971c05165adb9c23122fa27712cb79bf7ea3532a3c993e3aee",
+    "l2_traversal.cuh": "2b488d33715d501982c2f3e488fa313793c0f3c65a51fcb5d7f21575e5c38ff2",
+    "run.py": "f794df11b22dce248f1d818fcbef55c3169b86c002e7e700a13c282e64b4e325",
+    "bin/graph_bench": "d7d39dec008d9cd22696c976fa4af517e0e022408856c5238589262f385144a3"
+  }
+}

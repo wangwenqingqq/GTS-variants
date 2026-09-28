@@ -1,0 +1,33 @@
+{
+  "experiment": "large_l2_traversal_specialization_and_grid_screen_20260924",
+  "binary_sha256": "86df4537088ee63fba478c4785b4813f00cd1b69a49e473d3e875bdb4b51837c",
+  "driver_sha256": "7b686865027aa256bfa403e79ae5d54782b01e938e1544ba640ec254418959f4",
+  "header_sha256": "2b488d33715d501982c2f3e488fa313793c0f3c65a51fcb5d7f21575e5c38ff2",
+  "runner_sha256": "4ae1bb60aa2e919eb28608425e130718f6eefad1c85ab67fa087b0fd9159cfe9",
+  "suite_sha256": "47edd0d9cc74568acc7b577e6176d6c4b26b65e11cf6de0b4965ad048214bcdd",
+  "verify_sha256": "50891df1b9789481ba187a367e2d249a1970edafa5290d21557a155d89d9c065",
+  "contract_sha256": "e2c43121c857a7a9f808d348c024265479d8f52693079b0311470679c4ff49a9",
+  "prior_evidence_sha256": "c5ba679c3563facc65a3c8c4ba56303dcbbd15d85028e5bc3953d4d94f0ed2e1",
+  "oracle_sha256": {
+    "GIST": "b9d8f6a5901c0c5fdc61489d9c83c7a7109d40aa71eeda8c8ba7814441213682",
+    "Deep": "ae5972b24b8564ee503183a80895304ec049cf90fa758726178d0be6439cf24e",
+    "Tloc": "8db2cad5543f57d5c8881be5e69d068c559a727c7990051d364323b734c168fa"
+  },
+  "modes": {
+    "E": "original traversal+fused result+Graph",
+    "S": "L2-only one CTA+fused result+Graph",
+    "P": "L2-only multi CTA+fused result+Graph"
+  },
+  "timing_orders": [
+    "ESP",
+    "PSE",
+    "SPE",
+    "EPS"
+  ],
+  "stage_counts": {
+    "full": 6,
+    "gates": 12,
+    "timing": 36,
+    "trace": 9
+  }
+}
