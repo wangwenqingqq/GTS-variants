@@ -153,3 +153,5 @@ path on SIFT65k/Q32/k10/r1 (all 32 queries fell back) and
 SIFT1M/Q32/k10/auto-r292 (2 queries fell back). Raw logs, binaries, source
 copies, and query IDs are at
 `pro6000-8:/home/data/wangxuran/tmp/gts_auto_knn_pro6000_20260928`.
+The minimal source patches, benchmark harnesses, query IDs, and retained raw
+stdout are also committed in [range_first_knn_20260928](range_first_knn_20260928/README.md).

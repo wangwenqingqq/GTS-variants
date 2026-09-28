@@ -1,0 +1,113 @@
+diff --git a/hybrid_a/include/search_v2.cuh b/hybrid_b/include/search_v2.cuh
+index 6b70a66..7e88fab 100644
+--- a/hybrid_a/include/search_v2.cuh
++++ b/hybrid_b/include/search_v2.cuh
+@@ -9,6 +9,8 @@
+ #include <thrust/reduce.h>
+ #include <stack>
+ #include <thrust/count.h>
++#include <thrust/remove.h>
++#include <thrust/sort.h>
+ #include <cuda_runtime.h>
+ #include "file.cuh"
+ #include "tree.cuh"
+@@ -344,7 +346,7 @@ __global__ void dataProcessRnn(TN *node_list, float r, short *data_d, int *qid_l
+ 			{
+ 				{ float d = float(data_d[data_id * data_info[0] + j]) - float(data_d[qid_list[qid] * data_info[0] + j]); result += d * d; }
+ 			}
+-			result = sqrtf(result);
++			// Keep exact integer squared L2 for the SIFT-only pilot.
+ 		}
+ 		else if (data_info[2] == 1)
+ 		{ // L1 distance
+@@ -413,19 +415,19 @@ __global__ void dataProcessRnn(TN *node_list, float r, short *data_d, int *qid_l
+ 			}
+ 		}
+ 
+-		if (result <= r)
++		if (result <= r * r)
+ 		{
+ 			// p_list[2 * offset_p - offset_up_p + 2 * lnum + i] = qid + 1;
+ 			// atomicAdd(&res[qid], 1);
+-			p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + bid * MAX_SIZE + did] = 1;
++			p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + bid * MAX_SIZE + did] = (qid << 24) + int(result);
+ 		}
+ 		else
+-			p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + bid * MAX_SIZE + did] = 0;
++			p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + bid * MAX_SIZE + did] = (qid << 24) + ((1 << 24) - 1);
+ 	}
+ 
+ 	else if (did < MAX_SIZE)
+ 	{
+-		p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + bid * MAX_SIZE + did] = 0;
++		p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + bid * MAX_SIZE + did] = (qid << 24) + ((1 << 24) - 1);
+ 	}
+ }
+ 
+@@ -545,28 +547,19 @@ __global__ void dataProcessKnn(TN *node_list, float *disk, short *data_d, int *q
+ }
+ 
+ // Merge result.
+-__global__ void mergeResRnn(int ls, int le, int *p_list, int offset_p, int *size_list, int cur_level, int nnum_up, int lnum, int *res)
++__global__ void mergeResRnn(int ls, int le, int *p_list, int offset_p, int *size_list, int cur_level, int nnum_up, int lnum, int *res, int k, int valid_n)
+ {
+-	int tid = blockDim.x * blockIdx.x + threadIdx.x;
+-	int total_num = gridDim.x * blockDim.x;
+-
+-	for (int i = tid; i < (le - ls); i += total_num)
+-	{
+-		int s = offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + p_list[offset_p + i * nnum_up] * MAX_SIZE;
+-		int e;
+-		if (i < le - ls - 1)
+-		{
+-			e = offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + p_list[offset_p + (i + 1) * nnum_up] * MAX_SIZE;
+-		}
+-		else
+-		{
+-			e = offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3 + lnum * MAX_SIZE;
+-		}
+-
+-		int qid = p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 2 + p_list[offset_p + i * nnum_up]];
+-		int num = thrust::reduce(thrust::device, p_list + s, p_list + e, 0);
+-		res[qid] = num;
+-	}
++    int tid = blockDim.x * blockIdx.x + threadIdx.x;
++    for (int i = tid; i < le - ls; i += blockDim.x * gridDim.x) {
++        int qid = p_list[offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 2 + p_list[offset_p + i * nnum_up]];
++        int start = offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3;
++        int lo = 0, hi = valid_n, target = qid << 24;
++        while (lo < hi) { int mid = lo + (hi - lo) / 2;
++            if (p_list[start + mid] < target) lo = mid + 1; else hi = mid; }
++        int pos = lo + k - 1;
++        int key = pos < valid_n ? p_list[start + pos] : -1;
++        res[qid] = (key >= 0 && (key >> 24) == qid) ? (key & ((1 << 24) - 1)) : -1;
++    }
+ }
+ 
+ // Merge result.
+@@ -780,7 +773,7 @@ __global__ void updateDisK(int qnum_l, double *p_list_k, float *disk, int nnum_l
+ 
+ // Range query
+ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
+-					  int qnum, float r, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
++					  int qnum, float r, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s, int k)
+ {
+ 	GTS_DIAG_SCOPE("query.range");
+ 	QueryStages phase; phase.set("stage.alloc_init");
+@@ -917,9 +910,14 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 				fprintf(stderr, "dataProcessRnn error: %s\n", cudaGetErrorString(cudaStatus));
+ 
+ 	phase.set("stage.aggregate");
+-			// Merge result.
++			// Compact in-range distances, then select kth per query from sorted keys.
++			int *first = p_list + offset_p + size_list[cur_level] / (MAX_SIZE + 3) * 3;
++			int *valid_end = thrust::remove_if(thrust::device, first, first + lnum * MAX_SIZE,
++				[] __host__ __device__ (int key) { return (key & ((1 << 24) - 1)) == ((1 << 24) - 1); });
++			int valid_n = int(valid_end - first);
++			thrust::sort(thrust::device, first, valid_end);
+ 			block_num = (le - ls + THREAD_NUM - 1) / THREAD_NUM;
+-			mergeResRnn<<<block_num, THREAD_NUM>>>(ls, le, p_list, offset_p, size_list, cur_level, nnum_up, lnum, res);
++			mergeResRnn<<<block_num, THREAD_NUM>>>(ls, le, p_list, offset_p, size_list, cur_level, nnum_up, lnum, res, k, valid_n);
+ 			cudaDeviceSynchronize();
+ 			cudaStatus = cudaGetLastError();
+ 			if (cudaStatus != cudaSuccess)

@@ -1,0 +1,334 @@
+diff --git a/base/include/file.cuh b/variant/include/file.cuh
+index f7df866..2532de0 100644
+--- a/base/include/file.cuh
++++ b/variant/include/file.cuh
+@@ -27,6 +27,7 @@ void split(const string str, vector<string> &res, const char pattern)
+ // Load data file
+ void load(char *file, int *&data_info, short *&data_d, char *&data_s, int *&size_s)
+ {
++	GTS_DIAG_SCOPE("input.load");
+ 	ifstream in(file);
+ 	if (!in.is_open())
+ 	{
+@@ -111,6 +112,7 @@ void load(char *file, int *&data_info, short *&data_d, char *&data_s, int *&size
+ // Load query file
+ void loadQuery(char *file, int *&qid, int &qnum)
+ {
++	GTS_DIAG_SCOPE("input.queries");
+ 	ifstream in(file);
+ 	if (!in.is_open())
+ 	{
+diff --git a/variant/include/gts_cpu_io_profile.hpp b/variant/include/gts_cpu_io_profile.hpp
+new file mode 100644
+index 0000000..f4406a1
+--- /dev/null
++++ b/variant/include/gts_cpu_io_profile.hpp
+@@ -0,0 +1,74 @@
++#pragma once
++// Diagnostic-only host ranges. No additional GPU synchronization is inserted.
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
++#include <ctime>
++#include <map>
++#include <string>
++#include <cuda_runtime_api.h>
++#ifdef GTS_DIAG_NVTX
++#include <nvtx3/nvToolsExt.h>
++#endif
++
++struct GtsDiagStats { unsigned long count = 0; double wall = 0, cpu = 0; };
++inline std::map<std::string, GtsDiagStats>& gts_diag_stats() {
++    static std::map<std::string, GtsDiagStats> stats;
++    return stats;
++}
++inline double gts_diag_seconds(clockid_t id) {
++    timespec t;
++    if (clock_gettime(id, &t)) { std::perror("clock_gettime"); std::abort(); }
++    return double(t.tv_sec) + double(t.tv_nsec) * 1e-9;
++}
++struct GtsDiagScope {
++    const char* name;
++    double wall, cpu;
++    explicit GtsDiagScope(const char* n) : name(n) {
++        gts_diag_stats()[name];
++#ifdef GTS_DIAG_NVTX
++        nvtxRangePushA(name);
++#endif
++        wall = gts_diag_seconds(CLOCK_MONOTONIC);
++        cpu = gts_diag_seconds(CLOCK_THREAD_CPUTIME_ID);
++    }
++    ~GtsDiagScope() {
++        double c = gts_diag_seconds(CLOCK_THREAD_CPUTIME_ID) - cpu;
++        double w = gts_diag_seconds(CLOCK_MONOTONIC) - wall;
++#ifdef GTS_DIAG_NVTX
++        nvtxRangePop();
++#endif
++        auto& s = gts_diag_stats()[name];
++        ++s.count; s.wall += w; s.cpu += c;
++    }
++};
++struct GtsDiagDump {
++    GtsDiagDump() { gts_diag_stats(); }
++    ~GtsDiagDump() {
++        std::fprintf(stderr, "GTS_DIAG,range,count,inclusive_wall_s,inclusive_main_thread_cpu_s\n");
++        for (const auto& p : gts_diag_stats())
++            std::fprintf(stderr, "GTS_DIAG,%s,%lu,%.9f,%.9f\n", p.first.c_str(),
++                         p.second.count, p.second.wall, p.second.cpu);
++    }
++};
++#define GTS_DIAG_JOIN_(a,b) a##b
++#define GTS_DIAG_JOIN(a,b) GTS_DIAG_JOIN_(a,b)
++#define GTS_DIAG_SCOPE(name) GtsDiagScope GTS_DIAG_JOIN(gts_diag_scope_, __LINE__)(name)
++
++inline bool gts_diag_blocking() {
++    const char* v = std::getenv("GTS_DIAG_BLOCKING");
++    return v && !std::strcmp(v, "1");
++}
++inline void gts_diag_configure() {
++    if (gts_diag_blocking()) {
++        cudaError_t e = cudaSetDeviceFlags(cudaDeviceScheduleBlockingSync);
++        if (e != cudaSuccess) {
++            std::fprintf(stderr, "blocking control failed: %s\n", cudaGetErrorString(e));
++            std::exit(2);
++        }
++    }
++    std::fprintf(stderr, "GTS_DIAG,blocking_control,%d\n", int(gts_diag_blocking()));
++}
++inline cudaError_t gts_diag_event_create(cudaEvent_t* e) {
++    return cudaEventCreateWithFlags(e, gts_diag_blocking() ? cudaEventBlockingSync : cudaEventDefault);
++}
+diff --git a/variant/include/query_stages.hpp b/variant/include/query_stages.hpp
+new file mode 100644
+index 0000000..27fd875
+--- /dev/null
++++ b/variant/include/query_stages.hpp
+@@ -0,0 +1,20 @@
++#pragma once
++#include "gts_cpu_io_profile.hpp"
++// Sequential host scopes; original CUDA synchronization is unchanged.
++struct QueryStages {
++    const char* name=nullptr;
++    double wall=0,cpu=0;
++    void close() {
++        if(!name)return;
++        double c=gts_diag_seconds(CLOCK_THREAD_CPUTIME_ID)-cpu;
++        double w=gts_diag_seconds(CLOCK_MONOTONIC)-wall;
++        nvtxRangePop();auto& s=gts_diag_stats()[name];
++        ++s.count;s.wall+=w;s.cpu+=c;name=nullptr;
++    }
++    void set(const char* next) {
++        close();name=next;gts_diag_stats()[name];nvtxRangePushA(name);
++        wall=gts_diag_seconds(CLOCK_MONOTONIC);
++        cpu=gts_diag_seconds(CLOCK_THREAD_CPUTIME_ID);
++    }
++    ~QueryStages(){close();}
++};
+diff --git a/base/include/search_v2.cuh b/variant/include/search_v2.cuh
+index 51c1402..6b70a66 100644
+--- a/base/include/search_v2.cuh
++++ b/variant/include/search_v2.cuh
+@@ -65,9 +65,9 @@ __global__ void nodeProcessRnn(TN *node_list, float r, short *data_d, int *qid_l
+ 			{ // L2 distance
+ 				for (int j = 0; j < data_info[0]; j++)
+ 				{
+-					dis_q += pow(data_d[node.pid * data_info[0] + j] - data_d[qid_list[qid] * data_info[0] + j], 2);
++					{ float d = float(data_d[node.pid * data_info[0] + j]) - float(data_d[qid_list[qid] * data_info[0] + j]); dis_q += d * d; }
+ 				}
+-				dis_q = pow(dis_q, 0.5);
++				dis_q = sqrtf(dis_q);
+ 			}
+ 			else if (data_info[2] == 1)
+ 			{ // L1 distance
+@@ -342,9 +342,9 @@ __global__ void dataProcessRnn(TN *node_list, float r, short *data_d, int *qid_l
+ 		{ // L2 distance
+ 			for (int j = 0; j < data_info[0]; j++)
+ 			{
+-				result += pow(data_d[data_id * data_info[0] + j] - data_d[qid_list[qid] * data_info[0] + j], 2);
++				{ float d = float(data_d[data_id * data_info[0] + j]) - float(data_d[qid_list[qid] * data_info[0] + j]); result += d * d; }
+ 			}
+-			result = pow(result, 0.5);
++			result = sqrtf(result);
+ 		}
+ 		else if (data_info[2] == 1)
+ 		{ // L1 distance
+@@ -456,11 +456,12 @@ __global__ void dataProcessKnn(TN *node_list, float *disk, short *data_d, int *q
+ 			}
+ 			else if (data_info[2] == 2)
+ 			{ // L2 distance
++				float acc = 0.0f;
+ 				for (int j = 0; j < data_info[0]; j++)
+ 				{
+-					result += pow(data_d[data_id * data_info[0] + j] - data_d[qid_list[qid] * data_info[0] + j], 2);
++					{ float d = float(data_d[data_id * data_info[0] + j]) - float(data_d[qid_list[qid] * data_info[0] + j]); acc += d * d; }
+ 				}
+-				result = pow(result, 0.5);
++				result = sqrtf(acc);
+ 			}
+ 			else if (data_info[2] == 1)
+ 			{ // L1 distance
+@@ -670,11 +671,12 @@ __global__ void getDisPQ(TN *node_list, short *data_d, int *qid_list, int *data_
+ 			dis_q = 0;
+ 			if (data_info[2] == 2)
+ 			{ // L2 distance
++				float acc = 0.0f;
+ 				for (int j = 0; j < data_info[0]; j++)
+ 				{
+-					dis_q += pow(data_d[node.pid * data_info[0] + j] - data_d[qid_list[qid] * data_info[0] + j], 2);
++					{ float d = float(data_d[node.pid * data_info[0] + j]) - float(data_d[qid_list[qid] * data_info[0] + j]); acc += d * d; }
+ 				}
+-				dis_q = pow(dis_q, 0.5);
++				dis_q = sqrtf(acc);
+ 			}
+ 			else if (data_info[2] == 1)
+ 			{ // L1 distance
+@@ -780,7 +782,8 @@ __global__ void updateDisK(int qnum_l, double *p_list_k, float *disk, int nnum_l
+ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
+ 					  int qnum, float r, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+-	cout << "Searching..." << endl;
++	GTS_DIAG_SCOPE("query.range");
++	QueryStages phase; phase.set("stage.alloc_init");
+ 
+ 	CHECK(cudaMallocManaged((void **)&res, qnum * sizeof(int)));
+ 	CHECK(cudaMallocManaged((void **)&size_list, (tree_h + 1) * sizeof(int)));
+@@ -796,7 +799,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "input: " << input_size << endl;
+ 	// avail = input_size;
+-	avail = avail / 2; // Allocate storage space as a half of available space.
++	avail = 256ULL * 1024 * 1024; // Diagnostic resource contract, see CONTRACT.md. // Allocate storage space as a half of available space.
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "total: " << total << endl;
+ 
+@@ -839,6 +842,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 	// Range query
+ 	while (!st.empty())
+ 	{
++	phase.set("stage.schedule");
+ 		// Get the preparation information for queries
+ 		size_a = st.top();
+ 		st.pop();
+@@ -863,6 +867,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 		// Evaluating
+ 		if (cur_level < tree_h)
+ 		{ // Processing node.
++	phase.set("stage.node_distance_prune");
+ 			nodeProcessRnn<<<block_num, THREAD_NUM>>>(node_list, r, data_d, qid_list, data_info, empty_list, data_s,
+ 													  size_s, qnum_l, qnum_up, nnum_l, p_list, offset_p, offset_up_p, offset_n, qs, qs_up);
+ 			cudaDeviceSynchronize();
+@@ -872,6 +877,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 		}
+ 		else
+ 		{ // Processing data in leaf node.
++	phase.set("stage.candidates");
+ 			// Get query information.
+ 			int ls = qs;
+ 			int le = qe;
+@@ -899,6 +905,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 			if (cudaStatus != cudaSuccess)
+ 				fprintf(stderr, "mergeLNode error: %s\n", cudaGetErrorString(cudaStatus));
+ 
++	phase.set("stage.leaf_distance");
+ 			// Processing data in leaf node.
+ 			block_num = lnum;
+ 			// printf("lnum: %d\n", block_num);
+@@ -909,6 +916,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 			if (cudaStatus != cudaSuccess)
+ 				fprintf(stderr, "dataProcessRnn error: %s\n", cudaGetErrorString(cudaStatus));
+ 
++	phase.set("stage.aggregate");
+ 			// Merge result.
+ 			block_num = (le - ls + THREAD_NUM - 1) / THREAD_NUM;
+ 			mergeResRnn<<<block_num, THREAD_NUM>>>(ls, le, p_list, offset_p, size_list, cur_level, nnum_up, lnum, res);
+@@ -917,6 +925,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 			if (cudaStatus != cudaSuccess)
+ 				fprintf(stderr, "mergeResRnn error: %s\n", cudaGetErrorString(cudaStatus));
+ 		}
++	phase.set("stage.schedule");
+ 
+ 		// Update the query and storage space information and of lower layer.
+ 		if (cur_level < tree_h)
+@@ -950,7 +959,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 				size_list[cur_level_low] = size_l * (MAX_SIZE + 3);
+ 				// printf("size_l: %d, MAX_SIZE: %d,  nnum_l: %d", size_l, MAX_SIZE, nnum_l);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+-				printf("qnum_l_low: %d\n", qnum_l_low);
++				// Diagnostic printing disabled.
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+@@ -966,6 +975,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 		}
+ 	}
+ 
++	phase.set("stage.cleanup");
+ 	// Release memory
+ 	cudaFree(p_list);
+ 	cudaFree(size_list);
+@@ -975,6 +985,7 @@ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ void searchIndexKnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
+ 					  int qnum, int k, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
++	GTS_DIAG_SCOPE("query.knn");
+ 	cout << "Searching..." << endl;
+ 
+ 	CHECK(cudaMallocManaged((void **)&res_dis, qnum * sizeof(float)));
+@@ -992,7 +1003,7 @@ void searchIndexKnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "input: " << input_size << endl;
+ 	// avail = input_size;
+-	avail = avail / 2; // Allocate storage space as a half of available space.
++	avail = 256ULL * 1024 * 1024; // Diagnostic resource contract, see CONTRACT.md. // Allocate storage space as a half of available space.
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "total: " << total << endl;
+ 
+diff --git a/base/include/tree.cuh b/variant/include/tree.cuh
+index 570327d..0fa313a 100644
+--- a/base/include/tree.cuh
++++ b/variant/include/tree.cuh
+@@ -30,7 +30,7 @@
+ 
+ __managed__ int TREE_ORDER = 10;
+ __managed__ int MAX_SIZE = 20;
+-__managed__ int MAX_H = 3;
++__managed__ int MAX_H = 6;
+ __managed__ int DIS_CODE = 100;
+ __managed__ int INFI_DIS = 10000;
+ 
+@@ -332,6 +332,7 @@ __global__ void showRes(double *dis_list, int size, TN *node_list)
+ void indexConstru(short *data_d, char *data_s, int *size_s, int *data_info, int *&id_list, TN *&node_list, int *&max_node_num,
+ 				  int &tree_h, int *&empty_list)
+ {
++	GTS_DIAG_SCOPE("index.total");
+ 	printf("Index construction...\n");
+ 
+ 	CHECK(cudaMallocManaged((void **)&max_node_num, sizeof(int)));
+diff --git a/base/include/update.cuh b/variant/include/update.cuh
+index de30413..720c6c7 100644
+--- a/base/include/update.cuh
++++ b/variant/include/update.cuh
+@@ -42,6 +42,7 @@ int *size_s_temp;
+ 
+ void loadUpdate(char *file, UO *&update_list, int &update_num)
+ {
++	GTS_DIAG_SCOPE("input.updates");
+ 	ifstream in(file);
+ 	if (!in.is_open())
+ 	{
+@@ -338,6 +339,7 @@ void searchIndexRnnUpdate(short *data_d, TN *node_list, int *id_list, int *max_n
+ 						  int qnum, float r, int tree_h, int *data_info, int *&empty_list, int *&qresult_count,
+ 						  int *&qresult_count_prefix, int *&result_id, float *&result_dis, char *data_s, int *size_s)
+ {
++	GTS_DIAG_SCOPE("update.query");
+ 	CHECK(cudaMallocManaged((void **)&search_num, sizeof(int)));
+ 	CHECK(cudaMallocManaged((void **)&result_num, sizeof(int)));
+ 	CHECK(cudaMallocManaged((void **)&qresult_count, qnum_leaf * sizeof(int)));
+@@ -450,6 +452,7 @@ void updateIndexRnn(short *&data_d, TN *&node_list, int *&id_list, int *&max_nod
+ 					int *&data_info, int *&empty_list, int *&qresult_count, int *&qresult_count_prefix, int *&result_id, float *&result_dis,
+ 					char *&data_s, int *&size_s, FILE *fcost, float &time_update_s, float &time_update_u, int &count_update_s, int &count_update_u)
+ {
++	GTS_DIAG_SCOPE("update.total");
+ 	printf("Updating...\n");
+ 
+ 	auto s = std::chrono::high_resolution_clock::now();
