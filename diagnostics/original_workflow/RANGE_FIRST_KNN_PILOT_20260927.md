@@ -112,3 +112,44 @@ Raw output is at `4090-left:/tmp/gts_auto_knn_20260928/{auto_holdout,auto_revers
 and the same-day baselines at
 `4090-left:/tmp/gts_range_knn_run_20260927/auto28_{holdout,first}_baseline.stdout`.
 No original GTS source file was edited for this extension.
+
+## RTX PRO 6000 Blackwell reproduction (2026-09-28)
+
+The same baseline and automatic-fallback source files were rebuilt with CUDA
+13.1 for `sm_120` on `pro6000-8`, GPU7
+(`GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603`, driver 590.48.01).
+The local SIFT1M file had the same SHA-256 as the RTX 4090 input:
+`21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816`.
+GPU7 was guarded by `/tmp/gts_auto_knn_pro6000_gpu7.lock` and checked for
+other compute processes before and after each run. Source hashes remained
+unchanged: automatic harness
+`91f747c58326da14344b9151c62ff873bf1a2500de66f052556f66479d54b258`,
+hybrid search header
+`5909a71addb34c7f3a0b909e0c21f46f80a991681b106731399455ce6831b9f5`,
+baseline search header
+`af4d66012e8efaa3266230c53c7f8fc35d636834c6ddd2173bdef5215899996d`.
+
+The test again used SIFT1M, Q=32, k=10. Two fresh processes per path and
+query set alternated baseline/automatic order. Every process passed the
+independent full-table kth-distance oracle on its initial query, three
+warmups, and eight timed queries. Entries are medians of the eight timed
+queries; speedup is the geometric mean of the two matched process ratios.
+
+| Calibration -> tested queries | Radius | Fallback | GTS medians (ms) | Auto medians (ms) | Speedup |
+|---|---:|---:|---:|---:|---:|
+| first set -> holdout | 299 | 0/32 | 50.618, 50.825 | 35.604, 35.620 | 1.424x |
+| holdout -> first set | 292 | 2/32 | 51.908, 51.521 | 43.164, 43.129 | 1.199x |
+
+A forced radius of 250 sent 6/32 queries to fallback and passed the oracle,
+with 44.849 ms median versus 51.908 ms for the same-set baseline in one
+process. The separate calibration batch took 58.7–59.9 ms. As above, the
+reported warm-query time starts after that batch and includes host-side
+fallback orchestration and CPU result delivery. It does not include loading,
+index construction, or calibration. The experiment still validates kth
+distances rather than neighbor IDs and is limited to self-inclusive SIFT.
+
+`compute-sanitizer --tool memcheck` reported **0 errors** for the automatic
+path on SIFT65k/Q32/k10/r1 (all 32 queries fell back) and
+SIFT1M/Q32/k10/auto-r292 (2 queries fell back). Raw logs, binaries, source
+copies, and query IDs are at
+`pro6000-8:/home/data/wangxuran/tmp/gts_auto_knn_pro6000_20260928`.
