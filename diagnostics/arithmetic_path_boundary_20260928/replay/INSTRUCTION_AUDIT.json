@@ -1,0 +1,25 @@
+{
+  "compile": "nvcc 13.1 -O3 -std=c++17 -arch=sm_120 --fmad=false -Xcompiler=-ffp-contract=off",
+  "kernels": {
+    "direct": {
+      "ptx_accurate_pow_symbol": 0,
+      "ptx_call_uni": 0,
+      "ptx_mul_rn_f32": 15,
+      "sass_call_rel": 1,
+      "sass_mufu": 2
+    },
+    "old_pow": {
+      "ptx_accurate_pow_symbol": 6,
+      "ptx_call_uni": 6,
+      "ptx_mul_rn_f32": 0,
+      "sass_call_rel": 6,
+      "sass_mufu": 1
+    }
+  },
+  "sha256": {
+    "arithmetic_replay": "8a7be35fc42ef8d83478a374ede5e522a84810757d68ea02a3db0a328a4a7d32",
+    "arithmetic_replay.cu": "a73b0adbc9acf0de1e4477a672a908fe5ca4f370546eb14a57c90311c18fb3ca",
+    "arithmetic_replay.ptx": "0b3e93fad37a61f08ff5b61ffe2e7185b1ac47e5ebf99abafb39ba5f875baf43",
+    "arithmetic_replay.sass": "785816a1e4ff4036b01da76ef5eb9be867590f613c797a420edf45d45169e402"
+  }
+}

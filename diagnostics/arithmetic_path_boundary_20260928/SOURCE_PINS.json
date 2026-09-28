@@ -1,0 +1,122 @@
+{
+  "baseline_repository": "https://github.com/wangwenqingqq/GTS-variants",
+  "baseline_repository_commit": "88fca79b6160e982595e3899b6432619cbf9ee4d",
+  "build_flags": "-O3 -std=c++17 -arch=sm_120 --extended-lambda --fmad=false -Xcompiler=-ffp-contract=off -I source/include",
+  "datasets": {
+    "Deep": {
+      "data_sha256": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+      "dimension": 96,
+      "final_reference_sha256": "6e2ebed7e544e91e331183cd0d30f90b50e715f4d6ca449f81c8ad228d1976c0",
+      "idlist_fnv64": 12742527581757795671,
+      "idlist_sha256": "f24c05aeda323d5a470f69d103960bda3664659ae7dd80ec9225b1476da78ce4",
+      "n": 1000000,
+      "radii_f32_bits": {
+        "all": "0x41077fef",
+        "half": "0x3f0a3818",
+        "normal": "0x3f8a3818"
+      },
+      "refit_bounds_fnv64": 3037604956274581817
+    },
+    "GIST": {
+      "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "dimension": 960,
+      "final_reference_sha256": "a2e018ac63e48ad2982960c19d2cab802a03a9c7f6933b243d36b4428dab3956",
+      "idlist_fnv64": 13911000837656934275,
+      "idlist_sha256": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317",
+      "n": 1000000,
+      "radii_f32_bits": {
+        "all": "0x41cb7260",
+        "half": "0x3f34a3d8",
+        "normal": "0x3fb4a3d8"
+      },
+      "refit_bounds_fnv64": 7454919733567484066
+    },
+    "Tloc": {
+      "data_sha256": "bbc244a8c6632ad9a55e31b4b0a2ad07ab317d8e70855cd958b454cfdef80eda",
+      "dimension": 2,
+      "final_reference_sha256": "4ea188be08a435502e021a3d112130cff9ca923d708105dec621780ecc38e05b",
+      "idlist_fnv64": 1359975674697312377,
+      "idlist_sha256": "57d251d6e5f579f3c7f06d178bbd93497dbef21c3f9e13fb33c3c3140997dc80",
+      "n": 1000000,
+      "radii_f32_bits": {
+        "all": "0x43c07ec0",
+        "half": "0x3fc5b6eb",
+        "normal": "0x4045b6eb"
+      },
+      "refit_bounds_fnv64": 3908792265495494323
+    }
+  },
+  "diagnostic_binaries_sha256": {
+    "index_cost": "15c72df227d4390aed0ec9d53267b83553bb250459871972dafc265e6120630d",
+    "profile": "ccd8c486255143ecd280733c237f500376e173820508567e37148af21a8e305f",
+    "work": "beac2a9d0271224b090e44f82ac36f06de127fe881e48a67acef591b049d0e2f",
+    "work_level": "1db317f0a1c0ad42f78490cd7ac3829a1f38866fb2ce2b8d7d923372f7659d37"
+  },
+  "diagnostic_generated_sources_sha256": {
+    "index_cost_graph_bench.cu": "ce26a90dbf449b7f98e019789eac2e9d50efb2123c55972c0e83e3337ec60df8",
+    "profile_graph_bench.cu": "efa65c80bab9c3e89f8b4fb1845c4f48fc5dd31477d30268d45be48f1dc8fb95",
+    "work_graph_bench.cu": "6d870e8740cc43226ac0fedb8b70b2ab8829cc4f8c9c6beabf03962384207fde",
+    "work_level_graph_bench.cu": "bdf76cfc03a45c755537b7898a9e25e13da3ea2223585a51b8969d5c8e569301",
+    "work_level_strict_l2.cuh": "57850533ed95f45dc64198d75f352b511028e759b5ff4ab7c63c72a7015ae6c3",
+    "work_strict_l2.cuh": "1f25056579a99b0d9ef1406d2affdf840e120f4db5ec740dedd9c9c1d1db1aeb"
+  },
+  "frozen_v3_preflight_sha256": "7c87cccb40cf82a7a315b8fed8fd5e978628a126901e238579ed9139af0d7f11",
+  "frozen_v3_workloads_sha256": "c100fd080d9cd09aef6e443be010ac6a2d106e71abf73bcbefe1ee313e3b762a",
+  "generated_graph_bench_cu_sha256": "0c889a82ce7301bff3e1fc6354e2f6d93f1b000b26eaa696d10090d8b2d1a8d3",
+  "gpu": {
+    "driver": "590.48.01",
+    "host": "pro6000-8",
+    "model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "nvcc": "13.1.115",
+    "uuid": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603"
+  },
+  "index_dump_sha256": {
+    "Deep": "505ff07836b184bb85b0d226300e5ffb69c1ea079a4da519b66c4136efa17d22",
+    "GIST": "4d5319b60f9691757569884a571a74f2420031e1136356b7516867bd4cb6a332",
+    "Tloc": "53296ad738370dbbaedbdf8d2bc0fcdd33b7fb37fd6f81a49419a1c412bacaea"
+  },
+  "oracle_binary_sha256": "6a42cfb26b0b9a2306c1e92c1aeba75e3164d210ecd9b1b8460adecb7175f359",
+  "original_GTS_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "original_GTS_source_sha256": {
+    "GTS/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "GTS/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "GTS/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "GTS/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "GTS/include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "GTS/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "GTS/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "GTS/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "profiler_runner_sha256": "94908629a57b4c74ae40c1f4f05c2405ba841b611ae9ee202b6fc1e2a6d796be",
+  "replay_binary_sha256": "8a7be35fc42ef8d83478a374ede5e522a84810757d68ea02a3db0a328a4a7d32",
+  "runner_sha256": "ad4ed3d4eda53727b5c7db57b7e28be91fdc9d211b3657e9e05052aa44323888",
+  "scripts_sha256": {
+    "analyze_g2.py": "d2c149fc2ea042bf874c05301854c5f80d91ca2b52bfb7eef9f3a15a89a9a1fe",
+    "analyze_g3.py": "959ae90a0cc14168c7b64b092cb09e4e11636e03edc4d81a74ee67e444bac94b",
+    "analyze_profile.py": "75c5ea44e1989a8e4ac07adc543bff0dcca5a75af051e8a966467cf2d0e58e98",
+    "arithmetic_replay.cu": "a73b0adbc9acf0de1e4477a672a908fe5ca4f370546eb14a57c90311c18fb3ca",
+    "audit_oracle.py": "b638a184e460d7a1042856dc8b61751f35aa0f6c8129abc71894696ddd049b60",
+    "audit_strict_run.py": "7906b044e3004dfe546a307469810a458caba7bf55bafd0f168041d4651bf699",
+    "boundary_validate.cu": "e7e4f85eaae1fd50404fba1df89a1360addfab6b46fc7afdfdc33c182ffe169c",
+    "export_depth.py": "d12f068cf52e9599154aad15f9aa1c99ecd05eb0bd38dd182af957bc3f4e6d06",
+    "export_work.py": "06b7b87da23664e480f7558f608e4ee22f2419e353ae32ac04ad86a990852e3d",
+    "formal_g2.py": "6cdc4d905375eb100c70d2dddbd7729f0bc5b0088c3fb4257680e22f543724a8",
+    "formal_g3.py": "eff3aaebb17578381e5d447a63db755f556c429ed54d754d4b04d00157637f46",
+    "make_boundary.py": "83893b9164ed9e7bb98f03d1c877f992acd1ea926218e78d7c32c930ead86f2d",
+    "make_replay_pairs.py": "770fcebfa0bc636b51349f82350f4811e5d4d23d8482b9a070cabb97859ce170",
+    "merge_work.py": "6c9985fb9cba8ca6164e50c39ea4dbf0eb4a79f6562a66a65651c311e10925ad",
+    "oracle.cu": "ce3ad36828fb98a87bb984dab885ecae49a0a5a298d6b33711773789d5e5ba27",
+    "prepare_index_dump.py": "f1d51c33596a7bb0492950013bcc54005145a23a97a83c7d63e382f34a348d1b",
+    "prepare_level_diagnostic.py": "184fb94d17c2186335775c72df83a420bab4c63326d1237abe1953dfe1ec998b",
+    "prepare_profile.py": "273c64624b82473dadf0906594335b7ca4344b0dbbe879f04f84eb980f0ddb7d",
+    "prepare_strict.py": "0a4451dad4242d37e5c0f35217a3a135503c4b82e2a7b9701983ac0539d4f299",
+    "prepare_work_diagnostic.py": "a08abadb6714ce5179b5c0eed35c486d96b9e5bca036cd20f63f4296a02b307d",
+    "prepare_workloads.py": "1006f08f2ad3019d8471013b969779bf65f19a238d351a28a4e6a3c12eba1e4e",
+    "revise_frozen.py": "907000e0357715286d374533b4a79e4fd2dca62244261931cb26acbc07a8f0f6",
+    "run_level_diagnostic.py": "87a84c2dd9e34916f1f5395a091f763506fb8a9dd22f373bc39290d71a242c59",
+    "run_work_diagnostic.py": "4f7b57522c74949728c261a620f4a3f371a1803563930b79fbb4e1b906e02b7d",
+    "strict_l2.cuh": "349a950c64d6d1ebe69a70f1f9203b3d1ac54e08135e09aeca5d46f60da431a9",
+    "verify_g3.py": "a5e0be642e8138b18e49b99f3d0689af431d678d8d9228d40c882a169c5cac70"
+  },
+  "strict_binary_sha256": "ae4887df0a24ab25b1d44c33603704181b14abbc8520d751dffcb6837f7b4a99"
+}

@@ -1,0 +1,54 @@
+experiment: GTS static L2 arithmetic and path boundary
+date: 2026-09-28
+repository_commit: 88fca79b6160e982595e3899b6432619cbf9ee4d
+gpu:
+  host: pro6000-8
+  uuid: GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603
+  model: NVIDIA RTX PRO 6000 Blackwell Server Edition
+  driver: 590.48.01
+  cuda: 13.1.115
+scope:
+  data_type: float32
+  metric: L2 range query
+  batch: 1
+  updates: none
+  n: 1000000
+  datasets:
+    GIST: {dimension: 960, selected_prefix_depth: 4}
+    Deep: {dimension: 96, selected_prefix_depth: 1}
+    Tloc: {dimension: 2, selected_prefix_depth: 4}
+  final_queries: frozen_v3/final.qid
+  final_query_count: 64
+  development_queries: frozen_v3/development.qid
+  development_query_count: 24
+reference:
+  operation_order: float32 inputs converted to float64; RN subtraction, multiplication and increasing-dimension accumulation; FMA disabled
+  predicate: squared_distance <= double(float32_radius) * double(float32_radius)
+  zero_radius: inclusive
+  negative_radius: empty
+  stable_ids: preserve self matches and duplicate vectors with distinct IDs
+  order: GTS id_list order, identical across modes
+  output: all IDs and float32 distance; no top-k truncation
+  distance_tolerance: abs_error <= 1e-7 + 1e-5 * abs(reference_distance)
+fast_backend:
+  arithmetic: explicit RN float32 subtraction, multiplication and increasing-dimension sum
+  exclusion_guard: 4 * gamma_(D+2), with gamma_k = k*2^-24/(1-k*2^-24)
+  abnormal_values: fall back to FP64 reference
+  hits: recompute FP64 distance before output
+  tree_bounds: refit on unchanged topology and membership; outward norm intervals using 1e-10 relative and 1e-12 absolute margin
+  radius_pruning_margin: 1e-10 relative and 1e-12 absolute
+timing:
+  modes: [F_ref, F_fast, C_ref, C_fast, T_ref, T_fast]
+  same_binary_sha256: ae4887df0a24ab25b1d44c33603704181b14abbc8520d751dffcb6837f7b4a99
+  compile_flags: -O3 -std=c++17 -arch=sm_120 --extended-lambda --fmad=false -Xcompiler=-ffp-contract=off
+  cuda_graph: captured after construction, then replayed for each query
+  warmup_queries: 8
+  independent_process_rounds: 6
+  unit: microseconds per completed host-ready query
+  includes: H2D query ID, graph submission, traversal, candidate organization, distance calculations, fallback, result selection, fixed-capacity D2H, stream synchronization
+  excludes: data load, index construction, bound refit, graph capture, warmup, oracle, output digest and audit
+  result_capacity: 2222220 ID-distance slots
+  fixed_D2H_bytes_per_query: 17777764
+  process_order: modes rotated across six positions; dataset and radius order rotated or reversed
+  correctness_gate: full independent oracle audit per condition; every timed output checked against audited count and ordered ID-distance hash
+  interference_gate: GPU lock, idle-before check, process monitoring, foreign GPU activity rejection
