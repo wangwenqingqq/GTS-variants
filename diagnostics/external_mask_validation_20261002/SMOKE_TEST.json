@@ -1,0 +1,35 @@
+{
+  "boundary_bitwise_matches": 15,
+  "boundary_cases": 28,
+  "c_api_float32_float64_L2Unexpanded_L2Expanded": [
+    "bits=64 metric=4 values=14,17,0,1",
+    "bits=64 metric=0 values=14,17,0,1",
+    "bits=32 metric=4 values=14,17,0,1",
+    "bits=32 metric=0 values=14,17,0,1"
+  ],
+  "causal_small_all_bitwise": true,
+  "causal_small_cases": 12,
+  "python_4096x33_B32": {
+    "B": 32,
+    "cupy_version": "14.1.0",
+    "d": 33,
+    "distance_unit": "squared_L2",
+    "dtype": "float32",
+    "elapsed_including_python_ms": 790.3913960326463,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "library": "cuVS",
+    "membership_matches_cpu": true,
+    "metric": "sqeuclidean",
+    "metric_enum": "L2Expanded",
+    "n": 4096,
+    "radius": 2.200000047683716,
+    "return_type": "ndarray",
+    "selected_distance_fields_count": 38136,
+    "shape": [
+      32,
+      4096
+    ],
+    "total_hits": 38136,
+    "version": "26.8.1"
+  }
+}

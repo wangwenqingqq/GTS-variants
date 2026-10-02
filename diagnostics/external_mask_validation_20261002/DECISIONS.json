@@ -1,0 +1,15 @@
+{
+  "excluded_after_development": "LIB32_X due worse numerical and latency outcomes",
+  "external_chunk_rule": "minimum development Host-ready sum per dataset/B/mode; final queries unseen",
+  "external_modes_final": [
+    "LIB64_U",
+    "LIB64_X",
+    "LIB32_U"
+  ],
+  "frozen_baseline": "P4 @ 8cf31c448b968398207fe5a5eb358121be64c134",
+  "further_TASK_tuning": "stopped per contract",
+  "mask_all": "not promoted; slower than SCAN_E on causal dev",
+  "promotion_outcome": "GIST half B8 and B32 both meet the literal median>=1.10x plus 6/6 wins rule; B8 exact paired-bootstrap 95% interval crosses 1.10 while B32 remains above it; all other conditions fail",
+  "promotion_rule": "paired median >=1.10x, six wins, zero result error",
+  "qualification": "LIB64_U bitwise on GIST half/normal and Deep normal; GIST all count+ordered-hash only; LIB64_X GIST half/normal field tolerance mismatch; LIB32_U false positives/negatives on final normal workloads"
+}

@@ -1,0 +1,322 @@
+# Proposed P5 contract: not an implemented runner and not measured results.
+experiment: P5 external exact-range baseline and matched-kernel mask causality
+date: '2026-10-02'
+status: DESIGN_ONLY_P5_NOT_IMPLEMENTED_NOT_RUN
+repository:
+  name: wangwenqingqq/GTS-variants
+  branch: experiments/gts-optimization-results-20260928
+  baseline_commit: 8cf31c448b968398207fe5a5eb358121be64c134
+  new_directory: diagnostics/external_mask_validation_20261002
+  mutate_production: false
+objective:
+  primary: external complete exact-range competitiveness
+  secondary: same-kernel mask causal attribution
+  do_not_claim: P5 speedup, novelty, arbitrary-input numeric equivalence or cuVS leadership before validation
+scope:
+  task: static_L2_full_range
+  query_source: in_database_qids
+  B:
+  - 8
+  - 32
+  Q_T: 2
+  threads: 512
+  early_check_dims: 32
+  GIST_depth: 4
+  Deep_depth: 1
+  layout_internal: AoSoA32_id_list
+  online_queueing: false
+  knn: false
+  updates: false
+  multi_gpu: false
+gpu:
+  host: pro6000-8
+  uuid: GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603
+  historical_numa_node: 3
+  revalidate_topology: true
+  exclusive_admission_required: true
+  change_global_settings: false
+data:
+  GIST:
+    n: 1000000
+    d: 960
+    radii_bits:
+      half: '0x3f34a3d8'
+      normal: '0x3fb4a3d8'
+      all: '0x41cb7260'
+  Deep:
+    n: 1000000
+    d: 96
+    radii_bits:
+      normal: '0x3f8a3818'
+queries:
+  development: existing_dev256
+  regression: P4_final1024_known
+  fresh_final_count: 1024
+  seeds:
+    GIST: 2026100205
+    Deep: 2026100206
+  exclude_all_seen_ids: true
+  freeze_after_adapter_and_parameters: true
+  grouping: fixed random nested batches; no result-driven query pairing
+  revalidate_all_radius: true
+contracts:
+  internal:
+    reference: finite f32 operands promoted to f64; explicit RN subtract, multiply, increasing-dimension
+      add; FMA off
+    hit: sum64 <= RN(double(radius)*double(radius)); radius<0 empty
+    distance: sqrt(reference sum) cast f32
+    output: all IDs, query order and id_list order, bitwise tested equality
+  external:
+    scan_all_objects: true
+    not_ANN_due_to_fp_rounding_alone: true
+    separate_membership_and_fields: true
+    require_zero_false_negatives_and_false_positives_for_same_membership_table: true
+    field_tol_if_used:
+      abs: 1.0e-07
+      rel: 1.0e-05
+      same_for_all_methods: true
+    qualifications:
+    - BITWISE_MATCH_ON_TESTED
+    - MEMBERSHIP_MATCH_FIELDS_WITHIN_FROZEN_TOL_ON_TESTED
+    - CONTRACT_MISMATCH
+    universal_proof_from_test_pass: false
+    retain_faster_unaligned_native_results: true
+    no_empirical_radius_epsilon: true
+    certified_fallback: optional only with justified bound, all ambiguity cost included, not hits-only
+      recheck
+external:
+  library: cuVS
+  installed_version: null
+  binding_preferred: C++ or C on shared common stream and wrapper
+  isolated_install: true
+  cache_downloads: true
+  record_download_install_link_run_separately: true
+  smoke_n: 4096
+  smoke_B: 32
+  dev_candidates:
+  - id: LIB64_U
+    dtype: float64
+    metric: L2Unexpanded
+  - id: LIB64_X
+    dtype: float64
+    metric: L2Expanded
+  - id: LIB32_U
+    dtype: float32
+    metric: L2Unexpanded
+    when_supported: true
+  - id: LIB32_X
+    dtype: float32
+    metric: L2Expanded
+  python_sqeuclidean_mapping: L2Expanded; must not label as direct sum
+  native_layout_candidates:
+  - row_major_contiguous
+  - column_major_contiguous_when_supported
+  database_chunk_N_candidates:
+  - 65536
+  - 262144
+  - 1000000
+  freeze_rule: per dataset and B, dev GIST half+normal or Deep normal total Host-ready; no final tuning;
+    preserve numerical qualification
+  frozen_modes:
+  - LIB64_FROZEN
+  - LIB_NATIVE_FROZEN
+  retain_distinct_fast_native_and_aligned_rows: true
+  common_output: library distances -> same flags/raw_distance -> stable collection -> offsets -> all valid
+    IDs/f32 distances D2H
+  no_topk_substitution: true
+  graph_policy: probe actual support; record; add matched ordinary-stream comparison if unsupported
+  setup_static_dtype_promotion_separate: true
+  per_query_gather_and_promotion_timed: true
+  missing_dependency_policy: report incomplete external track; do not substitute homemade loop and call
+    it cuVS
+causal:
+  datasets:
+  - GIST
+  radii:
+  - half
+  - normal
+  B:
+  - 32
+  split: development256
+  Early: true
+  rounds: 3
+  modes:
+    S:
+      name: SCAN_E
+      tree: false
+      mask: none
+      deployment_baseline: true
+    M:
+      name: MASK_ALL
+      tree: false
+      mask: full_valid_each_batch
+      kernel: masked_distance<2,true>
+    TA:
+      name: TREE_ALL
+      tree: true
+      mask: real_generated_then_force_full_in_same_runtime_mask_kernel
+      kernel: masked_distance<2,true>
+      diagnostic_only: true
+    TR:
+      name: TREE_REAL
+      tree: true
+      mask: actual_C4_candidates
+      kernel: masked_distance<2,true>
+  same_distance_symbol_and_launch: true
+  full_mask_runtime_not_template: true
+  TA_TR_same_real_tree_and_candidate_generation: true
+  flags_clear_and_mask_generation_timed: true
+  TA_not_competitive_speedup_denominator: true
+  bridge_to_original_C_MASK_E: true
+  comparisons:
+    S_vs_M: kernel-path and mask preparation difference without pruning
+    M_vs_TA: tree frontend net overhead including preparation/cache
+    TA_vs_TR: real candidate pruning with same verifier
+    S_vs_TR: real complete net benefit
+  extra_L_modes: only if focused explanation requires them
+  precomputed_mask_replay: optional diagnostic-only, never end-to-end
+  promote_MASK_ALL_if_faster_on_dev: include as stronger no-tree competitor; never hide it to preserve
+    tree contribution
+phases:
+- id: G0
+  name: external_runtime_and_correctness_smoke
+  required_before_external_timing: true
+- id: G1
+  name: external_pilot
+  dataset: GIST
+  radius: half
+  B: 32
+  queries: 256
+  rounds: 3
+- id: G2
+  name: matched_kernel_causality
+  logical_conditions: 8
+  rounds: 3
+  processes: 24
+- id: G3
+  name: frozen_external_competition
+  workloads:
+  - dataset: GIST
+    radii:
+    - half
+    - normal
+    - all
+    B:
+    - 8
+    - 32
+  - dataset: Deep
+    radii:
+    - normal
+    B:
+    - 8
+    - 32
+  modes:
+  - SCAN_L
+  - SCAN_E
+  - C_MASK_E
+  - LIB64_FROZEN
+  - LIB_NATIVE_FROZEN
+  workload_count: 8
+  mode_count_initial: 5
+  logical_conditions_initial: 40
+  rounds: 6
+  processes_initial: 240
+  extra_rows_when_numeric_alignment_requires: true
+  extra_rows_when_MASK_ALL_becomes_strongest: true
+  processes_if_one_extra_mode_all_workloads: 288
+- id: G4
+  name: evidence_retention
+  rerun_history_if_shared_code_changed: true
+  Tloc_not_primary_highdim_evidence: true
+output:
+  order: input query order then id_list order
+  no_truncation: true
+  offset_dtype: int64
+  id_dtype: int32
+  distance_dtype: float32
+  host_delivery: counts then actual valid payload; all control costs timed
+  oracle_size_prediction: false
+memory:
+  workspace_gib: 8
+  pinned_output_gib: 4
+  static_data_layout_index_separate: true
+  full_matrix_candidate_at_B32_double_MB: 256
+  no_forced_tiny_external_blocks: true
+  unused_dtype_copies_not_forced: true
+timing:
+  primary: Host-ready complete batch
+  secondary: GPU-ready complete compact results
+  per_process_queries: 1024
+  warmup_dev_batches: 8
+  formal_rounds: 6
+  query_preparation_common_boundary: true
+  profiler_in_formal_timing: false
+  hash_in_formal_timing: false
+  rotate_mode_order: true
+  paired_batch_membership: true
+  report:
+  - round_total_ms
+  - batch_p50_p95
+  - paired_six_ratios
+  - median_range
+  - paired_round_bootstrap
+  - amortized_ms_per_query
+  - QPS
+  batch_ms_div_B_is_not_response_latency: true
+profiling:
+  separate_runs: true
+  replay: validated application/range replay with deterministic workloads
+  cache_control: none for appropriate warm comparison; record actual
+  clock_control: none unless separately authorized uniformly
+  include_all_kernel_costs: true
+  sync_wait_not_added_twice: true
+  metrics:
+  - pair_coordinate_updates
+  - shared_coordinate_steps
+  - warp_span
+  - candidate_union
+  - DRAM_read_write_all_kernels
+  - L1_L2_requests
+  - fp64_instructions
+  - registers_spills
+  - phase_times
+  - D2H_bytes
+decision:
+  promotion_speedup: 1.1
+  retain_engineering_from: 1.03
+  six_round_wins_required_for_promotion: true
+  zero_result_errors: true
+  thresholds_are_research_policy_not_novelty_proof: true
+  native_unaligned_must_remain_visible: true
+  stop_TASK_tuning: true
+  no_multiplication_of_historical_speedups: true
+artifacts:
+- ENVIRONMENT.json
+- EXTERNAL_INSTALL.log
+- SMOKE_TEST.json
+- SOURCE_PINS.json
+- PREFLIGHT.json
+- DECISIONS.json
+- external_dev.csv
+- causal_dev.csv
+- latency_final.csv
+- numerical_qualification.csv
+- boundary_audit.jsonl
+- correctness.jsonl
+- work.csv
+- profile_summary.csv
+- setup.csv
+- memory.csv
+- EVIDENCE_LEDGER.md
+- RESULTS.md
+sources:
+  R1: https://github.com/wangwenqingqq/GTS-variants/blob/8cf31c448b968398207fe5a5eb358121be64c134/diagnostics/batch_tree_inheritance_20261002/RESULTS.md
+  R2: https://github.com/wangwenqingqq/GTS-variants/blob/8cf31c448b968398207fe5a5eb358121be64c134/diagnostics/batch_tree_inheritance_20261002/batch_candidate_tasks.cuh
+  R3: https://github.com/wangwenqingqq/GTS-variants/blob/8cf31c448b968398207fe5a5eb358121be64c134/diagnostics/batch_tree_inheritance_20261002/p4_bench.cu
+  R4: https://github.com/wangwenqingqq/GTS-variants/blob/8cf31c448b968398207fe5a5eb358121be64c134/diagnostics/batch_tree_inheritance_20261002/PREFLIGHT.json
+  R5: https://github.com/wangwenqingqq/GTS-variants/blob/8cf31c448b968398207fe5a5eb358121be64c134/diagnostics/batch_tree_inheritance_20261002/EVIDENCE_LEDGER.md
+  D1: https://docs.nvidia.com/cuvs/api-reference/cpp-api-distance-distance
+  D2: https://docs.nvidia.com/cuvs/api-reference/python-api-distance
+  D3: https://docs.nvidia.com/cuvs/user-guide/api-guides/other-ap-is/pairwise-distances
+  D4: https://docs.nvidia.com/cuvs/installation
+  D5: https://docs.nvidia.com/nsight-compute/ProfilingGuide/
