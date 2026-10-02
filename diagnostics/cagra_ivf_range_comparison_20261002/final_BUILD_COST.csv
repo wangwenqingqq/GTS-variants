@@ -1,0 +1,61 @@
+phase,label,config,build_method,data_layout_s,graph_degree,index_build_s,intermediate_graph_degree,itopk_size,search_algo,search_width,backend,index_add_s,index_train_s,train_sample_count,train_seed,verifier_layout_s
+final,final_p6_r1_cagra_gist_k128,cagra_gist_half_b32_k128,ivf_pq,2.4926020529819652,64,3.891187319997698,128,128,auto,1,,,,,,
+final,final_p6_r1_cagra_gist_k1024,cagra_gist_half_b32_k1024,ivf_pq,2.5677403159206733,64,4.380951510043815,128,1024,auto,1,,,,,,
+final,final_p6_r1_faiss_gist_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9386163820745423,1.544898152933456,200000,2026100207,1.992781059932895
+final,final_p6_r1_faiss_gist_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.908498135046102,1.5883182380348444,200000,2026100207,1.9936778070405126
+final,final_p6_r1_faiss_gist_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9356092850212008,1.6160654119448736,200000,2026100207,2.0702682150295004
+final,final_p6_r1_cagra_deep_k128,cagra_gist_half_b32_k128,ivf_pq,0.5115016900235787,64,2.602799285086803,128,128,auto,1,,,,,,
+final,final_p6_r1_cagra_deep_k1024,cagra_gist_half_b32_k1024,ivf_pq,0.5018481750739738,64,2.5219558579847217,128,1024,auto,1,,,,,,
+final,final_p6_r1_faiss_deep_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8394303109962493,0.3091334890341386,200000,2026100207,0.24628926895093173
+final,final_p6_r1_faiss_deep_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8624461949802935,0.32055773690808564,200000,2026100207,0.2365937710274011
+final,final_p6_r1_faiss_deep_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8785859299823642,0.30658157798461616,200000,2026100207,0.23840794304851443
+final,final_p6_r2_cagra_deep_k1024,cagra_gist_half_b32_k1024,ivf_pq,0.5356043319916353,64,2.3093359370250255,128,1024,auto,1,,,,,,
+final,final_p6_r2_faiss_deep_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8578081079758704,0.3152040569111705,200000,2026100207,0.23975648800842464
+final,final_p6_r2_faiss_deep_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8575533719267696,0.29810411494690925,200000,2026100207,0.2392731070285663
+final,final_p6_r2_faiss_deep_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8719546339707449,0.3036987540544942,200000,2026100207,0.23594466806389391
+final,final_p6_r2_cagra_deep_k128,cagra_gist_half_b32_k128,ivf_pq,0.5244260180043057,64,2.2885309599805623,128,128,auto,1,,,,,,
+final,final_p6_r2_cagra_gist_k1024,cagra_gist_half_b32_k1024,ivf_pq,2.8668632570188493,64,4.1179707809351385,128,1024,auto,1,,,,,,
+final,final_p6_r2_faiss_gist_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9262770030181855,1.5602982639102265,200000,2026100207,1.9852475099032745
+final,final_p6_r2_faiss_gist_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9106441560434178,1.5595790859078988,200000,2026100207,1.9968549760524184
+final,final_p6_r2_faiss_gist_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9650568009819835,1.5561727670719847,200000,2026100207,1.9879172939108685
+final,final_p6_r2_cagra_gist_k128,cagra_gist_half_b32_k128,ivf_pq,2.366320469067432,64,3.8252037829952314,128,128,auto,1,,,,,,
+final,final_p6_r3_faiss_gist_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8738333630608395,1.5558284749276936,200000,2026100207,1.9767391119385138
+final,final_p6_r3_faiss_gist_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9358847230905667,1.5342088888864964,200000,2026100207,1.9756529559381306
+final,final_p6_r3_faiss_gist_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9102035999530926,1.5605160259874538,200000,2026100207,1.9865353839704767
+final,final_p6_r3_cagra_gist_k128,cagra_gist_half_b32_k128,ivf_pq,2.4134073050227016,64,3.8012066209921613,128,128,auto,1,,,,,,
+final,final_p6_r3_cagra_gist_k1024,cagra_gist_half_b32_k1024,ivf_pq,2.4095387359848246,64,3.757786251953803,128,1024,auto,1,,,,,,
+final,final_p6_r3_faiss_deep_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8188906639115885,0.2955196719849482,200000,2026100207,0.24037200899329036
+final,final_p6_r3_faiss_deep_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8876189369475469,0.29857354797422886,200000,2026100207,0.2387884740019217
+final,final_p6_r3_faiss_deep_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.851819789968431,0.30455370293930173,200000,2026100207,0.23858663102146238
+final,final_p6_r3_cagra_deep_k128,cagra_gist_half_b32_k128,ivf_pq,0.511383316013962,64,2.2739459209842607,128,128,auto,1,,,,,,
+final,final_p6_r3_cagra_deep_k1024,cagra_gist_half_b32_k1024,ivf_pq,0.49688506789971143,64,2.342744469991885,128,1024,auto,1,,,,,,
+final,final_p6_r4_faiss_deep_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.9332434240495786,0.2938111409312114,200000,2026100207,0.23785098490770906
+final,final_p6_r4_faiss_deep_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8720774640096352,0.2930031289579347,200000,2026100207,0.2453123410232365
+final,final_p6_r4_cagra_deep_k128,cagra_gist_half_b32_k128,ivf_pq,0.4981499760178849,64,2.2076043549459428,128,128,auto,1,,,,,,
+final,final_p6_r4_cagra_deep_k1024,cagra_gist_half_b32_k1024,ivf_pq,0.5633306180825457,64,2.3006096750032157,128,1024,auto,1,,,,,,
+final,final_p6_r4_faiss_deep_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8234304309589788,0.2940810900181532,200000,2026100207,0.2493056880775839
+final,final_p6_r4_faiss_gist_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9297752160346135,1.5471824840642512,200000,2026100207,1.975890893023461
+final,final_p6_r4_faiss_gist_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8585893999552354,1.540852407924831,200000,2026100207,1.9778754309518263
+final,final_p6_r4_cagra_gist_k128,cagra_gist_half_b32_k128,ivf_pq,2.4588265309575945,64,3.804241587058641,128,128,auto,1,,,,,,
+final,final_p6_r4_cagra_gist_k1024,cagra_gist_half_b32_k1024,ivf_pq,2.367113246000372,64,3.833013621973805,128,1024,auto,1,,,,,,
+final,final_p6_r4_faiss_gist_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8697841169778258,1.580543446005322,200000,2026100207,2.030697630951181
+final,final_p6_r5_faiss_gist_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,2.015250194002874,1.5782501930370927,200000,2026100207,2.222430419991724
+final,final_p6_r5_cagra_gist_k128,cagra_gist_half_b32_k128,ivf_pq,2.397768373019062,64,3.80950026109349,128,128,auto,1,,,,,,
+final,final_p6_r5_cagra_gist_k1024,cagra_gist_half_b32_k1024,ivf_pq,2.378694351995364,64,3.8078021650435403,128,1024,auto,1,,,,,,
+final,final_p6_r5_faiss_gist_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.9833750890102237,1.7190205559600145,200000,2026100207,1.9835454860003665
+final,final_p6_r5_faiss_gist_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8511433081002906,1.5661102649755776,200000,2026100207,1.9812524520093575
+final,final_p6_r5_faiss_deep_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8296474049566314,0.2920768279582262,200000,2026100207,0.24038357997778803
+final,final_p6_r5_cagra_deep_k128,cagra_gist_half_b32_k128,ivf_pq,0.5289877409813926,64,2.255272662965581,128,128,auto,1,,,,,,
+final,final_p6_r5_cagra_deep_k1024,cagra_gist_half_b32_k1024,ivf_pq,0.5585161850322038,64,2.496598079102114,128,1024,auto,1,,,,,,
+final,final_p6_r5_faiss_deep_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8486446029273793,0.2933991269674152,200000,2026100207,0.24387414299417287
+final,final_p6_r5_faiss_deep_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8204560430021957,0.2863004159880802,200000,2026100207,0.24480871902778745
+final,final_p6_r6_cagra_deep_k128,cagra_gist_half_b32_k128,ivf_pq,0.5020780269987881,64,2.2320756299886853,128,128,auto,1,,,,,,
+final,final_p6_r6_cagra_deep_k1024,cagra_gist_half_b32_k1024,ivf_pq,0.4968618300044909,64,2.20274591492489,128,1024,auto,1,,,,,,
+final,final_p6_r6_faiss_deep_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8366685420041904,0.2871047779917717,200000,2026100207,0.24326998100150377
+final,final_p6_r6_faiss_deep_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8575799349928275,0.29765203304123133,200000,2026100207,0.23962052690330893
+final,final_p6_r6_faiss_deep_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,0.8471654929453507,0.2856679109390825,200000,2026100207,0.23812549002468586
+final,final_p6_r6_cagra_gist_k128,cagra_gist_half_b32_k128,ivf_pq,2.3895546910353005,64,3.806781245977618,128,128,auto,1,,,,,,
+final,final_p6_r6_cagra_gist_k1024,cagra_gist_half_b32_k1024,ivf_pq,2.4203195980517194,64,3.8021968679968268,128,1024,auto,1,,,,,,
+final,final_p6_r6_faiss_gist_k128_n4096_p1,faiss_gist_half_b32_n4096_p1_k128,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8415653569390997,1.5436870190314949,200000,2026100207,1.996987811056897
+final,final_p6_r6_faiss_gist_k2048_n4096_p16,faiss_gist_half_b32_n4096_p16_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8870882720220834,1.5539254440227523,200000,2026100207,2.0227345469174907
+final,final_p6_r6_faiss_gist_k2048_n4096_p256,faiss_gist_half_b32_n4096_p256_k2048,,,,,,,,,Faiss 1.15.1 source-built native GPU IVFFlat,1.8832871980266646,1.5513245559995994,200000,2026100207,1.989918845007196

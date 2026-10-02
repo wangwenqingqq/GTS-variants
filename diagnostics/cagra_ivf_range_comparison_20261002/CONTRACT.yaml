@@ -1,0 +1,161 @@
+experiment: P6_CAGRA_Faiss_IVFFlat_range_comparison
+status: DESIGN_ONLY_NOT_IMPLEMENTED_NOT_RUN
+date: '2026-10-02'
+repository:
+  name: wangwenqingqq/GTS-variants
+  baseline_commit: 06570cd2e2857684984e43289d645b2b54903ae6
+  diagnostic_dir: diagnostics/cagra_ivf_range_comparison_20261002
+  mutate_production: false
+scope:
+  task: static_full_L2_range
+  datasets:
+    GIST:
+      n: 1000000
+      d: 960
+      radii_f32_bits:
+        half: '0x3f34a3d8'
+        normal: '0x3fb4a3d8'
+        all: '0x41cb7260'
+    Deep:
+      n: 1000000
+      d: 96
+      radii_f32_bits:
+        normal: '0x3f8a3818'
+  batch_sizes:
+  - 8
+  - 32
+  single_query_role: smoke_and_bridge_only
+  knn_main_table: false
+environment:
+  gpu_host: pro6000-8
+  gpu_uuid: GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603
+  pin_actual_versions_and_backend: true
+  gpu_api_smoke_required: true
+  silent_cpu_fallback: false
+tracks:
+  exact_range:
+    comparators:
+    - SCAN_L
+    - SCAN_E
+    - C_MASK_E
+    - qualified_cuVS_pairwise_adapter
+    - IVFFlat_full_list_range_executor_if_supported_or_explicit_custom_adapter
+    requires_full_coverage: true
+    requires_numerical_qualification: true
+    topk_truncation_allowed: false
+    cpu_native_range_separate: true
+  quality_latency:
+    comparators:
+    - CAGRA_RANGE_ADAPTER
+    - FAISS_GPU_IVFFLAT_RANGE_ADAPTER
+    common_refinement: all returned candidate IDs; reference distances then radius
+      filter
+    native_first_radius_filter: false
+    empirical_recall_targets:
+    - 0.9
+    - 0.95
+    - 0.99
+    - 0.999
+    test_100pct_is_guarantee: false
+faiss:
+  first_index: IVFFlat
+  quantized_IVFPQ_required: false
+  nlist_dev:
+  - 1024
+  - 4096
+  nprobe_dev:
+  - 1
+  - 4
+  - 16
+  - 64
+  - 256
+  - 1024
+  - nlist
+  validate_supported_limits: true
+  full_coverage_requires_all_records_no_caps: true
+  nprobe_nlist_plus_limited_topk_is_full_range: false
+  gpu_range_support: verify actual version; reviewed source not implemented
+  custom_executor_label: FAISS-IVF structure + custom GPU range executor
+cagra:
+  query_storage: native_float32
+  database_compression: false
+  search_algo_start: AUTO
+  graph_build_start: official_recommended_default_then_one_larger_degree_if_needed
+  tune_fields:
+  - itopk_size
+  - search_width
+  itopk_at_least_K: true
+  no_claim_exact_from_finite_recall: true
+  force_exhaustive_graph_traversal: false
+candidate_budgets:
+  proposed_K:
+  - 128
+  - 512
+  - 2048
+  - 8192
+  run_only_supported: true
+  truth_count_used_for_runtime_K: false
+  capacity_ceiling: min(K,true_range_count)/true_range_count for nonempty truth; offline
+    diagnostic only
+  repeated_search_all_cost_charged: true
+numeric:
+  input: finite float32
+  oracle: existing ordered RN FP64 squared-distance path
+  output: all returned IDs with float32 distances
+  native_paths_preserved: true
+  candidate_refine_all: true
+  raw_time_cannot_pair_refined_quality: true
+  check_squared_vs_unsquared: true
+  check_strict_less_vs_inclusive: true
+  arbitrary_radius_epsilon: false
+queries:
+  development_count: 256
+  final_count: 1024
+  reuse_seen_final_as: regression_only
+  new_final_excludes_all_seen_ids: true
+  freeze_params_before_new_final: true
+  query_grouping: same frozen order across modes and nested batches
+  self_match: retain primary contract; additionally report quality with self excluded
+timing:
+  primary: host_ready_full_returned_output_ms
+  include:
+  - input_gather_and_H2D
+  - search_or_list_scan
+  - candidate_gather
+  - refinement
+  - dedup_order_restoration
+  - collection
+  - count_feedback
+  - valid_D2H
+  - synchronization
+  static_build_separate: true
+  warmup_batches: 8
+  formal_rounds: 6
+  qps: query_count / total_host_ready_seconds
+  amortized_is_response_latency: false
+  profiler_separate: true
+quality_metrics:
+- range_recall_macro_nonempty
+- range_recall_micro
+- recall_low_quantiles
+- complete_query_fraction
+- false_negatives
+- false_positives
+- empty_query_errors
+- duplicates
+- candidate_coverage
+- output_capacity_ceiling
+- distance_field_errors
+first_action: 'Capability smoke; then GIST half B32 dev256: native candidate searches
+  + common exact verification, with RangeRecall/time curve and exact scan references.'
+artifacts:
+- CAPABILITIES.json
+- SOURCE_PINS.json
+- BUILD_COST.csv
+- native_latency.csv
+- refined_latency.csv
+- range_quality.csv
+- numerical_qualification.csv
+- profile_summary.csv
+- EVIDENCE_LEDGER.md
+- RESULTS.md
