@@ -1,0 +1,112 @@
+{
+  "Deep": {
+    "d": 96,
+    "development_count": 256,
+    "final_count": 1024,
+    "half_radius_bits": "0x3f0a3818",
+    "n": 1000000,
+    "normal_radius_bits": "0x3f8a3818",
+    "query_tile_frozen": 2,
+    "tile_selection_rule": "normal+half L/E sum; if best gain <5%, use smaller Q_T"
+  },
+  "GIST": {
+    "all_radius_bits": "0x41cb7260",
+    "d": 960,
+    "development_count": 256,
+    "final_count": 1024,
+    "half_radius_bits": "0x3f34a3d8",
+    "n": 1000000,
+    "normal_radius_bits": "0x3fb4a3d8",
+    "query_tile_frozen": 2
+  },
+  "baseline_commit": "4eae62e53daeff0e040d26bbada9c60b8469e3aa",
+  "binary": "bin/batch_bench_v2",
+  "binary_sha256": "70462c768d50ad7349b7b0143572e9fa665b8116c6e1f2b41ff16e6b2de4e3c3",
+  "compile": "PATH=/usr/local/cuda/bin:$PATH /usr/local/cuda/bin/nvcc -O3 -std=c++17 -arch=sm_120 --extended-lambda --fmad=false -I/usr/local/cuda/include -I/usr/local/cuda/include/cccl -L/usr/local/cuda/lib64 -Xcompiler=-ffp-contract=off batch_bench.cu -o bin/batch_bench_v2",
+  "data_sha256": {
+    "Deep_data.f32bin": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+    "Deep_idlist.i32": "f24c05aeda323d5a470f69d103960bda3664659ae7dd80ec9225b1476da78ce4",
+    "GIST_data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "GIST_idlist.i32": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317"
+  },
+  "gpu": {
+    "cuda_toolkit": "13.1.115",
+    "driver": "590.48.01",
+    "host": "pro6000-8",
+    "model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "numa_node": 3,
+    "uuid": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603"
+  },
+  "memory_limits": {
+    "device_workspace_gib": 8,
+    "pinned_output_gib": 4
+  },
+  "query_disjoint_check": {
+    "Deep_all_four_sets_pairwise_disjoint": true,
+    "Deep_counts": {
+      "Deep_dev256.qid": 256,
+      "Deep_final1024.qid": 1024,
+      "Deep_historical_dev.qid": 24,
+      "Deep_historical_final.qid": 64
+    },
+    "all_four_sets_pairwise_disjoint": true,
+    "counts": {
+      "GIST_dev256.qid": 256,
+      "GIST_final1024.qid": 1024,
+      "GIST_historical_dev.qid": 24,
+      "GIST_historical_final.qid": 64
+    }
+  },
+  "query_sha256": {
+    "Deep_dev256.qid": "f443731b894547ef1c3719f226695384cf9a1823dfabab655d1786dd46c1d08b",
+    "Deep_dev32_profile.qid": "bf886c4050372dfb9b1c921abe4ba9c8ab6cdb4605f00520a2ca1de54b58b6f1",
+    "Deep_final1024.qid": "4a089b36d0e2813271526340f82c5074ba0f876f7b493577e3cd6a14ce9020f5",
+    "Deep_historical_dev.qid": "5a0e35293095c32a8c4e5e1ac16096504e61d6f6ba04aef8225216e045b802f4",
+    "Deep_historical_final.qid": "016ce281fd6d4053dd661bdda22eeff131b77e7fad445e3cf113fb477e365f79",
+    "GIST_dev256.qid": "27d5582ea5a173c7a73d2822017016db32d8e0cbda3c34fae26662e60d1f796b",
+    "GIST_dev32_profile.qid": "174296c508ded09dc05d979b02a6859fa08e3990e998ce0c4604aa76fdb39d86",
+    "GIST_final1024.qid": "c1a74b4ece7865584b7e05d5e9d26553b6b5246a7d13b2c5336afb573746988c",
+    "GIST_historical_dev.qid": "5a0e35293095c32a8c4e5e1ac16096504e61d6f6ba04aef8225216e045b802f4",
+    "GIST_historical_final.qid": "016ce281fd6d4053dd661bdda22eeff131b77e7fad445e3cf113fb477e365f79"
+  },
+  "raw_artifacts_sha256": {
+    "correctness.jsonl": "0dc0a06cf5e3750d3e8d340d53dfacef8eb8f4f4ba7c9bcb48055b1c7cf8588e",
+    "latency.csv": "b27a539ad5c55630db2065c10786f147f30b1085d419cacef032ad58305f9b0b",
+    "ncu_summary.csv": "5de00db72c68864ff2acb0952592a2e9c50e5848264a9ed106859671f64d15d5",
+    "p2_latency.csv": "77dc2a4838ac1f1f6b170cbf1ec655ece51562adf696d243988f1f80b4e15856",
+    "p3_latency.csv": "b7cc40e609b447ba9d3624b74e88c46ff98d69fd0e3b629ebf28a39cd823de9c",
+    "profile_summary.csv": "c8c5fd5b41280e70810e748b9d3d27f9bf1faf18d231ea518b5639358961422a",
+    "qt_sweep.csv": "f33a994799252123ee88bc59e9940da34445dbab023d469ad14a08e2f8a8c18f",
+    "qt_sweep_deep.csv": "5047aae770a5760e7113619c951017774e0aa26576f6dd923da55ea42d3cc5f1",
+    "raw_remote_runs.tar.gz": "5eb390a5dc571cfc5be92b877346a9d3c003f60c40c054f6535dab0ba5aa3538",
+    "small_correctness.csv": "e4a72bb7fd38bcb06048379b9155909ee5cb34e70ae4dca35ad877468d270f14",
+    "strict_oracle_metadata.tar.gz": "560ee3ce40645e57857c1f2e3a6c5a977170808e907ad43067ebb2a4c699d39a"
+  },
+  "repository": "wangwenqingqq/GTS-variants",
+  "scope": "static_exact_L2_range; no online queueing, updates, kNN, or multi-GPU",
+  "source_sha256": {
+    "CONTRACT.yaml": "f15c63503d116a0dea24846559728a87ce56d7659eb2faacf47315ff7b6cb763",
+    "batch_bench.cu": "713ee107061d9b3807e13ebebbfae41216d45194484b32450454cc4b9bb293a9",
+    "batch_l2.cuh": "4cd657a17b07e3c8f5fed1722ee617071617b7d343ca6830f9f714db31d85c72",
+    "batch_output.cuh": "ce2db358520a3c800a4884c3b339081f89c00522e67e969d0fb31749e8f25beb",
+    "campaign.py": "fa85b3a9be18e3b4b1e6ed50cb2233589001160d520a472d29cb07b3f958dc3a",
+    "campaign_deep.py": "78bc4136e00cc4a9174d6eee6ab360e875a6f7452631aa9b56b6039bbbf5e07f",
+    "campaign_p2.py": "c274033fc65f662b05350e8312f97f1080f8ce3e590144e23497e653c7fc57ed",
+    "collect.py": "d6be511228f44dcaa6f535d5b2a4a46c3c4a02a50c5f1f1a5347dc509dec1e31",
+    "collect_deep.py": "f4802290cd97e597fcd31d369418a9d715679cb9d2f020ea97a2092f3f9aef2a",
+    "collect_p2.py": "ffdfd2f9276cad2230a0c08df50b6b15b56d448c45f1fcb52dad39fb78b0e1f0",
+    "freeze_queries.py": "87536f8b73cc3770bf124f833e93781332d0ce8c2be0277a836d9e2c26834e33",
+    "make_small.py": "2f79fdc8bf01114de9ea91bb0dbd160e70237ad16a51a06d26db93bc58189899",
+    "rootcause_l2.cuh": "24b0d848d1a633112986c816886c96826c29b716022d617fa148da73e95a384e",
+    "run_batch.py": "3cc84e7687f8b9dd773983b9dbb758fd7c9ae002f5722bcc63f27e13e7d3a034",
+    "small_oracle.cpp": "607b8a495350b65648e2a67413eaa0b5e118fbbacc65adbfda68fd57270601eb"
+  },
+  "status": "P0_P1_P2_P3_complete; P4_and_external_baseline_not_run",
+  "timing": {
+    "clock_control": "none",
+    "formal_rounds": 6,
+    "primary": "host_ready_batch_ms",
+    "secondary": "gpu_ready_batch_ms",
+    "warmup_batches": 8
+  }
+}
