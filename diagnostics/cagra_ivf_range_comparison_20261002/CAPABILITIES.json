@@ -1,0 +1,43 @@
+{
+  "cagra": {
+    "backend": "cuVS native CAGRA",
+    "build_method": "ivf_pq",
+    "graph_degree": 64,
+    "intermediate_graph_degree": 128,
+    "max_topk": 1024,
+    "metric": "sqeuclidean",
+    "native_range_api": false,
+    "search_algo": "auto",
+    "search_width": 1,
+    "version": "26.08.01"
+  },
+  "faiss": {
+    "backend": "1.15.1 source-built native GPU IVFFlat",
+    "max_nprobe": 2048,
+    "max_topk": 2048,
+    "metric": "METRIC_L2",
+    "native_range_api": "UNSUPPORTED_API: range search not implemented",
+    "nlist_1024_full_probe": "supported but topk truncates output",
+    "nlist_4096_full_probe": "OUTPUT_BUDGET_LIMIT"
+  },
+  "gpu_uuid": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603",
+  "prebuilt_failures": [
+    "faiss-gpu-cu12 1.14.1 CUDA209 no kernel image on sm_120",
+    "faiss-gpu-cuvs 1.15.1 wheel native CUDA222 unsupported PTX; cuVS path CUB invalid device function"
+  ],
+  "qualification": "capability smoke only; full final numerical qualification separate",
+  "smoke_sizes": {
+    "B": [
+      1,
+      8
+    ],
+    "d": [
+      96,
+      960
+    ],
+    "n": [
+      4096,
+      4103
+    ]
+  }
+}

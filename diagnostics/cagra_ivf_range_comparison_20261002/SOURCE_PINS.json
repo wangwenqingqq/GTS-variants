@@ -1,0 +1,43 @@
+{
+  "baseline_commit": "06570cd2e2857684984e43289d645b2b54903ae6",
+  "cuda_toolkit": "13.1.115",
+  "cupy": "14.1.0",
+  "cuvs_python": "26.08.01",
+  "driver": "590.48.01",
+  "executables_sha256": {
+    "P4_p4_bench_v3": "36adb09b490d124591e78f0332e0dd0c114ee8f621018b82ae7be3d8dd491c77",
+    "P5_p5_external": "709dc6d4f2e2d1503d2afa006089f66aee465c0827cfbea0eb9c04a76022ec2c",
+    "strict_graph_bench": "ae4887df0a24ab25b1d44c33603704181b14abbc8520d751dffcb6837f7b4a99"
+  },
+  "faiss": "1.15.1 source-built native GPU IVFFlat",
+  "faiss_cmake": {
+    "CMAKE_CUDA_ARCHITECTURES": "120",
+    "FAISS_ENABLE_CUVS": "OFF",
+    "FAISS_ENABLE_GPU": "ON",
+    "FAISS_OPT_LEVEL": "generic"
+  },
+  "faiss_compile_options": "OPTIMIZE GPU ",
+  "faiss_source_archive_sha256": "7b583010cc3c0a778b909a1beecbc5a4bd42f415d82af734b2c05d5eaaca0ffa",
+  "faiss_source_tag": "v1.15.1",
+  "gpu_host": "pro6000-8",
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "gpu_uuid": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603",
+  "ivf_order_sha256": {
+    "deep": "1ddcb33335d26dca1bb50e46045a7bb6a0f4e306e303d2b868f19ced26503d24",
+    "gist": "62a7c31a89690fe11f4cec53e60a1ed113e285749c6fb1be7b33b129adf3100c"
+  },
+  "origin": "https://github.com/wangwenqingqq/GTS-variants.git",
+  "scripts_sha256": {
+    "ann_final.py": "2ae4036fb62e56928bed49aba28883a465f8383658bf16e0e942934cbc70e069",
+    "cagra_dev_curve.py": "c55df564a4e685ede6836e5629d66f24c9002dcb80d7bf61069e1b5ea568103a",
+    "capability_smoke.py": "5d8793885a4e56853183d0fcf020437530ae2c64c15f281e38cbe2d347eda115",
+    "exact_final.py": "6f22b52bb11f28a7809319d37eee5d3dd41ee1d9cc616e37335cf63fd6933e15",
+    "export_ivf_order.py": "ad10357f5750a22b11259c0e44377fba4ea2f055dc1283f5712c878698a850aa",
+    "faiss_dev_curve.py": "297c89782079547426e54c9694015a15f106cec3007aa5f2f5e3464151a5d40c",
+    "freeze_final_queries.py": "575d7fc431b2b5fb7ca59b5cdfbeb8c7c4f22e4279b2d9a75770bc807d19e902",
+    "ivf_full_final.py": "71bdd338989eb298fb524d6aaef53c4b29a7f0754c9fa5032ccc71df6a2fcfc9",
+    "range_refine.py": "f33e5f3b9f95895754934a79fd9d1862c2deacf8b4762d8d02ec9d4d5d159b3d",
+    "sweep_dev.py": "9320e171c8b31a06a511cee2f460feb83d94e8359cf27be43eb20fa3816684f8",
+    "sweep_final.py": "78747102135af16f6f7c0194def6cde3eccea5d9b50670d672421520ec7774e7"
+  }
+}

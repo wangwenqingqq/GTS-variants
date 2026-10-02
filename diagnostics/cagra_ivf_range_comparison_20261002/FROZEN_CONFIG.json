@@ -1,0 +1,59 @@
+{
+  "anchor_status": "none reached 0.9 micro RangeRecall; K capacity ceiling max 0.13214706075869784",
+  "configs": [
+    {
+      "dev_complete_query_fraction": 0.94921875,
+      "dev_range_recall_micro": 0.014606651216855403,
+      "dev_refined_median_ms": 18.915947061032057,
+      "k": 128,
+      "method": "CAGRA_RANGE_ADAPTER",
+      "name": "cagra_gist_half_b32_k128"
+    },
+    {
+      "dev_complete_query_fraction": 0.96484375,
+      "dev_range_recall_micro": 0.0740421238860418,
+      "dev_refined_median_ms": 55.25807221420109,
+      "k": 1024,
+      "method": "CAGRA_RANGE_ADAPTER",
+      "name": "cagra_gist_half_b32_k1024"
+    },
+    {
+      "dev_complete_query_fraction": 0.8671875,
+      "dev_range_recall_micro": 0.011543494630337678,
+      "dev_refined_median_ms": 13.212275807745755,
+      "k": 128,
+      "method": "FAISS_GPU_IVFFLAT_RANGE_ADAPTER",
+      "name": "faiss_gist_half_b32_n4096_p1_k128",
+      "nlist": 4096,
+      "nprobe": 1
+    },
+    {
+      "dev_complete_query_fraction": 0.91796875,
+      "dev_range_recall_micro": 0.12667139421143822,
+      "dev_refined_median_ms": 28.439274989068508,
+      "k": 2048,
+      "method": "FAISS_GPU_IVFFLAT_RANGE_ADAPTER",
+      "name": "faiss_gist_half_b32_n4096_p16_k2048",
+      "nlist": 4096,
+      "nprobe": 16
+    },
+    {
+      "dev_complete_query_fraction": 0.97265625,
+      "dev_range_recall_micro": 0.13214706075869784,
+      "dev_refined_median_ms": 136.86600921209902,
+      "k": 2048,
+      "method": "FAISS_GPU_IVFFLAT_RANGE_ADAPTER",
+      "name": "faiss_gist_half_b32_n4096_p256_k2048",
+      "nlist": 4096,
+      "nprobe": 256
+    }
+  ],
+  "dev_source_sha256": {
+    "development_raw.json": "a204320e66c812ca8971cdb6b40b948455c306169eb073184e149d875af0cde4",
+    "range_quality.csv": "d0733a2f5dfbfb08e71884e8059962568f3312b669a40b39275d5288a29daf0d",
+    "refined_latency.csv": "2640059a86cfd80c441a74af716581bcbc25d2a76fa59dadd6dbeedded520fae"
+  },
+  "development_set": "GIST_dev256 half B32",
+  "freeze_before_final_queries": true,
+  "selection_rule": "fast boundary, fastest high-coverage Pareto, capacity-saturated point; all below target; no test tuning"
+}
