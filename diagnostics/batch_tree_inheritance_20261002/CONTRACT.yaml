@@ -1,0 +1,357 @@
+# Proposed P4 experiment specification; not an executable GPU runner.
+experiment: GTS P4 exact high-dimensional batch tree inheritance
+date: '2026-10-02'
+status: DESIGN_ONLY_NOT_IMPLEMENTED_NOT_RUN
+repository:
+  name: wangwenqingqq/GTS-variants
+  baseline_commit: 43463278fa1f2b7b8e6e36ff224e5c640036963e
+  branch: experiments/gts-optimization-results-20260928
+  new_directory: diagnostics/batch_tree_inheritance_20261002
+  mutate_production: false
+primary_question: Does a safe tree prefix reduce total host-ready batch time versus the current strongest matched
+  batch scan, without sacrificing sharing?
+gpu:
+  host: pro6000-8
+  uuid: GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603
+  require_authorized_idle_admission: true
+  verify_actual_versions: true
+  change_global_driver_clock_settings: false
+  record_cpu_and_memory_numa_policy: true
+scope:
+  task: static_exact_L2_range
+  queries: in_database_qids
+  batch_sizes_primary:
+  - 8
+  - 32
+  batch1_regression: true
+  updates: false
+  knn: false
+  online_queueing: false
+  multi_gpu: false
+datasets:
+  GIST:
+    n: 1000000
+    d: 960
+    prefix_depth: 4
+    role: primary
+    radii_f32_bits:
+      half: '0x3f34a3d8'
+      normal: '0x3fb4a3d8'
+      all: '0x41cb7260'
+  Deep:
+    n: 1000000
+    d: 96
+    prefix_depth: 1
+    role: negative_highdim_replication
+    radii_f32_bits:
+      normal: '0x3f8a3818'
+  Tloc:
+    n: 1000000
+    d: 2
+    prefix_depth: 4
+    role: historical_positive_regression_only
+    radii_source: load actual historical frozen manifest; verify bit pattern
+    development_if_missing: sample disjoint dev256 before the new final1024
+arithmetic:
+  input: finite_float32
+  accumulator: float64
+  reference: explicit RN sub/mul/add in increasing dimension order
+  fma: false
+  early_check_dims: 32
+  early_predicate: partial_sum > RN(double(radius)*double(radius))
+  negative_radius: empty
+  nonfinite_data_or_radius: reject_at_entry
+  distance_field: sqrt(reference_sum) cast float32
+  pivot_early_by_query_radius: false
+common_execution:
+  layout: AoSoA32 in frozen id_list order
+  query_tile: 2
+  object_tile: 32
+  threads_per_block: 512
+  no_query_reordering: true
+  same_output_pipeline: true
+  cuda_graph: fixed upper launch grid; device task count; record empty launch overhead
+  query_tile_search: false
+  tree_depth_search: false
+  no_vector_repack_per_query: true
+tree:
+  topology_and_membership: frozen historical tree dump; hash audit
+  bounds: inherited conservative FP64 outward intervals; validate candidate set
+  refit: static cost separately reported
+  node_for_pos: static fixed-depth membership map
+  parent_pivot_reuse: reuse only among verified identical pivot IDs; common to all tree modes
+  compare_to_original_strict_candidates: true
+modes:
+  SCAN:
+    prefix: false
+    organization: existing TILE kernel
+    query_tile: 2
+    early_variants:
+    - L
+    - E
+  C_ID:
+    prefix: true
+    organization: stable per-query candidate position lists; two independent gathered IDs per rank
+    query_tile: 2
+    early_variants:
+    - L
+    - E
+    no_fake_shared_value_for_different_ids: true
+  C_MASK:
+    prefix: true
+    organization: dense original tiles with per-query masks; no task compaction
+    query_tile: 2
+    early_variants:
+    - L
+    - E
+  C_TASK:
+    prefix: true
+    organization: compact nonempty (query_pair, tile, mask0, mask1) records
+    query_tile: 2
+    early_variants:
+    - L
+    - E
+task_contract:
+  skip_only_if: (mask0 | mask1) == 0
+  intersection_only_forbidden: true
+  unique_key:
+  - query_pair
+  - tile_id
+  merge_duplicate_masks: true
+  preserve_original_tile_lanes: true
+  warp_per_tile: true
+  initialize_unvisited_hits_to_zero: true
+  time_all_resets_and_candidate_builds: true
+  scratch_masks_not_oracle_derived: true
+  tail_tile_bits_zero: true
+output:
+  implementation: reuse batch_output.cuh
+  order: query order then frozen id_list order
+  counts_offsets_bits: 64
+  delivery: counts/offsets then all valid IDs and distances; all feedback charged
+  truncate: false
+  oracle_size_hint: false
+  tree_sparse_slot_reset: common timed strategy
+memory:
+  dynamic_workspace_limit_gib: 8
+  pinned_output_limit_gib: 4
+  static_data_layout_index_account_separately: true
+  overflow: fail or common bounded method; never truncate
+  existing_dense_pair_flags_and_distance_slots_disclosed: true
+queries:
+  development: reuse P0-P3 dev256
+  historical_sets: 24/64 plus previous final1024 retained as known regression
+  new_final_count_per_dataset: 1024
+  seed: 20261002
+  dataset_seed_offsets:
+    GIST: 0
+    Deep: 1
+    Tloc: 2
+  exclude_all_historical_development_regression_ids: true
+  freeze_implementation_before_final: true
+  grouping: frozen random order; nested consecutive batches; fixed query pairs
+  oracle_or_similarity_grouping: false
+  revalidate_all_hit_for_new_queries: true
+phases:
+- id: V0
+  name: small_correctness_and_candidate_identity
+  N:
+  - 4096
+  - 4103
+  D:
+  - 2
+  - 31
+  - 32
+  - 33
+  - 96
+  - 960
+  B:
+  - 1
+  - 3
+  - 8
+  - 32
+  - 33
+  coverage: document actual combinations; not automatically all Cartesian cases
+  independent_cpu_small_oracle: true
+  million_scale_representative_gate: true
+- id: V1
+  name: pilot_candidate_ledger
+  dataset: GIST
+  radius: half
+  B:
+  - 8
+  - 32
+  split: dev256
+  rounds: 3
+  modes:
+  - SCAN_E
+  - C_ID_E
+  - C_MASK_E
+  - C_TASK_E
+  - SCAN_L
+- id: V2
+  name: primary_formal
+  dataset: GIST
+  radii:
+  - half
+  B:
+  - 8
+  - 32
+  paths:
+  - SCAN
+  - C_ID
+  - C_MASK
+  - C_TASK
+  early_variants:
+  - L
+  - E
+  logical_conditions: 16
+  rounds: 6
+  processes: 96
+- id: V3_GIST
+  name: boundary_formal
+  dataset: GIST
+  radii:
+  - normal
+  - all
+  B:
+  - 32
+  paths:
+  - SCAN
+  - C_ID
+  - C_MASK
+  - C_TASK
+  early_variants:
+  - L
+  - E
+  logical_conditions: 16
+  rounds: 6
+  processes: 96
+- id: V3_Deep
+  dataset: Deep
+  radii:
+  - normal
+  B:
+  - 32
+  paths:
+  - SCAN
+  - tree_path_frozen_on_development
+  early_variants:
+  - L
+  - E
+  logical_conditions: 4
+  rounds: 6
+  processes: 24
+- id: V3_Tloc
+  dataset: Tloc
+  radii:
+  - normal
+  B:
+  - 1
+  - 32
+  paths:
+  - SCAN
+  - tree_path_frozen_on_development
+  early_variants:
+  - L
+  - E
+  logical_conditions: 8
+  rounds: 6
+  processes: 48
+formal_budget_upper_bound:
+  conditions: 44
+  independent_processes: 264
+  queries_per_process: 1024
+  exclude:
+  - pilot
+  - sanitizer
+  - profiling
+  - external_baseline
+  execute_by_stage_gates: true
+timing:
+  primary: host_ready_batch_ms
+  secondary: gpu_ready_batch_ms
+  include:
+  - query H2D
+  - node and hit initialization
+  - tree prefix
+  - mask construction
+  - candidate/task compaction
+  - distance
+  - common output collection
+  - count feedback
+  - valid result D2H
+  - synchronization
+  exclude:
+  - static tree/layout/refit setup
+  - warmup
+  - oracle
+  - hash and logs
+  - profiling
+  host_input_preparation: match prior boundary and disclose pinned memcpy placement
+  warmup_development_batches: 8
+  rounds: 6
+  mode_order: rotate within rounds
+  batch_membership: same across modes; reverse execution order without changing pair membership
+  qps: query_count / sum(host_ready_batch_seconds); excludes audit and logging
+  batch_divided_by_B_is_response_latency: false
+  ratios: paired round total ratios; six values, median, range, paired round bootstrap
+work_metrics:
+- candidate_pairs
+- candidate_union_objects
+- candidate_intersection_objects
+- nonempty_task_count
+- mask_population
+- pair_coordinate_updates
+- shared_coordinate_steps
+- warp_span_steps
+- pivot_distance_count
+- candidate_task_bytes
+- output_results
+- output_bytes
+profiling:
+  separate_binary: true
+  whole_pipeline_and_distance_separate: true
+  ncu_replay: validated application/range replay when supported for cache reuse
+  cache_control: none, identical and recorded
+  clock_control: none unless independently authorized uniform control
+  metrics:
+  - DRAM reads and writes per stage
+  - L1/L2 requests
+  - registers/spills
+  - FP64 activity
+  - warp execution
+  profile_values_are_not_formal_timing: true
+external_baseline:
+  required_attempt: true
+  family: cuVS pairwise distance + complete range selection + full host output
+  task_is_not_topk: true
+  first_dtype: float64 direct L2 when actually supported
+  datasets:
+  - GIST
+  radii:
+  - half
+  - normal
+  - all
+  B:
+  - 8
+  - 32
+  freeze_library_versions: true
+  isolated_environment: true
+  development_frozen_reasonable_tiling: true
+  strict_sequence_vs_library_semantics: separate reporting; audit complete membership and boundaries
+  mismatch: preserve raw result; no free oracle correction; any certified fallback fully timed
+  failure: save exact build/runtime error; no external superiority claim
+decision_rules:
+  strong_followup_speedup_min: 1.1
+  strong_followup_wins: 6
+  paired_interval_lower_gt: 1.0
+  small_gain: 1.03x-1.10x retain engineering evidence; no universal claim
+  unresolved: less than 1.03x or unstable; stop parameter chasing
+  beat_C_ID_but_not_scan: candidate organization win only, not index net benefit
+  correctness_failure: exclude performance promotion; retain evidence
+evidence_policy:
+  preserve_prior_positive_and_negative_results: true
+  multiply_historical_speedups: false
+  runtime_oracle_selector: false
+  new_results_status: none
