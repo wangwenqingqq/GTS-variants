@@ -1,0 +1,25 @@
+{
+  "dataset": "Deep",
+  "development_queries": 256,
+  "B": 32,
+  "radius_bits": "0x3f8a3818",
+  "depth": 1,
+  "criterion": "minimize L+E host-ready total on dev256",
+  "scores_ms": {
+    "C_ID": 354.056045,
+    "C_MASK": 293.601179,
+    "C_TASK": 308.669227
+  },
+  "totals_ms": {
+    "SCAN_L": 146.551642,
+    "C_ID_L": 163.066141,
+    "C_MASK_L": 147.494067,
+    "C_TASK_L": 162.738881,
+    "SCAN_E": 144.260307,
+    "C_ID_E": 190.989904,
+    "C_MASK_E": 146.107112,
+    "C_TASK_E": 145.930346
+  },
+  "selected_path": "C_MASK",
+  "all_modes_full_output_equal_old_strict": true
+}

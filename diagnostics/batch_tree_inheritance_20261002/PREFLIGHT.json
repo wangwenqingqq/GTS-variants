@@ -1,0 +1,100 @@
+{
+  "repository": "wangwenqingqq/GTS-variants",
+  "baseline_commit": "43463278fa1f2b7b8e6e36ff224e5c640036963e",
+  "status": {
+    "internal_P4": "V0-V3 complete",
+    "external_cuVS": "not completed; installation stalled, see cuvs_install_status.json"
+  },
+  "gpu": {
+    "cuda_toolkit": "13.1.115",
+    "driver": "590.48.01",
+    "host": "pro6000-8",
+    "model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "numa_node": 3,
+    "uuid": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603"
+  },
+  "runtime": {
+    "host": "pro6000-8",
+    "NUMA": "cpunodebind=3,membind=3",
+    "gpu_admission": "exclusive UUID lock plus nvidia-smi foreign-process check",
+    "formal_rounds": 6,
+    "warmup_batches": 8,
+    "primary_metric": "sum of 1024 host-ready query delivery times",
+    "static_data_setup_in_timing": false,
+    "batch_query_preparation_in_timing": false,
+    "all_valid_ID_distance_D2H_in_timing": true
+  },
+  "compile": "PATH=/usr/local/cuda/bin:$PATH /usr/local/cuda/bin/nvcc -O3 -std=c++17 -arch=sm_120 --extended-lambda --fmad=false -I/home/data/wangxuran/tmp/gts_batch_exact_highdim_20261001 -I/home/data/wangxuran/tmp/gts_arithmetic_path_boundary_20260928 -I/usr/local/cuda/include -I/usr/local/cuda/include/cccl -L/usr/local/cuda/lib64 -Xcompiler=-ffp-contract=off p4_bench.cu -o bin/p4_bench_v3",
+  "formal_binary_sha256": "36adb09b490d124591e78f0332e0dd0c114ee8f621018b82ae7be3d8dd491c77",
+  "stripped_recompile_sha256": "d776609fc1fe5f9e1e81b2fe1417b10207783c272cedeb25ab85a7c9ff27d630",
+  "source_sha256": {
+    "p4_bench.cu": "3acb6760d8031b1e30d417f7805a2244c6b9db57f441fd48529d8d1da3c2804b",
+    "batch_tree_prefix.cuh": "5ad3230b9d109a0358be2d50622f227382b8a2518a3a4a298cd0d4ad8d5057b0",
+    "batch_candidate_tasks.cuh": "086344ac3c591896bc95c5b1fa7be8f0d2fff265450123159849f7688c067af0",
+    "candidate_ledger.cu": "73cb0245eaf131ef86ab9ca5c111e553b78d359034d125ffe3e2c45e7d8a1f93",
+    "mask_kernel_test.cu": "3959fbbd67b682c50ddcedc3567e659a48eabd75b3dddcf6e5611eabab684f2f",
+    "p4_bench_profile.cu": "3e49399cc65f5d55b3fdca0edb99fdacf737f8cf2e4f5765bf1b245642a4380b"
+  },
+  "data_sha256": {
+    "GIST_data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "Deep_data.f32bin": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+    "Tloc_data.f32bin": "bbc244a8c6632ad9a55e31b4b0a2ad07ab317d8e70855cd958b454cfdef80eda",
+    "GIST_idlist.i32": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317",
+    "Deep_idlist.i32": "f24c05aeda323d5a470f69d103960bda3664659ae7dd80ec9225b1476da78ce4",
+    "Tloc_idlist.i32": "57d251d6e5f579f3c7f06d178bbd93497dbef21c3f9e13fb33c3c3140997dc80"
+  },
+  "tree_dump_sha256": {
+    "GIST": "4d5319b60f9691757569884a571a74f2420031e1136356b7516867bd4cb6a332",
+    "Deep": "505ff07836b184bb85b0d226300e5ffb69c1ea079a4da519b66c4136efa17d22",
+    "Tloc": "53296ad738370dbbaedbdf8d2bc0fcdd33b7fb37fd6f81a49419a1c412bacaea"
+  },
+  "query_sha256": {
+    "GIST_final1024.qid": "49ff25755df09e1b4a25255cb1b25c80e8bfee8ff81e1a626bbb155568336172",
+    "Deep_final1024.qid": "b3d40b4436c9be45347d45fb0630603b7cdc38ab9e5d16333873397dd6c2ee8f",
+    "Tloc_dev256.qid": "27d5582ea5a173c7a73d2822017016db32d8e0cbda3c34fae26662e60d1f796b",
+    "Tloc_final1024.qid": "06d825a79f63cbfbc71a0f1bbc5ba8f042895462d4e1b4082f4dfcf01521da87"
+  },
+  "query_seeds": {
+    "GIST": 20261002,
+    "Deep": 20261003,
+    "Tloc": 20261004
+  },
+  "query_exclusions": "new final qids exclude historical and P0-P3 development/final IDs; Tloc also excludes P4 dev256",
+  "radii_f32_bits": {
+    "GIST_half": "0x3f34a3d8",
+    "GIST_normal": "0x3fb4a3d8",
+    "GIST_all": "0x41cb7260",
+    "Deep_normal": "0x3f8a3818",
+    "Tloc_normal": "0x4045b6eb"
+  },
+  "reference_oracle_sha256": {
+    "oracle_gist_all_final1024": "8e65bfdee7fd04c495dab38a06e617ec962c7f0de73411f1a6c8cb192d7b6a00",
+    "oracle_deep_final1024": "2f3177dd6f60564f785c59bafe63eef17d8c220f1e30b1fc6188fb9ea52f68d8",
+    "oracle_gist_half_final1024": "88d86199c2581597c26fd1be6934ff41d6734a784f3de7a394014c5200032b14",
+    "oracle_tloc_final1024": "bb8fe0f54f048f33583dbc4bd91160e9e9884c576fb77e7305671f5fda2ab380",
+    "oracle_gist_normal_final1024": "2bc76b349f616c69c69d3d2f4a9148a410376024675f4693d8ba85407c3c33c8"
+  },
+  "formal_processes": 264,
+  "full_output_audits": 44,
+  "small_cpu_full_cases": 96,
+  "max_sampled_gpu_memory_MiB": 8570,
+  "artifact_sha256": {
+    "raw_remote_runs.tar.gz": "8faeecb81284eea38f29d656ade946fc571ec1e0e96580ea884ac3d051547716",
+    "CORRECTNESS.json": "77e985b6ce3f33a4b6b14938ed15f546ca0aa217a81020a3bd89268ed07cb84e",
+    "small_correctness.csv": "b1058b664dc04cdfad33cddeba196450aad66a43ee1b75e23e2c2addf45d8025",
+    "profile_summary.csv": "c28012a0f165828f1bdb2f0fbd2c60ac500fd85701db75786c4da7fc8b4df253",
+    "ncu_summary.csv": "b2f70fe5a337c2543b3045b1fabe8e2542b1dc67986a88bfa7c994f88db39632",
+    "summary_gist_half.json": "53bc8ed34eaea5283f66ff7503e83ad8d4fddc6a4f1de581c9616ffd2bcdb95e",
+    "summary_gist_normal.json": "4fa9e6175f685de886f8c4af3449a2c0a24ba8f37d6fffcf4901659696f988f9",
+    "summary_gist_all.json": "b67fbddfc3b4e2b61edf662f1d65a1542d94a40792b73f9bb41352f67897681e",
+    "summary_deep.json": "c20e8cbcea18639c9a932691e3ce8465cfa57e0cad7c811bb2e8492d664dca50",
+    "summary_tloc.json": "50b9e0d2fde117e0b3fc5e43303f8a58fc8e3c4287dea9cae11218945bc559ab",
+    "cpu_half.json": "ecdd5130b270edefb642e1edefd23ab872d0b061b6956df914a5b84f9990ba52",
+    "cpu_normal.json": "3745db6dada61999ee73f92e535db85e75eae2bca46fb77f9c321853433a6f4f",
+    "cpu_all.json": "edda3dffff482604790f448355953e918cdc4ceeec35e4bb5d9a587af75314d2",
+    "cpu_deep.json": "09624eafc77435cdd49f7f5d9588a4552ebf26f99997ecf6fc1b4eb637920f82",
+    "cpu_tloc.json": "1aa6e1a6442e9f05e9231b6be63d5766ec2a3a394df600c38ac428a6795da210",
+    "cuvs_install.log": "ea9bfc069faeae94611271ab57a78cfff813436aa59b526a10eb3d105e93be24"
+  },
+  "scope": "static in-database exact L2 range queries; no updates, kNN, online queueing or other GPUs"
+}
