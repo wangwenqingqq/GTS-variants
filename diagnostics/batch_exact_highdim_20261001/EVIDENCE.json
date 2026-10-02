@@ -1,0 +1,62 @@
+{
+  "baseline_commit": "4eae62e53daeff0e040d26bbada9c60b8469e3aa",
+  "binary_sha256": "70462c768d50ad7349b7b0143572e9fa665b8116c6e1f2b41ff16e6b2de4e3c3",
+  "counts": {
+    "audit_receipts": 50,
+    "formal_receipts": 300,
+    "full_output_audits": 50
+  },
+  "gpu_uuid": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603",
+  "large_oracles_not_in_git": {
+    "files": {
+      "Deep_normal_strict_reference.bin": "45a42c59be36e17103d5c3802e54e471d0119f10e3d6c27171d026cccc6a646f",
+      "GIST_all_strict_reference.bin.gz": "7390b1fb18d7ecd84d7b78a3e4a10387b3ae69504a9cd16e72fcc3da8a37cff5",
+      "GIST_half_strict_reference.bin": "b0add04acda74b48d79a65d86904960160d17ee684f0244d191f70872103dab7",
+      "GIST_normal_strict_reference.bin": "82c0b6af4693fc83821b3f9bbd7a35b4eaaf7c0505c2e83795efff6f8ddd858e"
+    },
+    "location": "../gts_batch_evidence_20261001 outside repository; local workspace only"
+  },
+  "oracle": {
+    "Deep_normal": {
+      "full_output_sha256": "45a42c59be36e17103d5c3802e54e471d0119f10e3d6c27171d026cccc6a646f",
+      "hits": 28562882,
+      "queries": 1024
+    },
+    "GIST_all": {
+      "compressed_sha256": "7390b1fb18d7ecd84d7b78a3e4a10387b3ae69504a9cd16e72fcc3da8a37cff5",
+      "full_output_sha256": "624ab440082a4e5da006dbc437581e7470f2c4a6a6a20ec96ecf2afeb4d7ab85",
+      "hits": 1024000000,
+      "queries": 1024
+    },
+    "GIST_half": {
+      "full_output_sha256": "b0add04acda74b48d79a65d86904960160d17ee684f0244d191f70872103dab7",
+      "hits": 499264,
+      "queries": 1024
+    },
+    "GIST_normal": {
+      "full_output_sha256": "82c0b6af4693fc83821b3f9bbd7a35b4eaaf7c0505c2e83795efff6f8ddd858e",
+      "hits": 94439507,
+      "queries": 1024
+    }
+  },
+  "retained_in_git": {
+    "correctness.jsonl": "0dc0a06cf5e3750d3e8d340d53dfacef8eb8f4f4ba7c9bcb48055b1c7cf8588e",
+    "latency.csv": "b27a539ad5c55630db2065c10786f147f30b1085d419cacef032ad58305f9b0b",
+    "ncu_summary.csv": "5de00db72c68864ff2acb0952592a2e9c50e5848264a9ed106859671f64d15d5",
+    "p1_summary.json": "43f46ed96e12784b4ce013adfdc1ac01935a42b38592bdae10b097840d0ce2e7",
+    "p2_latency.csv": "77dc2a4838ac1f1f6b170cbf1ec655ece51562adf696d243988f1f80b4e15856",
+    "p2_summary.json": "2cad30c5a740770fdae0704d1769909e558d987bf79127ef0326ceed83acecda",
+    "p3_latency.csv": "b7cc40e609b447ba9d3624b74e88c46ff98d69fd0e3b629ebf28a39cd823de9c",
+    "p3_summary.json": "65b1c6238e2cd1476dc51b27b2b19ee1244d5325b0fb60a91c226d02b6397de4",
+    "profile_summary.csv": "c8c5fd5b41280e70810e748b9d3d27f9bf1faf18d231ea518b5639358961422a",
+    "raw_remote_runs.tar.gz": "5eb390a5dc571cfc5be92b877346a9d3c003f60c40c054f6535dab0ba5aa3538",
+    "small_correctness.csv": "e4a72bb7fd38bcb06048379b9155909ee5cb34e70ae4dca35ad877468d270f14",
+    "strict_oracle_metadata.tar.gz": "560ee3ce40645e57857c1f2e3a6c5a977170808e907ad43067ebb2a4c699d39a"
+  },
+  "scope_limits": [
+    "CPU full oracle covers the 504 small cases; large final queries compare bytewise against independent strict GPU implementation",
+    "Nsight/NCU use a separate development batch, not formal timing",
+    "No online queueing, updates, top-k, P4 tree integration, or external cuVS baseline"
+  ],
+  "status": "P0-P3 complete; P4 and cuVS baseline not run"
+}

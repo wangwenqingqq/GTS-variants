@@ -1,0 +1,286 @@
+# Proposed experiment contract, not an implemented runner.
+experiment: GTS exact high-dimensional batch execution and reuse
+date: '2026-10-01'
+status: DESIGN_ONLY_NOT_IMPLEMENTED_NOT_RUN
+repository:
+  name: wangwenqingqq/GTS-variants
+  baseline_commit: 4eae62e53daeff0e040d26bbada9c60b8469e3aa
+  branch: experiments/gts-optimization-results-20260928
+  suggested_diagnostic_dir: diagnostics/batch_exact_highdim_20261001
+  mutate_production: false
+scope:
+  task: static_exact_L2_range
+  query_source: in_database_qids
+  batch_sizes:
+  - 1
+  - 8
+  - 32
+  - 128
+  online_queueing: false
+  updates: false
+  knn: false
+  multi_gpu: false
+gpu:
+  host: pro6000-8
+  uuid: GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603
+  verify_actual_model_driver_cuda: true
+  require_authorized_idle_admission: true
+  change_global_clock_or_driver_settings: false
+data:
+  GIST:
+    n: 1000000
+    d: 960
+    role: primary
+    radii_f32_bits:
+      normal: '0x3fb4a3d8'
+      half: '0x3f34a3d8'
+      all: '0x41cb7260'
+  Deep:
+    n: 1000000
+    d: 96
+    role: highdim_replication
+    radii_source: prior frozen manifest; validate and record bits
+  Tloc:
+    n: 1000000
+    d: 2
+    role: positive_tree_regression_only
+    radii_source: prior frozen manifest; validate and record bits
+queries:
+  historical_development_count: 24
+  historical_regression_count: 64
+  new_development_count: 256
+  new_final_count: 1024
+  seed: 20261001
+  dataset_seed_offsets:
+    GIST: 0
+    Deep: 1
+    Tloc: 2
+  exclude_all_previously_seen_ids: true
+  disjoint_development_final: true
+  distinct_within_batch: true
+  grouping: frozen random order; consecutive nested batches across B
+  sort_by_oracle_or_similarity: false
+  revalidate_all_hit_radius_for_new_queries: true
+arithmetic:
+  input_dtype: float32_finite
+  accumulator: float64
+  reference: RN subtraction, multiplication and increasing-coordinate addition
+  fma: false
+  radius: finite float32; compare RN squared radius inclusively
+  early_check_every_dimensions: 32
+  early_predicate: partial_fp64_sum > cutoff_fp64
+  negative_radius: empty
+  nan_inf: reject at entry
+  output_distance: reference sqrt cast float32
+  output_order: input query order then id_list order
+common_execution:
+  layout: AoSoA32 in id_list order
+  threads_per_block_initial: 512
+  query_tile_initial: 4
+  query_tile_dev_candidates:
+  - 2
+  - 4
+  - 8
+  query_tile_control: 1
+  freeze_same_qtile_for_L_and_E: true
+  same_output_pipeline_all_modes: true
+  same_query_cache_design_where_possible: true
+  cuda_graph: common policy; SEQ may contain B distance nodes
+  production_fast_math: false
+modes:
+  SEQ_L:
+    organization: B serial single-query distance kernels, then common batch collection
+    early: false
+  SEQ_E:
+    organization: same as SEQ_L
+    early: true
+  GRID_L:
+    organization: 2D query x object grid, no explicit database reuse
+    early: false
+  GRID_E:
+    organization: same as GRID_L
+    early: true
+  TILE_L:
+    organization: query microtile x object tile, explicit register/shared reuse
+    early: false
+  TILE_E:
+    organization: same as TILE_L; independent active per query-object pair
+    early: true
+output:
+  main_contract: all valid IDs and float32 distances available on host
+  truncation: false
+  common_parallel_stable_collection: true
+  counts_and_offsets_bits: 64
+  delivery: counts first then complete compact output; all feedback charged
+  use_oracle_to_predict_output_size: false
+  legacy_fixed_capacity_bytes_per_query: 17777764
+  legacy_transport_scope: bridge appendix only; not batch main denominator
+memory:
+  additional_batch_workspace_limit_GiB: 8
+  pinned_output_limit_GiB: 4
+  static_data_layout_index_count_separately: true
+  materialize_full_fp64_distance_matrix_in_custom_modes: false
+  overflow_policy: report and implement common bounded alternative; never truncate
+phases:
+- id: P0
+  name: correctness_and_batch1_bridge
+  N:
+  - 4096
+  - 4103
+  D:
+  - 2
+  - 31
+  - 32
+  - 33
+  - 96
+  - 960
+  B:
+  - 1
+  - 3
+  - 8
+  - 32
+  - 127
+  - 128
+  - 129
+  require_independent_full_output_audit: true
+- id: pilot
+  dataset: GIST
+  radii:
+  - normal
+  B:
+  - 1
+  - 32
+  split: development
+  modes:
+  - SEQ_L
+  - GRID_L
+  - TILE_L
+  - SEQ_E
+  - GRID_E
+  - TILE_E
+- id: P1
+  dataset: GIST
+  radii:
+  - normal
+  B:
+  - 1
+  - 8
+  - 32
+  - 128
+  modes:
+  - SEQ_L
+  - SEQ_E
+  - GRID_L
+  - GRID_E
+  - TILE_L
+  - TILE_E
+  max_logical_conditions: 24
+- id: P2
+  dataset: GIST
+  radii:
+  - half
+  - all
+  B:
+  - 1
+  - 32
+  - 128
+  modes:
+  - GRID_L
+  - GRID_E
+  - TILE_L
+  - TILE_E
+  max_logical_conditions: 24
+- id: P3
+  dataset: Deep
+  radii:
+  - normal
+  B:
+  - 1
+  - 32
+  - 128
+  modes:
+  - GRID_L
+  - GRID_E
+  - TILE_L
+  - TILE_E
+  max_logical_conditions: 12
+- id: P4
+  name: tree_evidence_inheritance_after_batch_baseline
+  primary:
+    dataset: GIST
+    radius: half
+    B:
+    - 1
+    - 32
+    - 128
+  sentinel:
+    dataset: Tloc
+    radius: normal
+    B:
+    - 1
+    - 32
+  prefix_depth: 4
+  comparators:
+  - best matched no-tree batch scan
+  - naive C4 candidate list
+  - C4 block/mask shared verification
+  matched_parent_pivot_reuse: true
+timing:
+  formal_rounds: 6
+  warmup_development_batches_per_process: 8
+  formal_queries_per_process: 1024
+  primary: host_ready_batch_ms
+  secondary:
+  - gpu_ready_batch_ms
+  - amortized_ms_per_query
+  - queries_per_second
+  qps_definition: number_queries / total_host_ready_seconds
+  not_response_latency: batch_time divided by B
+  profiler_in_main_timing: false
+  hash_in_main_timing: false
+  mode_order: rotate across rounds
+  batch_membership_fixed: true
+  report_ratios: matched round totals; all six, median, range and paired round bootstrap
+profiling:
+  separate_work_binary: true
+  separate_profile_runs: true
+  representative_B:
+  - 1
+  - 32
+  - 128
+  ncu_replay: prefer validated application/range replay for cache reuse; record installed
+    support
+  cache_control: none for warmed-reuse attribution when appropriate
+  clock_control: none unless separately authorized and uniformly controlled
+  metrics:
+  - DRAM_read_write
+  - L1_L2_transactions
+  - global_load_requests
+  - FP64_pipe
+  - registers_spills
+  - occupancy_stalls
+  - query_object_pairs
+  - coordinate_updates
+  - warp_group_max_dimensions
+  - host_output_bytes
+external_baseline:
+  family: cuVS pairwise distance + full range selection + common host delivery
+  not_topk_comparator: true
+  dtype_first_try: float64 direct L2 when supported
+  freeze_actual_library_version: true
+  verify_numerical_contract_and_full_membership: true
+  boundary_mismatch_policy: report separately or use justified certified fallback
+    with all cost counted
+  preserve_strong_external_results: true
+artifacts:
+- PREFLIGHT.json
+- latency.csv
+- work.csv
+- profile_summary.csv
+- correctness.jsonl
+- EVIDENCE.json
+- RESULTS.md
+negative_evidence_policy: preserve all-hit regressions, weak/nonbeneficial cases,
+  legacy positive cases and raw failures; never multiply cross-experiment speedups
+first_action: 'GIST normal B=1/32: common-output bridge, SEQ_L/GRID_L/TILE_L, then
+  E counterparts; no tree in first causal stage'
