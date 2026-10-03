@@ -120,7 +120,7 @@ def prepare(source, root):
     axis = [[i-500]+[0]*127 for i in range(1000)]
     extra = {
         'tied_radius_boundary': (axis, 1, [(2, 500), (0, 499), (0, 501), (2, 500), (1, 1000), (2, 500)]),
-        'leaf_capacity_20': (random_rows(1990), 10000, sum(([(0, 0), (2, 0)] for _ in range(11)), [])),
+        'leaf_capacity_20': (random_rows(2000), 10000, [(1, 0)]*10+sum(([(0, 1999), (2, 0)] for _ in range(11)), [])),
     }
     configs = {k: (random_rows(1000), r, ops) for k, (r, ops) in native.items()}; configs.update(extra)
     for name, (rows, radius, ops) in configs.items():
