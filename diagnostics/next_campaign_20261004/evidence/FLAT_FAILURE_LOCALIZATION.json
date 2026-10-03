@@ -1,0 +1,64 @@
+{
+  "state": "rejected",
+  "dataset": "GIST",
+  "N": 1000000,
+  "D": 960,
+  "Q": 1024,
+  "K": 8,
+  "B": 32,
+  "row": 531,
+  "qid": 712558,
+  "CPU_all_object_oracle_s": 9.095849373959936,
+  "CPU_enumerated_objects": 1000000,
+  "CPU_matches_GPU_RN_oracle": true,
+  "reference_ids": [
+    712558,
+    222418,
+    385161,
+    315713,
+    257129,
+    234005,
+    158952,
+    223837
+  ],
+  "returned_ids": [
+    712558,
+    222418,
+    385161,
+    315713,
+    257129,
+    234005,
+    158952,
+    695244
+  ],
+  "FN": [
+    223837
+  ],
+  "FP": [
+    695244
+  ],
+  "reference_squared": [
+    0.0,
+    1.9119666900412597,
+    2.033039315855921,
+    2.037846272702878,
+    2.043170764661508,
+    2.0533266627795452,
+    2.0633309738243937,
+    2.066523500275135,
+    2.0665391422700097
+  ],
+  "ninth_id": 695244,
+  "gap_kth_to_next_squared": 1.5641994874471266e-05,
+  "missed_and_extra_reference_squared": {
+    "223837": 2.066523500275135,
+    "695244": 2.0665391422700097
+  },
+  "descending_field_positions": [],
+  "field_squared_tolerance_failed_slots": [
+    3760
+  ],
+  "worst_field_relative_squared_error": 6.4849850381043e-05,
+  "output_sha256": "d9359e76eaad5f3af2e05282db6e428d670c7d10080aaa065960123ebc59cb09",
+  "interpretation": "CPU independently confirms membership rejection. Cause requires native replay/score evidence; the exact FP64 gate is unchanged."
+}

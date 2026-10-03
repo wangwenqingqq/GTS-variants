@@ -97,3 +97,16 @@ coalescing-specific experiment is conditional on retaining that claim, not
 required to preserve the measured reuse/count-removal statements. Every new
 run must identify one section, claim and missing qualifying evidence. No global
 historical rerun or new optimization direction is authorized by this ledger.
+
+## 2026-10-04 10K首轮执行补记
+
+按固定计划480bc7执行；[本轮报告](../next_campaign_20261004/RESULTS.md)与hash外部完整bundle保留首个失败。未生成正式静态10K；下列开发/有界证据不替代计划的六轮主表。
+
+| 项目 | 实际证据/契约 | 结果与状态 | 实现决定、机制决定、论文影响 |
+|---|---|---|---|
+| F0 bounded | P7派生适配器；78进程、24对eager/Graph、600复用cycles、16sanitizers、16条真实tail；完整CPU oracle | passed，bounded；1024/10K长稳定性未完成 | 保留控制，不晋升static stable或统一keeper |
+| U10-NATIVE | N1000/D128、三预登记seed，每条10000 queries/1000 inserts/1000 deletes/50 rebuild，原U0观察bin | 30000查询、10030351字段项、153实际树、306000 ancestor/member检查全过；FN/FP/重复/非法ID全0 | 修补长正确性证据；无完整计时、新到达/稳定ID/并发/N1M动态主张 |
+| 静态开发准入 | 新GIST1024/K8/B32；GTS_ORIG/O_FULL/IVF_ALL/O_BOUND全部成员/字段通过 | Native Flat漏1个成员，worst7/8，另1个自距字段超容差；CPU全1M复核，rejected | 按wrong-result停止；零正式10K进程，强基线比较仍不完整 |
+| optional Flat REF64 | Native取64+RN-FP64精算+topK+全部Host-ready工作计时 | 同GIST1024通过231.328ms；memcheck32通过；small96资格13/48成员失败、worst0，rejected | 不晋升、不替代原native失败；有限候选精算不可宣称通用完整 |
+| A0/A1静态 | 12NSYS+8实际NCU，全部诊断32输出独立核对；CPU/API/GPU并集分开 | measured；距离FP64管线指标85%左右；UVM fault存在但迁移bytes未知 | 支持后续距离路径归因；未证明新coalescing/精度机制端到端收益 |
+| K10/R10/动态计时 | matched/bulk剩余形状、CAGRA网格、R10、30K sustained、更新timed adapter | pending；U10-ARRIVAL not admitted | 完整计划与统一keeper尚未达成，失败和未完成项保留 |

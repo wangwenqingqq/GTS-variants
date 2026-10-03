@@ -1,0 +1,25 @@
+{
+  "state": "curated stopped campaign",
+  "private_logs": "remain in hashed external bundle",
+  "redactions": "private scratch prefix and selected GPU UUID replaced with variables in public JSON",
+  "integrity": "public normalized JSON hash differs from raw JSON; RAW_MANIFEST refers to unmodified external files",
+  "formal10k": false,
+  "source_archive": "EXTERNAL_BUNDLE.json",
+  "optional_adapter": "rejected; single developer pass remains as negative-result provenance",
+  "external_only_redundant_public_fixtures": [
+    "fixtures/GIST_warm128.qid",
+    "fixtures/GIST_warm512.qid",
+    "fixtures/GIST_warm2048.qid",
+    "fixtures/GIST_warm8192.qid",
+    "fixtures/GIST_warm10000.qid",
+    "fixtures/Deep_warm128.qid",
+    "fixtures/Deep_warm512.qid",
+    "fixtures/Deep_warm2048.qid",
+    "fixtures/Deep_warm8192.qid",
+    "fixtures/Deep_warm10000.qid",
+    "fixtures/cpu48_96.json",
+    "fixtures/cpu48_960.json"
+  ],
+  "reason": "unused large-shape repeated warm pools and full small CPU oracles remain in verified raw archive with hashes; fresh development IDs and exercised warm shapes are public",
+  "post_archive_analysis": "DERIVED_ANALYSIS records CPU-only expanded NCU extraction; ARCHIVE_VERIFICATION checks the private original archive"
+}
