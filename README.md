@@ -1,4 +1,4 @@
-# Original GTS kNN experiment deliveries
+# Original GTS experiment deliveries and evidence alignment
 
 This publication branch contains only task-owned experiment deliveries. It has
 a fresh, standalone commit chain and does not inherit older repository traces,
@@ -25,6 +25,16 @@ No production GTS++ improvement is measured here.
 Four single-process original-GTS checks pass full-ID/field validation at K8,
 B1/32, GIST/Deep1M and32 already-seen queries. This is a baseline-only pilot;
 an optimized GTSPP comparator has not yet been identified or measured.
+
+## Evidence alignment: query and update lifecycle
+
+- [Extended P4 evidence ledger](diagnostics/batch_tree_inheritance_20261002/EVIDENCE_LEDGER.md)
+- [Curated-source provenance](diagnostics/batch_tree_inheritance_20261002/CONVERGENCE_SOURCE.json)
+
+This extension links existing public reports, retains external counterevidence
+and version-specific qualification gates, and does not add a new GPU run.
+Mechanism experiments are complete at their registered scopes; a unified
+search/update candidate is not complete.
 
 ## Publication provenance
 
