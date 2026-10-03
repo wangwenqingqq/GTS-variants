@@ -1,0 +1,30 @@
+{
+  "gpu": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "/usr/local/cuda/bin/compute-sanitizer",
+    "--tool",
+    "memcheck",
+    "--error-exitcode",
+    "91",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/headroom_bench",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/small960.f32bin",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/small33.qid",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/small960.index",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/seeds_4097.i32",
+    "STAR_MASK",
+    "8",
+    "32",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/evidence/small960_memcheck",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/small33.qid",
+    "0",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/small960_u.f64"
+  ],
+  "binary_sha256": "5cba659e1cd603aa2370e103425f184368e6ed405da90ce85743c4399c324dbc",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 0.9615750869270414,
+  "runtime_valid": true
+}

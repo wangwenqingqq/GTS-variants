@@ -1,0 +1,110 @@
+{
+  "source_ref": "36d58aeb93844aec3febd17d9f9caf17b88601f0",
+  "GPU_UUID": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603",
+  "NUMA": 3,
+  "files": {
+    "/home/data/wangxuran/tmp/gts_arithmetic_path_boundary_20260928/data/GIST/1000000/fixtures/data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/GIST.index": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/seeds_1000000.i32": "1ff926834e564b75a887714ee3a961544440b33a55b41749b8e42c36e3dd1d67",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/GIST_pilot32.qid": "5857859ff9e0ba524e6a03733b3d94485c7f52b19919ab7e1e86296910f13941",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/fixtures/GIST_dev128.qid": "9ce0c24bede5a0b8d05facb38903160ad38ba67ca49b226cc72dec584bb544ef",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/opt_knn_bench": "1a6a63ecd452dda0b67ab6140e394a60c21b9f04280e4643f00b7749a53d0e92",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/run_locked.py": "c9dffe68de94141feb5ced016bc347524f7f94ef41611eecc9c63f550b0ee7e4",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/native_knn.py": "9ede21afaf3ec7fe468f5ccdcf052774a5885f8d8e97d9c44e6a7df56fe16cc4",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/qualification.py": "f2f87a09c215f80dfbea23e6412c0979e051e35d1aba34d18f7ff4f5e9496113",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/native_ivf.py": "23abd847d013c143cee82a5abc3ec87f1fa3305934ad6a5c8c306a4352daf27b",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/headroom_count.cuh": "e1d49888f17538d7e18b7dae6b4346f1c4a91bc6f4f0e48141dd227cda1bdf3b",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/run_e0.py": "5ac45276e856ae36a4b194480baa87a23d992217bb9020072b13967eae3e51c1",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/prepare_source.py": "8ebd48c828809684cc970d0deb33806a9c13d353b631d85a12abede9e22c720c",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/headroom_bench.cu": "2575fd03d600b52b6cba9942e91c1879409fa16b1fa84f73760a5d3e41f103a9",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/CONTRACT.yaml": "5facad1ccf06586f982832b96968c5d95baa79443e967dab3c614c0daf2221d4",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/PLAN.md": "8d7a5cf8bef98f1e0eab11d670dfc5086943f361e97b75d2fa6fda269c4ca9fa",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/unified_knn_e2e_20261003/knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/unified_knn_e2e_20261003/knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/unified_knn_e2e_20261003/knn_select.cuh": "3f3f3d36da64a4d6dbe2011475059a07ac56b169d51a75e5c20ec11b253d2fde",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/analyze_e0.py": "de2e1de1f8e85873cdfc784f228ea1cde28c410e7d19e50799eef33d16652041"
+  },
+  "binary_sha256": "aa937ff1a74bed7052829d2f7d9c4817f702cbd370943c5f6b1498bf0d1491d3",
+  "faiss_version": "1.15.1",
+  "faiss_library_sha256": "55dd5a3f8ab134e66ac41b7509597845d41dde9763c51917fb9a56f01d2f6e01",
+  "faiss_use_cuvs": false,
+  "faiss_useFloat16": false,
+  "compile_flags": [
+    "-O3",
+    "-std=c++17",
+    "--fmad=false",
+    "-arch=sm_120"
+  ],
+  "gpu": "7, GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603, NVIDIA RTX PRO 6000 Blackwell Server Edition, 590.48.01",
+  "topology": "\t\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tGPU4\tGPU5\tGPU6\tGPU7\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\tNODE\tSYS\tSYS\tSYS\tSYS\tSYS\t0-15,64-79\t0\t\tN/A\nGPU1\tNODE\t X \tNODE\tSYS\tSYS\tSYS\tSYS\tSYS\t0-15,64-79\t0\t\tN/A\nGPU2\tNODE\tNODE\t X \tSYS\tSYS\tSYS\tSYS\tSYS\t0-15,64-79\t0\t\tN/A\nGPU3\tSYS\tSYS\tSYS\t X \tSYS\tSYS\tSYS\tSYS\t16-31,80-95\t1\t\tN/A\nGPU4\tSYS\tSYS\tSYS\tSYS\t X \tNODE\tNODE\tSYS\t32-47,96-111\t2\t\tN/A\nGPU5\tSYS\tSYS\tSYS\tSYS\tNODE\t X \tNODE\tSYS\t32-47,96-111\t2\t\tN/A\nGPU6\tSYS\tSYS\tSYS\tSYS\tNODE\tNODE\t X \tSYS\t32-47,96-111\t2\t\tN/A\nGPU7\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t X \t48-63,112-127\t3\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_Dec_16_07:23:41_PM_PST_2025\nCuda compilation tools, release 13.1, V13.1.115\nBuild cuda_13.1.r13.1/compiler.37061995_0\n",
+  "nsys": "NVIDIA Nsight Systems version 2025.5.2.266-255236693005v0\n",
+  "clean_schedule": [
+    [
+      "O_BOUND",
+      "O_MASK",
+      "STAR_SCAN",
+      "STAR_MASK",
+      "FAISS_FLAT"
+    ],
+    [
+      "O_MASK",
+      "STAR_SCAN",
+      "STAR_MASK",
+      "FAISS_FLAT",
+      "O_BOUND"
+    ],
+    [
+      "STAR_SCAN",
+      "STAR_MASK",
+      "FAISS_FLAT",
+      "O_BOUND",
+      "O_MASK"
+    ],
+    [
+      "STAR_MASK",
+      "FAISS_FLAT",
+      "O_BOUND",
+      "O_MASK",
+      "STAR_SCAN"
+    ]
+  ],
+  "clean_processes": 20,
+  "Q_T": 2,
+  "depth": 4,
+  "seed_M": 4096,
+  "source_changes": "only runtime cutoff materialization and post-timer diagnostic entry; original kernels unchanged",
+  "preserved_previous_gate": "STOP_CURRENT_KNN_PATH",
+  "setup_file_hashes": {
+    "/home/data/wangxuran/tmp/gts_arithmetic_path_boundary_20260928/data/GIST/1000000/fixtures/data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/GIST.index": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/seeds_1000000.i32": "1ff926834e564b75a887714ee3a961544440b33a55b41749b8e42c36e3dd1d67",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/GIST_pilot32.qid": "5857859ff9e0ba524e6a03733b3d94485c7f52b19919ab7e1e86296910f13941",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/fixtures/GIST_dev128.qid": "9ce0c24bede5a0b8d05facb38903160ad38ba67ca49b226cc72dec584bb544ef",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/opt_knn_bench": "1a6a63ecd452dda0b67ab6140e394a60c21b9f04280e4643f00b7749a53d0e92",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/run_locked.py": "c9dffe68de94141feb5ced016bc347524f7f94ef41611eecc9c63f550b0ee7e4",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/native_knn.py": "9ede21afaf3ec7fe468f5ccdcf052774a5885f8d8e97d9c44e6a7df56fe16cc4",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/qualification.py": "f2f87a09c215f80dfbea23e6412c0979e051e35d1aba34d18f7ff4f5e9496113",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/native_ivf.py": "23abd847d013c143cee82a5abc3ec87f1fa3305934ad6a5c8c306a4352daf27b",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/headroom_count.cuh": "e1d49888f17538d7e18b7dae6b4346f1c4a91bc6f4f0e48141dd227cda1bdf3b",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/run_e0.py": "4559e323019ad636f5fbc98e3224b93ad5c184b75acd124278a2d8da59aabc58",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/prepare_source.py": "8ebd48c828809684cc970d0deb33806a9c13d353b631d85a12abede9e22c720c",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/headroom_bench.cu": "2575fd03d600b52b6cba9942e91c1879409fa16b1fa84f73760a5d3e41f103a9",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/CONTRACT.yaml": "5facad1ccf06586f982832b96968c5d95baa79443e967dab3c614c0daf2221d4",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/PLAN.md": "8d7a5cf8bef98f1e0eab11d670dfc5086943f361e97b75d2fa6fda269c4ca9fa",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/unified_knn_e2e_20261003/knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/unified_knn_e2e_20261003/knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/unified_knn_e2e_20261003/knn_select.cuh": "3f3f3d36da64a4d6dbe2011475059a07ac56b169d51a75e5c20ec11b253d2fde"
+  },
+  "final_driver_files": {
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/headroom_count.cuh": "e1d49888f17538d7e18b7dae6b4346f1c4a91bc6f4f0e48141dd227cda1bdf3b",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/analyze_e0.py": "de2e1de1f8e85873cdfc784f228ea1cde28c410e7d19e50799eef33d16652041",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/run_e0.py": "5ac45276e856ae36a4b194480baa87a23d992217bb9020072b13967eae3e51c1",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/prepare_source.py": "8ebd48c828809684cc970d0deb33806a9c13d353b631d85a12abede9e22c720c",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/headroom_bench.cu": "2575fd03d600b52b6cba9942e91c1879409fa16b1fa84f73760a5d3e41f103a9",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/CONTRACT.yaml": "5facad1ccf06586f982832b96968c5d95baa79443e967dab3c614c0daf2221d4",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/diagnostics/search_ordering_headroom_20261003/PLAN.md": "8d7a5cf8bef98f1e0eab11d670dfc5086943f361e97b75d2fa6fda269c4ca9fa"
+  },
+  "temporary_directory": "/home/data/gts_search_ordering_tmp_20261003",
+  "qualification_driver_note": "small GPU runs completed once; receipt reconstruction after fixing NumPy scalar JSON serialization, no GPU rerun"
+}

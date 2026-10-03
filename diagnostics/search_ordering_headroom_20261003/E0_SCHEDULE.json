@@ -1,0 +1,34 @@
+{
+  "frozen_before_first_clean_process": true,
+  "schedule": [
+    [
+      "O_BOUND",
+      "O_MASK",
+      "STAR_SCAN",
+      "STAR_MASK",
+      "FAISS_FLAT"
+    ],
+    [
+      "O_MASK",
+      "STAR_SCAN",
+      "STAR_MASK",
+      "FAISS_FLAT",
+      "O_BOUND"
+    ],
+    [
+      "STAR_SCAN",
+      "STAR_MASK",
+      "FAISS_FLAT",
+      "O_BOUND",
+      "O_MASK"
+    ],
+    [
+      "STAR_MASK",
+      "FAISS_FLAT",
+      "O_BOUND",
+      "O_MASK",
+      "STAR_SCAN"
+    ]
+  ],
+  "mode_parameters_fixed": true
+}

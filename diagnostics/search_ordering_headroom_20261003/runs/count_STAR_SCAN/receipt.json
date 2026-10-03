@@ -1,0 +1,25 @@
+{
+  "gpu": "GPU-e5a0e7f5-9917-c2a1-ee8e-7282cbba2603",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/headroom_bench",
+    "/home/data/wangxuran/tmp/gts_arithmetic_path_boundary_20260928/data/GIST/1000000/fixtures/data.f32bin",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/GIST_pilot32.qid",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/GIST.index",
+    "/home/data/wangxuran/tmp/gts_unified_knn_p7_20261003/fixtures/seeds_1000000.i32",
+    "STAR_SCAN",
+    "8",
+    "32",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/evidence/count_STAR_SCAN",
+    "/home/data/wangxuran/tmp/gts_native_knn_faiss_ivf_20261003/fixtures/GIST_dev128.qid",
+    "0",
+    "/home/data/wangxuran/tmp/gts_search_ordering_headroom_20261003/oracle_u.f64"
+  ],
+  "binary_sha256": "aa937ff1a74bed7052829d2f7d9c4817f702cbd370943c5f6b1498bf0d1491d3",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 5.5529116010293365,
+  "runtime_valid": true
+}

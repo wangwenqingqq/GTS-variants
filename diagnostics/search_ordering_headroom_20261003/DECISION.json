@@ -1,0 +1,33 @@
+{
+  "phase_completed": "E0",
+  "main_clean_processes": 20,
+  "main_quality_passes": 20,
+  "primary_label": "EXECUTOR_LIMITED",
+  "secondary_labels": [
+    "BOUND_LIMITED"
+  ],
+  "O_MASK_to_STAR_MASK_improvement": {
+    "candidate_pairs": 0.02882620526204216,
+    "coordinate_updates": 0.21793827110339847,
+    "union_candidates": 0.01208219195495075,
+    "shared_coordinate_steps": 0.19811225214641193,
+    "distance_profile": 0.18997415942116858,
+    "clean_host_paired": 0.18160903271759676
+  },
+  "STAR_MASK_slowdown_vs_Flat_paired_median": 15.628762050459756,
+  "STAR_MASK_unprunable_object_fraction": 0.873325,
+  "STAR_MASK_unprunable_terminal_node_fraction": 0.873325,
+  "thresholds": {
+    "ideal_improvement_below": 0.1,
+    "ideal_slowdown_vs_Flat_above": 2.0
+  },
+  "candidate_improvement_below_0_10": true,
+  "no_headroom_interpretation": "overall NO_HEADROOM requires candidate/coordinate/distance improvements all below 10%; candidate-only failure is separately BOUND_LIMITED",
+  "validated_affordable_rebase": false,
+  "E1_status": "NOT_ENTERED_E0_STOP",
+  "E2_status": "NOT_ENTERED",
+  "E3_status": "NOT_ENTERED",
+  "models_trained": false,
+  "preserve_prior_gate": "STOP_CURRENT_KNN_PATH",
+  "scope": "fixed tree/bounds/Q_T/layout/dimension order/FP64 executor and diagnostic32 only; not a universal impossibility claim"
+}

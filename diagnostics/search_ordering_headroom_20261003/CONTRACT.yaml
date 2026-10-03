@@ -1,0 +1,210 @@
+# Design only; not an executable runner and not new GPU results.
+experiment: SEARCH_ORDERING_HEADROOM_BEFORE_TRANSFORMER
+date: '2026-10-03'
+status: DESIGN_ONLY_NOT_IMPLEMENTED_NOT_RUN
+source:
+  repo: wangwenqingqq/GTS-variants
+  ref: 36d58aeb93844aec3febd17d9f9caf17b88601f0
+  branch: experiments/unified-knn-p7-20261003
+  new_dir: diagnostics/search_ordering_headroom_20261003/
+  preserve_gate_decision: STOP_CURRENT_KNN_PATH
+  do_not_revive_executor_without_new_headroom_evidence: true
+workload:
+  dataset: GIST
+  N: 1000000
+  D: 960
+  K: 8
+  B: 32
+  queries: 32
+  query_split: already_registered_diagnostic32
+  self_inclusive: true
+  Q_T: 2
+  tree_depth: 4
+  seed_M: 4096
+  nodes_per_wave_per_query: 4
+semantics:
+  reference: ordered RN FP64 L2 squared distance
+  membership_ties: exact reference squared-distance equality, not epsilon
+  prune: valid lower bound strictly exceeds outward radius of current certified Kth squared distance
+  pending_must_cover_all_unverified_objects: true
+  retain_equal_bounds: true
+  invalid_bound: keep
+  predicted_distance_as_cutoff: false
+  candidate_ID_dedup: true
+  score_bad_fallback: LOWER_BOUND
+  stop_on_latency_budget_without_certificate: false
+E0:
+  modes:
+  - O_BOUND
+  - O_MASK
+  - STAR_SCAN
+  - STAR_MASK
+  - FAISS_FLAT
+  rounds: 4
+  processes: 20
+  oracle_U_star_offline: true
+  oracle_results_direct_output: false
+  seed_cost_retained: true
+  same_runtime_cutoff_materializer: true
+  bridge_original_without_materializer: true
+  oracle_time_not_deployable_ranking: true
+  metrics:
+  - host_ready
+  - distance_time
+  - topk_time
+  - tree_time
+  - candidate_pairs
+  - union_candidates
+  - coordinate_updates
+  - shared_coordinate_steps
+  - unprunable_objects_under_U_star
+E1:
+  type: offline_per_query_simulation_not_GPU_latency
+  orders:
+  - INDEX_ORDER
+  - LOWER_BOUND
+  - PIVOT_ORDER
+  - ORACLE_FIRST
+  same_dynamic_update_for_all: true
+  terminal_partition: complete_disjoint_C4_or_earlier_leaf_partition
+  oracle_local_topk_cache: labels_and_simulation_only
+  models_not_trained: true
+  metrics:
+  - objects_before_true_U
+  - objects_total
+  - verification_after_true_U
+  - nodes_total
+  - waves
+  - U_trace
+  oracle_first_not_globally_optimal_schedule: true
+E2:
+  conditional_on_headroom: true
+  modes:
+  - STATIC_O_MASK
+  - INDEX_DYNAMIC
+  - LB_DYNAMIC
+  - ORACLE_DYNAMIC
+  - FAISS_FLAT
+  rounds: 4
+  processes_max: 20
+  keep_Q_T_and_layout: true
+  charge_per_wave_topk_and_synchronization: true
+  oracle_schedule_diagnostic_only: true
+  queries_and_references: same_diagnostic32
+E3:
+  conditional_on_E0_E1_E2: true
+  shortlist_size: 64
+  select_per_wave: 4
+  shortlist_rule_same_for_rules_MLP_Transformer: true
+  unselected_nodes_retained: true
+  compare_global_oracle_and_shortlist_oracle_offline: true
+  simple_baseline: two-hidden-layer32 MLP with same per-node inputs and deployable global summary
+  transformer:
+    encoder_layers: 1
+    d_model: 32
+    heads: 2
+    ffn: 64
+    max_tokens: 64
+    positional_encoding: false
+  allowed_features:
+  - safe_lower_bound
+  - measured_pivot_distance
+  - log_node_size
+  - depth
+  - current_U
+  - verified_count
+  - cross_query_overlap
+  - block_occupancy
+  - frozen_cost_estimate
+  forbidden_features:
+  - ground_truth_topk_ID
+  - true_node_min_distance
+  - oracle_U_star
+  - future_latency
+  - test_labels
+  - memorized_query_ID
+  labels: state-conditional true upper-bound improvement and safely avoided work versus node verification cost
+  split_queries:
+    train: 512
+    validation: 128
+    test: 128
+  split_states_by_query_not_random_state: true
+  training_budget: one model configuration per family, no RL or architecture sweep
+  untrained_model_latency_probe: cost only, not efficacy
+timing:
+  primary: certified_host_ready
+  first_true_U: diagnostic milestone only
+  includes:
+  - input
+  - seed
+  - features
+  - ranker
+  - bound_checks
+  - task_organization
+  - distance
+  - wave_topk
+  - certificate_check
+  - all_final_K_D2H
+  - sync
+  exclude_static:
+  - index_build
+  - bound_refit
+  - layout
+  - model_training
+  - offline_oracle
+  no_profiler_in_main: true
+  paired_rounds: true
+  same_pass_sample_units: true
+correctness_tests:
+- reverse_priority
+- random_priority
+- constant_scores
+- NaN_scores
+- last_node_contains_neighbor
+- all_lower_bounds_zero
+- invalid_bounds_keep
+- ties
+- duplicates
+- seed_reappears_in_node
+- tail_batches
+- union_not_intersection
+- seed_U_zero
+- complete_pending_and_inflight_check
+gates:
+  threshold_type: engineering_triage_not_publication_standard
+  ideal_improvement_below_0_10: NO_HEADROOM_FOR_CURRENT_BOUND
+  ideal_still_over_Flat_factor: 2.0
+  ideal_slow_action: NO_TRAIN_CURRENT_EXECUTOR_UNLESS_VALIDATED_REBASE
+  only_discovery_improves_not_certificate: STOP_ORDERING_CLAIM
+  oracle_full_time_reduction_vs_best_rule_min: 0.3
+  features_and_inference_budget_fraction_of_oracle_gap_max: 0.25
+  learner_full_time_reduction_vs_best_deployable_rule_min: 0.1
+  lack_of_oracle_first_gain_not_universal_impossibility: true
+outputs:
+- SOURCE_PINS.json
+- ORACLE_MANIFEST.json
+- ideal_cutoff.csv
+- ordering_replay.csv
+- wave_trace.csv
+- latency.csv
+- model_budget.csv_if_E3
+- DECISION.md
+decision_labels:
+- NO_HEADROOM
+- BOUND_LIMITED
+- EXECUTOR_LIMITED
+- ORDERING_HEADROOM
+- SIMPLE_RULE_SUFFICIENT
+- LEARNER_NET_GAIN
+- VALIDITY_BLOCKED
+budget:
+  immediate_clean_processes: 20
+  conditional_wave_processes_max: 20
+  offline_labels_and_training: not_started_automatically
+  expand_datasets_or_K_B: false
+citations:
+  gate: https://github.com/wangwenqingqq/GTS-variants/blob/36d58aeb93844aec3febd17d9f9caf17b88601f0/diagnostics/unified_knn_gate_20261003/DECISION.md
+  code: https://github.com/wangwenqingqq/GTS-variants/blob/36d58aeb93844aec3febd17d9f9caf17b88601f0/diagnostics/unified_knn_e2e_20261003/opt_knn_bench.cu
+  learned_routing: https://proceedings.mlr.press/v97/baranchuk19a.html
+  learned_termination: https://www.pdl.cmu.edu/PDL-FTP/BigLearning/mod0246-liA_abs.shtml
+  profiling: https://docs.nvidia.com/dl-cuda-graph/troubleshooting/performance-issues.html
