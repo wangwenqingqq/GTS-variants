@@ -1,0 +1,57 @@
+[
+  {
+    "method": "GTS_ORIG",
+    "config": {},
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  },
+  {
+    "method": "O_FULL",
+    "config": {},
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  },
+  {
+    "method": "O_BOUND",
+    "config": {},
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  },
+  {
+    "method": "O_MASK",
+    "config": {},
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  },
+  {
+    "method": "FAISS_FLAT",
+    "config": {},
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  },
+  {
+    "method": "IVF_ALL",
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  },
+  {
+    "method": "CAGRA",
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "Q": 32,
+    "source_queries": "first32 seen development IDs",
+    "scope": "one post-warmup formal.query_pass; build/load/capture excluded; diagnostic only"
+  }
+]

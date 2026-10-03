@@ -1,0 +1,7526 @@
+[
+  {
+    "label": "formal_r1_GIST_k8_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_CAGRA_t256_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_CAGRA_t1024_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t1024_w1",
+    "anchors": [
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 9,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_CAGRA_t256_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 9,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k8_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 10,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.99",
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_CAGRA_t512_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_CAGRA_t1024_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t1024_w2",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 9,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_IVF_n1024_p128",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 9,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_GIST_k32_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 10,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99",
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 7,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_IVF_n1024_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_CAGRA_t64_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "itopk_size": 64,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t64_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 9,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k8_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 10,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_IVF_n4096_p256",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 9,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 10,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b1_CAGRA_t512_w2",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 11,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 1,
+    "position": 0,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_IVF_n1024_p64",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 1,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 64
+    },
+    "variant": "IVF_n1024_p64",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 1,
+    "position": 2,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 1,
+    "position": 4,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 1,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 1,
+    "position": 6,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_CAGRA_t128_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 7,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t128_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 1,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 9,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 1,
+    "position": 10,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r1_Deep_k32_b32_CAGRA_t512_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 1,
+    "position": 11,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_CAGRA_t256_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 10,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_CAGRA_t1024_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t1024_w2",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_CAGRA_t512_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.99",
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 9,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_IVF_n1024_p128",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k32_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 10,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99",
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 8,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_CAGRA_t64_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "itopk_size": 64,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t64_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_IVF_n1024_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k8_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 10,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_CAGRA_t512_w2",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 10,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b1_IVF_n4096_p256",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_CAGRA_t512_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_CAGRA_t128_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t128_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 10,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_Deep_k32_b32_IVF_n1024_p64",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 11,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 64
+    },
+    "variant": "IVF_n1024_p64",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 2,
+    "position": 0,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_CAGRA_t1024_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 1,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t1024_w1",
+    "anchors": [
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 2,
+    "position": 2,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_CAGRA_t256_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 2,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 2,
+    "position": 4,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 2,
+    "position": 6,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 2,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 2,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r2_GIST_k8_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 2,
+    "position": 9,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_CAGRA_t512_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_CAGRA_t1024_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t1024_w2",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.99",
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_IVF_n1024_p128",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k32_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 10,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99",
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 7,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 8,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_IVF_n1024_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_CAGRA_t64_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "itopk_size": 64,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t64_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k8_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 10,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_CAGRA_t512_w2",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 10,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b1_IVF_n4096_p256",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_CAGRA_t128_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t128_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_CAGRA_t512_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 10,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_Deep_k32_b32_IVF_n1024_p64",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 11,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 64
+    },
+    "variant": "IVF_n1024_p64",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_CAGRA_t256_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_CAGRA_t1024_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t1024_w1",
+    "anchors": [
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 3,
+    "position": 0,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 3,
+    "position": 2,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_CAGRA_t256_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 3,
+    "position": 4,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 3,
+    "position": 6,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 3,
+    "position": 7,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 3,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 3,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r3_GIST_k8_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 3,
+    "position": 10,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_IVF_n1024_p128",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 10,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99",
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 7,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_CAGRA_t64_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "itopk_size": 64,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t64_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_IVF_n1024_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k8_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 10,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_IVF_n4096_p256",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_CAGRA_t512_w2",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 10,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_IVF_n1024_p64",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 64
+    },
+    "variant": "IVF_n1024_p64",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_CAGRA_t512_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_CAGRA_t128_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t128_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 10,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_Deep_k32_b32_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_CAGRA_t1024_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t1024_w1",
+    "anchors": [
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_CAGRA_t256_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 9,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_CAGRA_t256_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k8_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 10,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 4,
+    "position": 0,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.99",
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 4,
+    "position": 2,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_CAGRA_t1024_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 3,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t1024_w2",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 4,
+    "position": 4,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_CAGRA_t512_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 4,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 4,
+    "position": 6,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 4,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 4,
+    "position": 8,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r4_GIST_k32_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 4,
+    "position": 9,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99",
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 7,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_CAGRA_t64_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "itopk_size": 64,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t64_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_IVF_n1024_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k8_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 10,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_CAGRA_t512_w2",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_IVF_n4096_p256",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 10,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_CAGRA_t128_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t128_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_CAGRA_t512_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_IVF_n1024_p64",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 9,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 64
+    },
+    "variant": "IVF_n1024_p64",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 10,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_Deep_k32_b32_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_CAGRA_t256_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_CAGRA_t1024_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t1024_w1",
+    "anchors": [
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 9,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_CAGRA_t256_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k8_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 10,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_CAGRA_t512_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_CAGRA_t1024_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t1024_w2",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.99",
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 9,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 5,
+    "position": 0,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 5,
+    "position": 2,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 3,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 5,
+    "position": 4,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 5,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 5,
+    "position": 6,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_IVF_n1024_p128",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 7,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 5,
+    "position": 8,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 5,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r5_GIST_k32_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 5,
+    "position": 10,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_IVF_n1024_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_CAGRA_t64_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 9,
+    "config": {
+      "itopk_size": 64,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t64_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 10,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_IVF_n4096_p256",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_CAGRA_t512_w2",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_CAGRA_t128_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 9,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t128_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 10,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b1_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_O_MASK",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_IVF_n1024_p64",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 64
+    },
+    "variant": "IVF_n1024_p64",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_O_BOUND",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_CAGRA_t512_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_IVF_ALL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_CAGRA_t256_w4",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_O_FULL",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_CAGRA_t128_w1",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 9,
+    "config": {
+      "itopk_size": 128,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t128_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 10,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k32_b32_IVF_n4096_p1024",
+    "dataset": "Deep",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 11,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_CAGRA_t1024_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t1024_w1",
+    "anchors": [
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_CAGRA_t256_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 9,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_IVF_n4096_p256",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 256
+    },
+    "variant": "IVF_n4096_p256",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_CAGRA_t256_w4",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 9,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t256_w4",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k8_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 10,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.99",
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_CAGRA_t1024_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t1024_w2",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_CAGRA_t512_w2",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 2
+    },
+    "variant": "CAGRA_t512_w2",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b1_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 9,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_O_MASK",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_IVF_n4096_p512",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_FAISS_FLAT",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_IVF_n1024_p128",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 128
+    },
+    "variant": "IVF_n1024_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_O_BOUND",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_CAGRA_t1024_w4",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 1024,
+      "search_width": 4
+    },
+    "variant": "CAGRA_t1024_w4",
+    "anchors": [
+      "CAGRA@0.999"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_IVF_ALL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_CAGRA_t512_w1",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 7,
+    "config": {
+      "itopk_size": 512,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t512_w1",
+    "anchors": [
+      "CAGRA@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_O_FULL",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_IVF_n4096_p1024",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 9,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 1024
+    },
+    "variant": "IVF_n4096_p1024",
+    "anchors": [
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_GIST_k32_b32_GTS_ORIG",
+    "dataset": "GIST",
+    "K": 32,
+    "B": 32,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 10,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_O_MASK",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_MASK",
+    "round": 6,
+    "position": 0,
+    "config": {},
+    "variant": "O_MASK",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_IVF_n4096_p512",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 1,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 512
+    },
+    "variant": "IVF_n4096_p512",
+    "anchors": [
+      "IVF@0.999",
+      "IVF@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_FAISS_FLAT",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "FAISS_FLAT",
+    "round": 6,
+    "position": 2,
+    "config": {},
+    "variant": "FAISS_FLAT",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_IVF_n4096_p128",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_APPROX",
+    "round": 6,
+    "position": 3,
+    "config": {
+      "nlist": 4096,
+      "nprobe": 128
+    },
+    "variant": "IVF_n4096_p128",
+    "anchors": [
+      "IVF@0.99"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_O_BOUND",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_BOUND",
+    "round": 6,
+    "position": 4,
+    "config": {},
+    "variant": "O_BOUND",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_CAGRA_t256_w1",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "CAGRA",
+    "round": 6,
+    "position": 5,
+    "config": {
+      "itopk_size": 256,
+      "search_width": 1
+    },
+    "variant": "CAGRA_t256_w1",
+    "anchors": [
+      "CAGRA@0.99",
+      "CAGRA@0.999",
+      "CAGRA@1.0"
+    ]
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_IVF_ALL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "IVF_ALL",
+    "round": 6,
+    "position": 6,
+    "config": {
+      "nlist": 1024,
+      "nprobe": 1024
+    },
+    "variant": "IVF_ALL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_O_FULL",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "O_FULL",
+    "round": 6,
+    "position": 7,
+    "config": {},
+    "variant": "O_FULL",
+    "anchors": []
+  },
+  {
+    "label": "formal_r6_Deep_k8_b1_GTS_ORIG",
+    "dataset": "Deep",
+    "K": 8,
+    "B": 1,
+    "method": "GTS_ORIG",
+    "round": 6,
+    "position": 8,
+    "config": {},
+    "variant": "GTS_ORIG",
+    "anchors": []
+  }
+]

@@ -1,0 +1,1152 @@
+{
+  "state": "FROZEN_BEFORE_NEW_FINAL",
+  "selected": {
+    "GIST_k8_b1": [
+      {
+        "label": "IVF_n4096_p256",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 256
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.999",
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t256_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t1024_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.999",
+          "CAGRA@1.0"
+        ]
+      }
+    ],
+    "GIST_k8_b32": [
+      {
+        "label": "IVF_n4096_p256",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 256
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.999",
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t256_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t512_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.999"
+        ]
+      },
+      {
+        "label": "CAGRA_t1024_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@1.0"
+        ]
+      }
+    ],
+    "GIST_k32_b1": [
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.99",
+          "IVF@0.999"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p1024",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "anchors": [
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t512_w2",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 2
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t1024_w2",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 2
+        },
+        "anchors": [
+          "CAGRA@0.999"
+        ]
+      }
+    ],
+    "GIST_k32_b32": [
+      {
+        "label": "IVF_n1024_p128",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 128
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.999"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p1024",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "anchors": [
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t512_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t1024_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@0.999"
+        ]
+      }
+    ],
+    "Deep_k8_b1": [
+      {
+        "label": "IVF_n4096_p128",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 128
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.999",
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t256_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.99",
+          "CAGRA@0.999",
+          "CAGRA@1.0"
+        ]
+      }
+    ],
+    "Deep_k8_b32": [
+      {
+        "label": "IVF_n4096_p128",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 128
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n1024_p128",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 128
+        },
+        "anchors": [
+          "IVF@0.999",
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t64_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 64,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t128_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 128,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@0.999"
+        ]
+      },
+      {
+        "label": "CAGRA_t256_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@1.0"
+        ]
+      }
+    ],
+    "Deep_k32_b1": [
+      {
+        "label": "IVF_n4096_p256",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 256
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.999"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p1024",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "anchors": [
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t128_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 128,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t256_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@0.999"
+        ]
+      },
+      {
+        "label": "CAGRA_t512_w2",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 2
+        },
+        "anchors": [
+          "CAGRA@1.0"
+        ]
+      }
+    ],
+    "Deep_k32_b32": [
+      {
+        "label": "IVF_n1024_p64",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 64
+        },
+        "anchors": [
+          "IVF@0.99"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p512",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "anchors": [
+          "IVF@0.999"
+        ]
+      },
+      {
+        "label": "IVF_n4096_p1024",
+        "method": "IVF_APPROX",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "anchors": [
+          "IVF@1.0"
+        ]
+      },
+      {
+        "label": "CAGRA_t128_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 128,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@0.99"
+        ]
+      },
+      {
+        "label": "CAGRA_t256_w4",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 4
+        },
+        "anchors": [
+          "CAGRA@0.999"
+        ]
+      },
+      {
+        "label": "CAGRA_t512_w1",
+        "method": "CAGRA",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "anchors": [
+          "CAGRA@1.0"
+        ]
+      }
+    ]
+  },
+  "anchors": {
+    "GIST_k8_b1": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p256",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 256
+        },
+        "mean_pass_ms": 116.9427529675886,
+        "min_development_recall": 0.99609375
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 152.44749246630818,
+        "min_development_recall": 1.0
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 152.44749246630818,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w1",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 130.62177901156247,
+        "min_development_recall": 0.990234375
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t1024_w1",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 1
+        },
+        "mean_pass_ms": 135.30290953349322,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@1.0": {
+        "status": "frozen",
+        "variant": "CAGRA_t1024_w1",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 1
+        },
+        "mean_pass_ms": 135.30290953349322,
+        "min_development_recall": 1.0
+      }
+    },
+    "GIST_k8_b32": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p256",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 256
+        },
+        "mean_pass_ms": 36.74715547822416,
+        "min_development_recall": 0.99609375
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 70.58375852648169,
+        "min_development_recall": 1.0
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 70.58375852648169,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w4",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 4
+        },
+        "mean_pass_ms": 8.36973957484588,
+        "min_development_recall": 0.990234375
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t512_w1",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "mean_pass_ms": 12.323309550993145,
+        "min_development_recall": 0.9990234375
+      },
+      "CAGRA@1.0": {
+        "status": "frozen",
+        "variant": "CAGRA_t1024_w4",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 4
+        },
+        "mean_pass_ms": 22.20724301878363,
+        "min_development_recall": 1.0
+      }
+    },
+    "GIST_k32_b1": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 162.1587184490636,
+        "min_development_recall": 0.9990234375
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 162.1587184490636,
+        "min_development_recall": 0.9990234375
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p1024",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 239.44103153189644,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t512_w2",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 2
+        },
+        "mean_pass_ms": 127.91678856592625,
+        "min_development_recall": 0.996826171875
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t1024_w2",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 2
+        },
+        "mean_pass_ms": 144.4565049605444,
+        "min_development_recall": 0.999267578125
+      },
+      "CAGRA@1.0": {
+        "status": "unreachable"
+      }
+    },
+    "GIST_k32_b32": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n1024_p128",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 128
+        },
+        "mean_pass_ms": 48.502465011551976,
+        "min_development_recall": 0.991455078125
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 70.97466749837622,
+        "min_development_recall": 0.9990234375
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p1024",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 131.65206351550296,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t512_w1",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "mean_pass_ms": 12.319437984842807,
+        "min_development_recall": 0.996826171875
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t1024_w4",
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 4
+        },
+        "mean_pass_ms": 22.077229514252394,
+        "min_development_recall": 0.999267578125
+      },
+      "CAGRA@1.0": {
+        "status": "unreachable"
+      }
+    },
+    "Deep_k8_b1": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p128",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 128
+        },
+        "mean_pass_ms": 25.561555055901408,
+        "min_development_recall": 0.9931640625
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 31.187705462798476,
+        "min_development_recall": 1.0
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 31.187705462798476,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w1",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 111.13489349372685,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w1",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 111.13489349372685,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@1.0": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w1",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 111.13489349372685,
+        "min_development_recall": 1.0
+      }
+    },
+    "Deep_k8_b32": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p128",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 128
+        },
+        "mean_pass_ms": 1.5805074945092201,
+        "min_development_recall": 0.9931640625
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n1024_p128",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 128
+        },
+        "mean_pass_ms": 3.0999495065771043,
+        "min_development_recall": 1.0
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n1024_p128",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 128
+        },
+        "mean_pass_ms": 3.0999495065771043,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t64_w1",
+        "config": {
+          "itopk_size": 64,
+          "search_width": 1
+        },
+        "mean_pass_ms": 3.252454975154251,
+        "min_development_recall": 0.994140625
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t128_w4",
+        "config": {
+          "itopk_size": 128,
+          "search_width": 4
+        },
+        "mean_pass_ms": 3.3652015263214707,
+        "min_development_recall": 0.9990234375
+      },
+      "CAGRA@1.0": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w1",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 3.7099054316058755,
+        "min_development_recall": 1.0
+      }
+    },
+    "Deep_k32_b1": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p256",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 256
+        },
+        "mean_pass_ms": 30.330387002322823,
+        "min_development_recall": 0.996337890625
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 37.11187053704634,
+        "min_development_recall": 0.99951171875
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p1024",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 51.014952070545405,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t128_w4",
+        "config": {
+          "itopk_size": 128,
+          "search_width": 4
+        },
+        "mean_pass_ms": 104.15305703645572,
+        "min_development_recall": 0.9951171875
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w4",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 4
+        },
+        "mean_pass_ms": 105.85246997652575,
+        "min_development_recall": 0.999267578125
+      },
+      "CAGRA@1.0": {
+        "status": "frozen",
+        "variant": "CAGRA_t512_w2",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 2
+        },
+        "mean_pass_ms": 121.7038125032559,
+        "min_development_recall": 1.0
+      }
+    },
+    "Deep_k32_b32": {
+      "IVF@0.99": {
+        "status": "frozen",
+        "variant": "IVF_n1024_p64",
+        "config": {
+          "nlist": 1024,
+          "nprobe": 64
+        },
+        "mean_pass_ms": 2.216301974840462,
+        "min_development_recall": 0.990234375
+      },
+      "IVF@0.999": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p512",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 4.039890016429126,
+        "min_development_recall": 0.99951171875
+      },
+      "IVF@1.0": {
+        "status": "frozen",
+        "variant": "IVF_n4096_p1024",
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 7.347025559283793,
+        "min_development_recall": 1.0
+      },
+      "CAGRA@0.99": {
+        "status": "frozen",
+        "variant": "CAGRA_t128_w1",
+        "config": {
+          "itopk_size": 128,
+          "search_width": 1
+        },
+        "mean_pass_ms": 3.351614053826779,
+        "min_development_recall": 0.9951171875
+      },
+      "CAGRA@0.999": {
+        "status": "frozen",
+        "variant": "CAGRA_t256_w4",
+        "config": {
+          "itopk_size": 256,
+          "search_width": 4
+        },
+        "mean_pass_ms": 3.474553523119539,
+        "min_development_recall": 0.9990234375
+      },
+      "CAGRA@1.0": {
+        "status": "frozen",
+        "variant": "CAGRA_t512_w1",
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "mean_pass_ms": 3.7858334835618734,
+        "min_development_recall": 1.0
+      }
+    }
+  },
+  "diagnostic_best": {
+    "GIST_k8_b1": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 152.44749246630818,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 1
+        },
+        "mean_pass_ms": 135.30290953349322,
+        "min_development_recall": 1.0
+      }
+    },
+    "GIST_k8_b32": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 70.58375852648169,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 4
+        },
+        "mean_pass_ms": 22.20724301878363,
+        "min_development_recall": 1.0
+      }
+    },
+    "GIST_k32_b1": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 239.44103153189644,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 2
+        },
+        "mean_pass_ms": 144.4565049605444,
+        "min_development_recall": 0.999267578125
+      }
+    },
+    "GIST_k32_b32": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 131.65206351550296,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 1024,
+          "search_width": 4
+        },
+        "mean_pass_ms": 22.077229514252394,
+        "min_development_recall": 0.999267578125
+      }
+    },
+    "Deep_k8_b1": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 512
+        },
+        "mean_pass_ms": 31.187705462798476,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 111.13489349372685,
+        "min_development_recall": 1.0
+      }
+    },
+    "Deep_k8_b32": {
+      "IVF": {
+        "config": {
+          "nlist": 1024,
+          "nprobe": 128
+        },
+        "mean_pass_ms": 3.0999495065771043,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 256,
+          "search_width": 1
+        },
+        "mean_pass_ms": 3.7099054316058755,
+        "min_development_recall": 1.0
+      }
+    },
+    "Deep_k32_b1": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 51.014952070545405,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 512,
+          "search_width": 2
+        },
+        "mean_pass_ms": 121.7038125032559,
+        "min_development_recall": 1.0
+      }
+    },
+    "Deep_k32_b32": {
+      "IVF": {
+        "config": {
+          "nlist": 4096,
+          "nprobe": 1024
+        },
+        "mean_pass_ms": 7.347025559283793,
+        "min_development_recall": 1.0
+      },
+      "CAGRA": {
+        "config": {
+          "itopk_size": 512,
+          "search_width": 1
+        },
+        "mean_pass_ms": 3.7858334835618734,
+        "min_development_recall": 1.0
+      }
+    }
+  },
+  "identity": {
+    "state": "STREAM_ORDER_FIXED_QUALIFICATION_PENDING",
+    "baseline_commit": "957ccf0b3592cebf2aeb49678a58f2c9379ed363",
+    "optimization_assets_commit": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+    "optimized_implementation_commit": "d65c6e41effad67dde8ae1f1f68e656562607817",
+    "upstream_gts_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+    "gpu": "$SELECTED_GPU_UUID, NVIDIA RTX PRO 6000 Blackwell Server Edition, 590.48.01, 97887 MiB",
+    "numa_node": 3,
+    "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_Dec_16_07:23:41_PM_PST_2025\nCuda compilation tools, release 13.1, V13.1.115\nBuild cuda_13.1.r13.1/compiler.37061995_0",
+    "compile_optimized": "nvcc -O3 -std=c++17 -arch=sm_120 --fmad=false -lineinfo opt_knn_bench.cu",
+    "compile_original": "nvcc -O3 -std=c++17 -arch=sm_120 -lineinfo -I$BASE/gts/adapted/include gts_bench_p7.cu",
+    "binaries": {
+      "opt_knn_bench": "1a6a63ecd452dda0b67ab6140e394a60c21b9f04280e4643f00b7749a53d0e92",
+      "gts_bench_p7": "23d9e4afb6d321b618cddc70482a5ca51170ada9328a9eb94764312469e0dfdd"
+    },
+    "datasets": {
+      "GIST": {
+        "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+        "cache_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0"
+      },
+      "Deep": {
+        "data_sha256": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+        "cache_sha256": "94d6faf28da8eb159d248715f1c35ec7f7204743b80e0086248adc3f353696e2"
+      }
+    },
+    "original_adapted_headers": {
+      "config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+      "search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+      "tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+      "update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62"
+    },
+    "faiss": {
+      "version": "1.15.1",
+      "compile_options": "OPTIMIZE GPU ",
+      "shared_library_sha256": "55dd5a3f8ab134e66ac41b7509597845d41dde9763c51917fb9a56f01d2f6e01",
+      "use_cuvs": false
+    },
+    "cupy_version": "14.1.0",
+    "numpy_version": "2.5.2",
+    "revision": "R2",
+    "query_transfer_order": "cudaMemcpyAsync H2D on the same explicit stream before cudaGraphLaunch; same-stream final-K D2H and cudaStreamSynchronize"
+  },
+  "static_index_sha256": {
+    "cagra_n1000000_d96.index": "7e798051189128d0d94032ecc34f6731840519fa7902ddb4948097896b3f0f74",
+    "cagra_n1000000_d960.index": "0599c05265fe278ad01813becd828faa6e1de61f72db8b829c6ae15f3d5f72ec",
+    "ivf_rows1000000_d960_n1024_trained.index": "d14e0d22f3ff1050ab4dce95f0bb3dabdd769388208dd90610ce463014398600",
+    "ivf_rows1000000_d960_n4096_trained.index": "0d8d9649c58f49dc77f2a026510821487fc20e77f1b1a59d4d49b74e0adfcfc2",
+    "ivf_rows1000000_d96_n1024_trained.index": "1c0e288ca46d205407cb66abd65b41280b994ed48c20e3eaf2a99692ac0862b7",
+    "ivf_rows1000000_d96_n4096_trained.index": "aa08b2cc6ccb5204a1feaa75ff1872e8d1b58bbf72f9d2d44ef20ede255bb6a3"
+  },
+  "source_sha256": {
+    "analyze.py": "a043c8a5ebb9f8d88a8630d4f5937897a95a4c41a070cc0b3c30fb3d2978c06b",
+    "analyze_profiles.py": "2b92ceae2d34c2009e725c2567c870f26b23dd650aef8a85a72d7990dbd8b105",
+    "campaign.py": "92616117031b878f3d0a23984aee140aa489e9c5d653f27f80c784d7aaee9dc2",
+    "develop.py": "59ca537d03db88fa87a33afcdf4560b66c13d3c1a32352f9808890857451e553",
+    "freeze_config.py": "741e668cb105eab0fdd20e32bc28a3ffbd96a62beac1012d3df76223d6d0ea28",
+    "freeze_queries.py": "b4bceff13fbfff5f52658b1f8cfaf47d2593cf3a82f6880b799f43ee93956cc8",
+    "gts_bench_p7.cu": "dad31dcebdb442dc4c5c00b66f19d852dbf8be6c897548123d49a6c2b54b1cf3",
+    "knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+    "knn_select.cuh": "3f3f3d36da64a4d6dbe2011475059a07ac56b169d51a75e5c20ec11b253d2fde",
+    "knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+    "native_knn.py": "9ede21afaf3ec7fe468f5ccdcf052774a5885f8d8e97d9c44e6a7df56fe16cc4",
+    "opt_knn_bench.cu": "29349d546619aba227aafb1c74cf80cc9eed88f1ab691bfa68208eb68aa5d2a9",
+    "pipeline.py": "6e6e392ced23903877a7fa572a88512ea5a389786d497ec9d8104c529fb72d88",
+    "prepare_small.py": "20b21ac577787be13b42faeddcd5bf207d206e43f23606d1582bb45f86bf6ed3",
+    "profile_queries.py": "872ead628d80ed018f42523213e07ee82e82b4a9530d37cfb02c2590273ac422",
+    "qualification.py": "f2f87a09c215f80dfbea23e6412c0979e051e35d1aba34d18f7ff4f5e9496113",
+    "run_locked.py": "c9dffe68de94141feb5ced016bc347524f7f94ef41611eecc9c63f550b0ee7e4",
+    "run_sanitizers.py": "3568d19e98d4490f9fb0a7c3a994d9dc70810ce41605733e4fb6afd284358b57"
+  },
+  "warmup": "two first development batches; original adapter changed only to use these IDs",
+  "index_policy": "CAGRA serialized full dataset and graph frozen; IVF trained empty index frozen, full index serialized hash each process; Flat rebuilt and hashed"
+}

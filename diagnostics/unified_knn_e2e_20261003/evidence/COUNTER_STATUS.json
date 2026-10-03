@@ -1,0 +1,127 @@
+[
+  {
+    "method": "GTS_ORIG",
+    "status": "failed",
+    "runtime_valid": false,
+    "metrics": [
+      "dram__bytes_op_read.sum",
+      "dram__bytes_op_write.sum",
+      "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum",
+      "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum",
+      "smsp__sass_thread_inst_executed_op_dadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dfma_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum"
+    ],
+    "clock_control": "none",
+    "cache_control": "none",
+    "Q": 32,
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "query_set": "first32 seen development IDs",
+    "scope": "one post-warmup distance kernel; separate diagnostic, never formal latency",
+    "selection": [
+      "--nvtx",
+      "--nvtx-include",
+      "formal.query_pass/"
+    ],
+    "stdout_sha256": "011fe7811305421fff895a92c052b4f0dacb444f170a4a38e84cb1765678c753",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "method": "O_FULL",
+    "status": "failed",
+    "runtime_valid": false,
+    "metrics": [
+      "dram__bytes_op_read.sum",
+      "dram__bytes_op_write.sum",
+      "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum",
+      "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum",
+      "smsp__sass_thread_inst_executed_op_dadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dfma_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum"
+    ],
+    "clock_control": "none",
+    "cache_control": "none",
+    "Q": 32,
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "query_set": "first32 seen development IDs",
+    "scope": "one post-warmup distance kernel; separate diagnostic, never formal latency",
+    "selection": [
+      "--launch-skip",
+      "2"
+    ],
+    "stdout_sha256": "011fe7811305421fff895a92c052b4f0dacb444f170a4a38e84cb1765678c753",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "method": "O_BOUND",
+    "status": "failed",
+    "runtime_valid": false,
+    "metrics": [
+      "dram__bytes_op_read.sum",
+      "dram__bytes_op_write.sum",
+      "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum",
+      "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum",
+      "smsp__sass_thread_inst_executed_op_dadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dfma_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum"
+    ],
+    "clock_control": "none",
+    "cache_control": "none",
+    "Q": 32,
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "query_set": "first32 seen development IDs",
+    "scope": "one post-warmup distance kernel; separate diagnostic, never formal latency",
+    "selection": [
+      "--launch-skip",
+      "2"
+    ],
+    "stdout_sha256": "011fe7811305421fff895a92c052b4f0dacb444f170a4a38e84cb1765678c753",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "method": "O_MASK",
+    "status": "failed",
+    "runtime_valid": false,
+    "metrics": [
+      "dram__bytes_op_read.sum",
+      "dram__bytes_op_write.sum",
+      "l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum",
+      "l1tex__t_requests_pipe_lsu_mem_global_op_ld.sum",
+      "smsp__sass_thread_inst_executed_op_dadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_dfma_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum",
+      "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum"
+    ],
+    "clock_control": "none",
+    "cache_control": "none",
+    "Q": 32,
+    "dataset": "GIST",
+    "K": 8,
+    "B": 32,
+    "query_set": "first32 seen development IDs",
+    "scope": "one post-warmup distance kernel; separate diagnostic, never formal latency",
+    "selection": [
+      "--launch-skip",
+      "2"
+    ],
+    "stdout_sha256": "011fe7811305421fff895a92c052b4f0dacb444f170a4a38e84cb1765678c753",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

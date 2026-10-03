@@ -1,15 +1,18 @@
 {
-  "state": "R2_QUALIFIED_FORMAL_PENDING_R1_INVALIDATED",
-  "policy": "whitelisted JSON; hardware UUID redacted; raw receipts/traces preserved remotely",
+  "state": "R2_COMPLETE_516_PROCESSES",
+  "policy": "Whitelisted JSON only. Raw GPU admissions, outputs, traces and failed runs remain under $REMOTE_TMP/gts_unified_knn_p7_20261003; paths/UUID redacted without changing measured values. R1 formal timings invalidated, not combined.",
   "files": {
     "IDENTITY.json": {
+      "raw_sha256": "ef65a9450b5441452153fd9248d35c7cd774d386fb6272f3410b3a363f11307c",
       "public_sha256": "cf54e99e2899a9e1bbc12b8833db2bce6b36480f35b2ba04e48ac2e6982f511b"
     },
     "PILOT.json": {
-      "public_sha256": "b422215bfe31aae230721d70a7521eabbdfd6be096d1728ae357b811ade8995e"
+      "raw_sha256": "f8d4e1515b5028ce0cd5b69bf291c5ed00d120e3c43a61831c43a8599e6a5b62",
+      "public_sha256": "f8d4e1515b5028ce0cd5b69bf291c5ed00d120e3c43a61831c43a8599e6a5b62"
     },
     "PILOT_SCHEDULE.json": {
-      "public_sha256": "e1eb6fa80106cd6ee05ef6ca009637cbcb93f7779e8940f0d38320ef6eb5f94c"
+      "raw_sha256": "f207e61943598b53431ee00e17f600297558b72cc1e7ea85831807b1b37ad8a1",
+      "public_sha256": "f207e61943598b53431ee00e17f600297558b72cc1e7ea85831807b1b37ad8a1"
     },
     "QUALIFICATION.json": {
       "public_sha256": "7ab25095c0a423f03032971639724cb670ee66937fd045427f121c26d5d046f5"
@@ -34,6 +37,78 @@
     },
     "revision_r1/SANITIZER.json": {
       "public_sha256": "97085dd8af19d93b0a737e06593e7eecbc47a352d6894920fcce2c29551cde62"
+    },
+    "SUMMARY.json": {
+      "raw_sha256": "b1acc949dac4643bbe3352f56752a109e1ecfafa10dff6e32d1cedee9e6c0618",
+      "public_sha256": "b1acc949dac4643bbe3352f56752a109e1ecfafa10dff6e32d1cedee9e6c0618"
+    },
+    "FORMAL.json": {
+      "raw_sha256": "7214c1e60e7da8e7f9631d43f6307ed8d98d806f46a675a1cabdcf009a5b3489",
+      "public_sha256": "7214c1e60e7da8e7f9631d43f6307ed8d98d806f46a675a1cabdcf009a5b3489"
+    },
+    "FORMAL_SCHEDULE.json": {
+      "raw_sha256": "445d513291244423903a80c2da776e47c49a49a244d6ea09da034ee27aa52f9f",
+      "public_sha256": "445d513291244423903a80c2da776e47c49a49a244d6ea09da034ee27aa52f9f"
+    },
+    "TRACE_SUMMARY.json": {
+      "raw_sha256": "7bafad9791dd36f08c076f9489c482f4e8d161d640b1abf449a6ce70b1640457",
+      "public_sha256": "7bafad9791dd36f08c076f9489c482f4e8d161d640b1abf449a6ce70b1640457"
+    },
+    "PROFILE_RUNS.json": {
+      "raw_sha256": "09e149481a6f7b090ac349e15fdaf65522259394f42088a12702a2cb8f00004f",
+      "public_sha256": "09e149481a6f7b090ac349e15fdaf65522259394f42088a12702a2cb8f00004f"
+    },
+    "COMPLETE.json": {
+      "raw_sha256": "513711feee6d71b9fbc29797b24d10b18ec541eb26134dcc19d67a894d051886",
+      "public_sha256": "513711feee6d71b9fbc29797b24d10b18ec541eb26134dcc19d67a894d051886"
+    },
+    "COUNTER_STATUS.json": {
+      "raw_sha256": "ca9e881fa8dc6552d03b3a0e8a8dedc480e5bf762e3fe47afd110b3e5fde75dc",
+      "public_sha256": "ca9e881fa8dc6552d03b3a0e8a8dedc480e5bf762e3fe47afd110b3e5fde75dc"
+    },
+    "SELF_SLOTS.json": {
+      "raw_sha256": "d1eecd2a09748a261446e915a6e502955082538c23444b18cd993484e2508387",
+      "public_sha256": "d1eecd2a09748a261446e915a6e502955082538c23444b18cd993484e2508387"
+    },
+    "INDEX_VARIATION.json": {
+      "raw_sha256": "609179dd78892595c86aa6eae58233b81279f7fcc84a70ce7900429d6c9e3e1c",
+      "public_sha256": "609179dd78892595c86aa6eae58233b81279f7fcc84a70ce7900429d6c9e3e1c"
+    },
+    "DEV_GIST_IVF.json": {
+      "raw_sha256": "84392b430f20c12b09837aa9e248b8f43a3449ea96885ff078e12e87ddf306e2",
+      "public_sha256": "84392b430f20c12b09837aa9e248b8f43a3449ea96885ff078e12e87ddf306e2"
+    },
+    "DEV_Deep_IVF.json": {
+      "raw_sha256": "0f38406c8939458992d589658eccf33fecaa88619253f21a768a3f1659ff56c8",
+      "public_sha256": "0f38406c8939458992d589658eccf33fecaa88619253f21a768a3f1659ff56c8"
+    },
+    "DEV_GIST_CAGRA.json": {
+      "raw_sha256": "c367ee67cfdf1bb4612c52ca824fba268c7bc1619c23f69dd6091cb9a4b0f145",
+      "public_sha256": "c367ee67cfdf1bb4612c52ca824fba268c7bc1619c23f69dd6091cb9a4b0f145"
+    },
+    "DEV_Deep_CAGRA.json": {
+      "raw_sha256": "ad05b4565b2db309ef9abd2ad8e1efe47d09eaef43c947f6ca168944e92ea083",
+      "public_sha256": "ad05b4565b2db309ef9abd2ad8e1efe47d09eaef43c947f6ca168944e92ea083"
+    },
+    "oracle_GIST_final256.json": {
+      "raw_sha256": "68209ad47069fc7e290b1c278b409083823174ab47506a37f7a91fa46e32b757",
+      "public_sha256": "68209ad47069fc7e290b1c278b409083823174ab47506a37f7a91fa46e32b757"
+    },
+    "oracle_Deep_final256.json": {
+      "raw_sha256": "5bd7a639194a814f441ceb87357d6058ff1422531382bab6bf5de80a0af32dcb",
+      "public_sha256": "5bd7a639194a814f441ceb87357d6058ff1422531382bab6bf5de80a0af32dcb"
+    },
+    "FROZEN_CONFIG.json": {
+      "raw_sha256": "3ef428af6546a097d44f5dc5278649ab0bf72b7be43bb6345c98b76149aece86",
+      "public_sha256": "32e02d63d9f324109d1dd0b41e6e005a03ba1b80aa3405f1145072da7cc4ce3c"
+    },
+    "QUERY_SETS.json": {
+      "raw_sha256": "4877c8b9c335ded82dec64c5b2933abd7991216b82600cb1cee93b49183de9fd",
+      "public_sha256": "4877c8b9c335ded82dec64c5b2933abd7991216b82600cb1cee93b49183de9fd"
+    },
+    "EXCLUSIONS.json": {
+      "raw_sha256": "7a9410cc556c8220f7fd56ddc702cc6d018168f6040f055187c384ae404fc985",
+      "public_sha256": "7a9410cc556c8220f7fd56ddc702cc6d018168f6040f055187c384ae404fc985"
     }
   }
 }
