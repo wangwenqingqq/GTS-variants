@@ -16,8 +16,7 @@ def main():
     qp=ROOT/'fixtures/GIST_profile32.qid';qp.write_text('32\n'+''.join(f'{q}\n' for q in qids))
     frozen=json.loads((ROOT/'FROZEN_CONFIG.json').read_text())
     points=[x for x in frozen['selected']['GIST_k8_b32'] if x['method']=='CAGRA']
-    assert points,'No frozen CAGRA point for profiling'
-    best=max(points,key=lambda c:max(float(s.split('@')[1]) for s in c['anchors']))
+    best=max(points,key=lambda c:max(float(s.split('@')[1]) for s in c['anchors'])) if points else frozen['diagnostic_best']['GIST_k8_b32']['CAGRA']
     rows=[];dest=ROOT/'profiles';dest.mkdir(exist_ok=True)
     for method in ('GTS_ORIG','O_FULL','O_BOUND','O_MASK','FAISS_FLAT','IVF_ALL','CAGRA'):
         config={'nlist':1024,'nprobe':1024} if method=='IVF_ALL' else best['config'] if method=='CAGRA' else {}

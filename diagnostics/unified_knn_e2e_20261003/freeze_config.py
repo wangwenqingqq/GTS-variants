@@ -9,11 +9,11 @@ from native_knn import sha
 ROOT=Path(__file__).resolve().parent
 
 def main():
-    selected={};anchors={}
+    selected={};anchors={};diagnostic={}
     for dataset in ('GIST','Deep'):
         for k in (8,32):
             for b in (1,32):
-                shape=f'{dataset}_k{k}_b{b}';chosen={};anchors[shape]={}
+                shape=f'{dataset}_k{k}_b{b}';chosen={};anchors[shape]={};diagnostic[shape]={}
                 for family in ('IVF','CAGRA'):
                     rows=json.loads((ROOT/f'DEV_{dataset}_{family}.json').read_text());groups={}
                     for row in rows:
@@ -34,10 +34,11 @@ def main():
                         chosen.setdefault(label,{'label':label,'method':'IVF_ALL' if full else 'IVF_APPROX' if family=='IVF' else 'CAGRA',
                                                'config':config,'anchors':[]})['anchors'].append(key)
                         anchors[shape][key]={'status':'frozen','variant':label,**point}
+                    if candidates:diagnostic[shape][family]=max(candidates,key=lambda c:(c['min_development_recall'],-c['mean_pass_ms']))
                 selected[shape]=list(chosen.values())
     identity=json.loads((ROOT/'IDENTITY.json').read_text())
     assert identity['optimized_implementation_commit']
-    frozen={'state':'FROZEN_BEFORE_NEW_FINAL','selected':selected,'anchors':anchors,'identity':identity,
+    frozen={'state':'FROZEN_BEFORE_NEW_FINAL','selected':selected,'anchors':anchors,'diagnostic_best':diagnostic,'identity':identity,
             'static_index_sha256':{p.name:sha(p) for p in sorted(ROOT.glob('*.index'))},
             'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(ROOT.glob('*')) if p.suffix in ('.py','.cu','.cuh')},
             'warmup':'two first development batches; original adapter changed only to use these IDs',
