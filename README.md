@@ -24,7 +24,22 @@ No production GTS++ improvement is measured here.
 
 Four single-process original-GTS checks pass full-ID/field validation at K8,
 B1/32, GIST/Deep1M and32 already-seen queries. This is a baseline-only pilot;
-an optimized GTSPP comparator has not yet been identified or measured.
+an optimized comparator had not yet been measured at that checkpoint. The
+later P7 static executor and U0 update validation are linked below; neither is
+a unified range/kNN/update keeper.
+
+## Next campaign: mandatory 10,000-query comparisons
+
+- [Detailed 10k stability and complete-workflow experiment plan](diagnostics/next_campaign_20261004/PLAN_10K.md)
+- [Later P7 static kNN evidence](https://github.com/wangwenqingqq/GTS-variants/blob/7bce3679c3e32e77fa25cf7842805926509e1412/diagnostics/unified_knn_e2e_20261003/RESULTS.md)
+- [Later original-GTS U0 update evidence](https://github.com/wangwenqingqq/GTS-variants/blob/7bce3679c3e32e77fa25cf7842805926509e1412/diagnostics/claim_closure_20261003/RESULTS.md)
+
+The new document is **plan only**, not a completed GPU campaign. It requires
+original GTS, a qualified stable query version, native Flat, native IVF and
+native CAGRA on actual fresh10k queries, with matched B1/B32 and separately
+optimized bulk batching. It also covers range stability and every operator in
+query/insert/delete/compaction/rebuild. Static query qualification, native
+multiset updates and future new-vector arrivals remain separate contracts.
 
 ## Evidence alignment: query and update lifecycle
 
