@@ -1,0 +1,37 @@
+{
+  "query_order": "A(32 pilot)-B(32 distinct development)-A(32 pilot)",
+  "modes": [
+    {
+      "mode": "O_FULL",
+      "runtime_valid": true,
+      "A_after_B_bitwise_equal_A_before_B": true,
+      "all_queries_quality_pass": true,
+      "min_tie_aware_recall": 1.0,
+      "max_squared_distance_relative_scale1": 1.1387857039792376e-07
+    },
+    {
+      "mode": "O_BOUND",
+      "runtime_valid": true,
+      "A_after_B_bitwise_equal_A_before_B": true,
+      "all_queries_quality_pass": true,
+      "min_tie_aware_recall": 1.0,
+      "max_squared_distance_relative_scale1": 1.1387857039792376e-07
+    },
+    {
+      "mode": "O_MASK",
+      "runtime_valid": true,
+      "A_after_B_bitwise_equal_A_before_B": true,
+      "all_queries_quality_pass": true,
+      "min_tie_aware_recall": 1.0,
+      "max_squared_distance_relative_scale1": 1.1387857039792376e-07
+    },
+    {
+      "mode": "FAISS_FLAT",
+      "runtime_valid": true,
+      "A_after_B_bitwise_equal_A_before_B": true,
+      "all_queries_quality_pass": true,
+      "min_tie_aware_recall": 1.0,
+      "max_squared_distance_relative_scale1": 2.098083585018646e-05
+    }
+  ]
+}

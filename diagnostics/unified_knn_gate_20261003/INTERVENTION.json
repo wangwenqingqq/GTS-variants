@@ -1,0 +1,8 @@
+{
+  "frozen_before_integration": true,
+  "choice": "NO_INTEGRATION",
+  "target": "verify_distances",
+  "replay_candidate": "existing cuVS FP64 L2Expanded",
+  "reason": "Pairwise GPU kernels alone take >90 ms per B32 batch, far above 1.25x Faiss Flat total; kNN integration and quality are therefore not measured. Existing L2Unexpanded P5 path was slower in its native range task, but is not used as a P7 timing denominator.",
+  "counterfactual": "unchanged-rest diagnostic estimate only, not universal bound"
+}

@@ -1,0 +1,234 @@
+experiment: P7_GATE_single_component_go_no_go
+state: DESIGN_NOT_RUN
+date: '2026-10-03'
+scope: Feasibility of the current implementation on one static in-dataset exact-quality L2 kNN workload; not a universal
+  impossibility test
+repository:
+  name: wangwenqingqq/GTS-variants
+  branch: experiments/unified-knn-p7-20261003
+  snapshot: bb22a970d61076c597084cfd0196d1ba5156f31f
+  stream_fix: d65c6e41effad67dde8ae1f1f68e656562607817
+  invalidate:
+  - R1_formal
+  - pilot_v3_as_R2_evidence
+  measured_candidate_binary_sha256: null
+workload:
+  dataset: GIST
+  N: 1000000
+  D: 960
+  dtype: float32
+  K: 8
+  B: 32
+  self_inclusive: true
+  diagnostic_Q: 32
+  diagnostic_qid_source: Exact pre-existing P7 pilot32, path/hash recovered from its schedule
+  confirm_Q: 96
+  confirm_query_policy: Freeze implementation first; seeded new IDs excluding all previously seen IDs; no query-based
+    tuning
+  online_batch_wait: false
+fixed_assets:
+  layout: AoSoA32
+  query_tile: 2
+  seed_count: 4096
+  tree_depth: 4
+  seed_hash: null
+  data_hash: null
+  tree_hash: null
+  forbid_oracle_as_runtime_bound: true
+modes:
+- O_FULL
+- O_BOUND
+- O_MASK
+- FAISS_FLAT
+flat:
+  implementation: GpuIndexFlatL2 native backend
+  faiss_version: 1.15.1 (verify installed pin)
+  use_cuvs: false
+  useFloat16: false
+  stream_policy: Verify query gather, search, conversions, D2H and completion are ordered
+  numeric_mode: native; not forced to FP64
+quality:
+  per_query_tie_aware_recall: 1.0
+  require_K_unique_valid_IDs: true
+  distance_nonnegative: true
+  distance_nondecreasing: true
+  distance_finite: true
+  field_gate: abs(out_distance^2-reference_squared)<=5e-5*max(1,reference_squared)
+  report:
+  - deterministic_ID_recall
+  - pure_relative_error
+  - zero_distance_error
+  - per_query_recall
+  no_epsilon_membership_relaxation: true
+  check_every_timing_process: true
+  failure_decision: QUALITY_NOT_ALIGNED
+  test_success_is_not_universal_proof: true
+timing:
+  metric: continuous_host_ready_ms
+  warmup_batches: 2
+  warmup_policy: two fixed different development batches
+  include:
+  - query_input
+  - seed_bound_if_used
+  - tree_mask_if_used
+  - distance
+  - topk
+  - format_conversion
+  - all_final_K_D2H
+  - completion_sync
+  exclude_and_record:
+  - load
+  - static_build
+  - refit
+  - layout
+  - graph_capture
+  - oracle
+  - audit
+  - file_output
+  same_gpu_uuid: true
+  numa: Verify and inherit node3 on the same target host
+  change_foreign_jobs_or_clocks: false
+  use_profiler_time_as_speedup: false
+G1:
+  modes:
+  - O_FULL
+  - O_BOUND
+  - O_MASK
+  - FAISS_FLAT
+  rounds: 4
+  processes: 16
+  orders:
+  - - O_FULL
+    - O_BOUND
+    - FAISS_FLAT
+    - O_MASK
+  - - O_BOUND
+    - O_MASK
+    - O_FULL
+    - FAISS_FLAT
+  - - O_MASK
+    - FAISS_FLAT
+    - O_BOUND
+    - O_FULL
+  - - FAISS_FLAT
+    - O_FULL
+    - O_MASK
+    - O_BOUND
+  if_best_slowdown_le_1_25: skip replacement; run G4
+G2:
+  nsys_traces: 4
+  capture: query-only actual graph replay
+  graph_trace: node when supported; inspect graph topology
+  phases:
+  - input
+  - seed_including_seed_topk
+  - tree_mask
+  - verify
+  - final_topk
+  - delivery
+  - residual
+  max_ncu_targets: 2
+  capture_time_nvtx_not_replay_gpu_time: true
+  avoid_double_counted_API_wait: true
+  counterfactual: current_total-target_component under unchanged-rest assumption; NOT a universal lower bound
+  skip_replacement_if_optimistic_rest_gt_flat_factor: 2.0
+G3:
+  max_logical_interventions: 1
+  max_fixed_component_candidates: 2
+  choose_before_integration: selection OR distance OR no_intervention
+  selection_policy: preserve FP64 score keys; compile/smoke actual library; no cast to float; preserve legal ties
+  distance_policy: reuse an available qualified execution path; bare FP32 is diagnostic only without safe rejection/quality
+    alignment
+  apply_same_component_to_corresponding_calls_of_all_O_modes: true
+  modes:
+  - O_FULL_X
+  - O_BOUND_X
+  - O_MASK_X
+  - FAISS_FLAT
+  rounds: 3
+  processes: 12
+  gate_to_G4_best_slowdown_max: 1.25
+  allow_second_rescue_direction: false
+G4:
+  Q: 96
+  B: 32
+  modes:
+  - O_FULL_current
+  - O_BOUND_current
+  - O_MASK_current
+  - FAISS_FLAT
+  rounds: 6
+  processes: 24
+  orders_aliases:
+  - - F
+    - B
+    - M
+    - L
+  - - L
+    - M
+    - B
+    - F
+  - - B
+    - L
+    - F
+    - M
+  - - M
+    - F
+    - L
+    - B
+  - - M
+    - B
+    - L
+    - F
+  - - F
+    - L
+    - B
+    - M
+  all_three_batches_timed_and_checked: true
+decision_rules:
+  thresholds_are_preregistered_R_and_D_policy_not_scientific_constants: true
+  slowdown_direction: T_ours/T_Flat; >1 means slower
+  GO:
+    candidate_slowdown_max: 0.9
+    round_wins: 6
+    quality_required: true
+  CONDITIONAL_COMPONENT_ONLY:
+    O_MASK_slowdown_max: 1.25
+    O_BOUND_over_O_MASK_min: 1.1
+    tree_round_wins: 6
+    O_MASK_not_slower_than_O_FULL: true
+  KEEP_SCAN_DROP_TREE: Competitive scan exists but tree conditions fail
+  STOP_CURRENT_KNN_PATH: Best own path >1.25x Flat after one permitted replacement or no plausible single-component
+    path; >2x is strong stop signal
+  INCONCLUSIVE: Invalid measurement/identity/quality, or instability; do not declare algorithm impossibility
+budget:
+  max_clean_timing_processes: 52
+  max_nsight_systems_traces: 4
+  max_nsight_compute_targets: 2
+  correctness_and_sanitizer_separate: true
+  failed_runs_do_not_silently_expand_budget: true
+forbidden_expansions:
+- CAGRA_sweep
+- IVF_sweep
+- retest_original_GTS_for_go_no_go
+- new_dataset
+- K_or_B_sweep
+- tree_depth_search
+- query_reordering
+- TASK_tuning
+- new_mixed_precision_router
+- new_graph_or_tree
+- online_batching
+deliverables:
+- latency.csv
+- breakdown.csv
+- intervention.csv
+- DECISION.md
+- identity_and_quality_receipts
+preserve_evidence:
+- P0-P6_range_positive_and_negative_evidence
+- original_GTS_baseline
+- invalid_R1_records_with_labels
+- current_pilot_correctness_and_counterexamples
+note: This YAML is an experiment contract, not an executable runner. Mode suffixes _X/_current are design labels
+  until implemented.
