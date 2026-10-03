@@ -11,16 +11,20 @@ ROOT=Path(__file__).resolve().parent
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--gpu',required=True);p.add_argument('--data-root',type=Path,required=True)
-    p.add_argument('--faiss-python',required=True);p.add_argument('--cuvs-python',required=True);a=p.parse_args()
+    p.add_argument('--faiss-python',required=True);p.add_argument('--cuvs-python',required=True)
+    p.add_argument('--reuse-development',action='store_true');a=p.parse_args()
     def local(script,*args):
         subprocess.run(list(map(str,[sys.executable,ROOT/script,*args])),check=True)
     common=['--gpu',a.gpu,'--data-root',a.data_root,'--faiss-python',a.faiss_python,'--cuvs-python',a.cuvs_python]
     assert len(json.loads((ROOT/'SANITIZER.json').read_text()))==12
     qualified=json.loads((ROOT/'QUALIFICATION.json').read_text());assert len(qualified)==28
     assert all(r['quality']['coverage']['eligible_pairs_wrongly_excluded']==0 for r in qualified)
-    local('campaign.py','pilot','--tag','pilot_v3',*common)
+    local('campaign.py','pilot','--tag','pilot_v4',*common)
     for dataset in ('GIST','Deep'):
         for family in ('IVF','CAGRA'):
+            if a.reuse_development:
+                assert len(json.loads((ROOT/f'DEV_{dataset}_{family}.json').read_text()))==(104 if family=='IVF' else 120)
+                print(f'REUSE FROZEN DEVELOPMENT {dataset} {family}',flush=True);continue
             python=a.cuvs_python if family=='CAGRA' else a.faiss_python
             run(a,f'development_{dataset}_{family}',[python,ROOT/'develop.py','--dataset',dataset,'--family',family,'--data-root',a.data_root])
             print(f'DEV READY {dataset} {family}',flush=True)

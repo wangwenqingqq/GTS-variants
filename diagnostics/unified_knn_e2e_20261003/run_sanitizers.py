@@ -17,7 +17,7 @@ def main():
         reference=json.loads((ROOT/f'fixtures/cpu_small{d}.json').read_text())
         for mode in ('O_FULL','O_BOUND','O_MASK'):
             for tool in ('memcheck','synccheck'):
-                label=f'sanitize_v3_{tool}_d{d}_{mode}';out=outdir/label
+                label=f'sanitize_v4_{tool}_d{d}_{mode}';out=outdir/label
                 cmd=['/usr/local/cuda/bin/compute-sanitizer','--tool',tool,'--error-exitcode',91,ROOT/'opt_knn_bench',
                      ROOT/f'fixtures/small{d}.f32bin',ROOT/'fixtures/small33.qid',ROOT/f'fixtures/small{d}.index',
                      ROOT/'fixtures/seeds_4097.i32',mode,32,32,out,ROOT/'fixtures/small33.qid',0]

@@ -151,7 +151,7 @@ int main(int argc,char** argv)try {
     double capture_ms=ms(capture_begin);
     std::vector<int> result_ids(queries.size()*k);std::vector<float> result_dist(queries.size()*k);
     auto batch_run=[&](const int* qs,int count,int offset) {
-        ck(cudaMemcpy(query,qs,count*4,cudaMemcpyHostToDevice));
+        ck(cudaMemcpyAsync(query,qs,count*4,cudaMemcpyHostToDevice,stream));
         ck(cudaGraphLaunch(executions[count==b?0:1],stream));
         nvtxRangePushA("delivery");
         ck(cudaMemcpyAsync(result_ids.data()+size_t(offset)*k,out_ids,count*k*4,cudaMemcpyDeviceToHost,stream));
