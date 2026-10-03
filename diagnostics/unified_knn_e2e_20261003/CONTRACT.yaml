@@ -1,0 +1,341 @@
+# Design contract only. Not an implemented runner or completed GPU experiment.
+experiment: P7_unified_knn_e2e_20261003
+state: DESIGN_ONLY_NOT_IMPLEMENTED_NOT_RUN
+goal: Measure original GTS, range-derived optimized kNN, native GPU Flat/IVF and CAGRA under one actual kNN task,
+  with per-round quality and full Host-ready delivery.
+source_pins:
+  repository: wangwenqingqq/GTS-variants
+  baseline_branch: publication/gts-knn-comparisons-20261003
+  baseline_commit: 957ccf0b3592cebf2aeb49678a58f2c9379ed363
+  optimization_assets_commit: f16d09a4e8a32ab8afff3b1b92221a5e447725a0
+  upstream_gts_commit: 3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639
+  proposed_directory: diagnostics/unified_knn_e2e_20261003
+  optimized_label: OPT-KNN-P7 experimental port, not production GTS++
+  optimized_implementation_commit: null
+  optimized_binary_sha256: null
+  must_pin_before_formal: true
+  abandoned_incremental_as_substitute: false
+task:
+  type: static_self_inclusive_L2_knn
+  K:
+  - 8
+  - 32
+  B:
+  - 1
+  - 32
+  input: ready host query IDs; resident finite float32 database and prebuilt indices
+  output: exactly K distinct original int32 IDs plus nonnegative finite float32 Euclidean distances per query, nondecreasing
+    distance order
+  external_radius_input: false
+  oracle_threshold_in_timed_path: false
+  self_inclusive_means: self eligible, not forced into tied duplicate top-K
+  datasets:
+  - name: GIST
+    N: 1000000
+    D: 960
+  - name: Deep
+    N: 1000000
+    D: 96
+  transform_inputs: false
+optimized_modes:
+  O_FULL:
+    scan: full reference squared distances
+    layout: AoSoA32
+    query_tile:
+      B1: 1
+      B32: 2
+    tree: false
+    early_exit: false
+    selector: common GPU top-K, FP64 squared keys until final K
+  O_BOUND:
+    seed_mode: fixed database ID sample; actual per-query computation timed
+    tree: false
+    cutoff_type: float64 squared reference distance
+    early_check_dimensions: 32
+    reject_if: partial_sum > U_sq
+    equality: retain
+    selector: same as O_FULL
+  O_MASK:
+    seed_and_cutoff: identical to O_BOUND
+    tree_depth:
+      GIST: 4
+      Deep: 1
+    parent_pivot_reuse: only verified identical pivot ID
+    mask: preserve original AoSoA32 positions
+    early_check_dimensions: 32
+    selector: same as O_FULL
+    metric_radius_conversion: outward-safe bound covering reference-FP64 accepted points; proof plus tests required;
+      no naive float(sqrt(U_sq))
+    on_unproved_node_bound: conservatively retain node; report fallback frequency
+    C_TASK: false
+  seed:
+    M: 4096
+    effective_M: min(M,N), at least K
+    selection: uniform unique original database IDs, independent of queries and labels
+    rng_seed: 2026100308
+    persist_manifest: true
+    query_distance_and_seed_topk_in_timer: true
+    double_compute_seed_in_main_scan_allowed: true
+    append_seeds_again_to_output: false
+    dynamic_cross_block_cutoff_update: false
+  workspace:
+    full_score_matrix_allowed: true
+    B32_N1M_FP64_bytes: 256000000
+    all_modes_same_selector: true
+    cpu_full_distance_selection: false
+comparators:
+  complete_modes:
+  - GTS_ORIG
+  - O_FULL
+  - O_BOUND
+  - O_MASK
+  - FAISS_FLAT
+  - IVF_ALL
+  GTS_ORIG:
+    entry: searchIndexKnnV2 full-ID diagnostic adapter
+    MAX_H: 6
+    query_workspace_bytes: 1073741824
+    preserve_original_arithmetic_search_sort: true
+    fresh_round_measurement: true
+  FAISS_FLAT:
+    api: GpuIndexFlatL2.search
+    native_GPU: true
+    preferred_version: 1.15.1 recorded source build
+    use_cuvs: false
+    fp16_storage: false
+    empirical_quality_gate_required: true
+  IVF_ALL:
+    api: GpuIndexIVFFlat.search
+    nlist: 1024
+    nprobe: 1024
+    scan_caps: null
+    PQ: false
+    use_cuvs: false
+    participate_from_first_round: true
+    empirical_quality_gate_required: true
+  IVF_APPROX:
+    nlist_grid:
+    - 1024
+    - 4096
+    nprobe_grid:
+    - 16
+    - 64
+    - 128
+    - 256
+    - 512
+    - 1024
+    - 2048
+    legal_filter: nprobe<=nlist and actual installed backend limits
+    training_rows: 200000
+    training_seed: 2026100307
+    anchors:
+    - 0.99
+    - 0.999
+    - 1.0
+  CAGRA:
+    preferred_version: existing cuVS 26.8.1 / 26.08.01; verify actual identity
+    native_knn: true
+    graph_degree: 64
+    intermediate_graph_degree: 128
+    algo: auto
+    itopk_size_grid:
+    - 64
+    - 128
+    - 256
+    - 512
+    - 1024
+    search_width_grid:
+    - 1
+    - 2
+    - 4
+    only_supported_parameters: true
+    iteration_limits: record actual auto/default; do not impose artificially small cap
+    anchors:
+    - 0.99
+    - 0.999
+    - 1.0
+  native_vs_refined: native primary; any R>K refinement is separately named and fully timed; never pair native latency
+    with refined recall
+  topk_range_adapter: false
+quality:
+  oracle: independent full-table explicit-RN FP64 squared L2, no FMA; reference top-K and exact equal-distance kth
+    boundary IDs
+  primary: exact-boundary-tie-aware ID Recall@K
+  deterministic_recall_reported: true
+  field_bitwise_cross_library_required: false
+  field_gate: abs(delivered_euclidean**2-reference_squared) <= 5e-5*max(1,reference_squared)
+  field_gate_does_not_relax_ID_membership: true
+  field_diagnostics:
+  - absolute
+  - pure_relative_nonzero
+  - zero_distance
+  - finite
+  - nonnegative
+  - nondecreasing
+  every_round_every_shape: true
+  complete_modes_require_each_query_recall_1: true
+  tie_epsilon: null
+  empirical_100_not_algorithmic_guarantee: true
+  freeze_indices_and_hash: true
+  rebuild_if_needed: fixed rules and per-round validation; declare variation
+  sanitizer_new_optimized_paths:
+  - memcheck
+  - synccheck
+queries:
+  pilot: 32 already-seen records from preceding native-kNN final256; explicitly diagnostic
+  development: 128
+  old_final256_role: seen regression only
+  new_final_per_dataset: 256
+  new_final_seeds:
+    GIST: 2026100317
+    Deep: 2026100318
+  generate_after_freeze: true
+  exclude: all P0-P6, prior native-knn development/final and this experiment development/pilot IDs
+  same_query_membership_pairing_order: true
+  oracle_query_reordering: false
+timing:
+  primary: continuous complete256-query Host-ready pass
+  includes:
+  - actual query input/gather/conversion
+  - seed distance and seed topk
+  - tree and mask
+  - distance verification
+  - GPU topk/merge
+  - distance and ID output conversion
+  - final K D2H
+  - synchronization
+  - per-query allocations/frees
+  - any fallback
+  excludes_and_reports_separately:
+  - file I/O
+  - static layouts
+  - training/index build/load
+  - graph capture
+  - warmup
+  - oracle/audit
+  - report writes
+  timed_cpu_sort_added_offline: false
+  prefer_device_api: true
+  preserve_native_input_cost_and_report_bridge: true
+  warmup_batches: 2
+  formal_rounds: 6
+  fresh_processes: true
+  order: predeclared rotated/reversed order; exact complete-mode order table in round_order; save realized order;
+    ANN deduplicated configurations require their own balanced schedule
+  point_estimates:
+  - median pass_ms
+  - paired process log-ratio geometric mean and bootstrap95
+  - wins
+  - order split
+  bootstrap_seed: 20261003
+  bootstrap_resamples: 20000
+  auxiliary:
+  - gpu_ready_ms
+  - batch_p50_ms
+  - batch_p95_ms
+  - qps
+  - amortized_ms_per_query
+  amortized_is_request_latency: false
+  count_old_ratios_as_new_results: false
+round_order:
+- - GTS_ORIG
+  - O_FULL
+  - IVF_ALL
+  - O_BOUND
+  - FAISS_FLAT
+  - O_MASK
+- - O_FULL
+  - O_BOUND
+  - GTS_ORIG
+  - O_MASK
+  - IVF_ALL
+  - FAISS_FLAT
+- - O_BOUND
+  - O_MASK
+  - O_FULL
+  - FAISS_FLAT
+  - GTS_ORIG
+  - IVF_ALL
+- - IVF_ALL
+  - GTS_ORIG
+  - FAISS_FLAT
+  - O_FULL
+  - O_MASK
+  - O_BOUND
+- - FAISS_FLAT
+  - IVF_ALL
+  - O_MASK
+  - GTS_ORIG
+  - O_BOUND
+  - O_FULL
+- - O_MASK
+  - FAISS_FLAT
+  - O_BOUND
+  - IVF_ALL
+  - O_FULL
+  - GTS_ORIG
+phases:
+  P7_0: source identity, small all-output oracle, safe cutoff/tree correctness and sanitizer
+  P7_1:
+    dataset: GIST
+    K: 8
+    B: 32
+    Q: 32
+    rounds: 3
+    modes:
+    - GTS_ORIG
+    - O_FULL
+    - O_BOUND
+    - O_MASK
+    - FAISS_FLAT
+    - IVF_ALL
+    - CAGRA_HIGH_DIAGNOSTIC
+    query_timing_processes: 21
+    fresh_test: false
+  P7_2: two-pass development selection, freeze every implementation/config, then generate final256
+  P7_3:
+    shapes: 8
+    complete_modes: 6
+    rounds: 6
+    query_timing_processes: 288
+  P7_4:
+    families: 2
+    max_distinct_anchor_points_per_family_shape: 3
+    shapes: 8
+    rounds: 6
+    maximum_query_timing_processes: 288
+    deduplicate: true
+    unreached_anchor_is_not_filled: true
+profiles:
+  separate_from_timing: true
+  initial_shape: GIST K8 B32 first32 dev queries
+  scope: post-warmup query-only NVTX, not construction
+  stages:
+  - seed
+  - tree_mask
+  - distance
+  - topk_merge
+  - delivery
+  counters:
+  - pair_coordinate_updates
+  - logical_shared_steps
+  - warp_span
+  - DRAM_bytes
+  - memory_requests
+  - FP64_FP32_instructions
+  hardware_replay_caveat: true
+  API_wait_is_not_CPU_compute: true
+decisions:
+  no_optimized_mode: not complete; deliver pending/failure state, no comparator substitution
+  wins_GTS_loses_Flat: baseline improvement but not external leadership
+  O_MASK_loses_O_BOUND: retain historical range evidence; no new tree-in-knn advantage
+  ANN_misses_frozen_anchor: retain failure; no final tuning
+  CAGRA_empirical100_faster: report openly; distinguish empirical quality from guarantees
+  unsafe_bound: retain nodes or disable tree with explicit status, never claim safe pruning
+publication:
+  append_only_evidence: true
+  allowlist_and_redact: true
+  publish_raw_environment_or_credentials: false
+  merge_unrelated_old_history: false
+  modify_production_sources: false
+  historical_range_evidence_preserved: true
