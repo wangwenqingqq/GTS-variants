@@ -1,0 +1,43 @@
+{
+  "state": "IMPLEMENTED_QUALIFIED_NOT_FORMAL_COMPLETE",
+  "baseline_commit": "957ccf0b3592cebf2aeb49678a58f2c9379ed363",
+  "optimization_assets_commit": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+  "optimized_implementation_commit": "947b8b9bc1dd7465d6a275b4a0c9b6824c30f8c6",
+  "upstream_gts_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "gpu": "$SELECTED_GPU_UUID, NVIDIA RTX PRO 6000 Blackwell Server Edition, 590.48.01, 97887 MiB",
+  "numa_node": 3,
+  "compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Tue_Dec_16_07:23:41_PM_PST_2025\nCuda compilation tools, release 13.1, V13.1.115\nBuild cuda_13.1.r13.1/compiler.37061995_0",
+  "compile_optimized": "nvcc -O3 -std=c++17 -arch=sm_120 --fmad=false -lineinfo opt_knn_bench.cu",
+  "compile_original": "nvcc -O3 -std=c++17 -arch=sm_120 -lineinfo -I$BASE/gts/adapted/include gts_bench_p7.cu",
+  "binaries": {
+    "opt_knn_bench": "e223cf26e9f5c18962d7f7569b8210369d2f8d59cffc8f6507e9c779c00b8d23",
+    "gts_bench_p7": "23d9e4afb6d321b618cddc70482a5ca51170ada9328a9eb94764312469e0dfdd"
+  },
+  "datasets": {
+    "GIST": {
+      "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "cache_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0"
+    },
+    "Deep": {
+      "data_sha256": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd",
+      "cache_sha256": "94d6faf28da8eb159d248715f1c35ec7f7204743b80e0086248adc3f353696e2"
+    }
+  },
+  "original_adapted_headers": {
+    "config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+    "tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+    "update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62"
+  },
+  "faiss": {
+    "version": "1.15.1",
+    "compile_options": "OPTIMIZE GPU ",
+    "shared_library_sha256": "55dd5a3f8ab134e66ac41b7509597845d41dde9763c51917fb9a56f01d2f6e01",
+    "use_cuvs": false
+  },
+  "cupy_version": "14.1.0",
+  "numpy_version": "2.5.2"
+}
