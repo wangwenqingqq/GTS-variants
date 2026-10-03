@@ -1,0 +1,32 @@
+{
+  "source_entry_commit": "6f06897",
+  "configuration": "U0_ORIGINAL_OBS",
+  "command": [
+    "/usr/local/cuda-13.1/bin/nvcc",
+    "-std=c++17",
+    "-O3",
+    "-arch=sm_120",
+    "-rdc=true",
+    "-lineinfo",
+    "-Xnvlink=--ignore-host-info",
+    "-I$REMOTE_TMP/gts_claim_closure_20261003/run/observed/include",
+    "$REMOTE_TMP/gts_claim_closure_20261003/run/observed/src/main.cu",
+    "-o",
+    "$REMOTE_TMP/gts_claim_closure_20261003/run/bin/u0_original_obs"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 24.597572803497314,
+  "binary_sha256": "26afe17b5d44e295fce9a1e6c57680273177551631f488f3b01a7086a12d3d34",
+  "source_sha256": {
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/tree.cuh": "0d3f394a77f4613313aae25be457529d242a55649b4a5d8fb8518a80dfb22a6c",
+    "include/update.cuh": "26ccb6ae1388be44f841b1e672754bc94287d8c5edaa9fcc6fc90324a2d77769",
+    "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "log_sha256": "006d0d82e43d5f648c4790c5383752d002f5f61da7bb806e55e3cc268105c02a",
+  "gpu_execution": false
+}

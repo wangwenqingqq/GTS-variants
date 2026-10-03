@@ -1,0 +1,15 @@
+--- original/include/update.cuh
++++ observed/include/update.cuh
+@@ -606,6 +606,12 @@
+ 			if (cudaStatus != cudaSuccess)
+ 				fprintf(stderr, "mergeTotalResult error: %s\n", cudaGetErrorString(cudaStatus));
+ 
++
++            printf("U0_RESULT {\"step\":%d,\"qid\":%d,\"tree_size\":%d,\"buffer\":%d,\"ids\":[", i, qid_list[0], tree_size, in_size);
++            for (int u0j=0; u0j<total_result_num; ++u0j) printf("%s%d", u0j ? "," : "", total_result_id[u0j]);
++            printf("],\"distances\":[");
++            for (int u0j=0; u0j<total_result_num; ++u0j) printf("%s%.9g", u0j ? "," : "", total_result_dis[u0j]);
++            printf("]}\n"); fflush(stdout);
+ 			fprintf(fcost, "%d ", total_result_num);
+ 			fflush(fcost);
+ 

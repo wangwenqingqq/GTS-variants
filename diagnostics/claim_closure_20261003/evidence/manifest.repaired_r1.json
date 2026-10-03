@@ -1,0 +1,1476 @@
+{
+  "contract": "U0_NATIVE_LOGICAL_MULTISET_20261003",
+  "upstream": {
+    "repository": "https://github.com/ZJU-DAILY/GTS",
+    "commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+    "files": {
+      "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+      "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+      "include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+      "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+      "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+    },
+    "scope": "Eight unchanged original GTS files; observed output adapter is registered separately."
+  },
+  "observation_sha256": {
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/tree.cuh": "0d3f394a77f4613313aae25be457529d242a55649b4a5d8fb8518a80dfb22a6c",
+    "include/update.cuh": "26ccb6ae1388be44f841b1e672754bc94287d8c5edaa9fcc6fc90324a2d77769",
+    "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "harness_sha256": "8843ace14a468e03a9ff7721666e100f6a89c632a23de740d8f0dc7c06fd68ac",
+  "cases": {
+    "query_only": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "0624f8063fb81cb310103ccb0395dced30778db37eefd5ecc80db8ee2bbf8f5f",
+      "operations": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 0,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1
+        },
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1
+        },
+        {
+          "step": 2,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1
+        }
+      ],
+      "query_count": 3,
+      "builds": 1
+    },
+    "all_include": {
+      "n": 1000,
+      "radius": 10000,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "03825f6d566b55f989f92de99922fba862067ad9a90d558258fecfc42d8d1321",
+      "operations": [
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 0,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1000
+        }
+      ],
+      "query_count": 1,
+      "builds": 1
+    },
+    "buffer_insert": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "cc000494d0212b9ca798a24966716a304bce3e93a3888860199364687bbdc5bd",
+      "operations": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 0,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1
+        },
+        {
+          "step": 2,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 2
+        }
+      ],
+      "query_count": 2,
+      "builds": 1
+    },
+    "base_delete": {
+      "n": 1000,
+      "radius": 10000,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "a155bac7b67c0f103fcedd6bef29688dab8fa67c2fe9d2e32eb76f991febf0a8",
+      "operations": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 0,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1000
+        },
+        {
+          "step": 2,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 999,
+          "expected_count": 999
+        }
+      ],
+      "query_count": 2,
+      "builds": 1
+    },
+    "buffer_delete": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "0c35f3d2f9c8a03a25a2b664360cf570d08719382d23ccf592ba91d49e3354a8",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1000
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 2
+        },
+        {
+          "step": 3,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1
+        }
+      ],
+      "query_count": 2,
+      "builds": 1
+    },
+    "rebuild_no_prior_buffer_query": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "b9b840dbbb934e8b1a99870086ceff50be1ddf9423d33a18da97e3d2bde821da",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 10,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        }
+      ],
+      "query_count": 1,
+      "builds": 2
+    },
+    "rebuild_after_buffer_query": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "b3a7bcbc59112e4d35d383aaf53da8fdb832aa1881928e6799059299ce31f251",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 2
+        },
+        {
+          "step": 11,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        },
+        {
+          "step": 12,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        }
+      ],
+      "query_count": 3,
+      "builds": 2
+    },
+    "mixed_delete_rebuild": {
+      "n": 1000,
+      "radius": 10000,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "886898a89bdb02b37d18703094d790481c0684bcf853810fc31485bf655481cd",
+      "operations": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 11,
+          "qid": 0,
+          "tree_size": 1009,
+          "buffer": 0,
+          "active_size": 1009,
+          "expected_count": 1009
+        }
+      ],
+      "query_count": 1,
+      "builds": 2
+    },
+    "rebuild_then_delete": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "87a86f4e849e520f738036badd658241053ddb981516662abeb89e06fe092662",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1000
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 10,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        },
+        {
+          "step": 12,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1009,
+          "expected_count": 10
+        }
+      ],
+      "query_count": 2,
+      "builds": 2
+    },
+    "zero_hit": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "85c4f7a0f8a14709a9ba397f220ff861b355fdfde1473bcb7ed2fa69abf566a2",
+      "operations": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 999,
+          "expected_count": 0
+        }
+      ],
+      "query_count": 1,
+      "builds": 1
+    },
+    "buffer_first_last_empty": {
+      "n": 1000,
+      "radius": 10000,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "354678c4810db8d09b1d04d5636cdb9a675c860fd8a58e234e6199dec20097fb",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1000
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1000
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 2,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 2,
+          "active_size": 1002,
+          "expected_count": 1002
+        },
+        {
+          "step": 4,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 1001
+        },
+        {
+          "step": 6,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1000
+        }
+      ],
+      "query_count": 3,
+      "builds": 1
+    },
+    "threshold_each_prefix": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "a53621bdd6447b1255b75308887639270f219541874294f727d5a2fc0ea17356",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 2
+        },
+        {
+          "step": 3,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 2,
+          "active_size": 1002,
+          "expected_count": 3
+        },
+        {
+          "step": 5,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 3,
+          "active_size": 1003,
+          "expected_count": 4
+        },
+        {
+          "step": 7,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 4,
+          "active_size": 1004,
+          "expected_count": 5
+        },
+        {
+          "step": 9,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 5,
+          "active_size": 1005,
+          "expected_count": 6
+        },
+        {
+          "step": 11,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 6,
+          "active_size": 1006,
+          "expected_count": 7
+        },
+        {
+          "step": 13,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 7,
+          "active_size": 1007,
+          "expected_count": 8
+        },
+        {
+          "step": 15,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 8,
+          "active_size": 1008,
+          "expected_count": 9
+        },
+        {
+          "step": 17,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 9,
+          "active_size": 1009,
+          "expected_count": 10
+        },
+        {
+          "step": 19,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        },
+        {
+          "step": 21,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 1,
+          "active_size": 1011,
+          "expected_count": 12
+        },
+        {
+          "step": 22,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 1,
+          "active_size": 1011,
+          "expected_count": 12
+        },
+        {
+          "step": 23,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 1,
+          "active_size": 1011,
+          "expected_count": 12
+        },
+        {
+          "step": 24,
+          "qid": 0,
+          "tree_size": 1010,
+          "buffer": 1,
+          "active_size": 1011,
+          "expected_count": 12
+        }
+      ],
+      "query_count": 14,
+      "builds": 2
+    },
+    "rank_delete_twice": {
+      "n": 1000,
+      "radius": 10000,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "920125ed60d192c24eb50e4bbafcf23ca7e58cc76ed71dfcb592d449d6c133bd",
+      "operations": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 999,
+          "expected_count": 999
+        },
+        {
+          "step": 3,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 998,
+          "expected_count": 998
+        }
+      ],
+      "query_count": 2,
+      "builds": 1
+    },
+    "tombstone_pending_rebuild": {
+      "n": 1000,
+      "radius": 10000,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "a4a306b084f9b9a3bf0acab56825a8c7fc0c4ba3e2b377823468381ea191f468",
+      "operations": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 3,
+          "qid": 0,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 999,
+          "expected_count": 999
+        },
+        {
+          "step": 13,
+          "qid": 0,
+          "tree_size": 1008,
+          "buffer": 0,
+          "active_size": 1008,
+          "expected_count": 1008
+        },
+        {
+          "step": 14,
+          "qid": 0,
+          "tree_size": 1008,
+          "buffer": 0,
+          "active_size": 1008,
+          "expected_count": 1008
+        },
+        {
+          "step": 15,
+          "qid": 0,
+          "tree_size": 1008,
+          "buffer": 0,
+          "active_size": 1008,
+          "expected_count": 1008
+        }
+      ],
+      "query_count": 4,
+      "builds": 2
+    },
+    "far_buffer_then_rebuild": {
+      "n": 1000,
+      "radius": 0,
+      "data_sha256": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+      "updates_sha256": "37de55528dcf36ee8dd94f96d4a128768a2c41ab6c78c8f0d832a364e403016a",
+      "operations": [
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          0,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          2,
+          999
+        ],
+        [
+          2,
+          999
+        ]
+      ],
+      "expected": [
+        {
+          "step": 0,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 1
+        },
+        {
+          "step": 2,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 2
+        },
+        {
+          "step": 4,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 2,
+          "active_size": 1002,
+          "expected_count": 3
+        },
+        {
+          "step": 6,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 3,
+          "active_size": 1003,
+          "expected_count": 4
+        },
+        {
+          "step": 8,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 4,
+          "active_size": 1004,
+          "expected_count": 5
+        },
+        {
+          "step": 10,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 5,
+          "active_size": 1005,
+          "expected_count": 6
+        },
+        {
+          "step": 12,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 6,
+          "active_size": 1006,
+          "expected_count": 7
+        },
+        {
+          "step": 14,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 7,
+          "active_size": 1007,
+          "expected_count": 8
+        },
+        {
+          "step": 16,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 8,
+          "active_size": 1008,
+          "expected_count": 9
+        },
+        {
+          "step": 18,
+          "qid": 999,
+          "tree_size": 1000,
+          "buffer": 9,
+          "active_size": 1009,
+          "expected_count": 10
+        },
+        {
+          "step": 20,
+          "qid": 999,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        },
+        {
+          "step": 21,
+          "qid": 999,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        },
+        {
+          "step": 22,
+          "qid": 999,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        },
+        {
+          "step": 23,
+          "qid": 999,
+          "tree_size": 1010,
+          "buffer": 0,
+          "active_size": 1010,
+          "expected_count": 11
+        }
+      ],
+      "query_count": 14,
+      "builds": 2
+    },
+    "tied_radius_boundary": {
+      "n": 1000,
+      "radius": 1,
+      "data_sha256": "be3482097af68cbce5037f5de33ff25199c25f6866fe3453763d8364c3a39643",
+      "updates_sha256": "d341de506ecb46b068ab10f8c3a9631a616e26ed84d6dafe9afb23f6068e45e5",
+      "operations": [
+        [
+          2,
+          500
+        ],
+        [
+          0,
+          499
+        ],
+        [
+          0,
+          501
+        ],
+        [
+          2,
+          500
+        ],
+        [
+          1,
+          1000
+        ],
+        [
+          2,
+          500
+        ]
+      ],
+      "expected": [
+        {
+          "step": 0,
+          "qid": 500,
+          "tree_size": 1000,
+          "buffer": 0,
+          "active_size": 1000,
+          "expected_count": 3
+        },
+        {
+          "step": 3,
+          "qid": 500,
+          "tree_size": 1000,
+          "buffer": 2,
+          "active_size": 1002,
+          "expected_count": 5
+        },
+        {
+          "step": 5,
+          "qid": 500,
+          "tree_size": 1000,
+          "buffer": 1,
+          "active_size": 1001,
+          "expected_count": 4
+        }
+      ],
+      "query_count": 3,
+      "builds": 1
+    },
+    "leaf_capacity_20": {
+      "n": 1990,
+      "radius": 10000,
+      "data_sha256": "e9248efb52fcf21a3bf727c681423a482eb8731c40b760623f3d3662e64fe55c",
+      "updates_sha256": "51f31ac684f8809645045a38b2abe54a300b980cf8ff1dfcd75c5766af951519",
+      "operations": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "expected": [
+        {
+          "step": 1,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 1,
+          "active_size": 1991,
+          "expected_count": 1991
+        },
+        {
+          "step": 3,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 2,
+          "active_size": 1992,
+          "expected_count": 1992
+        },
+        {
+          "step": 5,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 3,
+          "active_size": 1993,
+          "expected_count": 1993
+        },
+        {
+          "step": 7,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 4,
+          "active_size": 1994,
+          "expected_count": 1994
+        },
+        {
+          "step": 9,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 5,
+          "active_size": 1995,
+          "expected_count": 1995
+        },
+        {
+          "step": 11,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 6,
+          "active_size": 1996,
+          "expected_count": 1996
+        },
+        {
+          "step": 13,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 7,
+          "active_size": 1997,
+          "expected_count": 1997
+        },
+        {
+          "step": 15,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 8,
+          "active_size": 1998,
+          "expected_count": 1998
+        },
+        {
+          "step": 17,
+          "qid": 0,
+          "tree_size": 1990,
+          "buffer": 9,
+          "active_size": 1999,
+          "expected_count": 1999
+        },
+        {
+          "step": 19,
+          "qid": 0,
+          "tree_size": 2000,
+          "buffer": 0,
+          "active_size": 2000,
+          "expected_count": 2000
+        },
+        {
+          "step": 21,
+          "qid": 0,
+          "tree_size": 2000,
+          "buffer": 1,
+          "active_size": 2001,
+          "expected_count": 2001
+        }
+      ],
+      "query_count": 11,
+      "builds": 2
+    }
+  },
+  "fresh_external_arrivals": "not admitted: no native vector/stable-ID ingestion API",
+  "timer": "correctness only; observed process times are not performance samples",
+  "build": "nvcc -std=c++17 -O3 -arch=sm_120 -rdc=true -lineinfo -Xnvlink=--ignore-host-info -Iobserved/include observed/src/main.cu -o bin/u0_original_obs",
+  "repaired_sha256": {
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/tree.cuh": "0d3f394a77f4613313aae25be457529d242a55649b4a5d8fb8518a80dfb22a6c",
+    "include/update.cuh": "5d1f73ff3ecfe47bf3b35f95f0c6ba5a393cbecca65051218650689a249bb6e1",
+    "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  }
+}

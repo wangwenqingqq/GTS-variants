@@ -104,7 +104,7 @@
 
 本轮闭合K0的静态L2 kNN实验部分：OPT-KNN-P7是原始拓扑移植的实验执行器，未接原生更新，不是统一range/kNN/update keeper。冻结实现提交`d65c6e41effad67dde8ae1f1f68e656562607817`；比较器适配器、二进制、数据/树哈希见[IDENTITY](evidence/IDENTITY.json)。RTX PRO 6000 Blackwell物理GPU7，CUDA13.1；未改时钟或驱动。R1正式轮因输入H2D与Graph流顺序缺少保证而作废，原448个开发pass及参数保持冻结；R2重新生成排除R1查询的最终集，资格及正式轮重跑。文件名中`formal_r1`表示六轮中的round1，修订身份统一为R2。
 
-516个进程的运行与字段契约通过；288个完整模式进程逐查询tie-aware 100%，其中自有144个进程也达到固定ID排序的deterministic 100%。原生Flat/IVF的等距替代ID通过tie-aware门，不要求与自有排序完全相同。16个ANN开发100%锚点中2个CAGRA开发不可达，最终14个可执行锚点仅Deep/K32两种B的IVF通过，其余12个失败；这是新P7结果，与旧P6八个失败锚点分开。全部256查询及K个ID/FP32距离交付Host；pass与摊销时间不当作单请求延迟。
+516个进程的运行与字段契约通过；288个完整模式进程逐查询tie-aware 100%，其中自有144个进程也达到固定ID排序的deterministic 100%。原生Flat/IVF的等距替代ID通过tie-aware门，不要求与自有排序完全相同。16个ANN开发100%锚点中2个CAGRA开发不可达，最终14个可执行锚点仅Deep/K32两种B的IVF通过，其余12个失败；这是新P7结果，与先前原版GTS/native-IVF-only比较的八个失败锚点分开。全部256查询及K个ID/FP32距离交付Host；pass与摊销时间不当作单请求延迟。
 
 树掩码按同轮O_BOUND/O_MASK比较，>1表示MASK更快。
 
@@ -165,3 +165,5 @@ GIST/B32掩码仅约1–2%的点估计且CI跨1；Deep/B32约0.4–0.5%负收益
 [SELF_SLOTS](evidence/SELF_SLOTS.json)从实际输出移除已返回self槽，按原K任务剩余边界配额复核，未重建exclude-self K任务。完整模式全部nonself合法率100%；ANN原质量失败仍保留。[INDEX_VARIATION](evidence/INDEX_VARIATION.json)中所有28个数据/配置组均只有一个全索引SHA；CAGRA加载冻结图，IVF逐进程重建但SHA一致。
 
 完整顺序、每轮p50/p95、质量与输出SHA见[FORMAL](evidence/FORMAL.json)、[SUMMARY](evidence/SUMMARY.json)、[MANIFEST](evidence/MANIFEST.json)。训练/选择见DEV文件，最终查询见QUERY_SETS与fixtures。`campaign.py`执行固定顺序，`analyze.py`生成表；原始大输出、GPU收据和SQLite留在远端，Git仅保留来源与统计。重现不得混入R1正式输出或在最终集调参。
+
+[原始516进程逐文件清单](evidence/RAW_MANIFEST.json)涵盖6208个文件，输出SHA逐项与FORMAL核对；[归档身份](evidence/ARCHIVE.json)固定34.6MB的正式原始bundle。包含私有GPU收据的归档留在远端；大型静态索引和SQLite仍各自保留已登记哈希。

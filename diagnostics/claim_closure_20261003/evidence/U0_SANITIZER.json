@@ -1,0 +1,1120 @@
+[
+  {
+    "label": "original_memcheck_abs_buffer_delete",
+    "mode": "memcheck",
+    "variant": "original",
+    "target_binary_sha256": "26afe17b5d44e295fce9a1e6c57680273177551631f488f3b01a7086a12d3d34",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_delete",
+      "pass": false,
+      "first_divergence": {
+        "step": 3,
+        "expected_count": 1,
+        "actual_count": 2,
+        "invalid_ids": [
+          1000
+        ],
+        "duplicate_ids": 0,
+        "FN": [],
+        "FP": [
+          1000
+        ],
+        "fields_pass": false,
+        "state_pass": true
+      },
+      "queries_checked": 2,
+      "queries_expected": 2,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 3,
+          "expected_count": 1,
+          "actual_count": 2,
+          "invalid_ids": [
+            1000
+          ],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [
+            1000
+          ],
+          "fields_pass": false,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "a21c022ebadc713dba57e9dba4cde1e7399bbbc6958a4f8b5d5e4bc69a8d54c6",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": true
+  },
+  {
+    "label": "repaired_memcheck_abs_buffer_first_last_empty",
+    "mode": "memcheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_first_last_empty",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 3,
+      "queries_expected": 3,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 2,
+          "expected_count": 1002,
+          "actual_count": 1002,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 4,
+          "expected_count": 1001,
+          "actual_count": 1001,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 6,
+          "expected_count": 1000,
+          "actual_count": 1000,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "3acbc526c32b314a965782f14fd90834720691eb8cc429d6b822100c7e2d75ec",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_memcheck_abs_threshold_each_prefix",
+    "mode": "memcheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "threshold_each_prefix",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 14,
+      "queries_expected": 14,
+      "ancestor_member_checks": 4020,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 3,
+          "expected_count": 3,
+          "actual_count": 3,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 5,
+          "expected_count": 4,
+          "actual_count": 4,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 7,
+          "expected_count": 5,
+          "actual_count": 5,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 9,
+          "expected_count": 6,
+          "actual_count": 6,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 11,
+          "expected_count": 7,
+          "actual_count": 7,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 13,
+          "expected_count": 8,
+          "actual_count": 8,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 15,
+          "expected_count": 9,
+          "actual_count": 9,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 17,
+          "expected_count": 10,
+          "actual_count": 10,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 19,
+          "expected_count": 11,
+          "actual_count": 11,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 21,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 22,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 23,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 24,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "257dbe227650962955fabb416541d29ec2febb00492406d01e4cd952a9b61ce8",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_memcheck_abs_tombstone_pending_rebuild",
+    "mode": "memcheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "tombstone_pending_rebuild",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 4,
+      "queries_expected": 4,
+      "ancestor_member_checks": 4016,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 3,
+          "expected_count": 999,
+          "actual_count": 999,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 13,
+          "expected_count": 1008,
+          "actual_count": 1008,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 14,
+          "expected_count": 1008,
+          "actual_count": 1008,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 15,
+          "expected_count": 1008,
+          "actual_count": 1008,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "16a64084eadff4f9175f546056ab4728839574346e9b2485d930e7957333ed95",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_memcheck_abs_zero_hit",
+    "mode": "memcheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "zero_hit",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 1,
+      "queries_expected": 1,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 0,
+          "actual_count": 0,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "81a261a14e14c009c04090363958528753b20c98c41fa0318e4423c3d6c8e233",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_memcheck_abs_leaf_capacity_20",
+    "mode": "memcheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "leaf_capacity_20",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 11,
+      "queries_expected": 11,
+      "ancestor_member_checks": 8000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 11,
+          "expected_count": 1991,
+          "actual_count": 1991,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 13,
+          "expected_count": 1992,
+          "actual_count": 1992,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 15,
+          "expected_count": 1993,
+          "actual_count": 1993,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 17,
+          "expected_count": 1994,
+          "actual_count": 1994,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 19,
+          "expected_count": 1995,
+          "actual_count": 1995,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 21,
+          "expected_count": 1996,
+          "actual_count": 1996,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 23,
+          "expected_count": 1997,
+          "actual_count": 1997,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 25,
+          "expected_count": 1998,
+          "actual_count": 1998,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 27,
+          "expected_count": 1999,
+          "actual_count": 1999,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 29,
+          "expected_count": 2000,
+          "actual_count": 2000,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 31,
+          "expected_count": 2001,
+          "actual_count": 2001,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "8ba8d9e57987aaf1853b1087be84f58ca0ff8e278c32d6b0bdb848afa45bf169",
+      "manifest_sha256": "c532db5b02394c95d7b29cedf75987de6a2510865cb87ced5fcb5c3bd9fddf78"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "original_synccheck_abs_buffer_delete",
+    "mode": "synccheck",
+    "variant": "original",
+    "target_binary_sha256": "26afe17b5d44e295fce9a1e6c57680273177551631f488f3b01a7086a12d3d34",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_delete",
+      "pass": false,
+      "first_divergence": {
+        "step": 3,
+        "expected_count": 1,
+        "actual_count": 2,
+        "invalid_ids": [
+          1000
+        ],
+        "duplicate_ids": 0,
+        "FN": [],
+        "FP": [
+          1000
+        ],
+        "fields_pass": false,
+        "state_pass": true
+      },
+      "queries_checked": 2,
+      "queries_expected": 2,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 3,
+          "expected_count": 1,
+          "actual_count": 2,
+          "invalid_ids": [
+            1000
+          ],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [
+            1000
+          ],
+          "fields_pass": false,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "0091d94e0c37643bd5a1e70113d0a7fad88b124f49f2b82696bb630d1c9834db",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": true
+  },
+  {
+    "label": "repaired_synccheck_abs_buffer_first_last_empty",
+    "mode": "synccheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_first_last_empty",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 3,
+      "queries_expected": 3,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 2,
+          "expected_count": 1002,
+          "actual_count": 1002,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 4,
+          "expected_count": 1001,
+          "actual_count": 1001,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 6,
+          "expected_count": 1000,
+          "actual_count": 1000,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "24409616472f73b9b911df35adeee125ee36aa2e5cd2ed552e447f2fd6122e91",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_synccheck_abs_threshold_each_prefix",
+    "mode": "synccheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "threshold_each_prefix",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 14,
+      "queries_expected": 14,
+      "ancestor_member_checks": 4020,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 3,
+          "expected_count": 3,
+          "actual_count": 3,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 5,
+          "expected_count": 4,
+          "actual_count": 4,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 7,
+          "expected_count": 5,
+          "actual_count": 5,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 9,
+          "expected_count": 6,
+          "actual_count": 6,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 11,
+          "expected_count": 7,
+          "actual_count": 7,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 13,
+          "expected_count": 8,
+          "actual_count": 8,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 15,
+          "expected_count": 9,
+          "actual_count": 9,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 17,
+          "expected_count": 10,
+          "actual_count": 10,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 19,
+          "expected_count": 11,
+          "actual_count": 11,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 21,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 22,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 23,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 24,
+          "expected_count": 12,
+          "actual_count": 12,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "2c3ecb7e0e93a061ea4b53aad4b605d8f43bd6bf00ddb440af78d69d1164bbb0",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_synccheck_abs_tombstone_pending_rebuild",
+    "mode": "synccheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "tombstone_pending_rebuild",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 4,
+      "queries_expected": 4,
+      "ancestor_member_checks": 4016,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 3,
+          "expected_count": 999,
+          "actual_count": 999,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 13,
+          "expected_count": 1008,
+          "actual_count": 1008,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 14,
+          "expected_count": 1008,
+          "actual_count": 1008,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 15,
+          "expected_count": 1008,
+          "actual_count": 1008,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "ca3ad05cca186281944b1fe73b176c9036e4369213e4d2fd1b8ec61351f7d818",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_synccheck_abs_zero_hit",
+    "mode": "synccheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "zero_hit",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 1,
+      "queries_expected": 1,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 0,
+          "actual_count": 0,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "818e26ec054537d43b7d7436f1d935d788247ec7808cfa7c6d42929625c045f9",
+      "manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9"
+    },
+    "expected_quality_failure": false
+  },
+  {
+    "label": "repaired_synccheck_abs_leaf_capacity_20",
+    "mode": "synccheck",
+    "variant": "repaired",
+    "target_binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+    "runtime_valid": true,
+    "sanitizer_pass": true,
+    "summaries": [
+      "========= ERROR SUMMARY: 0 errors"
+    ],
+    "runtime_errors": [],
+    "quality": {
+      "case": "leaf_capacity_20",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 11,
+      "queries_expected": 11,
+      "ancestor_member_checks": 8000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 11,
+          "expected_count": 1991,
+          "actual_count": 1991,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 13,
+          "expected_count": 1992,
+          "actual_count": 1992,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 15,
+          "expected_count": 1993,
+          "actual_count": 1993,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 17,
+          "expected_count": 1994,
+          "actual_count": 1994,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 19,
+          "expected_count": 1995,
+          "actual_count": 1995,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 21,
+          "expected_count": 1996,
+          "actual_count": 1996,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 23,
+          "expected_count": 1997,
+          "actual_count": 1997,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 25,
+          "expected_count": 1998,
+          "actual_count": 1998,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 27,
+          "expected_count": 1999,
+          "actual_count": 1999,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 29,
+          "expected_count": 2000,
+          "actual_count": 2000,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 31,
+          "expected_count": 2001,
+          "actual_count": 2001,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "461e8b41c1d178882172d33086ca89f0be8fe057916797144d42730aa4f4621b",
+      "manifest_sha256": "c532db5b02394c95d7b29cedf75987de6a2510865cb87ced5fcb5c3bd9fddf78"
+    },
+    "expected_quality_failure": false
+  }
+]

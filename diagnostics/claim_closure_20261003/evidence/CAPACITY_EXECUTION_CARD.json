@@ -1,0 +1,38 @@
+{
+  "configuration": "U0_RNUM_RESET_OBS",
+  "fixture_revision": "legal_capacity_r2",
+  "fixture_generation_commit": "e783832",
+  "source_binary_entry_commit": "6f06897",
+  "binary_sha256": "6c67544eb687c373bf71bf35662677dc7fb240d37cbd69b2f7462b911c4ce1e5",
+  "manifest_sha256": "c532db5b02394c95d7b29cedf75987de6a2510865cb87ced5fcb5c3bd9fddf78",
+  "gpu_index": 7,
+  "gpu_uuid": "$SELECTED_GPU_UUID",
+  "original_capacity_rejection": {
+    "initial_n": 1990,
+    "native_height": 3,
+    "native_max_size": 20,
+    "exit_code": 91,
+    "queries_started": 0,
+    "node_sizes_without_leaf": [
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28,
+      28
+    ],
+    "stdout_sha256": "5cd3a7882e3c93d9e88b7ef01c6ed5ee4e0669a5b95a5778ffca4c230b7725f6",
+    "receipt_sha256": "2db911dc2542d95e21af749e0d872e5ad810ac1fcc78f874380092ca180d6f2a",
+    "fix": "fixture only: start with legal N2000, delete ten live ranks, insert ten to rebuild N2000; do not modify original tree height or row stride",
+    "new_fixture_commit": "e783832",
+    "unchanged_cases": 16,
+    "old_manifest_sha256": "77f4b178b8fcb482e0564fb36016b2e04a369f2a9e8b2a6305c43602f71963f9",
+    "new_manifest_sha256": "c532db5b02394c95d7b29cedf75987de6a2510865cb87ced5fcb5c3bd9fddf78",
+    "source_and_binary_unchanged": true
+  },
+  "timing": "correctness only; no performance samples"
+}

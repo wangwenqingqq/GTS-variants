@@ -1,0 +1,185 @@
+{
+  "manifest_sha256": "6cf669e96f42a0cda19484943a8522e7cbecefeab7f9763206331563b9f97dcc",
+  "source_sha256": {
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "scope": "Recovered count-only outcomes, not full IDs, performance or fresh arrival certification",
+  "cases": {
+    "query_only": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          1,
+          1,
+          1
+        ],
+        "expected": [
+          1,
+          1,
+          1
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "f277c1eb0aaea700ddba04615a9cb0f2eb99371195c1ea7fa91785412dcf4156"
+    },
+    "all_include": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          1000
+        ],
+        "expected": [
+          1000
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "6454a60bb2227fec405407ea643ae9f412b8e872f250618c6f2a314fa3131535"
+    },
+    "buffer_insert": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          1,
+          2
+        ],
+        "expected": [
+          1,
+          2
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "d7378b9eb0b5c147b28af4de27b995dd85e2b95d851a8b284df6206675e9d9c0"
+    },
+    "base_delete": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          1000,
+          999
+        ],
+        "expected": [
+          1000,
+          999
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "69472b0d835f418963a08cee379fc1b6fa9d9a177b46b96d4e995f06625a08e0"
+    },
+    "buffer_delete": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": false,
+        "actual": [
+          2,
+          2
+        ],
+        "expected": [
+          2,
+          1
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "b26d5c2ca989f74e6b7a91243345a7423d4987aa18c59fa5c52f99dd40583437"
+    },
+    "rebuild_no_prior_buffer_query": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          11
+        ],
+        "expected": [
+          11
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "e82427f99f1a1bacf6c9ffce602d7873695bf6ee93b1e765fc7a8095a9eb638f"
+    },
+    "rebuild_after_buffer_query": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": false,
+        "actual": [
+          2,
+          12,
+          12
+        ],
+        "expected": [
+          2,
+          11,
+          11
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "9279bbf73de610579f9ec09896613950144e0024ccf5a4209676647f9b01337b"
+    },
+    "mixed_delete_rebuild": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          1009
+        ],
+        "expected": [
+          1009
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "94e7713b1faacb8e0e3a871d22c795e73f5b420e22e104c577535c34db4a031b"
+    },
+    "rebuild_then_delete": {
+      "exit_code": 0,
+      "binary_sha256": "307dcfa4b655fd11893f0a3797bce87c7ea94cc7710d3d9edc0e9929c6abeb5b",
+      "validation": {
+        "pass": true,
+        "actual": [
+          11,
+          10
+        ],
+        "expected": [
+          11,
+          10
+        ],
+        "scope": "Exact counts only; not full result IDs/distances or performance admission"
+      },
+      "runtime_errors": [],
+      "sanitizer_ok": true,
+      "receipt_sha256": "a91482d1b7a92bf1563236b5ffcf442c899208aff1ad876ea592d0d7de6a7ab6"
+    }
+  }
+}

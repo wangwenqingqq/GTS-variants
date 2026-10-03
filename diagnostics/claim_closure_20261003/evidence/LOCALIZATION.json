@@ -1,0 +1,65 @@
+{
+  "first_divergence": {
+    "label": "original_buffer_delete",
+    "case": "buffer_delete",
+    "runtime_valid": true,
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_delete",
+      "pass": false,
+      "first_divergence": {
+        "step": 3,
+        "expected_count": 1,
+        "actual_count": 2,
+        "invalid_ids": [
+          1000
+        ],
+        "duplicate_ids": 0,
+        "FN": [],
+        "FP": [
+          1000
+        ],
+        "fields_pass": false,
+        "state_pass": true
+      },
+      "queries_checked": 2,
+      "queries_expected": 2,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 3,
+          "expected_count": 1,
+          "actual_count": 2,
+          "invalid_ids": [
+            1000
+          ],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [
+            1000
+          ],
+          "fields_pass": false,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "6cc37d65835bd8f391a695a479937e84455a7089ebe0dd595bc5dd72d3f18907",
+      "manifest_sha256": "dd3110e352808ed9874826656ea4f00468f02b45239c99d4c3d95f9a1a5803f1"
+    }
+  },
+  "cause": "rnum[0] retains one prior buffer hit after native buffer deletion empties in_size; mergeTotalResult copies stale obj_r slot and produces rank1000 outside active_size1000",
+  "repair": "rnum[0]=0 immediately before if(in_size>0), same as historical one-line repair",
+  "new_algorithm": false,
+  "performance_claim": false
+}

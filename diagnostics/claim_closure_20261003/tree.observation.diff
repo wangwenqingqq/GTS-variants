@@ -1,0 +1,27 @@
+--- original/include/tree.cuh
++++ observed/include/tree.cuh
+@@ -384,6 +384,24 @@
+ 	}
+ 
+ 	tree_h = cur_level + 1;
++
++    std::vector<TN> u0nodes(max_node_num[0]);
++    std::vector<int> u0empty(max_node_num[0]), u0order(data_info[1]);
++    CHECK(cudaMemcpy(u0nodes.data(), node_list, u0nodes.size()*sizeof(TN), cudaMemcpyDeviceToHost));
++    CHECK(cudaMemcpy(u0empty.data(), empty_list, u0empty.size()*sizeof(int), cudaMemcpyDeviceToHost));
++    CHECK(cudaMemcpy(u0order.data(), id_list, u0order.size()*sizeof(int), cudaMemcpyDeviceToHost));
++    int u0cover=0;
++    printf("U0_TREE {\"n\":%d,\"height\":%d,\"nodes\":[", data_info[1], tree_h);
++    bool u0first=true;
++    for(int u0i=0; u0i<max_node_num[0]; ++u0i) if(!u0empty[u0i]) {
++        TN u0n=u0nodes[u0i];
++        if(u0n.is_leaf) { if(u0n.size<1 || u0n.size>MAX_SIZE) exit(91); u0cover+=u0n.size; }
++        printf("%s[%d,%d,%.9g,%d,%d,%d]", u0first ? "" : ",", u0i,u0n.pid,u0n.min_dis,u0n.size,u0n.lid,u0n.is_leaf); u0first=false;
++    }
++    printf("],\"order\":[");
++    for(int u0i=0;u0i<data_info[1];++u0i) printf("%s%d",u0i ? "," : "",u0order[u0i]);
++    printf("]}\n"); fflush(stdout);
++    if(u0cover!=data_info[1]) exit(91);
+ 	printf("Tree height: %d\n", tree_h);
+ 
+ 	cudaFree(dis_list);

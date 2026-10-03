@@ -1,0 +1,225 @@
+[
+  {
+    "label": "original_query_only",
+    "case": "query_only",
+    "runtime_valid": true,
+    "runtime_errors": [],
+    "quality": {
+      "case": "query_only",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 3,
+      "queries_expected": 3,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 0,
+          "expected_count": 1,
+          "actual_count": 1,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 1,
+          "expected_count": 1,
+          "actual_count": 1,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 2,
+          "expected_count": 1,
+          "actual_count": 1,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "680d195699263dd99e8d988c6d82657038c6bf780114ba7d98b9cc56614c3c0a",
+      "manifest_sha256": "dd3110e352808ed9874826656ea4f00468f02b45239c99d4c3d95f9a1a5803f1"
+    }
+  },
+  {
+    "label": "original_all_include",
+    "case": "all_include",
+    "runtime_valid": true,
+    "runtime_errors": [],
+    "quality": {
+      "case": "all_include",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 1,
+      "queries_expected": 1,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 0,
+          "expected_count": 1000,
+          "actual_count": 1000,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "28186452acd6fc933e973da9ae0bb46c02ea1b1775f704be35597979ae58dc53",
+      "manifest_sha256": "dd3110e352808ed9874826656ea4f00468f02b45239c99d4c3d95f9a1a5803f1"
+    }
+  },
+  {
+    "label": "original_buffer_insert",
+    "case": "buffer_insert",
+    "runtime_valid": true,
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_insert",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 2,
+      "queries_expected": 2,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 0,
+          "expected_count": 1,
+          "actual_count": 1,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 2,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "eb5821890153b27e545aad0871e5455688cfa4a59bac2014497c062a9c987a88",
+      "manifest_sha256": "dd3110e352808ed9874826656ea4f00468f02b45239c99d4c3d95f9a1a5803f1"
+    }
+  },
+  {
+    "label": "original_base_delete",
+    "case": "base_delete",
+    "runtime_valid": true,
+    "runtime_errors": [],
+    "quality": {
+      "case": "base_delete",
+      "pass": true,
+      "first_divergence": null,
+      "queries_checked": 2,
+      "queries_expected": 2,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 0,
+          "expected_count": 1000,
+          "actual_count": 1000,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 2,
+          "expected_count": 999,
+          "actual_count": 999,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "a4fa2e1c9f0572a0e6d9da7a9d9cef2d78648f17f467a300de0a57569748e18c",
+      "manifest_sha256": "dd3110e352808ed9874826656ea4f00468f02b45239c99d4c3d95f9a1a5803f1"
+    }
+  },
+  {
+    "label": "original_buffer_delete",
+    "case": "buffer_delete",
+    "runtime_valid": true,
+    "runtime_errors": [],
+    "quality": {
+      "case": "buffer_delete",
+      "pass": false,
+      "first_divergence": {
+        "step": 3,
+        "expected_count": 1,
+        "actual_count": 2,
+        "invalid_ids": [
+          1000
+        ],
+        "duplicate_ids": 0,
+        "FN": [],
+        "FP": [
+          1000
+        ],
+        "fields_pass": false,
+        "state_pass": true
+      },
+      "queries_checked": 2,
+      "queries_expected": 2,
+      "ancestor_member_checks": 2000,
+      "ancestor_scope": "All stored ancestor intervals cover their physical members under native FP32 norm at each build; unchanged tree covers delete-only prefixes; buffer is separately scanned. No general FP32 real-metric proof.",
+      "output_records": [
+        {
+          "step": 1,
+          "expected_count": 2,
+          "actual_count": 2,
+          "invalid_ids": [],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [],
+          "fields_pass": true,
+          "state_pass": true
+        },
+        {
+          "step": 3,
+          "expected_count": 1,
+          "actual_count": 2,
+          "invalid_ids": [
+            1000
+          ],
+          "duplicate_ids": 0,
+          "FN": [],
+          "FP": [
+            1000
+          ],
+          "fields_pass": false,
+          "state_pass": true
+        }
+      ],
+      "stdout_sha256": "6cc37d65835bd8f391a695a479937e84455a7089ebe0dd595bc5dd72d3f18907",
+      "manifest_sha256": "dd3110e352808ed9874826656ea4f00468f02b45239c99d4c3d95f9a1a5803f1"
+    }
+  }
+]
