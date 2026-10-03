@@ -1,0 +1,32 @@
+{
+  "experiment": "original_gts_20261003_baseline_recheck",
+  "state_at_registration": "designed",
+  "objective": "Recheck original GTS before identifying and measuring the optimized comparator",
+  "source_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "source_adapter": "native_knn_faiss_ivf_20261003 full-ID/capacity/workspace adapter; no new kernel change",
+  "binary_sha256": "2871b26adf8b1109795291ffb0ff8645390365d89a20ec41ac3d6a239a27043c",
+  "datasets": {"GIST": [1000000, 960], "Deep": [1000000, 96]},
+  "data_sha256": {
+    "GIST": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "Deep": "9f5d46c7bac52e3a18e4bda6f5c6c2220c0ec3094b5a34c7ee04ad3d1e97dfbd"
+  },
+  "reused_harness_sha256": {
+    "delivery/run_locked.py": "dfe30c6d7ed4d4000b6789dc9ca26564db47d002eddc6649b390726cf826c61f",
+    "verify_outputs.py": "3c18bbfdff8b037ec1687a15fb5ff916a056f5a28f48aacfcc59cebefcfe08c4",
+    "native_ivf.py": "23abd847d013c143cee82a5abc3ec87f1fa3305934ad6a5c8c306a4352daf27b"
+  },
+  "queries": "First 32 IDs of the previously frozen final256 set; diagnostic recheck, not fresh held-out queries",
+  "K": 8,
+  "B": [1, 32],
+  "warmup_batches": 2,
+  "retained_passes_per_process": 1,
+  "processes_per_shape": 1,
+  "scope": "Complete 32-query Host-ready pass; exclude input/index/cache loading and quality checks",
+  "output": "K original IDs and FP32 Euclidean fields, self-inclusive in-dataset L2 queries",
+  "quality": "100% preregistered tie-aware ID recall; frozen distance tolerance, nonnegative and nondecreasing fields",
+  "reference": "Slice the existing independent full-table explicit-RN FP64 oracle; no retuning or resampling",
+  "gpu": "Live-verified idle single device; no clock/power or foreign-process changes",
+  "stop": "Abort on hash drift, occupied GPU, failed lock, runtime failure or quality failure",
+  "candidate": "Not yet identified; old incremental kNN overlay and range-only prototypes cannot silently substitute",
+  "claim_boundary": "Baseline reproducibility pilot only; no speedup, new keeper, update or full application claim"
+}

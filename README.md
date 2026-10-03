@@ -17,6 +17,15 @@ The later fixed all-list IVF control reaches100% tie-aware recall, with a
 non-paired timing comparison and deterministic tie-breaking exception on GIST.
 No production GTS++ improvement is measured here.
 
+## Round 2: original GTS baseline recheck
+
+- [Results](diagnostics/original_gts_compare_20261003/RESULTS.md)
+- [Replay and pending comparator identity](diagnostics/original_gts_compare_20261003/README.md)
+
+Four single-process original-GTS checks pass full-ID/field validation at K8,
+B1/32, GIST/Deep1M and32 already-seen queries. This is a baseline-only pilot;
+an optimized GTSPP comparator has not yet been identified or measured.
+
 ## Publication provenance
 
 [PUBLICATION.json](PUBLICATION.json) identifies the original local checkpoint

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "$SCRATCH_ROOT/pilot.py", line 84, in <module>
+    main()
+  File "$SCRATCH_ROOT/pilot.py", line 59, in main
+    subprocess.run([sys.executable, r/'delivery/run_locked.py', '--gpu', a.gpu,
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1885, in _execute_child
+    self.pid = _fork_exec(
+               ^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not int
