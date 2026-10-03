@@ -19,12 +19,13 @@
       "diagnostics/external_mask_validation_20261002/fixtures/GIST_p5_final1024.qid": "91d6a4c4e712fe94b24db2e7854039049e6cda063ce2f36343c840fd781a67c1",
       "diagnostics/cagra_ivf_range_comparison_20261002/fixtures/GIST_p6_final1024.qid": "33c38d19d286acc7183eccc1cb465e1c095d369ff270fa149cdc43387bc7f313",
       "diagnostics/native_knn_faiss_ivf_20261003/fixtures/GIST_dev128.qid": "9ce0c24bede5a0b8d05facb38903160ad38ba67ca49b226cc72dec584bb544ef",
-      "diagnostics/native_knn_faiss_ivf_20261003/fixtures/GIST_final256.qid": "0071f5cd38202cf63f12036b418a1cb30b1871912804829d0970f4b0c74c6f10"
+      "diagnostics/native_knn_faiss_ivf_20261003/fixtures/GIST_final256.qid": "0071f5cd38202cf63f12036b418a1cb30b1871912804829d0970f4b0c74c6f10",
+      "diagnostics/unified_knn_e2e_20261003/fixtures/GIST_r1_seen_final256.qid": "b010d95b01bb2a7a2e716d17aa4745f257eb617f209a2c2dc02fa77ddbc371a6"
     },
-    "excluded_count": 4960,
+    "excluded_count": 5216,
     "excluded_file": "GIST_excluded.i32",
-    "excluded_sha256": "d358443652290a8258587976c57db9af5ae2d5f2b32a9d2281df542466837e7c",
-    "scope": "P0-P6 plus prior native development/final; pilot is subset of prior final; P7 development reuses prior development"
+    "excluded_sha256": "502ea0152fd4f63f74cba2d215c5e524c0af30973194e392cb9fa9d1bf2e787b",
+    "scope": "P0-P6 plus prior native development/final; pilot is subset of prior final; P7 development reuses prior development; additionally all R1 final256 IDs treated as seen"
   },
   "Deep": {
     "previous_files": {
@@ -37,11 +38,12 @@
       "diagnostics/external_mask_validation_20261002/fixtures/Deep_p5_final1024.qid": "58c7a8847d4cc5aa0df8d9eec09688f93c404f1704b987e005ab723dfe55cc95",
       "diagnostics/cagra_ivf_range_comparison_20261002/fixtures/Deep_p6_final1024.qid": "89120758251283a0138901d9860bb3c87433c4fe2dcb88cc439675e960ef9396",
       "diagnostics/native_knn_faiss_ivf_20261003/fixtures/Deep_dev128.qid": "5bd999666157deafcc1ec4bc7decf6c2fcf6d5e344282aebe0a04a2cfcda6619",
-      "diagnostics/native_knn_faiss_ivf_20261003/fixtures/Deep_final256.qid": "b576b916bb787f0492d0bedac6b1fcf93b9190af2ca08a41482a9a8b2a7df171"
+      "diagnostics/native_knn_faiss_ivf_20261003/fixtures/Deep_final256.qid": "b576b916bb787f0492d0bedac6b1fcf93b9190af2ca08a41482a9a8b2a7df171",
+      "diagnostics/unified_knn_e2e_20261003/fixtures/Deep_r1_seen_final256.qid": "ae6823c6d1408cc311d59038182f053394dc87235160dedd7c51be8e9116c98c"
     },
-    "excluded_count": 4824,
+    "excluded_count": 5080,
     "excluded_file": "Deep_excluded.i32",
-    "excluded_sha256": "48330174360349054d7b85c24172715cfa2877dcf844ac67b6610a99ac440c11",
-    "scope": "P0-P6 plus prior native development/final; pilot is subset of prior final; P7 development reuses prior development"
+    "excluded_sha256": "a44876dfda84e0f09864f7a04bdca871614614a6bf62e81da55f5dbf4e80d89b",
+    "scope": "P0-P6 plus prior native development/final; pilot is subset of prior final; P7 development reuses prior development; additionally all R1 final256 IDs treated as seen"
   }
 }

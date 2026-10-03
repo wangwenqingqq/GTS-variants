@@ -1,8 +1,8 @@
 {
-  "state": "STREAM_ORDER_FIXED_QUALIFICATION_PENDING",
+  "state": "IMPLEMENTED_QUALIFIED_NOT_FORMAL_COMPLETE",
   "baseline_commit": "957ccf0b3592cebf2aeb49678a58f2c9379ed363",
   "optimization_assets_commit": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
-  "optimized_implementation_commit": "d65c6e41effad67dde8ae1f1f68e656562607817",
+  "optimized_implementation_commit": "947b8b9bc1dd7465d6a275b4a0c9b6824c30f8c6",
   "upstream_gts_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
   "gpu": "$SELECTED_GPU_UUID, NVIDIA RTX PRO 6000 Blackwell Server Edition, 590.48.01, 97887 MiB",
   "numa_node": 3,
@@ -10,7 +10,7 @@
   "compile_optimized": "nvcc -O3 -std=c++17 -arch=sm_120 --fmad=false -lineinfo opt_knn_bench.cu",
   "compile_original": "nvcc -O3 -std=c++17 -arch=sm_120 -lineinfo -I$BASE/gts/adapted/include gts_bench_p7.cu",
   "binaries": {
-    "opt_knn_bench": "1a6a63ecd452dda0b67ab6140e394a60c21b9f04280e4643f00b7749a53d0e92",
+    "opt_knn_bench": "e223cf26e9f5c18962d7f7569b8210369d2f8d59cffc8f6507e9c779c00b8d23",
     "gts_bench_p7": "23d9e4afb6d321b618cddc70482a5ca51170ada9328a9eb94764312469e0dfdd"
   },
   "datasets": {
@@ -39,7 +39,5 @@
     "use_cuvs": false
   },
   "cupy_version": "14.1.0",
-  "numpy_version": "2.5.2",
-  "revision": "R2",
-  "query_transfer_order": "cudaMemcpyAsync H2D on the same explicit stream before cudaGraphLaunch; same-stream final-K D2H and cudaStreamSynchronize"
+  "numpy_version": "2.5.2"
 }
