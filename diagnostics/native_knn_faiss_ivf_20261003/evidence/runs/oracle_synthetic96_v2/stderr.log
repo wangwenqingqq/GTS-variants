@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "$REMOTE_ROOT/native_ivf.py", line 192, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "$REMOTE_ROOT/native_ivf.py", line 180, in main
+    if a.mode=='oracle':make_oracle(data,read_qids(a.qids),a.out)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$REMOTE_ROOT/native_ivf.py", line 56, in make_oracle
+    ordered = selected[cp.lexsort((selected, ds[selected]))][:32]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$FAISS_ENV_ROOT/lib/python3.12/site-packages/cupy/_sorting/sort.py", line 69, in lexsort
+    if keys.ndim == ():
+       ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'ndim'

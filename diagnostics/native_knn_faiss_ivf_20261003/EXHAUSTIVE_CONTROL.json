@@ -1,0 +1,22 @@
+{
+  "registered_at_utc": "2026-10-02T17:38:48.207805+00:00",
+  "motivation": "Round-one final quality exposed that development-selected 100% points missed the final 100% anchor. Preserve the frozen campaign unchanged; add a fixed all-list control, not an nprobe sweep.",
+  "nlist": 1024,
+  "nprobe": 1024,
+  "K": [
+    8,
+    32
+  ],
+  "B": [
+    1,
+    32
+  ],
+  "Q": 256,
+  "processes": 6,
+  "query_set": "Existing frozen final256; no query replacement and no parameter selection on final results",
+  "comparison_scope": "Supplementary non-paired comparison: six later native IVF processes vs the six original GTS processes. Not direction-balanced GTS/IVF pairs; independent-process CI only. No production promotion or rescued frozen anchor.",
+  "oracle_and_fields": "Same independent oracle, tie-aware100% anchor, same distance field gate",
+  "timing_scope": "Unchanged Host-ready256-query pass; two warmup batches; static build excluded",
+  "order": "Alternate dataset and shape order; only native IVF measured in extension",
+  "stop_rule": "Fail closed on occupied GPU/runtime failure; record quality miss, do not tune; execute only after frozen formal campaign completes"
+}

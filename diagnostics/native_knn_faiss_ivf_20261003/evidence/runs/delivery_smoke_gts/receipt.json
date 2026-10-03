@@ -1,0 +1,22 @@
+{
+  "gpu": "$SELECTED_GPU_UUID",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "$REMOTE_ROOT/delivery/gts_bench",
+    "$REMOTE_ROOT/synthetic_96.f32bin",
+    "$REMOTE_ROOT/fixtures/synthetic_ragged33.qid",
+    "32",
+    "32",
+    "1",
+    "$REMOTE_ROOT/synthetic96.index",
+    "delivery_smoke_gts",
+    "2"
+  ],
+  "binary_sha256": "3d639c1097be4cbeda6bb3e7127fc0d782ae2a7e74c532d95d8c0abb947d5916",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 0.5304137340281159,
+  "runtime_valid": true
+}

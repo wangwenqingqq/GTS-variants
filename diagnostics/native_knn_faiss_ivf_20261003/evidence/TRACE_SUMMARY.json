@@ -1,0 +1,536 @@
+{
+  "profile_gts_GIST_k8_b1_v2": {
+    "scope": "Complete formal.query_pass NVTX interval; first32 final GIST queries, K8; diagnostic only",
+    "range_ms": 11451.303612,
+    "gpu_work_union_ms": 11092.261276,
+    "gpu_work_coverage": 0.9686461604577705,
+    "runtime_api_union_ms": 11223.823458,
+    "runtime_api_coverage": 0.9801349993234291,
+    "no_recorded_gpu_work_ms": 359.04233600000043,
+    "kernel_calls": 1792,
+    "kernels": {
+      "dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)": {
+        "calls": 32,
+        "inclusive_ms": 10190.060706
+      },
+      "getDisPQ(TN *, float *, int *, int *, int *, char *, int *, int, int, int, double *, int, int, int, int, int, int)": {
+        "calls": 96,
+        "inclusive_ms": 789.0663929999997
+      },
+      "updateDisK(int, double *, float *, int, int, int, int)": {
+        "calls": 96,
+        "inclusive_ms": 34.982598
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+        "calls": 288,
+        "inclusive_ms": 34.76881899999999
+      },
+      "labelCNode(int *, int, int, int, double *, int, int, int, int, int)": {
+        "calls": 64,
+        "inclusive_ms": 15.019643
+      },
+      "getQCountKnn(int, int, double *, int, int, int, int)": {
+        "calls": 32,
+        "inclusive_ms": 11.321141000000003
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)": {
+        "calls": 512,
+        "inclusive_ms": 6.436860999999991
+      },
+      "mergeResKnn(int, int, double *, int, int *, int, int, float *, int, TN *, int *, int *, float *, int)": {
+        "calls": 32,
+        "inclusive_ms": 3.062604999999999
+      },
+      "initDisK(float *, int)": {
+        "calls": 32,
+        "inclusive_ms": 2.684023999999999
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)": {
+        "calls": 64,
+        "inclusive_ms": 1.1429569999999998
+      },
+      "mergeLNodeKnn(int, int, double *, int, int, int, int, int *, int, int, int)": {
+        "calls": 32,
+        "inclusive_ms": 0.665911
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)": {
+        "calls": 64,
+        "inclusive_ms": 0.522999
+      },
+      "nodeProcessKnn(TN *, float *, int *, int, int, int, double *, int, int, int, int, int)": {
+        "calls": 96,
+        "inclusive_ms": 0.32198100000000013
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<double, double, double, unsigned int, cuda::std::__4::plus<void>>::Policy1000, double *, double *, cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<double, double *>, unsigned int, double, (bool)0, double>(T2, T3, T4, int, T5, T6, T7)": {
+        "calls": 32,
+        "inclusive_ms": 0.256093
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+        "calls": 64,
+        "inclusive_ms": 0.16675
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+        "calls": 96,
+        "inclusive_ms": 0.12099100000000004
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, unsigned long long>(T2 *)": {
+        "calls": 64,
+        "inclusive_ms": 0.075872
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, double *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+        "calls": 32,
+        "inclusive_ms": 0.074173
+      },
+      "initPListKnn(double *, int)": {
+        "calls": 32,
+        "inclusive_ms": 0.04617599999999998
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>>(T1, int)": {
+        "calls": 32,
+        "inclusive_ms": 0.02924699999999998
+      }
+    },
+    "cuda_api": {
+      "cudaDeviceSynchronize_v3020": {
+        "calls": 576,
+        "inclusive_ms": 11049.666173
+      },
+      "cudaMalloc_v3020": {
+        "calls": 672,
+        "inclusive_ms": 86.0864190000001
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 1056,
+        "inclusive_ms": 38.624982
+      },
+      "cudaFree_v3020": {
+        "calls": 736,
+        "inclusive_ms": 32.29058000000005
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 1792,
+        "inclusive_ms": 7.175735999999996
+      },
+      "cudaMemcpyAsync_v3020": {
+        "calls": 512,
+        "inclusive_ms": 4.390868
+      },
+      "cudaMemsetAsync_v3020": {
+        "calls": 640,
+        "inclusive_ms": 2.071349000000001
+      },
+      "cudaMemcpy_v3020": {
+        "calls": 96,
+        "inclusive_ms": 1.6543609999999995
+      },
+      "cudaMemGetInfo_v3020": {
+        "calls": 32,
+        "inclusive_ms": 0.798656
+      },
+      "cudaMemset_v3020": {
+        "calls": 32,
+        "inclusive_ms": 0.48792199999999997
+      },
+      "cudaMallocManaged_v6000": {
+        "calls": 64,
+        "inclusive_ms": 0.3863480000000001
+      },
+      "cuKernelGetName": {
+        "calls": 1792,
+        "inclusive_ms": 0.19006400000000115
+      }
+    },
+    "copy_kind_activity": {
+      "11": {
+        "calls": 633,
+        "inclusive_ms": 0.6585740000000033,
+        "bytes": 2822144,
+        "label": "Unified Host-to-Device"
+      },
+      "12": {
+        "calls": 634,
+        "inclusive_ms": 0.37707799999999897,
+        "bytes": 2883584,
+        "label": "Unified Device-to-Host"
+      },
+      "2": {
+        "calls": 448,
+        "inclusive_ms": 0.24924499999999908,
+        "bytes": 3584,
+        "label": "Device-to-Host"
+      },
+      "8": {
+        "calls": 128,
+        "inclusive_ms": 0.12803100000000012,
+        "bytes": 563200,
+        "label": "Device-to-Device"
+      },
+      "1": {
+        "calls": 32,
+        "inclusive_ms": 0.07888,
+        "bytes": 128,
+        "label": "Host-to-Device"
+      }
+    },
+    "sqlite_sha256": "3151262c8c9b84772ea08ab4580efcc8f92ac2794860bf0346ce63ae24bb2bcf",
+    "warning": "Temporal GPU coverage is not SM utilization. Inclusive CUDA API duration overlaps GPU work and may contain CPU spinning, driver work or blocking; it is not measured CPU computation. No coalescing counters or causal optimization control collected."
+  },
+  "profile_gts_GIST_k8_b32_v2": {
+    "scope": "Complete formal.query_pass NVTX interval; first32 final GIST queries, K8; diagnostic only",
+    "range_ms": 10198.5207,
+    "gpu_work_union_ms": 10184.896932,
+    "gpu_work_coverage": 0.9986641427319946,
+    "runtime_api_union_ms": 10189.687908,
+    "runtime_api_coverage": 0.9991339143921139,
+    "no_recorded_gpu_work_ms": 13.623767999999473,
+    "kernel_calls": 93,
+    "kernels": {
+      "dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)": {
+        "calls": 2,
+        "inclusive_ms": 10105.37123
+      },
+      "getDisPQ(TN *, float *, int *, int *, int *, char *, int *, int, int, int, double *, int, int, int, int, int, int)": {
+        "calls": 3,
+        "inclusive_ms": 63.624017
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)": {
+        "calls": 40,
+        "inclusive_ms": 10.373757999999999
+      },
+      "mergeResKnn(int, int, double *, int, int *, int, int, float *, int, TN *, int *, int *, float *, int)": {
+        "calls": 2,
+        "inclusive_ms": 1.706474
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+        "calls": 10,
+        "inclusive_ms": 1.627852
+      },
+      "updateDisK(int, double *, float *, int, int, int, int)": {
+        "calls": 3,
+        "inclusive_ms": 0.7203430000000001
+      },
+      "labelCNode(int *, int, int, int, double *, int, int, int, int, int)": {
+        "calls": 2,
+        "inclusive_ms": 0.421115
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)": {
+        "calls": 5,
+        "inclusive_ms": 0.333213
+      },
+      "getQCountKnn(int, int, double *, int, int, int, int)": {
+        "calls": 2,
+        "inclusive_ms": 0.21363
+      },
+      "initDisK(float *, int)": {
+        "calls": 1,
+        "inclusive_ms": 0.164606
+      },
+      "mergeLNodeKnn(int, int, double *, int, int, int, int, int *, int, int, int)": {
+        "calls": 2,
+        "inclusive_ms": 0.135359
+      },
+      "nodeProcessKnn(TN *, float *, int *, int, int, int, double *, int, int, int, int, int)": {
+        "calls": 3,
+        "inclusive_ms": 0.033088
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<double, double, double, unsigned int, cuda::std::__4::plus<void>>::Policy1000, double *, double *, cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<double, double *>, unsigned int, double, (bool)0, double>(T2, T3, T4, int, T5, T6, T7)": {
+        "calls": 2,
+        "inclusive_ms": 0.033087
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, double *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+        "calls": 2,
+        "inclusive_ms": 0.008608000000000001
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, unsigned long long>(T2 *)": {
+        "calls": 5,
+        "inclusive_ms": 0.006783000000000001
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+        "calls": 4,
+        "inclusive_ms": 0.005632
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+        "calls": 2,
+        "inclusive_ms": 0.0050880000000000005
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>>(T1, int)": {
+        "calls": 2,
+        "inclusive_ms": 0.001728
+      },
+      "initPListKnn(double *, int)": {
+        "calls": 1,
+        "inclusive_ms": 0.001216
+      }
+    },
+    "cuda_api": {
+      "cudaDeviceSynchronize_v3020": {
+        "calls": 22,
+        "inclusive_ms": 10172.536466000001
+      },
+      "cudaFree_v3020": {
+        "calls": 27,
+        "inclusive_ms": 11.880024000000002
+      },
+      "cudaMalloc_v3020": {
+        "calls": 25,
+        "inclusive_ms": 2.121946
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 35,
+        "inclusive_ms": 1.7540700000000002
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 93,
+        "inclusive_ms": 0.5227510000000001
+      },
+      "cudaMemsetAsync_v3020": {
+        "calls": 50,
+        "inclusive_ms": 0.280713
+      },
+      "cudaMemcpyAsync_v3020": {
+        "calls": 14,
+        "inclusive_ms": 0.214974
+      },
+      "cudaMemcpy_v3020": {
+        "calls": 3,
+        "inclusive_ms": 0.17266800000000002
+      },
+      "cudaMemGetInfo_v3020": {
+        "calls": 1,
+        "inclusive_ms": 0.073674
+      },
+      "cudaMallocManaged_v6000": {
+        "calls": 2,
+        "inclusive_ms": 0.06440699999999999
+      },
+      "cudaMemset_v3020": {
+        "calls": 1,
+        "inclusive_ms": 0.049087
+      },
+      "cuKernelGetName": {
+        "calls": 93,
+        "inclusive_ms": 0.017128
+      }
+    },
+    "copy_kind_activity": {
+      "11": {
+        "calls": 31,
+        "inclusive_ms": 0.037018,
+        "bytes": 413696,
+        "label": "Unified Host-to-Device"
+      },
+      "12": {
+        "calls": 31,
+        "inclusive_ms": 0.023387000000000005,
+        "bytes": 413696,
+        "label": "Unified Device-to-Host"
+      },
+      "2": {
+        "calls": 16,
+        "inclusive_ms": 0.009792,
+        "bytes": 2104,
+        "label": "Device-to-Host"
+      },
+      "1": {
+        "calls": 1,
+        "inclusive_ms": 0.00256,
+        "bytes": 128,
+        "label": "Host-to-Device"
+      }
+    },
+    "sqlite_sha256": "62912c02e4d7b846c03c60e660a891117d87f921ee3296d831bdaedf8ce632a8",
+    "warning": "Temporal GPU coverage is not SM utilization. Inclusive CUDA API duration overlaps GPU work and may contain CPU spinning, driver work or blocking; it is not measured CPU computation. No coalescing counters or causal optimization control collected."
+  },
+  "profile_ivf_GIST_k8_b1_v2": {
+    "scope": "Complete formal.query_pass NVTX interval; first32 final GIST queries, K8; diagnostic only",
+    "range_ms": 141.672745,
+    "gpu_work_union_ms": 137.946116,
+    "gpu_work_coverage": 0.9736955121466729,
+    "runtime_api_union_ms": 139.318253,
+    "runtime_api_coverage": 0.9833807695333355,
+    "no_recorded_gpu_work_ms": 3.7266290000000026,
+    "kernel_calls": 192,
+    "kernels": {
+      "void faiss::gpu::ivfInterleavedScan<faiss::gpu::CodecFloat, faiss::gpu::L2Distance, (int)128, (int)32, (int)2>(faiss::gpu::Tensor<float, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<float, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, void **, long *, T1, T2, int, faiss::gpu::Tensor<float, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, bool)": {
+        "calls": 32,
+        "inclusive_ms": 133.920286
+      },
+      "void faiss::gpu::ivfInterleavedScan2<(int)128, (int)32, (int)2>(faiss::gpu::Tensor<float, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, int, void **, faiss::gpu::IndicesOptions, bool, faiss::gpu::Tensor<float, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>)": {
+        "calls": 32,
+        "inclusive_ms": 2.0091210000000004
+      },
+      "void faiss::gpu::l2SelectMinK<int, float, (int)1024, (int)8, (int)128>(faiss::gpu::Tensor<T2, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<T2, (int)1, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<T2, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, int, T2)": {
+        "calls": 32,
+        "inclusive_ms": 1.6251630000000001
+      },
+      "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, float, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)8, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<const float>, cublasGemvTensorStridedBatched<float>, float>>(T13)": {
+        "calls": 32,
+        "inclusive_ms": 0.17791599999999996
+      },
+      "void faiss::gpu::l2NormRowMajor<float, float4, (int)8, (bool)1>(faiss::gpu::Tensor<T2, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<float, (int)1, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>)": {
+        "calls": 32,
+        "inclusive_ms": 0.08761500000000001
+      },
+      "void faiss::gpu::sumAlongRows<float, (bool)1>(faiss::gpu::Tensor<T1, (int)1, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<T1, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>)": {
+        "calls": 32,
+        "inclusive_ms": 0.05103999999999999
+      }
+    },
+    "cuda_api": {
+      "cudaMemcpyAsync_v3020": {
+        "calls": 160,
+        "inclusive_ms": 137.96519099999998
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 192,
+        "inclusive_ms": 0.836404
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 96,
+        "inclusive_ms": 0.19593299999999989
+      },
+      "cudaStreamWaitEvent_v3020": {
+        "calls": 128,
+        "inclusive_ms": 0.09057099999999994
+      },
+      "cudaEventRecord_v3020": {
+        "calls": 96,
+        "inclusive_ms": 0.088366
+      },
+      "cudaEventCreateWithFlags_v3020": {
+        "calls": 96,
+        "inclusive_ms": 0.076738
+      },
+      "cudaEventDestroy_v3020": {
+        "calls": 96,
+        "inclusive_ms": 0.04298000000000001
+      },
+      "cuKernelGetName": {
+        "calls": 192,
+        "inclusive_ms": 0.022070000000000013
+      }
+    },
+    "copy_kind_activity": {
+      "2": {
+        "calls": 64,
+        "inclusive_ms": 0.039840000000000014,
+        "bytes": 3072,
+        "label": "Device-to-Host"
+      },
+      "1": {
+        "calls": 96,
+        "inclusive_ms": 0.035135000000000034,
+        "bytes": 125952,
+        "label": "Host-to-Device"
+      }
+    },
+    "sqlite_sha256": "26ccfcf95c0887c9a8b7ba7b0124ec7f9021d1838c765a78a8c6e14f9da31fbb",
+    "warning": "Temporal GPU coverage is not SM utilization. Inclusive CUDA API duration overlaps GPU work and may contain CPU spinning, driver work or blocking; it is not measured CPU computation. No coalescing counters or causal optimization control collected."
+  },
+  "profile_ivf_GIST_k8_b32_v2": {
+    "scope": "Complete formal.query_pass NVTX interval; first32 final GIST queries, K8; diagnostic only",
+    "range_ms": 82.117229,
+    "gpu_work_union_ms": 81.194057,
+    "gpu_work_coverage": 0.9887578768640624,
+    "runtime_api_union_ms": 81.489005,
+    "runtime_api_coverage": 0.9923496687887509,
+    "no_recorded_gpu_work_ms": 0.9231719999999939,
+    "kernel_calls": 7,
+    "kernels": {
+      "void faiss::gpu::ivfInterleavedScan<faiss::gpu::CodecFloat, faiss::gpu::L2Distance, (int)128, (int)32, (int)2>(faiss::gpu::Tensor<float, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<float, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, void **, long *, T1, T2, int, faiss::gpu::Tensor<float, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, bool)": {
+        "calls": 1,
+        "inclusive_ms": 81.047626
+      },
+      "void faiss::gpu::ivfInterleavedScan2<(int)128, (int)32, (int)2>(faiss::gpu::Tensor<float, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)3, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, int, void **, faiss::gpu::IndicesOptions, bool, faiss::gpu::Tensor<float, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>)": {
+        "calls": 1,
+        "inclusive_ms": 0.065151
+      },
+      "void faiss::gpu::l2SelectMinK<int, float, (int)1024, (int)8, (int)128>(faiss::gpu::Tensor<T2, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<T2, (int)1, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<T2, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<long, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, int, T2)": {
+        "calls": 1,
+        "inclusive_ms": 0.048928
+      },
+      "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_tn_align1>(T1::Params)": {
+        "calls": 1,
+        "inclusive_ms": 0.010912
+      },
+      "void faiss::gpu::l2NormRowMajor<float, float4, (int)8, (bool)1>(faiss::gpu::Tensor<T2, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<float, (int)1, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>)": {
+        "calls": 1,
+        "inclusive_ms": 0.009632
+      },
+      "void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, float, float, float, (bool)0, float, float, float, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)": {
+        "calls": 1,
+        "inclusive_ms": 0.001984
+      },
+      "void faiss::gpu::sumAlongRows<float, (bool)1>(faiss::gpu::Tensor<T1, (int)1, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>, faiss::gpu::Tensor<T1, (int)2, (bool)1, long, faiss::gpu::traits::DefaultPtrTraits>)": {
+        "calls": 1,
+        "inclusive_ms": 0.001632
+      }
+    },
+    "cuda_api": {
+      "cudaMemcpyAsync_v3020": {
+        "calls": 5,
+        "inclusive_ms": 81.218663
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 5,
+        "inclusive_ms": 0.12754300000000002
+      },
+      "cudaEventCreateWithFlags_v3020": {
+        "calls": 3,
+        "inclusive_ms": 0.029535
+      },
+      "cuLaunchKernel": {
+        "calls": 1,
+        "inclusive_ms": 0.026101
+      },
+      "cudaEventRecord_v3020": {
+        "calls": 4,
+        "inclusive_ms": 0.023591
+      },
+      "cudaLaunchKernelExC_v11060": {
+        "calls": 1,
+        "inclusive_ms": 0.019715
+      },
+      "cudaStreamWaitEvent_v3020": {
+        "calls": 4,
+        "inclusive_ms": 0.016146
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 3,
+        "inclusive_ms": 0.010572000000000002
+      },
+      "cudaEventDestroy_v3020": {
+        "calls": 3,
+        "inclusive_ms": 0.0072829999999999995
+      },
+      "cuKernelGetName": {
+        "calls": 5,
+        "inclusive_ms": 0.0035579999999999995
+      },
+      "cuStreamGetCaptureInfo_v2": {
+        "calls": 6,
+        "inclusive_ms": 0.003399
+      },
+      "cuKernelGetFunction": {
+        "calls": 1,
+        "inclusive_ms": 0.002899
+      }
+    },
+    "copy_kind_activity": {
+      "1": {
+        "calls": 3,
+        "inclusive_ms": 0.006432,
+        "bytes": 125952,
+        "label": "Host-to-Device"
+      },
+      "2": {
+        "calls": 2,
+        "inclusive_ms": 0.00176,
+        "bytes": 3072,
+        "label": "Device-to-Host"
+      }
+    },
+    "sqlite_sha256": "825c04657c87541c2b7f56a1d142493bae1b1a8322aedc18f1677305098e4031",
+    "warning": "Temporal GPU coverage is not SM utilization. Inclusive CUDA API duration overlaps GPU work and may contain CPU spinning, driver work or blocking; it is not measured CPU computation. No coalescing counters or causal optimization control collected."
+  }
+}

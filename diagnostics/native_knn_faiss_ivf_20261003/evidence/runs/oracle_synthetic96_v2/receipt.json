@@ -1,0 +1,22 @@
+{
+  "gpu": "$SELECTED_GPU_UUID",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "$FAISS_ENV_ROOT/bin/python",
+    "native_ivf.py",
+    "oracle",
+    "--data",
+    "synthetic_96.f32bin",
+    "--qids",
+    "fixtures/synthetic_ragged33.qid",
+    "--out",
+    "oracle_synthetic96.json"
+  ],
+  "binary_sha256": "1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118",
+  "exit_code": 1,
+  "stop_reason": null,
+  "wall_s": 5.715027196099982,
+  "runtime_valid": false
+}

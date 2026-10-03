@@ -1,0 +1,68 @@
+{
+  "build": [
+    {
+      "nlist": 1024,
+      "train_s": 1.5042565920157358,
+      "add_s": 1.4303230629302561
+    }
+  ],
+  "rows": [
+    {
+      "K": 8,
+      "B": 32,
+      "nlist": 1024,
+      "nprobe": 1024,
+      "sample": 0,
+      "total_ms": 4778.726466931403,
+      "batch_p50_ms": 82.06767204683274,
+      "batch_p95_ms": 82.06767204683274,
+      "quality": {
+        "recall_deterministic": 1.0,
+        "recall_tie_aware": 1.0,
+        "missing_neighbor_slots": 0,
+        "complete_query_fraction": 1.0,
+        "per_query_recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "distance_max_abs": 1.3495227171311797e-06,
+        "distance_max_relative_scale1": 7.658415234798909e-07,
+        "squared_distance_max_relative_scale1": 1.5316836335018928e-06,
+        "distance_tolerance_pass": true
+      }
+    }
+  ],
+  "faiss_version": "1.15.1",
+  "backend": "native GpuIndexIVFFlat; use_cuvs=False",
+  "train_seed": 2026100307
+}

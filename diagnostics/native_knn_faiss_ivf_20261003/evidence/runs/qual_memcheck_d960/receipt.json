@@ -1,0 +1,27 @@
+{
+  "gpu": "$SELECTED_GPU_UUID",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "/usr/local/cuda/bin/compute-sanitizer",
+    "--tool",
+    "memcheck",
+    "--error-exitcode",
+    "91",
+    "$REMOTE_ROOT/gts_bench",
+    "$REMOTE_ROOT/synthetic_960.f32bin",
+    "$REMOTE_ROOT/fixtures/synthetic_ragged33.qid",
+    "32",
+    "32",
+    "2",
+    "$REMOTE_ROOT/synthetic960.index",
+    "qual_memcheck_d960",
+    "2"
+  ],
+  "binary_sha256": "5cba659e1cd603aa2370e103425f184368e6ed405da90ce85743c4399c324dbc",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 2.155285755987279,
+  "runtime_valid": true
+}

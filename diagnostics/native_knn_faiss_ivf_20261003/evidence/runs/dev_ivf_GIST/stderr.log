@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "$REMOTE_ROOT/native_ivf.py", line 195, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "$REMOTE_ROOT/native_ivf.py", line 187, in main
+    run_faiss(data,qids,reference,json.loads(Path(a.configs).read_text()),a.repeats,a.warm,a.out)
+  File "$REMOTE_ROOT/native_ivf.py", line 167, in run_faiss
+    'batch_p95_ms':float(np.quantile(times,.95)),'quality':quality(ids,dist,reference,data,k)}
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$REMOTE_ROOT/native_ivf.py", line 86, in quality
+    assert np.all((ids >= 0) & (ids < len(data))) and np.isfinite(distances).all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,28 @@
+{
+  "gpu": "$SELECTED_GPU_UUID",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "$FAISS_ENV_ROOT/bin/python",
+    "$REMOTE_ROOT/native_ivf.py",
+    "faiss",
+    "--data",
+    "$DATA_ROOT/Deep/1000000/fixtures/data.f32bin",
+    "--qids",
+    "$REMOTE_ROOT/fixtures/Deep_dev128.qid",
+    "--reference",
+    "$REMOTE_ROOT/oracle_Deep_dev128.json",
+    "--configs",
+    "$REMOTE_ROOT/development_configs.json",
+    "--repeats",
+    "2",
+    "--out",
+    "$REMOTE_ROOT/dev_ivf_Deep_v2.json"
+  ],
+  "binary_sha256": "1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 6.303038952988572,
+  "runtime_valid": true
+}

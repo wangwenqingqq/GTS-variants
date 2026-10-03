@@ -1,0 +1,26 @@
+{
+  "gpu": "$SELECTED_GPU_UUID",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "$FAISS_ENV_ROOT/bin/python",
+    "replay_validate.py",
+    "faiss",
+    "--data",
+    "$DATA_ROOT/GIST/1000000/fixtures/data.f32bin",
+    "--qids",
+    "fixtures/GIST_final256.qid",
+    "--reference",
+    "oracle_GIST_final256.json",
+    "--configs",
+    "formal_r1_GIST_configs.json",
+    "--out",
+    "postcheck_ivf_GIST.json"
+  ],
+  "binary_sha256": "1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 12.13638797600288,
+  "runtime_valid": true
+}

@@ -1,0 +1,22 @@
+{
+  "gpu": "$SELECTED_GPU_UUID",
+  "command": [
+    "numactl",
+    "--cpunodebind=3",
+    "--membind=3",
+    "$REMOTE_ROOT/gts_bench",
+    "$DATA_ROOT/Deep/1000000/fixtures/data.f32bin",
+    "$REMOTE_ROOT/fixtures/Deep_dev128.qid",
+    "32",
+    "32",
+    "2",
+    "$REMOTE_ROOT/Deep.index",
+    "dev_gts_Deep_k32_b32",
+    "2"
+  ],
+  "binary_sha256": "2871b26adf8b1109795291ffb0ff8645390365d89a20ec41ac3d6a239a27043c",
+  "exit_code": 0,
+  "stop_reason": null,
+  "wall_s": 11.82296517805662,
+  "runtime_valid": true
+}

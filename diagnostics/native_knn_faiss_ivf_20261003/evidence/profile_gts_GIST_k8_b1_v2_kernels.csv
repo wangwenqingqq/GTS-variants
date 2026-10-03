@@ -1,0 +1,21 @@
+name,calls,inclusive_ms
+"dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)",32,10190.060706
+"getDisPQ(TN *, float *, int *, int *, int *, char *, int *, int, int, int, double *, int, int, int, int, int, int)",96,789.0663929999997
+"updateDisK(int, double *, float *, int, int, int, int)",96,34.982598
+"void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",288,34.76881899999999
+"labelCNode(int *, int, int, int, double *, int, int, int, int, int)",64,15.019643
+"getQCountKnn(int, int, double *, int, int, int, int)",32,11.321141000000003
+"void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)",512,6.436860999999991
+"mergeResKnn(int, int, double *, int, int *, int, int, float *, int, TN *, int *, int *, float *, int)",32,3.062604999999999
+"initDisK(float *, int)",32,2.684023999999999
+"void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)",64,1.1429569999999998
+"mergeLNodeKnn(int, int, double *, int, int, int, int, int *, int, int, int)",32,0.665911
+"void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)",64,0.522999
+"nodeProcessKnn(TN *, float *, int *, int, int, int, double *, int, int, int, int, int)",96,0.32198100000000013
+"void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<double, double, double, unsigned int, cuda::std::__4::plus<void>>::Policy1000, double *, double *, cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<double, double *>, unsigned int, double, (bool)0, double>(T2, T3, T4, int, T5, T6, T7)",32,0.256093
+"void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)",64,0.16675
+"void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",96,0.12099100000000004
+"void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, unsigned long long>(T2 *)",64,0.075872
+"void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, double *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)",32,0.074173
+"initPListKnn(double *, int)",32,0.04617599999999998
+"void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>>(T1, int)",32,0.02924699999999998

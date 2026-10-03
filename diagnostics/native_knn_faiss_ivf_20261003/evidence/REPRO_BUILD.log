@@ -1,0 +1,54 @@
+In file included from gts/adapted/include/tree.cuh:8,
+                 from gts_bench.cu:18:
+/usr/local/cuda/bin/../targets/x86_64-linux/include/device_functions.h:54:2: warning: #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead." [-Wcpp]
+   54 | #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead."
+      |  ^~~~~~~
+gts/adapted/include/tree.cuh:18: warning: "THREAD_NUM" redefined
+   18 | #define THREAD_NUM 512
+      | 
+In file included from /usr/local/cuda/bin/../targets/x86_64-linux/include/curand_mtgp32_kernel.h:113,
+                 from /usr/local/cuda/bin/../targets/x86_64-linux/include/curand_kernel.h:113,
+                 from gts_bench.cu:12:
+/usr/local/cuda/bin/../targets/x86_64-linux/include/curand_mtgp32.h:107: note: this is the location of the previous definition
+  107 | #define THREAD_NUM MTGPDC_FLOOR_2P
+      | 
+In file included from gts/adapted/include/search_v2.cuh:7,
+                 from gts_bench.cu:19:
+/usr/local/cuda/bin/../targets/x86_64-linux/include/device_functions.h:54:2: warning: #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead." [-Wcpp]
+   54 | #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead."
+      |  ^~~~~~~
+gts/adapted/include/tree.cuh(44): warning #375-D: declaration requires a typedef name
+  };
+   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+In file included from gts/adapted/include/tree.cuh:8,
+                 from gts_bench.cu:18:
+/usr/local/cuda/bin/../targets/x86_64-linux/include/device_functions.h:54:2: warning: #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead." [-Wcpp]
+   54 | #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead."
+      |  ^~~~~~~
+gts/adapted/include/tree.cuh:18: warning: "THREAD_NUM" redefined
+   18 | #define THREAD_NUM 512
+      | 
+In file included from /usr/local/cuda/bin/../targets/x86_64-linux/include/curand_mtgp32_kernel.h:113,
+                 from /usr/local/cuda/bin/../targets/x86_64-linux/include/curand_kernel.h:113,
+                 from gts_bench.cu:12:
+/usr/local/cuda/bin/../targets/x86_64-linux/include/curand_mtgp32.h:107: note: this is the location of the previous definition
+  107 | #define THREAD_NUM MTGPDC_FLOOR_2P
+      | 
+In file included from gts/adapted/include/search_v2.cuh:7,
+                 from gts_bench.cu:19:
+/usr/local/cuda/bin/../targets/x86_64-linux/include/device_functions.h:54:2: warning: #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead." [-Wcpp]
+   54 | #warning "device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead."
+      |  ^~~~~~~
+gts/adapted/include/tree.cuh(44): warning #375-D: declaration requires a typedef name
+  };
+   ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+gts/adapted/include/tree.cuh(185): warning #177-D: variable "rid" was declared but never referenced
+    int rid = lid + size - 1;
+        ^
+

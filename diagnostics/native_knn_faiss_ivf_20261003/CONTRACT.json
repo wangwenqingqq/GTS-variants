@@ -1,0 +1,108 @@
+{
+  "experiment": "gts_20261003_native_knn_ivf_hostready",
+  "state_at_registration": "designed_not_run",
+  "baseline_branch": "experiments/gts-optimization-results-20260928",
+  "baseline_commit": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+  "operation": "Static self-inclusive L2 kNN; return K original IDs and FP32 Euclidean distances to Host",
+  "datasets": [
+    {
+      "name": "GIST",
+      "N": 1000000,
+      "D": 960
+    },
+    {
+      "name": "Deep",
+      "N": 1000000,
+      "D": 96
+    }
+  ],
+  "K": [
+    8,
+    32
+  ],
+  "B": [
+    1,
+    32
+  ],
+  "query_sets": {
+    "development": 128,
+    "final": 256,
+    "rule": "Fresh seeded disjoint in-dataset IDs; exclude all P0-P6 query IDs; freeze IVF configuration before final-query creation"
+  },
+  "oracle": "Independent full-table GPU FP64 RN subtract/multiply/add with FMA disabled; deterministic (squared distance, ID) top-K; exact-distance boundary ties also reported",
+  "quality_anchors": [
+    0.99,
+    0.999,
+    1.0
+  ],
+  "quality_rule": "Record deterministic ID Recall@K, exact-boundary-tie-aware Recall@K, per-query recall and distance error; freeze fastest development configuration meeting each anchor per dataset/K/B. No final tuning. Report missed final anchors rather than relabeling them.",
+  "gts": {
+    "source": "ZJU-DAILY/GTS@3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+    "path": "original searchIndexKnnV2",
+    "adaptation": "Separate diagnostic copy: binary FP32 input loader (upstream already uses FP32), MAX_H=6 capacity, fixed 1 GiB query workspace, full sorted-neighbor ID/distance extraction. Preserve original tree construction, pruning, distance arithmetic and sorting.",
+    "production_source_modified": false
+  },
+  "faiss": {
+    "backend": "Existing P6 source-built Faiss 1.15.1 native GpuIndexIVFFlat; cuVS disabled",
+    "nlist": [
+      1024,
+      4096
+    ],
+    "nprobe": [
+      1,
+      4,
+      16,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "filter": "nprobe<=nlist; 2048 GPU cap",
+    "training_rows": 200000,
+    "training_seed": 2026100307,
+    "no_cpu_fallback": true
+  },
+  "scope": "Warm static Host-ready query pass; includes host query gather/input transfer, search/sort, native output transfer, conversion to common ID/distance representation, synchronization and per-query allocation/free. Excludes data read, static layout/index build, reference oracle, quality checks and report-file writes; list them separately.",
+  "timing": {
+    "development_passes": 2,
+    "warmup_batches": 2,
+    "formal_pairs": 6,
+    "observations_per_configuration_per_process": 1,
+    "order": "GTS/IVF on odd rounds, IVF/GTS on even rounds; alternate dataset and configuration order",
+    "estimator": "median total ms per 256-query pass; p10/p90; paired process log ratio with fixed-seed bootstrap 95% CI",
+    "sustained": "The B32 256-query pass is the sustained scope, not isolated-kernel promotion",
+    "development_selection_estimator": "mean total Host-ready time of the two development passes among configurations meeting the anchor"
+  },
+  "gpu": {
+    "host": "eight-GPU Blackwell host",
+    "model": "RTX PRO 6000 Blackwell Server Edition",
+    "selected_index": 7,
+    "uuid": "$SELECTED_GPU_UUID",
+    "permission": "User authorizes an idle single GPU, including GPU7, on 2026-10-03",
+    "isolation": "Canonical and legacy advisory GPU locks; fresh process admission and monitoring; abort only own process on foreign GPU activity",
+    "numa": 3,
+    "do_not_touch": "All foreign jobs and GPU0 service; no clock/power changes"
+  },
+  "gates": [
+    "pinned source hashes",
+    "compile",
+    "synthetic ID extraction/full-table oracle including ties, ragged N and batches",
+    "memcheck",
+    "synccheck",
+    "development quality and parameter freeze",
+    "final quality",
+    "six fresh-process paired timing",
+    "query-scoped Nsight Systems attribution"
+  ],
+  "stop_rule": "Fail closed on source drift, occupied GPU, incorrect IDs/distances, sanitizer error or legal-capacity failure; preserve every failure. Pilot timeout 1200 s per process. Missing gate or missed quality anchor limits claims; it does not count as a same-quality win.",
+  "uncovered": [
+    "insert/delete/mixed updates",
+    "external out-of-dataset queries",
+    "arbitrary shape or batch generalization",
+    "CUDA Graph support"
+  ],
+  "quality_anchor_metric": "exact-boundary-tie-aware ID Recall@K; deterministic-ID recall reported separately",
+  "distance_field_tolerance": "FP32 output Euclidean distance squared agrees with RN FP64 squared L2 within 5e-5*max(1,squared L2). Also report raw Euclidean absolute/relative errors; near-zero cancellation is not hidden."
+}

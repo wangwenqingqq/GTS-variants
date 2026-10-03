@@ -1,0 +1,125 @@
+--- original/include/search_v2.cuh
++++ adapted/include/search_v2.cuh
+@@ -17,6 +17,8 @@
+ 
+ stack<int> st;			  // Instead of recursive calls, control the query interval of each layer (qs, qe, cur_level, qnum_up, offset_n, qs_up, size_a).
+ int *res;				  // The output result of range query.
++int *diag_ids;
++float *diag_dist;
+ float *res_dis;			  // The output result of knn query.
+ int qs, qe;				  // The start id and the end id of query at each process.
+ int *p_list;			  // The total list of queries to process for all layers.
+@@ -569,7 +571,7 @@
+ }
+ 
+ // Merge result.
+-__global__ void mergeResKnn(int ls, int le, double *p_list_k, int offset_p, int *size_list, int cur_level, int nnum_up, float *res_dis, int k)
++__global__ void mergeResKnn(int ls, int le, double *p_list_k, int offset_p, int *size_list, int cur_level, int nnum_up, float *res_dis, int k, TN *nodes, int *ids, int *full_ids, float *full_dist, int leaf_slots)
+ {
+ 	int tid = blockDim.x * blockIdx.x + threadIdx.x;
+ 	int total_num = gridDim.x * blockDim.x;
+@@ -581,6 +583,26 @@
+ 		int idx_q = offset_p + size_list[cur_level] / (MAX_SIZE * 3 + 3) * 2 + p_list_k[offset_p + i * nnum_up];
+ 		int qid = p_list_k[idx_q];
+ 		res_dis[qid] = p_list_k[offset_p + size_list[cur_level] / (MAX_SIZE * 3 + 3) * (3 + MAX_SIZE) + idx];
++        // Extract the existing sorted positions; no second search or sorting.
++        const int cap = size_list[cur_level] / (MAX_SIZE * 3 + 3);
++        for (int rank = 0; rank < k; ++rank) {
++            const int slot = s + rank - offset_p - cap * 3;
++            int original_id = -1;
++            float distance = INFI_DIS;
++            if (slot >= 0 && slot < leaf_slots) {
++                const int pos = int(p_list_k[s + rank]);
++                if (pos >= 0 && pos < leaf_slots) {
++                    const int nid = int(p_list_k[offset_p + cap + pos / MAX_SIZE]);
++                    const TN node = nodes[nid];
++                    const int did = pos % MAX_SIZE;
++                    distance = float(p_list_k[offset_p + cap * (3 + MAX_SIZE) + pos]);
++                    if (did < node.size && node.is_leaf && distance < INFI_DIS)
++                        original_id = ids[node.lid + did];
++                }
++            }
++            full_ids[qid * k + rank] = original_id;
++            full_dist[qid * k + rank] = distance;
++        }
+ 	}
+ }
+ 
+@@ -780,7 +802,7 @@
+ void searchIndexRnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
+ 					  int qnum, float r, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+-	cout << "Searching..." << endl;
++	// Timed console output disabled.
+ 
+ 	CHECK(cudaMallocManaged((void **)&res, qnum * sizeof(int)));
+ 	CHECK(cudaMallocManaged((void **)&size_list, (tree_h + 1) * sizeof(int)));
+@@ -796,7 +818,7 @@
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "input: " << input_size << endl;
+ 	// avail = input_size;
+-	avail = avail / 2; // Allocate storage space as a half of available space.
++	avail = 1024ULL * 1024 * 1024; // Frozen query workspace. // Allocate storage space as a half of available space.
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "total: " << total << endl;
+ 
+@@ -950,7 +972,7 @@
+ 				size_list[cur_level_low] = size_l * (MAX_SIZE + 3);
+ 				// printf("size_l: %d, MAX_SIZE: %d,  nnum_l: %d", size_l, MAX_SIZE, nnum_l);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+-				printf("qnum_l_low: %d\n", qnum_l_low);
++				// Timed console output disabled.
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+@@ -975,9 +997,11 @@
+ void searchIndexKnnV2(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
+ 					  int qnum, int k, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+-	cout << "Searching..." << endl;
++	// Timed console output disabled.
+ 
+ 	CHECK(cudaMallocManaged((void **)&res_dis, qnum * sizeof(float)));
++	CHECK(cudaMalloc((void **)&diag_ids, size_t(qnum) * k * sizeof(int)));
++	CHECK(cudaMalloc((void **)&diag_dist, size_t(qnum) * k * sizeof(float)));
+ 	CHECK(cudaMallocManaged((void **)&size_list, (tree_h + 1) * sizeof(int)));
+ 	CHECK(cudaMalloc((void **)&disk, qnum * sizeof(float)));
+ 
+@@ -992,7 +1016,7 @@
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "input: " << input_size << endl;
+ 	// avail = input_size;
+-	avail = avail / 2; // Allocate storage space as a half of available space.
++	avail = 1024ULL * 1024 * 1024; // Frozen query workspace. // Allocate storage space as a half of available space.
+ 	// cout << "avail: " << avail << endl;
+ 	// cout << "total: " << total << endl;
+ 
+@@ -1166,7 +1190,7 @@
+ 
+ 			// Merge result.
+ 			block_num = (le - ls + THREAD_NUM - 1) / THREAD_NUM;
+-			mergeResKnn<<<block_num, THREAD_NUM>>>(ls, le, p_list_k, offset_p, size_list, cur_level, nnum_up, res_dis, k);
++			mergeResKnn<<<block_num, THREAD_NUM>>>(ls, le, p_list_k, offset_p, size_list, cur_level, nnum_up, res_dis, k, node_list, id_list, diag_ids, diag_dist, lnum * MAX_SIZE);
+ 			cudaDeviceSynchronize();
+ 			cudaStatus = cudaGetLastError();
+ 			if (cudaStatus != cudaSuccess)
+@@ -1205,7 +1229,7 @@
+ 				size_list[cur_level_low] = size_l * (MAX_SIZE * 3 + 3);
+ 				// printf("size_l: %d, MAX_SIZE: %d,  nnum_l: %d\n", size_l, MAX_SIZE, nnum_l);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+-				printf("qnum_l_low: %d\n", qnum_l_low);
++				// Timed console output disabled.
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+--- original/include/tree.cuh
++++ adapted/include/tree.cuh
+@@ -30,7 +30,7 @@
+ 
+ __managed__ int TREE_ORDER = 10;
+ __managed__ int MAX_SIZE = 20;
+-__managed__ int MAX_H = 3;
++__managed__ int MAX_H = 6; // Capacity for one million rows.
+ __managed__ int DIS_CODE = 100;
+ __managed__ int INFI_DIS = 10000;
+ 

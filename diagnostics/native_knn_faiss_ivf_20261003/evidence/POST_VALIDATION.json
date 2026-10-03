@@ -1,0 +1,668 @@
+{
+  "caches": {
+    "GIST": {
+      "N": 1000000,
+      "D": 960,
+      "height": 6,
+      "node_count": 111111,
+      "leaf_count": 100000,
+      "permutation_pass": true,
+      "exact_disjoint_partition_pass": true,
+      "cache_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0"
+    },
+    "Deep": {
+      "N": 1000000,
+      "D": 96,
+      "height": 6,
+      "node_count": 111111,
+      "leaf_count": 100000,
+      "permutation_pass": true,
+      "exact_disjoint_partition_pass": true,
+      "cache_sha256": "94d6faf28da8eb159d248715f1c35ec7f7204743b80e0086248adc3f353696e2"
+    },
+    "synthetic96": {
+      "N": 4097,
+      "D": 96,
+      "height": 4,
+      "node_count": 111111,
+      "leaf_count": 1000,
+      "permutation_pass": true,
+      "exact_disjoint_partition_pass": true,
+      "cache_sha256": "bab47ae6148bfe05fe3a2453f7c16b92fff5aca78b41c7c26f7c8ea239ccaf62"
+    },
+    "synthetic960": {
+      "N": 4097,
+      "D": 960,
+      "height": 4,
+      "node_count": 111111,
+      "leaf_count": 1000,
+      "permutation_pass": true,
+      "exact_disjoint_partition_pass": true,
+      "cache_sha256": "5b7963bb920e6abf364fc6d3988ea126f7f16926cde0ca93a294058b1af767dc"
+    }
+  },
+  "gts_outputs": {
+    "delivery_smoke_gts.bin": {
+      "N": 4097,
+      "D": 96,
+      "K": 32,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "8d7ce2fb4bde03502b2ff46ad64b3e96bf01affa477ac1f2e01f78d0881ce23d"
+    },
+    "delivery_smoke_gts_exact.bin": {
+      "N": 4097,
+      "D": 96,
+      "K": 32,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "8d7ce2fb4bde03502b2ff46ad64b3e96bf01affa477ac1f2e01f78d0881ce23d"
+    },
+    "dev_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "3067b96cf99a510954967b26d5b4e90a5c304abf8ea8b3a4fd72cc242851d8a5"
+    },
+    "dev_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "3067b96cf99a510954967b26d5b4e90a5c304abf8ea8b3a4fd72cc242851d8a5"
+    },
+    "dev_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7ecd40ec65065bfd387257c02f6f17d632271e9fdb7fd7f85636f3720094fbf7"
+    },
+    "dev_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7ecd40ec65065bfd387257c02f6f17d632271e9fdb7fd7f85636f3720094fbf7"
+    },
+    "dev_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "79b7a5d5ec5a7c1e94edf4c75827d957c300b0bf851d3bdf48a4447ac7ad112c"
+    },
+    "dev_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "79b7a5d5ec5a7c1e94edf4c75827d957c300b0bf851d3bdf48a4447ac7ad112c"
+    },
+    "dev_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "8a56eb2114866b52ed975291c15515a77e9c6bd898ad40dd23a14ec46f1a8cc9"
+    },
+    "dev_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 128,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "8a56eb2114866b52ed975291c15515a77e9c6bd898ad40dd23a14ec46f1a8cc9"
+    },
+    "formal_r1_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r1_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r1_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r1_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r1_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r1_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r1_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r1_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r2_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r2_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r2_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r2_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r2_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r2_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r2_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r2_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r3_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r3_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r3_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r3_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r3_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r3_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r3_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r3_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r4_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r4_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r4_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r4_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r4_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r4_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r4_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r4_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r5_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r5_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r5_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r5_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r5_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r5_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r5_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r5_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r6_gts_Deep_k32_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r6_gts_Deep_k32_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ecac4fbccb025392013e8f30389cc2aad31d3268b218fbba903974435fc6e44e"
+    },
+    "formal_r6_gts_Deep_k8_b1.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r6_gts_Deep_k8_b32.bin": {
+      "N": 1000000,
+      "D": 96,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "7dfcfde97df0f8553ba37dfeb5100a1844e13edb6f0d7e130a3fbb4fd1404f01"
+    },
+    "formal_r6_gts_GIST_k32_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r6_gts_GIST_k32_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 32,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "ec3bce103a23b9fdd7389ed94b8088a733a6a573ea2554e88d5d4bd629ec1989"
+    },
+    "formal_r6_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "formal_r6_gts_GIST_k8_b32.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 256,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "6c7da8b5317344aaea1746348e660706b8dd676bb443c498cdd6adedd9a988eb"
+    },
+    "profile_gts_GIST_k8_b1.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 32,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "e7c85e83ff7be7d0534328af02f63877b6abc6e603b10c6ecfb266b02ff7915e"
+    },
+    "profile_gts_GIST_k8_b1_v2.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 32,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "e7c85e83ff7be7d0534328af02f63877b6abc6e603b10c6ecfb266b02ff7915e"
+    },
+    "profile_gts_GIST_k8_b32_v2.bin": {
+      "N": 1000000,
+      "D": 960,
+      "K": 8,
+      "Q": 32,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "e7c85e83ff7be7d0534328af02f63877b6abc6e603b10c6ecfb266b02ff7915e"
+    },
+    "qual_gts_d960_k32_b1.bin": {
+      "N": 4097,
+      "D": 960,
+      "K": 32,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "092c99f18e1b58ce5af64d3e602455fd2116013f04e10e5330a288884af01aa9"
+    },
+    "qual_gts_d960_k32_b32.bin": {
+      "N": 4097,
+      "D": 960,
+      "K": 32,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "092c99f18e1b58ce5af64d3e602455fd2116013f04e10e5330a288884af01aa9"
+    },
+    "qual_gts_d960_k8_b1.bin": {
+      "N": 4097,
+      "D": 960,
+      "K": 8,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "deb58318a0d68471013f50c846aa7be146e8e95e612ccef4aaa6b36841446411"
+    },
+    "qual_gts_d960_k8_b32.bin": {
+      "N": 4097,
+      "D": 960,
+      "K": 8,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "deb58318a0d68471013f50c846aa7be146e8e95e612ccef4aaa6b36841446411"
+    },
+    "qual_gts_d96_k32_b1.bin": {
+      "N": 4097,
+      "D": 96,
+      "K": 32,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "8d7ce2fb4bde03502b2ff46ad64b3e96bf01affa477ac1f2e01f78d0881ce23d"
+    },
+    "qual_gts_d96_k32_b32.bin": {
+      "N": 4097,
+      "D": 96,
+      "K": 32,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "8d7ce2fb4bde03502b2ff46ad64b3e96bf01affa477ac1f2e01f78d0881ce23d"
+    },
+    "qual_gts_d96_k8_b1.bin": {
+      "N": 4097,
+      "D": 96,
+      "K": 8,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "5a15a97b9c0b7fee9a1bc1f7d33d6496c8f13dc4464dac2cb5da63b9fecba884"
+    },
+    "qual_gts_d96_k8_b32.bin": {
+      "N": 4097,
+      "D": 96,
+      "K": 8,
+      "Q": 33,
+      "nonnegative_pass": true,
+      "nondecreasing_distance_pass": true,
+      "result_sha256": "5a15a97b9c0b7fee9a1bc1f7d33d6496c8f13dc4464dac2cb5da63b9fecba884"
+    }
+  },
+  "scope": "Offline GTS signed/sorted fields and exact cache partition; native signed/sorted and raw-relative errors are checked by separate validation replays and exhaustive-control runs."
+}

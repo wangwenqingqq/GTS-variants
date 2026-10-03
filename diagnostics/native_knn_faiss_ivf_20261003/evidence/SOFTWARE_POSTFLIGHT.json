@@ -1,0 +1,42 @@
+{
+  "verified_at_utc": "2026-10-02T18:31:45Z",
+  "python": "3.12.3",
+  "numpy": "2.5.2",
+  "cupy": "14.1.0",
+  "faiss": "1.15.1",
+  "faiss_compile_options": "OPTIMIZE GPU ",
+  "faiss_cmake": {
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CUDA_ARCHITECTURES": "120",
+    "CMAKE_CUDA_COMPILER": "/usr/local/cuda/bin/nvcc",
+    "CMAKE_CXX_COMPILER": "/usr/bin/c++",
+    "FAISS_ENABLE_CUVS": "OFF",
+    "FAISS_ENABLE_GPU": "ON",
+    "FAISS_ENABLE_PYTHON": "ON",
+    "FAISS_OPT_LEVEL": "generic"
+  },
+  "faiss_module_hashes": {
+    "_swigfaiss.so": "55dd5a3f8ab134e66ac41b7509597845d41dde9763c51917fb9a56f01d2f6e01"
+  },
+  "faiss_source_archive_sha256": "7b583010cc3c0a778b909a1beecbc5a4bd42f415d82af734b2c05d5eaaca0ffa",
+  "formal_sources_binary_data_and_cache_unchanged": true,
+  "formal_source_hashes": {
+    "gts_bench.cu": "1c7c16e2578835bb4c696906e548bff2c8d35c73ee21d215774b258cadd86bab",
+    "prepare_gts.py": "1a1a5b46ed98371575c5fe9fcf70866611db68e90d0fb5c75441b313c4e96ea1",
+    "run_locked.py": "6338d38ffe7ccca63690fb4c4fb764e8a0e603122c5c1cc319054c85fbbc7497",
+    "freeze_queries.py": "3fd335664f8d6fa8f244896ec38ca008b49bceed8ffd1f4086d0295dd20f699e",
+    "native_ivf.py": "23abd847d013c143cee82a5abc3ec87f1fa3305934ad6a5c8c306a4352daf27b",
+    "campaign.py": "9e1b87885eb3a73669a7ec66ba86b42e19843a7b6ebe3fa68d315f8a7b905c5a",
+    "gts_bench": "2871b26adf8b1109795291ffb0ff8645390365d89a20ec41ac3d6a239a27043c",
+    "test_protocol.py": "a656c8baabf8129be15450c608dd4b154ac21d2cd8e845fa119bac02e0792e89"
+  },
+  "extension_sources": {
+    "verify_outputs.py": "3c18bbfdff8b037ec1687a15fb5ff916a056f5a28f48aacfcc59cebefcfe08c4",
+    "run_control.py": "1159e9b35aa8cb75fd8c15b315eff32cbef2f4c93e88df0ec1a28eb8ec624738",
+    "profile_queries.py": "9f7d080f0873b24fab6345a9947754479155d581d740d4d0f69e1141e744ed8c"
+  },
+  "extension_runner_sha256": "dfe30c6d7ed4d4000b6789dc9ca26564db47d002eddc6649b390726cf826c61f",
+  "selected_gpu_postflight": "index, uuid, name, driver_version, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W]\n7, $SELECTED_GPU_UUID, NVIDIA RTX PRO 6000 Blackwell Server Edition, 590.48.01, 180 MHz, 405 MHz, 600.00 W\n",
+  "selected_gpu_apps": "",
+  "nsys": "NVIDIA Nsight Systems version 2025.5.2.266-255236693005v0\n"
+}
