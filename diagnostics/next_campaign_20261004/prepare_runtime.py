@@ -12,7 +12,8 @@ FILES = ('opt_knn_bench.cu', 'gts_bench_p7.cu', 'knn_cutoff.cuh',
 CAMPAIGN_FILES = ('query_trace.hpp', 'query_trace.py', 'campaign10k.py',
                   'qualify10k.py', 'diagnose10k.py', 'analyze_attribution.py',
                   'u10_native.py', 'continue10k.py', 'hook_control.py',
-                  'localize_flat.py', 'flat_refine.py', 'qualify_ref64.py')
+                  'localize_flat.py', 'flat_refine.py', 'qualify_ref64.py',
+                  'test_recovery_cpu.py')
 
 def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()

@@ -16,7 +16,7 @@ def environment(a):
     for pkg in ('faiss','cuvs','cupy'):
         try:
             module=__import__(pkg);directory=Path(module.__file__).parent
-            for p in sorted(directory.rglob('*.so')):libs.append({'package':pkg,'file':p.name,'sha256':sha(p)})
+            for p in sorted(directory.rglob('*.so')):libs.append({'package':pkg,'file':p.name,'path':str(p),'sha256':sha(p)})
         except ImportError:pass
     packages={}
     for pkg in ('faiss','cuvs','cupy-cuda13x','numpy'):

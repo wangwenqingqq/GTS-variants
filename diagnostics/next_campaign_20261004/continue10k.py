@@ -16,21 +16,20 @@ def main():
     lock=open('/tmp/gts_10k_20261004_controller.lock','a+')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     assert (ROOT/'F0_SMALL.json').exists()
-    prior=int((ROOT/'DIAGNOSTIC_CONTROLLER.pid').read_text())
+    prior=int((ROOT/'DIAGNOSTIC_CONTROLLER.pid').read_text()) if (ROOT/'DIAGNOSTIC_CONTROLLER.pid').exists() else -1
     while Path(f'/proc/{prior}/cmdline').exists():
         cmd=Path(f'/proc/{prior}/cmdline').read_bytes()
         if b'diagnose10k.py' not in cmd:break
         save(ROOT/'PROGRESS.json',{'state':'running','phase':'waiting_owned_diagnostics','owned_pid':prior})
         time.sleep(15)
-    assert (ROOT/'INPUT_IDENTITIES.json').exists() and (ROOT/'DIAGNOSTIC_STATUS.json').exists()
-    phases=[('gpu_counters',[a.faiss_python,ROOT/'diagnose10k.py','counters',*common(a)]),
-            ('native_long_correctness',[a.faiss_python,ROOT/'u10_native.py','run','--gpu',a.gpu,'--u0',a.u0]),
+    assert (ROOT/'INPUT_IDENTITIES.json').exists()
+    phases=[('native_development',[a.faiss_python,ROOT/'campaign10k.py','native-lane',*common(a)]),
             ('static_campaign',[a.faiss_python,ROOT/'campaign10k.py','pipeline',*common(a)])]
     try:
         for phase,cmd in phases:
             save(ROOT/'PROGRESS.json',{'state':'running','phase':phase,'controller_pid':os.getpid()})
             subprocess.run(list(map(str,cmd)),check=True)
-        save(ROOT/'CONTROLLER_COMPLETE.json',{'state':'static_matrix_and_native_correctness_complete',
+        save(ROOT/'CONTROLLER_COMPLETE.json',{'state':'static_matrix_collection_complete',
              'remaining':['K10_30k_sustained','R10_5_workloads','full_operator_attribution','native_timed_adapter'],
              'U10_ARRIVAL':'not admitted: unified keeper/real-vector API absent'})
     except Exception as e:
