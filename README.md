@@ -31,6 +31,7 @@ a unified range/kNN/update keeper.
 ## Next campaign: mandatory 10,000-query comparisons
 
 - [Detailed 10k stability and complete-workflow experiment plan](diagnostics/next_campaign_20261004/PLAN_10K.md)
+- [Execution recovery: failure isolation, workflow attribution, and real 10k comparisons](diagnostics/next_campaign_20261004/EXECUTION_RECOVERY.md)
 - [Later P7 static kNN evidence](https://github.com/wangwenqingqq/GTS-variants/blob/7bce3679c3e32e77fa25cf7842805926509e1412/diagnostics/unified_knn_e2e_20261003/RESULTS.md)
 - [Later original-GTS U0 update evidence](https://github.com/wangwenqingqq/GTS-variants/blob/7bce3679c3e32e77fa25cf7842805926509e1412/diagnostics/claim_closure_20261003/RESULTS.md)
 
@@ -40,6 +41,11 @@ native CAGRA on actual fresh10k queries, with matched B1/B32 and separately
 optimized bulk batching. It also covers range stability and every operator in
 query/insert/delete/compaction/rebuild. Static query qualification, native
 multiset updates and future new-vector arrivals remain separate contracts.
+
+The recovery document amends execution roles and failure isolation after the
+published qualification stop at `86cb65f`. It preserves the frozen plan and
+negative results; it is not a new GPU run or a completed comparison. Native
+IVF/CAGRA verification must not depend on repairing a rejected Flat adapter.
 
 ## Evidence alignment: query and update lifecycle
 
