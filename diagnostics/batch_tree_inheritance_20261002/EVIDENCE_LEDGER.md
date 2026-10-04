@@ -110,3 +110,18 @@ historical rerun or new optimization direction is authorized by this ledger.
 | optional Flat REF64 | Native取64+RN-FP64精算+topK+全部Host-ready工作计时 | 同GIST1024通过231.328ms；memcheck32通过；small96资格13/48成员失败、worst0，rejected | 不晋升、不替代原native失败；有限候选精算不可宣称通用完整 |
 | A0/A1静态 | 12NSYS+8实际NCU，全部诊断32输出独立核对；CPU/API/GPU并集分开 | measured；距离FP64管线指标85%左右；UVM fault存在但迁移bytes未知 | 支持后续距离路径归因；未证明新coalescing/精度机制端到端收益 |
 | K10/R10/动态计时 | matched/bulk剩余形状、CAGRA网格、R10、30K sustained、更新timed adapter | pending；U10-ARRIVAL not admitted | 完整计划与统一keeper尚未达成，失败和未完成项保留 |
+
+## 2026-10-04 execution recovery 补记
+
+按 [恢复合同](../next_campaign_20261004/EXECUTION_RECOVERY.md)继续独立原生比较；首轮 Flat/REF64 的质量失败与全部历史口径保留，原全局停止规则修订为局部质量/计时拒收。当前仍没有正式10k结果或统一query/update keeper。
+
+| 缺口 | 新取得的实际证据 | 边界与决定 |
+|---|---|---|
+| 原生更新完整计时 | Lean full-output binary `f96746e38adabd9ff1dc511202bd5e4782c83101db31b2fe86e3af8c695c18ad`；三seed×六fresh on/off pairs；全部事件/结果通过；成本上95≤1.006568 | N1000物理行重插入/live-rank/串行多重集；无新到达/并发/N1M动态倍率。桥接打印及memcheck不进性能摘要 |
+| 观察器成本 | 18条件216进程，14通过、4拒收；Flat bulk上95为1.04977，CAGRA raw hash不一致 | 不删样本或减猜测开销；未资格化计时仅diagnostic，独立方法继续；全比较准入仍pending |
+| 合法冷建树 | GIST/Deep各N1M真实构建；5000000 pivot-object距离、5次全N排序；完整排列/容量/覆盖通过；32条query输出通过 | NSYS constructor/GPU union与含审查/cache写出的index_setup分开；不是全N1M度量区间穷举 |
+| 实际查询pass计数 | 四指定距离launch在post-warm `formal.query_pass`内采NCU | full默认只有DMUL per-cycle率；直接动态工作计数仍待补，不能据85% FP64指标宣称compute-only或纯coalescing |
+| 独立原生开发 | IVF/CAGRA matched 两遍全网格448行已收集，未四舍五入质量保留；bulk10k全网格正在执行 | GIST CAGRA经验100%不可达，最高点保留diagnostic；正式种子未生成，无完整主表 |
+| A2机制选择 | U10 query-prefix scan/init实际GPU累计139.598ms，整条instrumented trace18575.558ms；尚未实现缓存 | 存在源级重复状态维护，不据重复次数推端到端倍率；常规prefix缓存不足以开启新颖性主张，当前no-new-change |
+
+源码、完整聚合数据、原始/curated hash映射与剩余门槛见 [RECOVERY_RESULTS](../next_campaign_20261004/RECOVERY_RESULTS.md)。治理补丁12项CPU回归通过；活动GPU阶段保持已登记脚本，安全切换安排在拥有的阶段drain之后。后续控制筛选、冻结和正式矩阵仍按完整查询数、真实16尾批次和六轮，原版旧约25GPU-hours仅为预算预测。
