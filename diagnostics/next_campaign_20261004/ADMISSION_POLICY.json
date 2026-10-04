@@ -1,5 +1,5 @@
 {
-  "version": "execution-recovery-v1",
+  "version": "execution-recovery-v2",
   "amendment_sha256": "602da1f9369ade61e5fa6fa39362deb992a32eadf655863e7b40a92442e4ed43",
   "original_plan_sha256": "0f48f8c8c4a21165d4593ddbab5324d7be9b67f44b9205fd95899ed6efcdfb5a",
   "tree_candidate": "O_MASK",
@@ -11,8 +11,14 @@
   "retained_growth_limit_bytes": 67108864,
   "observer_material_ratio": 1.03,
   "observer_admission": "hash-identical on/off outputs and upper95 paired slowdown <=1.03 per preregistered case",
-  "completion_fields": ["collection_complete", "candidate_stable", "comparison_admitted"],
+  "completion_fields": [
+    "collection_complete",
+    "candidate_stable",
+    "comparison_admitted"
+  ],
   "final_quality": "every process audited against independent RN-FP64 oracle; unreachable targets remain diagnostic_only",
   "cached_admission": "script/source, binary, command, current data/index/graph, query/oracle, observer mode and library identities match",
-  "new_numerical_repair": "not scheduled; preserve FAISS_FLAT_REF64 rejection"
+  "new_numerical_repair": "not scheduled; preserve FAISS_FLAT_REF64 rejection",
+  "observer_failure": "per method/config/tile: retain rejected or pending timers as diagnostic; finish controls before freeze; no global retry or guessed subtraction",
+  "comparison_admitted": "requires complete required collection, qualified candidate, eligible external result, reached frozen targets and qualified timers"
 }

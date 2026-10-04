@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
-from campaign10k import ROOT,BASE,commands,common,invoke,inventory,save,sha
+from campaign10k import ROOT,BASE,commands,common,invoke,inventory,save,sha,audit_output
 
 def environment(a):
     import cupy as cp
@@ -106,8 +106,94 @@ def counters(a):
         save(ROOT/'COUNTER_STATUS.json',status)
     print('BOUNDED COUNTERS COMPLETE',flush=True)
 
+def cold(a):
+    """Unchanged original adapter, fresh owned caches, one legal build/data."""
+    import numpy as np
+    from qualification import native_ivf
+    dest=ROOT/'profiles';dest.mkdir(exist_ok=True);rows=[]
+    for d in ('GIST','Deep'):
+        ref=json.loads((ROOT/f'oracle_{d}_dev1024.json').read_text())
+        ref={**ref,'Q':32,'records':ref['records'][:32]}
+        qp=ROOT/f'fixtures/{d}_diagnostic32.qid'
+        if not qp.exists():qp.write_text('32\n'+''.join(f'{r["qid"]}\n' for r in ref['records']))
+        cache=dest/f'cold_{d}.index';out=dest/f'cold_{d}'
+        label=f'cold_{d}';run=ROOT/'runs'/label
+        # A build artifact is an expected output, not a pre-existing index input.
+        assert not cache.exists() or run.exists(),'cold cache already exists without its receipt'
+        cmd=commands(a,d,'GTS_ORIG',8,1,qp,out,{})
+        cmd[6]=cache
+        args=['/usr/local/bin/nsys','profile','--trace=cuda,nvtx,osrt','--sample=process-tree','--cpuctxsw=process-tree',
+              '--capture-range=nvtx','--nvtx-capture=static.index_build','--env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0',
+              '--capture-range-end=stop','--force-overwrite=false','-o',out,*cmd]
+        # The generated cache is the sole declared output excluded from the
+        # before/after input identity. Keep every measured source/data/command.
+        from campaign10k import run_identity
+        identity=run_identity(a,args,identity_files=list((BASE/'gts/adapted/include').glob('*.cuh')))
+        if run.exists():
+            receipt=json.loads((run/'receipt.json').read_text());assert receipt['runtime_valid']
+            saved=json.loads((run/'identity.json').read_text())
+            identity['files'].pop(str(cache.resolve()),None)
+            assert saved==identity
+            previous=dest/f'cold_{d}.AUDIT.json'
+            if previous.exists():assert sha(cache)==json.loads(previous.read_text())['index_sha256']
+        else:
+            save(ROOT/f'cold_{d}.REGISTERED.json',identity)
+            locked=[sys.executable,ROOT/'run_locked.py','--gpu',a.gpu,'--output',run,'--timeout-seconds',7200,'--',*args]
+            subprocess.run(list(map(str,locked)),check=True)
+            after=run_identity(a,args,identity_files=list((BASE/'gts/adapted/include').glob('*.cuh')))
+            after['files'].pop(str(cache.resolve()),None);assert after==identity
+            save(run/'identity.json',identity);receipt=json.loads((run/'receipt.json').read_text())
+        rep=Path(str(out)+'.nsys-rep');sql=Path(str(out)+'.sqlite')
+        if not sql.exists():subprocess.run(['/usr/local/bin/nsys','export','--type=sqlite','--output',str(sql),str(rep)],check=True)
+        with cache.open('rb') as f:
+            n,dim,height,nodes=map(int,np.fromfile(f,'<i4',4));order=np.fromfile(f,'<i4',n)
+            topology=np.fromfile(f,dtype=np.dtype([('pid','<i4'),('lo','<f4'),('size','<i4'),('lid','<i4'),('leaf','<i4')]),count=nodes)
+            empty=np.fromfile(f,'<i4',nodes);assert not f.read(1)
+        assert n==1000000 and np.array_equal(np.sort(order),np.arange(n))
+        active=np.flatnonzero(empty==0);leaves=[i for i in active if topology[i]['leaf']]
+        cursor=0
+        for i in sorted(leaves,key=lambda j:int(topology[j]['lid'])):
+            node=topology[i];assert int(node['lid'])==cursor and 0<int(node['size'])<=20;cursor+=int(node['size'])
+        assert cursor==n
+        for i in active:
+            if i==0:continue
+            parent=topology[(i-1)//10];node=topology[i]
+            assert parent['lid']<=node['lid'] and node['lid']+node['size']<=parent['lid']+parent['size']
+        meta=json.loads(next(s[7:] for s in (run/'stdout.log').read_text().splitlines() if s.startswith('RESULT ')))
+        assert not meta['cache_loaded']
+        quality=audit_output(str(out)+'.bin',native_ivf.load_data(a.data_root/f'{d}/1000000/fixtures/data.f32bin'),ref,8)
+        assert quality['complete_gate_pass'],'cold adapter post-build query output failure'
+        row={'dataset':d,'N':n,'D':dim,'height':height,'active_nodes':len(active),'leaf_nodes':len(leaves),
+             'capacity_permutation_disjoint_coverage_and_parent_intervals':True,'index_sha256':sha(cache),
+             'setup':meta,'build_scope':'NSYS static.index_build ends after original constructor and device synchronization; setup index time additionally includes coverage audit/cache write',
+             'pivot_object_distances':sum(int(topology[i]['size']) for i in active if not topology[i]['leaf']),
+             'node_boundary_distances':len(active)-1,'sorts_full_N':height-1,
+             'quality':quality,'receipt':receipt,'report_sha256':sha(rep),'sqlite_sha256':sha(sql)}
+        save(dest/f'cold_{d}.AUDIT.json',row);rows.append(row);save(ROOT/'COLD_BUILD.json',rows)
+        print('COLD LEGAL BUILD',d,n,dim,height,flush=True)
+
+def pass_counters(a):
+    """New measured-pass launches; prior warmup-only reports remain intact."""
+    dest=ROOT/'profiles';dest.mkdir(exist_ok=True);status=[]
+    for m,kernel in (('O_FULL','verify_distances'),('O_BOUND','verify_distances'),('O_MASK','verify_distances'),('GTS_ORIG','dataProcessKnn')):
+        label=f'ncu_pass_{m}_{kernel}';out=dest/label
+        cmd=commands(a,'GIST',m,8,32,ROOT/'fixtures/GIST_diagnostic32.qid',out,{})
+        args=['/usr/local/bin/ncu','--clock-control','none','--cache-control','none','--replay-mode','kernel',
+              '--nvtx','--nvtx-include','formal.query_pass/','--kernel-name-base','demangled',
+              '--kernel-name',f'regex:{kernel}','--launch-count','1','--set','full','--export',out,*cmd]
+        invoke(a,label,args,identity_files=list((BASE/'gts/adapted/include').glob('*.cuh')))
+        report=Path(str(out)+'.ncu-rep');assert report.stat().st_size>0
+        r=subprocess.run(['/usr/local/bin/ncu','--import',str(report),'--csv','--page','raw'],text=True,capture_output=True,check=True)
+        Path(str(out)+'.metrics.csv').write_text(r.stdout);assert 'Kernel Name' in r.stdout and kernel in r.stdout
+        work={'query_object_pairs':32*1000000,'distance_coordinates':32*1000000*960,'early_exit':False} if m=='O_FULL' else {
+              'exact_distance_coordinates':'pending per-launch dynamic work ledger; do not infer them from traffic or compare iterative launches as equal work'}
+        status.append({'label':label,'state':'measured','scope':'first matching kernel inside actual post-warmup formal.query_pass; diagnostic replay, not formal timing',
+                       'Q':32,'B':32,'work':work,'report_sha256':sha(report),'metrics_csv_sha256':sha(str(out)+'.metrics.csv')})
+        save(ROOT/'PASS_COUNTER_STATUS.json',status)
+        print('ACTUAL QUERY PASS COUNTERS',m,kernel,flush=True)
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('phase',choices=('environment','profiles','counters'))
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=('environment','profiles','counters','cold','pass_counters'))
     p.add_argument('--family');p.add_argument('--gpu',required=True);p.add_argument('--p7',type=Path,required=True)
     p.add_argument('--data-root',type=Path,required=True);p.add_argument('--faiss-python',required=True);p.add_argument('--cuvs-python',required=True)
     a=p.parse_args();globals()[a.phase](a)

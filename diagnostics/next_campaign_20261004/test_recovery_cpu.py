@@ -65,8 +65,11 @@ class RecoveryPolicy(unittest.TestCase):
                 self.assertFalse(c.cached_admission_valid(before,c.run_identity(a,cmd)))
             finally:c.ROOT=original
     def test_changed_observer_mode_invalidates_cached_admission(self):
-        saved={'observer_mode':'on','files':{'script':'same'}}
-        self.assertFalse(c.cached_admission_valid(saved,{**saved,'observer_mode':'off'}))
+        with tempfile.TemporaryDirectory() as t,patch.object(c,'ROOT',Path(t)):
+            a=types.SimpleNamespace(gpu='mock-gpu');cmd=[sys.executable]
+            saved=c.run_identity(a,cmd,{'U10_OBSERVE':'1','U10_TREE_AUDIT':'0'})
+            self.assertFalse(c.cached_admission_valid(saved,c.run_identity(a,cmd,{'U10_OBSERVE':'0','U10_TREE_AUDIT':'0'})))
+            self.assertFalse(c.cached_admission_valid(saved,c.run_identity(a,cmd,{'U10_OBSERVE':'1','U10_TREE_AUDIT':'1'})))
     def test_missing_required_row_cannot_accept_comparison(self):
         rows=[row(m) for m in c.COMPLETE]
         decision=c.matrix_decision(rows,[r['label'] for r in rows]+['CAGRA'])
@@ -75,6 +78,27 @@ class RecoveryPolicy(unittest.TestCase):
         rows=[row(m,m!='FAISS_FLAT') for m in c.COMPLETE]+[row('CAGRA',anchors=(.99,))]
         decision=c.matrix_decision(rows,[r['label'] for r in rows])
         self.assertTrue(decision['collection_complete']);self.assertIn('FAISS_FLAT',decision['strict_rejected_rows'])
+    def test_collected_unqualified_timer_cannot_accept_comparison(self):
+        rows=[row(m) for m in c.COMPLETE]+[row('CAGRA',anchors=(.99,))]
+        rows[-1]['admission']=c.admission(rows[-1],False)
+        decision=c.matrix_decision(rows,[r['label'] for r in rows])
+        self.assertTrue(decision['collection_complete']);self.assertFalse(decision['comparison_admitted'])
+        self.assertEqual(decision['unqualified_timer_rows'],['CAGRA'])
+    def test_observer_failure_does_not_poison_another_method(self):
+        with tempfile.TemporaryDirectory() as t,patch.object(c,'ROOT',Path(t)):
+            for name in ('HOOK_CONTROL.json','HOOK_CONTROL_REGISTERED.json'):(c.ROOT/name).write_text('{}')
+            for n in ('opt_knn_bench','opt_knn_bench.cu','query_trace.hpp','knn_cutoff.cuh','knn_select.cuh','knn_verify.cuh'):(c.ROOT/n).write_text(n)
+            identity=c.ROOT/'runs/hook_c0_r1_on/identity.json';identity.parent.mkdir(parents=True)
+            c.save(identity,{'files':{str(p.resolve()):c.sha(p) for p in c.ROOT.iterdir() if p.is_file()}})
+            c.save(c.ROOT/'HOOK_CONTROL_COMPLETE.json',{'state':'collection_complete',
+                'rows_sha256':c.sha(c.ROOT/'HOOK_CONTROL.json'),'registration_sha256':c.sha(c.ROOT/'HOOK_CONTROL_REGISTERED.json'),
+                'summary':[{'case':0,'dataset':'Deep','method':'O_MASK','B':32,'timer_admitted':True},
+                           {'case':1,'dataset':'Deep','method':'CAGRA','B':32,'timer_admitted':False}]})
+            self.assertTrue(c.observer_decision({'dataset':'GIST','method':'O_MASK','B':32,'config':{}})['qualified'])
+            self.assertFalse(c.observer_decision({'dataset':'Deep','method':'CAGRA','B':32,'config':{'itopk_size':1024,'search_width':4}})['qualified'])
+            self.assertFalse(c.observer_decision({'dataset':'Deep','method':'IVF_APPROX','B':32,'config':{'nlist':1024,'nprobe':16}})['qualified'])
+            (c.ROOT/'query_trace.hpp').write_text('changed observer')
+            self.assertFalse(c.observer_decision({'dataset':'GIST','method':'O_MASK','B':32,'config':{}})['qualified'])
     def test_drift_in_query_or_oracle_cannot_reuse_receipt(self):
         saved={'command':['mock'],'files':{'script':'s','query':'q','oracle':'o'}}
         self.assertFalse(c.cached_admission_valid(saved,{**saved,'files':{**saved['files'],'oracle':'new'}}))

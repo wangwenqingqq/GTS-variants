@@ -1,0 +1,832 @@
+{
+  "GIST": {
+    "trace_sha256": "a5bd931697f4388e9b0091b3f4737bea9cc511b33eabc8db25ed0c40ed10bc5b",
+    "scope": "GIST N1M legal cold original constructor; load and coverage/cache writes separate; profiling overhead",
+    "range_ms": 22726.10507,
+    "gpu_kernel_union_ms": 22705.23176,
+    "kernel_sum_ms": 22705.23176,
+    "kernels": {
+      "initIndexData": {
+        "launches": 1,
+        "gpu_ms": 0.246269,
+        "registers": 16,
+        "local_memory_per_thread": 0
+      },
+      "getPivotDis": {
+        "launches": 5,
+        "gpu_ms": 22647.681813,
+        "registers": 50,
+        "local_memory_per_thread": 0
+      },
+      "DeviceRadixSortHistogramKernel": {
+        "launches": 5,
+        "gpu_ms": 0.051808,
+        "registers": 46,
+        "local_memory_per_thread": 0
+      },
+      "DeviceRadixSortExclusiveSumKernel": {
+        "launches": 5,
+        "gpu_ms": 0.006048,
+        "registers": 37,
+        "local_memory_per_thread": 0
+      },
+      "DeviceRadixSortOnesweepKernel": {
+        "launches": 40,
+        "gpu_ms": 0.541432,
+        "registers": 80,
+        "local_memory_per_thread": 0
+      },
+      "nodeSplit": {
+        "launches": 5,
+        "gpu_ms": 56.687495,
+        "registers": 52,
+        "local_memory_per_thread": 0
+      },
+      "DeviceReduceKernel": {
+        "launches": 5,
+        "gpu_ms": 0.009503,
+        "registers": 34,
+        "local_memory_per_thread": 0
+      },
+      "DeviceReduceSingleTileKernel": {
+        "launches": 5,
+        "gpu_ms": 0.007392,
+        "registers": 30,
+        "local_memory_per_thread": 0
+      }
+    },
+    "cuda_api": {
+      "cudaMallocManaged_v6000": {
+        "calls": 2,
+        "inclusive_ms": 0.092195
+      },
+      "cudaMalloc_v3020": {
+        "calls": 16,
+        "inclusive_ms": 2.2629289999999997
+      },
+      "cudaMemset_v3020": {
+        "calls": 2,
+        "inclusive_ms": 0.292708
+      },
+      "cuKernelGetName": {
+        "calls": 71,
+        "inclusive_ms": 0.02312500000000002
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 71,
+        "inclusive_ms": 15.218699999999998
+      },
+      "cudaDeviceSynchronize_v3020": {
+        "calls": 12,
+        "inclusive_ms": 22704.692551000007
+      },
+      "cudaMemsetAsync_v3020": {
+        "calls": 50,
+        "inclusive_ms": 0.2871189999999999
+      },
+      "cudaFree_v3020": {
+        "calls": 14,
+        "inclusive_ms": 1.1133
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 15,
+        "inclusive_ms": 0.049849000000000004
+      },
+      "cudaMemcpyAsync_v3020": {
+        "calls": 5,
+        "inclusive_ms": 0.121259
+      }
+    },
+    "cpu_and_fault_events": {
+      "CUDA_UM_CPU_PAGE_FAULT_EVENTS": "no table exported; zero/unavailable not distinguished",
+      "CUDA_UM_GPU_PAGE_FAULT_EVENTS": "no table exported; zero/unavailable not distinguished",
+      "COMPOSITE_EVENTS": 23711,
+      "SCHED_EVENTS": 10710
+    },
+    "CPU_leaf_IP_samples": {
+      "libcuda.so.590.48.01:unresolved_IP": 20120,
+      "[vdso]:unresolved_IP": 3423,
+      "libc.so.6:__clock_gettime": 136,
+      "libToolsInjection64.so:unresolved_IP": 10,
+      "[kernel.kallsyms]:unresolved_IP": 9,
+      "libc.so.6:unresolved_IP": 6,
+      "libToolsInjectionMemoryAllocator.so:unresolved_IP": 3,
+      "libcupti.so.13.1:unresolved_IP": 2,
+      "libc.so.6:__pthread_mutex_unlock": 1,
+      "libc.so.6:__pthread_mutex_lock": 1
+    },
+    "copies": [
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001407
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.003072
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000511
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001312
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.000991
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002048
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001215
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.00304
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.0016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001824
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000511
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001312
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.001728
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000735
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001632
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000735
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001887
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000511
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001311
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000608
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001632
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.001984
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001824
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000671
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001312
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000608
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001055
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.001984
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.00208
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000736
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001024
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001664
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000768
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000608
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001056
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002048
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000768
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001024
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000799
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001696
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000832
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000608
+      }
+    ],
+    "interpretation": "API inclusive waiting overlaps GPU kernels; do not add API duration to GPU time. IP samples are samples, not CPU-time deltas. UVM faults are not themselves migrated-byte totals."
+  },
+  "Deep": {
+    "trace_sha256": "cab29ed724bfcc14feee08f6bb22c86bc16dcaf0f5289f80917e2e529f5083c4",
+    "scope": "Deep N1M legal cold original constructor; load and coverage/cache writes separate; profiling overhead",
+    "range_ms": 2330.579507,
+    "gpu_kernel_union_ms": 2308.075766,
+    "kernel_sum_ms": 2308.075766,
+    "kernels": {
+      "initIndexData": {
+        "launches": 1,
+        "gpu_ms": 0.16643,
+        "registers": 16,
+        "local_memory_per_thread": 0
+      },
+      "getPivotDis": {
+        "launches": 5,
+        "gpu_ms": 2300.439797,
+        "registers": 50,
+        "local_memory_per_thread": 0
+      },
+      "DeviceRadixSortHistogramKernel": {
+        "launches": 5,
+        "gpu_ms": 0.04883200000000001,
+        "registers": 46,
+        "local_memory_per_thread": 0
+      },
+      "DeviceRadixSortExclusiveSumKernel": {
+        "launches": 5,
+        "gpu_ms": 0.006112,
+        "registers": 37,
+        "local_memory_per_thread": 0
+      },
+      "DeviceRadixSortOnesweepKernel": {
+        "launches": 40,
+        "gpu_ms": 0.5427120000000001,
+        "registers": 80,
+        "local_memory_per_thread": 0
+      },
+      "nodeSplit": {
+        "launches": 5,
+        "gpu_ms": 6.855115,
+        "registers": 52,
+        "local_memory_per_thread": 0
+      },
+      "DeviceReduceKernel": {
+        "launches": 5,
+        "gpu_ms": 0.009408,
+        "registers": 34,
+        "local_memory_per_thread": 0
+      },
+      "DeviceReduceSingleTileKernel": {
+        "launches": 5,
+        "gpu_ms": 0.00736,
+        "registers": 30,
+        "local_memory_per_thread": 0
+      }
+    },
+    "cuda_api": {
+      "cudaMallocManaged_v6000": {
+        "calls": 2,
+        "inclusive_ms": 0.056124
+      },
+      "cudaMalloc_v3020": {
+        "calls": 16,
+        "inclusive_ms": 1.8323819999999997
+      },
+      "cudaMemset_v3020": {
+        "calls": 2,
+        "inclusive_ms": 0.089095
+      },
+      "cuKernelGetName": {
+        "calls": 71,
+        "inclusive_ms": 0.020733
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 71,
+        "inclusive_ms": 18.01904100000001
+      },
+      "cudaDeviceSynchronize_v3020": {
+        "calls": 12,
+        "inclusive_ms": 2307.5115900000005
+      },
+      "cudaMemsetAsync_v3020": {
+        "calls": 50,
+        "inclusive_ms": 0.218015
+      },
+      "cudaFree_v3020": {
+        "calls": 14,
+        "inclusive_ms": 1.0325240000000002
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 15,
+        "inclusive_ms": 0.04624800000000001
+      },
+      "cudaMemcpyAsync_v3020": {
+        "calls": 5,
+        "inclusive_ms": 0.090664
+      }
+    },
+    "cpu_and_fault_events": {
+      "CUDA_UM_CPU_PAGE_FAULT_EVENTS": "no table exported; zero/unavailable not distinguished",
+      "CUDA_UM_GPU_PAGE_FAULT_EVENTS": "no table exported; zero/unavailable not distinguished",
+      "COMPOSITE_EVENTS": 2412,
+      "SCHED_EVENTS": 1171
+    },
+    "CPU_leaf_IP_samples": {
+      "libcuda.so.590.48.01:unresolved_IP": 2027,
+      "[vdso]:unresolved_IP": 363,
+      "libc.so.6:__clock_gettime": 18,
+      "[kernel.kallsyms]:unresolved_IP": 3,
+      "libToolsInjection64.so:unresolved_IP": 1
+    },
+    "copies": [
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001247
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.0032
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000511
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001312
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001375
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.003008
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001664
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002015
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001664
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000511
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001344
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.001696
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002112
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000735
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001664
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001055
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.001055
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.0016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000511
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001344
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000607
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001056
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000768
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001024
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000831
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001568
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000704
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000576
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001056
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001023
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.002016
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000768
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001024
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000799
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001632
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000704
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.000576
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001056
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001055
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 11,
+        "ms": 0.001984
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000736
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 11,
+        "ms": 0.001024
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000767
+      },
+      {
+        "bytes": 61440,
+        "copy_kind": 12,
+        "ms": 0.001952
+      },
+      {
+        "bytes": 4096,
+        "copy_kind": 12,
+        "ms": 0.000768
+      },
+      {
+        "bytes": 4,
+        "copy_kind": 2,
+        "ms": 0.00144
+      }
+    ],
+    "interpretation": "API inclusive waiting overlaps GPU kernels; do not add API duration to GPU time. IP samples are samples, not CPU-time deltas. UVM faults are not themselves migrated-byte totals."
+  }
+}

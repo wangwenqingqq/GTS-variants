@@ -13,7 +13,7 @@ CAMPAIGN_FILES = ('query_trace.hpp', 'query_trace.py', 'campaign10k.py',
                   'qualify10k.py', 'diagnose10k.py', 'analyze_attribution.py',
                   'u10_native.py', 'continue10k.py', 'hook_control.py',
                   'localize_flat.py', 'flat_refine.py', 'qualify_ref64.py',
-                  'test_recovery_cpu.py')
+                  'test_recovery_cpu.py','u10_trace.hpp')
 
 def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()

@@ -1,0 +1,79 @@
+{
+  "seed": 2026100431,
+  "label": "u10_lean_bridge",
+  "state": "correctness_passed",
+  "queries": 10000,
+  "operations": 12000,
+  "threshold_rebuilds": 50,
+  "results_checked": 14990,
+  "FN": 0,
+  "FP": 0,
+  "duplicates": 0,
+  "exact_FP32_fields": true,
+  "summary": {
+    "observe": true,
+    "tree_audit": true,
+    "load_ms": 52.455273,
+    "buffer_setup_ms": 45.625325,
+    "cold_build_ms": 15.016985,
+    "trace_ms": 17501.352069,
+    "final_drain_ms": 0.391692,
+    "results": 14990,
+    "sampled_device_peak_bytes": 14228914176,
+    "host_output_capacity_bytes": 80800000,
+    "cpu_user_s": 16.139214,
+    "cpu_system_s": 0.321424,
+    "stages": [
+      {
+        "name": "query.tree",
+        "calls": 10000,
+        "inclusive_host_ms": 14768.467819000001
+      },
+      {
+        "name": "query.buffer",
+        "calls": 1850,
+        "inclusive_host_ms": 1027.4907749999998
+      },
+      {
+        "name": "query.prefix_merge",
+        "calls": 10000,
+        "inclusive_host_ms": 541.1615639999987
+      },
+      {
+        "name": "delete.prefix_lookup",
+        "calls": 1000,
+        "inclusive_host_ms": 49.24829100000003
+      },
+      {
+        "name": "delete.buffer_merge",
+        "calls": 500,
+        "inclusive_host_ms": 209.75279399999997
+      },
+      {
+        "name": "rebuild.compaction",
+        "calls": 50,
+        "inclusive_host_ms": 25.531954999999996
+      },
+      {
+        "name": "rebuild.construct",
+        "calls": 50,
+        "inclusive_host_ms": 215.658906
+      },
+      {
+        "name": "rebuild.reset",
+        "calls": 50,
+        "inclusive_host_ms": 1.724494
+      }
+    ],
+    "ancestor_member_checks": 102000,
+    "observer_bridge_sha256": "abf5bb9d9ceb3bdbc103323eb7f33269f8240cde2ba0840ac36c00819278ce31"
+  },
+  "outputs": {
+    ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+    ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+    ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+    ".ops.csv": "2c583939778921b49765b519f79e9c857f2694c7ce99bbc4ed3dbc75cb57ebe1",
+    ".summary.json": "e399dfc2873764bfca0d66159537cf721afac5371a31717d70fc71d9b5b1a21c"
+  },
+  "scope": "Correctness bridge only: 51 tree snapshots; printing inside construction disqualifies all recorded times as performance samples"
+}

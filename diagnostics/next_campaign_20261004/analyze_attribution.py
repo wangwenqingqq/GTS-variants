@@ -12,10 +12,10 @@ def union(intervals):
         total+=max(0,end-max(start,last));last=max(last,end)
     return total
 
-def nsys(path):
+def nsys(path,range_name='formal.query_pass',scope=None):
     c=sqlite3.connect(path);c.row_factory=sqlite3.Row
     names=dict(c.execute('select id,value from StringIds'))
-    ranges=[r for r in c.execute('select * from NVTX_EVENTS') if (r['text'] or names.get(r['textId']))=='formal.query_pass' and r['end']]
+    ranges=[r for r in c.execute('select * from NVTX_EVENTS') if (r['text'] or names.get(r['textId']))==range_name and r['end']]
     assert len(ranges)==1;begin,end=ranges[0]['start'],ranges[0]['end']
     kernels=list(c.execute('select * from CUPTI_ACTIVITY_KIND_KERNEL where start>=? and end<=?',(begin,end)))
     api=list(c.execute('select * from CUPTI_ACTIVITY_KIND_RUNTIME where start>=? and end<=?',(begin,end)))
@@ -42,7 +42,7 @@ def nsys(path):
         cols={r[1] for r in c.execute('pragma table_info(CUPTI_ACTIVITY_KIND_MEMCPY)')}
         for r in c.execute('select * from CUPTI_ACTIVITY_KIND_MEMCPY where start>=? and end<=?',(begin,end)):
             memcpy.append({'bytes':r['bytes'],'copy_kind':r['copyKind'],'ms':(r['end']-r['start'])/1e6})
-    return {'trace_sha256':sha(path),'scope':'GIST1M/K8/developer32 post-warmup Host-ready query range; instrumentation overhead; not formal timing',
+    return {'trace_sha256':sha(path),'scope':scope or 'GIST1M/K8/developer32 post-warmup Host-ready query range; instrumentation overhead; not formal timing',
             'range_ms':(end-begin)/1e6,'gpu_kernel_union_ms':union([(r['start'],r['end']) for r in kernels])/1e6,
             'kernel_sum_ms':sum(x['gpu_ms'] for x in grouped.values()),'kernels':grouped,'cuda_api':apis,
             'cpu_and_fault_events':counts,'CPU_leaf_IP_samples':dict(sorted(samples.items(),key=lambda x:-x[1])[:30]),

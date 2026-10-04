@@ -1,0 +1,197 @@
+{
+  "source_sqlite_sha256": "308dd056246d1b9f10aad1cb77b7a06d9e3bf3fd0d05e5a4a55bd9619d597444",
+  "scope": "Each kernel assigned only when fully contained within one named NVTX stage; full U10 seed0431, profiler attribution. Memset/copy/API time is not kernel time; zero contained kernels is not zero stage cost.",
+  "stages": {
+    "query.tree": {
+      "calls": 10000,
+      "gpu_ms": 11011.279046992035,
+      "kernel_launches": 210000,
+      "kernels": {
+        "initQnode": {
+          "calls": 10000,
+          "gpu_ms": 139.4111680000039
+        },
+        "findNextRnn": {
+          "calls": 20000,
+          "gpu_ms": 6815.8589929999125
+        },
+        "updatePnodeFlag": {
+          "calls": 20000,
+          "gpu_ms": 43.81648299999903
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 20000,
+          "gpu_ms": 23.871031999997072
+        },
+        "initRes": {
+          "calls": 10000,
+          "gpu_ms": 9.283298999999905
+        },
+        "getQnodeCount": {
+          "calls": 10000,
+          "gpu_ms": 161.84127399997575
+        },
+        "DeviceScanInitKernel": {
+          "calls": 40000,
+          "gpu_ms": 35.09802699999896
+        },
+        "DeviceScanKernel": {
+          "calls": 40000,
+          "gpu_ms": 96.12440599999807
+        },
+        "mergeLeafNode": {
+          "calls": 10000,
+          "gpu_ms": 142.26268200000172
+        },
+        "leafProcessRnnUpdate": {
+          "calls": 10000,
+          "gpu_ms": 3257.795391000006
+        },
+        "getQresultCount": {
+          "calls": 10000,
+          "gpu_ms": 149.78792700000176
+        },
+        "mergeResultRnn": {
+          "calls": 10000,
+          "gpu_ms": 136.12836500002246
+        }
+      }
+    },
+    "query.buffer": {
+      "calls": 1850,
+      "gpu_ms": 871.2096889999359,
+      "kernel_launches": 9250,
+      "kernels": {
+        "searchD": {
+          "calls": 1850,
+          "gpu_ms": 861.5482170000005
+        },
+        "check": {
+          "calls": 1850,
+          "gpu_ms": 1.9482519999999333
+        },
+        "DeviceScanInitKernel": {
+          "calls": 1850,
+          "gpu_ms": 1.6057529999999767
+        },
+        "DeviceScanKernel": {
+          "calls": 1850,
+          "gpu_ms": 4.106671000000003
+        },
+        "getRnn": {
+          "calls": 1850,
+          "gpu_ms": 2.000795999999956
+        }
+      }
+    },
+    "query.prefix_merge": {
+      "calls": 10000,
+      "gpu_ms": 164.45461000003823,
+      "kernel_launches": 30000,
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 10000,
+          "gpu_ms": 8.622204999999807
+        },
+        "DeviceScanKernel": {
+          "calls": 10000,
+          "gpu_ms": 130.9759009999923
+        },
+        "mergeTotalResult": {
+          "calls": 10000,
+          "gpu_ms": 24.856504000002545
+        }
+      }
+    },
+    "delete.prefix_lookup": {
+      "calls": 1000,
+      "gpu_ms": 23.67080100000008,
+      "kernel_launches": 3000,
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 1000,
+          "gpu_ms": 0.8624629999999931
+        },
+        "DeviceScanKernel": {
+          "calls": 1000,
+          "gpu_ms": 20.5233520000001
+        },
+        "findIdx": {
+          "calls": 1000,
+          "gpu_ms": 2.2849860000000004
+        }
+      }
+    },
+    "delete.buffer_merge": {
+      "calls": 500,
+      "gpu_ms": 8.071360000000006,
+      "kernel_launches": 1500,
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 500,
+          "gpu_ms": 0.43122999999999734
+        },
+        "DeviceScanKernel": {
+          "calls": 500,
+          "gpu_ms": 6.838054000000045
+        },
+        "mergeInResult": {
+          "calls": 500,
+          "gpu_ms": 0.8020759999999989
+        }
+      }
+    },
+    "rebuild.compaction": {
+      "calls": 50,
+      "gpu_ms": 26.652919999999995,
+      "kernel_launches": 150,
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 50,
+          "gpu_ms": 0.04307099999999997
+        },
+        "DeviceScanKernel": {
+          "calls": 50,
+          "gpu_ms": 21.197038999999997
+        },
+        "getNewData": {
+          "calls": 50,
+          "gpu_ms": 5.41281
+        }
+      }
+    },
+    "rebuild.construct": {
+      "calls": 50,
+      "gpu_ms": 188.02193599999973,
+      "kernel_launches": 450,
+      "kernels": {
+        "initIndexData": {
+          "calls": 50,
+          "gpu_ms": 0.07836800000000002
+        },
+        "getPivotDis": {
+          "calls": 100,
+          "gpu_ms": 152.98885099999998
+        },
+        "DeviceRadixSortSingleTileKernel": {
+          "calls": 100,
+          "gpu_ms": 1.689147000000001
+        },
+        "nodeSplit": {
+          "calls": 100,
+          "gpu_ms": 33.148098
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 100,
+          "gpu_ms": 0.11747200000000008
+        }
+      }
+    },
+    "rebuild.reset": {
+      "calls": 50,
+      "gpu_ms": 0.0,
+      "kernel_launches": 0,
+      "kernels": {}
+    }
+  }
+}

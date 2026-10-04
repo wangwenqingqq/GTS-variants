@@ -19,7 +19,7 @@ ORDERS=[list(COMPLETE),['O_FULL','O_BOUND','GTS_ORIG','O_MASK','IVF_ALL','FAISS_
         ['FAISS_FLAT','IVF_ALL','O_MASK','GTS_ORIG','O_BOUND','O_FULL'],
         ['O_MASK','FAISS_FLAT','O_BOUND','IVF_ALL','O_FULL','GTS_ORIG']]
 TARGETS=(.99,.999,1.)
-POLICY_VERSION='execution-recovery-v1'
+POLICY_VERSION='execution-recovery-v2'
 ROLE={'GTS_ORIG':'original_static','O_MASK':'tree_candidate','O_BOUND':'scan_control',
       'O_FULL':'full_scan_control','FAISS_FLAT':'native_diagnostic','IVF_ALL':'native_complete_control',
       'IVF_APPROX':'native_ann','CAGRA':'native_ann'}
@@ -40,6 +40,42 @@ def admission(row,observer_qualified=False):
             'candidate_stable':candidate and strict and stable and observer_qualified and row.get('actual_Q',0)>=10000,
             'diagnostic_only':not strict and not any(v=='admitted' for v in targets.values())}
 
+def observer_decision(row):
+    """Representative controls qualify only the registered method/config/tile.
+
+    Keep failed cases local. A collected rejected timer is diagnostic evidence;
+    it is never promoted by the presence of some other admitted timer.
+    """
+    complete=ROOT/'HOOK_CONTROL_COMPLETE.json'
+    if not complete.exists():return {'qualified':False,'reason':'controls pending'}
+    control=json.loads(complete.read_text())
+    assert control['state']=='collection_complete'
+    assert sha(ROOT/'HOOK_CONTROL.json')==control['rows_sha256']
+    assert sha(ROOT/'HOOK_CONTROL_REGISTERED.json')==control['registration_sha256']
+    config=row.get('config',{})
+    registered={'IVF_ALL':{'nlist':1024,'nprobe':1024},'CAGRA':{'itopk_size':1024,'search_width':4}}.get(row['method'],{})
+    cases=[s for s in control['summary'] if s['method']==row['method'] and s['B']==row['B']]
+    if config!=registered or not cases:
+        return {'qualified':False,'reason':'method/config/tile not qualified','control_sha256':sha(complete)}
+    exact=[s for s in cases if s['dataset']==row['dataset']]
+    # Registration explicitly uses faster Deep paths as representative controls.
+    scopes=exact or [s for s in cases if s['dataset']=='Deep'] or cases
+    required=['native_knn.py','query_trace.py']
+    if row['method'] in ('GTS_ORIG','O_BOUND','O_MASK','O_FULL'):
+        binary='gts_bench_p7' if row['method']=='GTS_ORIG' else 'opt_knn_bench'
+        required=[binary,binary+'.cu','query_trace.hpp']
+        if row['method']!='GTS_ORIG':required+=['knn_cutoff.cuh','knn_select.cuh','knn_verify.cuh']
+    sources_match=True
+    for case in scopes:
+        identity=ROOT/'runs'/f'hook_c{case["case"]}_r1_on'/'identity.json'
+        files=json.loads(identity.read_text())['files'] if identity.exists() else {}
+        sources_match &= all((ROOT/n).is_file() and files.get(str((ROOT/n).resolve()))==sha(ROOT/n) for n in required)
+    return {'qualified':sources_match and all(s['timer_admitted'] for s in scopes),
+            'reason':'registered representative control; retain every failure',
+            'measured_entry_and_observer_sources_match':sources_match,
+            'cases':[s['case'] for s in scopes],'control_sha256':sha(complete),
+            'scope':'representative observer qualification; not a new timing or quality receipt'}
+
 def matrix_decision(rows,required_labels):
     missing=sorted(set(required_labels)-{r['label'] for r in rows})
     missing_methods=sorted(set(COMPLETE+('CAGRA',))-{r['method'] for r in rows})
@@ -47,6 +83,7 @@ def matrix_decision(rows,required_labels):
     candidates=[r for r in rows if r['method']=='O_MASK']
     stable=bool(collected and candidates and all(r['admission']['candidate_stable'] for r in candidates))
     failed_targets=[r['label'] for r in rows if 'missed_target' in r['admission']['target_admission'].values()]
+    unqualified_timers=[r['label'] for r in rows if not r['admission']['observer_qualified']]
     declines={}
     for r in candidates:
         key=(r.get('protocol'),r.get('dataset'),r.get('K'),r.get('B'))
@@ -56,7 +93,8 @@ def matrix_decision(rows,required_labels):
     external=any(r['method'] in ('FAISS_FLAT','IVF_ALL','IVF_APPROX','CAGRA') and
                  (r['admission']['strict_quality_admitted'] or 'admitted' in r['admission']['target_admission'].values()) for r in rows)
     return {'policy':POLICY_VERSION,'collection_complete':collected,'missing_required_rows':missing,'missing_required_methods':missing_methods,
-            'candidate_stable':stable,'comparison_admitted':stable and external and not failed_targets,
+            'candidate_stable':stable,'comparison_admitted':stable and external and not failed_targets and not unqualified_timers,
+            'unqualified_timer_rows':unqualified_timers,
             'throughput_diagnosis_required':diagnosis,
             'missed_target_rows':failed_targets,
             'strict_rejected_rows':[r['label'] for r in rows if not r['admission']['strict_quality_admitted']]}
@@ -73,7 +111,11 @@ def qfile(p,ids):
 def datafile(a,d):return a.data_root/f'{d}/1000000/fixtures/data.f32bin'
 _HASH_CACHE={}
 def identity_sha(path):
-    path=Path(path).resolve();s=path.stat();key=(str(path),s.st_size,s.st_mtime_ns,s.st_ctime_ns)
+    path=Path(path).resolve();s=path.stat()
+    # Small sources may be overwritten inside one filesystem timestamp tick.
+    # Always rehash them; reserve the metadata cache for large immutable inputs.
+    if s.st_size<=8<<20:return sha(path)
+    key=(str(path),s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns,s.st_ctime_ns)
     if key not in _HASH_CACHE:_HASH_CACHE[key]=sha(path)
     return _HASH_CACHE[key]
 
@@ -95,7 +137,9 @@ def run_identity(a,cmd,env=None,identity_files=()):
     return {'policy':POLICY_VERSION,'command':list(map(str,cmd)),'gpu':a.gpu,
             'files':{str(p.resolve()):identity_sha(p) for p in files},
             'observer_mode':{'K10_EAGER':(env or {}).get('K10_EAGER',''),
-                             'K10_STRESS':(env or {}).get('K10_STRESS','')},
+                             'K10_STRESS':(env or {}).get('K10_STRESS',''),
+                             'U10_OBSERVE':(env or {}).get('U10_OBSERVE',''),
+                             'U10_TREE_AUDIT':(env or {}).get('U10_TREE_AUDIT','')},
             'environment':{k:os.environ.get(k,'') for k in ('OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS','CUDA_LAUNCH_BLOCKING')}}
 
 def cached_admission_valid(saved,current):return saved==current
@@ -157,13 +201,14 @@ def collect(a,row,pool):
     if audit.exists():
         saved=json.loads(audit.read_text());assert saved['result_sha256']==sha(str(out)+'.bin')
         for key in ('dataset','method','K','B','config'):assert row[key]==saved[key]
-        invoke(a,label,command,identity_files=[oracle_path])
+        invoke(a,label,command,timeout=row.get('timeout_s',7200),identity_files=[oracle_path])
         assert saved['query_sha256']==sha(qs) and saved['oracle_sha256']==sha(oracle_path)
-        saved['admission']=admission(saved,(ROOT/'HOOK_CONTROL_ADMITTED.json').exists());save(audit,saved)
+        saved['observer']=observer_decision(saved)
+        saved['admission']=admission(saved,saved['observer']['qualified']);save(audit,saved)
         return saved
     ref=json.loads(oracle_path.read_text())
     assert native_ivf.read_qids(qs).tolist()==[r['qid'] for r in ref['records']]
-    receipt=invoke(a,label,command,identity_files=[oracle_path])
+    receipt=invoke(a,label,command,timeout=row.get('timeout_s',7200),identity_files=[oracle_path])
     if m=='GTS_ORIG':
         values=list(csv.DictReader(Path(str(out)+'.csv').read_text().splitlines()));assert len(values)==1
         meta={key:float(values[0][key]) for key in ('batch_p50_ms','batch_p95_ms')};meta['pass_ms']=float(values[0]['total_ms'])
@@ -191,7 +236,8 @@ def collect(a,row,pool):
                                 window_quality='whole output fully audited; query-scoped per-window statistics derived after collection')
     elif ref['Q']>=10000:
         row['stability']['first_last_2k']='not observable inside a large native call; windows are actual Host-ready call boundaries'
-    row['admission']=admission(row,(ROOT/'HOOK_CONTROL_ADMITTED.json').exists())
+    row['observer']=observer_decision(row)
+    row['admission']=admission(row,row['observer']['qualified'])
     save(audit,row)
     print(f'{label}: Q={ref["Q"]} pass_ms={row["pass_ms"]:.3f} recall={quality["recall_tie_aware"]} min={quality["minimum_query_recall"]} complete={quality["complete_gate_pass"]}',flush=True)
     return row
@@ -310,9 +356,11 @@ def selected(rows):
 
 def freeze_matched(a):
     assert (ROOT/'DEVELOPMENT_COMPLETE.json').exists();choices={}
-    if not (ROOT/'HOOK_CONTROL_ADMITTED.json').exists():
+    if not (ROOT/'HOOK_CONTROL_COMPLETE.json').exists():
         subprocess.run(list(map(str,[a.faiss_python,ROOT/'hook_control.py',*common(a)])),check=True)
-    assert (ROOT/'HOOK_CONTROL_ADMITTED.json').exists(),'observer cost not admitted'
+    # Finish controls before freezing, but preserve rejected timers as diagnostic
+    # rows instead of retrying the same controls or blocking independent methods.
+    assert json.loads((ROOT/'HOOK_CONTROL_COMPLETE.json').read_text())['state']=='collection_complete'
     for d in ('GIST','Deep'):
         for k in (8,32):
             for b in (1,32):
@@ -386,7 +434,9 @@ def final_queries(a):
             'binaries':{n:sha(ROOT/n) for n in ('opt_knn_bench','gts_bench_p7')},'query_generator_sha256':sha(ROOT/'campaign10k.py'),
             'final_seeds':{'GIST':2026100421,'Deep':2026100422},'memory_limit_bytes':80*(1<<30),'Q':10000,'warmup_batches_each_actual_shape':8,'rounds':6,
             'tree_candidate':'O_MASK','scan_control':'O_BOUND','admission_policy':POLICY_VERSION,
-            'observer_receipt_sha256':sha(ROOT/'HOOK_CONTROL_ADMITTED.json')}
+            'observer_receipt_sha256':sha(ROOT/'HOOK_CONTROL_COMPLETE.json'),
+            'observer_policy':'per method/config/tile; unqualified timers retained as diagnostic and block comparison admission',
+            'timeout_policy':'max(7200s, 3x development-scaled query pass +300s); forecast includes 8 full/tail warm batches; no reduced queries/rounds'}
     freeze_path=ROOT/'FROZEN_10K.json'
     if freeze_path.exists():assert json.loads(freeze_path.read_text())==frozen,'freeze drift on resume'
     else:save(freeze_path,frozen)
@@ -454,6 +504,23 @@ def formal(a):
             key=json.dumps([r['method'],r['config'],r['B']],sort_keys=True)
             comparisons.setdefault(key,[]).append(r['position']<keeper[r['round']])
         for key,directions in comparisons.items():assert len(directions)==6 and sum(directions)==3,(key,directions)
+    # Budget forecast uses only development timings, before any final execution.
+    # It is not a measured 10k result and does not replace the full six rounds.
+    refs=json.loads((ROOT/'SCREEN.json').read_text())+json.loads((ROOT/'BULK_DEVELOPMENT.json').read_text())
+    for p in ROOT.glob('DEV_*.json'):refs+=json.loads(p.read_text())
+    for row in schedule:
+        candidates=[r for r in refs if r['dataset']==row['dataset'] and r['K']==row['K'] and r['B']==row['B']
+                    and r['config']==row['config'] and (r['method']==row['method'] or
+                    row['method']=='IVF_ALL' and r['method']=='IVF_APPROX')]
+        assert candidates,f'no development timeout reference: {row["label"]}'
+        query_ms=max(r['pass_ms']*10000/r.get('actual_Q',r.get('Q',1024)) for r in candidates)
+        warm_queries=8*row['B']+(8*(10000%row['B']) if 10000%row['B'] else 0)
+        forecast_s=query_ms/1000*(1+warm_queries/10000)
+        row.update(timeout_s=max(7200,int(3*forecast_s+300)),development_forecast_s=forecast_s)
+    save(ROOT/'FORMAL_BUDGET.json',{'state':'forecast_before_formal_execution','processes':len(schedule),
+         'query_and_warmup_gpu_hours':sum(r['development_forecast_s'] for r in schedule)/3600,
+         'limitations':'held-out work may differ; excludes exact cold load/setup, CPU output writing/hash/audit, range and sustained; timeouts have 3x margin',
+         'timeout_policy':frozen['timeout_policy'],'schedule':schedule})
     save(ROOT/'FORMAL_SCHEDULE.json',schedule)
     rows=[]
     for row in schedule:

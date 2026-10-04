@@ -1,3 +1,5 @@
+> 2026-10-04 execution recovery 已恢复独立原生实验。下面保留首轮停止时的历史结果；新增 lean U10、观察器成本、合法冷建树与 matched 开发网格见 [RECOVERY_RESULTS.md](RECOVERY_RESULTS.md)。首轮的全局 Flat 停止决定已被恢复合同修订，原始失败未改判。
+
 # 10K计划首轮执行：资格拒收，正式静态矩阵未启动
 
 本轮按 [PLAN_10K.md](PLAN_10K.md) 的固定版本`480bc7dbdfaf6ff7048bc810d29f6b4aecbf2e16`执行，使用一张空闲RTX PRO 6000 Blackwell Server 96 GiB，所有GPU任务串行、固定同一物理GPU。未更改共享设备设置，未触碰其他进程。**原生Faiss Flat在GIST1M的开发1024上漏查并交付超容差字段，按wrong-result停止规则拒收。正式10K查询未生成，不能称本计划完成或获得静态稳定版。**

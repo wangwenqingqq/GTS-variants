@@ -1,0 +1,3386 @@
+[
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r1_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.350646,
+      "buffer_setup_ms": 45.400637,
+      "cold_build_ms": 14.959054,
+      "trace_ms": 17445.801528,
+      "final_drain_ms": 0.380454,
+      "results": 14990,
+      "sampled_device_peak_bytes": 14220525568,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.115974,
+      "cpu_system_s": 0.28831200000000007,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 14719.65129199995
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1030.1745339999993
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 535.2435739999986
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 56.01692999999995
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 181.4343760000001
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 28.337786999999995
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.01983500000003
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.70867
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0172895,
+          "p95": 0.8332145499998314,
+          "p99": 4.935656799999999,
+          "max": 5.903792,
+          "sum": 274.409079
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.0721005,
+          "p95": 1.3257437,
+          "p99": 1.75390304,
+          "max": 2.825506,
+          "sum": 271.919855
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.372293,
+          "p95": 3.3999920999999995,
+          "p99": 5.09621096,
+          "max": 8.328174,
+          "sum": 16895.975222
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8059145,
+          "p95": 4.8681293,
+          "p99": 4.98446261,
+          "max": 5.070953,
+          "sum": 237.079498
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "4ffc99d9e0802f48a6fad875c4a5d6bf8efdd56ef01f544f9495f45b2cb0a309",
+      ".summary.json": "e356f8f640aaac5ec8d973725a0bdfd71f73c81570487d19ee71758495cb4ba4"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r1_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.484982,
+      "buffer_setup_ms": 45.385043,
+      "cold_build_ms": 15.024674,
+      "trace_ms": 17439.121302,
+      "final_drain_ms": 0.409744,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.080486,
+      "cpu_system_s": 0.30091599999999996,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "ba33e23b6d1cd050cceca5677ce8592fb75772bcdb320d19312336a18a64cc0c"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r2_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.24612,
+      "buffer_setup_ms": 45.805189,
+      "cold_build_ms": 14.955328,
+      "trace_ms": 17485.267785,
+      "final_drain_ms": 0.465736,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.144638,
+      "cpu_system_s": 0.289421,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "acd44330ce01370727072071a8febe66e2dfed4e3f9728d9bfd195525a277819"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r2_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.094952,
+      "buffer_setup_ms": 44.728259,
+      "cold_build_ms": 14.718051,
+      "trace_ms": 17436.965151,
+      "final_drain_ms": 0.366919,
+      "results": 14990,
+      "sampled_device_peak_bytes": 14207942656,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.099510000000002,
+      "cpu_system_s": 0.271634,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 14704.067409999896
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1026.4295989999994
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 526.0305190000014
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 55.949007999999985
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 212.31872400000023
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 25.513238
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.3598460000001
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.684032
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0174115,
+          "p95": 0.838108249999832,
+          "p99": 4.88513531,
+          "max": 5.362964,
+          "sum": 269.380397
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.0709695,
+          "p95": 1.3265394499999998,
+          "p99": 1.7091061299999997,
+          "max": 1.824133,
+          "sum": 303.650555
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.3705295,
+          "p95": 3.44526365,
+          "p99": 5.0563167400000015,
+          "max": 7.159069,
+          "sum": 16861.333767
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8001705,
+          "p95": 4.8905923,
+          "p99": 5.06328956,
+          "max": 5.091982,
+          "sum": 234.569715
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "1af4b1d034426be6039d487a2c5f7bdd1c1d0f6d65a49f981483c834713cb3e5",
+      ".summary.json": "47a1cd71a2ca7b6da6cfb72dec4f0d2381075412ac444ec755099d5c9fb975ad"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r3_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.334649,
+      "buffer_setup_ms": 45.813801,
+      "cold_build_ms": 14.878811,
+      "trace_ms": 17617.363822,
+      "final_drain_ms": 0.422529,
+      "results": 14990,
+      "sampled_device_peak_bytes": 14203748352,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.326533,
+      "cpu_system_s": 0.284381,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 14856.113903999973
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1044.005617999999
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 560.2739059999989
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 47.604126000000086
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 201.99195100000023
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 30.063163000000003
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.94868399999996
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 2.023755
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0192895,
+          "p95": 0.8345191499998313,
+          "p99": 4.93900046,
+          "max": 5.944028,
+          "sum": 270.549922
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.072494,
+          "p95": 1.3323746,
+          "p99": 1.34922552,
+          "max": 1.810834,
+          "sum": 276.650333
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.3892639999999998,
+          "p95": 3.398122699999995,
+          "p99": 5.08362884,
+          "max": 8.378166,
+          "sum": 17065.796504
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8159595,
+          "p95": 4.9122014499999995,
+          "p99": 5.510431379999998,
+          "max": 5.899265,
+          "sum": 240.048149
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "85fb9b0b48aef632ddc59e80da8ffd9715bf2760384fb8dae5cd7f67e71d49bc",
+      ".summary.json": "e8fd0d6964243bd6fbdbac6934d97fb8479ab01e0d2f2724fc944db1768276c4"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r3_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.318744,
+      "buffer_setup_ms": 45.326791,
+      "cold_build_ms": 14.802639,
+      "trace_ms": 17573.338944,
+      "final_drain_ms": 0.440175,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.249404000000002,
+      "cpu_system_s": 0.30789199999999994,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "6a5a43b9f26a340c9a635aa4e50471c13fb24466a1fbe11302df634645cefafc"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r4_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.155095,
+      "buffer_setup_ms": 44.65823,
+      "cold_build_ms": 14.863038,
+      "trace_ms": 17485.526172,
+      "final_drain_ms": 1.258382,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.166316000000002,
+      "cpu_system_s": 0.29704700000000006,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "e2dfd8bd1aff4083673e852c5a881d3a126aad35c90d00732f8d3c1d5a4a46f8"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r4_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 40.802533,
+      "buffer_setup_ms": 39.45616,
+      "cold_build_ms": 13.803874,
+      "trace_ms": 17495.862778,
+      "final_drain_ms": 0.371185,
+      "results": 14990,
+      "sampled_device_peak_bytes": 14191165440,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.186285,
+      "cpu_system_s": 0.294036,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 14780.133391999989
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1034.6111790000016
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 532.9100960000012
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 50.572344
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 202.19918900000016
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 28.480488000000005
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 206.99202
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.895169
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0182695,
+          "p95": 0.8351272999998324,
+          "p99": 4.90639031,
+          "max": 5.489281,
+          "sum": 268.561801
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.072107,
+          "p95": 1.3295659999999998,
+          "p99": 1.436025469999998,
+          "max": 2.506177,
+          "sum": 283.923548
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.376757,
+          "p95": 3.4456452,
+          "p99": 5.0667278300000005,
+          "max": 7.299293,
+          "sum": 16940.650665
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.808540499999999,
+          "p95": 4.88983415,
+          "p99": 5.0236285,
+          "max": 5.096761,
+          "sum": 237.380649
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "29fb77f70c103fb99cf1518543decfc01d2a2cbf4368f183c0589828019fcd6b",
+      ".summary.json": "98c9c309a19a97c71e11d55af7699abb7d66a7812769d569edf5b637ec53e48e"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r5_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.205475,
+      "buffer_setup_ms": 45.890734,
+      "cold_build_ms": 14.913093,
+      "trace_ms": 17429.952752,
+      "final_drain_ms": 0.366427,
+      "results": 14990,
+      "sampled_device_peak_bytes": 14186971136,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.105906,
+      "cpu_system_s": 0.29235900000000004,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 14705.12187199997
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1032.1683099999996
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 528.3027300000011
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 54.725708999999924
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 190.03793300000004
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 27.718395999999995
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.61623899999998
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.7510480000000004
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.017182000000000003,
+          "p95": 0.8353653499998326,
+          "p99": 4.92806213,
+          "max": 5.90688,
+          "sum": 272.86155
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.07166449999999999,
+          "p95": 1.32752615,
+          "p99": 1.3589682699999996,
+          "max": 1.855046,
+          "sum": 282.741418
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.3695235000000001,
+          "p95": 3.4175107,
+          "p99": 5.075735300000002,
+          "max": 8.272692,
+          "sum": 16871.552591
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8082915,
+          "p95": 4.89215575,
+          "p99": 5.405891729999998,
+          "max": 5.886299,
+          "sum": 237.098373
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "5a99c1c3d31f4c515be75e02b6d330f221ea2fb64987bb479970abe5e8a6413c",
+      ".summary.json": "aaadd956e0eaab906ce167ab01bdc3f0157172491b6f59aea4cfb260d9b5b9d6"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r5_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.737076,
+      "buffer_setup_ms": 38.507,
+      "cold_build_ms": 13.713615,
+      "trace_ms": 17532.220065,
+      "final_drain_ms": 0.951183,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.231840000000002,
+      "cpu_system_s": 0.31397400000000003,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "676904ca90735de0ada3467c2e76953f31cc27ebda5694446a69a17082c493f5"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r6_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 41.325445,
+      "buffer_setup_ms": 38.287209,
+      "cold_build_ms": 13.54543,
+      "trace_ms": 17429.913769,
+      "final_drain_ms": 0.397699,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.103988,
+      "cpu_system_s": 0.283397,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "30b44c79693c14d8859a022a614b5083abe68762354bc75aa862e9c0a1a4694e"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100431,
+    "label": "u10_lean_2026100431_r6_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.277877,
+      "buffer_setup_ms": 45.874351,
+      "cold_build_ms": 14.762252,
+      "trace_ms": 17590.116366,
+      "final_drain_ms": 5.703625,
+      "results": 14990,
+      "sampled_device_peak_bytes": 14174388224,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 16.224319,
+      "cpu_system_s": 0.29551700000000003,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 14781.561002000026
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1032.6882279999998
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 549.1970150000016
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 53.6059889999999
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 232.70629500000027
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 28.626817999999997
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 208.39385900000002
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.669982
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0183685,
+          "p95": 0.832137849999832,
+          "p99": 4.9174526400000005,
+          "max": 6.080815,
+          "sum": 271.25077600000003
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.07232,
+          "p95": 1.3280877500000001,
+          "p99": 1.34788033,
+          "max": 2.262954,
+          "sum": 316.32585
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.3852645,
+          "p95": 3.4546124999999996,
+          "p99": 5.07827026,
+          "max": 8.057993,
+          "sum": 16994.222713
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.808618,
+          "p95": 4.9040496,
+          "p99": 5.8470992299999995,
+          "max": 5.869234,
+          "sum": 238.70463
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "9e4e9400752dea2b939c78cfb60b14e7d1fbab2ee555d1719d99b4e24719b60d",
+      ".summary.json": "38838f43bded3a2c5a8dcf92151d68e2f2df23f53ab06150762197e56e5ecd10"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r1_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 40.532521,
+      "buffer_setup_ms": 38.264676,
+      "cold_build_ms": 13.801842,
+      "trace_ms": 18753.924227,
+      "final_drain_ms": 0.379157,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 14170193920,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.395728000000002,
+      "cpu_system_s": 0.30113399999999996,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 15974.275274000047
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1038.872295
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 580.0819530000001
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 49.72623899999992
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 174.383989
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 32.865167
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 209.27750000000003
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.7505030000000001
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.018084,
+          "p95": 0.8477080999998292,
+          "p99": 5.064823,
+          "max": 6.467415,
+          "sum": 276.575998
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.07183600000000001,
+          "p95": 1.32537115,
+          "p99": 1.3470239899999998,
+          "max": 1.773127,
+          "sum": 246.795332
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.4908869999999999,
+          "p95": 3.5806266499999997,
+          "p99": 5.13496335,
+          "max": 7.357262,
+          "sum": 18220.833709
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.806595,
+          "p95": 5.8343194,
+          "p99": 5.8485808299999995,
+          "max": 5.85433,
+          "sum": 243.90632
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "aee6e1ab828a4f6b81851371471420f1e2da007fe1f5c8a0d8cb953d3472c62c",
+      ".summary.json": "231325e2497f6307df3311f2185eee396ea4e66ba436a980b5936c0ac91ccdf7"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r1_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.441985,
+      "buffer_setup_ms": 44.947303,
+      "cold_build_ms": 14.927801,
+      "trace_ms": 18955.605545,
+      "final_drain_ms": 0.433571,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.612957,
+      "cpu_system_s": 0.27213999999999994,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "58381a8d7d20e80828e1ea56fbcd1efe57900baeeebd1bbc9d82ddf66900e7bc"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r2_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 47.316113,
+      "buffer_setup_ms": 38.043622,
+      "cold_build_ms": 13.748119,
+      "trace_ms": 18742.616056,
+      "final_drain_ms": 0.402763,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.356012999999997,
+      "cpu_system_s": 0.3116499999999999,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "27fe9099e0ec19e0bd2af4918de7b741a0261400c62ee391ac153f3828e6041b"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r2_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.416299,
+      "buffer_setup_ms": 45.498547,
+      "cold_build_ms": 14.576908,
+      "trace_ms": 18688.140111,
+      "final_drain_ms": 0.371566,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 14157611008,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.322231,
+      "cpu_system_s": 0.309231,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 15921.946027999997
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1031.8141700000017
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 579.7661469999985
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 48.491101
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 179.013264
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 31.74421399999999
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 206.54936600000008
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 2.008604
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0172005,
+          "p95": 0.8347499999998327,
+          "p99": 4.94280607,
+          "max": 5.849703,
+          "sum": 272.609795
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.066708,
+          "p95": 1.3242193500000001,
+          "p99": 1.7617196599999998,
+          "max": 1.830022,
+          "sum": 247.994264
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.4844970000000002,
+          "p95": 3.620909299999999,
+          "p99": 5.10318072,
+          "max": 7.467459,
+          "sum": 18159.051111
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.788008,
+          "p95": 4.8927136,
+          "p99": 5.431925819999998,
+          "max": 5.816273,
+          "sum": 240.317559
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "877f530857c1c2b69775be9af7a78737afc73fe0f9e9fc00242a1643273697b1",
+      ".summary.json": "67283aa2b018904ea19e5970c5410e8247507b555cec5f48f74b9b663db33e5b"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r3_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 40.702139,
+      "buffer_setup_ms": 36.390745,
+      "cold_build_ms": 13.385364,
+      "trace_ms": 18798.855378,
+      "final_drain_ms": 3.288865,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 14153416704,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.392995,
+      "cpu_system_s": 0.307412,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 15973.110282999987
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1037.4568460000007
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 584.6570429999996
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 47.705155
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 211.19379700000002
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 32.404936
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 206.45417099999995
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.7483579999999992
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.018182499999999997,
+          "p95": 0.8314420499998318,
+          "p99": 4.939396219999999,
+          "max": 5.859236,
+          "sum": 271.900912
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.0708895,
+          "p95": 1.3273814,
+          "p99": 1.3599407,
+          "max": 1.855291,
+          "sum": 281.18771399999997
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.494682,
+          "p95": 3.634510449999999,
+          "p99": 5.126433420000001,
+          "max": 7.204791,
+          "sum": 18233.051436
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.794595,
+          "p95": 4.8912258,
+          "p99": 5.393627629999998,
+          "max": 5.823511,
+          "sum": 240.621447
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "7f4056942b130ee9f2724ef2185c662f310e9450dc1f1c54906cf986f25375c2",
+      ".summary.json": "c81b04ff8c61f2d91f9b2bc3888ddc4c0fb32f019a0044c530792df6a15e386c"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r3_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.735289,
+      "buffer_setup_ms": 36.782013,
+      "cold_build_ms": 13.445355,
+      "trace_ms": 18728.55471,
+      "final_drain_ms": 0.39909,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.367692,
+      "cpu_system_s": 0.283608,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "f46c0ab9a033f032b7ef5a2d677e4f0544eb314991485dc0a714201f0fda2710"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r4_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.864853,
+      "buffer_setup_ms": 37.387152,
+      "cold_build_ms": 13.374587,
+      "trace_ms": 18716.720933,
+      "final_drain_ms": 0.395402,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.330932,
+      "cpu_system_s": 0.303998,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "0d00edbcebf425c72ecd95bd7c10b86980a37b971a97fb642468918bd3e0c66f"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r4_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.258912,
+      "buffer_setup_ms": 45.045568,
+      "cold_build_ms": 14.658461,
+      "trace_ms": 18883.65938,
+      "final_drain_ms": 0.397608,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 14140833792,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.518190999999998,
+      "cpu_system_s": 0.28996199999999994,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16038.937806999968
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1046.7578110000006
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 599.042776
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 51.46414499999996
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 190.81409399999993
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 33.74016600000001
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 209.42087799999996
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 2.024667
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0183375,
+          "p95": 0.8535695999998109,
+          "p99": 5.040956249999999,
+          "max": 7.188697,
+          "sum": 274.998295
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.069379,
+          "p95": 1.3317375500000002,
+          "p99": 1.7505637600000001,
+          "max": 2.441441,
+          "sum": 267.517697
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.4998345,
+          "p95": 3.637194499999999,
+          "p99": 5.12315611,
+          "max": 8.282459,
+          "sum": 18331.199991
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.825611,
+          "p95": 5.4063093,
+          "p99": 5.81772213,
+          "max": 5.818586,
+          "sum": 245.19884100000002
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "216f63c9a7d0246910dfc8c727951c4cab9a251b02e2a039bd915bebf26d308e",
+      ".summary.json": "d05ff4dbc998fa8cbb1ac56c54a4c3b0558bc7f65805c20513d72e84e521ed8f"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r5_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.228148,
+      "buffer_setup_ms": 44.464256,
+      "cold_build_ms": 14.567567,
+      "trace_ms": 18908.686518,
+      "final_drain_ms": 0.393627,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 14136639488,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.512093,
+      "cpu_system_s": 0.3047,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16044.773973000032
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1040.6049709999988
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 589.8281680000016
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 48.379059999999946
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 228.81818799999994
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 31.414965000000002
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.49090700000002
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 2.0465930000000006
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0182145,
+          "p95": 0.8281047999998317,
+          "p99": 4.96449575,
+          "max": 6.936649,
+          "sum": 273.993788
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.071292,
+          "p95": 1.3333938,
+          "p99": 1.7496482199999999,
+          "max": 1.838428,
+          "sum": 298.727185
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.518877,
+          "p95": 3.6374161499999995,
+          "p99": 5.09755175,
+          "max": 8.273311,
+          "sum": 18326.237695
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8132835,
+          "p95": 4.92524905,
+          "p99": 5.585118989999998,
+          "max": 6.100721,
+          "sum": 240.965933
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "ca242ae9787f14debe63d74d3ee40939f83f5a126f8e1f45453cb64260a0e543",
+      ".summary.json": "3ccb264bfd96d594df67c91badbd27125c218d96ebcc14a7d311b63e1106e138"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r5_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.261439,
+      "buffer_setup_ms": 46.670762,
+      "cold_build_ms": 17.816285,
+      "trace_ms": 18766.493328,
+      "final_drain_ms": 0.418467,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.356859,
+      "cpu_system_s": 0.33129700000000006,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "7e5585824f15a06f5a35a48cedcad5ab53879dde72112f1e72a3680e52976963"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r6_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.82612,
+      "buffer_setup_ms": 38.391447,
+      "cold_build_ms": 13.295087,
+      "trace_ms": 18701.877466,
+      "final_drain_ms": 3.336007,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.36885,
+      "cpu_system_s": 0.279695,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "058043e940339014213330df6ce78af77dea1c3252d327387c95cfde89a88a35"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100432,
+    "label": "u10_lean_2026100432_r6_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 10000000,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 47.69416,
+      "buffer_setup_ms": 37.892994,
+      "cold_build_ms": 13.371805,
+      "trace_ms": 18762.034318,
+      "final_drain_ms": 0.378681,
+      "results": 10000000,
+      "sampled_device_peak_bytes": 14124056576,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.411085,
+      "cpu_system_s": 0.273871,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 15963.366405000068
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1035.3679139999983
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 585.2673559999987
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 44.72886799999994
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 199.10568100000017
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 30.859384999999996
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.09813000000003
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.76885
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.018106,
+          "p95": 0.8349832999998309,
+          "p99": 4.9757804,
+          "max": 8.413877,
+          "sum": 278.240958
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.067955,
+          "p95": 1.32812965,
+          "p99": 1.39124425,
+          "max": 1.861993,
+          "sum": 266.600667
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.490608,
+          "p95": 3.628638649999998,
+          "p99": 5.1231750300000005,
+          "max": 8.14312,
+          "sum": 18207.544992
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.800800000000001,
+          "p95": 4.9374215,
+          "p99": 5.05191066,
+          "max": 5.061155,
+          "sum": 239.73972
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "6b0042f113455a14e576485003eb27cb594c18b3c87f3b3837d902bd4eac65a1",
+      ".dist.f32": "2afd7db1ab4da5924ba26112f88e0495364f407c5e6af875dab450c7f9fee5a2",
+      ".queries.csv": "0edc755ae219665ea7a4860daf3acf4b252eeebb7dedaaa4627e57c49d4af803",
+      ".ops.csv": "2d452538c89b4789088562697092c6a0f3171c478d0a8db2b373e13055eaafa5",
+      ".summary.json": "7001142ac6ae81e3ff8c03b486317c31f70e1bcf86d638da6e6f03bdf202202e"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r1_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 42.086859,
+      "buffer_setup_ms": 39.809004,
+      "cold_build_ms": 13.383774,
+      "trace_ms": 18734.069711,
+      "final_drain_ms": 0.394133,
+      "results": 15361,
+      "sampled_device_peak_bytes": 14119862272,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.366507,
+      "cpu_system_s": 0.293022,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 15971.738061999991
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1035.4660820000017
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 558.8744859999977
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 46.08158299999998
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 195.131479
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 30.11931299999999
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 208.17155900000003
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.8629120000000006
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0178875,
+          "p95": 0.8337399999998334,
+          "p99": 4.94137273,
+          "max": 6.061584,
+          "sum": 270.689461
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.0669475,
+          "p95": 1.324759,
+          "p99": 1.3793333199999998,
+          "max": 2.260762,
+          "sum": 264.098151
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.492257,
+          "p95": 3.6243467999999996,
+          "p99": 5.11672448,
+          "max": 7.918204,
+          "sum": 18190.138846
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8081755,
+          "p95": 5.517185799999998,
+          "p99": 5.84393241,
+          "max": 5.849122,
+          "sum": 240.166988
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "b720913dc8960c932c22c67ea52560a603c0d9e24fd9775662f0fd049ad73b65",
+      ".summary.json": "96f1d06f2219a7a1ffb8daf41fe07ebd0ab0c93c4ae7d9cf3d627a5993f3eb9b"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r1_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.164883,
+      "buffer_setup_ms": 45.227012,
+      "cold_build_ms": 14.482793,
+      "trace_ms": 18779.018753,
+      "final_drain_ms": 0.392982,
+      "results": 15361,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.409409,
+      "cpu_system_s": 0.28714200000000006,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "4e782fbce9bb3211663839980091cebc2f77db486f414b8204784caa3758c085"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r2_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.807903,
+      "buffer_setup_ms": 38.239836,
+      "cold_build_ms": 13.452152,
+      "trace_ms": 18825.603552,
+      "final_drain_ms": 0.786445,
+      "results": 15361,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.444125,
+      "cpu_system_s": 0.294966,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "91f87f0ec4696c9f9eb95205568f3594f596f2da8691b177039bf8824e0984b3"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r2_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.204894,
+      "buffer_setup_ms": 45.984703,
+      "cold_build_ms": 14.602107,
+      "trace_ms": 18903.325343,
+      "final_drain_ms": 0.498488,
+      "results": 15361,
+      "sampled_device_peak_bytes": 14107279360,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.493122,
+      "cpu_system_s": 0.31573399999999996,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16086.27107800005
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1040.9519649999988
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 562.2784840000014
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 46.34847300000013
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 227.46140100000002
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 31.31247999999999
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 206.94244299999997
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.9046379999999998
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.018432999999999998,
+          "p95": 0.8354371499998302,
+          "p99": 4.92962149,
+          "max": 5.74457,
+          "sum": 270.622327
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.070984,
+          "p95": 1.33528825,
+          "p99": 1.76210398,
+          "max": 1.853738,
+          "sum": 295.515552
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.5078740000000002,
+          "p95": 3.625642149999999,
+          "p99": 5.097954210000001,
+          "max": 7.949924,
+          "sum": 18327.577347
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.810004,
+          "p95": 4.884913,
+          "p99": 4.92022625,
+          "max": 4.946674,
+          "sum": 240.173017
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "5cc8cec1e2eb4c31bfb254f4f96a689c1086b64fedacada2d2745b495a9d16f5",
+      ".summary.json": "1ffc7c69b267ee0b337b75f989809de6d6f42b717c185f5e6f3a8e750ccdae66"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r3_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 53.832616,
+      "buffer_setup_ms": 44.969804,
+      "cold_build_ms": 14.666354,
+      "trace_ms": 18861.238988,
+      "final_drain_ms": 5.40808,
+      "results": 15361,
+      "sampled_device_peak_bytes": 14237302784,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.473048,
+      "cpu_system_s": 0.31061199999999994,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16064.435336999997
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1045.0048829999998
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 560.7362970000017
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 51.67549300000002
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 195.5057219999997
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 31.958443000000006
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 208.16445599999994
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.7934850000000002
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.018365,
+          "p95": 0.8372976499998298,
+          "p99": 4.93695418,
+          "max": 5.944693,
+          "sum": 273.032441
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.07151199999999999,
+          "p95": 1.33017175,
+          "p99": 1.64230068,
+          "max": 2.451623,
+          "sum": 272.214889
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.5012005,
+          "p95": 3.591260949999998,
+          "p99": 5.130577830000001,
+          "max": 8.229529,
+          "sum": 18301.750091
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8179075000000005,
+          "p95": 4.9360931,
+          "p99": 5.455586099999999,
+          "max": 5.830147,
+          "sum": 241.930204
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "f2c7254ee5859937c4305c5c35293893bf3532d263a6b24aaa268e21640b377f",
+      ".summary.json": "03f481524d50922f33ca27d4584cf8b92a523204fbcba5847d2a67897f3e1ec3"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r3_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.730392,
+      "buffer_setup_ms": 39.305206,
+      "cold_build_ms": 13.584827,
+      "trace_ms": 18928.982127,
+      "final_drain_ms": 0.405688,
+      "results": 15361,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.505417,
+      "cpu_system_s": 0.34196,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "563a069012a5f458bc9e55c85a5eb952adbaad848c5487905ad37994d4a75d51"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r4_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 53.126644,
+      "buffer_setup_ms": 46.635517,
+      "cold_build_ms": 14.734736,
+      "trace_ms": 18829.365015,
+      "final_drain_ms": 0.519282,
+      "results": 15361,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.460518999999998,
+      "cpu_system_s": 0.28329800000000005,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "c2f3fbaa93c65813b2fddaf1833ae46be8e50e928cdcaf77a2456e77d6c47377"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r4_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 40.640405,
+      "buffer_setup_ms": 38.128815,
+      "cold_build_ms": 13.286235,
+      "trace_ms": 18821.127313,
+      "final_drain_ms": 0.389294,
+      "results": 15361,
+      "sampled_device_peak_bytes": 14224719872,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.452682999999997,
+      "cpu_system_s": 0.28814000000000006,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16043.622330000004
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1043.8750620000012
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 552.7867219999998
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 51.554828999999906
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 186.1651519999998
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 32.489923999999995
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 209.165194
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.8098560000000004
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.0183855,
+          "p95": 0.8431948999998305,
+          "p99": 5.179047649999999,
+          "max": 6.136418,
+          "sum": 276.05077
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.072231,
+          "p95": 1.32760145,
+          "p99": 1.75167206,
+          "max": 3.001321,
+          "sum": 262.971506
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.4998955,
+          "p95": 3.6321995499999997,
+          "p99": 5.14423529,
+          "max": 8.015959,
+          "sum": 18272.395851
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8136255,
+          "p95": 5.5316456999999986,
+          "p99": 5.97992998,
+          "max": 6.080134,
+          "sum": 243.47973100000002
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "e80335e1f7b560599d11a9706752e7ee69b81cd5181d8b26e789d2a5097dd7d9",
+      ".summary.json": "537b367d109df280da320bcaa93955812d808a7a8729686edfadaac9e3567f33"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r5_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.300682,
+      "buffer_setup_ms": 47.377207,
+      "cold_build_ms": 15.062736,
+      "trace_ms": 18931.384155,
+      "final_drain_ms": 0.441561,
+      "results": 15361,
+      "sampled_device_peak_bytes": 14220525568,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.530285000000003,
+      "cpu_system_s": 0.287395,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16076.727902000017
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1042.4530220000022
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 578.8876460000013
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 48.754366999999995
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 228.38782700000007
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 30.92873000000001
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 207.69701500000002
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.8772979999999995
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.018852,
+          "p95": 0.8367406999998315,
+          "p99": 4.94990916,
+          "max": 5.652684,
+          "sum": 275.644488
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.0719505,
+          "p95": 1.3337383,
+          "p99": 1.6316902499999997,
+          "max": 2.125243,
+          "sum": 304.119812
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.5063285,
+          "p95": 3.64083,
+          "p99": 5.132968050000001,
+          "max": 8.273905,
+          "sum": 18341.63473
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.8139895,
+          "p95": 4.90737035,
+          "p99": 5.256545289999998,
+          "max": 5.563961,
+          "sum": 240.516789
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "64cd967effc7a9111949abfaaff47be3469ddd6b49c168423c0c34db7beccd43",
+      ".summary.json": "5f0beed20c00c43805eac13a1034ac89f1a3590aff8de0b0009ea1cfc343569c"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r5_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.655138,
+      "buffer_setup_ms": 38.395483,
+      "cold_build_ms": 13.345732,
+      "trace_ms": 18745.896878,
+      "final_drain_ms": 2.9487,
+      "results": 15361,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.370912,
+      "cpu_system_s": 0.302704,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "9fcc068d17cc0460b060b192cbc7b49d9b1ff30711bc166d9adc85d8c26f1c28"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r6_off",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 52.731834,
+      "buffer_setup_ms": 45.098039,
+      "cold_build_ms": 14.659417,
+      "trace_ms": 18735.756352,
+      "final_drain_ms": 0.394502,
+      "results": 15361,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.391195,
+      "cpu_system_s": 0.26629299999999995,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "d2e8f60b98c02b8991431afff2ccca0d0a8ef6f00bacc92ef4b4d00daa2b24bd"
+    },
+    "runtime_valid": true
+  },
+  {
+    "seed": 2026100433,
+    "label": "u10_lean_2026100433_r6_on",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 15361,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 52.470873,
+      "buffer_setup_ms": 46.295848,
+      "cold_build_ms": 14.815942,
+      "trace_ms": 18850.733516,
+      "final_drain_ms": 0.370777,
+      "results": 15361,
+      "sampled_device_peak_bytes": 14207942656,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 17.466874,
+      "cpu_system_s": 0.30172699999999997,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 10000,
+          "inclusive_host_ms": 16059.589520000078
+        },
+        {
+          "name": "query.buffer",
+          "calls": 1850,
+          "inclusive_host_ms": 1040.0618349999986
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 10000,
+          "inclusive_host_ms": 560.9271899999991
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 1000,
+          "inclusive_host_ms": 49.089442
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 500,
+          "inclusive_host_ms": 200.54737700000007
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 50,
+          "inclusive_host_ms": 33.056076000000004
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 50,
+          "inclusive_host_ms": 209.090806
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 50,
+          "inclusive_host_ms": 1.9179109999999997
+        }
+      ],
+      "latency_ms": {
+        "insert": {
+          "count": 1000,
+          "p50": 0.017861500000000002,
+          "p95": 0.8395844999998298,
+          "p99": 5.1109575000000005,
+          "max": 6.2894,
+          "sum": 276.235933
+        },
+        "delete": {
+          "count": 1000,
+          "p50": 0.07213649999999999,
+          "p95": 1.32854685,
+          "p99": 1.74758506,
+          "max": 1.827225,
+          "sum": 275.151716
+        },
+        "query": {
+          "count": 10000,
+          "p50": 1.4995565,
+          "p95": 3.6409286499999998,
+          "p99": 5.09363364,
+          "max": 7.135085,
+          "sum": 18289.409992
+        },
+        "rebuild": {
+          "count": 50,
+          "p50": 4.813079999999999,
+          "p95": 5.81803685,
+          "p99": 5.85008387,
+          "max": 5.861862,
+          "sum": 244.079406
+        }
+      }
+    },
+    "outputs": {
+      ".ids.i32": "e0fbb89e474ba16fa8bbc10ec45723104094bbb8371a9aaf49fdceeea3dc82fd",
+      ".dist.f32": "d17d7f0f9b65f820a71dc8c4e406c4d996d9d28e289c665431e1ee839d5bd267",
+      ".queries.csv": "d41b1c1f295f41f02b3603b4c7bbb8c4b02fa14fa66033b6d52bc61287c4abe2",
+      ".ops.csv": "1eb195b840a554638ace2f758d87fa703c50f0e535bafb1c1533eb53a8f1bc13",
+      ".summary.json": "9044cdafccebb4809ec5c4bf25ff4bb97ac199c1bf1ee581fbaa590685838a67"
+    },
+    "runtime_valid": true
+  }
+]
