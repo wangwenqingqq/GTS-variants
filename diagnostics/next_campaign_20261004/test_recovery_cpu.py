@@ -97,6 +97,11 @@ class RecoveryPolicy(unittest.TestCase):
             self.assertTrue(c.observer_decision({'dataset':'GIST','method':'O_MASK','B':32,'config':{}})['qualified'])
             self.assertFalse(c.observer_decision({'dataset':'Deep','method':'CAGRA','B':32,'config':{'itopk_size':1024,'search_width':4}})['qualified'])
             self.assertFalse(c.observer_decision({'dataset':'Deep','method':'IVF_APPROX','B':32,'config':{'nlist':1024,'nprobe':16}})['qualified'])
+            # A declared move with the old path kept as an alias preserves the
+            # exact entry/observer hashes; changing bytes must still reject.
+            alias=c.ROOT/'old_location';alias.symlink_to(c.ROOT,target_is_directory=True)
+            c.save(identity,{'files':{str(alias/p.name):c.sha(p) for p in c.ROOT.iterdir() if p.is_file()}})
+            self.assertTrue(c.observer_decision({'dataset':'GIST','method':'O_MASK','B':32,'config':{}})['qualified'])
             (c.ROOT/'query_trace.hpp').write_text('changed observer')
             self.assertFalse(c.observer_decision({'dataset':'GIST','method':'O_MASK','B':32,'config':{}})['qualified'])
     def test_drift_in_query_or_oracle_cannot_reuse_receipt(self):

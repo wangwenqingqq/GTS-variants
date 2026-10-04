@@ -69,6 +69,7 @@ def observer_decision(row):
     for case in scopes:
         identity=ROOT/'runs'/f'hook_c{case["case"]}_r1_on'/'identity.json'
         files=json.loads(identity.read_text())['files'] if identity.exists() else {}
+        files={str(Path(p).resolve()):h for p,h in files.items()}
         sources_match &= all((ROOT/n).is_file() and files.get(str((ROOT/n).resolve()))==sha(ROOT/n) for n in required)
     return {'qualified':sources_match and all(s['timer_admitted'] for s in scopes),
             'reason':'registered representative control; retain every failure',
