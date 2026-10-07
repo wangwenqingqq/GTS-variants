@@ -1,4 +1,4 @@
-> 2026-10-04 execution recovery 已恢复独立原生实验。下面保留首轮停止时的历史结果；新增 lean U10、观察器成本、合法冷建树与 matched 开发网格见 [RECOVERY_RESULTS.md](RECOVERY_RESULTS.md)。首轮的全局 Flat 停止决定已被恢复合同修订，原始失败未改判。
+> 2026-10-07更新：正式K10 matched/bulk采集已完成834/834进程，整体比较仍未准入；当前结果、逐方法门槛与剩余工作见 [RECOVERY_RESULTS.md](RECOVERY_RESULTS.md)。下面保留首轮停止时的历史结果。2026-10-04恢复合同修订了首轮全局Flat停止决定，原始失败未改判。
 
 # 10K计划首轮执行：资格拒收，正式静态矩阵未启动
 

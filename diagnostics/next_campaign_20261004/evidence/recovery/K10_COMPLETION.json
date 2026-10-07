@@ -1,0 +1,451 @@
+{
+  "scope": "Completed static K10 matched/bulk collection; range, sustained, native updates and paired statistical report are separate.",
+  "controller_finished_utc": "2026-10-07T03:23:56.371369+00:00",
+  "processes": 834,
+  "Q_per_process": 10000,
+  "rounds_per_condition": 6,
+  "protocol_counts": {
+    "matched_b32_k8": 138,
+    "matched_b32_k32": 138,
+    "matched_b1": 276,
+    "bulk": 282
+  },
+  "method_configuration_groups": 139,
+  "condition_round_counts": [
+    {
+      "protocol": "bulk",
+      "dataset": "Deep",
+      "K": 8,
+      "matched_B": null,
+      "actual_B_values": [
+        32,
+        512,
+        2048,
+        8192,
+        10000
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    },
+    {
+      "protocol": "bulk",
+      "dataset": "Deep",
+      "K": 32,
+      "matched_B": null,
+      "actual_B_values": [
+        32,
+        2048,
+        10000
+      ],
+      "round_processes": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 11,
+        "5": 11,
+        "6": 11
+      }
+    },
+    {
+      "protocol": "bulk",
+      "dataset": "GIST",
+      "K": 8,
+      "matched_B": null,
+      "actual_B_values": [
+        32,
+        128,
+        512,
+        8192,
+        10000
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    },
+    {
+      "protocol": "bulk",
+      "dataset": "GIST",
+      "K": 32,
+      "matched_B": null,
+      "actual_B_values": [
+        32,
+        128,
+        8192,
+        10000
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    },
+    {
+      "protocol": "matched_b1",
+      "dataset": "Deep",
+      "K": 8,
+      "matched_B": 1,
+      "actual_B_values": [
+        1
+      ],
+      "round_processes": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 11,
+        "5": 11,
+        "6": 11
+      }
+    },
+    {
+      "protocol": "matched_b1",
+      "dataset": "Deep",
+      "K": 32,
+      "matched_B": 1,
+      "actual_B_values": [
+        1
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    },
+    {
+      "protocol": "matched_b1",
+      "dataset": "GIST",
+      "K": 8,
+      "matched_B": 1,
+      "actual_B_values": [
+        1
+      ],
+      "round_processes": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 11,
+        "5": 11,
+        "6": 11
+      }
+    },
+    {
+      "protocol": "matched_b1",
+      "dataset": "GIST",
+      "K": 32,
+      "matched_B": 1,
+      "actual_B_values": [
+        1
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    },
+    {
+      "protocol": "matched_b32_k32",
+      "dataset": "Deep",
+      "K": 32,
+      "matched_B": 32,
+      "actual_B_values": [
+        32
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    },
+    {
+      "protocol": "matched_b32_k32",
+      "dataset": "GIST",
+      "K": 32,
+      "matched_B": 32,
+      "actual_B_values": [
+        32
+      ],
+      "round_processes": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 11,
+        "5": 11,
+        "6": 11
+      }
+    },
+    {
+      "protocol": "matched_b32_k8",
+      "dataset": "Deep",
+      "K": 8,
+      "matched_B": 32,
+      "actual_B_values": [
+        32
+      ],
+      "round_processes": {
+        "1": 11,
+        "2": 11,
+        "3": 11,
+        "4": 11,
+        "5": 11,
+        "6": 11
+      }
+    },
+    {
+      "protocol": "matched_b32_k8",
+      "dataset": "GIST",
+      "K": 8,
+      "matched_B": 32,
+      "actual_B_values": [
+        32
+      ],
+      "round_processes": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12
+      }
+    }
+  ],
+  "decision": {
+    "state": "collection_complete",
+    "processes": 834,
+    "Q_per_process": 10000,
+    "scope": "matched and bulk only; sustained/range/native updates remain independent",
+    "policy": "execution-recovery-v2",
+    "collection_complete": true,
+    "candidate_stable": true,
+    "comparison_admitted": false,
+    "missing_required_rows": 0,
+    "missing_required_methods": 0,
+    "unqualified_timer_rows": 474,
+    "throughput_diagnosis_required": 0,
+    "missed_target_rows": 96,
+    "strict_rejected_rows": 474
+  },
+  "method_summary": {
+    "CAGRA": {
+      "processes": 198,
+      "strict_quality_pass": 0,
+      "runtime_valid": 198,
+      "memory_growth_pass": 198,
+      "timer_qualified": 0,
+      "throughput_decline_over_10pct": 35,
+      "throughput_window_unobservable": 60
+    },
+    "FAISS_FLAT": {
+      "processes": 72,
+      "strict_quality_pass": 30,
+      "runtime_valid": 72,
+      "memory_growth_pass": 72,
+      "timer_qualified": 48,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 18
+    },
+    "GTS_ORIG": {
+      "processes": 72,
+      "strict_quality_pass": 72,
+      "runtime_valid": 72,
+      "memory_growth_pass": 72,
+      "timer_qualified": 72,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 0
+    },
+    "IVF_ALL": {
+      "processes": 72,
+      "strict_quality_pass": 36,
+      "runtime_valid": 72,
+      "memory_growth_pass": 72,
+      "timer_qualified": 48,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 0
+    },
+    "IVF_APPROX": {
+      "processes": 204,
+      "strict_quality_pass": 6,
+      "runtime_valid": 204,
+      "memory_growth_pass": 204,
+      "timer_qualified": 0,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 12
+    },
+    "O_BOUND": {
+      "processes": 72,
+      "strict_quality_pass": 72,
+      "runtime_valid": 72,
+      "memory_growth_pass": 72,
+      "timer_qualified": 72,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 0
+    },
+    "O_FULL": {
+      "processes": 72,
+      "strict_quality_pass": 72,
+      "runtime_valid": 72,
+      "memory_growth_pass": 72,
+      "timer_qualified": 48,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 0
+    },
+    "O_MASK": {
+      "processes": 72,
+      "strict_quality_pass": 72,
+      "runtime_valid": 72,
+      "memory_growth_pass": 72,
+      "timer_qualified": 72,
+      "throughput_decline_over_10pct": 0,
+      "throughput_window_unobservable": 0
+    }
+  },
+  "target_label_counts": {
+    "admitted": 348,
+    "missed_target": 96,
+    "diagnostic_only": 102
+  },
+  "count_notes": [
+    "Bulk is four dataset/K conditions; each method uses its separately frozen chunk. A null matched_B does not imply a common bulk B.",
+    "Target counts are per process/anchor label, not distinct processes.",
+    "Unqualified timer, missed target and strict rejection sets are not interchangeable.",
+    "Unqualified timers include unregistered method/config/tile as well as failed representative controls.",
+    "Strict quality failure for ANN at 99%/99.9% is distinct from failure of its declared recall target.",
+    "Per-process timings remain diagnostic when timer qualification or declared quality gates fail; no paired speedup estimate is claimed.",
+    "90 large native-call rows cannot observe first/last 2K throughput inside a call. Missing decline observations are not passing observations."
+  ],
+  "timing_scope": "Warm query-pass, full host-ready outputs, actual synchronization and observer cost included. Cold/index/layout setup and post-timer file writes are excluded. Qualification is recorded per row.",
+  "contamination_replacement_counts": {
+    "ordinary": 811,
+    "1": 11,
+    "2": 12
+  },
+  "replacement_policy": "Two preregistered entire contaminated dataset/shape/round replacements; original observations and failed receipts retained externally; no third replacement.",
+  "post_collection_audit": {
+    "checked_utc": "2026-10-07T07:56:07.958959+00:00",
+    "processes": 834,
+    "formal_sha256": "28e42e1aabc19f80845b412686ddf20a7b626cd421bb911e34dcf56b03fa7a52",
+    "identity_entries_checked": 127272,
+    "unique_resolved_files_hashed": 1016,
+    "result_bytes_verified": 1340173344,
+    "errors": [],
+    "schema_note": "72 original-GTS rows report actual_Q rather than optional Q; actual_Q=10000 verified for all 834 rows without changing raw records.",
+    "initial_schema_audit_sha256": "45447a1c0d2439bb03d45623707b24b2696062db73beaeb63afcec41d7d28d1e",
+    "full_result_sha256_verified": 834,
+    "query_and_oracle_sha256_verified": 834,
+    "all_frozen_sources_and_binaries_match": true,
+    "schedule_and_runtime_receipts_and_output_audits_match": true,
+    "scope": "Post-collection byte and metadata consistency; no new GPU measurements, oracle recalculation or statistical significance."
+  },
+  "freeze": {
+    "binaries": {
+      "opt_knn_bench": "70520e34a97b155a0aeffa58d0b1c851684a6be4cd4fd71b170099da64cfae17",
+      "gts_bench_p7": "40c1cf9b1f0d855a4d4c1cd55a6e4916af90fc0ca75e18b5d8be372ba5dc2075"
+    },
+    "query_generator_sha256": "d5940d823225f7bd253817685e4e882ff05e9e22d82a32a2d098e3238e9c860c",
+    "final_seeds": {
+      "GIST": 2026100421,
+      "Deep": 2026100422
+    },
+    "memory_limit_bytes": 85899345920,
+    "Q": 10000,
+    "warmup_batches_each_actual_shape": 8,
+    "rounds": 6,
+    "tree_candidate": "O_MASK",
+    "scan_control": "O_BOUND",
+    "admission_policy": "execution-recovery-v2",
+    "observer_receipt_sha256": "9ee013b9866f7d7a7de83dad036e64688ea113b13d82c2aa4a4ad6596bb4bbd8",
+    "observer_policy": "per method/config/tile; unqualified timers retained as diagnostic and block comparison admission",
+    "matched_policy_sha256": "93220031aa939d2c3541175a79018ac7e0cb941842b7a7d8e48ba7908f8519f8",
+    "bulk_policy_sha256": "f6178218c4751c6d6ebcbfebdc5bd5e208afa1d602f3083378b54563430973ec"
+  },
+  "source": {
+    "parent_commit": "7bce3679c3e32e77fa25cf7842805926509e1412",
+    "search_commit": "d65c6e41effad67dde8ae1f1f68e656562607817",
+    "derived_sources": {
+      "opt_knn_bench.cu": "25a2bee09d94d956d24776cea2ca713771851edd05ab701a9efd52436a8c6ab3",
+      "gts_bench_p7.cu": "56eaad985d1d68e4140540e0a0bd2ea2e5be65b748d8fbc19e3ff787f773c6c2",
+      "knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+      "knn_select.cuh": "3f3f3d36da64a4d6dbe2011475059a07ac56b169d51a75e5c20ec11b253d2fde",
+      "knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+      "native_knn.py": "7a2e63075401515a72b5924cfe96177c2c75266f27849fcf62529c7f5db6f7b7",
+      "qualification.py": "f2f87a09c215f80dfbea23e6412c0979e051e35d1aba34d18f7ff4f5e9496113",
+      "run_locked.py": "5ab0ed6bac55450858732cb690663e3d7fc1cd2be25bea5caa9c131b5b4a9bb4",
+      "query_trace.hpp": "99ed907e48581a2727d5b4e3263fcdbc3b32e9b7bdf9ba9f97115bb67705d803",
+      "query_trace.py": "bb4734e6d21916ac91cafc919b19315efe8375745bbd472d9c758cc0d50af041",
+      "campaign10k.py": "d5940d823225f7bd253817685e4e882ff05e9e22d82a32a2d098e3238e9c860c",
+      "qualify10k.py": "34b46a85de5d59439243218ccdd16a6af2b69a223d2da939b2ab403379032427",
+      "diagnose10k.py": "84fe7f325b54295e6cf0d7e1ccddd4b0da3853a8e2b3875f45177f7d77080e4d",
+      "analyze_attribution.py": "5e43c4e16586f4eea5dfe7fb122d64d3515f61fb37806e80dfc65021e1e02569",
+      "u10_native.py": "e4ff2fd2ffc84f28d08fcdfe3721c03749080a68f643f1bbc943b8f3d21a4e45",
+      "continue10k.py": "ac2c698a60fc2c15260fd9ea102ece35a11e336a0c62ba434283fc7815851f1f",
+      "hook_control.py": "02fe373093cb8ae589a79df0cded6ad4012860fff79e07a03823d41c2828493f",
+      "localize_flat.py": "787c3e0ac9b6a55c06c7e698e5d7ac6e4b4c482fb3edc4faf15cb418212b82db",
+      "flat_refine.py": "04c0f46f1cbe40c32837afea7007a252a9610d3a15064237e5486b770219b72f",
+      "qualify_ref64.py": "03a39a7e77bca79a187289ae5ed45ee46e2c3783d5c62d1b0b6651f0fc80804e",
+      "test_recovery_cpu.py": "c6637f8d04695f39c23be7949d1a0eccdac6adfb71ddb29adab8e9ad77d948a2",
+      "u10_trace.hpp": "4dbb8c4c1a6df64292c2b461063e6031baea98ebc4e3ac64723738b178a61ae7"
+    }
+  },
+  "development_row_counts": {
+    "SCREEN.json": 48,
+    "BULK_DEVELOPMENT.json": 1416,
+    "DEV_GIST_IVF_dev1024.json": 104,
+    "DEV_GIST_CAGRA_dev1024.json": 120,
+    "DEV_Deep_IVF_dev1024.json": 104,
+    "DEV_Deep_CAGRA_dev1024.json": 120,
+    "DEV_GIST_IVF_bulkdev10000.json": 312,
+    "DEV_GIST_CAGRA_bulkdev10000.json": 360,
+    "DEV_Deep_IVF_bulkdev10000.json": 312,
+    "DEV_Deep_CAGRA_bulkdev10000.json": 360
+  },
+  "raw_provenance_sha256": {
+    "FORMAL.json": "28e42e1aabc19f80845b412686ddf20a7b626cd421bb911e34dcf56b03fa7a52",
+    "FORMAL_SCHEDULE.json": "0371e80468d1bc4906f834895af8240270872bc7a3fe16c1b39cbd7f27085d40",
+    "K10_MATRIX_COMPLETE.json": "f753883ec2d7340135eb0e482321b6c75ee7ee0f990d54b8e5ab89b8f3829501",
+    "FROZEN_10K.json": "a7c0154dc57665f9e78d7b96441c0a88e210e92409d1c70992b74a74321744e0",
+    "MATCHED_POLICY.json": "93220031aa939d2c3541175a79018ac7e0cb941842b7a7d8e48ba7908f8519f8",
+    "BULK_POLICY.json": "f6178218c4751c6d6ebcbfebdc5bd5e208afa1d602f3083378b54563430973ec",
+    "RECOVERY_FORMAL_PROGRESS.json": "133cdab979fa7387539dc46752da2d6cf1bbc3d7a5b9dd7b9a65a2d9093ebf50",
+    "SCREEN.json": "2563fb7873685c3be3f93de95cf0f7f612038e5585eb4f22524fbad5a50b74fc",
+    "BULK_DEVELOPMENT.json": "bc520db584edcdbc0fb3d86f7b88d6a51992b5a07d37f8617636346ea5e99928",
+    "DEV_GIST_IVF_dev1024.json": "a88120d946d79eabd5813f68f108d5abad8a741f726cc1936844e03cbca43f28",
+    "DEV_GIST_CAGRA_dev1024.json": "6aec31b08b3276dc484e85dd86db87630902e81e192dc60a27ac8d2788e4fdc3",
+    "DEV_Deep_IVF_dev1024.json": "7270eaf2d13ff7afb0d1e6c3ea8f3951b210b7d1d04ff25115e68d79aad460db",
+    "DEV_Deep_CAGRA_dev1024.json": "7b93b3df75a822b1d56bb92702cf2241a334ebf31ab9d65a8a740711b9d1aba9",
+    "DEV_GIST_IVF_bulkdev10000.json": "23fb6816d13ac6df2c645e47b00dc26a666ff6b5c5c8c5e6499254f471939c6a",
+    "DEV_GIST_CAGRA_bulkdev10000.json": "8b16974ec6730d38eb5b22083609ab3810745330b2a5437635429de619bd5266",
+    "DEV_Deep_IVF_bulkdev10000.json": "173a9f46398d23090cb1974ec3fbc0cc69887ad3d1a9954d8280c375f22fc3de",
+    "DEV_Deep_CAGRA_bulkdev10000.json": "076b6b1b09f809041251081cb22707849d6a56135e0645211ca06c0a58f3a143",
+    "CONTAMINATION_REPLACEMENT1.json": "862e649f701634c1a85db9fafbdf85bbc41c91736d5ef2169f80eb243e53afe0",
+    "CONTAMINATION_REPLACEMENT2.json": "eab5a37fd82cbaa82c3cf2531e700bc6cc1feb33705a59f11a4e674240b37954",
+    "K10_POST_COLLECTION_AUDIT.json": "45447a1c0d2439bb03d45623707b24b2696062db73beaeb63afcec41d7d28d1e",
+    "K10_POST_COLLECTION_AUDIT_FINAL.json": "d81718f9fb8bcdaaf0c65e90a0fcbb6d1b8b546cb4e9392149926bdf6755b095"
+  },
+  "pending": [
+    "six-round paired statistical report",
+    "R10 range matrix",
+    "single-process three-pass 30K sustained runs",
+    "direct work-counter calibration and remaining workflow attribution"
+  ]
+}
