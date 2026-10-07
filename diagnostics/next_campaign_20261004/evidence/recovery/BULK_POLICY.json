@@ -1,0 +1,522 @@
+{
+  "GIST_k8": [
+    {
+      "method": "GTS_ORIG",
+      "config": {},
+      "B": 32,
+      "anchors": []
+    },
+    {
+      "method": "O_FULL",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_ALL",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 1024
+      },
+      "B": 128,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "O_BOUND",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "FAISS_FLAT",
+      "config": {},
+      "B": 10000,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "O_MASK",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 256
+      },
+      "B": 512,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "B": 512,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 512
+      },
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 256,
+        "search_width": 1
+      },
+      "B": 10000,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 4
+      },
+      "B": 10000,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 2
+      },
+      "B": 8192,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "GIST_k32": [
+    {
+      "method": "GTS_ORIG",
+      "config": {},
+      "B": 32,
+      "anchors": []
+    },
+    {
+      "method": "O_FULL",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_ALL",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 1024
+      },
+      "B": 128,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "O_BOUND",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "FAISS_FLAT",
+      "config": {},
+      "B": 10000,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "O_MASK",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 128
+      },
+      "B": 32,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 256
+      },
+      "B": 32,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 512
+      },
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 1
+      },
+      "B": 10000,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 4
+      },
+      "B": 10000,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 2
+      },
+      "B": 8192,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "Deep_k8": [
+    {
+      "method": "GTS_ORIG",
+      "config": {},
+      "B": 32,
+      "anchors": []
+    },
+    {
+      "method": "O_FULL",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_ALL",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 1024
+      },
+      "B": 2048,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "O_BOUND",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "FAISS_FLAT",
+      "config": {},
+      "B": 8192,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "O_MASK",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 128
+      },
+      "B": 10000,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "B": 2048,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 2048
+      },
+      "B": 512,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 64,
+        "search_width": 2
+      },
+      "B": 10000,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 256,
+        "search_width": 2
+      },
+      "B": 10000,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 1
+      },
+      "B": 2048,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "Deep_k32": [
+    {
+      "method": "GTS_ORIG",
+      "config": {},
+      "B": 32,
+      "anchors": []
+    },
+    {
+      "method": "O_FULL",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_ALL",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 1024
+      },
+      "B": 2048,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "O_BOUND",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "FAISS_FLAT",
+      "config": {},
+      "B": 2048,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "O_MASK",
+      "config": {},
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 64
+      },
+      "B": 10000,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "B": 2048,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 128,
+        "search_width": 2
+      },
+      "B": 10000,
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 4
+      },
+      "B": 10000,
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 1
+      },
+      "B": 32,
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ]
+}

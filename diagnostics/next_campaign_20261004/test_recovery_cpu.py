@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Standard-library regression of recovery policy using mocked GPU evidence."""
+"""CPU regressions of recovery policy and frozen K10 comparison admission."""
 import importlib.util
+import copy
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -107,5 +109,100 @@ class RecoveryPolicy(unittest.TestCase):
     def test_drift_in_query_or_oracle_cannot_reuse_receipt(self):
         saved={'command':['mock'],'files':{'script':'s','query':'q','oracle':'o'}}
         self.assertFalse(c.cached_admission_valid(saved,{**saved,'files':{**saved['files'],'oracle':'new'}}))
+
+class K10Statistics(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        root=Path(__file__).resolve().parent
+        spec=importlib.util.spec_from_file_location('k10_statistics',root/'summarize_k10.py')
+        cls.s=importlib.util.module_from_spec(spec);spec.loader.exec_module(cls.s)
+        evidence=root/'evidence/recovery'
+        cls.rows=json.loads((evidence/'K10_FORMAL_ROWS.json').read_text())['rows']
+        cls.contract=json.loads((evidence/'K10_EXECUTION_CONTRACT.json').read_text())
+        cls.policy=json.loads((root/'ADMISSION_POLICY.json').read_text())
+        cls.controls={r['case']:r for r in json.loads((evidence/'HOOK_CONTROL_COMPLETE.json').read_text())['summary']}
+        cls.group=next(g for g in cls.s.group_rows(cls.rows).values() if g[0]['method']=='O_MASK')
+
+    def test_duplicate_labels_and_missing_round_are_fatal(self):
+        with self.assertRaisesRegex(ValueError,'重复逻辑标签'):
+            self.s.group_rows(self.group+[copy.deepcopy(self.group[0])])
+        with self.assertRaisesRegex(ValueError,'缺轮或重复轮'):
+            self.s.group_rows(self.group[:-1])
+
+    def test_one_bad_round_keeps_all_six_and_blocks_group(self):
+        gates={r['label']:self.s.row_gates(r,self.policy,self.controls) for r in self.group}
+        bad=gates[self.group[0]['label']];bad['strict_quality']=False;bad['reasons']=['strict_quality_failed']
+        stats=self.s.describe(self.group,gates)
+        self.assertFalse(stats['complete_quality_and_timer_comparable'])
+        self.assertEqual(len(stats['round_pass_ms']),6)
+
+    def test_unreachable_target_remains_diagnostic_after_full_quality(self):
+        row=copy.deepcopy(self.group[0]);row['anchors']=[1.];row['development_unreachable']=[1.]
+        self.assertEqual(self.s.target_status(row),{'1.0':'diagnostic_only'})
+
+    def test_field_only_and_member_failures_are_separate(self):
+        row=copy.deepcopy(self.group[0]);row['quality'].update(output_contract_pass=False,
+            distance_tolerance_pass=False,complete_gate_pass=False)
+        row['admission']['strict_quality_admitted']=False
+        gates=self.s.row_gates(row,self.policy,self.controls)
+        self.assertIn('fields_only_failed',gates['reasons']);self.assertNotIn('members_incomplete',gates['reasons'])
+
+    def test_large_call_missing_window_is_not_passing(self):
+        row=next(r for r in self.rows if 'throughput_decline_over_10pct' not in r['stability'])
+        gates=self.s.row_gates(row,self.policy,self.controls)
+        self.assertFalse(gates['throughput_observable']);self.assertIsNone(gates['throughput_declined'])
+
+    def test_observer_hash_and_cost_failure_have_distinct_reasons(self):
+        hashed=next(r for r in self.rows if r['observer'].get('cases')==[17])
+        cost=next(r for r in self.rows if r['observer'].get('cases')==[11])
+        a=self.s.row_gates(hashed,self.policy,self.controls);b=self.s.row_gates(cost,self.policy,self.controls)
+        self.assertIn('observer_hash_mismatch',a['reasons']);self.assertNotIn('observer_upper_unproven',a['reasons'])
+        self.assertIn('observer_upper_unproven',b['reasons']);self.assertNotIn('observer_hash_mismatch',b['reasons'])
+
+    def test_matched_B_mismatch_blocks_pair(self):
+        left=copy.deepcopy(self.group);right=copy.deepcopy(self.group)
+        for i,(a,b) in enumerate(zip(left,right)):
+            a['method']='GTS_ORIG';a['B']=1;b['B']=32
+            a['position']=0 if i%2 else 2;b['position']=1
+        stats={'complete_quality_and_timer_comparable':True,'reason_counts':{}}
+        p=self.s.compare(left,right,stats,stats,self.contract)
+        self.assertFalse(p['comparable']);self.assertIn('matched_B_mismatch',p['reasons'])
+
+    def test_different_bulk_chunks_compare_whole_pass(self):
+        left=copy.deepcopy(self.group);right=copy.deepcopy(self.group)
+        for i,(a,b) in enumerate(zip(left,right)):
+            a.update(method='FAISS_FLAT',protocol='bulk',B=10000,position=0 if i%2 else 2)
+            b.update(protocol='bulk',B=32,position=1)
+        stats={'complete_quality_and_timer_comparable':True,'reason_counts':{}}
+        p=self.s.compare(left,right,stats,stats,self.contract)
+        self.assertTrue(p['comparable']);self.assertFalse(p['same_B']);self.assertEqual(p['protocol'],'bulk_whole_pass')
+
+    def test_input_hash_drift_is_fatal(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);e=root/'evidence/recovery';e.mkdir(parents=True)
+            source=Path(__file__).resolve().parent/'evidence/recovery'
+            (e/'PUBLICATION.json').write_bytes((source/'PUBLICATION.json').read_bytes())
+            (e/'K10_FORMAL_ROWS.json').write_text('changed input')
+            with self.assertRaisesRegex(ValueError,'公开输入SHA改变'):
+                self.s.analyze(root)
+
+    def test_registered_replacement_cannot_use_another_process(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);e=root/'evidence/recovery';e.mkdir(parents=True)
+            source=Path(__file__).resolve().parent
+            for name in ['K10_FORMAL_ROWS.json','K10_COMPLETION.json','K10_EXECUTION_CONTRACT.json',
+                         'MATCHED_POLICY.json','BULK_POLICY.json','HOOK_CONTROL_COMPLETE.json','PUBLICATION.json']:
+                (e/name).write_bytes((source/'evidence/recovery'/name).read_bytes())
+            (root/'ADMISSION_POLICY.json').write_bytes((source/'ADMISSION_POLICY.json').read_bytes())
+            data=json.loads((e/'K10_FORMAL_ROWS.json').read_text())
+            row=next(r for r in data['rows'] if 'contamination_replacement' in r)
+            other=next(r for r in data['rows'] if r['method']==row['method'] and 'contamination_replacement' not in r)
+            row['measurement_label']=other['measurement_label']
+            (e/'K10_FORMAL_ROWS.json').write_text(json.dumps(data))
+            pub=json.loads((e/'PUBLICATION.json').read_text())
+            pub['K10_FORMAL_ROWS.json']['public_sha256']=hashlib.sha256((e/'K10_FORMAL_ROWS.json').read_bytes()).hexdigest()
+            (e/'PUBLICATION.json').write_text(json.dumps(pub))
+            with self.assertRaisesRegex(ValueError,'污染替代轮来源改变'):
+                self.s.analyze(root)
 
 if __name__=='__main__':unittest.main()

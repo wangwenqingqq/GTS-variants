@@ -1,5 +1,22 @@
 # Original GTS experiment deliveries and evidence alignment
 
+2026-10-07最新状态：K10 matched/bulk采集完成834/834进程；本合同静态O_MASK稳定；整体`comparison_admitted=false`，统一search/update候选不存在。六轮统计已闭合，R10、30k与全冷总计仍未完成。
+
+- [按资格分类的六轮结果与四笔账](diagnostics/next_campaign_20261004/K10_QUALIFIED_RESULTS.md)
+- [每个方法、每对方法的比较资格与具体原因](diagnostics/next_campaign_20261004/K10_COMPARISON_STATUS.json)
+- [剩余门槛与实际候选身份](diagnostics/next_campaign_20261004/CLOSURE.md)
+
+八个matched条件中，O_MASK相对原始适配器的累计warm改善为46.956–76.846倍；树前置相对O_BOUND没有任何条件达到预登记稳健胜出门槛，B1全部回退。合格外部对照含更快结果，均保留，不把原始适配器的大倍率归因于纯coalescing或整合GTS++。
+
+在已有NumPy环境下一键重建三份报告（纯CPU，不运行GPU）：
+
+```bash
+python3 diagnostics/next_campaign_20261004/summarize_k10.py
+python3 diagnostics/next_campaign_20261004/test_recovery_cpu.py
+```
+
+分析固定5b145bc的834行和冻结策略；校验完整六轮、身份及替代轮来源。22项CPU回归覆盖拒收、缺轮、计时失败、窗口未知和错误配对。下面的早期轮次仍保留其历史状态。
+
 This publication branch contains only task-owned experiment deliveries. It has
 a fresh, standalone commit chain and does not inherit older repository traces,
 data or history. Existing repository branches, history and visibility are not
@@ -34,12 +51,7 @@ a unified range/kNN/update keeper.
 - [Later P7 static kNN evidence](https://github.com/wangwenqingqq/GTS-variants/blob/7bce3679c3e32e77fa25cf7842805926509e1412/diagnostics/unified_knn_e2e_20261003/RESULTS.md)
 - [Later original-GTS U0 update evidence](https://github.com/wangwenqingqq/GTS-variants/blob/7bce3679c3e32e77fa25cf7842805926509e1412/diagnostics/claim_closure_20261003/RESULTS.md)
 
-The new document is **plan only**, not a completed GPU campaign. It requires
-original GTS, a qualified stable query version, native Flat, native IVF and
-native CAGRA on actual fresh10k queries, with matched B1/B32 and separately
-optimized bulk batching. It also covers range stability and every operator in
-query/insert/delete/compaction/rebuild. Static query qualification, native
-multiset updates and future new-vector arrivals remain separate contracts.
+该计划现已完成K10 matched/bulk采集及按资格分类的统计：139个冻结配置组，每组六个fresh进程；52组完整质量与计时联合可比，67组ANN、20组其余拒收/未覆盖。90个合格局部方法对不改变全局未准入状态。原生Flat/IVF/CAGRA的失败配置和诊断时间没有删除；范围持续性、30k及完整工作流剩余门槛见最新CLOSURE。静态查询、原生逻辑多重集更新与新向量到达仍为不同合同。
 
 ## Evidence alignment: query and update lifecycle
 

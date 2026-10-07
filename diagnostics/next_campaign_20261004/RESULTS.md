@@ -1,4 +1,4 @@
-> 2026-10-07更新：正式K10 matched/bulk采集已完成834/834进程，整体比较仍未准入；当前结果、逐方法门槛与剩余工作见 [RECOVERY_RESULTS.md](RECOVERY_RESULTS.md)。下面保留首轮停止时的历史结果。2026-10-04恢复合同修订了首轮全局Flat停止决定，原始失败未改判。
+> 2026-10-07更新：正式K10 matched/bulk采集已完成834/834进程，整体比较仍未准入；后续纯CPU[六轮配对报告](K10_QUALIFIED_RESULTS.md)、[比较资格](K10_COMPARISON_STATUS.json)已生成，当前采集状态见 [RECOVERY_RESULTS.md](RECOVERY_RESULTS.md)，剩余工作见[CLOSURE](CLOSURE.md)。下面保留首轮停止时的历史结果。2026-10-04恢复合同修订了首轮全局Flat停止决定，原始失败未改判。
 
 # 10K计划首轮执行：资格拒收，正式静态矩阵未启动
 

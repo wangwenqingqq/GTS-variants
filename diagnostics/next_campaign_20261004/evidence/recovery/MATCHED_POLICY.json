@@ -1,0 +1,520 @@
+{
+  "GIST_k8_b1": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 256
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 1024
+      },
+      "anchors": [
+        0.999,
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 256,
+        "search_width": 1
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 2
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 2
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "GIST_k8_b32": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 256
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 256
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 1024
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 256,
+        "search_width": 2
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 1
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 1
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "GIST_k32_b1": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 1024
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 512
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 1
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 1
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 4
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "GIST_k32_b32": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 128
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 256
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 512
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 4
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 1
+      },
+      "anchors": [
+        0.999,
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ],
+  "Deep_k8_b1": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 128
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 1024
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 64,
+        "search_width": 4
+      },
+      "anchors": [
+        0.99,
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 2
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    }
+  ],
+  "Deep_k8_b32": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 128
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 1024
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 128,
+        "search_width": 1
+      },
+      "anchors": [
+        0.99,
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 1
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    }
+  ],
+  "Deep_k32_b1": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 256
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 512
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 128,
+        "search_width": 4
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 2
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 2
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": []
+    }
+  ],
+  "Deep_k32_b32": [
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 256
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 4096,
+        "nprobe": 512
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "IVF_APPROX",
+      "config": {
+        "nlist": 1024,
+        "nprobe": 512
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 256,
+        "search_width": 4
+      },
+      "anchors": [
+        0.99
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 512,
+        "search_width": 2
+      },
+      "anchors": [
+        0.999
+      ],
+      "development_unreachable": []
+    },
+    {
+      "method": "CAGRA",
+      "config": {
+        "itopk_size": 1024,
+        "search_width": 1
+      },
+      "anchors": [
+        1.0
+      ],
+      "development_unreachable": [
+        1.0
+      ]
+    }
+  ]
+}

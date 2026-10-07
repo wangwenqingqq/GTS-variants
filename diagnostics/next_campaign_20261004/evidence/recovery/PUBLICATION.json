@@ -87,5 +87,23 @@
     "raw_sha256": "28e42e1aabc19f80845b412686ddf20a7b626cd421bb911e34dcf56b03fa7a52",
     "public_sha256": "6888c478fd7b1ab12a92e027da74f3977f3c5572f7a1e278cbc04d18449e0cc3",
     "curation": "All 834 process rows with explicit scalar quality/stability/admission fields. Full per-query arrays and private runtime metadata remain external."
+  },
+  "MATCHED_POLICY.json": {
+    "raw_source_name": "MATCHED_POLICY.json",
+    "raw_sha256": "93220031aa939d2c3541175a79018ac7e0cb941842b7a7d8e48ba7908f8519f8",
+    "public_sha256": "93220031aa939d2c3541175a79018ac7e0cb941842b7a7d8e48ba7908f8519f8",
+    "curation": "Unmodified technical frozen selection policy; no private runtime metadata."
+  },
+  "BULK_POLICY.json": {
+    "raw_source_name": "BULK_POLICY.json",
+    "raw_sha256": "f6178218c4751c6d6ebcbfebdc5bd5e208afa1d602f3083378b54563430973ec",
+    "public_sha256": "f6178218c4751c6d6ebcbfebdc5bd5e208afa1d602f3083378b54563430973ec",
+    "curation": "Unmodified technical frozen selection policy; no private runtime metadata."
+  },
+  "K10_EXECUTION_CONTRACT.json": {
+    "raw_source_name": "FROZEN_10K.json + QUERY_FINAL.json + FORMAL.json + measurement identities + registered replacement plans",
+    "raw_sha256": "a7c0154dc57665f9e78d7b96441c0a88e210e92409d1c70992b74a74321744e0",
+    "public_sha256": "cf0e1c17728e66b14de2ecd21e83968d763f0369a16381bd5fa9a474a9def200",
+    "curation": "Explicit technical identity and configuration extraction, including raw per-process identity hashes; raw sources remain external. Frozen/FORMAL/plan hashes are recorded separately inside this artifact."
   }
 }

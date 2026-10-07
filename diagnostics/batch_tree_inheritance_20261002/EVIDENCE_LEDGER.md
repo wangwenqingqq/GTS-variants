@@ -1,5 +1,7 @@
 # P4 证据账本
 
+> 2026-10-07当前K10状态与六轮统计见[合格结果](../next_campaign_20261004/K10_QUALIFIED_RESULTS.md)及本文件末尾补记；早期停止/恢复记录保留其历史口径。
+
 本轮以 `wangwenqingqq/GTS-variants@43463278fa1f2b7b8e6e36ff224e5c640036963e` 为冻结起点。历史证据保留原实验口径，不能与本轮收益相乘。
 
 | 机制 | 历史来源与观测 | 本轮继承与检验 | 新语义 |
@@ -125,3 +127,19 @@ historical rerun or new optimization direction is authorized by this ledger.
 | A2机制选择 | U10 query-prefix scan/init实际GPU累计139.598ms，整条instrumented trace18575.558ms；尚未实现缓存 | 存在源级重复状态维护，不据重复次数推端到端倍率；常规prefix缓存不足以开启新颖性主张，当前no-new-change |
 
 源码、完整聚合数据、原始/curated hash映射与剩余门槛见 [RECOVERY_RESULTS](../next_campaign_20261004/RECOVERY_RESULTS.md)。治理补丁12项CPU回归通过；活动GPU阶段保持已登记脚本，安全切换安排在拥有的阶段drain之后。后续控制筛选、冻结和正式矩阵仍按完整查询数、真实16尾批次和六轮，原版旧约25GPU-hours仅为预算预测。
+
+## 2026-10-07 K10统计闭合补记
+
+上述2026-10-04停止/恢复文字保留历史状态；最新[合格结果](../next_campaign_20261004/K10_QUALIFIED_RESULTS.md)、[逐方法/逐对资格](../next_campaign_20261004/K10_COMPARISON_STATUS.json)和[剩余门槛](../next_campaign_20261004/CLOSURE.md)替代其“零正式进程/统计pending”作为当前状态。本补记只分析5b145bc已采集834行，不增加GPU任务、修改算法、改查询或调参。
+
+| 账目/主张 | 现有正式证据 | 资格与决定 | 尚未证明 |
+|---|---|---|---|
+| 原始GTS/O_BOUND累计执行改善 | 八个matched条件，每组六fresh进程；配对几何比48.758–75.185 | 全部完整成员/字段及计时合格；多项执行差异共同贡献 | 不是纯coalescing贡献，不是与其他历史倍数的乘积 |
+| 原始GTS/O_MASK完整静态候选 | 八个matched条件比46.956–76.846；另四bulk条件六轮，原始输出/身份已核对 | 静态本合同稳定；不覆盖动态更新 | 不含cold/layout/refit/Graph成本，不是统一GTS++总加速 |
+| O_BOUND/O_MASK树额外净收益 | 核对同二进制、seed4096/depth/数据/树/输出；GIST/B32约1.8–2.2%，Deep/B32轻微回退，B1时延增加3.84–13.90% | matched 0/8达到下95>1.03且至少5/6 wins；bulk 0/4；负例保留 | 没有全形状树优势；不得依据final收益新增dispatch |
+| 合格外部/O_MASK | 八个matched合格点，2个O_MASK较快、6个外部较快；全部合格IVF_ALL点更快 | 每组必须六轮联合质量+计时合格，完整保留最快外部竞争信号 | bulk无合格外部速度结论；ANN未资格化时间只诊断 |
+| 整体采集与准入 | 834/834、139组六轮、12条件；52A/67B/20C，90个合格局部方法对 | collection_complete=true，静态candidate_stable=true，comparison_admitted=false | 局部有价值不等于全表准入 |
+| 失败/未知保存 | 444计时未覆盖、18行继承hash失败、12行继承成本上界未过；474完整成员失败，24兼有字段失败；96目标未达；90吞吐窗口不可测 | 不丢失败轮、不重复已失败成本对照，不把未知当零；污染替代两完整轮使用实际labels | 3%上界未通过不能证明实际开销必然>3% |
+| 统一search/update候选 | 静态P7 O_MASK与原生lean U10仍为不同二进制/状态入口 | 明确不存在；原生N1000重插入/live-rank/串行边界保留 | 未桥接更新后的AoSoA/树界/工作区/Graph刷新、任意新向量或并发 |
+
+统计量和门槛沿原冻结合同；seed20261003/20000重采样继承P7实现，K10冻结未单列，明确为采集后公开的实现参数。六进程只刻画固定查询集运行波动，不证明跨分布泛化。剩余R10/30k、全冷总计、逐窗口派生与物理工作计数校准不删；先复用已有计数，不默认新NCU。新增summarize_k10.py可一键重建三类表，22项CPU回归验证缺轮/重复/失败轮/错误替代配对/同B及未知窗口等边界。

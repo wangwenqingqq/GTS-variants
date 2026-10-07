@@ -6,7 +6,7 @@
 
 截至2026-10-07北京时间11:23，正式 K10 matched/bulk 矩阵已完成 **834/834 个 fresh 进程，每进程10000查询**。GIST1M/D960、Deep1M/D96的K8/K32、B1/B32共八个 matched 条件，以及两数据集×两种K的四个独立 bulk 条件，均完成六轮。正式种子0421/22在开发策略冻结后生成，没有使用正式结果改参数。
 
-原始完成决定为 `collection_complete=true`、`candidate_stable=true`、**`comparison_admitted=false`**。candidate_stable仅适用于本合同中的静态 O_MASK 行及其已检查门槛；不能推广为动态更新、并发、所有查询或外部基线优势。完成摘要与冻结身份见 [K10_COMPLETION](evidence/recovery/K10_COMPLETION.json)，全部834行的时延、质量、资格和哈希见 [K10_FORMAL_ROWS](evidence/recovery/K10_FORMAL_ROWS.json)。六轮配对统计报告尚未生成，本次不发布新的加速倍率或置信区间。
+原始完成决定为 `collection_complete=true`、`candidate_stable=true`、**`comparison_admitted=false`**。candidate_stable仅适用于本合同中的静态 O_MASK 行及其已检查门槛；不能推广为动态更新、并发、所有查询或外部基线优势。完成摘要与冻结身份见 [K10_COMPLETION](evidence/recovery/K10_COMPLETION.json)，全部834行的时延、质量、资格和哈希见 [K10_FORMAL_ROWS](evidence/recovery/K10_FORMAL_ROWS.json)。2026-10-07后续纯CPU统计已生成[合格六轮报告](K10_QUALIFIED_RESULTS.md)和[逐方法/逐对资格](K10_COMPARISON_STATUS.json)：52组联合合格、90个合格局部方法对；全局false保持不变。5b145bc的原始完成摘要及其pending字段保持原样，当前闭合状态见[CLOSURE](CLOSURE.md)。
 
 | 项目 | 实际完成范围 | 准入结论 |
 |---|---|---|
@@ -87,7 +87,7 @@ rebuild 是 insert 内子区间，不能再加到 insert 或 trace。50次重建
 
 GIST上CAGRA的经验100%目标在两种K及B中均不可达，保留最高质量诊断点；Deep是否达到完整门槛随K/B改变。Deep IVF K32即便接近/达到成员召回，也不能忽略字段/完整结果合同。任何正式集上的偶然通过不得把development_unreachable改为target-admitted。bulk已完成独立六chunk筛选并冻结策略，没有以matched参数代替bulk开发。448行matched、1344行native bulk、48行筛选与72行bulk控制的原始文件SHA和行数也保存在完成摘要中；未将开发结果混入834行正式矩阵。
 
-剩余工作为六轮配对统计报告、R10范围查询矩阵、30k单进程连续性、直接计数校准，以及全冷总计/逐窗口归因等未闭合工作流项。静态K10采集完成不代替这些门槛，未资格化计时和未达质量目标的外部点仍留在诊断范围，不进入同质量正式速度结论。
+六轮配对统计已用834行闭合，未运行新GPU任务。剩余工作为R10范围查询矩阵、30k单进程连续性、直接计数校准、实际统一候选身份及小桥接，以及全冷总计/逐窗口归因等未闭合工作流项。静态K10采集完成不代替这些门槛，未资格化计时和未达质量目标的外部点仍留在诊断范围，不进入同质量正式速度结论。
 
 没有新增优化机制。本次增加静态K10完整采集和受限稳定性证据，并保留原生更新与构建归因；不足以恢复任何常规prefix缓存/coalescing的新颖性或端到端收益主张。正式逐窗口质量/计数的派生报告和全工作流剩余runtime行仍未完成。
 
