@@ -1,0 +1,338 @@
+[
+  {
+    "state": "correctness_passed",
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 44.096519,
+      "buffer_setup_ms": 0.107221,
+      "cold_build_ms": 61.028802,
+      "trace_ms": 213.990786,
+      "final_drain_ms": 0.548862,
+      "results": 19114,
+      "sampled_device_peak_bytes": 14449115136,
+      "host_output_capacity_bytes": 153520,
+      "cpu_user_s": 0.204999,
+      "cpu_system_s": 0.006344000000000016,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 19,
+          "inclusive_host_ms": 95.03578399999998
+        },
+        {
+          "name": "query.buffer",
+          "calls": 6,
+          "inclusive_host_ms": 20.701169
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 19,
+          "inclusive_host_ms": 21.510486999999994
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 15,
+          "inclusive_host_ms": 17.129075
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 3,
+          "inclusive_host_ms": 6.534744
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 2,
+          "inclusive_host_ms": 11.278127
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 2,
+          "inclusive_host_ms": 31.655349
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 2,
+          "inclusive_host_ms": 0.303257
+        }
+      ]
+    },
+    "ancestor_member_checks": 0,
+    "outputs": {
+      ".ids.i32": "a814868f36f132035588e0e47379d8f10c9f6739eda170711bd781e302903c2f",
+      ".dist.f32": "1f15d1ced2855fe752b6f0b991906e48e74d3a647edbc6ed12560fa07acedf2b",
+      ".queries.csv": "bcaea8d9c59b893f8bd4665308359188a3aa2cf6ae80699c56e3e585cbedc4c8"
+    },
+    "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked",
+    "mode": "PAR_STRONG",
+    "region": {
+      "mode": 1,
+      "setup_ms": 105.798616,
+      "context_ms": 447.088318,
+      "setup_plus_trace_ms": 319.789402,
+      "refreshes": 3,
+      "peak_owned_bytes": 19052,
+      "allocated_bytes": 56996,
+      "transferred_bytes": 35524,
+      "allocations": 45,
+      "final_owned_bytes": 0,
+      "refresh_rows": [
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 1,
+          "owned_bytes": 18908,
+          "ms": 0.536222
+        },
+        {
+          "n": 1009,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 2,
+          "owned_bytes": 19052,
+          "ms": 0.761283
+        },
+        {
+          "n": 1008,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 3,
+          "owned_bytes": 19036,
+          "ms": 0.746803
+        }
+      ]
+    },
+    "registration_sha256": "653856e70f2b0a6104b3ca59c9e52051bc4504b1014de96eea33ce6eaae194b7"
+  },
+  {
+    "state": "correctness_passed",
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 34.349039,
+      "buffer_setup_ms": 0.080822,
+      "cold_build_ms": 510.80887,
+      "trace_ms": 3151.411732,
+      "final_drain_ms": 0.466876,
+      "results": 19114,
+      "sampled_device_peak_bytes": 14262468608,
+      "host_output_capacity_bytes": 153520,
+      "cpu_user_s": 6.557532,
+      "cpu_system_s": 0.85025,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 19,
+          "inclusive_host_ms": 1101.674318
+        },
+        {
+          "name": "query.buffer",
+          "calls": 6,
+          "inclusive_host_ms": 209.98426499999997
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 19,
+          "inclusive_host_ms": 466.2554660000001
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 15,
+          "inclusive_host_ms": 366.18874900000003
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 3,
+          "inclusive_host_ms": 73.475465
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 2,
+          "inclusive_host_ms": 49.602591000000004
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 2,
+          "inclusive_host_ms": 877.778985
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 2,
+          "inclusive_host_ms": 0.32170299999999996
+        }
+      ]
+    },
+    "ancestor_member_checks": 0,
+    "outputs": {
+      ".ids.i32": "a814868f36f132035588e0e47379d8f10c9f6739eda170711bd781e302903c2f",
+      ".dist.f32": "1f15d1ced2855fe752b6f0b991906e48e74d3a647edbc6ed12560fa07acedf2b",
+      ".queries.csv": "bcaea8d9c59b893f8bd4665308359188a3aa2cf6ae80699c56e3e585cbedc4c8"
+    },
+    "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked",
+    "mode": "PAR_STRONG",
+    "region": {
+      "mode": 1,
+      "setup_ms": 545.436213,
+      "context_ms": 797.004129,
+      "setup_plus_trace_ms": 3696.847945,
+      "refreshes": 3,
+      "peak_owned_bytes": 19052,
+      "allocated_bytes": 56996,
+      "transferred_bytes": 35524,
+      "allocations": 45,
+      "final_owned_bytes": 0,
+      "refresh_rows": [
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 1,
+          "owned_bytes": 18908,
+          "ms": 0.169899
+        },
+        {
+          "n": 1009,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 2,
+          "owned_bytes": 19052,
+          "ms": 0.281005
+        },
+        {
+          "n": 1008,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 3,
+          "owned_bytes": 19036,
+          "ms": 0.28294
+        }
+      ]
+    },
+    "registration_sha256": "7b34c201146e7ebb5221669e9e4e0433ee1d4d47565654c83820327e9da0e118"
+  },
+  {
+    "state": "correctness_passed",
+    "summary": {
+      "observe": true,
+      "tree_audit": false,
+      "load_ms": 43.987638,
+      "buffer_setup_ms": 0.093492,
+      "cold_build_ms": 53.266156,
+      "trace_ms": 120.710862,
+      "final_drain_ms": 3.267647,
+      "results": 19114,
+      "sampled_device_peak_bytes": 14272954368,
+      "host_output_capacity_bytes": 153520,
+      "cpu_user_s": 0.11013800000000001,
+      "cpu_system_s": 0.003595000000000015,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 19,
+          "inclusive_host_ms": 51.504172999999994
+        },
+        {
+          "name": "query.buffer",
+          "calls": 6,
+          "inclusive_host_ms": 11.6977
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 19,
+          "inclusive_host_ms": 12.09089
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 15,
+          "inclusive_host_ms": 10.273513999999999
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 3,
+          "inclusive_host_ms": 4.363779
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 2,
+          "inclusive_host_ms": 3.807635
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 2,
+          "inclusive_host_ms": 14.770026999999999
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 2,
+          "inclusive_host_ms": 0.169847
+        }
+      ]
+    },
+    "ancestor_member_checks": 0,
+    "outputs": {
+      ".ids.i32": "a814868f36f132035588e0e47379d8f10c9f6739eda170711bd781e302903c2f",
+      ".dist.f32": "1f15d1ced2855fe752b6f0b991906e48e74d3a647edbc6ed12560fa07acedf2b",
+      ".queries.csv": "bcaea8d9c59b893f8bd4665308359188a3aa2cf6ae80699c56e3e585cbedc4c8"
+    },
+    "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked",
+    "mode": "PAR_STRONG",
+    "region": {
+      "mode": 1,
+      "setup_ms": 97.588059,
+      "context_ms": 335.195194,
+      "setup_plus_trace_ms": 218.298921,
+      "refreshes": 3,
+      "peak_owned_bytes": 19052,
+      "allocated_bytes": 56996,
+      "transferred_bytes": 35524,
+      "allocations": 45,
+      "final_owned_bytes": 0,
+      "refresh_rows": [
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 1,
+          "owned_bytes": 18908,
+          "ms": 0.212986
+        },
+        {
+          "n": 1009,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 2,
+          "owned_bytes": 19052,
+          "ms": 0.335708
+        },
+        {
+          "n": 1008,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 3,
+          "owned_bytes": 19036,
+          "ms": 0.329617
+        }
+      ]
+    },
+    "registration_sha256": "aff94e9804a06a07c4af4593b77dc7288d968cb403aac0a93b249638766060f3"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "purpose": "missing PAR sanitizers and exact full-trace work-set control",
+  "primary_processes_replayed": 0,
+  "source_manifest_sha256": "829dc7faec47b64f384a8d77d53d89cc50331784a59fc74a05990722f36d52ba",
+  "primary_results_sha256": "fa9af779bff02986910f975574fbeb9300599853c8d4cc239db9bdea06f85a87",
+  "controller_sha256": "9c93d45ad1d3218c5f2c47626ee8b1664fb08c88b71fe2a1f899c8ddb8b9ee85",
+  "formal_controller_sha256": "31cf1a921d21815af0370de8407e88444e12e32926543b02d6dc944fedc55310",
+  "sanitizers": [
+    "memcheck",
+    "racecheck",
+    "synccheck"
+  ],
+  "counter_modes": [
+    "PAR_STRONG",
+    "REGION_SPLIT",
+    "REGION_FUSED"
+  ],
+  "counter_queries": 10000,
+  "timing_admission": "diagnostic only; never enter the 24-row estimator"
+}

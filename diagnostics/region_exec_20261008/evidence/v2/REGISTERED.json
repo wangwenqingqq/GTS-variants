@@ -1,0 +1,57 @@
+{
+  "seed": 2026100431,
+  "orders": [
+    [
+      "NATIVE",
+      "PAR_STRONG",
+      "REGION_SPLIT",
+      "REGION_FUSED"
+    ],
+    [
+      "REGION_FUSED",
+      "REGION_SPLIT",
+      "PAR_STRONG",
+      "NATIVE"
+    ],
+    [
+      "PAR_STRONG",
+      "REGION_FUSED",
+      "NATIVE",
+      "REGION_SPLIT"
+    ],
+    [
+      "REGION_SPLIT",
+      "NATIVE",
+      "REGION_FUSED",
+      "PAR_STRONG"
+    ],
+    [
+      "REGION_SPLIT",
+      "PAR_STRONG",
+      "REGION_FUSED",
+      "NATIVE"
+    ],
+    [
+      "NATIVE",
+      "REGION_FUSED",
+      "PAR_STRONG",
+      "REGION_SPLIT"
+    ]
+  ],
+  "source_sha256": "829dc7faec47b64f384a8d77d53d89cc50331784a59fc74a05990722f36d52ba",
+  "controller_sha256": "31cf1a921d21815af0370de8407e88444e12e32926543b02d6dc944fedc55310",
+  "runner_sha256": "5ab0ed6bac55450858732cb690663e3d7fc1cd2be25bea5caa9c131b5b4a9bb4",
+  "oracle_adapter_sha256": "e4ff2fd2ffc84f28d08fcdfe3721c03749080a68f643f1bbc943b8f3d21a4e45",
+  "input_sha256": {
+    "data.txt": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+    "events.txt": "b9f893d57d2a3617ec1798a4ccc42913c6c9ff4286c665e0612749ba6eee8ce8",
+    "expected.json": "62ec3f79f3e52f87630defd221db3f37947b263596157c3dcb24be3452e331b2"
+  },
+  "observer": "six fresh alternating on/off pairs per mode, full independent oracle every process; upper95<=1.03 and same output",
+  "bootstrap_seed": 202610081022,
+  "bootstrap_resamples": 20000,
+  "first_formal_processes": 24,
+  "primary": "continuous 12000 mixed events, complete Host-ready/ACK, final release and drain",
+  "expansion": "first seed only; additional seeds/budgets require supported PAR increment and separate registration",
+  "private_raw": "retained locally; no failed/slow process replacement"
+}

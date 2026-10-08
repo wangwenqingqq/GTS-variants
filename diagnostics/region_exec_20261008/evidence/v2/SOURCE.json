@@ -1,0 +1,41 @@
+{
+  "baseline_manifest_sha256": "42e643f23a5fa9e8d8bba27610ce3692297addb06cdf11c863a398710f77d839",
+  "binary_sha256": "cca7c39ed2335eabe32bd718f5356cf9743a4b8f0530dbf0e724124f33c8fafb",
+  "sources": {
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/region_output.cuh": "22ceb2c79a7fa90e1ddba02921a5d683f674ec84a10ed2c78f9308d664afaa16",
+    "include/region_exec.cuh": "8d9f57481dd42f937005192f30402e99dfe082a660974da0f9e305df724fa504",
+    "include/region_plan.hpp": "44e11c15d4bd2e9ff6ef5ee96dfed242d088b41c256a45692ee63f5cf09e6bf5",
+    "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "include/region_types.hpp": "b7dc47c1b57131d680cb7a90b1d1cc0fc5d6a79c821c2833fea05d126362041e",
+    "include/legacy_ops.cuh": "6b78cf61ab221f1d38f289ce8ad5c7b3f3dfa52cd6e281d03423b991d12d2ef4",
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/parallel_range.cuh": "d8633c238c340e500e36a0870ffc5233a96f9906381147e13bc6acb2a8b62785",
+    "include/u10_trace.hpp": "7ddce5d07d59ab0aded53548f91c1d2c5c3317037803c80dbbeccf2917a15218",
+    "include/region_bridge.cuh": "5e7491c58e922ff491dbd23618fd88bcee8be97db26bf5ca84d2eb5d4f3a81e7",
+    "include/search_naive.cuh": "a8a248048857a5602ebb84d7f31b62b18eef1bb2867ba5f83c5cc87a1a2db0b2",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/update.cuh": "05274a56d78cb6fe97616b6c951b42cdd26e49567ce1178b25903ea5004b6bec",
+    "include/tree.cuh": "8b5f051a2efd664e61480df16b27deb90d6fde5739c24646720e6aa5bb606c4a",
+    "src/main.cu": "6245a1254288f8a2036f73f071bccca523f80742f89df6c795c2dd2b07181fe1"
+  },
+  "controller_sha256": "31cf1a921d21815af0370de8407e88444e12e32926543b02d6dc944fedc55310",
+  "counter_binary_sha256": "cc18880aa107385f7f32ca56888296125605f2657826d3bfb4e4b4fb48fa31e5",
+  "structural_binary_sha256": "8ea53fcacb1b44c77aa6d78c7043c9dd902e2c2f315f2ce79f86b2a05351582c",
+  "structural_source_sha256": "a1094b456892a332baef661dc347ac56501d480b124ffdaad2ae6486add0d26a",
+  "build": [
+    "/usr/local/cuda/bin/nvcc",
+    "-std=c++17",
+    "-O3",
+    "-arch=sm_120",
+    "-rdc=true",
+    "-lineinfo",
+    "-Xnvlink=--ignore-host-info",
+    "--ptxas-options=-v",
+    "-I$REGION_RUN/native_timed/source/include",
+    "$REGION_RUN/native_timed/source/src/main.cu",
+    "-o",
+    "$REGION_RUN/native_timed/region_exec"
+  ],
+  "input_values": "integer; actual storage float via original #define short float"
+}

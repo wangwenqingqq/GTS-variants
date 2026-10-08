@@ -15,3 +15,19 @@ N1000/D128/B1/L2。U10 输入值是整数，原配置 `#define short float` 实�
 `STRUCTURAL.json`：9种拓扑×6种状态×2模式，覆盖预算、提前叶、空节点、root leaf、过大叶同语义 fallback、deleted pivot、stale epoch、可见容量错误。原 mixed trace 两模式各有 memcheck/racecheck/synccheck，结构矩阵三种 sanitizer 均通过。一个 racecheck 报告格式解析错误已保留并只重新审核原输出，未重跑该 GPU 进程（`HARNESS_FORMAT_FIX.json`）。
 
 首轮性能仅固定 seed0431、四模式×六 fresh 进程；先做新身份观察器开销控制。主表尚未产生，不能以小型开发轨迹时延作收益结论。CPU 规划、传输、分配、完整输出与 ACK 均在相应成本边界中；三种新模式保留相同密集节点工作区及 N 级最终 hit/distance/collector，不声称消除全部物化。
+
+## 2026-10-08 closure
+
+The paragraphs above retain the earlier implementation checkpoint. The first
+24-process primary campaign is now complete: see [RESULTS.md](RESULTS.md).
+PAR_STRONG improves the native workflow; both region variants are slower than
+PAR_STRONG, and direct fusion benefit is inconclusive. No seed/budget expansion
+or fusion promotion follows this result.
+
+The authoritative measured v2 identity and all raw process summaries are under
+[evidence/v2](evidence/v2). Older root-level PAR/REGION manifests are historical
+qualification records, not the v2 primary binary identity.
+The published cleanup now matches the immutable measured source. The handoff
+also closes the PAR sanitizer gap, verifies all 10k work sets, adds diagnostic
+profiles and independently replays all 72 process outputs against an integer
+multiset oracle. Follow [REPRODUCE.md](REPRODUCE.md); no primary run was replayed.

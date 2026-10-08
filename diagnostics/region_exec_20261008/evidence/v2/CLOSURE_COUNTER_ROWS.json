@@ -1,0 +1,1811 @@
+[
+  {
+    "seed": "2026100431",
+    "label": "closure_full_work_PAR_STRONG",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 51.624843,
+      "buffer_setup_ms": 46.636975,
+      "cold_build_ms": 14.683847,
+      "trace_ms": 15589.342559,
+      "final_drain_ms": 0.46686,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 14.769808999999999,
+      "cpu_system_s": 0.23081000000000002,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "f3dc462e788a7385d52654a92bd59a21de1fbbe77754434b74206cb9ae2af904"
+    },
+    "admission": "bridge/observer-cost qualification pending; no dynamic speedup/concurrency claim",
+    "mode": "PAR_STRONG",
+    "region": {
+      "mode": 1,
+      "setup_ms": 113.219179,
+      "context_ms": 305.864509,
+      "setup_plus_trace_ms": 15702.561738,
+      "refreshes": 51,
+      "peak_owned_bytes": 29572,
+      "allocated_bytes": 1508172,
+      "transferred_bytes": 601596,
+      "allocations": 969,
+      "final_owned_bytes": 0,
+      "refresh_rows": [
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 1,
+          "owned_bytes": 29572,
+          "ms": 0.188439
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 2,
+          "owned_bytes": 29572,
+          "ms": 0.249538
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 3,
+          "owned_bytes": 29572,
+          "ms": 0.275186
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 4,
+          "owned_bytes": 29572,
+          "ms": 0.271896
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 5,
+          "owned_bytes": 29572,
+          "ms": 0.261849
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 6,
+          "owned_bytes": 29572,
+          "ms": 0.259768
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 7,
+          "owned_bytes": 29572,
+          "ms": 0.251337
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 8,
+          "owned_bytes": 29572,
+          "ms": 0.253759
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 9,
+          "owned_bytes": 29572,
+          "ms": 0.255602
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 10,
+          "owned_bytes": 29572,
+          "ms": 0.27124
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 11,
+          "owned_bytes": 29572,
+          "ms": 0.258555
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 12,
+          "owned_bytes": 29572,
+          "ms": 0.262634
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 13,
+          "owned_bytes": 29572,
+          "ms": 0.257152
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 14,
+          "owned_bytes": 29572,
+          "ms": 0.261498
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 15,
+          "owned_bytes": 29572,
+          "ms": 0.25685
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 16,
+          "owned_bytes": 29572,
+          "ms": 0.25645
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 17,
+          "owned_bytes": 29572,
+          "ms": 0.25469
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 18,
+          "owned_bytes": 29572,
+          "ms": 0.255497
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 19,
+          "owned_bytes": 29572,
+          "ms": 0.261226
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 20,
+          "owned_bytes": 29572,
+          "ms": 0.255907
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 21,
+          "owned_bytes": 29572,
+          "ms": 0.256235
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 22,
+          "owned_bytes": 29572,
+          "ms": 0.252094
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 23,
+          "owned_bytes": 29572,
+          "ms": 0.259493
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 24,
+          "owned_bytes": 29572,
+          "ms": 0.205876
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 25,
+          "owned_bytes": 29572,
+          "ms": 0.1979
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 26,
+          "owned_bytes": 29572,
+          "ms": 0.199209
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 27,
+          "owned_bytes": 29572,
+          "ms": 0.191358
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 28,
+          "owned_bytes": 29572,
+          "ms": 0.199515
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 29,
+          "owned_bytes": 29572,
+          "ms": 0.197964
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 30,
+          "owned_bytes": 29572,
+          "ms": 0.198975
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 31,
+          "owned_bytes": 29572,
+          "ms": 0.198317
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 32,
+          "owned_bytes": 29572,
+          "ms": 0.196671
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 33,
+          "owned_bytes": 29572,
+          "ms": 0.197742
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 34,
+          "owned_bytes": 29572,
+          "ms": 0.248876
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 35,
+          "owned_bytes": 29572,
+          "ms": 0.269827
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 36,
+          "owned_bytes": 29572,
+          "ms": 0.261423
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 37,
+          "owned_bytes": 29572,
+          "ms": 0.265044
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 38,
+          "owned_bytes": 29572,
+          "ms": 0.249676
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 39,
+          "owned_bytes": 29572,
+          "ms": 0.27248
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 40,
+          "owned_bytes": 29572,
+          "ms": 0.252191
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 41,
+          "owned_bytes": 29572,
+          "ms": 0.251022
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 42,
+          "owned_bytes": 29572,
+          "ms": 0.20428
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 43,
+          "owned_bytes": 29572,
+          "ms": 0.193492
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 44,
+          "owned_bytes": 29572,
+          "ms": 0.201155
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 45,
+          "owned_bytes": 29572,
+          "ms": 0.202777
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 46,
+          "owned_bytes": 29572,
+          "ms": 0.202245
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 47,
+          "owned_bytes": 29572,
+          "ms": 0.198778
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 48,
+          "owned_bytes": 29572,
+          "ms": 0.197083
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 49,
+          "owned_bytes": 29572,
+          "ms": 0.197267
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 50,
+          "owned_bytes": 29572,
+          "ms": 0.196773
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 51,
+          "owned_bytes": 29572,
+          "ms": 0.191597
+        }
+      ]
+    },
+    "registration_sha256": "7c6d24a2e5b8ae91fdb99963b62822f00af5e2824a1526a8260cefab6a2f2362"
+  },
+  {
+    "seed": "2026100431",
+    "label": "closure_full_work_REGION_SPLIT",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 51.857685,
+      "buffer_setup_ms": 46.020156,
+      "cold_build_ms": 14.928555,
+      "trace_ms": 15734.346232,
+      "final_drain_ms": 0.69799,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 14.934953,
+      "cpu_system_s": 0.22189200000000003,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "ab496b4d23da0ef2b276dc8d94c7fb2424ffb57d4a77846b98631c6849c3cd9b"
+    },
+    "admission": "bridge/observer-cost qualification pending; no dynamic speedup/concurrency claim",
+    "mode": "REGION_SPLIT",
+    "region": {
+      "mode": 2,
+      "setup_ms": 113.125701,
+      "context_ms": 303.969804,
+      "setup_plus_trace_ms": 15847.471933,
+      "refreshes": 51,
+      "peak_owned_bytes": 29572,
+      "allocated_bytes": 1508172,
+      "transferred_bytes": 601596,
+      "allocations": 969,
+      "final_owned_bytes": 0,
+      "refresh_rows": [
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 1,
+          "owned_bytes": 29572,
+          "ms": 0.234638
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 2,
+          "owned_bytes": 29572,
+          "ms": 0.245918
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 3,
+          "owned_bytes": 29572,
+          "ms": 0.266338
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 4,
+          "owned_bytes": 29572,
+          "ms": 0.267238
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 5,
+          "owned_bytes": 29572,
+          "ms": 0.210578
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 6,
+          "owned_bytes": 29572,
+          "ms": 0.200606
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 7,
+          "owned_bytes": 29572,
+          "ms": 0.199498
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 8,
+          "owned_bytes": 29572,
+          "ms": 0.194817
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 9,
+          "owned_bytes": 29572,
+          "ms": 0.194317
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 10,
+          "owned_bytes": 29572,
+          "ms": 0.197561
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 11,
+          "owned_bytes": 29572,
+          "ms": 0.203609
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 12,
+          "owned_bytes": 29572,
+          "ms": 0.185083
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 13,
+          "owned_bytes": 29572,
+          "ms": 0.195731
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 14,
+          "owned_bytes": 29572,
+          "ms": 0.197177
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 15,
+          "owned_bytes": 29572,
+          "ms": 0.193827
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 16,
+          "owned_bytes": 29572,
+          "ms": 0.196449
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 17,
+          "owned_bytes": 29572,
+          "ms": 0.193974
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 18,
+          "owned_bytes": 29572,
+          "ms": 0.197999
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 19,
+          "owned_bytes": 29572,
+          "ms": 0.195975
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 20,
+          "owned_bytes": 29572,
+          "ms": 0.192901
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 21,
+          "owned_bytes": 29572,
+          "ms": 0.197052
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 22,
+          "owned_bytes": 29572,
+          "ms": 0.195919
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 23,
+          "owned_bytes": 29572,
+          "ms": 0.193453
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 24,
+          "owned_bytes": 29572,
+          "ms": 0.201577
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 25,
+          "owned_bytes": 29572,
+          "ms": 0.201313
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 26,
+          "owned_bytes": 29572,
+          "ms": 0.19929
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 27,
+          "owned_bytes": 29572,
+          "ms": 0.196681
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 28,
+          "owned_bytes": 29572,
+          "ms": 0.201026
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 29,
+          "owned_bytes": 29572,
+          "ms": 0.195108
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 30,
+          "owned_bytes": 29572,
+          "ms": 0.196502
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 31,
+          "owned_bytes": 29572,
+          "ms": 0.195071
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 32,
+          "owned_bytes": 29572,
+          "ms": 0.196255
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 33,
+          "owned_bytes": 29572,
+          "ms": 0.193552
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 34,
+          "owned_bytes": 29572,
+          "ms": 0.208509
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 35,
+          "owned_bytes": 29572,
+          "ms": 0.186424
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 36,
+          "owned_bytes": 29572,
+          "ms": 0.195634
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 37,
+          "owned_bytes": 29572,
+          "ms": 0.206373
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 38,
+          "owned_bytes": 29572,
+          "ms": 0.197154
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 39,
+          "owned_bytes": 29572,
+          "ms": 0.205664
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 40,
+          "owned_bytes": 29572,
+          "ms": 0.209617
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 41,
+          "owned_bytes": 29572,
+          "ms": 0.199313
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 42,
+          "owned_bytes": 29572,
+          "ms": 0.205097
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 43,
+          "owned_bytes": 29572,
+          "ms": 0.197407
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 44,
+          "owned_bytes": 29572,
+          "ms": 0.196473
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 45,
+          "owned_bytes": 29572,
+          "ms": 0.196032
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 46,
+          "owned_bytes": 29572,
+          "ms": 0.195322
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 47,
+          "owned_bytes": 29572,
+          "ms": 0.193939
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 48,
+          "owned_bytes": 29572,
+          "ms": 0.195512
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 49,
+          "owned_bytes": 29572,
+          "ms": 0.196519
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 50,
+          "owned_bytes": 29572,
+          "ms": 0.194896
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 51,
+          "owned_bytes": 29572,
+          "ms": 0.194951
+        }
+      ]
+    },
+    "registration_sha256": "870b1f78cb2b8b78cf6fa57cc28e8a92b0a7c5b3cc9aa01ed8768db1e0bb2fda"
+  },
+  {
+    "seed": "2026100431",
+    "label": "closure_full_work_REGION_FUSED",
+    "state": "correctness_passed",
+    "queries": 10000,
+    "operations": 12000,
+    "threshold_rebuilds": 50,
+    "results_checked": 14990,
+    "FN": 0,
+    "FP": 0,
+    "duplicates": 0,
+    "exact_FP32_fields": true,
+    "summary": {
+      "observe": false,
+      "tree_audit": false,
+      "load_ms": 40.207995,
+      "buffer_setup_ms": 38.320828,
+      "cold_build_ms": 13.507973,
+      "trace_ms": 15826.86505,
+      "final_drain_ms": 0.509739,
+      "results": 14990,
+      "sampled_device_peak_bytes": 0,
+      "host_output_capacity_bytes": 80800000,
+      "cpu_user_s": 15.016211,
+      "cpu_system_s": 0.22699199999999997,
+      "stages": [
+        {
+          "name": "query.tree",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.buffer",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "query.prefix_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.prefix_lookup",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "delete.buffer_merge",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.compaction",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.construct",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        },
+        {
+          "name": "rebuild.reset",
+          "calls": 0,
+          "inclusive_host_ms": 0
+        }
+      ]
+    },
+    "outputs": {
+      ".ids.i32": "2eaed881c81964754e8e13586779766202968ef071508096c3c43507c79a9908",
+      ".dist.f32": "9540994ade7e1d3a522f0f573af352ab1bc58af01f700e6a8a663b68c5fb1035",
+      ".queries.csv": "9fef187d61fe317530dd26dbb853d73a9d96201460a28bb589364a436661a5ac",
+      ".ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      ".summary.json": "cabde568fa70e2edf954f22f487d114ddbd5a70fab30b6bfff94ee0b0e4c410a"
+    },
+    "admission": "bridge/observer-cost qualification pending; no dynamic speedup/concurrency claim",
+    "mode": "REGION_FUSED",
+    "region": {
+      "mode": 3,
+      "setup_ms": 92.258258,
+      "context_ms": 287.902328,
+      "setup_plus_trace_ms": 15919.123308,
+      "refreshes": 51,
+      "peak_owned_bytes": 29572,
+      "allocated_bytes": 1508172,
+      "transferred_bytes": 601596,
+      "allocations": 969,
+      "final_owned_bytes": 0,
+      "refresh_rows": [
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 1,
+          "owned_bytes": 29572,
+          "ms": 0.149485
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 2,
+          "owned_bytes": 29572,
+          "ms": 0.188999
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 3,
+          "owned_bytes": 29572,
+          "ms": 0.204521
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 4,
+          "owned_bytes": 29572,
+          "ms": 0.211549
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 5,
+          "owned_bytes": 29572,
+          "ms": 0.206801
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 6,
+          "owned_bytes": 29572,
+          "ms": 0.21038
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 7,
+          "owned_bytes": 29572,
+          "ms": 0.21172
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 8,
+          "owned_bytes": 29572,
+          "ms": 0.205008
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 9,
+          "owned_bytes": 29572,
+          "ms": 0.205092
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 10,
+          "owned_bytes": 29572,
+          "ms": 0.208818
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 11,
+          "owned_bytes": 29572,
+          "ms": 0.296644
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 12,
+          "owned_bytes": 29572,
+          "ms": 0.197147
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 13,
+          "owned_bytes": 29572,
+          "ms": 0.196636
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 14,
+          "owned_bytes": 29572,
+          "ms": 0.215715
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 15,
+          "owned_bytes": 29572,
+          "ms": 0.208946
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 16,
+          "owned_bytes": 29572,
+          "ms": 0.196778
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 17,
+          "owned_bytes": 29572,
+          "ms": 0.196184
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 18,
+          "owned_bytes": 29572,
+          "ms": 0.19839
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 19,
+          "owned_bytes": 29572,
+          "ms": 0.203706
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 20,
+          "owned_bytes": 29572,
+          "ms": 0.198409
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 21,
+          "owned_bytes": 29572,
+          "ms": 0.19944
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 22,
+          "owned_bytes": 29572,
+          "ms": 0.200001
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 23,
+          "owned_bytes": 29572,
+          "ms": 0.199023
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 24,
+          "owned_bytes": 29572,
+          "ms": 0.199915
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 25,
+          "owned_bytes": 29572,
+          "ms": 0.197847
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 26,
+          "owned_bytes": 29572,
+          "ms": 0.206699
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 27,
+          "owned_bytes": 29572,
+          "ms": 0.205939
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 28,
+          "owned_bytes": 29572,
+          "ms": 0.20256
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 29,
+          "owned_bytes": 29572,
+          "ms": 0.202367
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 30,
+          "owned_bytes": 29572,
+          "ms": 0.202674
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 31,
+          "owned_bytes": 29572,
+          "ms": 0.203609
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 32,
+          "owned_bytes": 29572,
+          "ms": 0.198471
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 33,
+          "owned_bytes": 29572,
+          "ms": 0.198338
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 34,
+          "owned_bytes": 29572,
+          "ms": 0.202182
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 35,
+          "owned_bytes": 29572,
+          "ms": 0.199518
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 36,
+          "owned_bytes": 29572,
+          "ms": 0.196393
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 37,
+          "owned_bytes": 29572,
+          "ms": 0.199612
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 38,
+          "owned_bytes": 29572,
+          "ms": 0.198775
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 39,
+          "owned_bytes": 29572,
+          "ms": 0.190772
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 40,
+          "owned_bytes": 29572,
+          "ms": 0.205788
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 41,
+          "owned_bytes": 29572,
+          "ms": 0.206012
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 42,
+          "owned_bytes": 29572,
+          "ms": 0.209316
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 43,
+          "owned_bytes": 29572,
+          "ms": 0.205709
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 44,
+          "owned_bytes": 29572,
+          "ms": 0.208252
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 45,
+          "owned_bytes": 29572,
+          "ms": 0.205813
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 46,
+          "owned_bytes": 29572,
+          "ms": 0.206193
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 47,
+          "owned_bytes": 29572,
+          "ms": 0.204869
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 48,
+          "owned_bytes": 29572,
+          "ms": 0.20981
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 49,
+          "owned_bytes": 29572,
+          "ms": 0.195139
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 50,
+          "owned_bytes": 29572,
+          "ms": 0.204426
+        },
+        {
+          "n": 1000,
+          "regions": 10,
+          "nodes": 111,
+          "leaves": 100,
+          "fallbacks": 0,
+          "epoch": 51,
+          "owned_bytes": 29572,
+          "ms": 0.206727
+        }
+      ]
+    },
+    "registration_sha256": "013cf840519b77683a8467d8738f178e79c20a78aede8d6c52e705f54232e565"
+  }
+]

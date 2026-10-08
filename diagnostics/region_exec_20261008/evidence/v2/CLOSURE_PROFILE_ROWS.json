@@ -1,0 +1,2153 @@
+[
+  {
+    "sqlite_sha256": "b58208aed3861c6140053d630b1605438bfa48d2329046a3df717d942d6a2016",
+    "diagnostic_only": true,
+    "scope": "57 events, 19 queries, 2 rebuilds; native.trace",
+    "kernel_launches": 564,
+    "query_tree_launches": 399,
+    "cuda_api_counts": {
+      "cudaMallocManaged_v6000": 170,
+      "cudaMalloc_v3020": 372,
+      "cudaMemset_v3020": 10,
+      "cuKernelGetName": 564,
+      "cudaLaunchKernel_v7000": 564,
+      "cudaDeviceSynchronize_v3020": 335,
+      "cudaStreamSynchronize_v3020": 217,
+      "cudaMemcpyAsync_v3020": 50,
+      "cudaFree_v3020": 553,
+      "cudaMemcpy_v3020": 45,
+      "cudaMemGetInfo_v3020": 2
+    },
+    "query_tree_api_counts": {
+      "cudaMallocManaged_v6000": 114,
+      "cudaMalloc_v3020": 285,
+      "cuKernelGetName": 399,
+      "cudaLaunchKernel_v7000": 399,
+      "cudaDeviceSynchronize_v3020": 209,
+      "cudaStreamSynchronize_v3020": 152,
+      "cudaMemcpyAsync_v3020": 38,
+      "cudaFree_v3020": 323
+    },
+    "copy_bytes_by_kind": {
+      "11": 856064,
+      "12": 675840,
+      "2": 984,
+      "8": 1077032
+    },
+    "kernel_shapes": [
+      {
+        "signature": "check(int *, float *, float, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 26,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.0067199999999999985
+      },
+      {
+        "signature": "findIdx(int *, int, int *, int, int, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 15,
+        "diagnostic_sum_ms": 0.47877999999999993
+      },
+      {
+        "signature": "findNextRnn(int *, int, TN *, float, float *, int *, int, int *, int *, int *, char *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 38,
+        "diagnostic_sum_ms": 13.861563000000004
+      },
+      {
+        "signature": "getNewData(float *, float *, char *, char *, int *, int *, int *, int *, int, int *, int *, int)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 22,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 1.3043420000000001
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 5.628501
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.7609859999999999
+      },
+      {
+        "signature": "getQnodeCount(int, int *, int *, int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.8956089999999999
+      },
+      {
+        "signature": "getQresultCount(int, int *, int *, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.94684
+      },
+      {
+        "signature": "getRnn(int *, Object, Object, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 28,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.01008
+      },
+      {
+        "signature": "initIndexData(int *, TN *, int *, int *, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.38239700000000004
+      },
+      {
+        "signature": "initQnode(int *, int, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 17,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.4858850000000002
+      },
+      {
+        "signature": "initRes(int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.018303999999999994
+      },
+      {
+        "signature": "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 48,
+        "static_shared_bytes": 16,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 12,
+        "diagnostic_sum_ms": 4.231262
+      },
+      {
+        "signature": "leafProcessRnnUpdate(int *, TN *, int *, int *, float *, int *, int *, float *, int *, float, int *, int *, char *, int *, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 48,
+        "static_shared_bytes": 16,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 7,
+        "diagnostic_sum_ms": 2.419053
+      },
+      {
+        "signature": "mergeInResult(int, int *, int *, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 18,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 3,
+        "diagnostic_sum_ms": 0.40639699999999995
+      },
+      {
+        "signature": "mergeLeafNode(int *, int *, int *, int *, int, int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 26,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.9236090000000001
+      },
+      {
+        "signature": "mergeResultRnn(int *, int *, float *, int *, float *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 26,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.8569219999999994
+      },
+      {
+        "signature": "mergeTotalResult(int, int *, int *, int *, float *, Object, float *, int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 24,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.803547
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.687739
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.702267
+      },
+      {
+        "signature": "searchD(int *, float *, int, Object, int, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 48,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 3.886564
+      },
+      {
+        "signature": "updatePnodeFlag(int *, int, int, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 20,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 38,
+        "diagnostic_sum_ms": 0.074207
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, int, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 123,
+        "static_shared_bytes": 33856,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 4,
+        "diagnostic_sum_ms": 0.070688
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 30,
+        "static_shared_bytes": 44,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 42,
+        "diagnostic_sum_ms": 0.052416
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 121,
+        "diagnostic_sum_ms": 0.11174199999999983
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 64,
+        "diagnostic_sum_ms": 1.7998919999999987
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 57,
+        "diagnostic_sum_ms": 0.1439650000000001
+      }
+    ],
+    "observed_occupancy": "NOT_MEASURED; grid and resources are not achieved occupancy",
+    "mode": "NATIVE",
+    "correctness": {
+      "state": "correctness_passed",
+      "summary": {
+        "observe": true,
+        "tree_audit": false,
+        "load_ms": 46.010375,
+        "buffer_setup_ms": 0.093892,
+        "cold_build_ms": 18.788604,
+        "trace_ms": 70.640513,
+        "final_drain_ms": 0.411674,
+        "results": 99,
+        "sampled_device_peak_bytes": 14233174016,
+        "host_output_capacity_bytes": 153520,
+        "cpu_user_s": 0.056389999999999996,
+        "cpu_system_s": 0.003639000000000059,
+        "stages": [
+          {
+            "name": "query.tree",
+            "calls": 19,
+            "inclusive_host_ms": 40.094094000000005
+          },
+          {
+            "name": "query.buffer",
+            "calls": 6,
+            "inclusive_host_ms": 5.002333000000001
+          },
+          {
+            "name": "query.prefix_merge",
+            "calls": 19,
+            "inclusive_host_ms": 2.1772050000000003
+          },
+          {
+            "name": "delete.prefix_lookup",
+            "calls": 15,
+            "inclusive_host_ms": 2.844547
+          },
+          {
+            "name": "delete.buffer_merge",
+            "calls": 3,
+            "inclusive_host_ms": 1.7705429999999998
+          },
+          {
+            "name": "rebuild.compaction",
+            "calls": 2,
+            "inclusive_host_ms": 3.038493
+          },
+          {
+            "name": "rebuild.construct",
+            "calls": 2,
+            "inclusive_host_ms": 9.652318000000001
+          },
+          {
+            "name": "rebuild.reset",
+            "calls": 2,
+            "inclusive_host_ms": 0.100753
+          }
+        ]
+      },
+      "ancestor_member_checks": 0,
+      "outputs": {
+        ".ids.i32": "511883ee74bae0ded6fabd1089c54cfe6449f95d08c8e7a56539cf85ba80bea0",
+        ".dist.f32": "58553b15fb3888e443e29fff5663675b8f70e37f0ea6c54076489d6ff04c1032",
+        ".queries.csv": "c589468748b0f599c3f4b7b21b2c1e18178653b791baa92b3cb0c57d463c5f27"
+      },
+      "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked"
+    },
+    "receipt_sha256": "4d98f17a1828b06a3dc68c65aeb21d185dc2e5628dce09709115b5e7afa39a56",
+    "report_sha256": "498d52a6e41c3549bd0f6cb9279fccd1a982130f31e2b3a97d67ef2a8ca9ebd8"
+  },
+  {
+    "sqlite_sha256": "312f162605c7b733d3ab93b783e12150cae7985aa8b00616c1f7438010413c38",
+    "diagnostic_only": true,
+    "scope": "57 events, 19 queries, 2 rebuilds; native.trace",
+    "kernel_launches": 317,
+    "query_tree_launches": 152,
+    "cuda_api_counts": {
+      "cudaMallocManaged_v6000": 134,
+      "cudaMalloc_v3020": 153,
+      "cudaMemset_v3020": 86,
+      "cudaMemcpy_v3020": 101,
+      "cuKernelGetName": 317,
+      "cudaLaunchKernel_v7000": 317,
+      "cudaStreamSynchronize_v3020": 122,
+      "cudaMemcpyAsync_v3020": 31,
+      "cudaFree_v3020": 313,
+      "cudaDeviceSynchronize_v3020": 149,
+      "cudaMemGetInfo_v3020": 2
+    },
+    "query_tree_api_counts": {
+      "cudaMemset_v3020": 76,
+      "cudaMemcpy_v3020": 38,
+      "cuKernelGetName": 152,
+      "cudaLaunchKernel_v7000": 152,
+      "cudaMalloc_v3020": 38,
+      "cudaStreamSynchronize_v3020": 57,
+      "cudaMemcpyAsync_v3020": 19,
+      "cudaFree_v3020": 38,
+      "cudaMallocManaged_v6000": 76,
+      "cudaDeviceSynchronize_v3020": 19
+    },
+    "copy_bytes_by_kind": {
+      "11": 1253376,
+      "12": 1069056,
+      "1": 10484,
+      "2": 14304,
+      "8": 1077032
+    },
+    "kernel_shapes": [
+      {
+        "signature": "check(int *, float *, float, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 26,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.006687
+      },
+      {
+        "signature": "findIdx(int *, int, int *, int, int, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 15,
+        "diagnostic_sum_ms": 1.2295890000000007
+      },
+      {
+        "signature": "getNewData(float *, float *, char *, char *, int *, int *, int *, int *, int, int *, int *, int)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 22,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.8137540000000001
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 6.1773299999999995
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.8805369999999999
+      },
+      {
+        "signature": "getRnn(int *, Object, Object, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 28,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.097055
+      },
+      {
+        "signature": "initIndexData(int *, TN *, int *, int *, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.434588
+      },
+      {
+        "signature": "mergeInResult(int, int *, int *, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 18,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 3,
+        "diagnostic_sum_ms": 0.003392
+      },
+      {
+        "signature": "mergeTotalResult(int, int *, int *, int *, float *, Object, float *, int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 24,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.33548700000000004
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.787898
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 1.6272199999999999
+      },
+      {
+        "signature": "rex::collect(rex::View, const int *, const int *, const float *, int *, float *)",
+        "grid": [
+          4,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.25020600000000004
+      },
+      {
+        "signature": "rex::materialize(rex::View, const int *, int, const int *, int *, rex::Work)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.022432
+      },
+      {
+        "signature": "rex::parent_groups(rex::View, const int *, int, const int *, int *, int *, float, rex::Work)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 552,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 7.604007999999999
+      },
+      {
+        "signature": "rex::parent_groups(rex::View, const int *, int, const int *, int *, int *, float, rex::Work)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 552,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 6.283695
+      },
+      {
+        "signature": "rex::verify_materialized(rex::View, const int *, float, int *, float *, rex::Work)",
+        "grid": [
+          100,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 512,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 6.452305000000001
+      },
+      {
+        "signature": "searchD(int *, float *, int, Object, int, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 48,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 2.329646
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, int, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 123,
+        "static_shared_bytes": 33856,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 4,
+        "diagnostic_sum_ms": 0.070654
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 30,
+        "static_shared_bytes": 44,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 23,
+        "diagnostic_sum_ms": 0.03648
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 64,
+        "diagnostic_sum_ms": 0.05839999999999998
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 45,
+        "diagnostic_sum_ms": 3.023689000000001
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.04569600000000001
+      }
+    ],
+    "observed_occupancy": "NOT_MEASURED; grid and resources are not achieved occupancy",
+    "mode": "PAR_STRONG",
+    "correctness": {
+      "state": "correctness_passed",
+      "summary": {
+        "observe": true,
+        "tree_audit": false,
+        "load_ms": 36.297924,
+        "buffer_setup_ms": 0.078529,
+        "cold_build_ms": 17.056876,
+        "trace_ms": 63.81009,
+        "final_drain_ms": 0.408724,
+        "results": 99,
+        "sampled_device_peak_bytes": 14228979712,
+        "host_output_capacity_bytes": 153520,
+        "cpu_user_s": 0.047062999999999994,
+        "cpu_system_s": 0.0045319999999999805,
+        "stages": [
+          {
+            "name": "query.tree",
+            "calls": 19,
+            "inclusive_host_ms": 24.292703000000003
+          },
+          {
+            "name": "query.buffer",
+            "calls": 6,
+            "inclusive_host_ms": 3.556279
+          },
+          {
+            "name": "query.prefix_merge",
+            "calls": 19,
+            "inclusive_host_ms": 2.8220240000000003
+          },
+          {
+            "name": "delete.prefix_lookup",
+            "calls": 15,
+            "inclusive_host_ms": 6.742465999999999
+          },
+          {
+            "name": "delete.buffer_merge",
+            "calls": 3,
+            "inclusive_host_ms": 3.075762
+          },
+          {
+            "name": "rebuild.compaction",
+            "calls": 2,
+            "inclusive_host_ms": 1.985827
+          },
+          {
+            "name": "rebuild.construct",
+            "calls": 2,
+            "inclusive_host_ms": 13.122946
+          },
+          {
+            "name": "rebuild.reset",
+            "calls": 2,
+            "inclusive_host_ms": 0.140953
+          }
+        ]
+      },
+      "ancestor_member_checks": 0,
+      "outputs": {
+        ".ids.i32": "511883ee74bae0ded6fabd1089c54cfe6449f95d08c8e7a56539cf85ba80bea0",
+        ".dist.f32": "58553b15fb3888e443e29fff5663675b8f70e37f0ea6c54076489d6ff04c1032",
+        ".queries.csv": "c589468748b0f599c3f4b7b21b2c1e18178653b791baa92b3cb0c57d463c5f27"
+      },
+      "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked"
+    },
+    "receipt_sha256": "e3e82acad7d157da38c772d6d4bff0356492f84e9a62c9710d8bbeaa2a27e8d7",
+    "report_sha256": "8eba26fe43868c1b090be097fdc1922e09ec8cafbd8be4a370b105c5bf42b907"
+  },
+  {
+    "sqlite_sha256": "369d4f808ecc173298992c96152cc1cb221f65c6dcd28908f5fafcf6d3d6bb0e",
+    "diagnostic_only": true,
+    "scope": "57 events, 19 queries, 2 rebuilds; native.trace",
+    "kernel_launches": 298,
+    "query_tree_launches": 133,
+    "cuda_api_counts": {
+      "cudaMallocManaged_v6000": 134,
+      "cudaMalloc_v3020": 153,
+      "cudaMemset_v3020": 86,
+      "cudaMemcpy_v3020": 101,
+      "cuKernelGetName": 298,
+      "cudaLaunchKernel_v7000": 298,
+      "cudaStreamSynchronize_v3020": 122,
+      "cudaMemcpyAsync_v3020": 31,
+      "cudaFree_v3020": 313,
+      "cudaDeviceSynchronize_v3020": 149,
+      "cudaMemGetInfo_v3020": 2
+    },
+    "query_tree_api_counts": {
+      "cudaMemset_v3020": 76,
+      "cudaMemcpy_v3020": 38,
+      "cuKernelGetName": 133,
+      "cudaLaunchKernel_v7000": 133,
+      "cudaMalloc_v3020": 38,
+      "cudaStreamSynchronize_v3020": 57,
+      "cudaMemcpyAsync_v3020": 19,
+      "cudaFree_v3020": 38,
+      "cudaMallocManaged_v6000": 76,
+      "cudaDeviceSynchronize_v3020": 19
+    },
+    "copy_bytes_by_kind": {
+      "11": 1331200,
+      "12": 1146880,
+      "1": 10484,
+      "2": 14304,
+      "8": 1077032
+    },
+    "kernel_shapes": [
+      {
+        "signature": "check(int *, float *, float, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 26,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.0066879999999999995
+      },
+      {
+        "signature": "findIdx(int *, int, int *, int, int, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 15,
+        "diagnostic_sum_ms": 1.7928520000000001
+      },
+      {
+        "signature": "getNewData(float *, float *, char *, char *, int *, int *, int *, int *, int, int *, int *, int)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 22,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.29074999999999995
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 6.1597290000000005
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.85929
+      },
+      {
+        "signature": "getRnn(int *, Object, Object, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 28,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.009344
+      },
+      {
+        "signature": "initIndexData(int *, TN *, int *, int *, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.870649
+      },
+      {
+        "signature": "mergeInResult(int, int *, int *, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 18,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 3,
+        "diagnostic_sum_ms": 0.029952
+      },
+      {
+        "signature": "mergeTotalResult(int, int *, int *, int *, float *, Object, float *, int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 24,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.8582019999999999
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.781562
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 1.6077
+      },
+      {
+        "signature": "rex::collect(rex::View, const int *, const int *, const float *, int *, float *)",
+        "grid": [
+          4,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.356446
+      },
+      {
+        "signature": "rex::parent_groups(rex::View, const int *, int, const int *, int *, int *, float, rex::Work)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 552,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 7.478888
+      },
+      {
+        "signature": "rex::verify_regions(rex::View, const int *, const int *, float, int *, float *, rex::Work)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 512,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 8.843421000000001
+      },
+      {
+        "signature": "searchD(int *, float *, int, Object, int, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 48,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 2.4301579999999996
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, int, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 123,
+        "static_shared_bytes": 33856,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 4,
+        "diagnostic_sum_ms": 0.070719
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 30,
+        "static_shared_bytes": 44,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 23,
+        "diagnostic_sum_ms": 0.036608
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 64,
+        "diagnostic_sum_ms": 0.05855999999999999
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 45,
+        "diagnostic_sum_ms": 2.904167000000001
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.045727000000000004
+      },
+      {
+        "signature": "void rex::traverse_regions<(bool)0>(rex::View, const int *, unsigned long, int *, int *, float, int *, float *, int *, rex::Work)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 2064,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 6.399796
+      }
+    ],
+    "observed_occupancy": "NOT_MEASURED; grid and resources are not achieved occupancy",
+    "mode": "REGION_SPLIT",
+    "correctness": {
+      "state": "correctness_passed",
+      "summary": {
+        "observe": true,
+        "tree_audit": false,
+        "load_ms": 45.126441,
+        "buffer_setup_ms": 0.092685,
+        "cold_build_ms": 18.626661,
+        "trace_ms": 66.040454,
+        "final_drain_ms": 0.49266,
+        "results": 99,
+        "sampled_device_peak_bytes": 14224785408,
+        "host_output_capacity_bytes": 153520,
+        "cpu_user_s": 0.050262,
+        "cpu_system_s": 0.006973999999999925,
+        "stages": [
+          {
+            "name": "query.tree",
+            "calls": 19,
+            "inclusive_host_ms": 27.467417
+          },
+          {
+            "name": "query.buffer",
+            "calls": 6,
+            "inclusive_host_ms": 3.763648
+          },
+          {
+            "name": "query.prefix_merge",
+            "calls": 19,
+            "inclusive_host_ms": 2.862235
+          },
+          {
+            "name": "delete.prefix_lookup",
+            "calls": 15,
+            "inclusive_host_ms": 6.116078
+          },
+          {
+            "name": "delete.buffer_merge",
+            "calls": 3,
+            "inclusive_host_ms": 1.79426
+          },
+          {
+            "name": "rebuild.compaction",
+            "calls": 2,
+            "inclusive_host_ms": 1.66647
+          },
+          {
+            "name": "rebuild.construct",
+            "calls": 2,
+            "inclusive_host_ms": 12.663533000000001
+          },
+          {
+            "name": "rebuild.reset",
+            "calls": 2,
+            "inclusive_host_ms": 0.127193
+          }
+        ]
+      },
+      "ancestor_member_checks": 0,
+      "outputs": {
+        ".ids.i32": "511883ee74bae0ded6fabd1089c54cfe6449f95d08c8e7a56539cf85ba80bea0",
+        ".dist.f32": "58553b15fb3888e443e29fff5663675b8f70e37f0ea6c54076489d6ff04c1032",
+        ".queries.csv": "c589468748b0f599c3f4b7b21b2c1e18178653b791baa92b3cb0c57d463c5f27"
+      },
+      "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked"
+    },
+    "receipt_sha256": "01419d911667f768c5cb7dc4858727e30312f8a6df23e97f5e89559973c3c4cd",
+    "report_sha256": "c87f30ced46eeeb4f3cd7d9b19df4b93e7cc3c37ce7ada92395b8eb60e40254c"
+  },
+  {
+    "sqlite_sha256": "48b4af623f80ee7596b7dedc1dd8f80d85420164da2282584f7cc6a712797edb",
+    "diagnostic_only": true,
+    "scope": "57 events, 19 queries, 2 rebuilds; native.trace",
+    "kernel_launches": 279,
+    "query_tree_launches": 114,
+    "cuda_api_counts": {
+      "cudaMallocManaged_v6000": 134,
+      "cudaMalloc_v3020": 153,
+      "cudaMemset_v3020": 86,
+      "cudaMemcpy_v3020": 101,
+      "cuKernelGetName": 279,
+      "cudaLaunchKernel_v7000": 279,
+      "cudaStreamSynchronize_v3020": 122,
+      "cudaMemcpyAsync_v3020": 31,
+      "cudaFree_v3020": 313,
+      "cudaDeviceSynchronize_v3020": 149,
+      "cudaMemGetInfo_v3020": 2
+    },
+    "query_tree_api_counts": {
+      "cudaMemset_v3020": 76,
+      "cudaMemcpy_v3020": 38,
+      "cuKernelGetName": 114,
+      "cudaLaunchKernel_v7000": 114,
+      "cudaMalloc_v3020": 38,
+      "cudaStreamSynchronize_v3020": 57,
+      "cudaMemcpyAsync_v3020": 19,
+      "cudaFree_v3020": 38,
+      "cudaMallocManaged_v6000": 76,
+      "cudaDeviceSynchronize_v3020": 19
+    },
+    "copy_bytes_by_kind": {
+      "11": 1241088,
+      "12": 1056768,
+      "1": 10484,
+      "2": 14304,
+      "8": 1077032
+    },
+    "kernel_shapes": [
+      {
+        "signature": "check(int *, float *, float, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 26,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.006655999999999999
+      },
+      {
+        "signature": "findIdx(int *, int, int *, int, int, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 15,
+        "diagnostic_sum_ms": 1.6189640000000003
+      },
+      {
+        "signature": "getNewData(float *, float *, char *, char *, int *, int *, int *, int *, int, int *, int *, int)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 22,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.880154
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 6.233747
+      },
+      {
+        "signature": "getPivotDis(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 4,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.891354
+      },
+      {
+        "signature": "getRnn(int *, Object, Object, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 28,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 0.16630199999999998
+      },
+      {
+        "signature": "initIndexData(int *, TN *, int *, int *, int *)",
+        "grid": [
+          2,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.45951699999999995
+      },
+      {
+        "signature": "mergeInResult(int, int *, int *, int *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 18,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 3,
+        "diagnostic_sum_ms": 0.003424
+      },
+      {
+        "signature": "mergeTotalResult(int, int *, int *, int *, float *, Object, float *, int *, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 24,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 1.25439
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 0.758266
+      },
+      {
+        "signature": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 50,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 2,
+        "diagnostic_sum_ms": 1.097239
+      },
+      {
+        "signature": "rex::collect(rex::View, const int *, const int *, const float *, int *, float *)",
+        "grid": [
+          4,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.26387099999999997
+      },
+      {
+        "signature": "rex::parent_groups(rex::View, const int *, int, const int *, int *, int *, float, rex::Work)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 44,
+        "static_shared_bytes": 552,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 7.111083999999999
+      },
+      {
+        "signature": "searchD(int *, float *, int, Object, int, int *)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          512,
+          1,
+          1
+        ],
+        "registers_per_thread": 48,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 6,
+        "diagnostic_sum_ms": 2.3463819999999997
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, int, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 123,
+        "static_shared_bytes": 33856,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 4,
+        "diagnostic_sum_ms": 0.070688
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 30,
+        "static_shared_bytes": 44,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 23,
+        "diagnostic_sum_ms": 0.036576000000000004
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          128,
+          1,
+          1
+        ],
+        "registers_per_thread": 16,
+        "static_shared_bytes": 0,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 64,
+        "diagnostic_sum_ms": 0.05820799999999999
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 45,
+        "diagnostic_sum_ms": 3.269643000000001
+      },
+      {
+        "signature": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+        "grid": [
+          1,
+          1,
+          1
+        ],
+        "block": [
+          384,
+          1,
+          1
+        ],
+        "registers_per_thread": 64,
+        "static_shared_bytes": 33808,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 0.04569600000000001
+      },
+      {
+        "signature": "void rex::traverse_regions<(bool)1>(rex::View, const int *, unsigned long, int *, int *, float, int *, float *, int *, rex::Work)",
+        "grid": [
+          10,
+          1,
+          1
+        ],
+        "block": [
+          256,
+          1,
+          1
+        ],
+        "registers_per_thread": 52,
+        "static_shared_bytes": 2064,
+        "dynamic_shared_bytes": 0,
+        "local_memory_per_thread": 0,
+        "calls": 19,
+        "diagnostic_sum_ms": 15.266093999999997
+      }
+    ],
+    "observed_occupancy": "NOT_MEASURED; grid and resources are not achieved occupancy",
+    "mode": "REGION_FUSED",
+    "correctness": {
+      "state": "correctness_passed",
+      "summary": {
+        "observe": true,
+        "tree_audit": false,
+        "load_ms": 35.426176,
+        "buffer_setup_ms": 0.076078,
+        "cold_build_ms": 21.646646,
+        "trace_ms": 67.422564,
+        "final_drain_ms": 0.326174,
+        "results": 99,
+        "sampled_device_peak_bytes": 14220591104,
+        "host_output_capacity_bytes": 153520,
+        "cpu_user_s": 0.05264500000000001,
+        "cpu_system_s": 0.001994999999999969,
+        "stages": [
+          {
+            "name": "query.tree",
+            "calls": 19,
+            "inclusive_host_ms": 26.997951
+          },
+          {
+            "name": "query.buffer",
+            "calls": 6,
+            "inclusive_host_ms": 3.5750339999999996
+          },
+          {
+            "name": "query.prefix_merge",
+            "calls": 19,
+            "inclusive_host_ms": 2.992009000000001
+          },
+          {
+            "name": "delete.prefix_lookup",
+            "calls": 15,
+            "inclusive_host_ms": 6.581075
+          },
+          {
+            "name": "delete.buffer_merge",
+            "calls": 3,
+            "inclusive_host_ms": 3.016204
+          },
+          {
+            "name": "rebuild.compaction",
+            "calls": 2,
+            "inclusive_host_ms": 2.137998
+          },
+          {
+            "name": "rebuild.construct",
+            "calls": 2,
+            "inclusive_host_ms": 12.58594
+          },
+          {
+            "name": "rebuild.reset",
+            "calls": 2,
+            "inclusive_host_ms": 0.136885
+          }
+        ]
+      },
+      "ancestor_member_checks": 0,
+      "outputs": {
+        ".ids.i32": "511883ee74bae0ded6fabd1089c54cfe6449f95d08c8e7a56539cf85ba80bea0",
+        ".dist.f32": "58553b15fb3888e443e29fff5663675b8f70e37f0ea6c54076489d6ff04c1032",
+        ".queries.csv": "c589468748b0f599c3f4b7b21b2c1e18178653b791baa92b3cb0c57d463c5f27"
+      },
+      "quality": "independent integer multiset oracle; full live-rank IDs and exact FP32; all states checked"
+    },
+    "receipt_sha256": "5d5557b3171abcb5b88cd2e2c32caa2d2273066254edfe56aed72334f9980a76",
+    "report_sha256": "7fdf9b85f0e00f347a7bfa2ea221cc66cfa253fae1244bddf22df87bf9ebe57a"
+  }
+]

@@ -120,7 +120,7 @@ struct Bridge {
         std::cout<<"}\n";
 #endif
     }
-    void finish() {if(mode)release_plan();}
+    void finish() {if(mode){release_plan();plan=Plan{};}}
     void write(const std::string& out) {
         std::ofstream s(out+".region.json");s<<std::setprecision(17)
         <<"{\"mode\":"<<mode<<",\"setup_ms\":"<<setup_ms<<",\"context_ms\":"<<context_ms

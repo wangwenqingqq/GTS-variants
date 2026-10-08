@@ -1,0 +1,182 @@
+# DESIGN ONLY. This is not an executable GPU runner.
+experiment: GTS_REGION_EXEC_20261008
+status: DESIGN_ONLY_NOT_IMPLEMENTED_NOT_RUN
+paper_goal: regular_research_paper
+source:
+  progress_ref: ab742e274037bb77e772c6add19ba93d9c62c05d
+  upstream_repo: ZJU-DAILY/GTS
+  upstream_ref: 3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639
+  upstream_root: Source Code/GTS
+  candidate_commit: null
+  candidate_binary_sha256: null
+  suggested_branch: experiments/region-exec-20261008
+  directory: diagnostics/region_exec_20261008
+contract:
+  first_task: native serialized exact-audited range/update bridge
+  N: 1000
+  D: 128
+  input_dtype: native short integer
+  B: 1
+  insert: physical-row reference, logical multiplicity retained
+  delete: current live rank
+  query_output: native ordered full physical IDs before original live-rank merge;
+    FP32 distance fields
+  queries: 10000
+  inserts: 1000
+  deletes: 1000
+  events: 12000
+  threshold_rebuilds: 50
+  buffer_occupancy_threshold: 10
+  initial_seed: 2026100431
+  numerics: common extracted native pivot/object/bound operations; no candidate-only
+    arithmetic change
+  oracle: independent CPU integer squared-distance/multiset + native full-field bridge
+  universal_fp_exactness_claim: false
+  P7_knn_integration: false
+  concurrency: false
+  new_vector_arrivals: false
+region_plan:
+  block_threads: 256
+  max_objects: 256
+  max_nonempty_nodes: 128
+  local_node_capacity: 128
+  selection: maximal nonempty subtree satisfying both object/node bounds
+  static_query_independent: true
+  region_roots_form_antichain: true
+  base_positions_partition_exactly: true
+  overlarge_terminal_leaf: registered same-semantics fallback; no truncation
+  memory: query shared cache + local node/leaf queues; actual resource report required
+  grid: query x static region, uniform return for inactive root
+  unbounded_global_queue: false
+  dynamic_parallelism: false
+modes:
+  A: NATIVE
+  B: PAR_STRONG
+  C: REGION_SPLIT
+  D: REGION_FUSED
+common_new_mode_features:
+- same arithmetic and pruning predicate
+- actual-pid-checked sibling reuse
+- multi-block upper skeleton
+- same allocation policy and canonical output collector
+- same initial tree and update/event sequence
+fusion_control:
+  SPLIT: local multi-level traversal -> global per-region leaf list -> verification
+    kernel
+  FUSED: same traversal -> shared-memory leaf list -> verification in same block
+  same_candidates_and_distance_counts_required: true
+  final_N_hit_array_retained: true
+  all_materialization_eliminated_claim: false
+output:
+  canonical_order: original terminal-leaf enumeration then in-leaf order, verified
+    from native path
+  unique_writer: one query/base-position slot
+  stable_compaction: true
+  result_id: base physical index, not vector content or packed position
+  buffer_merge: original routine unchanged
+  deduplicate_equal_vectors: false
+lifecycle:
+  tree_epoch: structure/mapping only, not MVCC
+  tombstone: refresh current view; no region replan unless structure changes
+  pivot_deleted: still valid geometric reference while physical row exists
+  buffer_insert: not in base region; original buffer scan must remain
+  rebuild: finish old query; rebuild; replan and remap; increment epoch; publish;
+    ACK
+  all_refresh_time_charged: true
+  CPU_planner_transfers_charged: true
+  context_initialization_report_separately: true
+timing:
+  rounds: 6
+  process_per_mode_per_round: 1
+  orders:
+  - - A
+    - B
+    - C
+    - D
+  - - D
+    - C
+    - B
+    - A
+  - - B
+    - D
+    - A
+    - C
+  - - C
+    - A
+    - D
+    - B
+  - - C
+    - B
+    - D
+    - A
+  - - A
+    - D
+    - B
+    - C
+  first_formal_processes: 24
+  metric: continuous whole mixed-operation trace with full Host-ready/ACK and final
+    drain
+  secondary: setup+trace and operation tail latencies; plans/rebuild charged exactly
+    once
+  history_as_denominator: false
+  profiling_in_primary: false
+  observer_identity: new source requires its own necessary qualification; old results
+    not retroactively changed
+  statistics: all six raw times, paired ratios, fixed-query run uncertainty, order
+    split
+  bootstrap_seed: 202610081022
+  bootstrap_resamples: 20000
+  new_algorithm_novelty_numeric_threshold: null
+validation:
+  CPU_partition_checks: true
+  boundaries:
+  - all_pruned
+  - all_passed
+  - early_leaf
+  - empty_node
+  - root_leaf
+  - objects255_256_257
+  - nodes127_128_129
+  - buffer_last_delete
+  - duplicate_occurrence
+  - occupancy9_to10
+  - rebuild_mapping
+  - stale_epoch
+  sanitizers:
+  - memcheck
+  - racecheck
+  - synccheck
+  full_output_all_performance_processes: true
+  debug_work_counters_separate_from_timing: true
+  SPLIT_FUSED_counts: same evaluated pivot/node set and object-pair work, accounting
+    for shared reuse
+deliverables:
+  commit_1:
+  - common semantic helpers
+  - PAR_STRONG
+  - output bridge
+  commit_2:
+  - region_plan reference
+  - REGION_SPLIT
+  - REGION_FUSED
+  - mixed-update correctness
+  commit_3:
+  - 24-process first trace
+  - complete costs and mechanism counts
+  - honest decision
+not_scheduled:
+- new static10K grid
+- workspace-only reruns
+- Transformer
+- FP32 screening
+- new tree partition algorithm
+- P7 integration
+- concurrent updates
+- automatic parameter expansion
+decision:
+  PAR_explains_gain: retain engineering repair; no demonstrated fused-region increment
+  SPLIT_wins_FUSED_loses: do not force fusion; region scheduling may remain candidate
+  query_wins_workflow_loses: no end-to-end workflow advantage
+  increment_supported: limited registered seeds/region-budget confirmation, then separate
+    high-dimensional scalability/external checks
+  novelty_status: UNVERIFIED; concrete architecture and controls, not a guarantee
