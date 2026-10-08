@@ -278,12 +278,15 @@ def main():
     if args.prepare_only:
         print('PREPARED: 16 exact source identities and three deterministic cases; no GPU run')
         return
+    # CUDA tools locate headers/helper binaries relative to their real toolkit directory.
+    nvcc = str(Path(shutil.which('nvcc')).resolve())
+    sanitizer = str(Path(shutil.which('compute-sanitizer')).resolve())
     save(work / 'ENVIRONMENT.json', dict(gpu=gpu, python=sys.version, numpy=np.__version__,
-         nvcc=subprocess.check_output(['nvcc', '--version'], text=True),
+         nvcc=subprocess.check_output([nvcc, '--version'], text=True),
          driver=subprocess.check_output(['nvidia-smi', '-i', gpu['uuid'], '--query-gpu=driver_version',
                                          '--format=csv,noheader'], text=True).strip()))
-    built = build(work, shutil.which('nvcc'))
-    verify(work, manifest, built, gpu, shutil.which('compute-sanitizer'))
+    built = build(work, nvcc)
+    verify(work, manifest, built, gpu, sanitizer)
 
 
 if __name__ == '__main__':

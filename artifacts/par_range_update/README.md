@@ -54,6 +54,8 @@ activity invalidates the run. No existing process is stopped.
 The script fetches the pinned upstream GTS commit, checks eight original file
 hashes, applies the host/result adapter, copies the existing PAR/region headers,
 and checks **all 16 resulting source hashes** against the qualified source.
+CUDA executable symlinks are resolved to the toolkit directory so relative
+header/helper lookup is not broken by an outer PATH alias.
 No previous campaign, external fixture, prebuilt executable, or private controller
 directory is needed. Inputs are regenerated and must reproduce the two exact
 historical data/event hashes. To prepare without CUDA execution:
@@ -92,6 +94,9 @@ replaces failed/slow samples automatically.
 oracle, and guard evidence. Raw inputs, full output arrays, logs and GPU/process
 details stay in the chosen work directory, **outside Git**. A valid final receipt
 has `state=scoped_artifact_verified` and `timing_claim_admitted=false`.
+The NATIVE control shares the original `rnum[0]=0` correctness repair and output
+adapter; it is not an unmodified historical executable. The update algorithm,
+native kernels, arithmetic and pruning geometry remain unchanged.
 
 These fresh trace durations are reproduction diagnostics, not a new speedup
 estimate: one PAR and one NATIVE run do not satisfy the six-round performance
