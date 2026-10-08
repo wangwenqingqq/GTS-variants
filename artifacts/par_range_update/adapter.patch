@@ -1,0 +1,325 @@
+--- a/include/tree.cuh
++++ b/include/tree.cuh
+@@ -332,7 +332,7 @@
+ void indexConstru(short *data_d, char *data_s, int *size_s, int *data_info, int *&id_list, TN *&node_list, int *&max_node_num,
+ 				  int &tree_h, int *&empty_list)
+ {
+-	printf("Index construction...\n");
++
+ 
+ 	CHECK(cudaMallocManaged((void **)&max_node_num, sizeof(int)));
+ 	CHECK(cudaMallocManaged((void **)&split_num, sizeof(int)));
+@@ -350,7 +350,7 @@
+ 	start_idx = 0;
+ 	initIndexData<<<(data_info[1] - 1) / THREAD_NUM + 1, THREAD_NUM>>>(data_info, node_list, split_list,
+ 																	   empty_list, id_list);
+-	cudaDeviceSynchronize();
++	u10_ck(cudaDeviceSynchronize());
+ 	cudaError_t cudaStatus = cudaGetLastError();
+ 	if (cudaStatus != cudaSuccess)
+ 		fprintf(stderr, "initIndexData error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -364,7 +364,7 @@
+ 
+ 		getPivotDis<<<block_num, THREAD_NUM>>>(data_d, data_s, size_s, node_list, split_list, dis_list, id_list,
+ 											   start_idx, data_info, pid_list);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaError_t cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "getPivotDis error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -373,7 +373,7 @@
+ 
+ 		nodeSplit<<<block_num, THREAD_NUM>>>(node_list, split_list, dis_list, empty_list, start_idx,
+ 											 pid_list, data_d, id_list, data_info, data_s, size_s);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "getPivotDis error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -384,7 +384,27 @@
+ 	}
+ 
+ 	tree_h = cur_level + 1;
+-	printf("Tree height: %d\n", tree_h);
++	if(u10.tree_audit){
++
++    std::vector<TN> u0nodes(max_node_num[0]);
++    std::vector<int> u0empty(max_node_num[0]), u0order(data_info[1]);
++    CHECK(cudaMemcpy(u0nodes.data(), node_list, u0nodes.size()*sizeof(TN), cudaMemcpyDeviceToHost));
++    CHECK(cudaMemcpy(u0empty.data(), empty_list, u0empty.size()*sizeof(int), cudaMemcpyDeviceToHost));
++    CHECK(cudaMemcpy(u0order.data(), id_list, u0order.size()*sizeof(int), cudaMemcpyDeviceToHost));
++    int u0cover=0;
++    printf("U0_TREE {\"n\":%d,\"height\":%d,\"nodes\":[", data_info[1], tree_h);
++    bool u0first=true;
++    for(int u0i=0; u0i<max_node_num[0]; ++u0i) if(!u0empty[u0i]) {
++        TN u0n=u0nodes[u0i];
++        if(u0n.is_leaf) { if(u0n.size<1 || u0n.size>MAX_SIZE) exit(91); u0cover+=u0n.size; }
++        printf("%s[%d,%d,%.9g,%d,%d,%d]", u0first ? "" : ",", u0i,u0n.pid,u0n.min_dis,u0n.size,u0n.lid,u0n.is_leaf); u0first=false;
++    }
++    printf("],\"order\":[");
++    for(int u0i=0;u0i<data_info[1];++u0i) printf("%s%d",u0i ? "," : "",u0order[u0i]);
++    printf("]}\n"); fflush(stdout);
++    if(u0cover!=data_info[1]) exit(91);
++
++	}
+ 
+ 	cudaFree(dis_list);
+ 	cudaFree(split_list);
+--- a/include/update.cuh
++++ b/include/update.cuh
+@@ -334,7 +334,9 @@
+ 	}
+ }
+ 
+-void searchIndexRnnUpdate(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
++#include "region_bridge.cuh"
++
++void searchIndexRnnUpdateNative(short *data_d, TN *node_list, int *id_list, int *max_node_num, int *qid_list,
+ 						  int qnum, float r, int tree_h, int *data_info, int *&empty_list, int *&qresult_count,
+ 						  int *&qresult_count_prefix, int *&result_id, float *&result_dis, char *data_s, int *size_s)
+ {
+@@ -350,7 +352,7 @@
+ 	start_idx = 1;
+ 	search_num[0] = qnum;
+ 	initQnode<<<(max_node_num[0] * qnum - 1) / THREAD_NUM + 1, THREAD_NUM>>>(query_node_list, qnum, max_node_num);
+-	cudaDeviceSynchronize();
++	u10_ck(cudaDeviceSynchronize());
+ 	cudaError_t cudaStatus = cudaGetLastError();
+ 	if (cudaStatus != cudaSuccess)
+ 		fprintf(stderr, "initQnode error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -361,13 +363,13 @@
+ 
+ 		findNextRnn<<<qnum, THREAD_NUM>>>(query_node_list, start_idx, node_list, r, data_d, qid_list, node_num, max_node_num,
+ 										  data_info, empty_list, data_s, size_s);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaError_t cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "findNextRnn error: %s\n", cudaGetErrorString(cudaStatus));
+ 
+ 		updatePnodeFlag<<<qnum, THREAD_NUM>>>(query_node_list, start_idx, node_num, max_node_num, empty_list);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "updatePnodeFlag error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -390,14 +392,14 @@
+ 		CHECK(cudaMalloc((void **)&query_lnode, search_num[0] * sizeof(int)));
+ 		CHECK(cudaMalloc((void **)&query_qid, search_num[0] * sizeof(int)));
+ 		initRes<<<(search_num[0] * MAX_SIZE - 1) / THREAD_NUM + 1, THREAD_NUM>>>(qresult_idx, search_num[0] * MAX_SIZE);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "initRes error: %s\n", cudaGetErrorString(cudaStatus));
+ 
+ 		getQnodeCount<<<(qnum_leaf - 1) / THREAD_NUM + 1, THREAD_NUM>>>(qnum_leaf, query_node_list, max_node_num, qnode_count,
+ 																		start_q);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "getQnodeCount error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -406,14 +408,14 @@
+ 							   query_node_list + start_q * max_node_num[0] + max_node_num[0] * qnum_leaf, qnode_idx);
+ 		mergeLeafNode<<<(qnum_leaf * max_node_num[0] - 1) / THREAD_NUM + 1, THREAD_NUM>>>(query_node_list, qnode_idx, query_lnode,
+ 																						  max_node_num, qnum_leaf, query_qid, start_q);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "mergeLeafNode error: %s\n", cudaGetErrorString(cudaStatus));
+ 
+ 		leafProcessRnnUpdate<<<search_num[0], THREAD_NUM>>>(query_lnode, node_list, id_list, query_qid, data_d, qid_list,
+ 															init_result_id, init_result_dis, data_info, r, qresult_idx, search_num, data_s, size_s, is_delete);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		cudaStatus = cudaGetLastError();
+ 		if (cudaStatus != cudaSuccess)
+ 			fprintf(stderr, "leafProcess error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -424,12 +426,12 @@
+ 		CHECK(cudaMallocManaged((void **)&result_dis, result_num[0] * sizeof(float)));
+ 		getQresultCount<<<(qnum_leaf - 1) / THREAD_NUM + 1, THREAD_NUM>>>(qnum_leaf, qnode_count, qnode_count_prefix,
+ 																		  qresult_count, qresult_idx);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 		thrust::exclusive_scan(thrust::device, qresult_count, qresult_count + qnum_leaf, qresult_count_prefix);
+ 		thrust::inclusive_scan(thrust::device, qresult_idx, qresult_idx + search_num[0] * MAX_SIZE, qresult_idx);
+ 		mergeResultRnn<<<(search_num[0] * MAX_SIZE - 1) / THREAD_NUM + 1, THREAD_NUM>>>(qresult_idx, init_result_id,
+ 																						init_result_dis, result_id, result_dis, search_num);
+-		cudaDeviceSynchronize();
++		u10_ck(cudaDeviceSynchronize());
+ 
+ 		cudaFree(init_result_id);
+ 		cudaFree(init_result_dis);
+@@ -446,11 +448,17 @@
+ 	cudaFree(qnode_idx);
+ }
+ 
++void searchIndexRnnUpdate(short* data,TN* nodes,int* order,int* nn,int* qids,
++    int qnum,float radius,int height,int* info,int*& empty,int*& counts,
++    int*& prefix,int*& ids,float*& distances,char* strings,int* lengths) {
++    if(rex::bridge.mode)rex::bridge.search(data,is_delete,qids,qnum,radius,info,counts,prefix,ids,distances);
++    else searchIndexRnnUpdateNative(data,nodes,order,nn,qids,qnum,radius,height,info,empty,counts,prefix,ids,distances,strings,lengths);
++}
+ void updateIndexRnn(short *&data_d, TN *&node_list, int *&id_list, int *&max_node_num, int *&qid_list, int qnum, float r, int &tree_h,
+ 					int *&data_info, int *&empty_list, int *&qresult_count, int *&qresult_count_prefix, int *&result_id, float *&result_dis,
+ 					char *&data_s, int *&size_s, FILE *fcost, float &time_update_s, float &time_update_u, int &count_update_s, int &count_update_u)
+ {
+-	printf("Updating...\n");
++
+ 
+ 	auto s = std::chrono::high_resolution_clock::now();
+ 	CHECK(cudaMallocManaged((void **)&is_delete_in, MAX_IN_SIZE * sizeof(int)));
+@@ -472,6 +480,7 @@
+ 
+ 	for (int i = 0; i < update_num; i++)
+ 	{
++		u10.begin_op(i,update_list[i].update_flag,tree_size,in_size);
+ 		if (update_list[i].update_flag == 0)
+ 		{
+ 			count_update_u++;
+@@ -483,6 +492,8 @@
+ 
+ 			if (in_size == MAX_IN_SIZE)
+ 			{
++				u10.begin_rebuild();
++				{U10Stage stage(5);
+ 				// printf("%d\n", data_info[1]);
+ 				if (data_info[2] != 6)
+ 				{
+@@ -510,7 +521,7 @@
+ 
+ 				getNewData<<<(in_size + tree_size - 1) / THREAD_NUM + 1, THREAD_NUM>>>(data_d, data_d_temp, data_s, data_s_temp, size_s,
+ 																					   size_s_temp, is_delete, is_delete_prefix, in_size, insert_list, data_info, tree_size);
+-				cudaDeviceSynchronize();
++				u10_ck(cudaDeviceSynchronize());
+ 				cudaError_t cudaStatus = cudaGetLastError();
+ 				if (cudaStatus != cudaSuccess)
+ 					fprintf(stderr, "getNewData error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -528,7 +539,11 @@
+ 					CHECK(cudaFree(data_s_temp));
+ 					CHECK(cudaFree(size_s_temp));
+ 				}
++				}
++				{U10Stage stage(6);
+ 				indexConstru(data_d, data_s, size_s, data_info, id_list, node_list, max_node_num, tree_h, empty_list);
++				}
++				{U10Stage stage(7);
+ 
+ 				tree_size = data_info[1];
+ 				CHECK(cudaFree(is_delete));
+@@ -537,6 +552,9 @@
+ 				CHECK(cudaMallocManaged((void **)&is_delete_prefix, data_info[1] * sizeof(int)));
+ 				CHECK(cudaMemset(is_delete, 0, data_info[1] * sizeof(int)));
+ 				in_size = 0;
++				}
++				rex::bridge.refresh(node_list,empty_list,id_list,max_node_num[0],data_info[1],TREE_ORDER);
++				u10.end_rebuild();
+ 			}
+ 			e = std::chrono::high_resolution_clock::now();
+ 			diff = e - s;
+@@ -548,11 +566,13 @@
+ 			count_update_u++;
+ 			s = std::chrono::high_resolution_clock::now();
+ 			// printf("Deleting ...\n");
++			{U10Stage stage(3);
+ 
+ 			thrust::inclusive_scan(thrust::device, is_delete, is_delete + tree_size, is_delete_prefix);
+ 			findIdx<<<(tree_size + in_size - 1) / THREAD_NUM + 1, THREAD_NUM>>>(delete_id, update_list[i].update_id,
+ 																				is_delete_prefix, tree_size, in_size, is_delete);
+-			cudaDeviceSynchronize();
++			u10_ck(cudaDeviceSynchronize());
++			}
+ 			cudaError_t cudaStatus = cudaGetLastError();
+ 			if (cudaStatus != cudaSuccess)
+ 				fprintf(stderr, "findIdx error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -564,13 +584,14 @@
+ 			}
+ 			else
+ 			{
++				U10Stage stage(4);
+ 				CHECK(cudaMemset(is_delete_in, 0, in_size * sizeof(int)));
+ 				CHECK(cudaMemcpy(insert_list_temp, insert_list, in_size * sizeof(int), cudaMemcpyDeviceToDevice));
+ 				is_delete_in[delete_id[0] - tree_size] = 1;
+ 				thrust::inclusive_scan(thrust::device, is_delete_in, is_delete_in + in_size, is_delete_in_prefix);
+ 				mergeInResult<<<(in_size - 1) / THREAD_NUM + 1, THREAD_NUM>>>(in_size, insert_list, is_delete_in,
+ 																			  insert_list_temp, is_delete_in_prefix);
+-				cudaDeviceSynchronize();
++				u10_ck(cudaDeviceSynchronize());
+ 				cudaStatus = cudaGetLastError();
+ 				if (cudaStatus != cudaSuccess)
+ 					fprintf(stderr, "mergeInResult error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -587,13 +608,15 @@
+ 			s = std::chrono::high_resolution_clock::now();
+ 			qid_list[0] = update_list[i].update_id;
+ 
+-			searchIndexRnnUpdate(data_d, node_list, id_list, max_node_num, qid_list, qnum, r, tree_h, data_info, empty_list,
+-								 qresult_count, qresult_count_prefix, result_id, result_dis, data_s, size_s);
++			{U10Stage stage(0);searchIndexRnnUpdate(data_d, node_list, id_list, max_node_num, qid_list, qnum, r, tree_h, data_info, empty_list,
++								 qresult_count, qresult_count_prefix, result_id, result_dis, data_s, size_s);}
++			rnum[0] = 0;
+ 			if (in_size > 0)
+ 			{
+-				searchNaiveRnn(data_info, obj_r, data_d, data_s, size_s, qid_list[0], in_size, r, insert_list, rnum);
+-			}
+-
++				{U10Stage stage(1);searchNaiveRnn(data_info, obj_r, data_d, data_s, size_s, qid_list[0], in_size, r, insert_list, rnum);}
++			}
++
++			{U10Stage stage(2);
+ 			total_result_num = qresult_count[0] + rnum[0];
+ 			// printf("total result num: %d\n", total_result_num);
+ 			CHECK(cudaMallocManaged((void **)&total_result_id, total_result_num * sizeof(int)));
+@@ -601,13 +624,13 @@
+ 			thrust::inclusive_scan(thrust::device, is_delete, is_delete + tree_size, is_delete_prefix);
+ 			mergeTotalResult<<<(total_result_num - 1) / THREAD_NUM + 1, THREAD_NUM>>>(total_result_num, total_result_id, qresult_count,
+ 																					  result_id, result_dis, obj_r, total_result_dis, is_delete_prefix, tree_size);
+-			cudaDeviceSynchronize();
++			u10_ck(cudaDeviceSynchronize());
+ 			cudaError_t cudaStatus = cudaGetLastError();
+ 			if (cudaStatus != cudaSuccess)
+ 				fprintf(stderr, "mergeTotalResult error: %s\n", cudaGetErrorString(cudaStatus));
+ 
+-			fprintf(fcost, "%d ", total_result_num);
+-			fflush(fcost);
++			}
++			u10.deliver(i,qid_list[0],tree_size,in_size,total_result_num,total_result_id,total_result_dis);
+ 
+ 			CHECK(cudaFree(total_result_id));
+ 			CHECK(cudaFree(total_result_dis));
+@@ -620,6 +643,7 @@
+ 			diff = e - s;
+ 			time_update_s += diff.count();
+ 		}
++		u10.end_op(tree_size,in_size);
+ 	}
+ 
+ 	s = std::chrono::high_resolution_clock::now();
+--- a/include/search_naive.cuh
++++ b/include/search_naive.cuh
+@@ -224,13 +224,13 @@
+ 	{ // text type
+ 		searchS<<<block_num, THREAD_NUM>>>(data_info, data_s, size_s, qid, obj, in_size, insert_list);
+ 	}
+-	cudaDeviceSynchronize();
++	u10_ck(cudaDeviceSynchronize());
+ 	cudaError_t cudaStatus = cudaGetLastError();
+ 	if (cudaStatus != cudaSuccess)
+ 		fprintf(stderr, "Search naive error: %s\n", cudaGetErrorString(cudaStatus));
+ 
+ 	check<<<block_num, THREAD_NUM>>>(accu, obj.dis_q, r, in_size);
+-	cudaDeviceSynchronize();
++	u10_ck(cudaDeviceSynchronize());
+ 	cudaStatus = cudaGetLastError();
+ 	if (cudaStatus != cudaSuccess)
+ 		fprintf(stderr, "check error: %s\n", cudaGetErrorString(cudaStatus));
+@@ -240,7 +240,7 @@
+ 	cudaMemcpy(rnum, accu + in_size - 1, sizeof(int), cudaMemcpyDeviceToHost);
+ 
+ 	getRnn<<<block_num, THREAD_NUM>>>(accu, obj, obj_r, in_size);
+-	cudaDeviceSynchronize();
++	u10_ck(cudaDeviceSynchronize());
+ 	cudaStatus = cudaGetLastError();
+ 	if (cudaStatus != cudaSuccess)
+ 		fprintf(stderr, "getRnn error: %s\n", cudaGetErrorString(cudaStatus));

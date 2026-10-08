@@ -1,0 +1,52 @@
+{
+  "id": "PAR_RANGE_UPDATE_REPRODUCTION_20261008",
+  "default_mode": "PAR_STRONG",
+  "admitted_modes": [
+    "PAR_STRONG",
+    "NATIVE"
+  ],
+  "input": {
+    "initial_n": 1000,
+    "dim": 128,
+    "storage": "FP32 integer-valued coordinates",
+    "batch": 1,
+    "metric": "inclusive Euclidean L2",
+    "formal_radius": 0,
+    "boundary_radii": [
+      0,
+      10000
+    ],
+    "seed": 2026100431
+  },
+  "trace": {
+    "events": 12000,
+    "queries": 10000,
+    "reference_reinsertions": 1000,
+    "live_rank_deletions": 1000,
+    "occupancy_rebuild_threshold": 10,
+    "rebuilds": 50
+  },
+  "unsupported": [
+    "kNN",
+    "new external vectors",
+    "stable application IDs",
+    "concurrent or MVCC updates",
+    "multi-GPU",
+    "variable dimension or large-N generalization"
+  ],
+  "source_policy": "16 byte-identical qualified files, no CUDA algorithm change",
+  "reproduction_acceptance": {
+    "gpu_processes": 11,
+    "full_output_cpu_oracle": true,
+    "sanitizers": [
+      "PAR memcheck",
+      "PAR racecheck",
+      "PAR synccheck",
+      "NATIVE memcheck"
+    ],
+    "ordered_outputs_equal": true,
+    "final_module_owned_bytes": 0
+  },
+  "performance_promotion": false,
+  "whole_gtspp_artifact": false
+}

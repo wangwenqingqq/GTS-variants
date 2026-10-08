@@ -1,5 +1,16 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## Scoped PAR range/update reproduction (2026-10-08)
+
+[The standalone PAR module recipe](artifacts/par_range_update/README.md) fetches
+pinned original GTS, regenerates the exact N1000/D128/B1 synthetic inputs, builds
+the qualified same-source executor, and checks complete serialized query/update
+results with an independent CPU oracle and guarded sanitizer runs. Its default
+entry uses PAR_STRONG, with NATIVE retained as a correctness control.
+This is **not** unified GTSPP, arbitrary new-vector ingestion, or an external
+kNN comparison; the separate static admission status below is unchanged.
+See the [redundancy/mechanism/module/impact/end-to-end ledger](artifacts/par_range_update/CLAIMS.md).
+
 2026-10-07最新状态：K10 matched/bulk采集完成834/834进程；本合同静态O_MASK稳定；整体`comparison_admitted=false`，统一search/update候选不存在。六轮统计已闭合，R10、30k与全冷总计仍未完成。
 
 - [按资格分类的六轮结果与四笔账](diagnostics/next_campaign_20261004/K10_QUALIFIED_RESULTS.md)
