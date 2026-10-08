@@ -7,6 +7,19 @@ executable still defaults to NATIVE when called directly; use this entry, not
 an unqualified direct invocation. No CUDA kernel or update algorithm is changed
 by packaging.
 
+## Verified checkpoint
+
+[The compact receipt](VERIFIED.json) records the clean code checkpoint
+`326e004dd045006d32c1abe1d65d0ae9c86d3a60`: all 11 GPU processes passed,
+20152 full query outputs and 24456 event observations were checked, and all
+four sanitizer checks passed. Both 10000-query traces include 50 rebuilds.
+Two earlier failures (nvcc alias/header lookup; GitHub443 connection) occurred
+before any GPU process and are retained rather than omitted.
+GPU proof used the documented `--upstream` path with this task's verified pinned
+cache; online fetching passed local preparation and remote attempt A but failed
+in B. Do not call this unconditional online reproduction success. The final
+receipt adds no new speedup estimate and does not complete unified GTSPP.
+
 ## Supported contract
 
 | Item | Qualified scope |
