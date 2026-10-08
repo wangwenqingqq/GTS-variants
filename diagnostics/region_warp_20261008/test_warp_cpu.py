@@ -8,9 +8,22 @@ import unittest
 
 from leaf_distribution import distribution
 from run_warp import ORDERS
+from curate_warp import curate,RESULTS
 
 
 class WarpTests(unittest.TestCase):
+    def test_missing_optional_publication_rebuild(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);raw=root/'raw';raw.mkdir()
+            source=dict(build=['/tmp/campaign/controllers/group/run/native_timed/region_exec'],
+                        test_warp_build=['/tmp/code/diagnostics/region_warp_20261008/test_warp.cu'])
+            (raw/'SOURCE.json').write_text(json.dumps(source))
+            for name in RESULTS:(raw/name).write_text('{}')
+            curate(raw,root/'out','results')
+            receipt=json.loads((root/'out/PUBLICATION_RESULTS.json').read_text())
+            self.assertEqual(receipt['missing_optional_receipts'],['ARTIFACT_CHECK.json'])
+            self.assertNotIn('ARTIFACT_CHECK.json',receipt['files'])
+
     def test_direction_balance(self):
         self.assertEqual(len(ORDERS),6)
         for order in ORDERS:self.assertEqual(sorted(order),list(range(5)))

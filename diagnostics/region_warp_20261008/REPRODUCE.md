@@ -79,6 +79,8 @@ python "$CODE/audit_warp.py" --qualification --raw "$PRIVATE_EVIDENCE" \
   --output "$PRIVATE_EVIDENCE/QUALIFICATION_AUDIT.json"
 python "$CODE/audit_warp.py" --raw "$PRIVATE_EVIDENCE" \
   --output "$PRIVATE_EVIDENCE/INDEPENDENT_AUDIT.json"
+python "$CODE/summarize_warp.py" --raw "$PRIVATE_EVIDENCE" \
+  --output "$PRIVATE_EVIDENCE/SUPPLEMENT.json"
 python "$CODE/curate_warp.py" --raw "$PRIVATE_EVIDENCE" \
   --output "$PUBLIC_EVIDENCE" --phase qualification
 python "$CODE/curate_warp.py" --raw "$PRIVATE_EVIDENCE" \
@@ -88,6 +90,13 @@ python "$CODE/curate_warp.py" --raw "$PRIVATE_EVIDENCE" \
 Every ordered ID/FP32 output is independently checked against an integer
 squared-L2 live-multiset replay; order, guard receipts and paired statistics are
 recomputed. Whitelist curation records both raw and portable hashes. Review the
+publication source separately from timing: after a clean commit archive rebuild
+and normal smoke checks, retain its separate `ARTIFACT_CHECK.json` in the private
+evidence root before curation. This extra receipt is optional to the timing
+curator, which records missing optional receipts explicitly; absence must not be
+presented as a verified clean publication rebuild. It is present in this delivery.
+Do not replay the primary campaign to generate a publication smoke receipt.
+Review the
 exact staged files and full outgoing history before uploading. Preserve negative
 results and stop this mapping trial without automatically increasing budgets,
 changing seeds or expanding the matrix. Rollback means selecting PAR_STRONG or

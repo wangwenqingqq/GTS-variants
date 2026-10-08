@@ -8,6 +8,17 @@ This is established CUDA engineering, not a new tree or a novelty claim.
 The experiment asks whether improved leaf ownership translates to complete
 mixed-workflow speed, and separates mapping improvement from fusion.
 
+## Completed result
+
+All 30 formal and 60 separate observer processes completed. Independent integer
+live-multiset replay checked all 900000 query outputs and exact FP32 fields.
+WARP reduces complete-trace latency by 3.53% for SPLIT and 3.21% for FUSED versus
+their SERIAL controls. The incremental fusion ratio is 1.00295x on this fixed
+trace; PAR_STRONG/FUSED_WARP is 1.00104x with CI95 [0.99612, 1.00575].
+There is no demonstrated win over the strong baseline. Keep PAR_STRONG and stop
+this mapping trial without expanding seeds/budgets. Maintenance tails are not
+uniformly improved. See [full results and all rounds](RESULTS.md).
+
 ## Qualification checkpoint
 
 - Frozen N1000/D128/B1/radius0 trace: 10000 queries, 1000 insertions, 1000
@@ -26,7 +37,7 @@ The preregistered primary campaign requires five modes, six balanced rounds and
 30 fresh formal processes; an interrupted matrix remains incomplete.
 Observer admission uses 60 separate on/off
 processes for this new binary; old admission is not inherited. Final performance
-claims require the completed result and independent audit, not this checkpoint.
+claims are scoped to the completed result and independent audit, not the microcheck.
 
 See [design](DESIGN.md), [reproduction](REPRODUCE.md), and the curated
 `evidence/v2/` receipts. Raw input/output/guard files remain in external

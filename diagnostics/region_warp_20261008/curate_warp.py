@@ -12,7 +12,8 @@ QUALIFICATION=('SOURCE.json','VALIDATION.json','FULL_WORK.json','FULL_WORK_ROWS.
                'LEAF_DISTRIBUTION.json','MICRO.json','ADMISSION.json','REGISTERED.json',
                'QUALIFICATION_AUDIT.json')
 RESULTS=('RESULTS.json','FORMAL_ROWS.json','FORMAL_TIMER.json','COST_ROWS.json',
-         'COST_QUALIFICATION.json','COMPLETE.json','INDEPENDENT_AUDIT.json')
+         'COST_QUALIFICATION.json','COMPLETE.json','INDEPENDENT_AUDIT.json','SUPPLEMENT.json')
+OPTIONAL_RESULTS=('ARTIFACT_CHECK.json',)
 
 
 def curate(raw,output,phase):
@@ -27,6 +28,10 @@ def curate(raw,output,phase):
             for prefix,marker in prefixes:value=value.replace(prefix,marker)
         return value
     names=QUALIFICATION if phase=='qualification' else RESULTS
+    missing_optional=[]
+    if phase=='results':
+        names+=tuple(n for n in OPTIONAL_RESULTS if (raw/n).exists())
+        missing_optional=[n for n in OPTIONAL_RESULTS if not (raw/n).exists()]
     output.mkdir(parents=True,exist_ok=True); manifest={}
     for name in names:
         content=json.dumps(portable(read(raw/name)),indent=2)+'\n'; target=output/name
@@ -45,6 +50,7 @@ def curate(raw,output,phase):
              for name in ('OPPORTUNITY.json','PRELIMINARY_ATTEMPT.json')
              if phase=='qualification' and (output/name).exists()}
     receipt.write_text(json.dumps(dict(files=manifest,derived_receipts=derived,
+        missing_optional_receipts=missing_optional,
         primary_scope='one fixed N1000/D128/radius0 mixed trace; 30 formal processes',
         raw_evidence='Retained external task-owned storage; raw hashes are not portable hashes',
         exclusions=['raw inputs','full binary outputs','GPU identifiers','process identifiers',
