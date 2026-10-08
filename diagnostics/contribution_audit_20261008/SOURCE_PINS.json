@@ -1,0 +1,152 @@
+{
+  "name": "GTS_CORE_CLAIM_AUDIT_20261008",
+  "phase": "D0",
+  "state": "D0_COMPLETE_STOP_NO_DISTINCT_MECHANISM_YET",
+  "date": "2026-10-08",
+  "repository": "wangwenqingqq/GTS-variants",
+  "context_ref": "5f4abef1f137b679a1a791eea5eede72a093ed59",
+  "range_asset_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+  "user_specifications_sha256": {
+    "GTS_中心贡献核验_叶分组与掩码执行_实验计划_20261008.md": "fe4ca17729f555decafe907384056c703d344e4044d45cae23e7a5d7faf1c23d",
+    "GTS_中心贡献核验_contract_20261008.yaml": "e785e6650706d9aba968289e13810ad9ebafcaf97824179ed30e83eafb690f48"
+  },
+  "code_and_existing_evidence": {
+    "diagnostics/arithmetic_path_boundary_20260928/strict_l2.cuh": {
+      "sha256": "349a950c64d6d1ebe69a70f1f9203b3d1ac54e08135e09aeca5d46f60da431a9",
+      "lines": 164,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_exact_highdim_20261001/batch_bench.cu": {
+      "sha256": "713ee107061d9b3807e13ebebbfae41216d45194484b32450454cc4b9bb293a9",
+      "lines": 284,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_exact_highdim_20261001/batch_l2.cuh": {
+      "sha256": "4cd657a17b07e3c8f5fed1722ee617071617b7d343ca6830f9f714db31d85c72",
+      "lines": 63,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_exact_highdim_20261001/batch_output.cuh": {
+      "sha256": "ce2db358520a3c800a4884c3b339081f89c00522e67e969d0fb31749e8f25beb",
+      "lines": 48,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_exact_highdim_20261001/rootcause_l2.cuh": {
+      "sha256": "24b0d848d1a633112986c816886c96826c29b716022d617fa148da73e95a384e",
+      "lines": 56,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_tree_inheritance_20261002/CONTRACT.yaml": {
+      "sha256": "e63a488ef5c74bfe66e2009fedb055217d43fb4a87104a5fb93663df33ba4540",
+      "lines": 357,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_tree_inheritance_20261002/PREFLIGHT.json": {
+      "sha256": "559158d05421a9ec8446e91e39727233a79446d732c0400bcc4c90efde9dba2d",
+      "lines": 100,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_tree_inheritance_20261002/RESULTS.md": {
+      "sha256": "2228676709481a4bf0c3e3eeae48751db5035340ac15c6c932ff317e6d6e73e9",
+      "lines": 50,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_tree_inheritance_20261002/batch_candidate_tasks.cuh": {
+      "sha256": "086344ac3c591896bc95c5b1fa7be8f0d2fff265450123159849f7688c067af0",
+      "lines": 142,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_tree_inheritance_20261002/batch_tree_prefix.cuh": {
+      "sha256": "5ad3230b9d109a0358be2d50622f227382b8a2518a3a4a298cd0d4ad8d5057b0",
+      "lines": 53,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/batch_tree_inheritance_20261002/p4_bench.cu": {
+      "sha256": "3acb6760d8031b1e30d417f7805a2244c6b9db57f441fd48529d8d1da3c2804b",
+      "lines": 268,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    },
+    "diagnostics/external_mask_validation_20261002/RESULTS.md": {
+      "sha256": "7b50376e237fa9e5495994aa888f690b9f6a66640b19790e0b12c4a9e38749ea",
+      "lines": 51,
+      "source_ref": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+      "present_in_context_tree": false
+    }
+  },
+  "literature": {
+    "G-PICS": {
+      "publication_pdf_sha256": "16562b756227907376f2fd7271e7a1d0854532aa1802f621044e5542ff06a16a",
+      "bytes": 935168,
+      "url": "https://cse.usf.edu/~tuy/pub/SSDBM18.pdf",
+      "reviewed_pdf_pages_1_based": [
+        6,
+        7
+      ],
+      "review": "primary text and visual layout reviewed; G-PICS Algorithm5 and output buffers; Harmonia section4.1; not a comprehensive novelty survey"
+    },
+    "Harmonia": {
+      "publication_pdf_sha256": "47a36ece443d5f93cf1bf39a76f2f820a68ff740b22df73f2073d7712c1fd2f0",
+      "bytes": 854335,
+      "url": "https://www.ece.lsu.edu/lpeng/papers/ppopp-19.pdf",
+      "reviewed_pdf_pages_1_based": [
+        6,
+        7
+      ],
+      "review": "primary text and visual layout reviewed; G-PICS Algorithm5 and output buffers; Harmonia section4.1; not a comprehensive novelty survey"
+    }
+  },
+  "source_selection": "Range assets resolved through frozen Git blobs, not current worktree or latest K10/U10 entry; missing-at-context files are still available at range_asset_ref. No checkout, source mutation or dependency guessing.",
+  "existing_implementation_search": {
+    "scopes": [
+      "frozen P4 TreeBatch and its imported P0-P3 batch distance/output/pack",
+      "frozen P5 RESULTS",
+      "current diagnostics and frozen diagnostics source keyword search"
+    ],
+    "named_group_matches": 0,
+    "semantic_result": "C_TASK fixed adjacent query-pair mask tasks are present; no qualified actual region-to-query list verifier identified in inspected assets. Keyword absence is not a semantic proof across all repositories."
+  },
+  "conceptual_difference": "UNRESOLVED",
+  "outcome": "NO_DISTINCT_MECHANISM_YET",
+  "equivalent_whole_system_claim": false,
+  "key_source_finding": "Sequential RN sums, independent every32 early exit, any-active object coordinate reuse already exist in SCAN batchDistance; masked_distance adds tree candidate gating and skip-on-empty, task_distance adds fixed-pair nonempty physical tile selection.",
+  "allocation_finding": "TreeBatch allocates candidate/positions/task/masks for all tree modes. Avoiding C_ID hot list materialization does not prove removal of that retained allocation or reduced whole-process peak.",
+  "historical_binary_sha256": "36adb09b490d124591e78f0332e0dd0c114ee8f621018b82ae7be3d8dd491c77",
+  "new_candidate_commit": null,
+  "new_candidate_binary_sha256": null,
+  "new_gpu_processes": 0,
+  "new_clean_timing_processes": 0,
+  "new_benchmark_code_files": 0,
+  "D1": "not entered: no nontrivial implemented interaction beyond representation/cache/ordinary tiling identified by D0",
+  "D2": "not executed, no registered new timings",
+  "D3": "not executed, conditional",
+  "D4": "not executed, conditional",
+  "preserved": [
+    "old P4/P5 inputs, source, qualification and positive/negative results",
+    "834 K10 rows and qualified results",
+    "U10 lifecycle results",
+    "no historical denominator reuse"
+  ],
+  "claims_not_made": [
+    "GROUP_SHARED performance or correctness",
+    "original G-PICS system superiority",
+    "formal whole-algorithm equivalence",
+    "first proposal of shared scanning/early exit",
+    "unified kNN/range/update",
+    "novelty disproved for every possible future design"
+  ],
+  "timing_readout": {
+    "old_P4": "sum of batch host-ready times; pinned Host query ID/radius fill excluded; output audit/files between batches",
+    "new_D2": "continuous Q256 Host-ready pass including query preparation, output files and oracle outside timer; not measured by this D0"
+  }
+}

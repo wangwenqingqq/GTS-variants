@@ -165,3 +165,16 @@ historical rerun or new optimization direction is authorized by this ledger.
 | 全量正确性与新身份资格 | 24 正式进程共核验 120179880 个结果；48 新观察器控制另核验 240359760 个结果；成员重数/严格 FP32/状态通过，模式间输出 hash 相同；四边界与 memcheck/synccheck 通过 | N1000/D128 既有物理行重插入/live-rank/串行 range；不扩大为新向量/稳定外部 ID/并发/N1M 动态 |
 
 正式性能 24/最多36，另有观察器48、边界4、sanitizer2、极小profile2，共80个GPU进程，后三类及观察器不进性能统计。所有原轮次、顺序分层、query/insert/delete/rebuild百分位、setup/finaldrain/选定容量与未知项完整保留。旧834行、K10合格表与A所用raw证据未改；R10/30k/全冷/静态P7统一入口及外部动态仍pending，不追加其他优化。
+
+## 2026-10-08 E4/C1 中心贡献 D0 核验
+
+[机制差异表](../contribution_audit_20261008/MECHANISM_DELTA.md)、[裁决](../contribution_audit_20261008/DECISION.md)与[来源hash](../contribution_audit_20261008/SOURCE_PINS.json)只核对指定 f16d09a 范围资产及 G-PICS §4/Algorithm5、Harmonia §4.1，新增GPU进程0，不改既有 E4 工程收益。
+
+| E4/C1 子主张 | 新核对结果 | 当前裁决 |
+|---|---|---|
+| 叶登记/共享数据、两阶段输出作为新概念 | G-PICS 已有叶查询列表、叶数据共享与分页池；Harmonia 已讨论查询组织成本 | 已有机制前例；不以通用概念申报首次 |
+| 掩码引入独立早退与共享的新交互 | 强 SCAN batchDistance 已有每对独立sum/active、每32维早退与 any-active 坐标复用；masked_distance 加候选门控，task_distance 加固定查询对的非空块任务 | 编码、驻留角色、线程映射有实现差异；目前未识别超出普通分块/缓存的已实现机制，不据此声称全算法形式等价 |
+| 减少候选物化/空间 | MASK 省 C_ID 的热 select/gather，但仍写 uint8_t 密集候选；TASK 仍先付字节候选再生成bitset/CUB任务；TreeBatch 三路径都保留 positions/task/mask 分配 | 不能称已消除全部物化或降低任务峰值；1-bit 描述只适用于 TASK 的 lane mask，不适用于 C_MASK |
+| 现有方案不足以解释已测收益 | P4/P5 的限定范围收益与全部负例保留，C_TASK 不能省略；没有新的合理 GROUP 同轮测量 | 相对 GROUP 的值仍未测，不宣布 PRIOR_MECHANISM_SUFFICIENT_ON_TESTS 或系统优于 G-PICS |
+
+本轮按上传计划 D0 停止规则裁决 NO_DISTINCT_MECHANISM_YET，概念区别/实测价值/论文成熟度分开记录。未新增基线、计时框架、查询或二进制，D1–D4 未进入；没有将旧批次耗时之和重标为新连续pass。需要新增设计才能形成区别时，保留“需要新研究”，不以扩大GPU表替代设计论证。
