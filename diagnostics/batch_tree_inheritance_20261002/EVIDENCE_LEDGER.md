@@ -151,3 +151,17 @@ historical rerun or new optimization direction is authorized by this ledger.
 18个U10 on进程（每seed六个）的query.tree占比中位84.347%/85.026%/85.183%，逐进程八阶段原值完整保留。另一个已有NSYS的query.tree内110,000次显式内部申请+110,000次释放API包含预算612.809ms；必要kernel/标量反馈/初始化与所有等待区间分别解释，不把包含时间当净可省。
 
 [候选manifest](../next_campaign_20261004/CANDIDATE_MANIFEST.json)登记唯一U_LIFE_BRIDGE，尚未实现/计时；仅复用原生range/update内部11个工作区，保持Managed/Device类别、计算与所有屏障，外部结果和Thrust分配不动。先正确性与新身份观察器资格，再固定seed0431六对；无完整流程可信收益即停止扩展。静态P7未整合，R10/30k/全冷及扩大动态能力仍pending，原834行与K10合格结果未修改。
+
+## 2026-10-08 生命周期小桥接实测与停止决定
+
+本补记接续上述事前候选记录，实际结果见 [INTEGRATION_RESULT.md](../next_campaign_20261004/INTEGRATION_RESULT.md) 和 [U_LIFE_BRIDGE_RESULTS.json](../next_campaign_20261004/evidence/recovery/U_LIFE_BRIDGE_RESULTS.json)。仅一个新程序的 U_BASE/U_LIFE 两模式改变选定 11 个内部工作区寿命/容量，GPU 函数体、必要初始化/同步、分配内存类别、输出顺序及串行多重集合同不变；外部结果与 Thrust 仍不变。
+
+| 主张 | 新证据 | 判断与边界 |
+|---|---|---|
+| 生命周期开销在原生完整序列兑现 | 每 seed 六对 fresh 进程；0431/0432 trace 几何比 1.035288/1.030882，95% CI [1.031934,1.038690]/[1.027491,1.033833]，均 6/6 wins；setup+trace 同方向 | 局部约 3.41%/3.00% 时延下降；不作为统一 GTS++、新索引理论或外部动态领先证据 |
+| 扩展与保留门槛 | 0431 通过事前登记 gate 后扩展 0432；0432 trace/setup+trace 下界未过 1.03，insert p99 配对比中位数 1.035796；delete 0.906507 | 停止 seed0433，不补慢轮，不晋升 keeper；统计正收益不等于满足稳健/维护门槛 |
+| 所声明分配冗余确实减少 | 每 trace BASE 110000 alloc/free；LIFE 0431 为 26 次/228932 B/15 扩容，0432 为 11 次/251252 B/0 扩容，最终选定存活字节均零 | 只覆盖内部 11 槽，非全任务分配或设备精确峰值；保留容量占用如实计入 |
+| 计算工作与等待没有被删 | 两个小 NSYS 同输入各 564 次 launch；完整签名/顺序/grid/block/资源相同；alloc/free 各减少 193，allocation-event 字节差与选定账本一致 | scan/reduce/排序与同步调用数不变；没有新指令计数，profile 时间不混入正式倍率 |
+| 全量正确性与新身份资格 | 24 正式进程共核验 120179880 个结果；48 新观察器控制另核验 240359760 个结果；成员重数/严格 FP32/状态通过，模式间输出 hash 相同；四边界与 memcheck/synccheck 通过 | N1000/D128 既有物理行重插入/live-rank/串行 range；不扩大为新向量/稳定外部 ID/并发/N1M 动态 |
+
+正式性能 24/最多36，另有观察器48、边界4、sanitizer2、极小profile2，共80个GPU进程，后三类及观察器不进性能统计。所有原轮次、顺序分层、query/insert/delete/rebuild百分位、setup/finaldrain/选定容量与未知项完整保留。旧834行、K10合格表与A所用raw证据未改；R10/30k/全冷/静态P7统一入口及外部动态仍pending，不追加其他优化。

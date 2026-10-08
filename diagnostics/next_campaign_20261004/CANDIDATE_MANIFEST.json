@@ -1,9 +1,15 @@
 {
   "name": "U_LIFE_BRIDGE",
-  "status": "selected_for_one_conditional_lifecycle_test; not implemented",
+  "status": "measured; stopped after seed0432; not promoted to keeper",
   "analyzer_sha256": "422e15ed00e65c191b0ab5cbca9820261b4214e4c8ca438aa0ac2d745ec1af3b",
-  "candidate_binary_sha256": null,
-  "candidate_commit": null,
+  "candidate_binary_sha256": "8353f3ffbe503a4827d87c575d297a36d80ebc8a3564cbacff9af7f814ba5ce1",
+  "candidate_commit": {
+    "kind": "containing_commit",
+    "repository": "wangwenqingqq/GTS-variants",
+    "branch": "experiments/10k-stability-20261004",
+    "resolve": "git log -1 --format=%H -- diagnostics/next_campaign_20261004/u_life_workspace.hpp",
+    "note": "Avoid self-referential commit hash; controller/header/source/binary hashes were frozen before measurement. Commit A does not contain this candidate code."
+  },
   "baseline_binary_sha256": "f96746e38adabd9ff1dc511202bd5e4782c83101db31b2fe86e3af8c695c18ad",
   "work_reports": [
     {
@@ -871,5 +877,437 @@
     "PASS_PHYSICAL_COUNTERS.json": "963fae0b63c2c226c2bbbaea6348ecb6c4d31d79d80256516ffab0950799abfb",
     "U10_LEAN_TIMED_ROWS.json": "2587b4ef727802e1c470d668b8ca8bd5a59f6dbd880e0df0aa9ebd5d0f36c77d",
     "U10_NSYSTEMS.json": "337792b3c519b969a86dc4a3c6ebebfddb9487e4e038a3566bcd12c259f98909"
+  },
+  "selection_at_commit_A": {
+    "commit": "a1f84ecd4cb3585344da709815527d0205cb16ed",
+    "status": "selected_for_one_conditional_lifecycle_test; not implemented",
+    "candidate_binary_sha256": null,
+    "candidate_commit": null
+  },
+  "baseline_binary_role": "previous lean source provenance; both fresh BASE and LIFE use candidate_binary_sha256",
+  "integration": {
+    "decision": "stop_expansion_not_promoted",
+    "result_file": "INTEGRATION_RESULT.md",
+    "evidence_file": "evidence/recovery/U_LIFE_BRIDGE_RESULTS.json",
+    "evidence_sha256": "99bc49f4a260046a73740572ba0f666166ecd8dcb38dce39365785d82bc748a3",
+    "source": {
+      "baseline_source_manifest_sha256": "42e643f23a5fa9e8d8bba27610ce3692297addb06cdf11c863a398710f77d839",
+      "binary_sha256": "8353f3ffbe503a4827d87c575d297a36d80ebc8a3564cbacff9af7f814ba5ce1",
+      "kernel_bodies_equal": 50,
+      "sources": {
+        "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+        "include/u_life_workspace.hpp": "b33a8155f1bd5481166380f2bcb585ac2d89279e9cd0ce0c0084b21f60d4eefd",
+        "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+        "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+        "include/u10_trace.hpp": "7ddce5d07d59ab0aded53548f91c1d2c5c3317037803c80dbbeccf2917a15218",
+        "include/search_naive.cuh": "a8a248048857a5602ebb84d7f31b62b18eef1bb2867ba5f83c5cc87a1a2db0b2",
+        "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+        "include/update.cuh": "130a575b8f130874893eca01cca916256ae6a4012d4c9997ed157de6e5fc3857",
+        "include/tree.cuh": "8b5f051a2efd664e61480df16b27deb90d6fde5739c24646720e6aa5bb606c4a",
+        "src/main.cu": "a261a1162696d53d60809ef09719eefc594bd6c02ee2fde3137bb115776ed140"
+      },
+      "build": [
+        "/usr/local/cuda/bin/nvcc",
+        "-std=c++17",
+        "-O3",
+        "-arch=sm_120",
+        "-rdc=true",
+        "-lineinfo",
+        "-Xnvlink=--ignore-host-info",
+        "-I<TASK_ROOT>/native_timed/source/include",
+        "<TASK_ROOT>/native_timed/source/src/main.cu",
+        "-o",
+        "<TASK_ROOT>/native_timed/u_life_bridge"
+      ],
+      "workspace_names": [
+        "search_num",
+        "result_num",
+        "query_node_list",
+        "qnode_idx",
+        "qnode_count",
+        "qnode_count_prefix",
+        "init_result_id",
+        "init_result_dis",
+        "qresult_idx",
+        "query_lnode",
+        "query_qid"
+      ]
+    },
+    "registration_sha256": "00e0acf29865dce3986809f2c7f7263d324864d71fa03ddb421933389348bdf5",
+    "completion_sha256": "1b804bc3bab19b486af7d268f9cfd9b21ca5878b9038da14840507a3c93fe9f3",
+    "results": [
+      {
+        "seed": 2026100431,
+        "pairs": 6,
+        "observer": [
+          {
+            "mode": "U_BASE",
+            "raw_ratios": [
+              0.992620662417733,
+              1.0050829911254389,
+              0.9985464440595869,
+              0.9981724153672112,
+              1.0061441039652552,
+              0.9984660659341263
+            ],
+            "upper95": 1.0033660130092732,
+            "output_equal": true,
+            "admitted": true
+          },
+          {
+            "mode": "U_LIFE",
+            "raw_ratios": [
+              1.0030131001092073,
+              0.9936404408406063,
+              0.9997771090467128,
+              0.9994564185517412,
+              1.0044768110638556,
+              1.0131476574474598
+            ],
+            "upper95": 1.0071194390594183,
+            "output_equal": true,
+            "admitted": true
+          }
+        ],
+        "trace_ms": {
+          "geomean": 1.0352884686303634,
+          "CI95": [
+            1.0319337227703036,
+            1.0386896592274106
+          ],
+          "wins": 6,
+          "raw_ratios": [
+            1.0324543610742727,
+            1.0382025622965538,
+            1.0308176578984805,
+            1.039157828263621,
+            1.0300508714589007,
+            1.0411019598267797
+          ],
+          "base_first_geomean": 1.0311071430127166,
+          "life_first_geomean": 1.0394867502782728
+        },
+        "setup_plus_trace_ms": {
+          "geomean": 1.0348937737939352,
+          "CI95": [
+            1.0316922643060837,
+            1.0381921039704451
+          ],
+          "wins": 6,
+          "raw_ratios": [
+            1.032305337439056,
+            1.0367137634221175,
+            1.0294574302541923,
+            1.0401700484255614,
+            1.0311185773311087,
+            1.0396478491995325
+          ],
+          "base_first_geomean": 1.0309597865932172,
+          "life_first_geomean": 1.0388427724970386
+        },
+        "maintenance_p99_ratios": {
+          "insert": 0.9990405634188584,
+          "delete": 1.0266997523302854
+        },
+        "expand": true
+      },
+      {
+        "seed": 2026100432,
+        "pairs": 6,
+        "observer": [
+          {
+            "mode": "U_BASE",
+            "raw_ratios": [
+              1.0020021402186836,
+              0.9995995578281375,
+              1.0100525693669202,
+              1.0013048881214832,
+              1.0044564267416727,
+              1.0018253541096236
+            ],
+            "upper95": 1.0061960727997787,
+            "output_equal": true,
+            "admitted": true
+          },
+          {
+            "mode": "U_LIFE",
+            "raw_ratios": [
+              0.9989746828850831,
+              1.0045785973792942,
+              1.0051065853562382,
+              0.9862110653434019,
+              1.0028989962009953,
+              1.0001291693243877
+            ],
+            "upper95": 1.0038182345029274,
+            "output_equal": true,
+            "admitted": true
+          }
+        ],
+        "trace_ms": {
+          "geomean": 1.0308815247169119,
+          "CI95": [
+            1.0274908183800948,
+            1.033833005202128
+          ],
+          "wins": 6,
+          "raw_ratios": [
+            1.0296581503534514,
+            1.0308746916729499,
+            1.0332309464358798,
+            1.0319302982380052,
+            1.0234195235618226,
+            1.036220385822317
+          ],
+          "base_first_geomean": 1.028761543821988,
+          "life_first_geomean": 1.0330058742811565
+        },
+        "setup_plus_trace_ms": {
+          "geomean": 1.0309744049776879,
+          "CI95": [
+            1.0275177690466315,
+            1.033873055547546
+          ],
+          "wins": 6,
+          "raw_ratios": [
+            1.0296326609916169,
+            1.031847530253867,
+            1.0319763141474867,
+            1.0328398113218702,
+            1.023283407176249,
+            1.036312725270058
+          ],
+          "base_first_geomean": 1.0282908956130312,
+          "life_first_geomean": 1.033664917440924
+        },
+        "maintenance_p99_ratios": {
+          "insert": 1.035796236511969,
+          "delete": 0.9065068559034877
+        },
+        "expand": false
+      }
+    ],
+    "process_counts": {
+      "performance": 24,
+      "observer": 48,
+      "boundary_correctness": 4,
+      "sanitizer": 2,
+      "tiny_profile": 2,
+      "total_GPU_processes": 80
+    },
+    "workspace_slots": [
+      {
+        "index": 0,
+        "name": "search_num",
+        "memory_kind": "Managed",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "one scalar overwritten with current qnum/reduce before use",
+        "reset_or_current_write": "host write qnum, then current reduce output",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 1,
+        "name": "result_num",
+        "memory_kind": "Managed",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "one scalar overwritten by current result reduce before use",
+        "reset_or_current_write": "current reduce output before any result allocation",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 2,
+        "name": "query_node_list",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current max_node_num[0]*qnum domain after initQnode",
+        "reset_or_current_write": "initQnode over current domain before traversal",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "max_node_num[0]*qnum*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 3,
+        "name": "qnode_idx",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current batch max_node_num[0]*qnum_leaf scan domain; batch qnum_leaf may be smaller than acquisition bound",
+        "reset_or_current_write": "exclusive_scan writes current batch domain; acquisition bound tail is not read",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "max_node_num[0]*qnum_leaf*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 4,
+        "name": "qnode_count",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current batch qnum_leaf count outputs, not uninitialized allocation tail",
+        "reset_or_current_write": "getQnodeCount writes current query counts",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "qnum_leaf*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 5,
+        "name": "qnode_count_prefix",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current batch qnum_leaf prefix outputs, not uninitialized allocation tail",
+        "reset_or_current_write": "current exclusive_scan writes current prefix",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "qnum_leaf*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 6,
+        "name": "init_result_id",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "only current accepted leaf slots selected by current qresult_idx; other slots are not semantic input",
+        "reset_or_current_write": "leaf kernel writes current accepted slots; merge reads only slots selected by current result flags",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "search_num[0]*MAX_SIZE*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 7,
+        "name": "init_result_dis",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "only current accepted leaf slots selected by current qresult_idx; other slots are not semantic input",
+        "reset_or_current_write": "leaf kernel writes current accepted slots; merge reads only slots selected by current result flags",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "search_num[0]*MAX_SIZE*sizeof(float)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 8,
+        "name": "qresult_idx",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current search_num[0]*MAX_SIZE flags initialized by initRes and rewritten by current leaf/scans",
+        "reset_or_current_write": "initRes resets current slot domain, then leaf write and current scans",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "search_num[0]*MAX_SIZE*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 9,
+        "name": "query_lnode",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current search_num[0] candidate entries written by mergeLeafNode",
+        "reset_or_current_write": "mergeLeafNode writes current candidate domain",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "search_num[0]*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      },
+      {
+        "index": 10,
+        "name": "query_qid",
+        "memory_kind": "Device",
+        "owner": "ULifeWorkspace::slots[index]",
+        "physical_pointer": "slots[index].pointer; unpublished runtime address; exported to same original algorithm variable",
+        "capacity_bytes": "retained slots[index].capacity >= current_request_bytes, or actual growth before use",
+        "logical_valid_length": "current search_num[0] candidate entries written by mergeLeafNode",
+        "reset_or_current_write": "mergeLeafNode writes current candidate domain",
+        "invalidated_contents": "every new query; updates/rebuild change current domain; old contents never used as current candidate or answer",
+        "growth": "re-evaluate current request after rebuild; if bytes exceed retained capacity, free old after prior completion fence, then allocate current bytes within trace",
+        "release": "BASE per call; LIFE growth replacement or finish before final drain ends",
+        "kernel_capture": "ordinary launches with current pointer; no retained Graph capture",
+        "Graph": "N/A",
+        "AoSoA": "N/A",
+        "current_request_bytes": "search_num[0]*sizeof(int)",
+        "recorded_request_bytes": "logical_bytes records requested allocation bound; not an initialized-content certificate"
+      }
+    ],
+    "initial_reservation": "none; first demand allocation and all actual growth charged in trace",
+    "final_release": "selected live bytes zero in all checked processes; final release is within final drain and trace, not additive",
+    "kernel_work_evidence": "50 existing global function bodies byte-identical; two tiny NSYS traces have equal ordered564 signatures/grid/block/resources; formal stage call counts equal; no fresh FP instruction counter",
+    "whole_task_allocation_peak": "unknown; selected 11-slot capacity ledger only; sampled device-used global, not incremental or exact",
+    "not_integrated": {
+      "seed2026100433": "stopped by second-seed predeclared gate",
+      "R10": "pending",
+      "30k": "pending",
+      "full_cold": "pending",
+      "external_dynamic": "pending",
+      "new_vectors": "pending",
+      "N1M_dynamic": "pending",
+      "concurrency": "pending"
+    }
   }
 }

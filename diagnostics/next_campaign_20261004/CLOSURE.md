@@ -1,5 +1,17 @@
 # 统计闭合后的剩余门槛
 
+## 2026-10-08 本轮闭合结果
+
+提交 A 已完成[工作量与流量归因](REDUNDANCY_ATTRIBUTION.md)：Full/Bound/Mask 同工作域计数对齐，Bound/Mask 少算 46.72%/48.15%；纯 coalescing 因果仍不支持。18 个既有 U10 on 进程的八阶段账及一个独立 profile 的选定分配预算已闭合。
+
+提交 B 已完成[原生范围查询—更新工作区生命周期小桥接](INTEGRATION_RESULT.md)。同一新二进制 U_BASE/U_LIFE 只改变 11 个内部工作区的容量/寿命，24 个正式进程与全部输出核验通过；两条轨迹时延下降约 3.41%/3.00%。第二条 trace/setup+trace 的 CI 下界未过 1.03，insert p99 配对比中位数增加 3.58%，按事前登记停止第三 seed，不晋升 keeper。新观察器资格、边界/sanitizer 与两份小 profile 分列，全部六轮和负门槛保留。
+
+原生小桥接已经存在；**静态 P7 kNN 与原生更新的统一候选仍不存在**。Graph/AoSoA 为 N/A；完整任务分配峰值、CPU useful time、UVM/合并访存因果、R10/30k/全冷、任意新向量/N1M 动态/并发及外部动态比较仍未闭合。未改原 834 行和 K10 合格结果，不自动启动这些任务。实际代码/输入/输出身份见 [CANDIDATE_MANIFEST.json](CANDIDATE_MANIFEST.json) 与[完整技术结果](evidence/recovery/U_LIFE_BRIDGE_RESULTS.json)。
+
+## 2026-10-07 统计闭合时的记录
+
+以下内容保留该次提交的状态与排序；其中四计数与唯一生命周期小桥接的后续状态以上述 2026-10-08 记录为准。它们不改变历史 K10 准入，也没有形成统一搜索—更新总倍率。
+
 基点 `5b145bceabbc7aa544e6d6ff25657403ea92e151`；834行/139配置组/12条件已做纯CPU六轮统计；全局comparison_admitted仍false。未运行新的GPU任务。
 
 ## 当前实际实现身份
