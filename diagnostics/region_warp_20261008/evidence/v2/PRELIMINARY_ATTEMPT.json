@@ -1,0 +1,53 @@
+{
+  "state": "retained_but_excluded",
+  "primary_processes": 0,
+  "diagnosis": "The first direct/micro fixture repeated after 23 rows/dimensions. It did not satisfy the declared high-entropy qualification. Kernel correctness was not disproved.",
+  "repair": "Deterministic mt19937 integers; only intentional rows 0/1 duplication. New immutable namespace, rebuild, complete requalification and microcheck.",
+  "source_sha256": "462e496620d60b35e61cd04b7e63696ce1e24fc5c9e5020c3adddcb6eff9dd47",
+  "validation_sha256": "bea74210fc53e083928115078f9a938aa1dbd2b4069f953efa9ac0124eb00f39",
+  "micro_sha256": "3c4339b55c04fc2ccc1589bb8e96b0642969aaf229977b966b4fadd2b5b4fb5c",
+  "test_source_sha256": "9315ef78c67761e9a6d631a35377eecce330869eaf93b03d0b86e3779df02bb6",
+  "rejected_micro": {
+    "label": "micro",
+    "passed": true,
+    "receipt_sha256": "b0d5d883321f78493f854248b53d9d053cc8f8eb4b984c0be692417bf210a119",
+    "stdout_sha256": "7a5b8c903e4b5fba4cd15c249ecdb501f998be9480135b0f6ac958ce3c89602a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "registration_sha256": "23944fb62f2d9d57742b5ca2403157a8e438984cb4f484133ae63901ddf10c7e",
+    "scope": "one process, six direction-balanced CUDA-event batches; 512 launches each; 8x20 bounded micro only",
+    "raw": [
+      {
+        "round": 1,
+        "serial_ms": 2.76411,
+        "warp_ms": 0.748909
+      },
+      {
+        "round": 2,
+        "serial_ms": 2.76411,
+        "warp_ms": 0.748572
+      },
+      {
+        "round": 3,
+        "serial_ms": 2.76411,
+        "warp_ms": 0.748531
+      },
+      {
+        "round": 4,
+        "serial_ms": 2.7641,
+        "warp_ms": 0.748558
+      },
+      {
+        "round": 5,
+        "serial_ms": 2.76411,
+        "warp_ms": 0.748953
+      },
+      {
+        "round": 6,
+        "serial_ms": 2.7641,
+        "warp_ms": 0.748557
+      }
+    ],
+    "geometric_serial_over_warp": 3.6919735335275257
+  },
+  "admission": "No periodic-fixture estimate enters the formal matrix or the repaired micro estimate."
+}

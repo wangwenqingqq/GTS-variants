@@ -1,0 +1,78 @@
+{
+  "seed": 2026100431,
+  "modes": [
+    "PAR_STRONG",
+    "SPLIT_SERIAL",
+    "FUSED_SERIAL",
+    "SPLIT_WARP",
+    "FUSED_WARP"
+  ],
+  "orders": [
+    [
+      "PAR_STRONG",
+      "SPLIT_SERIAL",
+      "FUSED_SERIAL",
+      "SPLIT_WARP",
+      "FUSED_WARP"
+    ],
+    [
+      "FUSED_WARP",
+      "SPLIT_WARP",
+      "FUSED_SERIAL",
+      "SPLIT_SERIAL",
+      "PAR_STRONG"
+    ],
+    [
+      "SPLIT_SERIAL",
+      "SPLIT_WARP",
+      "PAR_STRONG",
+      "FUSED_WARP",
+      "FUSED_SERIAL"
+    ],
+    [
+      "FUSED_SERIAL",
+      "FUSED_WARP",
+      "PAR_STRONG",
+      "SPLIT_WARP",
+      "SPLIT_SERIAL"
+    ],
+    [
+      "FUSED_SERIAL",
+      "PAR_STRONG",
+      "FUSED_WARP",
+      "SPLIT_SERIAL",
+      "SPLIT_WARP"
+    ],
+    [
+      "SPLIT_WARP",
+      "SPLIT_SERIAL",
+      "FUSED_WARP",
+      "PAR_STRONG",
+      "FUSED_SERIAL"
+    ]
+  ],
+  "primary_processes": 30,
+  "observer_processes": 60,
+  "source_sha256": "291c19accd66c467d55913beaba23b55c41cd40d91186877a4e2a1c439bdddc5",
+  "admission_sha256": "273734358098c43ad80712a4010d34ca959bc57d1c2e56afde126c7d600e5600",
+  "controller_sha256": "5905e106e5e4a6ded8c27459bcb7c5ddfb3433146b4cecf0297f452d95496c81",
+  "runner_sha256": "5ab0ed6bac55450858732cb690663e3d7fc1cd2be25bea5caa9c131b5b4a9bb4",
+  "oracle_adapter_sha256": "e4ff2fd2ffc84f28d08fcdfe3721c03749080a68f643f1bbc943b8f3d21a4e45",
+  "input_sha256": {
+    "data.txt": "3289dc170cfb98ebaba1f077db2a54fd6837ff13eafe9549c0ebdfee0439688d",
+    "events.txt": "b9f893d57d2a3617ec1798a4ccc42913c6c9ff4286c665e0612749ba6eee8ce8",
+    "expected.json": "62ec3f79f3e52f87630defd221db3f37947b263596157c3dcb24be3452e331b2"
+  },
+  "bootstrap_seed": 202610081022,
+  "bootstrap_resamples": 20000,
+  "scope": "12000-event Host-ready/ACK trace; setup+trace separate; no history denominator",
+  "comparisons": [
+    "SPLIT_SERIAL/SPLIT_WARP",
+    "FUSED_SERIAL/FUSED_WARP",
+    "SPLIT_WARP/FUSED_WARP",
+    "PAR_STRONG/FUSED_WARP",
+    "PAR_STRONG/SPLIT_WARP",
+    "SPLIT_SERIAL/FUSED_SERIAL"
+  ],
+  "expansion": "none; no automatic replacement or seed/budget sweep"
+}

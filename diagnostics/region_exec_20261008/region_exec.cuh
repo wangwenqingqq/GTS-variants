@@ -2,7 +2,7 @@
 #include "parallel_range.cuh"
 namespace rex {
 // Shared traversal for both interventions; only the final leaf handoff differs.
-template<bool Fused>
+template<bool Fused,bool Warp=false>
 __global__ void traverse_regions(View v,const int* root_active,uint64_t task_epoch,
                                 int* global_leaves,int* global_counts,float radius,
                                 int* hit,float* distances,int* error,Work w) {
@@ -55,18 +55,20 @@ __global__ void traverse_regions(View v,const int* root_active,uint64_t task_epo
     }
     if(failed){if(!threadIdx.x)atomicExch(error,2);return;}
     if(Fused) {
-        // Uniform leaf loop: all threads participate, including idle lanes.
-        for(int i=0;i<nl;i++)verify_leaf(v,leaves[i],query,radius,hit,distances,w);
+        if constexpr(Warp)verify_leaves_warp(v,leaves,nl,query,radius,hit,distances,w);
+        else for(int i=0;i<nl;i++)verify_leaf(v,leaves[i],query,radius,hit,distances,w);
     } else {
         for(int i=threadIdx.x;i<nl;i+=blockDim.x)global_leaves[region.leaf_offset+i]=leaves[i];
         if(!threadIdx.x)global_counts[rid]=nl;
     }
 }
+template<bool Warp=false>
 __global__ void verify_regions(View v,const int* leaf_list,const int* counts,float radius,int* hit,float* distances,Work w) {
     int rid=blockIdx.x;Region region=v.regions[rid];int nl=counts[rid];if(!nl)return;
     __shared__ float query[QUERY_DIM];
     for(int j=threadIdx.x;j<QUERY_DIM;j+=blockDim.x)query[j]=v.data[v.qids[0]*QUERY_DIM+j];
     __syncthreads();
-    for(int i=0;i<nl;i++)verify_leaf(v,leaf_list[region.leaf_offset+i],query,radius,hit,distances,w);
+    if constexpr(Warp)verify_leaves_warp(v,leaf_list+region.leaf_offset,nl,query,radius,hit,distances,w);
+    else for(int i=0;i<nl;i++)verify_leaf(v,leaf_list[region.leaf_offset+i],query,radius,hit,distances,w);
 }
 }

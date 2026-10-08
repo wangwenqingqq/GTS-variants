@@ -1,0 +1,95 @@
+{
+  "queries": 10000,
+  "epochs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "buckets": {
+    "0": {
+      "query_regions": 89868,
+      "candidate_objects": 0,
+      "distance_evaluations": 0
+    },
+    "1": {
+      "query_regions": 8805,
+      "candidate_objects": 88050,
+      "distance_evaluations": 79312
+    },
+    "2-8": {
+      "query_regions": 1327,
+      "candidate_objects": 26540,
+      "distance_evaluations": 25203
+    },
+    ">8": {
+      "query_regions": 0,
+      "candidate_objects": 0,
+      "distance_evaluations": 0
+    }
+  },
+  "totals": {
+    "query_regions": 100000,
+    "candidate_objects": 114590,
+    "distance_evaluations": 104515
+  },
+  "multi_leaf": {
+    "query_regions": 1327,
+    "candidate_objects": 26540,
+    "distance_evaluations": 25203
+  },
+  "multi_leaf_distance_work_fraction": 0.24114241974836148,
+  "normalized_work_stream_sha256": "0500611520cfd9e548b10a30ce6ea62b6309f905753638ae9b36c7daf10d445f",
+  "raw_log_sha256": "30c931b4be814b7997e8a689a1fd2f710de3cdbfe442789a1928d97a1f94879d",
+  "parent_work_exactly_equal": true,
+  "scope": "base-tree work only; no elapsed-time attribution",
+  "candidate_objects_definition": "all objects in accepted leaves, including deleted/self slots",
+  "distance_evaluations_definition": "actual non-self, non-deleted object evaluations"
+}

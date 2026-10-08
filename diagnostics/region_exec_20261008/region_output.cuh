@@ -10,6 +10,32 @@ __device__ inline void verify_leaf(View v,int nid,const float* query,float radiu
             float distance=legacy_object_distance(v.data,id,v.qids[0],query);
             if(distance<=radius) {
                 int slot=v.leaf_slot[nid]+j; hit[slot]=1;distances[slot]=distance;
+#ifdef REGION_WARP_TEST_OWNER
+                REGION_WARP_TEST_OWNER(slot);
+#endif
+            }
+        }
+    }
+}
+// The caller publishes query/leaves before entry; no CTA barrier in warp loops.
+__device__ inline void verify_leaves_warp(View v,const int* leaves,int nl,const float* query,
+                                         float radius,int* hit,float* distances,Work w) {
+    if(nl==0)return;
+    if(nl==1){verify_leaf(v,leaves[0],query,radius,hit,distances,w);return;}
+    const int warp_id=threadIdx.x/32,lane=threadIdx.x%32;
+    for(int i=warp_id;i<nl;i+=BLOCK_THREADS/32) {
+        int nid=leaves[i];Node node=v.nodes[nid];
+        for(int j=lane;j<node.size;j+=32) {
+            int id=v.order[node.lid+j];
+            if(!v.deleted[id]) {
+                if(id!=v.qids[0])count(w.objects,id);
+                float distance=legacy_object_distance(v.data,id,v.qids[0],query);
+                if(distance<=radius) {
+                    int slot=v.leaf_slot[nid]+j;hit[slot]=1;distances[slot]=distance;
+#ifdef REGION_WARP_TEST_OWNER
+                    REGION_WARP_TEST_OWNER(slot);
+#endif
+                }
             }
         }
     }

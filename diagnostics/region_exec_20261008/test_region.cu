@@ -2,7 +2,9 @@
 #include <cmath>
 #include <iostream>
 #include <numeric>
+#ifndef REGION_WARP_MICRO
 #define REGION_COUNTERS
+#endif
 #include "region_plan.hpp"
 #include "region_exec.cuh"
 using namespace rex;
@@ -12,7 +14,7 @@ template<class T> T* gpu(const std::vector<T>& x) {
     ck(cudaMemcpy(p,x.data(),x.size()*sizeof(T),cudaMemcpyHostToDevice));return p;
 }
 template<class T> std::vector<T> cpu(T* p,int n){std::vector<T> x(n);ck(cudaMemcpy(x.data(),p,n*sizeof(T),cudaMemcpyDeviceToHost));return x;}
-void test(std::vector<Node> nodes,std::vector<int> empty,int n,int arity,const char* label) {
+void test(std::vector<Node> nodes,std::vector<int> empty,int n,int arity,const char* label,bool warp=false) {
     std::vector<int> ids(n);std::iota(ids.rbegin(),ids.rend(),0);auto plan=make_plan(nodes,empty,ids,arity);
     int nn=nodes.size();auto nd=gpu(nodes);auto em=gpu(empty);auto id=gpu(ids);
     auto data=gpu(std::vector<float>(n*QUERY_DIM,0));auto deleted=gpu(std::vector<int>(n,0));auto qid=gpu(std::vector<int>{0});
@@ -33,10 +35,12 @@ void test(std::vector<Node> nodes,std::vector<int> empty,int n,int arity,const c
             ck(cudaMemset(hit,0,n*4));ck(cudaMemset(err,0,4));ck(cudaMemset(countleaf,0,plan.regions.size()*4));
             for(auto p:{w.nodes,w.pivots,w.leaves})ck(cudaMemset(p,0,nn*8));ck(cudaMemset(w.objects,0,n*8));
             float radius=kind==1?-1.0f:10000.0f;uint64_t epoch=kind==4?6:7;
-            if(fused)traverse_regions<true><<<v.region_count,BLOCK_THREADS>>>(v,active,epoch,leaf,countleaf,radius,hit,dis,err,w);
+            if(fused && warp)traverse_regions<true,true><<<v.region_count,BLOCK_THREADS>>>(v,active,epoch,leaf,countleaf,radius,hit,dis,err,w);
+            else if(fused)traverse_regions<true><<<v.region_count,BLOCK_THREADS>>>(v,active,epoch,leaf,countleaf,radius,hit,dis,err,w);
             else {
                 traverse_regions<false><<<v.region_count,BLOCK_THREADS>>>(v,active,epoch,leaf,countleaf,radius,hit,dis,err,w);
-                verify_regions<<<v.region_count,BLOCK_THREADS>>>(v,leaf,countleaf,radius,hit,dis,w);
+                if(warp)verify_regions<true><<<v.region_count,BLOCK_THREADS>>>(v,leaf,countleaf,radius,hit,dis,w);
+                else verify_regions<false><<<v.region_count,BLOCK_THREADS>>>(v,leaf,countleaf,radius,hit,dis,w);
             }
             ck(cudaDeviceSynchronize());int error=cpu(err,1)[0];
             require(error==(kind==4?1:kind==5?2:0),"expected visible error");
@@ -53,12 +57,13 @@ void test(std::vector<Node> nodes,std::vector<int> empty,int n,int arity,const c
                 (void*)hit,(void*)dis,(void*)active,(void*)leaf,(void*)countleaf,(void*)err,(void*)w.nodes,(void*)w.pivots,(void*)w.objects,(void*)w.leaves})ck(cudaFree(p));
     std::cout<<label<<" PASS regions="<<plan.regions.size()<<" fallback="<<plan.fallbacks<<'\n';
 }
-int main() try {
+int main(int argc,char** argv) try {
+    bool warp=argc==2 && std::string(argv[1])=="--warp";
     for(int n:{255,256,257}) {
         std::vector<Node> nodes(11);std::vector<int> empty(11,1);nodes[0]={-1,0,n,0,0};empty[0]=0;int pos=0;
         for(int j=1;j<=10;j++){int size=n/10+(j==10?n%10:0);nodes[j]={0,0,size,pos,1};empty[j]=0;pos+=size;}
-        test(nodes,empty,n,10,('O'+std::to_string(n)).c_str());
-        test({Node{-1,0,n,0,1}},{0},n,10,('L'+std::to_string(n)).c_str());
+        test(nodes,empty,n,10,('O'+std::to_string(n)).c_str(),warp);
+        test({Node{-1,0,n,0,1}},{0},n,10,('L'+std::to_string(n)).c_str(),warp);
     }
     for(int target:{127,128,129}) {
         std::vector<Node> nodes(511);std::vector<int> empty(511,1);int n=(target+1)/2,used=0;
@@ -67,8 +72,9 @@ int main() try {
             if(size>1){int a=size/2;build(2*i+1,lo,a);build(2*i+2,lo+a,size-a);}
         };build(0,0,n);
         if(target==128){int i=0;while(!nodes[i].is_leaf)i=2*i+1;nodes[i].is_leaf=0;nodes[2*i+1]=nodes[i];nodes[2*i+1].is_leaf=1;empty[2*i+1]=0;++used;}
-        require(used==target,"fixture node count");test(nodes,empty,n,2,('N'+std::to_string(target)).c_str());
+        require(used==target,"fixture node count");test(nodes,empty,n,2,('N'+std::to_string(target)).c_str(),warp);
     }
     std::cout<<"STRUCTURAL_PASS: 9 topologies x6 states x2 modes; integer oracle/exact work/stale/capacity\n";
+    std::cout<<"mapping="<<(warp?"WARP":"SERIAL")<<'\n';
     return 0;
 }catch(const std::exception& e){std::cerr<<"FAIL: "<<e.what()<<'\n';return 1;}

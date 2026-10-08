@@ -21,8 +21,10 @@ struct Bridge {
     Bridge() {
         const char* p=std::getenv("REGION_MODE");std::string s=p?p:"NATIVE";
         if(s=="PAR_STRONG")mode=1;
-        else if(s=="REGION_SPLIT")mode=2;
-        else if(s=="REGION_FUSED")mode=3;
+        else if(s=="REGION_SPLIT" || s=="SPLIT_SERIAL")mode=2;
+        else if(s=="REGION_FUSED" || s=="FUSED_SERIAL")mode=3;
+        else if(s=="SPLIT_WARP")mode=4;
+        else if(s=="FUSED_WARP")mode=5;
         else if(s!="NATIVE")throw std::runtime_error("unknown region mode");
     }
     template<class T> void allocate(T*& p,size_t n) {
@@ -64,6 +66,24 @@ struct Bridge {
         allocate(work.nodes,nn);allocate(work.pivots,nn);allocate(work.objects,n);allocate(work.leaves,nn);
 #endif
         view={(Node*)nodes,empty,order,nullptr,nullptr,nullptr,regions,leaf_slot,slot_pid,n,nn,int(plan.regions.size()),arity,++epoch};
+#ifdef REGION_COUNTERS
+        std::cout<<"REGION_PLAN {\"epoch\":"<<epoch<<",\"n\":"<<n<<",\"regions\":[";
+        for(size_t rid=0;rid<plan.regions.size();rid++) {
+            std::cout<<(rid?",":"")<<"{\"root\":"<<plan.regions[rid].root<<",\"leaves\":[";
+            bool first=true;
+            for(int nid:plan.leaves)if(plan.owners[hn[nid].lid]==int(rid)) {
+                std::cout<<(first?"":",")<<nid;first=false;
+            }
+            std::cout<<"]}";
+        }
+        std::cout<<"],\"leaf_objects\":[";
+        for(size_t k=0;k<plan.leaves.size();k++) {
+            int nid=plan.leaves[k];std::cout<<(k?",":"")<<'['<<nid<<",[";
+            for(int j=0;j<hn[nid].size;j++)std::cout<<(j?",":"")<<hi[hn[nid].lid+j];
+            std::cout<<"]]";
+        }
+        std::cout<<"]}\n";
+#endif
         u10_ck(cudaDeviceSynchronize());++refreshes;
         refresh_rows.push_back({n,int(plan.regions.size()),plan.nonempty_nodes,plan.total_leaves,plan.fallbacks,epoch,owned_bytes});
         refresh_ms.push_back(u10_ms(start));
@@ -96,8 +116,12 @@ struct Bridge {
             if(u10_env("REGION_STALE"))--task_epoch;
             if(mode==2) {
                 traverse_regions<false><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
-                verify_regions<<<view.region_count,BLOCK_THREADS>>>(view,leaf_list,leaf_counts,radius,hit,distances,work);
-            } else traverse_regions<true><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
+                verify_regions<false><<<view.region_count,BLOCK_THREADS>>>(view,leaf_list,leaf_counts,radius,hit,distances,work);
+            } else if(mode==4) {
+                traverse_regions<false><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
+                verify_regions<true><<<view.region_count,BLOCK_THREADS>>>(view,leaf_list,leaf_counts,radius,hit,distances,work);
+            } else if(mode==5)traverse_regions<true,true><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
+            else traverse_regions<true><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
         }
         u10_ck(cudaGetLastError());
         int count=thrust::reduce(thrust::device,hit,hit+view.n,0);
