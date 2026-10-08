@@ -143,3 +143,11 @@ historical rerun or new optimization direction is authorized by this ledger.
 | 统一search/update候选 | 静态P7 O_MASK与原生lean U10仍为不同二进制/状态入口 | 明确不存在；原生N1000重插入/live-rank/串行边界保留 | 未桥接更新后的AoSoA/树界/工作区/Graph刷新、任意新向量或并发 |
 
 统计量和门槛沿原冻结合同；seed20261003/20000重采样继承P7实现，K10冻结未单列，明确为采集后公开的实现参数。六进程只刻画固定查询集运行波动，不证明跨分布泛化。剩余R10/30k、全冷总计、逐窗口派生与物理工作计数校准不删；先复用已有计数，不默认新NCU。新增summarize_k10.py可一键重建三类表，22项CPU回归验证缺轮/重复/失败轮/错误替代配对/同B及未知窗口等边界。
+
+## 2026-10-08 机制归因与唯一生命周期候选
+
+[归因报告](../next_campaign_20261004/REDUNDANCY_ATTRIBUTION.md)仅分析既有计数，0个新增GPU任务。三个优化模式的同源/同输入/同launch、SASS与本次Full校准对齐：GIST N1M/D960/Q32的Full/Bound/Mask分别30.720/16.369/15.929十亿坐标，Bound/Mask少算46.72%/48.15%，单位坐标DRAM读取未下降。只能支持少算与源码显式共享读取，不能把静态累计倍率归为纯coalescing；原版pow路径、单次迭代launch不做等工作相除。动态shared steps/拒绝前后配对数保留未知。
+
+18个U10 on进程（每seed六个）的query.tree占比中位84.347%/85.026%/85.183%，逐进程八阶段原值完整保留。另一个已有NSYS的query.tree内110,000次显式内部申请+110,000次释放API包含预算612.809ms；必要kernel/标量反馈/初始化与所有等待区间分别解释，不把包含时间当净可省。
+
+[候选manifest](../next_campaign_20261004/CANDIDATE_MANIFEST.json)登记唯一U_LIFE_BRIDGE，尚未实现/计时；仅复用原生range/update内部11个工作区，保持Managed/Device类别、计算与所有屏障，外部结果和Thrust分配不动。先正确性与新身份观察器资格，再固定seed0431六对；无完整流程可信收益即停止扩展。静态P7未整合，R10/30k/全冷及扩大动态能力仍pending，原834行与K10合格结果未修改。

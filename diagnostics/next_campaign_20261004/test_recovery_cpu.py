@@ -205,4 +205,32 @@ class K10Statistics(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'污染替代轮来源改变'):
                 self.s.analyze(root)
 
+class AttributionTests(unittest.TestCase):
+    def setUp(self):
+        import align_work_and_traffic
+        self.a=align_work_and_traffic
+
+    def test_device_union_does_not_double_count_overlap(self):
+        self.assertEqual(self.a.union_ns([(5,15),(0,10),(7,9),(20,25)]),20)
+
+    def test_launch_shape_or_signature_change_rejects_matching(self):
+        r={'ID':'0','Kernel Name':'distance<2>','Grid Size':'(8,1,1)','Block Size':'(512,1,1)'}
+        for k in r:
+            other={**r,k:'changed'}
+            self.assertFalse(self.a.same_launch(r,other))
+
+    def test_relocation_preserves_bytes_but_changed_query_does_not(self):
+        x={'files':{'/old/GIST_diagnostic32.qid':'a','/old/opt_knn_bench':'b'}}
+        y={'files':{'/new/GIST_diagnostic32.qid':'a','/new/opt_knn_bench':'b'}}
+        self.assertEqual(self.a.identity_fields(x),self.a.identity_fields(y))
+        y['files']['/new/GIST_diagnostic32.qid']='c'
+        self.assertNotEqual(self.a.identity_fields(x),self.a.identity_fields(y))
+
+    def test_multiple_profile_launches_are_not_summed_as_one(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'metrics.csv'
+            p.write_text('ID,Kernel Name\n,\n0,distance\n1,distance\n')
+            with self.assertRaisesRegex(AssertionError,'exactly one'):
+                self.a.metric_csv(p)
+
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,875 @@
+{
+  "name": "U_LIFE_BRIDGE",
+  "status": "selected_for_one_conditional_lifecycle_test; not implemented",
+  "analyzer_sha256": "422e15ed00e65c191b0ab5cbca9820261b4214e4c8ca438aa0ac2d745ec1af3b",
+  "candidate_binary_sha256": null,
+  "candidate_commit": null,
+  "baseline_binary_sha256": "f96746e38adabd9ff1dc511202bd5e4782c83101db31b2fe86e3af8c695c18ad",
+  "work_reports": [
+    {
+      "method": "O_FULL",
+      "report_sha256": "cfceecf14f736f9b3b5387da038a29c567841adc8ebc62db7e88ca70b171ea5e",
+      "csv_sha256": "d49e9b7d663a8a3bd91d9e5682e796fd80bf5e1a009e6afd24198cc6b4992c7a",
+      "raw_name": "ncu_work_v1_O_FULL",
+      "identity_sha256": "54d6c4c24ec7966c5faa7871d7377cc9e2a3ada2649cf94fd205ecba9eda4937",
+      "traffic_identity_sha256": "940704bf43d1941b40141505fbe2f429694a614345bec78d80c4db9fdf09e40c",
+      "domain": {
+        "opt_knn_bench": "70520e34a97b155a0aeffa58d0b1c851684a6be4cd4fd71b170099da64cfae17",
+        "data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+        "GIST_diagnostic32.qid": "1fa9d1d9248acec3d44c4a23b566f593d6feb6bd810c7861f4c95c4e5b94bdb7",
+        "GIST.index": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+        "seeds_1000000.i32": "1ff926834e564b75a887714ee3a961544440b33a55b41749b8e42c36e3dd1d67",
+        "GIST_warm32.qid": "95883475690bbb5a800593609af63692c91166dad30c99c20624cae1c1f763ab",
+        "search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+        "knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+        "gts_bench_p7.cu": "56eaad985d1d68e4140540e0a0bd2ea2e5be65b748d8fbc19e3ff787f773c6c2",
+        "knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+        "opt_knn_bench.cu": "25a2bee09d94d956d24776cea2ca713771851edd05ab701a9efd52436a8c6ab3"
+      },
+      "observer_mode": {
+        "K10_EAGER": "",
+        "K10_STRESS": "",
+        "U10_OBSERVE": "",
+        "U10_TREE_AUDIT": ""
+      },
+      "environment": {
+        "OMP_NUM_THREADS": "",
+        "MKL_NUM_THREADS": "",
+        "OPENBLAS_NUM_THREADS": "",
+        "CUDA_LAUNCH_BLOCKING": ""
+      },
+      "output_bitwise_equal": true,
+      "configuration": {
+        "mode": "O_FULL",
+        "N": 1000000,
+        "D": 960,
+        "Q": 32,
+        "K": 8,
+        "B": 32,
+        "effective_depth": 4,
+        "seed_M": 4096,
+        "force_all": false
+      },
+      "scope": "first matching launch inside formal.query_pass after eight warm batches; replay=kernel/cache=none/clock=none"
+    },
+    {
+      "method": "O_BOUND",
+      "report_sha256": "581ab76b5510a9931272c47c1f1b75d3b1ec69163c86c8703391c3f43f8ada5c",
+      "csv_sha256": "552890030da319cba61b29b31481e01d36c2b780b2da42b6b123c4da9e2705b8",
+      "raw_name": "ncu_work_v1_O_BOUND",
+      "identity_sha256": "d4c4e34d86238d258a16a65a46f995e41f6088a1e362dc61ac87e33e30fbbaf8",
+      "traffic_identity_sha256": "16aa6592d4bb3180032355228e4799a8df26f170885097bd209a3b894cd5ff98",
+      "domain": {
+        "opt_knn_bench": "70520e34a97b155a0aeffa58d0b1c851684a6be4cd4fd71b170099da64cfae17",
+        "data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+        "GIST_diagnostic32.qid": "1fa9d1d9248acec3d44c4a23b566f593d6feb6bd810c7861f4c95c4e5b94bdb7",
+        "GIST.index": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+        "seeds_1000000.i32": "1ff926834e564b75a887714ee3a961544440b33a55b41749b8e42c36e3dd1d67",
+        "GIST_warm32.qid": "95883475690bbb5a800593609af63692c91166dad30c99c20624cae1c1f763ab",
+        "search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+        "knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+        "gts_bench_p7.cu": "56eaad985d1d68e4140540e0a0bd2ea2e5be65b748d8fbc19e3ff787f773c6c2",
+        "knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+        "opt_knn_bench.cu": "25a2bee09d94d956d24776cea2ca713771851edd05ab701a9efd52436a8c6ab3"
+      },
+      "observer_mode": {
+        "K10_EAGER": "",
+        "K10_STRESS": "",
+        "U10_OBSERVE": "",
+        "U10_TREE_AUDIT": ""
+      },
+      "environment": {
+        "OMP_NUM_THREADS": "",
+        "MKL_NUM_THREADS": "",
+        "OPENBLAS_NUM_THREADS": "",
+        "CUDA_LAUNCH_BLOCKING": ""
+      },
+      "output_bitwise_equal": true,
+      "configuration": {
+        "mode": "O_BOUND",
+        "N": 1000000,
+        "D": 960,
+        "Q": 32,
+        "K": 8,
+        "B": 32,
+        "effective_depth": 4,
+        "seed_M": 4096,
+        "force_all": false
+      },
+      "scope": "first matching launch inside formal.query_pass after eight warm batches; replay=kernel/cache=none/clock=none"
+    },
+    {
+      "method": "O_MASK",
+      "report_sha256": "e583f2a3285f7d16b933785daedb067147a9d4620218762bb9b49299aa410777",
+      "csv_sha256": "6e496cfd29cfc7215ff5bdd0849dac91f1a01c913f3ede882452d7295e25756f",
+      "raw_name": "ncu_work_v1_O_MASK",
+      "identity_sha256": "02369eb5982db0e5c8ccc3fc4bcaf204a941fd05272f9b4f52b8120c315d123e",
+      "traffic_identity_sha256": "2a5ee28f8cf57a994a5e6fdacf26340b55e32db3e24b6a87e333a312efeff39b",
+      "domain": {
+        "opt_knn_bench": "70520e34a97b155a0aeffa58d0b1c851684a6be4cd4fd71b170099da64cfae17",
+        "data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+        "GIST_diagnostic32.qid": "1fa9d1d9248acec3d44c4a23b566f593d6feb6bd810c7861f4c95c4e5b94bdb7",
+        "GIST.index": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+        "seeds_1000000.i32": "1ff926834e564b75a887714ee3a961544440b33a55b41749b8e42c36e3dd1d67",
+        "GIST_warm32.qid": "95883475690bbb5a800593609af63692c91166dad30c99c20624cae1c1f763ab",
+        "search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+        "knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+        "gts_bench_p7.cu": "56eaad985d1d68e4140540e0a0bd2ea2e5be65b748d8fbc19e3ff787f773c6c2",
+        "knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+        "opt_knn_bench.cu": "25a2bee09d94d956d24776cea2ca713771851edd05ab701a9efd52436a8c6ab3"
+      },
+      "observer_mode": {
+        "K10_EAGER": "",
+        "K10_STRESS": "",
+        "U10_OBSERVE": "",
+        "U10_TREE_AUDIT": ""
+      },
+      "environment": {
+        "OMP_NUM_THREADS": "",
+        "MKL_NUM_THREADS": "",
+        "OPENBLAS_NUM_THREADS": "",
+        "CUDA_LAUNCH_BLOCKING": ""
+      },
+      "output_bitwise_equal": true,
+      "configuration": {
+        "mode": "O_MASK",
+        "N": 1000000,
+        "D": 960,
+        "Q": 32,
+        "K": 8,
+        "B": 32,
+        "effective_depth": 4,
+        "seed_M": 4096,
+        "force_all": false
+      },
+      "scope": "first matching launch inside formal.query_pass after eight warm batches; replay=kernel/cache=none/clock=none"
+    },
+    {
+      "method": "GTS_ORIG",
+      "report_sha256": "632fb70062e5528ca10afb2b05007ced21a276016819099978ad98705b784570",
+      "csv_sha256": "70aef9aafa68e36d28e051b584b6cd5e7185adf3d7fe9dae23b1bb22b52a56ce",
+      "raw_name": "ncu_work_v1_GTS_ORIG",
+      "identity_sha256": "6e06bfc1aeb5ca4da6a8340a31823bf56f99e9b8357d4747e54803bb81c9cb05",
+      "traffic_identity_sha256": "33b7dd68c1129ec5bc0961decad2994894b095c411d2713877580a7c886ffb3d",
+      "domain": {
+        "gts_bench_p7": "40c1cf9b1f0d855a4d4c1cd55a6e4916af90fc0ca75e18b5d8be372ba5dc2075",
+        "data.f32bin": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+        "GIST_diagnostic32.qid": "1fa9d1d9248acec3d44c4a23b566f593d6feb6bd810c7861f4c95c4e5b94bdb7",
+        "GIST.index": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+        "GIST_warm32.qid": "95883475690bbb5a800593609af63692c91166dad30c99c20624cae1c1f763ab",
+        "search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+        "knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+        "gts_bench_p7.cu": "56eaad985d1d68e4140540e0a0bd2ea2e5be65b748d8fbc19e3ff787f773c6c2",
+        "knn_cutoff.cuh": "65548acc845bfdaee1e02aa63708d784225b9b4c1170b1f28384a6d085df4cb9",
+        "opt_knn_bench.cu": "25a2bee09d94d956d24776cea2ca713771851edd05ab701a9efd52436a8c6ab3"
+      },
+      "observer_mode": {
+        "K10_EAGER": "",
+        "K10_STRESS": "",
+        "U10_OBSERVE": "",
+        "U10_TREE_AUDIT": ""
+      },
+      "environment": {
+        "OMP_NUM_THREADS": "",
+        "MKL_NUM_THREADS": "",
+        "OPENBLAS_NUM_THREADS": "",
+        "CUDA_LAUNCH_BLOCKING": ""
+      },
+      "output_bitwise_equal": true,
+      "scope": "first matching launch inside formal.query_pass after eight warm batches; replay=kernel/cache=none/clock=none"
+    }
+  ],
+  "sass_sha256": "fb4e5d89dc5e202497953bf1e5bf6647ea8793ee06d8f19e15ad091f1942957b",
+  "U10_stage_summary": {
+    "2026100431": {
+      "processes": 6,
+      "tree_fraction_min": 0.8403333266499226,
+      "tree_fraction_median": 0.8434697544949782,
+      "tree_fraction_max": 0.8447787673886608
+    },
+    "2026100432": {
+      "processes": 6,
+      "tree_fraction_min": 0.8485398474254844,
+      "tree_fraction_median": 0.8502593544859565,
+      "tree_fraction_max": 0.8519813065093729
+    },
+    "2026100433": {
+      "processes": 6,
+      "tree_fraction_min": 0.849210378405108,
+      "tree_fraction_median": 0.851825663496506,
+      "tree_fraction_max": 0.85255036990825
+    }
+  },
+  "U10_profile": {
+    "query.tree": {
+      "calls": 10000,
+      "inclusive_host_ms": 15302.159812999995,
+      "api": {
+        "cudaMallocManaged_v6000": {
+          "calls": 60000,
+          "inclusive_ms": 172.12443600000003
+        },
+        "cudaMalloc_v3020": {
+          "calls": 150000,
+          "inclusive_ms": 379.48853299999956
+        },
+        "cuKernelGetName": {
+          "calls": 210000,
+          "inclusive_ms": 19.759265999997993
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 210000,
+          "inclusive_ms": 716.3245950000323
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 110000,
+          "inclusive_ms": 11364.799370999885
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 80000,
+          "inclusive_ms": 362.9467129999914
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 20000,
+          "inclusive_ms": 172.28297500000062
+        },
+        "cudaFree_v3020": {
+          "calls": 170000,
+          "inclusive_ms": 543.5938679999945
+        }
+      },
+      "kernels": {
+        "initQnode": {
+          "calls": 10000,
+          "gpu_ms": 139.4111680000039
+        },
+        "findNextRnn": {
+          "calls": 20000,
+          "gpu_ms": 6815.8589929999125
+        },
+        "updatePnodeFlag": {
+          "calls": 20000,
+          "gpu_ms": 43.81648299999903
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 20000,
+          "gpu_ms": 23.871031999997072
+        },
+        "initRes": {
+          "calls": 10000,
+          "gpu_ms": 9.283298999999905
+        },
+        "getQnodeCount": {
+          "calls": 10000,
+          "gpu_ms": 161.84127399997575
+        },
+        "DeviceScanInitKernel": {
+          "calls": 40000,
+          "gpu_ms": 35.09802699999896
+        },
+        "DeviceScanKernel": {
+          "calls": 40000,
+          "gpu_ms": 96.12440599999807
+        },
+        "mergeLeafNode": {
+          "calls": 10000,
+          "gpu_ms": 142.26268200000172
+        },
+        "leafProcessRnnUpdate": {
+          "calls": 10000,
+          "gpu_ms": 3257.795391000006
+        },
+        "getQresultCount": {
+          "calls": 10000,
+          "gpu_ms": 149.78792700000176
+        },
+        "mergeResultRnn": {
+          "calls": 10000,
+          "gpu_ms": 136.12836500002246
+        }
+      },
+      "copies_by_kind": {
+        "11": {
+          "calls": 4147,
+          "bytes": 18448384,
+          "gpu_ms": 4.312793000000228
+        },
+        "12": {
+          "calls": 2860,
+          "bytes": 12124160,
+          "gpu_ms": 1.3148890000000215
+        },
+        "2": {
+          "calls": 20000,
+          "bytes": 80000,
+          "gpu_ms": 7.752453000003359
+        }
+      },
+      "memset": {
+        "calls": 0,
+        "bytes": 0
+      },
+      "selected_workspace_api_ms": 612.8089870000019,
+      "selected_workspace_api_calls": 220000,
+      "device_activity_union_ms": 11020.346389,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "query.prefix_merge": {
+      "calls": 10000,
+      "inclusive_host_ms": 690.7122049999989,
+      "api": {
+        "cudaMallocManaged_v6000": {
+          "calls": 20000,
+          "inclusive_ms": 63.411587000000104
+        },
+        "cudaMalloc_v3020": {
+          "calls": 10000,
+          "inclusive_ms": 26.520985999999887
+        },
+        "cuKernelGetName": {
+          "calls": 30000,
+          "inclusive_ms": 2.8606279999999886
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 30000,
+          "inclusive_ms": 103.31319099999993
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 10000,
+          "inclusive_ms": 167.1081669999992
+        },
+        "cudaFree_v3020": {
+          "calls": 10000,
+          "inclusive_ms": 35.37116900000001
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 10000,
+          "inclusive_ms": 70.39449999999982
+        }
+      },
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 10000,
+          "gpu_ms": 8.622204999999807
+        },
+        "DeviceScanKernel": {
+          "calls": 10000,
+          "gpu_ms": 130.9759009999923
+        },
+        "mergeTotalResult": {
+          "calls": 10000,
+          "gpu_ms": 24.856504000002545
+        }
+      },
+      "copies_by_kind": {
+        "12": {
+          "calls": 231,
+          "bytes": 946176,
+          "gpu_ms": 0.11199999999999956
+        },
+        "11": {
+          "calls": 679,
+          "bytes": 2842624,
+          "gpu_ms": 0.700147
+        }
+      },
+      "memset": {
+        "calls": 0,
+        "bytes": 0
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 164.56661,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "delete.prefix_lookup": {
+      "calls": 1000,
+      "inclusive_host_ms": 59.82410100000007,
+      "api": {
+        "cudaMalloc_v3020": {
+          "calls": 1000,
+          "inclusive_ms": 3.140817
+        },
+        "cuKernelGetName": {
+          "calls": 3000,
+          "inclusive_ms": 0.3030110000000025
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 3000,
+          "inclusive_ms": 10.58006900000004
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 1000,
+          "inclusive_ms": 24.116162000000013
+        },
+        "cudaFree_v3020": {
+          "calls": 1000,
+          "inclusive_ms": 3.854942000000003
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 1000,
+          "inclusive_ms": 6.830064000000004
+        }
+      },
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 1000,
+          "gpu_ms": 0.8624629999999931
+        },
+        "DeviceScanKernel": {
+          "calls": 1000,
+          "gpu_ms": 20.5233520000001
+        },
+        "findIdx": {
+          "calls": 1000,
+          "gpu_ms": 2.2849860000000004
+        }
+      },
+      "copies_by_kind": {
+        "11": {
+          "calls": 63,
+          "bytes": 258048,
+          "gpu_ms": 0.06521199999999999
+        },
+        "12": {
+          "calls": 3,
+          "bytes": 12288,
+          "gpu_ms": 0.001343
+        }
+      },
+      "memset": {
+        "calls": 0,
+        "bytes": 0
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 23.672144,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "query.buffer": {
+      "calls": 1850,
+      "inclusive_host_ms": 1059.1251669999997,
+      "api": {
+        "cudaMalloc_v3020": {
+          "calls": 7400,
+          "inclusive_ms": 20.318579000000053
+        },
+        "cuKernelGetName": {
+          "calls": 9250,
+          "inclusive_ms": 0.9558109999999814
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 9250,
+          "inclusive_ms": 32.870186
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 5550,
+          "inclusive_ms": 891.3506860000019
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 1850,
+          "inclusive_ms": 10.851774999999998
+        },
+        "cudaFree_v3020": {
+          "calls": 7400,
+          "inclusive_ms": 22.234324999999995
+        },
+        "cudaMemcpy_v3020": {
+          "calls": 1850,
+          "inclusive_ms": 18.327308000000006
+        }
+      },
+      "kernels": {
+        "searchD": {
+          "calls": 1850,
+          "gpu_ms": 861.5482170000005
+        },
+        "check": {
+          "calls": 1850,
+          "gpu_ms": 1.9482519999999333
+        },
+        "DeviceScanInitKernel": {
+          "calls": 1850,
+          "gpu_ms": 1.6057529999999767
+        },
+        "DeviceScanKernel": {
+          "calls": 1850,
+          "gpu_ms": 4.106671000000003
+        },
+        "getRnn": {
+          "calls": 1850,
+          "gpu_ms": 2.000795999999956
+        }
+      },
+      "copies_by_kind": {
+        "12": {
+          "calls": 750,
+          "bytes": 3129344,
+          "gpu_ms": 0.3478670000000004
+        },
+        "11": {
+          "calls": 1753,
+          "bytes": 7237632,
+          "gpu_ms": 1.8167220000000295
+        },
+        "2": {
+          "calls": 1850,
+          "bytes": 7400,
+          "gpu_ms": 0.7165430000000214
+        }
+      },
+      "memset": {
+        "calls": 0,
+        "bytes": 0
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 872.274099,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "rebuild.compaction": {
+      "calls": 50,
+      "inclusive_host_ms": 31.906701000000005,
+      "api": {
+        "cudaMalloc_v3020": {
+          "calls": 100,
+          "inclusive_ms": 0.47653099999999987
+        },
+        "cudaMemcpy_v3020": {
+          "calls": 50,
+          "inclusive_ms": 0.829231
+        },
+        "cudaFree_v3020": {
+          "calls": 350,
+          "inclusive_ms": 1.8598519999999996
+        },
+        "cuKernelGetName": {
+          "calls": 150,
+          "inclusive_ms": 0.020904999999999986
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 150,
+          "inclusive_ms": 0.6146110000000002
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 50,
+          "inclusive_ms": 21.352499999999996
+        },
+        "cudaMallocManaged_v6000": {
+          "calls": 50,
+          "inclusive_ms": 0.21613500000000002
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 50,
+          "inclusive_ms": 5.620405999999999
+        }
+      },
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 50,
+          "gpu_ms": 0.04307099999999997
+        },
+        "DeviceScanKernel": {
+          "calls": 50,
+          "gpu_ms": 21.197038999999997
+        },
+        "getNewData": {
+          "calls": 50,
+          "gpu_ms": 5.41281
+        }
+      },
+      "copies_by_kind": {
+        "8": {
+          "calls": 50,
+          "bytes": 25600000,
+          "gpu_ms": 0.18297400000000025
+        },
+        "11": {
+          "calls": 63,
+          "bytes": 319488,
+          "gpu_ms": 0.06486099999999999
+        },
+        "12": {
+          "calls": 3,
+          "bytes": 12288,
+          "gpu_ms": 0.001472
+        }
+      },
+      "memset": {
+        "calls": 0,
+        "bytes": 0
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 26.837366,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "rebuild.construct": {
+      "calls": 50,
+      "inclusive_host_ms": 201.96581600000005,
+      "api": {
+        "cudaMallocManaged_v6000": {
+          "calls": 100,
+          "inclusive_ms": 0.45893699999999993
+        },
+        "cudaMalloc_v3020": {
+          "calls": 500,
+          "inclusive_ms": 1.7241889999999973
+        },
+        "cudaMemset_v3020": {
+          "calls": 100,
+          "inclusive_ms": 0.44817699999999994
+        },
+        "cuKernelGetName": {
+          "calls": 450,
+          "inclusive_ms": 0.054842999999999954
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 450,
+          "inclusive_ms": 1.728952999999999
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 250,
+          "inclusive_ms": 187.36378599999986
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 300,
+          "inclusive_ms": 2.001564999999999
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 500,
+          "inclusive_ms": 2.8780059999999983
+        },
+        "cudaFree_v3020": {
+          "calls": 400,
+          "inclusive_ms": 1.6346329999999996
+        }
+      },
+      "kernels": {
+        "initIndexData": {
+          "calls": 50,
+          "gpu_ms": 0.07836800000000002
+        },
+        "getPivotDis": {
+          "calls": 100,
+          "gpu_ms": 152.98885099999998
+        },
+        "DeviceRadixSortSingleTileKernel": {
+          "calls": 100,
+          "gpu_ms": 1.689147000000001
+        },
+        "nodeSplit": {
+          "calls": 100,
+          "gpu_ms": 33.148098
+        },
+        "DeviceReduceSingleTileKernel": {
+          "calls": 100,
+          "gpu_ms": 0.11747200000000008
+        }
+      },
+      "copies_by_kind": {
+        "8": {
+          "calls": 200,
+          "bytes": 1200000,
+          "gpu_ms": 0.19257599999999966
+        },
+        "2": {
+          "calls": 100,
+          "bytes": 400,
+          "gpu_ms": 0.039136000000000004
+        },
+        "12": {
+          "calls": 12,
+          "bytes": 49152,
+          "gpu_ms": 0.005408
+        },
+        "11": {
+          "calls": 4,
+          "bytes": 16384,
+          "gpu_ms": 0.004096
+        }
+      },
+      "memset": {
+        "calls": 100,
+        "bytes": 44400,
+        "gpu_ms": 0.034816000000000055
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 188.293872,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "rebuild.reset": {
+      "calls": 50,
+      "inclusive_host_ms": 2.3008120000000005,
+      "api": {
+        "cudaFree_v3020": {
+          "calls": 100,
+          "inclusive_ms": 0.7558760000000002
+        },
+        "cudaMallocManaged_v6000": {
+          "calls": 100,
+          "inclusive_ms": 0.49962999999999985
+        },
+        "cudaMemset_v3020": {
+          "calls": 50,
+          "inclusive_ms": 0.9778949999999996
+        }
+      },
+      "kernels": {},
+      "copies_by_kind": {
+        "11": {
+          "calls": 7,
+          "bytes": 28672,
+          "gpu_ms": 0.007103999999999999
+        }
+      },
+      "memset": {
+        "calls": 50,
+        "bytes": 200000,
+        "gpu_ms": 0.4795520000000003
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 0.479552,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    },
+    "delete.buffer_merge": {
+      "calls": 500,
+      "inclusive_host_ms": 329.61946200000017,
+      "api": {
+        "cudaMemset_v3020": {
+          "calls": 500,
+          "inclusive_ms": 5.7189390000000015
+        },
+        "cudaMemcpy_v3020": {
+          "calls": 500,
+          "inclusive_ms": 115.80600000000001
+        },
+        "cudaMalloc_v3020": {
+          "calls": 500,
+          "inclusive_ms": 1.4767850000000002
+        },
+        "cuKernelGetName": {
+          "calls": 1500,
+          "inclusive_ms": 0.1533680000000008
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 1500,
+          "inclusive_ms": 5.372027999999986
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 500,
+          "inclusive_ms": 8.743157999999996
+        },
+        "cudaFree_v3020": {
+          "calls": 500,
+          "inclusive_ms": 1.8622789999999996
+        },
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 500,
+          "inclusive_ms": 3.099888000000002
+        }
+      },
+      "kernels": {
+        "DeviceScanInitKernel": {
+          "calls": 500,
+          "gpu_ms": 0.43122999999999734
+        },
+        "DeviceScanKernel": {
+          "calls": 500,
+          "gpu_ms": 6.838054000000045
+        },
+        "mergeInResult": {
+          "calls": 500,
+          "gpu_ms": 0.8020759999999989
+        }
+      },
+      "copies_by_kind": {
+        "8": {
+          "calls": 500,
+          "bytes": 2000,
+          "gpu_ms": 110.86187799999996
+        },
+        "11": {
+          "calls": 264,
+          "bytes": 1081344,
+          "gpu_ms": 0.2701749999999998
+        },
+        "12": {
+          "calls": 265,
+          "bytes": 1085440,
+          "gpu_ms": 0.11868800000000022
+        }
+      },
+      "memset": {
+        "calls": 500,
+        "bytes": 2000,
+        "gpu_ms": 0.5796160000000008
+      },
+      "selected_workspace_api_ms": 0,
+      "selected_workspace_api_calls": 0,
+      "device_activity_union_ms": 119.631542,
+      "allocation_bytes": null,
+      "allocation_bytes_reason": "runtime API export has no size arguments; source capacities only, not measured bytes",
+      "cpu_useful_ms": null,
+      "api_wait_interpretation": "inclusive API waits overlap device activity; do not add or call residual useful CPU"
+    }
+  },
+  "sqlite_sha256": "308dd056246d1b9f10aad1cb77b7a06d9e3bf3fd0d05e5a4a55bd9619d597444",
+  "U10_profile_scope": "one instrumented seed0431 process; not the 18 clean processes",
+  "selected_change": "reuse 11 internal searchIndexRnnUpdate allocations; externally owned result/count arrays and Thrust allocator unchanged",
+  "selected_budget_ms": 612.8089870000019,
+  "budget_limit": "measured inclusive API cost; not guaranteed saved critical-path time, not new performance",
+  "memory_kind": "2 Managed scalars, 9 Device arrays, unchanged",
+  "source_update_sha256": "5d88bd44c94d721bedc145390cc381893f49600f2e0237e44ae118a3c1bae246",
+  "source_lines": "searchIndexRnnUpdate:341-450",
+  "unchanged": [
+    "GPU compute kernels",
+    "required resets/fences",
+    "range arithmetic/bounds",
+    "occupancy threshold10",
+    "serialized multiset/live-rank",
+    "all output and ACK"
+  ],
+  "lifetime": "one native process; per-call logical lengths; capacity checked on every request and after rebuild; release after final drain",
+  "capacity": "actual requested node/candidate bounds; no oracle/answer-based reservation; growth charged",
+  "Graph": "N/A",
+  "AoSoA": "N/A",
+  "P7_knn_integrated": false,
+  "pending": [
+    "R10",
+    "30k",
+    "full cold",
+    "new vectors",
+    "million dynamic",
+    "concurrency"
+  ],
+  "inputs": {
+    "PASS_COUNTER_STATUS.json": "7f1cab907b92f05bc44949c36495c15d4724f08ee41b68d0fbc128130524e731",
+    "PASS_PHYSICAL_COUNTERS.json": "963fae0b63c2c226c2bbbaea6348ecb6c4d31d79d80256516ffab0950799abfb",
+    "U10_LEAN_TIMED_ROWS.json": "2587b4ef727802e1c470d668b8ca8bd5a59f6dbd880e0df0aa9ebd5d0f36c77d",
+    "U10_NSYSTEMS.json": "337792b3c519b969a86dc4a3c6ebebfddb9487e4e038a3566bcd12c259f98909"
+  }
+}
