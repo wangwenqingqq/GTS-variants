@@ -1,6 +1,6 @@
 #pragma once
 #include "region_plan.hpp"
-#include "parallel_range.cuh"
+#include "region_exec.cuh"
 #include <thrust/scan.h>
 #include <thrust/reduce.h>
 #include <fstream>
@@ -21,7 +21,9 @@ struct Bridge {
     Bridge() {
         const char* p=std::getenv("REGION_MODE");std::string s=p?p:"NATIVE";
         if(s=="PAR_STRONG")mode=1;
-        else if(s!="NATIVE")throw std::runtime_error("region mode not yet implemented");
+        else if(s=="REGION_SPLIT")mode=2;
+        else if(s=="REGION_FUSED")mode=3;
+        else if(s!="NATIVE")throw std::runtime_error("unknown region mode");
     }
     template<class T> void allocate(T*& p,size_t n) {
         if(!n){p=nullptr;return;}
@@ -54,7 +56,10 @@ struct Bridge {
         upload(slot_pid,plan.slot_pid);upload(leaf_slot,plan.leaf_slot);upload(regions,plan.regions);
         for(auto& p:flags)allocate(p,nn);allocate(active,nn);
         allocate(leaf_list,plan.total_leaves);allocate(leaf_counts,plan.regions.size());
-        allocate(hit,n);allocate(prefix,n);allocate(distances,n);allocate(error,1);
+        allocate(hit,n);allocate(prefix,n);allocate(distances,n);
+        u10_ck(cudaMallocManaged((void**)&error,sizeof(int)));owned_bytes+=sizeof(int);
+        allocated_bytes+=sizeof(int);++allocations;*error=0;
+        peak_owned_bytes=std::max(peak_owned_bytes,owned_bytes);
 #ifdef REGION_COUNTERS
         allocate(work.nodes,nn);allocate(work.pivots,nn);allocate(work.objects,n);allocate(work.leaves,nn);
 #endif
@@ -76,14 +81,24 @@ struct Bridge {
         for(auto p:{work.nodes,work.pivots,work.leaves})u10_ck(cudaMemset(p,0,view.node_count*sizeof(unsigned long long)));
         u10_ck(cudaMemset(work.objects,0,view.n*sizeof(unsigned long long)));
 #endif
-        int parity=0;
-        for(size_t l=1;l<plan.level_offsets.size();l++) {
-            int begin=plan.level_offsets[l-1],num=plan.level_offsets[l]-begin;
-            if(num)parent_groups<<<num,BLOCK_THREADS>>>(view,parents,begin,flags[parity],flags[1-parity],active,radius,work);
+        int parity=0;const auto& offsets=mode==1?plan.level_offsets:plan.skeleton_offsets;
+        const int* parent_list=mode==1?parents:skeleton;
+        for(size_t l=1;l<offsets.size();l++) {
+            int begin=offsets[l-1],num=offsets[l]-begin;
+            if(num)parent_groups<<<num,BLOCK_THREADS>>>(view,parent_list,begin,flags[parity],flags[1-parity],active,radius,work);
             parity=1-parity;
         }
-        materialize<<<(plan.total_leaves+BLOCK_THREADS-1)/BLOCK_THREADS,BLOCK_THREADS>>>(view,leaves,plan.total_leaves,active,leaf_list,work);
-        verify_materialized<<<plan.total_leaves,BLOCK_THREADS>>>(view,leaf_list,radius,hit,distances,work);
+        if(mode==1) {
+            materialize<<<(plan.total_leaves+BLOCK_THREADS-1)/BLOCK_THREADS,BLOCK_THREADS>>>(view,leaves,plan.total_leaves,active,leaf_list,work);
+            verify_materialized<<<plan.total_leaves,BLOCK_THREADS>>>(view,leaf_list,radius,hit,distances,work);
+        } else {
+            uint64_t task_epoch=view.tree_epoch;
+            if(u10_env("REGION_STALE"))--task_epoch;
+            if(mode==2) {
+                traverse_regions<false><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
+                verify_regions<<<view.region_count,BLOCK_THREADS>>>(view,leaf_list,leaf_counts,radius,hit,distances,work);
+            } else traverse_regions<true><<<view.region_count,BLOCK_THREADS>>>(view,active,task_epoch,leaf_list,leaf_counts,radius,hit,distances,error,work);
+        }
         u10_ck(cudaGetLastError());
         int count=thrust::reduce(thrust::device,hit,hit+view.n,0);
         u10_ck(cudaMallocManaged((void**)&counts,sizeof(int)));counts[0]=count;
@@ -93,6 +108,17 @@ struct Bridge {
         thrust::exclusive_scan(thrust::device,hit,hit+view.n,prefix);
         collect<<<(view.n+BLOCK_THREADS-1)/BLOCK_THREADS,BLOCK_THREADS>>>(view,hit,prefix,distances,ids,result);
         u10_ck(cudaDeviceSynchronize());
+        require(!*error,"stale epoch or local capacity error; reject entire query");
+#ifdef REGION_COUNTERS
+        std::cout<<"REGION_WORK {\"epoch\":"<<epoch<<",\"qid\":"<<qids[0]<<",\"n\":"<<view.n;
+        for(auto item:{std::pair<const char*,unsigned long long*>{"nodes",work.nodes},{"pivots",work.pivots},{"leaves",work.leaves},{"objects",work.objects}}) {
+            int size=std::string(item.first)=="objects"?view.n:view.node_count;
+            std::vector<unsigned long long> x(size);u10_ck(cudaMemcpy(x.data(),item.second,size*sizeof(unsigned long long),cudaMemcpyDeviceToHost));
+            std::cout<<",\""<<item.first<<"\":[";
+            for(int i=0;i<size;i++)std::cout<<(i?",":"")<<x[i];std::cout<<"]";
+        }
+        std::cout<<"}\n";
+#endif
     }
     void finish() {if(mode)release_plan();}
     void write(const std::string& out) {
