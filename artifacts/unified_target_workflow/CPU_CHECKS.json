@@ -1,0 +1,33 @@
+{
+  "passed": [
+    "valid_255_960",
+    "valid_1025_960",
+    "valid_1000_128",
+    "nan",
+    "trailing",
+    "short",
+    "bad_rank",
+    "bad_physical",
+    "empty_events",
+    "huge_truncated"
+  ],
+  "cuda_used": false,
+  "scope": "host rank replay, shape arithmetic and parser only",
+  "rank_replay_shapes": [
+    1,
+    255,
+    256,
+    257,
+    1000,
+    1023,
+    1024,
+    1025,
+    4096,
+    65536,
+    1000000
+  ],
+  "checked_bytes_N1M_D960": 3840000000,
+  "neighbor_items_N1M_K8": 31256,
+  "input_header_sha256": "73a8bf18c5824d655fe271e014e9aa7349b3ec95c94d37a811291f67b9d438c7",
+  "test_driver_sha256": "9b9f16e40d6440d04aa0645a3d28b176a150d5c2cf82a88a5e6aa1dce6df92c1"
+}

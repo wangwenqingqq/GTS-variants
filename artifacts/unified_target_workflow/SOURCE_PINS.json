@@ -1,0 +1,25 @@
+{
+  "base_commit": "0033cb2d1934768411ed1806c6729108f412c1e7",
+  "numeric_reference_commit": "f16d09a4e8a32ab8afff3b1b92221a5e447725a0",
+  "numeric_reference_path": "diagnostics/arithmetic_path_boundary_20260928/strict_l2.cuh",
+  "numeric_reference_sha256": "349a950c64d6d1ebe69a70f1f9203b3d1ac54e08135e09aeca5d46f60da431a9",
+  "compatible_reuse": [
+    "ordered RN FP64 reference function",
+    "actual-member bound-refit ownership"
+  ],
+  "not_reused": [
+    "hardcoded 1e-10/1e-12 norm/radius padding",
+    "old static frontier-only metadata"
+  ],
+  "replacement": "directed FP64 true-norm intervals plus analytic ordered-reference radius allowance",
+  "radius_bits": "0x3f34a3d8",
+  "runtime_compatibility": "PHASE_A_COMPLETE_SCOPED; see TARGET_CORRECTNESS.json",
+  "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+  "data_header": [
+    960,
+    1000000,
+    2
+  ],
+  "data_bytes": 3840000012,
+  "data_identity_verified": true
+}

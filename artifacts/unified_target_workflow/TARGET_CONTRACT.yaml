@@ -1,0 +1,78 @@
+experiment: GTSPP_TARGET_WORKFLOW_CLOSURE_20261009
+implementation_status: PHASE_A_COMPLETE_SCOPED
+performance_status: NOT_ADMITTED
+base_commit: 0033cb2d1934768411ed1806c6729108f412c1e7
+parent_module: artifacts/unified_search_update
+historical_sources_modified: false
+required_target: {dataset: existing_GIST_float32, N: 1000000, D: 960, B: 1, K: 8}
+radius_float32_bits: '0x3f34a3d8'
+regression_dimension: 128
+modes:
+  A: {range: staged_GTS_common_numeric_bounds, knn: FULL}
+  B: {range: PAR_common_numeric_bounds, knn: FULL}
+  C: {range: PAR_common_numeric_bounds, knn: BOUND}
+updates:
+  owner: original_pinned_update_loop
+  insert: current physical-row reference; duplicates retained
+  delete: one current live-rank occurrence
+  rebuild: real buffer occupancy 10; no threshold change
+capacity:
+  initial_N_max: 1000000
+  maximum_physical_state: 1001000
+  rule: preflight maximum physical base+buffer, round to 32; unexpected growth fails
+  byte_arithmetic: checked_size_t
+  neighbor_items_per_buffer: ceil(capacity/256)*allocated_K
+  output_policy: complete on-demand ID+FP32 fields; fixed combined 1GiB budget; fail whole trace on exhaustion
+  dense_Q_by_N_host_preallocation: false
+  vector_growth_and_D2H_inside_trace: true
+numeric:
+  input: finite FP32, no integer reinterpretation
+  reference: ordered RN FP64 subtract/multiply/add; no FMA
+  range_membership: squared reference <= RN(double(radius)*double(radius))
+  fields: RN sqrt(reference), RN conversion to FP32
+  knn_order: squared reference then live rank; missing (-1,+inf)
+  range_order: original canonical leaf order then buffer; cross-mode equality required
+  bounds: actual-member directed FP64 true-norm intervals
+  pruning_allowance: sqrt_up(cutoff_RN/alpha), alpha <= (1-2^-53)^(D+3)
+  uncertain_nodes: survive
+  magic_epsilon: false
+  epoch: common base/nodes/shape plus monotonically published bound epoch; PAR/kNN published before ACK
+validation_required:
+  - legacy N1000 D128 integer, empty, sparse, duplicates, buffer first/last, rebuild
+  - fixed GIST N4096 D960, tails 255/256/257/1023/1024/1025, threshold nextafter
+  - deleted pivots and seeds, common/PAR/mirror stale epoch
+  - independent CPU complete-output small oracle plus cross-mode ordered identity
+  - actual member interval coverage
+  - bounded memcheck/racecheck/synccheck
+  - N65536 D960 transition
+  - N1M D960 actual rebuild, independent exhaustive chunked reference, boundary cross-check
+short_campaign:
+  status: NOT_RUN_PENDING_WARMUP_AND_SCOPE_QUALIFICATION
+  seed: 202610090242
+  counts: {range_queries: 128, knn_queries: 128, inserts: 40, deletes: 40, events: 336, rebuilds: 2}
+  orders: [ABC, CBA, BCA, ACB, CAB, BAC]
+  processes: 18
+  denominator: continuous trace including all full Host-ready results, ACK, maintenance and final release
+  estimator: paired geometric mean, two-sided 95% process bootstrap, 20000 resamples
+  profiler_runs_in_primary: false
+external_diagnostics:
+  snapshots: [initial, first_rebuilt]
+  modes: [FULL, BOUND, native_GPU_Flat]
+  queries: 32
+  processes: 6
+  significance_or_dynamic_e2e_claim: false
+long_campaign:
+  conditional: true
+  seed: 202610090243
+  events: 12000
+  queries: 10000
+  inserts: 1000
+  deletes: 1000
+  rebuilds: 50
+  max_processes: 42
+  output_consumption_admitted: false
+publication:
+  code_and_scoped_evidence: matching_existing_repository
+  manuscript: private_Overleaf_only
+  private_machine_receipts_or_raw_data: excluded
+excluded: [new_index, WARP_FUSED_default, learned_router, mixed_precision, CAGRA_sweep, concurrent_updates, multiGPU, N1B_E100k_campaign]

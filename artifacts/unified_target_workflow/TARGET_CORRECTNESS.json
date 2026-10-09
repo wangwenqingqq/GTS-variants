@@ -1,0 +1,91 @@
+{
+  "status": "PHASE_A_COMPLETE_SCOPED",
+  "performance_status": "NOT_MEASURED_NOT_ADMITTED",
+  "target": {
+    "dataset": "existing GIST original FP32",
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "K": 8,
+    "radius_bits": "0x3f34a3d8"
+  },
+  "final_binary_sha256": "36df75afd0896fb9df9790d685e4af93a9ad12e67ab8a27431034b75899fce1b",
+  "r5_binary_sha256": "2d0637cd363ff0daf96a029aa0b90af3801c6a99259f36cab4d9b4c28417272b",
+  "r4_reference_binary_sha256": "cc59db5c99f4e26d76862f3678ff8bdbd6d4643b2bbb8ae7f8a96ad342714002",
+  "cuda_toolkit": "13.1",
+  "architecture": "sm_120",
+  "GPU": "single idle RTX PRO 6000 Blackwell Server; exact admission receipts private",
+  "gpu_kernel_code_identity": {
+    "normalization": "sass-normalize-v1",
+    "r4_r5_r6_normalized_sha256": "7d0ff1767e79a2dbc1f8ea18e52d29015d3d5a99ce4491dab8836d75b5f40948",
+    "functions": 112,
+    "instructions": 74147,
+    "meaning": "static compiled instruction identity, not performance or universal correctness"
+  },
+  "accepted_validation_processes": {
+    "r5": 57,
+    "final_r6": 22,
+    "expected_stale_rejections": 3,
+    "primary_timing_processes": 0
+  },
+  "full_output_and_state_gates": {
+    "small_cpu_exhaustive": true,
+    "all_modes_ordered_identity": true,
+    "GIST_tail_shapes": [
+      255,
+      256,
+      257,
+      1023,
+      1024,
+      1025,
+      4096
+    ],
+    "threshold_nextafter_and_duplicates": true,
+    "legacy_D128_K8_K32_empty_sparse": true,
+    "finite_FP32_distance_overflow_retains_real_ID": true,
+    "N65536_transition_ABC": true,
+    "N1M_real_rebuild_ABC": true,
+    "N1M_new_physical_count": 1000009,
+    "million_trace_events": 19,
+    "million_queries": 8,
+    "million_rebuilds": 1,
+    "million_full_output_items": 41,
+    "million_CPU_exhaustive_and_audited_member_coverage": {
+      "epochs": 2,
+      "nodes": 222220,
+      "member_pivot_pairs": 10000045,
+      "all_member_coverage": true,
+      "crosscheck": "CPU long-double norm for every emitted member interval; directed-interval proof in DESIGN.md"
+    },
+    "exact_rational_boundary_and_nearest_pairs": 16,
+    "growth_N1000_to_N2010_with_101_rebuilds_ABC": true,
+    "common_pointer_PAR_epoch_mirror_epoch_negative_checks": true,
+    "owned_plan_mirror_bounds_released": true
+  },
+  "sanitizers": {
+    "small_memcheck": "0 errors",
+    "small_racecheck": "0 errors",
+    "small_synccheck": "0 errors",
+    "N1M_actual_rebuild_memcheck": "0 errors; full outputs identical"
+  },
+  "numeric_claim_scope": "specified ordered FP64 contract on registered finite FP32 data and declared regressions; not universal mathematical-real or cross-platform equivalence",
+  "required_next_gates": [
+    "separate cloned warmup state then initial-state restoration",
+    "affected observer/timing scope qualification",
+    "freeze and run 18 balanced short processes with complete outputs",
+    "native GPU Flat initial/rebuilt snapshots under quality gates",
+    "conditional 42-process longer traces only after short/strong-baseline admission",
+    "actual long-trace output budget admission"
+  ],
+  "default_promoted": false,
+  "speedup_claim_allowed": false,
+  "novelty_claim_allowed": false,
+  "raw_policy": "complete private raw receipts/output/topology retained outside Git; public manifests contain only curated identities and scoped checks",
+  "driver": "590.48.01",
+  "nvcc": "13.1.115",
+  "oracle_runtime": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "long_double_mantissa_bits": 63
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "injection": "TARGET_STALE",
+    "range_mode": "NATIVE",
+    "expected_rejection": true,
+    "target_binary_sha256": "36df75afd0896fb9df9790d685e4af93a9ad12e67ab8a27431034b75899fce1b"
+  },
+  {
+    "injection": "PAR_STALE",
+    "range_mode": "PAR_STRONG",
+    "expected_rejection": true,
+    "target_binary_sha256": "36df75afd0896fb9df9790d685e4af93a9ad12e67ab8a27431034b75899fce1b"
+  },
+  {
+    "injection": "KNN_STALE",
+    "range_mode": "PAR_STRONG",
+    "expected_rejection": true,
+    "target_binary_sha256": "36df75afd0896fb9df9790d685e4af93a9ad12e67ab8a27431034b75899fce1b"
+  }
+]
