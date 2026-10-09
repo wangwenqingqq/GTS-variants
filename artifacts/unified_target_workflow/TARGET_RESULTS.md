@@ -1,11 +1,15 @@
 # Phase A checkpoint: target-size correctness, not speedup
 
-**The capacity/numeric/lifecycle qualification is complete for the declared
+**At the historical phase-A checkpoint, the capacity/numeric/lifecycle qualification is complete for the declared
 scope. No target performance campaign has run.** The final executable completed
 original FP32 GIST N1M/D960/B1/K8 insertion, query, deletion, query, a real
 occupancy-10 rebuild and post-rebuild range/kNN in A/B/C. Complete ID/FP32-field
 payloads and query ordering were identical across all three modes. They also
 matched the independently exhaustive CPU reference.
+
+The separate [phase-B result](phase_b/RESULTS.md) now records all 18 target-short
+processes and the two native Flat snapshot diagnostics. The phase-A qualification
+text below is historical, not a claim that target timing is still unmeasured.
 
 ## What changed
 

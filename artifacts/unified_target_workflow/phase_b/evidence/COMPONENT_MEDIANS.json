@@ -1,0 +1,41 @@
+{
+  "medians": {
+    "A": {
+      "trace_ms": 86252.94354000001,
+      "range_ACK_sum_ms": 37671.497198000005,
+      "knn_ACK_sum_ms": 950.4859375,
+      "rebuild_inclusive_sum_ms": 47501.4759665,
+      "rebuild.construct_inclusive_ms": 46042.659761999996,
+      "numeric_active_refit_sum_ms": 699.3150755,
+      "PAR_active_refresh_sum_ms": 0.0,
+      "mirror_active_refresh_sum_ms": 25.141969000000003,
+      "cpu_user_s": 85.701328,
+      "cpu_system_s": 0.4439205000000004
+    },
+    "B": {
+      "trace_ms": 51205.375702,
+      "range_ACK_sum_ms": 2695.217030999999,
+      "knn_ACK_sum_ms": 884.288943,
+      "rebuild_inclusive_sum_ms": 47535.339691,
+      "rebuild.construct_inclusive_ms": 46024.3590195,
+      "numeric_active_refit_sum_ms": 698.1803425,
+      "PAR_active_refresh_sum_ms": 32.362083,
+      "mirror_active_refresh_sum_ms": 25.1504345,
+      "cpu_user_s": 50.889287499999995,
+      "cpu_system_s": 0.27397299999999936
+    },
+    "C": {
+      "trace_ms": 51260.9929445,
+      "range_ACK_sum_ms": 2708.9594239999997,
+      "knn_ACK_sum_ms": 936.9003500000001,
+      "rebuild_inclusive_sum_ms": 47525.555071,
+      "rebuild.construct_inclusive_ms": 46026.8270005,
+      "numeric_active_refit_sum_ms": 698.3795925,
+      "PAR_active_refresh_sum_ms": 30.46267,
+      "mirror_active_refresh_sum_ms": 25.1155175,
+      "cpu_user_s": 50.964764,
+      "cpu_system_s": 0.2590220000000003
+    }
+  },
+  "scope": "separate median of each nested/direct recorded boundary; not additive, not an alternate e2e estimator; no inferred arithmetic CPU work or GPU coordinates count"
+}

@@ -1,0 +1,55 @@
+{
+  "state": "UNRESOLVED_CONTEXT_SYMBOLS_NOT_CLEAN",
+  "rows": [
+    {
+      "attempt": "r1",
+      "label": "enhanced_full_leak",
+      "passed": false,
+      "summary": [
+        "LEAK SUMMARY: 192 bytes leaked in 14 allocations",
+        "ERROR SUMMARY: 14 errors"
+      ],
+      "stdout_sha256": "d8974727dc04aa61ee9f93bfcac7833fd2dbc2a35e3ac1d08c048928fed493e3",
+      "bounded_CPU_quality": {
+        "passed_bounded_controls": 7,
+        "full_leak_gate_passed": false,
+        "primary_samples": 0
+      }
+    },
+    {
+      "attempt": "r2",
+      "label": "enhanced_full_leak",
+      "passed": false,
+      "summary": [
+        "LEAK SUMMARY: 96 bytes leaked in 7 allocations",
+        "ERROR SUMMARY: 7 errors"
+      ],
+      "stdout_sha256": "34fde489e7a030700f2be852add50b0e07e588ef7a8e8bd234412fb5443ff81b",
+      "bounded_CPU_quality": {
+        "passed_bounded_controls": 7,
+        "full_leak_gate_passed": false,
+        "primary_samples": 0
+      }
+    },
+    {
+      "attempt": "phase_A_control",
+      "passed": false,
+      "summary": [
+        "LEAK SUMMARY: 192 bytes leaked in 14 allocations",
+        "ERROR SUMMARY: 14 errors"
+      ],
+      "stdout_sha256": "bb3c3cf230e4bff5422b1be8f7d468b4cabbc5e4409737d1c6444125f716d1fb"
+    },
+    {
+      "attempt": "managed_int_minimal",
+      "passed": false,
+      "summary": [
+        "LEAK SUMMARY: 4 bytes leaked in 1 allocations",
+        "ERROR SUMMARY: 1 error"
+      ],
+      "stdout_sha256": "9d53f8cc1989e93ddcc182d49e4a4a8a1b28a5386bfa92e2f7be0f87509d8a2a"
+    }
+  ],
+  "vendor_confirmed": false,
+  "long_admitted": false
+}

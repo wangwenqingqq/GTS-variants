@@ -27,3 +27,21 @@ contribution. Target end-to-end speedups, external Flat comparison, the
 18-process short experiment and conditional longer default selection remain
 unmeasured unless the target ledger explicitly admits them. No historical
 speedup is multiplied into this target condition.
+
+
+## Target phase B: measured short scope, no default promotion
+
+Read the [target phase-B ledger](../unified_target_workflow/phase_b/RESULTS.md)
+and raw fixed-round results before citing an end-to-end number. At original
+FP32 GIST N1M/D960/B1/K8, 336 events/256 queries/40 inserts/40 deletes/two
+rebuilds, A/B is 1.684797× (95% [1.683421,1.685827]); A has common numeric/safe
+repairs and is not untouched GTS. B/C is inconclusive: its interval crosses 1
+and order strata reverse. Native GPU Flat is faster at the admitted quality
+on both 32-query static snapshots; no external dynamic win follows.
+
+B is only the next-validation candidate. No new default, 10k/100k result,
+novelty, all-tree claim, full leak-clean or production status is promoted.
+Shared-state correctness/charged refit and repack is not a measured independent
+state-saving ratio. Coordinate, launch/sector and CPU-wait cause attribution
+remain unmeasured in this phase; do not relabel PAR's complete-module gain as
+pure coalescing. WARP/fusion and old MASK remain historical/ablation identities.

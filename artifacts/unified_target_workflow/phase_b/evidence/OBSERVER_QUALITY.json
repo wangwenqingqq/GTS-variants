@@ -1,0 +1,209 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "label": "observer_1_OFF",
+      "answer_hashes": [
+        "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+        "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+        "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a"
+      ],
+      "quality": {
+        "full_output_identity": true,
+        "oracle_binding": "observer_1_ON"
+      }
+    },
+    {
+      "label": "observer_1_ON",
+      "answer_hashes": [
+        "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+        "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+        "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a"
+      ],
+      "quality": {
+        "queries": 256,
+        "rebuilds": 2,
+        "output_items": 54614,
+        "membership": true,
+        "field_bits": true,
+        "knn_order": true,
+        "operation_states": true,
+        "published_refreshes": true,
+        "released_owned_buffers": true,
+        "range_order": "requires same-input cross-mode byte equality",
+        "oracle": "CPU ordered dimension-wise FP64 exhaustive chunked"
+      }
+    },
+    {
+      "label": "observer_2_ON",
+      "answer_hashes": [
+        "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+        "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+        "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a"
+      ],
+      "quality": {
+        "full_output_identity": true,
+        "oracle_binding": "observer_1_ON"
+      }
+    },
+    {
+      "label": "observer_2_OFF",
+      "answer_hashes": [
+        "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+        "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+        "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a"
+      ],
+      "quality": {
+        "full_output_identity": true,
+        "oracle_binding": "observer_1_ON"
+      }
+    },
+    {
+      "label": "observer_3_OFF",
+      "answer_hashes": [
+        "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+        "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+        "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a"
+      ],
+      "quality": {
+        "full_output_identity": true,
+        "oracle_binding": "observer_1_ON"
+      }
+    },
+    {
+      "label": "observer_3_ON",
+      "answer_hashes": [
+        "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+        "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+        "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a"
+      ],
+      "quality": {
+        "full_output_identity": true,
+        "oracle_binding": "observer_1_ON"
+      }
+    }
+  ],
+  "oracle_library_sha256": "fb3f7c64328faa58d97738489f88c474da963a0a8d05322c9b5440dbd9e0a553",
+  "ordered_full_outputs": true,
+  "evidence_binding": {
+    "registered_sha256": "5d2abf87c84120fe77bb69aa1936670df4adc6d38cd3a601e2bac55ae00eb321",
+    "raw_rows_sha256": "c5b57fbe94cc6c0272143feb6ff0c6ab9ceb14ef6c9f3ff1f10ba570da3ca578",
+    "executed_driver_sha256": "185e2ee87c427265cdab79b3c6c4d4e4f40c2288535dbd32c0e4ce2f5fd54708",
+    "guard_hashes": {
+      "guard/receipt.json": "2594eb5c2ac430d93784bd5db853cc9494ab10644fe48593cd8e68b31bae0e25",
+      "guard/checks.json": "9b059afcab76cc402026098526a1069013fd35a9f30a7ab60f756acea4115a71",
+      "guard/before.json": "d0541819fa8f3b23678849fe218be94595203416e40adc34295baada4430d0b0",
+      "guard/after.json": "e454dc3b587e95e62a67bf9d4a57e92911e85c4fc3507168260f7c5fcd91d11b"
+    },
+    "output_hashes": {
+      "outputs/observer_1_OFF.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+      "outputs/observer_1_OFF.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+      "outputs/observer_1_OFF.numeric.json": "9bcb84ab223efc03eed49e741077e8e2ced74ce658fab1a3511e172f9fafa711",
+      "outputs/observer_1_OFF.ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      "outputs/observer_1_OFF.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+      "outputs/observer_1_OFF.region.json": "54d7e6eb2a2cf2c6a54cefe11f5ce4b420ebb161ed8e61de5eede191246e165a",
+      "outputs/observer_1_OFF.scope.json": "7ae1f82e39310420bcf00d3d3ba60cee85bea77498fbfc781860997c5c82e1e7",
+      "outputs/observer_1_OFF.summary.json": "f8e758342bd9b1094172420c792672917d11fbd1bee6ded99bd351c1ac0d78b7",
+      "outputs/observer_1_OFF.unified.json": "e11c3d280a7fb912b2c19a01b8ea85a013b5e4a07e249cb099e158e85e5c5359",
+      "outputs/observer_1_OFF.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+      "outputs/observer_1_OFF.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+      "outputs/observer_1_OFF.warmup.numeric.json": "987b939a77a05a64cbfdac73448c32a6ac08d7be574c998e4a17790745da9650",
+      "outputs/observer_1_OFF.warmup.ops.csv": "9cd949f05d2cf3f9ee60a629e4891abf82074f3f5dd922a71ec528a292b2cc2d",
+      "outputs/observer_1_OFF.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+      "outputs/observer_1_OFF.warmup.region.json": "aaf9be9de47fb2f92f85c00827e11e344a8c0daea7961bb7b3eae0e6d6daa019",
+      "outputs/observer_1_OFF.warmup.summary.json": "aa47ae7c26f306f1a66ba48d077a552e5a6ba4b2867396a768fdac465d1937e8",
+      "outputs/observer_1_OFF.warmup.unified.json": "e13242c50446fe920baef163e0c68ffc1fe76c07d359dc5388fab39fc675b3b6",
+      "outputs/observer_1_ON.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+      "outputs/observer_1_ON.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+      "outputs/observer_1_ON.numeric.json": "b9404d4b6ffebbcbac08d74ebbfb57fab98614b1e0ded151b53cf2ecd9871615",
+      "outputs/observer_1_ON.ops.csv": "ce3fddd8ca322f8496ba11347c37dc5168ea8c3b9948ef1b95c9e2c4892f1ce3",
+      "outputs/observer_1_ON.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+      "outputs/observer_1_ON.region.json": "a490af12f35aa61e8610fcced47b28d09a902827b72ff851a4dcd479d3c44c87",
+      "outputs/observer_1_ON.scope.json": "1e2e2fe3d67e8f92c0fb7dd0f73ad8232205aa0718c2b9e10ec1e003b824cc8b",
+      "outputs/observer_1_ON.summary.json": "e709b5d8bf42248edc6eddf09b0335bd15fd58130765da80c008f7f85faeafda",
+      "outputs/observer_1_ON.unified.json": "860b4c09279d1b26c2bd1f249fa136695abf400fa9139ff8ea56e4cf59d5240b",
+      "outputs/observer_1_ON.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+      "outputs/observer_1_ON.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+      "outputs/observer_1_ON.warmup.numeric.json": "bb2e850dd02ecf309d9d66e4826c308211a0e542264fa1bb5773e18f9c6cc4d4",
+      "outputs/observer_1_ON.warmup.ops.csv": "2a494352075d0d50349da8734343cf4f1fd0a868de54a38797916edcd18b2ed3",
+      "outputs/observer_1_ON.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+      "outputs/observer_1_ON.warmup.region.json": "07a6d9cd8c02c7cb0f72a985c8169daeef8a6a46a98a4f3b368ff2b4152d666b",
+      "outputs/observer_1_ON.warmup.summary.json": "7b7b96e59ffd5899d858d35d1633c92a227e481bded3262dd5cab2e1ee019522",
+      "outputs/observer_1_ON.warmup.unified.json": "5593a5f1d1277cfb758ed916eedf79f9550e3bae2b61acf096ba99bbd8135a63",
+      "outputs/observer_2_ON.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+      "outputs/observer_2_ON.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+      "outputs/observer_2_ON.numeric.json": "83c8686a68657d1804fbf6bb6dc8f6b7a9f415fc06ad9a08997d9f9d72f7fd8f",
+      "outputs/observer_2_ON.ops.csv": "b717b087ab983d71792ce6562f1dc8a884464daac6106b224511da5d8f5ecee4",
+      "outputs/observer_2_ON.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+      "outputs/observer_2_ON.region.json": "a94f6f11b07d7175e6d85d03c04b5031baa3e870aaf5af1b529971e2ca538ae1",
+      "outputs/observer_2_ON.scope.json": "162c5f3f34cf56494820eac66b6b58e8f67ac1e11acce36a8cbf448949530817",
+      "outputs/observer_2_ON.summary.json": "ffef6421fd9ae1a24e3c811e495ad6ca74faf16f6effd14586e41af26181d969",
+      "outputs/observer_2_ON.unified.json": "e134eadb1589345407d5075981c2a7d03ae1292106a95c00ddc71a84508a53e1",
+      "outputs/observer_2_ON.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+      "outputs/observer_2_ON.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+      "outputs/observer_2_ON.warmup.numeric.json": "9d51d0bc2ee3d69f8cf73892cbb0a7806e2551344b1b629e71f7ca139f417308",
+      "outputs/observer_2_ON.warmup.ops.csv": "a0248ec27f4013bff43e097b67289a75cf4da961c62b728ea669da66309d2f46",
+      "outputs/observer_2_ON.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+      "outputs/observer_2_ON.warmup.region.json": "52346aba05199dea002522ebcd3a995cab87d0ac0d9a5ff00b0fbe709bb8d4c0",
+      "outputs/observer_2_ON.warmup.summary.json": "15521394564a2681fc484c2beb14f27097ec12637a7fbc6d17a4c0c62bfe6956",
+      "outputs/observer_2_ON.warmup.unified.json": "1abed2f380d2ed9af3b5076aa706527d3b6c40030b6c93fd0dde78c8ba203801",
+      "outputs/observer_2_OFF.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+      "outputs/observer_2_OFF.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+      "outputs/observer_2_OFF.numeric.json": "6c8ea81c840336b4e50ed3dc2b56b9f511f6d5c149c2ff3b848e0c00b9a66694",
+      "outputs/observer_2_OFF.ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      "outputs/observer_2_OFF.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+      "outputs/observer_2_OFF.region.json": "65376614c6db48d19aa2c4c7a893f68d3090ee1cc5a91f5956469540aa8ca522",
+      "outputs/observer_2_OFF.scope.json": "0bccc8a4d37f920539a058501da1a08849470133ed4c66e37b433d754f84c363",
+      "outputs/observer_2_OFF.summary.json": "b17d16dba1159fbdfa1c7ba1f1cafd9ad36852a9b431ae67daa316e2b7a02e26",
+      "outputs/observer_2_OFF.unified.json": "3f930031c788fb6b11f4b1624c912e43b8ffc8d67bd999e3a903f607e4dd5077",
+      "outputs/observer_2_OFF.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+      "outputs/observer_2_OFF.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+      "outputs/observer_2_OFF.warmup.numeric.json": "ea941ef4b70fb63a3c4ec850967c893dc0f82a8939df60054abec3dc97cbc7a7",
+      "outputs/observer_2_OFF.warmup.ops.csv": "61b28c94b178f30a8d55b781dcbe3d7655ebc5cba7d6f7dd3438a1df1da09894",
+      "outputs/observer_2_OFF.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+      "outputs/observer_2_OFF.warmup.region.json": "983e750b1639ce741a938c382b3fba1bf7a31ad709f72cfd7c9c77a9a8d7be58",
+      "outputs/observer_2_OFF.warmup.summary.json": "bdc1ec0f32313948a777b927335f8814f3d56fafb6f7e997b13d6abf93e97d5e",
+      "outputs/observer_2_OFF.warmup.unified.json": "fccd539cb3b6ba30043caf96ea7059c11e11f472410f0e60da5cdf8f70684fb5",
+      "outputs/observer_3_OFF.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+      "outputs/observer_3_OFF.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+      "outputs/observer_3_OFF.numeric.json": "08e5cf4fff0034503711eb51714af58b3909984f274c794937ddff9f1be858e3",
+      "outputs/observer_3_OFF.ops.csv": "cb2afba4a44f099cb9fdfee50341faf4c60a0f20aad49880dfea76e0377eaa16",
+      "outputs/observer_3_OFF.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+      "outputs/observer_3_OFF.region.json": "e3c737d15d6012c06aad7d35fc85ebdd2f9b0f0a379d059b0dde7ae8bde94cc0",
+      "outputs/observer_3_OFF.scope.json": "1247bdf0f3f2f507840ab8675043d8ae970b38113be4483a51262034056343a8",
+      "outputs/observer_3_OFF.summary.json": "daa1979e8f943928271558b19450a285b6c855b2c5412178ad3c94fe927fe1a3",
+      "outputs/observer_3_OFF.unified.json": "aad80868e3f3ec06b3c54bbb6592615fd071768c2caa3fddf3d8b41a388c8b54",
+      "outputs/observer_3_OFF.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+      "outputs/observer_3_OFF.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+      "outputs/observer_3_OFF.warmup.numeric.json": "f80c77b1835dc465960cd308e563bf94e9bd17963ddf5f218a84c482ad27e5e0",
+      "outputs/observer_3_OFF.warmup.ops.csv": "ca93400657e9d8b032665e71099f43d42fa1bf73e071584ab06ae8e0638db903",
+      "outputs/observer_3_OFF.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+      "outputs/observer_3_OFF.warmup.region.json": "a9bfda0628544ec6da3e38ab16b4474609bf306cf3799c846d92b7666719e3ab",
+      "outputs/observer_3_OFF.warmup.summary.json": "fb0b3c55dfe20260a37de7ea2ffea1303e3da6c2a1c4056b05177d742abfffa0",
+      "outputs/observer_3_OFF.warmup.unified.json": "aacceeb234d612df5fc82de944b991b3bc50d6d5ff68d1ae61f732718e3ecc27",
+      "outputs/observer_3_ON.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+      "outputs/observer_3_ON.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+      "outputs/observer_3_ON.numeric.json": "77374b2a46964343d8021ccd85a7ef956aedda7352d6b4546fc8c37893280d68",
+      "outputs/observer_3_ON.ops.csv": "98d797678f0850f98fe6339756f90484d781bb76206ffcd249f3dfff5c9c019a",
+      "outputs/observer_3_ON.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+      "outputs/observer_3_ON.region.json": "f3441f0017518598647e042a2c70bc4812d7bd09ec0dfb803a2a4d35293d3573",
+      "outputs/observer_3_ON.scope.json": "a3414e7ae778915b84f0b5bfd13e8bf001233757d67a041e7e25367acc2bfbc0",
+      "outputs/observer_3_ON.summary.json": "cdfac102594e11916bab333a4d4610e61284e03fac0f594b70e9312e0c3734dd",
+      "outputs/observer_3_ON.unified.json": "367e5424929b34e0a5558ddac9a7ef08d19f18857cef598f5d2793954e04bfb1",
+      "outputs/observer_3_ON.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+      "outputs/observer_3_ON.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+      "outputs/observer_3_ON.warmup.numeric.json": "309db9a3ac4a90103710020ef6708c8646a52bf8d3e8232ca5f71467b1c6bdde",
+      "outputs/observer_3_ON.warmup.ops.csv": "257169734570e5cd7f11b9d19690703f1148aafb9dc0f3f452a1e1f73681b9ab",
+      "outputs/observer_3_ON.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+      "outputs/observer_3_ON.warmup.region.json": "630b41716ce38221f3d8bb5d6768366027632bc6448c28bacf7abfd3686e7250",
+      "outputs/observer_3_ON.warmup.summary.json": "111fbaea709e913b9a23909a7073873dcc56a0d90e5560b0e677eb7cc6192893",
+      "outputs/observer_3_ON.warmup.unified.json": "a943953fe57a3014f8bc6a00d3b0f24196e43a15f71e2e358ab74ca5fa77f1c2"
+    }
+  },
+  "CPU_binding": {
+    "build_sha256": "87e4b4386e1a29e1605a47425f4f66cf784fe5aab9ffb09a81578605dc88a1b9",
+    "conformance_sha256": "c107b1054899fc68683d712ea62d15b53cba3b696a9309443d22428c2647c47d",
+    "library_sha256": "fb3f7c64328faa58d97738489f88c474da963a0a8d05322c9b5440dbd9e0a553"
+  },
+  "analysis_source_sha256": "159610ddf8d82af6e82398cd7a79d8b65dc2e7be9d46aa1310ecb167dbc43a32"
+}

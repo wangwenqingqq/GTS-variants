@@ -1,0 +1,76 @@
+{
+  "experiment": "GTSPP_20261009_target_short_shared_warmup",
+  "state": "DESIGNED_NOT_RUN",
+  "parent": "0c8541ee0d791676822839eb16890f433464f574",
+  "dataset": "registered original FP32 GIST N1000000 D960",
+  "B": 1,
+  "K": 8,
+  "radius_bits": "0x3f34a3d8",
+  "short_seed": 202610090242,
+  "events": 336,
+  "range_queries": 128,
+  "knn_queries": 128,
+  "inserts": 40,
+  "deletes": 40,
+  "real_rebuilds": 2,
+  "warmup": "one independent initial-state clone, frozen 19 events/8 queries/one real rebuild; release all service owners, restore exact original host input, reset owners and epochs, fresh setup before measured trace",
+  "primary_timer": "existing U10 continuous steady-clock trace including update-buffer preparation, full Host-ready answers, ACKs, compaction/rebuild/refit/PAR refresh/repack, final service-device release and synchronization",
+  "separate": [
+    "input parsing",
+    "CUDA context",
+    "warmup clone/setup/trace/release/output",
+    "fresh initial setup",
+    "post-timer file serialization",
+    "CPU oracle",
+    "profilers",
+    "per-process CUDA context teardown after serialization; not physical GPU reset"
+  ],
+  "modes": {
+    "A": [
+      "NATIVE",
+      "FULL"
+    ],
+    "B": [
+      "PAR_STRONG",
+      "FULL"
+    ],
+    "C": [
+      "PAR_STRONG",
+      "BOUND"
+    ]
+  },
+  "orders": [
+    "ABC",
+    "CBA",
+    "BCA",
+    "ACB",
+    "CAB",
+    "BAC"
+  ],
+  "primary_processes": 18,
+  "estimator": "baseline/candidate paired geometric mean; two-sided 95% paired-process bootstrap, seed202610090242,20000 replicates",
+  "order_gate": "interval crosses 1 or geometric direction reverses between the two three-round order strata -> inconclusive; retain every round, no rerun-to-win",
+  "observer_qualification": "C on same fixed short trace: six fresh processes in OFF/ON,ON/OFF,OFF/ON order; complete answers identical; paired ON/OFF upper95 <=1.05 and each ratio<=1.05; otherwise primary timings blocked for this observer identity",
+  "scope_qualification": "bounded GIST4096 C; 200ms diagnostic delay before final release enters trace, 200ms setup or post-timer write delay stays outside trace; permit <100ms incidental trace difference and require >=180ms causal included delay",
+  "correctness": "unchanged reference contract; independent CPU exhaustive scores, full members/field bits/multiplicity, ordered cross-mode output, actual operation states and epoch/release receipts",
+  "sanitizers": "original requested memory-access memcheck, racecheck and synccheck for clone/restore; target real-rebuild memory-access memcheck; all unsuppressed with error-exitcode",
+  "kernel_change": false,
+  "hypotheses": [
+    "B reorganizes range execution relative to A with common safe numeric repairs",
+    "C removes remaining squared-distance dimensions after a valid seed cutoff but adds seed/selection work",
+    "shared update state preserves consistency; no unmeasured independent-state savings claim"
+  ],
+  "added_costs": [
+    "PAR plan creation/refresh",
+    "common numeric refit",
+    "kNN mirror packing",
+    "BOUND seed/selection",
+    "complete answer delivery"
+  ],
+  "default_promotion": false,
+  "novelty_claim": false,
+  "external_snapshots_required_before_long_admission": true,
+  "conditional_long_started": false,
+  "additional_full_leak_diagnostic": "R1/R2 fail on context-initialized managed symbols; identical phase-A control and one-symbol minimal reproduction retained; no leak-clean or production promotion claim. This extra gate is unresolved and does not waive any requested access/synchronization gate.",
+  "admission_amendment": "Before any observer or primary process: retain extra full-leak result separately and run the original supplied sanitizer scope. No algorithm, timing estimator, input, threshold or sample budget changed."
+}

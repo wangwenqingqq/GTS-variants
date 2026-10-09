@@ -1,0 +1,21 @@
+{
+  "state": "DESIGNED_BEFORE_STATIC_DIAGNOSTICS",
+  "source": "same registered GIST FP32 and phase-B fixed short events",
+  "snapshots": ["initial occurrence list", "occurrence list after first true rebuild"],
+  "queries": "first 32 frozen workflow query coordinates mapped by original row onto the initial snapshot, and first 32 after first rebuild onto the rebuilt snapshot; convert query kind only to kNN, B1 K8; verify original physical lineage byte-for-byte",
+  "modes": ["PAR+FULL", "PAR+BOUND", "native Faiss 1.15.1 GpuIndexFlatL2 FP32 no cuVS"],
+  "processes": 6,
+  "order": "initial FULL/BOUND/FLAT then rebuilt FULL/BOUND/FLAT, each one fresh process",
+  "GTS_warmup": "qualified independent clone, 19 events/8 queries/one actual rebuild; release and restore snapshot",
+  "Flat_warmup": "eight fixed snapshot queries; static index is not updated",
+  "primary_comparison": false,
+  "scope": "static 32-query Host-ready service pass plus final service-device release; setup/warmup separately recorded; no update/refit/repack cost, no dynamic external end-to-end claim",
+  "query_ack_sum": "GTS nested operation timing sum only, not another continuous e2e denominator",
+  "reference": "independent CPU ordered FP64 full scan; legal same-distance boundary ties accepted for external memberships; internal exact ordered ID and FP32 field identity",
+  "external_field_tolerance": "absolute squared distance error/max(reference squared,1) <= 5e-5 inherited from native adapter; preserve raw native squared fields and every mismatch",
+  "isolation": "same caller-selected idle GPU and live-verified NUMA placement through unchanged existing advisory GPU guard; no device settings or foreign processes touched",
+  "optional_IVF_ALL": "not included in this six-process admission; an additional two diagnostic processes only if separately registered",
+  "default_promotion": false,
+  "significance_claim": false,
+  "long_admission": false
+}

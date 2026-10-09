@@ -11,6 +11,11 @@ radius bits `0x3f34a3d8`. Insertions reference current physical rows, deletion
 removes one current live-rank occurrence, and buffer occupancy 10 really rebuilds.
 Mode A has common numeric/safety repairs; it is not untouched original GTS.
 
+The subsequent [phase-B overlay and recipe](phase_b/README.md) provides cloned
+warmup/restore, qualified observer, fixed 18-process short comparison and six
+static native Flat diagnostics. Its [result ledger](phase_b/RESULTS.md) does not
+promote a global default, 10k workload or broad external speedup.
+
 ## Preparation and build
 
 Use installed NumPy/CUDA/Thrust and a fresh scratch directory **outside this

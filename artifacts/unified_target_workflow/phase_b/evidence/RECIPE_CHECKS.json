@@ -1,0 +1,37 @@
+{
+  "clean_staged_git_tree": "849476f66de90e7f04445b979fab6f64451ff21e",
+  "fresh_CUDA_compile": true,
+  "fresh_CPU_oracle_compile_and_conformance": true,
+  "CPU_build": {
+    "library_sha256": "fb3f7c64328faa58d97738489f88c474da963a0a8d05322c9b5440dbd9e0a553",
+    "source_sha256": "b811d0b356292385ef102319a342d5800dba54964c8a5d027360ec35369aeedd",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "flags": [
+      "-std=c++17",
+      "-O3",
+      "-fPIC",
+      "-shared",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-fno-fast-math",
+      "-fno-associative-math",
+      "-frounding-math"
+    ],
+    "threads": 8,
+    "oracle_conformance_sha256": "c107b1054899fc68683d712ea62d15b53cba3b696a9309443d22428c2647c47d"
+  },
+  "clean_binary_sha256": "414210a1168d1098efa2e5ce2895a5660c9bf85074208560d3768d6f5952d9b5",
+  "executed_binary_sha256": "0b706b7d6d45c1b2f5180bd3b94e20f8c5230c4516ce6d189c5394fa62de5c40",
+  "generated_CUDA_sources_match_executed_count": 22,
+  "all_normalized_GPU_functions_match": true,
+  "normalized_SASS_sha256": "7d0ff1767e79a2dbc1f8ea18e52d29015d3d5a99ce4491dab8836d75b5f40948",
+  "fresh_archive_portable_tests": [
+    "fixed18 budget/3+3order/pairedbootstrap",
+    "invalidguard/foreignprocess/mutatedrow rejection",
+    "nativeNaN/Inf rejection",
+    "N255/4096/1M snapshot coordinate replay",
+    "native1/2/3byte malformed tails rejection"
+  ],
+  "final_transport_only_delta": "CSV CRLF to LF; new recipe/publication metadata; no executable/source delta",
+  "scope": "Clean compiled source and independent CPU backend reproduction. No additional/replacement primary GPU timing; observed R3 scope and negative evidence remain unchanged."
+}
