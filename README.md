@@ -1,5 +1,20 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## Same-semantics build tiling: submission B/internal C (2026-10-09)
+
+[Build-distance tiles](artifacts/build_distance_tiles/README.md) passes22
+qualification processes and12 fresh direction-balanced primary processes on
+original FP32 GIST N1M/D960/B1/K8,336 events with two actual rebuilds. Against
+fresh PAR+FULL/original build mapping, paired workflow gain is **8.029943×**
+(95% interval **[7.955661,8.104259]**); all six pairs favor tiling and complete
+ordered outputs match. All112 original GPU functions are identical; only one
+scoring mapping function is added. See [complete boundaries and raw pairs](artifacts/build_distance_tiles/REBUILD_E2E_RESULTS.md).
+
+This is engineering baseline strengthening,not novel distance-work elimination,
+untouched-GTS/external superiority,leak-clean/default or100k/1B admission. The
+96B context-symbol issue and external tree/scan gates remain open. The earlier
+PAR and static Flat counterevidence are not multiplied or discarded.
+
 ## Rebuild localization and CPU/GPU baseline admission (2026-10-09)
 
 [Submission A](artifacts/rebuild_tree_baselines/README.md) adds two real-rebuild
@@ -8,7 +23,9 @@ N1M/D960. Shallow pivot-distance kernels dominate the captured build; all384
 complete CPU query-quality checks pass. CPU Flat is faster than the fixed-leaf
 KD/Ball diagnostics. MVPT/GPU_TREE concrete source/output/reuse gaps remain
 explicit. This is **not** a new tiled-kernel or dynamic end-to-end gain; earlier
-phase-B18 primary processes remain unchanged. Submissions B/C are pending.
+phase-B18 primary processes remain unchanged. B/C were pending at this A
+checkpoint; the later internal delivery is linked above. External formal C
+comparisons remain pending.
 
 ## Scoped unified search/update integration (2026-10-09)
 

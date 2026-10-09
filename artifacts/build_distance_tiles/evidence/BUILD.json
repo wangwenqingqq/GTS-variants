@@ -1,0 +1,31 @@
+{
+  "binary_sha256": "3e8db05facf30098638542f75067399a9053dd746f4d25b707bc418fdcfb9e36",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-arch=sm_120",
+    "-lineinfo",
+    "-rdc=true",
+    "-Xnvlink=--ignore-host-info",
+    "--ptxas-options=-v"
+  ],
+  "hardware": {
+    "GPU": "RTX PRO6000 Blackwell Server96GB",
+    "architecture": "SM120",
+    "CPU": "Xeon Gold6530",
+    "sockets": 2,
+    "physical_cores": 64,
+    "logical_CPUs": 128
+  },
+  "software": {
+    "CUDA": "13.1",
+    "driver": "590.48.01"
+  },
+  "settings": "unchanged; serialized idle single GPU and device-local NUMA; identifiers private",
+  "original_qualification_driver_sha256": "5d1c12f7f8d6f4bbb605968561ea45ed8e149254a8aa9cc0a9e08be01142dbb5",
+  "original_qualification_analysis_sha256": "fc2cedd17d683c1c0f394131bbd962c5fa0ad801b09ac73b2138471077b38086",
+  "primary_analysis_sha256": "037b43fe64a991326eec039e77678e8711408309f021b645e0bf97d502df75a3",
+  "source_recipe_sha256": "467f00c859b6669e2ec6545413e7989a376ef7426ecd69c5186ce39392b367de",
+  "primary_qualification_proof_sha256": "7c2ec71c46017e6da6702ee1fefae2e6b16ab80047985bf49201dc3f377fce1a",
+  "hardened_recheck_sha256": "4078bd9b6d709e6881c265ac54a48a8650193003be768ef122912a057d99fc44"
+}

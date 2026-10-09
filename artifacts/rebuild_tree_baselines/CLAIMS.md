@@ -19,3 +19,12 @@ duration, resource metadata and source-derived work are not a workflow gain.
 intervention through submission-B bounded/key/topology/sanitizer gates, then
 submission-C balanced complete-workflow measurement. Nearest prior-art/novelty
 admission and long-workflow/resource/output-consumption gates remain open.
+
+## Later checkpoint: submission B/internal C
+
+RB3's unknown status above records submission A,not a current claim that tiling
+is absent. The later [build-distance tiling delivery](../build_distance_tiles/README.md)
+passes its bounded/layer/sanitizer gates and measures the fresh six paired
+336-event workflow comparison. Its distinct claim ledger and results preserve
+the ordinary-CTA novelty rejection,external/long-workflow gaps and96B leak
+boundary. Earlier profiler,CPU diagnostic and18-process evidence is unchanged.

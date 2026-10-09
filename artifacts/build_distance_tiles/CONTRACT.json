@@ -1,0 +1,37 @@
+{
+  "experiment": "GTSPP_20261009_BUILD_DISTANCE_TILES",
+  "status": "REGISTERED_BEFORE_IMPLEMENTATION",
+  "source_pin": "ff3867e18ead9101f94d423cb9f9f6d24f140f13",
+  "parent_binary_sha256": "0b706b7d6d45c1b2f5180bd3b94e20f8c5230c4516ce6d189c5394fa62de5c40",
+  "upstream_pin": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "modes": {"B0": "NODE", "B1": "TILED"},
+  "scope": {"N": 1000000, "D": 960, "B": 1, "K": 8, "radius": 0.705625057220459, "radius_bits": "0x3f34a3d8", "threshold": 10, "range": "PAR_STRONG", "knn": "FULL"},
+  "candidate": {"threads": 512, "objects_per_tile": 512, "geometry": "flat explicit node_slot/tile decode; conservative monotone per-layer size bound", "new_GPU_allocations": 0, "new_primary_synchronizations": 0, "changed_arithmetic_sort_query_policy": false},
+  "qualification": {
+    "cases": ["root20", "tail513", "entropy4096", "mixed19399", "equal4096", "entropy65535", "gist4096", "stress4096", "million_prefix"],
+    "bounded_modes_each": ["B0", "B1"],
+    "sanitizers": ["B1_gist4096_memcheck", "B1_gist4096_racecheck", "B1_gist4096_synccheck", "B1_million_prefix_memcheck"],
+    "initial_processes": 22,
+    "complete_defined_key_pid_sort_topology_bounds_identity": true,
+    "audit_not_primary_timing": true,
+    "failed_attempts_retained_no_automatic_replacement": true
+  },
+  "primary": {
+    "conditional_on_qualification": true,
+    "orders": ["B0B1", "B1B0", "B0B1", "B1B0", "B0B1", "B1B0"],
+    "fresh_processes": 12,
+    "events": 336, "range": 128, "knn": 128, "inserts": 40, "deletes": 40, "rebuilds": 2,
+    "warmup": "same cloned19 events and actual rebuild; release/restore initial input",
+    "estimator": "paired geometric B0/B1 continuous workflow ratio",
+    "bootstrap_seed": 202610090242, "bootstrap_resamples": 20000,
+    "win_gate": "95pct lower bound>1, at least5/6 process wins, both order-stratum geometric ratios>1",
+    "all_observations_and_losses_retained": true,
+    "scope": "existing continuous Host-ready/ACK trace including buffer prep, maintenance and final service release; setup/warmup/context separate"
+  },
+  "guard_timeout_s": 1200,
+  "profile_runs": 0,
+  "original_18_primary_reruns": 0,
+  "long_matrix": "NOT_ADMITTED",
+  "novelty": "ordinary CTA partitioning, not a new research mechanism",
+  "leak_gate": "prior96B context managed symbols unresolved; ordinary access/sync gates separate"
+}
