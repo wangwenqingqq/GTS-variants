@@ -88,3 +88,15 @@ the native update/tree/range logic and input semantics remain unchanged.
 Preparation attempts A/B are retained locally: A exposed a provenance-JSON
 schema mismatch before compilation; B prepared all parent source pins and new
 cases successfully. Neither attempted GPU execution.
+
+## Post-execution wording clarification (no estimator/order change)
+
+The registered three regression pairs were legacy/unified, unified/legacy,
+legacy/unified: alternating with a2/1 order split, **not equal-count direction
+balance**. All three are retained; no pair is added or replaced. The frozen
+geometric-mean/bootstrap <=5% screen is unchanged and is not a positive speedup
+claim. Host strict parsing/validation occurs before the captured context/setup
+and warm timers; no process-start-to-exit or complete-cold latency is admitted.
+The protocol self-test independently checks distance algebra but shares replay
+logic between its two paths; independent state validation comes from the
+separate read-only raw-output audit, not that self-test alone.

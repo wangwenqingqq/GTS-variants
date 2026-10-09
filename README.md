@@ -1,5 +1,24 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## Scoped unified search/update integration (2026-10-09)
+
+[The unified B1 artifact](artifacts/unified_search_update/README.md) now uses one
+original-GTS live base, tombstones, reference buffer and rebuild loop for exact
+kNN plus PAR range queries and serialized updates.31 guarded processes passed
+full-output and state checks, including K8/K32 mixed10k traces and4 sanitizer
+runs. The fresh legacy-PAR regression screen passed: paired warm-trace ratio
+1.000430,95% interval[0.996224,1.005527], three alternating pairs (2/1 order
+split). This is non-regression, **not a measured speedup**.
+
+This is a **synthetic N1000/D128/B1 scoped integration**, not paper-wide GTSPP
+or arbitrary-vector/large-N/external-comparison admission. Each mixed10k trace
+contains5k range and5k kNN. The unpruned FULL control was faster in the single
+K8 mixed comparison; that adverse observation is retained, not relabeled as a
+cutoff gain. See [results and limits](artifacts/unified_search_update/RESULTS.md)
+and the [redundancy-to-end-to-end ledger](artifacts/unified_search_update/CLAIMS.md).
+The2026-10-07 statement below records the older static-contract checkpoint;
+its global comparison admission remains unchanged by this bounded integration.
+
 ## Scoped PAR range/update reproduction (2026-10-08)
 
 [The standalone PAR module recipe](artifacts/par_range_update/README.md) fetches
