@@ -1,0 +1,4331 @@
+{
+  "sqlite_sha256": "76002d61e00ca4c35d03efd3ded070903068deb2d06f28950cbd80588b7775fb",
+  "captured_event": 48,
+  "captured_host_ms": 23790.102533,
+  "stages": [
+    {
+      "stage": "rb.event48",
+      "inclusive_host_ms": 23790.102533,
+      "attributed_GPU_kernel_sum_ms": 23707.128906,
+      "kernel_launches": 76,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 20,
+        "cudaMemcpy_v3020": 4,
+        "cudaFree_v3020": 25,
+        "cuKernelGetName": 76,
+        "cudaLaunchKernel_v7000": 76,
+        "cudaStreamSynchronize_v3020": 16,
+        "cudaMallocManaged_v6000": 5,
+        "cudaDeviceSynchronize_v3020": 16,
+        "cudaMemset_v3020": 3,
+        "cudaMemsetAsync_v3020": 50,
+        "cudaMemcpyAsync_v3020": 5,
+        "cudaMemGetInfo_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceScanInitKernel",
+          "ms": 0.001536,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 16,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceScanKernel",
+          "ms": 0.00992,
+          "grid": [
+            119,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 64,
+          "static_shared_bytes": 33808,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getNewData",
+          "ms": 329.067921,
+          "grid": [
+            1954,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 22,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "initIndexData",
+          "ms": 2.073372,
+          "grid": [
+            1954,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 18,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 20442.435914,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.014144,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014304,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014272,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01424,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014208,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013664,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.010912,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 2.775707,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001952,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001408,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 2046.155345,
+          "grid": [
+            10,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.01008,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014176,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01408,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013696,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013888,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.012096,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01088,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 2.705852,
+          "grid": [
+            10,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001888,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001408,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 205.927211,
+          "grid": [
+            100,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.0096,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014432,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014112,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014304,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013952,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01344,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013632,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.012224,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.010944,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 2.688155,
+          "grid": [
+            100,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001984,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001472,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 125.879343,
+          "grid": [
+            1000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.009824,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.00112,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01424,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013248,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013184,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013792,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013056,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01088,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 7.556307,
+          "grid": [
+            1000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.00208,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.00144,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 142.781299,
+          "grid": [
+            10000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.009664,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014592,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014112,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014208,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013248,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013504,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013888,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01312,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.011264,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 40.287358,
+          "grid": [
+            10000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001792,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.00144,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "refit",
+          "ms": 343.586407,
+          "grid": [
+            111111,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 48,
+          "static_shared_bytes": 4096,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "pack32",
+          "ms": 12.582123,
+          "grid": [
+            3907,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 22,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rebuild.compaction",
+      "inclusive_host_ms": 392.486749,
+      "attributed_GPU_kernel_sum_ms": 329.079377,
+      "kernel_launches": 3,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 2,
+        "cudaMemcpy_v3020": 1,
+        "cudaFree_v3020": 7,
+        "cuKernelGetName": 3,
+        "cudaLaunchKernel_v7000": 3,
+        "cudaStreamSynchronize_v3020": 1,
+        "cudaMallocManaged_v6000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceScanInitKernel",
+          "ms": 0.001536,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 16,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceScanKernel",
+          "ms": 0.00992,
+          "grid": [
+            119,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 64,
+          "static_shared_bytes": 33808,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getNewData",
+          "ms": 329.067921,
+          "grid": [
+            1954,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 22,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rebuild.construct",
+      "inclusive_host_ms": 23031.927026,
+      "attributed_GPU_kernel_sum_ms": 23021.880999,
+      "kernel_launches": 71,
+      "attributed_runtime_calls": {
+        "cudaMallocManaged_v6000": 2,
+        "cudaMalloc_v3020": 16,
+        "cudaMemset_v3020": 2,
+        "cuKernelGetName": 71,
+        "cudaLaunchKernel_v7000": 71,
+        "cudaDeviceSynchronize_v3020": 11,
+        "cudaMemsetAsync_v3020": 50,
+        "cudaFree_v3020": 14,
+        "cudaStreamSynchronize_v3020": 15,
+        "cudaMemcpyAsync_v3020": 5
+      },
+      "kernels": [
+        {
+          "name": "initIndexData",
+          "ms": 2.073372,
+          "grid": [
+            1954,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 18,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 20442.435914,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.014144,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014304,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014272,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01424,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014208,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013664,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.010912,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 2.775707,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001952,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001408,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 2046.155345,
+          "grid": [
+            10,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.01008,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014176,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01408,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013696,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013888,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.012096,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01088,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 2.705852,
+          "grid": [
+            10,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001888,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001408,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 205.927211,
+          "grid": [
+            100,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.0096,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014432,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014112,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014304,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013952,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01344,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013632,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.012224,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.010944,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 2.688155,
+          "grid": [
+            100,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001984,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001472,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 125.879343,
+          "grid": [
+            1000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.009824,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.00112,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01424,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013248,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013184,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013792,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013056,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01088,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 7.556307,
+          "grid": [
+            1000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.00208,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.00144,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "getPivotDis",
+          "ms": 142.781299,
+          "grid": [
+            10000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.009664,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014592,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014112,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014208,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013248,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013504,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013888,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01312,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.011264,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "nodeSplit",
+          "ms": 40.287358,
+          "grid": [
+            10000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001792,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.00144,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.alloc_init",
+      "inclusive_host_ms": 6.38301,
+      "attributed_GPU_kernel_sum_ms": 2.073372,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cudaMallocManaged_v6000": 2,
+        "cudaMalloc_v3020": 6,
+        "cudaMemset_v3020": 2,
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "initIndexData",
+          "ms": 2.073372,
+          "grid": [
+            1954,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 18,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.pivot[level=0,slots=1,n=1000000]",
+      "inclusive_host_ms": 20442.47455,
+      "attributed_GPU_kernel_sum_ms": 20442.435914,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "getPivotDis",
+          "ms": 20442.435914,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.sort[level=0]",
+      "inclusive_host_ms": 1.430656,
+      "attributed_GPU_kernel_sum_ms": 0.125376,
+      "kernel_launches": 10,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cudaMemsetAsync_v3020": 10,
+        "cuKernelGetName": 10,
+        "cudaLaunchKernel_v7000": 10,
+        "cudaFree_v3020": 1,
+        "cudaStreamSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.014144,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014304,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014272,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01424,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014208,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013664,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.010912,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.split[level=0]",
+      "inclusive_host_ms": 2.789886,
+      "attributed_GPU_kernel_sum_ms": 2.775707,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "nodeSplit",
+          "ms": 2.775707,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.reduce[level=0]",
+      "inclusive_host_ms": 0.227413,
+      "attributed_GPU_kernel_sum_ms": 0.00336,
+      "kernel_launches": 2,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cuKernelGetName": 2,
+        "cudaLaunchKernel_v7000": 2,
+        "cudaStreamSynchronize_v3020": 2,
+        "cudaMemcpyAsync_v3020": 1,
+        "cudaFree_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001952,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001408,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.pivot[level=1,slots=10,n=1000000]",
+      "inclusive_host_ms": 2046.177182,
+      "attributed_GPU_kernel_sum_ms": 2046.155345,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "getPivotDis",
+          "ms": 2046.155345,
+          "grid": [
+            10,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.sort[level=1]",
+      "inclusive_host_ms": 0.65457,
+      "attributed_GPU_kernel_sum_ms": 0.118528,
+      "kernel_launches": 10,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cudaMemsetAsync_v3020": 10,
+        "cuKernelGetName": 10,
+        "cudaLaunchKernel_v7000": 10,
+        "cudaFree_v3020": 1,
+        "cudaStreamSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.01008,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014176,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01408,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013696,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013888,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.012096,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01088,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.split[level=1]",
+      "inclusive_host_ms": 2.718682,
+      "attributed_GPU_kernel_sum_ms": 2.705852,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "nodeSplit",
+          "ms": 2.705852,
+          "grid": [
+            10,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.reduce[level=1]",
+      "inclusive_host_ms": 0.172124,
+      "attributed_GPU_kernel_sum_ms": 0.003296,
+      "kernel_launches": 2,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cuKernelGetName": 2,
+        "cudaLaunchKernel_v7000": 2,
+        "cudaStreamSynchronize_v3020": 2,
+        "cudaMemcpyAsync_v3020": 1,
+        "cudaFree_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001888,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001408,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.pivot[level=2,slots=100,n=1000000]",
+      "inclusive_host_ms": 205.942385,
+      "attributed_GPU_kernel_sum_ms": 205.927211,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "getPivotDis",
+          "ms": 205.927211,
+          "grid": [
+            100,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.sort[level=2]",
+      "inclusive_host_ms": 0.533438,
+      "attributed_GPU_kernel_sum_ms": 0.117792,
+      "kernel_launches": 10,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cudaMemsetAsync_v3020": 10,
+        "cuKernelGetName": 10,
+        "cudaLaunchKernel_v7000": 10,
+        "cudaFree_v3020": 1,
+        "cudaStreamSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.0096,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014432,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014112,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014304,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013952,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01344,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013632,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.012224,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.010944,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.split[level=2]",
+      "inclusive_host_ms": 2.705977,
+      "attributed_GPU_kernel_sum_ms": 2.688155,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "nodeSplit",
+          "ms": 2.688155,
+          "grid": [
+            100,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.reduce[level=2]",
+      "inclusive_host_ms": 0.160344,
+      "attributed_GPU_kernel_sum_ms": 0.003456,
+      "kernel_launches": 2,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cuKernelGetName": 2,
+        "cudaLaunchKernel_v7000": 2,
+        "cudaStreamSynchronize_v3020": 2,
+        "cudaMemcpyAsync_v3020": 1,
+        "cudaFree_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001984,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.001472,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.pivot[level=3,slots=1000,n=1000000]",
+      "inclusive_host_ms": 125.891775,
+      "attributed_GPU_kernel_sum_ms": 125.879343,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "getPivotDis",
+          "ms": 125.879343,
+          "grid": [
+            1000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.sort[level=3]",
+      "inclusive_host_ms": 0.480969,
+      "attributed_GPU_kernel_sum_ms": 0.117824,
+      "kernel_launches": 10,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cudaMemsetAsync_v3020": 10,
+        "cuKernelGetName": 10,
+        "cudaLaunchKernel_v7000": 10,
+        "cudaFree_v3020": 1,
+        "cudaStreamSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.009824,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.00112,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014336,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014144,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01424,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013248,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013184,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013792,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013056,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01088,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.split[level=3]",
+      "inclusive_host_ms": 7.567857,
+      "attributed_GPU_kernel_sum_ms": 7.556307,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "nodeSplit",
+          "ms": 7.556307,
+          "grid": [
+            1000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.reduce[level=3]",
+      "inclusive_host_ms": 0.159149,
+      "attributed_GPU_kernel_sum_ms": 0.00352,
+      "kernel_launches": 2,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cuKernelGetName": 2,
+        "cudaLaunchKernel_v7000": 2,
+        "cudaStreamSynchronize_v3020": 2,
+        "cudaMemcpyAsync_v3020": 1,
+        "cudaFree_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.00208,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.00144,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.pivot[level=4,slots=10000,n=1000000]",
+      "inclusive_host_ms": 142.793959,
+      "attributed_GPU_kernel_sum_ms": 142.781299,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "getPivotDis",
+          "ms": 142.781299,
+          "grid": [
+            10000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 44,
+          "static_shared_bytes": 4,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.sort[level=4]",
+      "inclusive_host_ms": 0.482072,
+      "attributed_GPU_kernel_sum_ms": 0.118752,
+      "kernel_launches": 10,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cudaMemsetAsync_v3020": 10,
+        "cuKernelGetName": 10,
+        "cudaLaunchKernel_v7000": 10,
+        "cudaFree_v3020": 1,
+        "cudaStreamSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceRadixSortHistogramKernel",
+          "ms": 0.009664,
+          "grid": [
+            1128,
+            1,
+            1
+          ],
+          "block": [
+            128,
+            1,
+            1
+          ],
+          "registers_per_thread": 78,
+          "static_shared_bytes": 8192,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortExclusiveSumKernel",
+          "ms": 0.001152,
+          "grid": [
+            8,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 37,
+          "static_shared_bytes": 2336,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014592,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014112,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.014208,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013248,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013504,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.013888,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.01312,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceRadixSortOnesweepKernel",
+          "ms": 0.011264,
+          "grid": [
+            174,
+            1,
+            1
+          ],
+          "block": [
+            384,
+            1,
+            1
+          ],
+          "registers_per_thread": 96,
+          "static_shared_bytes": 48128,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.split[level=4]",
+      "inclusive_host_ms": 40.298412,
+      "attributed_GPU_kernel_sum_ms": 40.287358,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "nodeSplit",
+          "ms": 40.287358,
+          "grid": [
+            10000,
+            1,
+            1
+          ],
+          "block": [
+            512,
+            1,
+            1
+          ],
+          "registers_per_thread": 50,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.reduce[level=4]",
+      "inclusive_host_ms": 0.16411,
+      "attributed_GPU_kernel_sum_ms": 0.003232,
+      "kernel_launches": 2,
+      "attributed_runtime_calls": {
+        "cudaMalloc_v3020": 1,
+        "cuKernelGetName": 2,
+        "cudaLaunchKernel_v7000": 2,
+        "cudaStreamSynchronize_v3020": 2,
+        "cudaMemcpyAsync_v3020": 1,
+        "cudaFree_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "DeviceReduceKernel",
+          "ms": 0.001792,
+          "grid": [
+            28,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 34,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        },
+        {
+          "name": "DeviceReduceSingleTileKernel",
+          "ms": 0.00144,
+          "grid": [
+            1,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 30,
+          "static_shared_bytes": 44,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.build_release",
+      "inclusive_host_ms": 0.158766,
+      "attributed_GPU_kernel_sum_ms": 0.0,
+      "kernel_launches": 0,
+      "attributed_runtime_calls": {
+        "cudaFree_v3020": 4
+      },
+      "kernels": []
+    },
+    {
+      "stage": "rebuild.reset",
+      "inclusive_host_ms": 2.067169,
+      "attributed_GPU_kernel_sum_ms": 0.0,
+      "kernel_launches": 0,
+      "attributed_runtime_calls": {
+        "cudaFree_v3020": 2,
+        "cudaMallocManaged_v6000": 2,
+        "cudaMemset_v3020": 1
+      },
+      "kernels": []
+    },
+    {
+      "stage": "rb.safe_refit",
+      "inclusive_host_ms": 350.669628,
+      "attributed_GPU_kernel_sum_ms": 343.586407,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cudaDeviceSynchronize_v3020": 2,
+        "cudaFree_v3020": 2,
+        "cudaMemcpy_v3020": 3,
+        "cudaMalloc_v3020": 2,
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1
+      },
+      "kernels": [
+        {
+          "name": "refit",
+          "ms": 343.586407,
+          "grid": [
+            111111,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 48,
+          "static_shared_bytes": 4096,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.PAR_refresh",
+      "inclusive_host_ms": 0.000998,
+      "attributed_GPU_kernel_sum_ms": 0.0,
+      "kernel_launches": 0,
+      "attributed_runtime_calls": {},
+      "kernels": []
+    },
+    {
+      "stage": "rb.mirror_repack",
+      "inclusive_host_ms": 12.602263,
+      "attributed_GPU_kernel_sum_ms": 12.582123,
+      "kernel_launches": 1,
+      "attributed_runtime_calls": {
+        "cuKernelGetName": 1,
+        "cudaLaunchKernel_v7000": 1,
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": [
+        {
+          "name": "pack32",
+          "ms": 12.582123,
+          "grid": [
+            3907,
+            1,
+            1
+          ],
+          "block": [
+            256,
+            1,
+            1
+          ],
+          "registers_per_thread": 22,
+          "static_shared_bytes": 0,
+          "local_bytes_per_thread": 0
+        }
+      ]
+    },
+    {
+      "stage": "rb.publish_ACK",
+      "inclusive_host_ms": 0.002632,
+      "attributed_GPU_kernel_sum_ms": 0.0,
+      "kernel_launches": 0,
+      "attributed_runtime_calls": {
+        "cudaDeviceSynchronize_v3020": 1
+      },
+      "kernels": []
+    }
+  ],
+  "runtime": {
+    "cudaMalloc_v3020": {
+      "calls": 20,
+      "inclusive_host_ms": 5.552134000000001
+    },
+    "cudaMemcpy_v3020": {
+      "calls": 4,
+      "inclusive_host_ms": 5.910229999999999
+    },
+    "cudaFree_v3020": {
+      "calls": 25,
+      "inclusive_host_ms": 58.28639799999999
+    },
+    "cuKernelGetName": {
+      "calls": 76,
+      "inclusive_host_ms": 0.010649
+    },
+    "cudaLaunchKernel_v7000": {
+      "calls": 76,
+      "inclusive_host_ms": 0.39678500000000005
+    },
+    "cudaStreamSynchronize_v3020": {
+      "calls": 16,
+      "inclusive_host_ms": 0.062137
+    },
+    "cudaMallocManaged_v6000": {
+      "calls": 5,
+      "inclusive_host_ms": 0.10220299999999999
+    },
+    "cudaDeviceSynchronize_v3020": {
+      "calls": 16,
+      "inclusive_host_ms": 23706.605701999997
+    },
+    "cudaMemset_v3020": {
+      "calls": 3,
+      "inclusive_host_ms": 1.760052
+    },
+    "cudaMemsetAsync_v3020": {
+      "calls": 50,
+      "inclusive_host_ms": 0.262752
+    },
+    "cudaMemcpyAsync_v3020": {
+      "calls": 5,
+      "inclusive_host_ms": 0.10042600000000002
+    },
+    "cudaMemGetInfo_v3020": {
+      "calls": 1,
+      "inclusive_host_ms": 0.03659
+    }
+  },
+  "leaf_CPU_module_samples": {
+    "[kernel.kallsyms]": 3,
+    "libcupti.so.13.1": 7,
+    "target": 2,
+    "libToolsInjection64.so": 5,
+    "libToolsInjectionMemoryAllocator.so": 2,
+    "[vdso]": 1867,
+    "libc.so.6": 40,
+    "libcuda.so.590.48.01": 10472
+  },
+  "CPU_sample_total": 12398,
+  "copy_summary": {
+    "copyKind=12;migrationCause=2": {
+      "events": 27,
+      "bytes": 110592,
+      "summed_event_ms": 0.020185000000000005
+    },
+    "copyKind=12;migrationCause=3": {
+      "events": 7,
+      "bytes": 430080,
+      "summed_event_ms": 0.011966999999999998
+    },
+    "copyKind=8;migrationCause=None": {
+      "events": 1,
+      "bytes": 3840000000,
+      "summed_event_ms": 5.199959
+    },
+    "copyKind=11;migrationCause=2": {
+      "events": 19,
+      "bytes": 77824,
+      "summed_event_ms": 0.019892
+    },
+    "copyKind=11;migrationCause=3": {
+      "events": 12,
+      "bytes": 393216,
+      "summed_event_ms": 0.018751999999999998
+    },
+    "copyKind=2;migrationCause=None": {
+      "events": 8,
+      "bytes": 6666684,
+      "summed_event_ms": 0.34921500000000005
+    }
+  },
+  "CPU_UM_fault_events": 27,
+  "GPU_UM_fault_events": 624,
+  "GPU_UM_fault_count": 2183,
+  "GPU_UM_fault_summed_event_ms": 656.526022,
+  "interpretation": "Host NVTX inclusive boundaries and correlated GPU-duration sums overlap. UM fault/event durations also overlap; do not add them to kernel or Host time. CPU leaf-module samples are not effective CPU numerical-work counts. Diagnostic-only, not paired speed evidence."
+}

@@ -1,5 +1,15 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## Rebuild localization and CPU/GPU baseline admission (2026-10-09)
+
+[Submission A](artifacts/rebuild_tree_baselines/README.md) adds two real-rebuild
+NSYS diagnostics and six native CPU static diagnostics on original FP32 GIST
+N1M/D960. Shallow pivot-distance kernels dominate the captured build; all384
+complete CPU query-quality checks pass. CPU Flat is faster than the fixed-leaf
+KD/Ball diagnostics. MVPT/GPU_TREE concrete source/output/reuse gaps remain
+explicit. This is **not** a new tiled-kernel or dynamic end-to-end gain; earlier
+phase-B18 primary processes remain unchanged. Submissions B/C are pending.
+
 ## Scoped unified search/update integration (2026-10-09)
 
 [The unified B1 artifact](artifacts/unified_search_update/README.md) now uses one

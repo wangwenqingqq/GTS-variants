@@ -1,0 +1,112 @@
+{
+  "experiment": "GTSPP_20261009_REBUILD_AND_TREES",
+  "status": "REGISTERED_BEFORE_NEW_MEASUREMENTS",
+  "source_pin": "a8cc8031bd75768a400c4bb9393098c6d574c96a",
+  "upstream_pin": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "scope": {
+    "dataset": "registered original FP32 GIST",
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "K": 8,
+    "radius_bits": "0x3f34a3d8",
+    "radius": 0.705625057220459,
+    "insert": "physical-row reference; retain occurrences",
+    "delete": "current live-rank occurrence",
+    "buffer_threshold": 10
+  },
+  "profile": {
+    "processes": [
+      "A_NSYS",
+      "B_NSYS"
+    ],
+    "maximum_new_nsys": 2,
+    "ncu_max_if_justified": 1,
+    "events": 51,
+    "captured_event": 48,
+    "capture": "first measured rebuild insertion through existing ACK fence; cloned warmup and initial restoration not captured",
+    "prefix_sha256": "9f4773d5637998e0a66f6203d2e51adb8d66bce39ea9180841abe538a8183648",
+    "no_added_device_sync": true,
+    "classification": "diagnostic-only, not primary latency",
+    "sampling": "own process-tree only; no shared settings changed",
+    "guard_timeout_seconds": 1200,
+    "stage_fields": [
+      "compaction",
+      "build.allocation_init",
+      "build.level.pivot",
+      "build.level.sort",
+      "build.level.split",
+      "build.level.reduce",
+      "safe_refit",
+      "PAR_refresh",
+      "mirror_repack",
+      "publish_ACK"
+    ]
+  },
+  "baseline_diagnostic": {
+    "job_order": [
+      "initial_CPU_KD",
+      "initial_CPU_BALL",
+      "initial_CPU_FLAT",
+      "first_rebuilt_CPU_KD",
+      "first_rebuilt_CPU_BALL",
+      "first_rebuilt_CPU_FLAT"
+    ],
+    "each_job": "fresh process, 32 B1 kNN plus 32 complete range queries on identical registered coordinates",
+    "CPU_KD": "explicit sklearn KDTree; float64 exact promotion of FP32 coordinates",
+    "CPU_BALL": "explicit sklearn BallTree; float64 exact promotion",
+    "CPU_FLAT": "native Faiss IndexFlatL2 FP32",
+    "leaf_size": 128,
+    "leaf_size_state": "fixed diagnostic setting, not tuned on these queries; 32/128/512 development selection remains future formal gate",
+    "native_threads": 1,
+    "NUMA": "live verified chosen GPU locality; CPU affinity pinned identically",
+    "timeout_seconds_per_job": 900,
+    "address_space_limit_bytes": 34359738368,
+    "warmup_queries_per_task": 8,
+    "initial_snapshots": "phase-B original initial and first_rebuilt lineage/query-coordinate manifests, no new selection",
+    "quality": {
+      "oracle": "qualified independent eight-thread ordered-FP64 CPU exhaustive rows, after all timings",
+      "range_membership": "exact complete occurrence set; missing/extra IDs separately reported, no finite top-K surrogate",
+      "knn": "genuine exact-distance boundary ties allowed; exact membership otherwise",
+      "field_squared_tolerance_scale1": 5e-05,
+      "retain_native_speeds_and_mismatches": true
+    },
+    "timing": "preparation/representation/build/warmup separate; continuous 32-query Host-ready delivery retaining every member plus release; CPU no artificial GPU copies",
+    "memory": "sampled RSS and VmHWM; report array/index bytes separately, not exact allocator peak"
+  },
+  "caps": {
+    "original_phase_B_primary_reruns": 0,
+    "initial_CPU_static_processes": 6,
+    "external_formal_processes": "NOT_ADMITTED until capability/quality, development freeze and exact job-budget registration",
+    "internal_B0_B1_formal": {
+      "status": "CONDITIONAL_NOT_ADMITTED",
+      "fresh_processes": 12,
+      "orders": [
+        "B0B1",
+        "B1B0",
+        "B0B1",
+        "B1B0",
+        "B0B1",
+        "B1B0"
+      ],
+      "events": 336,
+      "bootstrap_seed": 202610090242,
+      "bootstrap_resamples": 20000
+    }
+  },
+  "candidate": {
+    "status": "NO_IMPLEMENTATION_BEFORE_PROFILE",
+    "preferred": "node-object tile mapping only if measured dominant",
+    "objects_per_tile": 512,
+    "arithmetic_sort_pivot_topology_query_threshold": "unchanged",
+    "identity_gate": "per-level all keys/pids/sorted order/topology; complete fields and state"
+  },
+  "baseline_capability_audits": [
+    "CPU_MVPT source/license/outputs",
+    "pinned GPU_TREE source/license/D960/complete outputs",
+    "GTS_ORIG native arithmetic versus common repaired A",
+    "qualified GPU complete range scan identity"
+  ],
+  "long_campaign": "NOT_AUTOMATIC; 96B context-symbol diagnostic retained and unresolved",
+  "novelty": "not admitted; tiling/threshold tuning not automatic research contribution"
+}
