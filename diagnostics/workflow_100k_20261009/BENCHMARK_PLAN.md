@@ -174,7 +174,7 @@ cleanup is legal only if current-state quality/output remains valid.
   of each kind; it is not the same benchmark as either primary family.
 
 Every result names its dataset,N0,E,mix,query type,K or radius,Bq,Bu and resource
-tier. Preserve the current running final10000 campaign; do not overwrite its
+tier. Preserve the existing final10000 campaign; do not overwrite its
 queries, logs, tuning artifacts or outputs for this new scope.
 
 ### Fixed event count is not fixed update pressure
