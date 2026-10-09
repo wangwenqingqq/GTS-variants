@@ -41,3 +41,14 @@ See [Stage A results](../external_closure/A_RESULTS.md). The direct cumulative
 R/P, equally strengthened T/P and external static rankings remain unknown; old
 1.684797× and8.029943× are not multiplied. Standard adapters/tiling alone are not
 novelty claims, and the private manuscript is unchanged.
+
+## Later checkpoint: direct internal R/T/P closure
+
+The preceding unknown internal ratios record Stage A, not the current state.
+[Direct internal C](../external_closure/RTP_RESULTS.md) now measures R/P
+13.423096×, T/P 6.448319× and R/T 2.081643× on the fixed N1M/D960 336-event
+workflow with all 18 complete-output/state checks passing. These are fresh
+paired observations, not historical-ratio products. R includes common repairs;
+T and P share strengthened TILED construction. External static B remains at
+zero primaries, so external superiority, long-workflow admission and novelty
+remain unestablished. The private manuscript is unchanged.

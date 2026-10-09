@@ -86,3 +86,30 @@ and foreign-process checks are required. Missing cases cannot yield admission.
 proof remains immutable; `ADMISSION_BINDING` records later independent binding and
 the strengthened CPU boundary rechecks without relabeling old execution sources.
 `curate.py` refuses to publish an unbound or stale admission summary.
+
+## Direct cumulative / strengthened-reference short campaign
+
+See [measured direct R/T/P results](RTP_RESULTS.md) and the existing
+[claim-evidence ledger](../build_distance_tiles/CLAIMS.md). External B remains
+pending; the internal results do not substitute for external controls.
+
+`RTP_CONTRACT.json` fixes R/T/P, all six permutations, the unchanged admitted
+binary and timing/statistical boundaries. `rtp.py --stage bridge` admits the new
+T combination before `--stage primary` launches18 fresh processes. Supply the
+private build, registered cases, admitted parent, reference library and guard
+paths explicitly; `--help` lists all arguments. A fresh work directory is
+required. Every future launch archives `EXECUTED.py` without replacement; the
+narrow bridge recovery archives `EXECUTED_RESUME.py` and cannot replace an
+executed GPU case. Measured original/recovery source identities are distinct
+from the subsequently hardened public verification helper.
+
+`rtp_results.py` requires both private campaigns and those original source files.
+It rebinds guards, commands, placement, source, binary, complete outputs/state,
+all timing fields and the exact18-job set before producing any statistic.
+`rtp_report.py` renders the table directly from that JSON. Run `test_rtp.py` for
+schedule, estimator, rejection and receipt-reader regression checks.
+
+Keep the complete proof private. `rtp_curate.py --input "$FULL_PROOF" --output
+"$PUBLIC_PROOF"` emits only whitelisted evidence and source/receipt hashes, then
+`rtp_report.py --input "$PUBLIC_PROOF" --output "$REPORT"` generates the tables.
+Both outputs must be fresh paths; never overwrite original campaign evidence.

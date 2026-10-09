@@ -1,5 +1,22 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## Direct R/T/P short-workflow closure (2026-10-10)
+
+[Direct R/T/P results](artifacts/external_closure/RTP_RESULTS.md) close the internal
+cumulative and strengthened-reference gap with 18 fresh, balanced processes on
+FP32 GIST **N1M/D960/B1/K8**, 336 events (128 range, 128 kNN, 40 inserts,
+40 deletes, two actual rebuilds). Complete ordered outputs and all state
+transitions match the exhaustive-qualified parent. Direct paired workflow gains
+are **R/P 13.423096×**, **T/P 6.448319×**, and **R/T 2.081643×**; all three
+95% intervals exceed 1 and all six pairs favor the candidate.
+
+R includes common numerical/safety repairs and is not untouched original GTS;
+T and P both use strengthened TILED construction. These are fixed-query internal
+short-workflow results, not an external win, a coalescing-only attribution or
+100k/1B admission. Five bridge qualifiers and 18 primaries were added; external
+static B remains at zero primaries. The 96 B context-symbol limitation and
+GPU_TREE native membership blocker remain. No paper content was published.
+
 ## External controls: Stage A qualification (2026-10-10)
 
 [Stage A results](artifacts/external_closure/A_RESULTS.md) add complete GPU range
@@ -7,7 +24,8 @@ qualification on two GIST1M/D960 snapshots, disjoint-query CPU leaf512 selection
 and an explicitly labeled inclusive CPU Flat adapter. Author GPU_TREE remains
 blocked by native kNN membership failure; ownership/reuse and bounded safety
 results are retained separately. Twenty GPU qualifiers, no new primary timings.
-External static rankings and direct R/T/P cumulative gains are still pending.
+At this Stage A checkpoint, external static rankings and direct R/T/P gains were
+pending. The later direct internal result is linked above; external B is still open.
 
 
 ## Same-semantics build tiling: submission B/internal C (2026-10-09)
