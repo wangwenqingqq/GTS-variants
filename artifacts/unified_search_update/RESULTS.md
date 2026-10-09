@@ -90,3 +90,15 @@ paired sustained campaign that includes update/layout costs and large-N shapes.
   repeated/order-balanced processes, production ID/arrival semantics and
   matched Faiss-IVF/CAGRA comparison. None is silently inherited from static
   experiments or this N1000 integration. Paper manuscript remains untouched.
+
+## Clean delivery-tree check
+
+The final archive at documentation checkpoint
+`1e7b6113bc8c6ef3e15eff3cbddeeb2e767387e9` was independently prepared and
+built on the target GPU host. Its20 integrated/16 legacy source bytes equal the
+qualified checkpoint. CPU guard and malformed-input checks pass again. One
+additional default-environment boundary smoke proves PAR+BOUND dispatch,
+complete19-query/57-event output identity and release at K32/radius10000.
+This packaging smoke is **not** another regression pair or resampled estimator
+observation. Its fresh binary/source/receipt hashes are in
+[DELIVERY.json](DELIVERY.json); raw delivery evidence remains outside Git.
