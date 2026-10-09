@@ -28,3 +28,16 @@ passes its bounded/layer/sanitizer gates and measures the fresh six paired
 336-event workflow comparison. Its distinct claim ledger and results preserve
 the ordinary-CTA novelty rejection,external/long-workflow gaps and96B leak
 boundary. Earlier profiler,CPU diagnostic and18-process evidence is unchanged.
+
+## Later checkpoint: external-closure Stage A
+
+| ID | Avoidable cost / contract gap | Mechanism / module | Actual effect / added cost | End-to-end status |
+|---|---|---|---|---|
+| BL3 measured, bounded | Per-query release of shared tree metadata and mutable-root/owner confusion | external_closure tree ownership/full-output adapter | One build/32 B1 calls; full Host IDs/fields; extra Host allocation registry and complete delivery charged | No speedup; native kNN membership failure blocks GPU_TREE admission |
+| BL4 measured | Missing complete-range external control | Native cuVS FP32 pairwise distance + inclusive filter/CUB compact/full D2H | Both GIST N1M/D960 snapshots pass; workspace, compaction and output costs retained | Qualification only, not a static/dynamic external win |
+| BL5 measured | Untuned CPU leaf and strict-range contract mismatch | Disjoint-coordinate leaf selection; explicitly labeled CPU Flat inclusive adapter | KD/Ball leaf512 frozen; complete boundary/target checks pass; conversion/preparation exposed | No new primary result; future formal timing must bind its actual adapter |
+
+See [Stage A results](../external_closure/A_RESULTS.md). The direct cumulative
+R/P, equally strengthened T/P and external static rankings remain unknown; old
+1.684797× and8.029943× are not multiplied. Standard adapters/tiling alone are not
+novelty claims, and the private manuscript is unchanged.

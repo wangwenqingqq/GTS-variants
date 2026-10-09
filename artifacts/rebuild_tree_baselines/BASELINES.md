@@ -74,3 +74,15 @@ numbers are not a common workload after different maintenance policies.
 ANN IVF/HNSW/CAGRA remain separate quality-latency evidence, not substitutes for
 exact trees. No 10k/final10000 job, old primary matrix or long campaign was
 restarted by this submission. No global fastest-CPU/GPU-tree claim is admitted.
+
+## Later checkpoint: external-closure Stage A (2026-10-10)
+
+[The new admission results](../external_closure/A_RESULTS.md) supersede the
+pending GPU-tree/range recovery and fixed-leaf status **for this later scope**;
+older diagnostics retain their original identities. GPU complete range passes
+both original GIST N1M/D960 snapshots. KD/Ball select leaf512 on disjoint
+32-coordinate development queries. A separately named CPU Flat inclusive-boundary
+adapter passes edges and both snapshots. GPU_TREE remains excluded: native kNN
+returns only 6/8 true neighbors on a preregistered N4096/D17 case, while ownership/reuse and
+bounded safety-overlay range results are retained separately. MVPT remains open.
+No new external formal timing or direct R/T/P cumulative table has run yet.

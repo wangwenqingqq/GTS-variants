@@ -34,7 +34,7 @@ def rss():
 
 def execute(a):
     contract = json.loads((HERE / 'CONTRACT.json').read_text())
-    conf = contract['baseline_diagnostic']; spec = json.loads((a.snapshot / 'SNAPSHOT.json').read_text())
+    conf = dict(contract['baseline_diagnostic']); conf['leaf_size'] = getattr(a, 'leaf_size', None) or conf['leaf_size']; spec = json.loads((a.snapshot / 'SNAPSHOT.json').read_text())
     assert a.method in ('CPU_KD', 'CPU_BALL', 'CPU_FLAT')
     assert spec['N'] == 1000000 and spec['D'] == 960 and len(spec['queries']) == 32
     assert sha(a.data) == spec['data_sha256']
@@ -91,7 +91,7 @@ def execute(a):
         for qid in qids[:8]: query(task, qid)
     warmup_ms = (time.perf_counter()-start)*1000
     payloads = []; rows = []; timing = {}; user_start = resource.getrusage(resource.RUSAGE_SELF)
-    for task in ('knn', 'range'):
+    for task in getattr(a, 'task_order', 'knn,range').split(','):
         native_before = native_ms
         start = time.perf_counter()
         for qi, qid in enumerate(qids):
@@ -155,11 +155,15 @@ def check(a):
         arrays.append(np.fromfile(prefix+suffix, dtype=dtype))
     radius = np.float32(json.loads((HERE/'CONTRACT.json').read_text())['scope']['radius'])
     # Each coordinate is scored once; it validates both task outputs.
+    indexed={(r['task'],int(r['query'])):r for r in rows}
+    assert set(indexed)=={(task,qi) for task in ('knn','range') for qi in range(32)}
+    spec=json.loads((a.snapshot/'SNAPSHOT.json').read_text()) if getattr(a,'snapshot',None) else None
     for qi in range(32):
-        r = rows[qi]; assert int(r['query']) == qi and r['task'] == 'knn'
-        assert rows[32+qi]['task'] == 'range' and rows[32+qi]['qid'] == r['qid']
+        r=indexed['knn',qi]; other=indexed['range',qi]
+        assert other['qid']==r['qid']
+        if spec:assert int(r['qid'])==spec['queries'][qi]['physical_qid']
         sq = scores(data, np.arange(len(data)), data[int(r['qid'])])
-        for r in (rows[qi],rows[32+qi]):
+        for r in (r,other):
             at, count = int(r['offset']), int(r['count']); cols = [x[at:at+count] for x in arrays]
             report.append(dict(task=r['task'], query=qi, **quality(*cols, sq, r['task'], radius)))
     save(prefix+'.quality.json', dict(passed=all(r['passed'] for r in report), per_query=report, CPU_binding=binding,
@@ -169,6 +173,7 @@ def check(a):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__); p.add_argument('action', choices=('execute','check'))
+    p.add_argument('--leaf-size', type=int, choices=(32,128,512)); p.add_argument('--task-order', choices=('knn,range','range,knn'), default='knn,range')
     p.add_argument('--method'); p.add_argument('--data',type=Path,required=True); p.add_argument('--snapshot',type=Path)
     p.add_argument('--output',type=Path,required=True); p.add_argument('--library',type=Path)
     a = p.parse_args(); assert __debug__

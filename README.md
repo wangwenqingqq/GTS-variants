@@ -1,5 +1,15 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## External controls: Stage A qualification (2026-10-10)
+
+[Stage A results](artifacts/external_closure/A_RESULTS.md) add complete GPU range
+qualification on two GIST1M/D960 snapshots, disjoint-query CPU leaf512 selection,
+and an explicitly labeled inclusive CPU Flat adapter. Author GPU_TREE remains
+blocked by native kNN membership failure; ownership/reuse and bounded safety
+results are retained separately. Twenty GPU qualifiers, no new primary timings.
+External static rankings and direct R/T/P cumulative gains are still pending.
+
+
 ## Same-semantics build tiling: submission B/internal C (2026-10-09)
 
 [Build-distance tiles](artifacts/build_distance_tiles/README.md) passes22
