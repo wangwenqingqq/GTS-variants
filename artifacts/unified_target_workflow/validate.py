@@ -4,6 +4,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 import struct
 import numpy as np
@@ -35,7 +36,7 @@ def scores(data, physical, query, chunk=4096):
     return result
 
 
-def check(data_path, events_path, prefix, radius, k):
+def check(data_path, events_path, prefix, radius, k, expected_mode=None):
     data = load(data_path)
     ops = np.loadtxt(events_path, skiprows=1, dtype=np.int64, ndmin=2)
     prefix = str(prefix)
@@ -88,6 +89,7 @@ def check(data_path, events_path, prefix, radius, k):
             offset += len(ei)
         state=state_rows[step]
         assert [int(state[key]) for key in ('step','flag','base_before','buffer_before','base_after','buffer_after')]==[step,flag,*before,len(base),len(buffer)],'operation state mismatch'
+        assert all(math.isfinite(float(state[key])) and float(state[key])>=0 for key in ('ack_ms','rebuild_ms')), 'invalid operation timing receipt'
     summary=json.loads(Path(prefix+'.summary.json').read_text())
     mirror=json.loads(Path(prefix+'.unified.json').read_text())
     region=json.loads(Path(prefix+'.region.json').read_text())
@@ -96,6 +98,8 @@ def check(data_path, events_path, prefix, radius, k):
     assert mirror['refreshes']==numeric['refreshes']==numeric['epoch']==rebuilds+1
     assert not mirror['final_owned_bytes'] and not region['final_owned_bytes'] and not numeric['final_bytes']
     assert region['mode'] in (0,1) and mirror['knn_mode'] in ('FULL','BOUND')
+    if expected_mode is not None:
+        assert (region['mode'],mirror['knn_mode'])==expected_mode, 'execution mode differs from requested A/B/C'
     if region['mode']:
         assert region['refreshes']==rebuilds+1
         assert [r['epoch'] for r in region['refresh_rows']]==list(range(1,rebuilds+2))
@@ -153,6 +157,43 @@ def case(data, path, operations):
     (path/'events.txt').write_text(str(len(operations))+'\n'+''.join(f'{a} {b}\n' for a,b in operations))
 
 
+TARGET_DATA_SHA256='f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7'
+
+
+def verify_target_data(path):
+    data=load(path)
+    assert data.shape==(1000000,960), 'registered GIST shape'
+    digest=hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for chunk in iter(lambda:f.read(8<<20),b''):digest.update(chunk)
+    assert digest.hexdigest()==TARGET_DATA_SHA256, 'registered original FP32 GIST hash'
+    return data
+
+
+def event_case(path, operations):
+    path.mkdir(parents=True,exist_ok=False)
+    (path/'events.txt').write_text(str(len(operations))+'\n'+''.join(f'{a} {b}\n' for a,b in operations))
+
+
+def fixtures(data_path, work, radius):
+    x=verify_target_data(data_path)
+    for n in (255,256,257,1023,1024,1025,4096,65536):
+        case(x[:n],work/f'gist{n}',boundary_operations(n))
+    # Separate synthetic zeros/threshold cases do not masquerade as GIST.
+    for n in (255,256,257,1023,1024,1025):
+        z=np.zeros((n,960),dtype=np.float32);z[:,0]=np.arange(n,dtype=np.float32)%5
+        z[0,0]=0;z[1,0]=radius;z[2,0]=np.nextafter(np.float32(radius),np.float32(-np.inf))
+        z[3,0]=np.nextafter(np.float32(radius),np.float32(np.inf))
+        case(z,work/f'edge{n}',boundary_operations(n))
+    extreme=np.zeros((255,960),dtype=np.float32)
+    extreme[:,0]=np.finfo(np.float32).max;extreme[0,0]=-np.finfo(np.float32).max
+    case(extreme,work/'extreme255',boundary_operations(255))
+    # Use the registered binary and the parent's ties8 data in place; do not copy N1M.
+    event_case(work/'million',[(2,0),(3,0),(0,0),(2,0),(3,0),(1,0),(2,0),(3,0)]
+               +[(0,0)]*9+[(2,0),(3,0)])
+    event_case(work/'growth',[(0,0)]*1010+[(2,0),(3,0)])
+
+
 def boundary_operations(n):
     q = [(2,0),(3,0)]
     # Deleted pivot/query rows retain coordinates; buffer first and last deletion.
@@ -172,14 +213,8 @@ if __name__=='__main__':
     p.add_argument('--k',type=int,default=8)
     a=p.parse_args()
     if a.stage=='fixtures':
-        x=load(a.data);assert x.shape==(1000000,960)
-        for n in (255,256,257,1023,1024,1025,4096,65536):
-            case(x[:n],a.work/f'gist{n}',boundary_operations(n))
-        # Separate synthetic zeros/threshold cases do not masquerade as GIST.
-        for n in (255,256,257,1023,1024,1025):
-            z=np.zeros((n,960),dtype=np.float32);z[:,0]=np.arange(n,dtype=np.float32)%5
-            z[0,0]=0;z[1,0]=a.radius;z[2,0]=np.nextafter(np.float32(a.radius),np.float32(-np.inf))
-            z[3,0]=np.nextafter(np.float32(a.radius),np.float32(np.inf))
-            case(z,a.work/f'edge{n}',boundary_operations(n))
+        if a.work is None:p.error('--work is required for fixtures')
+        fixtures(a.data,a.work,a.radius)
     else:
+        if a.events is None or a.prefix is None:p.error('--events and --prefix are required for check')
         print(json.dumps(check(a.data,a.events,a.prefix,a.radius,a.k),indent=2))

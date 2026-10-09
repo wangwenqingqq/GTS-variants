@@ -57,6 +57,15 @@ remain outside Git. No current device inventory, credentials or manuscript is
 published. Qualification wall times are intentionally not used as a performance
 denominator.
 
+The public recipe also regenerates extreme-value, growth and million event
+fixtures and exposes the K32/growth/million qualification stages. Its 32 emitted
+files match the executed r6 fixture/trace hashes. Host replay confirmed all 79
+reported A/B/C modes, complete cross-mode outputs and deterministic operation
+states; operation timings are checked independently, not compared for equality.
+Twelve K32/growth outputs passed the updated full CPU oracle, and a deliberately
+incorrect expected mode was rejected. `RECIPE_CHECKS.json` records these
+host-only follow-up checks; they add no GPU performance denominator.
+
 ## What has not happened / next execution boundary
 
 1. Implement and qualify a separate cloned warmup state, release it, and restore

@@ -22,7 +22,6 @@ It applies the existing qualified adapter before the small target overlay.
 python3 artifacts/unified_target_workflow/run.py prepare --work "$SCRATCH/target-build"
 python3 artifacts/unified_target_workflow/run.py build --work "$SCRATCH/target-build" --nvcc nvcc
 c++ -std=c++17 -O2 artifacts/unified_target_workflow/test_input.cpp -o "$SCRATCH/test-input"
-python3 artifacts/unified_target_workflow/test_input.py --binary "$SCRATCH/test-input" --work "$SCRATCH/parser-cases"
 "$SCRATCH/test-input"
 python3 artifacts/unified_target_workflow/test_input.py --binary "$SCRATCH/test-input" --work "$SCRATCH/parser-cases"
 ```
@@ -41,16 +40,59 @@ never terminate someone else's job to obtain a GPU.
 
 ```bash
 python3 artifacts/unified_target_workflow/validate.py fixtures --data "$GIST_F32BIN" --work "$SCRATCH/cases"
-python3 artifacts/unified_target_workflow/qualify.py small \
-  --work "$SCRATCH/quality" --cases "$SCRATCH/cases" \
+for STAGE in small extreme transition legacy32 growth sanitize million; do
+  python3 artifacts/unified_target_workflow/qualify.py "$STAGE" \
+    --work "$SCRATCH/quality" --cases "$SCRATCH/cases" \
+    --binary "$SCRATCH/target-build/bin/target" \
+    --guard diagnostics/native_knn_faiss_ivf_20261003/run_locked.py \
+    --gpu "$GPU_UUID" --numa-node "$NUMA_NODE" \
+    --legacy "$SCRATCH/target-build/parent/cases" --data "$GIST_F32BIN" || exit 1
+done
+python3 artifacts/unified_target_workflow/high_precision.py \
+  --data "$GIST_F32BIN" --output "$SCRATCH/exact-reference.json"
+python3 artifacts/unified_target_workflow/check_stale.py \
+  --work "$SCRATCH/stale" --case "$SCRATCH/cases/gist4096" \
   --binary "$SCRATCH/target-build/bin/target" \
   --guard diagnostics/native_knn_faiss_ivf_20261003/run_locked.py \
-  --gpu "$GPU_UUID" --numa-node "$NUMA_NODE" \
-  --legacy "$SCRATCH/target-build/parent/cases"
+  --gpu "$GPU_UUID" --numa-node "$NUMA_NODE"
 ```
 
-`qualify.py sanitize` and `qualify.py transition` use the same arguments without
-`--legacy`. Sanitizer processes are diagnostic, not primary timing. The CPU
+Set `SCRATCH`, `GIST_F32BIN`, `GPU_UUID` and `NUMA_NODE` before running these
+commands from the repository root. Use a fresh scratch directory for a repeat;
+existing fixture, build or guarded-output checkpoints are not overwritten.
+`nvcc`, `compute-sanitizer`, `numactl`, Python/NumPy and a C++17 compiler must
+already be installed and available on PATH. Dataset registration checks the
+header, exact payload size and SHA256 against `SOURCE_PINS.json` before creating
+fixtures and again before the million stage. It never downloads the dataset.
+
+| Stage | Fresh-process scope |
+|---|---|
+| `small` | 48 A/B/C processes: GIST prefixes, synthetic threshold/tail cases, legacy K8 cases |
+| `extreme` | 3 A/B/C processes: finite extreme FP32 inputs and valid infinite FP32 distance fields |
+| `transition` | 3 A/B/C processes: GIST N65,536/D960 |
+| `legacy32` | 9 A/B/C processes: boundary radius 10,000, zero-radius ties and sparse K32 cases |
+| `growth` | 3 A/B/C processes: parent's N1000/D128 `ties8` data, 1010 insertions, 101 real rebuilds, final N2010 |
+| `sanitize` | 3 BOUND processes: edge257 memcheck/racecheck/synccheck |
+| `million` | 3 A/B/C processes plus BOUND memcheck: registered N1M/D960 binary in place, 19 events, 8 queries, one real rebuild |
+
+The generator creates both large-trace event files and `extreme255`; it does not
+copy the million-row data. Every successful GPU process is followed by a fresh
+independent CPU oracle and all-member interval check, including million
+sanitizer output. Full ID, field and query payloads must be byte-identical across
+A/B/C (and million memcheck). Deterministic operation-state columns must match;
+ACK/rebuild times must independently be finite and nonnegative, not identical.
+Reported execution modes must equal the requested modes. These CPU-heavy diagnostics may take much
+longer than the GPU process; their wall time is never an end-to-end denominator.
+The standalone exact-reference command checks initial q0 and the post-rebuild
+q1 coordinate using exact-rational arithmetic and individually rounded steps.
+
+This recipe reproduces the qualification scope from a fresh checkout; it does
+not require private r4/r5/r6 logs or the historical executable hashes. Historical
+records and their explicitly limited cross-revision binding remain unchanged in
+`TARGET_CORRECTNESS.json`. The recipe follow-up changed only Python admission
+scripts/documentation, not the executed CUDA/C++ source identities.
+
+Sanitizer processes are diagnostic, not primary timing. The CPU
 oracle scans all occurrences in bounded chunks with ordered FP64 arithmetic;
 it does not use tree pruning or early termination. Every field and multiplicity
 is retained. Range canonical ordering is additionally compared across modes;

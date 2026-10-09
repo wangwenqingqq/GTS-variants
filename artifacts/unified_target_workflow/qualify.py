@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Bounded correctness/sanitizer admission only; never emits performance claims."""
 import argparse
+import csv
 import json
 import os
 from pathlib import Path
@@ -38,18 +39,30 @@ def run(a, name, data, events, radius, k, mode, tool=None):
     # Sanitizer receipt pins the tool; its complete command additionally records target binary.
     if not tool:
         assert receipt['binary_sha256']==sha(a.binary)
-    check = validate.check(data,events,prefix,radius,k)
+    check = validate.check(data,events,prefix,radius,k,expected_mode=(int(range_mode=='PAR_STRONG'),knn))
     check['coverage']=validate.coverage(data,events,a.work/'runs'/label/'stdout.log')
-    check.update(label=label,binary_sha256=sha(a.binary),tool=tool,
+    check.update(label=label,binary_sha256=sha(a.binary),tool=tool,expected_mode_checked=True,
                  data_sha256=sha(data),events_sha256=sha(events))
     (a.work/'runs'/label/'QUALITY.json').write_text(json.dumps(check,indent=2)+'\n')
     print('PASS',label,flush=True)
     return check
 
 
+def equal_outputs(a, labels):
+    for suffix in ('.ids.i32','.dist.f32','.queries.csv'):
+        first=(a.work/'outputs'/f'{labels[0]}{suffix}').read_bytes()
+        assert all((a.work/'outputs'/f'{label}{suffix}').read_bytes()==first for label in labels[1:]), (labels,'ordered cross-mode output',suffix)
+    # ACK/rebuild times are observations, not deterministic output semantics.
+    states=[]
+    for label in labels:
+        with (a.work/'outputs'/f'{label}.ops.csv').open() as f:
+            states.append([tuple(int(row[key]) for key in ('step','flag','base_before','buffer_before','base_after','buffer_after')) for row in csv.DictReader(f)])
+    assert all(state==states[0] for state in states[1:]), (labels,'cross-mode operation states')
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('stage',choices=('small','transition','sanitize','extreme'))
+    p.add_argument('stage',choices=('small','transition','sanitize','extreme','legacy32','growth','million'))
     p.add_argument('--work',type=Path,required=True)
     p.add_argument('--cases',type=Path,required=True)
     p.add_argument('--binary',type=Path,required=True)
@@ -57,7 +70,10 @@ if __name__=='__main__':
     p.add_argument('--gpu',required=True)
     p.add_argument('--numa-node',type=int,required=True)
     p.add_argument('--legacy',type=Path)
+    p.add_argument('--data',type=Path,help='registered original FP32 GIST binary (million stage)')
     a=p.parse_args()
+    if a.stage in ('small','legacy32','growth') and a.legacy is None:p.error('--legacy is required for this stage')
+    if a.stage=='million' and a.data is None:p.error('--data is required for million')
     a.binary=a.binary.resolve();a.guard=a.guard.resolve()
     for d in ('outputs','runs'):(a.work/d).mkdir(parents=True,exist_ok=True)
     radius=0.705625057220459
@@ -65,21 +81,33 @@ if __name__=='__main__':
     if a.stage=='small':
         specs=[(f'gist{n}',a.cases/f'gist{n}',radius,8) for n in (255,256,257,1023,1024,1025,4096)]
         specs += [(f'edge{n}',a.cases/f'edge{n}',radius,8) for n in (255,256,257,1023,1024,1025)]
-        if a.legacy:
-            specs += [(f'legacy_{n}',a.legacy/n,0,8) for n in ('boundary0','ties8','sparse8')]
+        specs += [(f'legacy_{n}',a.legacy/n,0,8) for n in ('boundary0','ties8','sparse8')]
         for name,path,radius,k in specs:
             data=path/('data.txt' if name.startswith('legacy') else 'data.f32bin')
             for mode in 'ABC':rows.append(run(a,name,data,path/'events.txt',radius,k,mode))
-            for suffix in ('.ids.i32','.dist.f32','.queries.csv'):
-                assert (a.work/'outputs'/f'{name}_A{suffix}').read_bytes()==(a.work/'outputs'/f'{name}_B{suffix}').read_bytes()==(a.work/'outputs'/f'{name}_C{suffix}').read_bytes(),(name,'ordered cross-mode output')
+            equal_outputs(a,[f'{name}_{mode}' for mode in 'ABC'])
     elif a.stage=='transition':
         path=a.cases/'gist65536'
         for mode in 'ABC':rows.append(run(a,'gist65536',path/'data.f32bin',path/'events.txt',radius,8,mode))
-        for suffix in ('.ids.i32','.dist.f32','.queries.csv'):
-            assert (a.work/'outputs'/f'gist65536_A{suffix}').read_bytes()==(a.work/'outputs'/f'gist65536_B{suffix}').read_bytes()==(a.work/'outputs'/f'gist65536_C{suffix}').read_bytes()
+        equal_outputs(a,[f'gist65536_{mode}' for mode in 'ABC'])
     elif a.stage=='extreme':
         path=a.cases/'extreme255'
         for mode in 'ABC':rows.append(run(a,'extreme255',path/'data.f32bin',path/'events.txt',float(validate.np.finfo(validate.np.float32).max),8,mode))
+        equal_outputs(a,[f'extreme255_{mode}' for mode in 'ABC'])
+    elif a.stage=='legacy32':
+        for name in ('boundary10000','ties32','sparse32'):
+            path=a.legacy/name
+            case_radius=10000 if name=='boundary10000' else 0
+            for mode in 'ABC':rows.append(run(a,f'legacy_{name}',path/'data.txt',path/'events.txt',case_radius,32,mode))
+            equal_outputs(a,[f'legacy_{name}_{mode}' for mode in 'ABC'])
+    elif a.stage=='growth':
+        for mode in 'ABC':rows.append(run(a,'growth1000to2010',a.legacy/'ties8'/'data.txt',a.cases/'growth'/'events.txt',0,8,mode))
+        equal_outputs(a,[f'growth1000to2010_{mode}' for mode in 'ABC'])
+    elif a.stage=='million':
+        validate.verify_target_data(a.data)
+        for mode in 'ABC':rows.append(run(a,'million',a.data,a.cases/'million'/'events.txt',radius,8,mode))
+        rows.append(run(a,'million',a.data,a.cases/'million'/'events.txt',radius,8,'C','memcheck'))
+        equal_outputs(a,['million_A','million_B','million_C','million_C_memcheck'])
     else:
         path=a.cases/'edge257'
         for tool in ('memcheck','racecheck','synccheck'):
