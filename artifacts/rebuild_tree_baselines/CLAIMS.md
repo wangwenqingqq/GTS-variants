@@ -52,3 +52,20 @@ paired observations, not historical-ratio products. R includes common repairs;
 T and P share strengthened TILED construction. External static B remains at
 zero primaries, so external superiority, long-workflow admission and novelty
 remain unestablished. The private manuscript is unchanged.
+
+## Later checkpoint: external static Host-ready admission
+
+The preceding zero-primary statement records internal-C completion. Static B
+now has qualified Host-ready adapters and a stopped incomplete72-process matrix; no
+complete external ranking is published yet. P adds charged Host submission to
+one non-indexed row, preserving all GPU kernels and indexed membership. Six
+GPU checks and a stricter offline full-output recheck pass. One pre-CUDA
+resource-wrapper failure is retained; cumulative GPU attempts32/32. This closes
+an input-boundary fairness gap, not a newly measured optimization or novelty.
+GPU_TREE/MVPT and96 B context-symbol limitations remain unchanged. See
+[qualification evidence](../external_closure/STATIC_QUALIFICATION.md).
+
+The first4 static primaries pass; the fifth fails before CPU Flat construction
+because the launcher selected the tree-only interpreter without Faiss. This
+is an environment-routing failure, not external correctness or speed evidence.
+All attempts remain, cumulative primary23/102; no automatic replacement.

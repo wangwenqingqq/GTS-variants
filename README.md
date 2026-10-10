@@ -1,5 +1,17 @@
 # Original GTS experiment deliveries and evidence alignment
 
+## External static B: Host-ready admission (2026-10-10)
+
+[Host-ready adapter qualification](artifacts/external_closure/STATIC_QUALIFICATION.md)
+passes six new GPU checks and a stricter full-output offline recheck. P now
+charges Host query submission like the external APIs; all113 P GPU functions
+and all5 range functions remain unchanged. The first pre-CUDA environment
+failure is retained and counted: GPU qualifier budget32/32. The72-process,
+two-snapshot, six-round external static matrix stopped after **4 passed +1
+pre-construction CPU Flat environment failure**; **no complete external ranking
+is published**. The failure is retained; cumulative primaries23/102. GPU_TREE/MVPT and
+the96 B context-symbol boundary remain open. No new10k/100k or paper upload.
+
 ## Direct R/T/P short-workflow closure (2026-10-10)
 
 [Direct R/T/P results](artifacts/external_closure/RTP_RESULTS.md) close the internal
@@ -14,7 +26,7 @@ R includes common numerical/safety repairs and is not untouched original GTS;
 T and P both use strengthened TILED construction. These are fixed-query internal
 short-workflow results, not an external win, a coalescing-only attribution or
 100k/1B admission. Five bridge qualifiers and 18 primaries were added; external
-static B remains at zero primaries. The 96 B context-symbol limitation and
+static B had zero primaries at that earlier checkpoint. The 96 B context-symbol limitation and
 GPU_TREE native membership blocker remain. No paper content was published.
 
 ## External controls: Stage A qualification (2026-10-10)

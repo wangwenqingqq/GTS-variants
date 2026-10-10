@@ -1,0 +1,128 @@
+{
+  "experiment": "GTSPP_20261010_EXTERNAL_STATIC_HOST_READY",
+  "source": "3e7438f07d39f1b7f280d117a1000c3c3f77189c",
+  "status": "R2_REGISTERED_AFTER_PRE_CUDA_MISSING_TIME_FAILURE",
+  "shape": {
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "K": 8,
+    "radius_bits": "0x3f34a3d8"
+  },
+  "snapshots": [
+    "initial",
+    "first_rebuilt"
+  ],
+  "orders": [
+    [
+      "GPU_TREE_ADAPT",
+      "CPU_BALL",
+      "GPU_FLAT_KNN",
+      "GTSPP_P",
+      "GPU_RANGE_COMPLETE",
+      "CPU_FLAT",
+      "CPU_KD"
+    ],
+    [
+      "CPU_KD",
+      "CPU_FLAT",
+      "GPU_RANGE_COMPLETE",
+      "GTSPP_P",
+      "GPU_FLAT_KNN",
+      "CPU_BALL",
+      "GPU_TREE_ADAPT"
+    ],
+    [
+      "GPU_RANGE_COMPLETE",
+      "GPU_FLAT_KNN",
+      "GPU_TREE_ADAPT",
+      "CPU_KD",
+      "GTSPP_P",
+      "CPU_BALL",
+      "CPU_FLAT"
+    ],
+    [
+      "CPU_FLAT",
+      "CPU_BALL",
+      "GTSPP_P",
+      "CPU_KD",
+      "GPU_TREE_ADAPT",
+      "GPU_FLAT_KNN",
+      "GPU_RANGE_COMPLETE"
+    ],
+    [
+      "GTSPP_P",
+      "GPU_FLAT_KNN",
+      "CPU_FLAT",
+      "CPU_KD",
+      "CPU_BALL",
+      "GPU_RANGE_COMPLETE",
+      "GPU_TREE_ADAPT"
+    ],
+    [
+      "GPU_TREE_ADAPT",
+      "GPU_RANGE_COMPLETE",
+      "CPU_BALL",
+      "CPU_KD",
+      "CPU_FLAT",
+      "GPU_FLAT_KNN",
+      "GTSPP_P"
+    ]
+  ],
+  "task_orders": [
+    "knn,range",
+    "range,knn",
+    "knn,range",
+    "range,knn",
+    "knn,range",
+    "range,knn"
+  ],
+  "blocked": {
+    "GPU_TREE_ADAPT": "native membership failure; no algorithm repair or speed row",
+    "CPU_MVPT": "provenance/full-output unavailable; not substituted"
+  },
+  "cpu_flat_identity": "CPU_FLAT_INCLUSIVE_ADAPT",
+  "leaf_sizes": {
+    "CPU_KD": 512,
+    "CPU_BALL": 512
+  },
+  "native_cpu_threads": 1,
+  "gpu_faiss_host_threads": 1,
+  "warmups_per_task": 8,
+  "measured_per_task": 32,
+  "primary_processes": 72,
+  "primary_total_after_RTP": 90,
+  "primary_ceiling": 102,
+  "new_gpu_qualifier_ceiling": 6,
+  "cumulative_gpu_qualifiers_before": 26,
+  "cumulative_gpu_qualifier_ceiling": 32,
+  "qualifiers": [
+    "P_bounded_memcheck",
+    "P_bounded_racecheck",
+    "P_bounded_synccheck",
+    "P_initial",
+    "P_first_rebuilt",
+    "RANGE_bounded_memcheck"
+  ],
+  "timing": "Host input through complete Host ID/FP32 field ready; continuous per-task passes; separate representation/build/warmup/release; serialization and retained-client-output destruction excluded",
+  "P_adapter": "one extra non-indexed query row, charged per-call Host-to-device submission; unchanged kernels and frozen index/search modes; no updates",
+  "range_adapter": "unchanged cuVS/CUB kernels and full raw-squared observer retained and charged; only Host main timing/retention changes",
+  "quality": "all full outputs; fixed ordered-FP64 membership with legitimate exact ties; scale-1 squared-field tolerance 5e-5; no tolerance relaxation",
+  "estimator": "paired geometric comparator/P per snapshot/task; lifecycle only dual-task portfolio",
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 2026101002,
+  "win_gate": "lower CI95>1 and >=5/6 wins and both order strata>1",
+  "stop": "first runtime/isolation/quality/identity failure; retain all attempts; no replacement-to-win",
+  "limits": [
+    "observed diagnostic queries, not held out",
+    "static, not dynamic",
+    "shared CPU host",
+    "GPU_TREE/MVPT missing",
+    "96B context-symbol issue unresolved",
+    "no new kernel optimization or precision",
+    "no long campaign or manuscript publication"
+  ],
+  "retained_failed_attempts": 1,
+  "previous_contract_sha256": "87fe08cad3422e4ad9b0689f76251060142f7404fdce826fe5888f090520cd73",
+  "recovery": "No CUDA/native timing launched: missing /usr/bin/time. Retain original guard failure; use standard-library process resource wrapper. Drop redundant non-sanitized bounded range run; unchanged range GPU kernels retain Stage A normal/race/sync/target evidence and new memcheck wrapper still checks complete output. Total slots remain32."
+}

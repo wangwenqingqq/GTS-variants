@@ -5,11 +5,25 @@ rows. Stage A is qualification, not the requested external ranking or cumulative
 end-to-end result. Never populate a missing external timing with zero or replace
 a failed identity silently.
 
-**Current checkpoint:** [direct internal C](RTP_RESULTS.md) passed five T bridge
-qualifiers and all 18 primaries. The cumulative counters are 25/32 GPU qualifiers
-and 18/102 primaries; external B still has zero primaries. The next execution
-gate is the formal static adapter/cost freeze in items 2–3, not another internal
-timing run. GPU_TREE is blocked and must remain an explicit missing comparator.
+**Current checkpoint:** [direct internal C](RTP_RESULTS.md) completed18 primaries.
+[Static Host-ready qualification](STATIC_QUALIFICATION.md) adds six successful
+GPU checks and one retained pre-CUDA failure, consuming32/32 cumulative GPU
+qualifier attempts. P input submission/full output and phase costs are now
+frozen. The static driver stopped after4 passes and one pre-construction CPU
+Flat environment failure: cumulative23/102 primary attempts. The complete
+ranking and all72-row offline verification are still pending. Do not restart this driver,
+replace failures or infer an external win from qualification timers. Planned
+cumulative primaries would be91/102 if a one-attempt bounded recovery is authorized
+and all72 planned valid rows complete. GPU_TREE remains explicitly
+blocked; MVPT is unavailable.
+
+The dependency repair is prepared as an unapplied patch; import-only checks pass
+in both existing environments. No new package or native run was used. A bounded
+recovery must separately preserve4 valid rows, one failed row and67 unattempted
+entries, and rebind original versus repaired sources before launch.
+
+The numbered list preserves the original gates; items2–3 now have qualified
+adapters and a stopped incomplete primary matrix, not an absent implementation.
 
 1. Bind the final Stage A proof, original execution source hashes and fixed CPU
    leaf choices. Keep author GPU_TREE's native membership failure, unsafe tail

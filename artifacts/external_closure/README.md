@@ -113,3 +113,47 @@ Keep the complete proof private. `rtp_curate.py --input "$FULL_PROOF" --output
 "$PUBLIC_PROOF"` emits only whitelisted evidence and source/receipt hashes, then
 `rtp_report.py --input "$PUBLIC_PROOF" --output "$REPORT"` generates the tables.
 Both outputs must be fresh paths; never overwrite original campaign evidence.
+
+## Formal external static Host-ready adapters
+
+See [qualification and current boundaries](STATIC_QUALIFICATION.md). The complete
+72-process matrix stopped after4 passes and a pre-construction CPU Flat
+interpreter failure; this checkpoint publishes no ranking. Preserve the failed
+process and do not automatically restart it.
+All Host input submissions and complete output delivery are charged equally in
+scope; P uses one extra non-indexed query row. GPU kernel bodies are unchanged.
+
+`prepare_static.py` requires the exact qualified parent source; `static_build.py`
+reuses its compiler invocation and the qualified range build's installed
+dependencies. Example build outside Git:
+
+```sh
+python3 artifacts/external_closure/static_build.py --parent "$QUALIFIED_BUILD" \
+  --range-build "$QUALIFIED_RANGE_BUILD" --work "$STATIC_BUILD"
+python3 artifacts/external_closure/test_static.py
+```
+
+`static_campaign.py prepare` binds both snapshots and caches independent full
+FP64 score references outside timing. `run --stage qualification` and `run
+--stage primary` are separate gates; `--help` lists explicit paths, device and
+NUMA arguments. Do not rerun this campaign automatically: all32 GPU qualifier
+slots are consumed. The historical pre-CUDA failure, R2 successful sources and
+R3 offline admission check are retained in separate private directories.
+Primary admission requires `--qualification-source` to identify the immutable
+R2 runner/checker rather than relabeling them as the current code.
+
+`static_process.py` records Linux child CPU/RSS/wall resources; its process wall
+is not the query denominator. `static_check.py` validates every warmup and
+measured payload. `static_qualify_curate.py --raw "$RAW" --output "$PUBLIC"`
+whitelists the bound qualification summary and independently rechecks complete
+GPU-function identity without publishing paths, commands or runtime configuration.
+`static_results.py` requires a complete72-row proof before any paired statistic;
+its full real-evidence execution remains pending. The formal matrix must finish
+and be rebound before an external result document is published.
+
+For the stopped CPU dependency issue, `STATIC_CPU_ENV_FIX.patch` is deliberately
+unapplied, preserving the measured R3 executor. `git apply --check` validates the
+patch, not runtime behavior. `static_preflight.py --tree-python "$TREE_PYTHON"
+--faiss-python "$FAISS_PYTHON" --output "$PRIVATE_PREFLIGHT"` checks existing
+imports and thread APIs without index/query/GPU work. These checks pass, but no
+bounded recovery has been executed or admitted by this checkpoint.
