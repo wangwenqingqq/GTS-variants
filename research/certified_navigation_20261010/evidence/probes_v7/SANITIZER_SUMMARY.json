@@ -1,0 +1,90 @@
+{
+  "stage": "partial localization; not full E2 or strict API pass",
+  "tool": "compute-sanitizer 2025.4.1.0",
+  "probe_binary_sha256": "cf89d346c1f70e495f4fc235fc60c87e51de29f04ed1cc870dd129e76253a769",
+  "first_two_dev_ids": [
+    702545,
+    893013
+  ],
+  "v7_subsets": {
+    "memcheck_G0": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "API_reporting": "no",
+      "query_count": 2,
+      "oracle_bitwise_equal": true,
+      "strict_API_pass": false
+    },
+    "memcheck_G3": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "API_reporting": "no",
+      "query_count": 2,
+      "oracle_bitwise_equal": true,
+      "strict_API_pass": false
+    },
+    "initcheck_G0": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "API_reporting": "no",
+      "query_count": 2,
+      "oracle_bitwise_equal": true,
+      "strict_API_pass": false
+    },
+    "initcheck_G3": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "API_reporting": "no",
+      "query_count": 2,
+      "oracle_bitwise_equal": true,
+      "strict_API_pass": false
+    },
+    "synccheck_G0": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "API_reporting": "no",
+      "query_count": 2,
+      "oracle_bitwise_equal": true,
+      "strict_API_pass": false
+    },
+    "synccheck_G3": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "API_reporting": "no",
+      "query_count": 2,
+      "oracle_bitwise_equal": true,
+      "strict_API_pass": false
+    }
+  },
+  "default_API_smokes": {
+    "plain": {
+      "exit_code": 0,
+      "reported_errors": 0,
+      "query_executed": false,
+      "API_reporting": "default",
+      "binary_sha256": "f25616e2ff571565671501f6223cb5fc5509ce68f6fb61b7d6203ca6c96fca7c",
+      "error_kind": null
+    },
+    "original_headers": {
+      "exit_code": 86,
+      "reported_errors": 2,
+      "query_executed": false,
+      "API_reporting": "default",
+      "binary_sha256": "cd57e50ae17ed0a22cd0f4a06c33667de1dabb8b7b8f4084b70caf4dddb86446",
+      "error_kind": "cuLibraryGetKernel CUDA_ERROR_NOT_FOUND(500)"
+    }
+  },
+  "whole_probe_exclusive_valid": true,
+  "v6_failure": {
+    "initcheck": "uninitialized 8-byte CUB ThreadLoad<NavKey> read",
+    "original_layout": "double score; int id; implicit 4-byte padding",
+    "time_limit_seconds": 600,
+    "whole_guard_valid": false,
+    "timeout_orphans_stopped": "exact owned UID/command/starttime checks; no foreign signals"
+  },
+  "uniform_v7_fix": "explicit zero-initialized reserved int, same sizeof 16",
+  "strict_API_gate_passed": false,
+  "full_E2_matrix_passed": false,
+  "formal_processes_used": 0,
+  "diagnosis": "Original unmodified-header smoke reproduces API failure without tree/query/memo; not proof of a harmless API waiver."
+}

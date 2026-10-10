@@ -1,0 +1,35 @@
+{
+  "metric_contract_id": "fp32_input_rn_fp64_ordered_squared_l2_id_v1",
+  "upstream_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "generator_sha256": "1a1565da94a45e7fc0dc0897f25b7164a531d6c67cd45ac93f2152847485a2ff",
+  "shared_input_sha256": {
+    "diagnostics/native_knn_faiss_ivf_20261003/prepare_gts.py": "1a1a5b46ed98371575c5fe9fcf70866611db68e90d0fb5c75441b313c4e96ea1",
+    "diagnostics/native_knn_faiss_ivf_20261003/gts_bench.cu": "1c7c16e2578835bb4c696906e548bff2c8d35c73ee21d215774b258cadd86bab",
+    "diagnostics/native_knn_faiss_ivf_20261003/ORIGINAL_SOURCE_PINS.json": "4932573bf1fcbc323b294f68614c6ee4124328cbd0103c85f0d8ca89a852aaf0"
+  },
+  "files": {
+    "SOURCE_PINS.json": "26f76ee692d52c0369888724ddc0c2f636196c0cbc4ed9adc65c72217eb49a09",
+    "adaptation.patch": "db20592d6dcf12099c0bc0879a4b49b30b84a0251e089d52035977a9ecdef924",
+    "common.patch": "f604dabf36b9f13c6ed9c7db15b0415392c87cb9804685d185ecb06c46406a93",
+    "bench.cu": "91e117cf3bebfb03f7a171ae54f3852633777da7636d6d071831295a9f356932",
+    "original/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "original/include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "original/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "original/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "original/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "original/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "original/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "original/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b",
+    "adapted/include/navigation.cuh": "b097e040a6f01b2aa3ad5f6a37b693279b2f82f43e22a3dbe290298c7a8e6a97",
+    "adapted/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "adapted/include/search_v2.cuh": "6fa8fd494097343c297241d505645eb4a67ddc4e386002fdd5c386dabe3f53d0",
+    "adapted/include/tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+    "adapted/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "adapted/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "adapted/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "adapted/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "adapted/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "prototype_only": true,
+  "all_required_edges_and_capacity_tests_pass": false
+}

@@ -1,0 +1,53 @@
+experiment_id: gts_20261010_certified_navigation_rnfp64_b1
+stage: E0_E1_diagnostic_only
+baseline_route: searchIndexKnnV2_true_tree
+metric_contract_id: fp32_input_rn_fp64_ordered_squared_l2_id_v1
+input: original_fp32_GIST_finite_0_to_2
+N: 1000000
+D: 960
+K: 8
+B: 1
+self_match: inclusive
+instance_identity: original_row_id_static_unique
+score: ordered_dimension_RN_FP64_sub_mul_add_squared_L2
+fma: disabled
+rank_key: [score_fp64, logical_instance_id_int32]
+output: K_ids_int32_and_scores_fp64
+bound_units: true_L2_with_conservative_envelope
+bound_policy: widened_native_split_interval_full_coverage_checked_or_disable
+geometry_margin: 0.01
+fp64_L2_error_envelope: 0.000001
+pruning: strict_lower_bound_greater_than_upper_plus_envelope
+common_workspace_bytes: 1073741824
+memo_capacity: all_distinct_tree_pivot_rows
+memo_lifetime: fresh_query_owned_allocations_and_tags
+storage_scope: immutable_validated_snapshot
+hardware: RTX_PRO_6000_Blackwell_Server_Edition_physical_GPU_7
+hardware_override: explicit_user_approval_remeasure_all_four_modes
+architecture: sm_120a
+driver: 590.48.01
+toolkit: CUDA_13.1_V13.1.115
+numa_node: 3
+clock_power_changes: forbidden
+query_manifests: QUERY_MANIFEST.json
+E1_diagnostic_order: [G0, G1, G2, G3, G2_G0_U_REPLAY]
+E1_uninstrumented_order: [G3, G2, G1, G0]
+E1_queries: dev32.qid
+E1_warmup_queries: 1
+E1_timing_repeats: 1
+E1_timing_denominator: resident_database_query_id_H2D_to_complete_K_result_Host_ready
+E1_timing_caveat: query_vector_already_resident_not_full_host_vector_input
+E1_pre_admission_use: diagnostic_bottleneck_only_no_promotion
+E1_stop_rule: stop_before_formal_if_mechanism_headroom_and_diagnostic_latency_do_not_support_10_percent
+E2_admission: full_required_small_boundary_invalidation_and_sanitizer_matrix_not_yet_passed
+E3_query_file: formal256.qid
+E3_max_processes: 24
+E3_orders:
+  - [G0, G1, G2, G3]
+  - [G3, G2, G1, G0]
+  - [G1, G3, G0, G2]
+  - [G2, G0, G3, G1]
+  - [G2, G1, G3, G0]
+  - [G0, G3, G1, G2]
+E3_gate: E2_pass_and_10_percent_end_to_end_improvement_six_round_consistent_direction_paired_CI_excludes_1
+E4: not_automatic

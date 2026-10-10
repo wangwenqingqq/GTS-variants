@@ -1,0 +1,156 @@
+{
+  "stage": "E1 diagnostic-only; no E2/E3 promotion",
+  "shape": [
+    1000000,
+    960,
+    32,
+    8
+  ],
+  "results": {
+    "G0": {
+      "query_count": 32,
+      "work_totals": {
+        "pivot_calls": 345197,
+        "leaf_calls": 30376910,
+        "pivot_hits": 0,
+        "leaf_hits": 0,
+        "full_computations": 30722107,
+        "coordinate_updates": 29493222720,
+        "cache_insertions": 0,
+        "bound_tests": 3451970
+      },
+      "diagnostic_timing_ms": {
+        "total_ms": 932.696709,
+        "batch_p50_ms": 27.380988,
+        "batch_p95_ms": 38.467121
+      },
+      "result_sha256": "bd1b74b8ea7d690bf6b0bb1f1a42de12506c8a4c90eab7f5f1ed8bb0de71cd76",
+      "output_matches_two_independent_oracles": true,
+      "geometry": {
+        "coverage_disabled_nodes": 0,
+        "split_margin": 0.01,
+        "distance_envelope": 1e-06
+      },
+      "coordinate_update_reduction_vs_G0": 0.0,
+      "leaf_call_reduction_vs_G0": 0.0,
+      "diagnostic_time_ratio_vs_G0": 1.0
+    },
+    "G1": {
+      "query_count": 32,
+      "work_totals": {
+        "pivot_calls": 345197,
+        "leaf_calls": 30376910,
+        "pivot_hits": 32,
+        "leaf_hits": 330337,
+        "full_computations": 30391738,
+        "coordinate_updates": 29176068480,
+        "cache_insertions": 345165,
+        "bound_tests": 3451970
+      },
+      "diagnostic_timing_ms": {
+        "total_ms": 901.41206,
+        "batch_p50_ms": 26.487006,
+        "batch_p95_ms": 37.061574
+      },
+      "result_sha256": "bd1b74b8ea7d690bf6b0bb1f1a42de12506c8a4c90eab7f5f1ed8bb0de71cd76",
+      "output_matches_two_independent_oracles": true,
+      "geometry": {
+        "coverage_disabled_nodes": 0,
+        "split_margin": 0.01,
+        "distance_envelope": 1e-06
+      },
+      "coordinate_update_reduction_vs_G0": 0.010753461668498221,
+      "leaf_call_reduction_vs_G0": 0.0,
+      "diagnostic_time_ratio_vs_G0": 0.9664578542004911
+    },
+    "G2": {
+      "query_count": 32,
+      "work_totals": {
+        "pivot_calls": 345095,
+        "leaf_calls": 30369720,
+        "pivot_hits": 0,
+        "leaf_hits": 0,
+        "full_computations": 30714815,
+        "coordinate_updates": 29486222400,
+        "cache_insertions": 0,
+        "bound_tests": 3450950
+      },
+      "diagnostic_timing_ms": {
+        "total_ms": 1575.850244,
+        "batch_p50_ms": 48.550446,
+        "batch_p95_ms": 55.954649
+      },
+      "result_sha256": "bd1b74b8ea7d690bf6b0bb1f1a42de12506c8a4c90eab7f5f1ed8bb0de71cd76",
+      "output_matches_two_independent_oracles": true,
+      "geometry": {
+        "coverage_disabled_nodes": 0,
+        "split_margin": 0.01,
+        "distance_envelope": 1e-06
+      },
+      "coordinate_update_reduction_vs_G0": 0.00023735351224440926,
+      "leaf_call_reduction_vs_G0": 0.0002366929355224201,
+      "diagnostic_time_ratio_vs_G0": 1.6895634227010015
+    },
+    "G3": {
+      "query_count": 32,
+      "work_totals": {
+        "pivot_calls": 345095,
+        "leaf_calls": 30369720,
+        "pivot_hits": 32,
+        "leaf_hits": 330240,
+        "full_computations": 30384543,
+        "coordinate_updates": 29169161280,
+        "cache_insertions": 345063,
+        "bound_tests": 3450950
+      },
+      "diagnostic_timing_ms": {
+        "total_ms": 1564.038097,
+        "batch_p50_ms": 46.809705,
+        "batch_p95_ms": 57.165075
+      },
+      "result_sha256": "bd1b74b8ea7d690bf6b0bb1f1a42de12506c8a4c90eab7f5f1ed8bb0de71cd76",
+      "output_matches_two_independent_oracles": true,
+      "geometry": {
+        "coverage_disabled_nodes": 0,
+        "split_margin": 0.01,
+        "distance_envelope": 1e-06
+      },
+      "coordinate_update_reduction_vs_G0": 0.010987657845212273,
+      "leaf_call_reduction_vs_G0": 0.0002366929355224201,
+      "diagnostic_time_ratio_vs_G0": 1.67689891248453
+    }
+  },
+  "exclusive_campaign_valid": true,
+  "guard_raw_sha256": "9003efcd79c97b598487b660ebe081c04788408511230998c82654f0d9b115b3",
+  "identity": {
+    "binary_sha256": "9c4d7310ab6d6e04e1bebcad4c1d491174f3c0a73a6a715c29882be4929d0dd1",
+    "oracle_binary_sha256": "03dffc23d1f8a8f277786049174edd0a118799c6e96f9dbfe4616d48aa359ee0",
+    "guard_sha256": "2b9b7857b57792a06f6a373cfc45a88b73cc08c639b22ac9cb9f906ad83532d1",
+    "contract_sha256": "328264195f2cdb048bd72a6e79a859f768932c67668579ddab2826ed6a45c0d7",
+    "query_manifest_sha256": "54f421f85a8243af1191f11095ccaee80e7c9bb675a6784287fefefcea82fd2d",
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "tree_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+    "scope": "E1 diagnostic-only; resident query ID input; not E2 or E3",
+    "formal_processes_used": 0
+  },
+  "same_semantics_trace_pairs": [
+    "G0/G1",
+    "G2/G3"
+  ],
+  "counterfactual_G0_U_restores_G0_visits": true,
+  "CPU_GPU_oracle_bitwise_equal": true,
+  "formal_processes_used": 0,
+  "timing_scope": "Resident-query-ID H2D to full K IDs/FP64 scores Host-ready; allocations, clearing, sorting, synchronizations included; one reverse-order process per mode",
+  "missing_gates": [
+    "full E2 small/tree/tie/capacity/invalidation/stress matrix",
+    "strict sanitizer API gate",
+    "formal paired confidence",
+    "full Host-query-vector submission scope"
+  ],
+  "missing_diagnostic_fields": [
+    "per-boundary CUDA-event timestamps",
+    "full G0 witness-ID trace",
+    "hardware DRAM traffic"
+  ],
+  "note": "Unique/repeat counts in non-memo modes are derived from their bitwise same-trajectory memo partners, not additional GPU counters. Visit digest is supplementary, non-cryptographic. No timing CI or winner claim."
+}
