@@ -87,3 +87,11 @@ multiply historical ratios or use internal results as new external evidence.
 No new TILED/WARP/FUSED/BOUND tuning,100k/1B expansion or global default follows
 from this matrix. A completed comparison is not a novelty gate. Methods and
 manuscript content remain private in the existing Overleaf workflow.
+
+## Block certificate follow-up (2026-10-10)
+
+The offline global-pivot certificate sweep is **CONDITIONAL, no GPU prototype**.
+The cheap <=4-query-distance gate failed; local-write simulation does not rescue
+it. See [decision](../block_certificate_headroom_20261010/DECISION.md) and its
+contracts/closure. Do not widen P beyond 8 or mix these structural counts into
+the existing formal end-to-end ratios.

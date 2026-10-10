@@ -1,0 +1,40 @@
+{
+  "historical_static_source_hashes": {
+    "run.py": "2531bf1d1599ebc2755aa43fdd264d48099358dfdfd9743c51636ca99bc303c4",
+    "distance.cpp": "b25484d3eb558b08c6d4a65212d463bd8cda7ca1fad59d3fcf3d64f5182f1bb9",
+    "CONTRACT.json": "a25f9f9591a45dfa11205cd178a2f442e93b98cc6a5cbad583a046ef987dbf2b",
+    "NUMERICS.md": "ff6551ffdd481221c57deb16423de80e9c043d55d2ef7128af26df48e4fd4186",
+    "test_certificate.py": "7430eea4f39326edf944eec73a21f85f87d118c1cbec9c9eec57ddf2313d8a98",
+    "build.py": "9092fffa37fc3907ce8431e05c7da7777c89b3fbc544649471636ea1a8e74687",
+    "analyze.py": "cbddf25399a00a98f00c1050f4a1ed4bca91a107ced82c510836b53aa7e0c8bc"
+  },
+  "delivered_source_hashes": {
+    "update.py": "f789824c52f4e445f5217ede42ee04f355a36ff095efdbacaeb597541bb572b1",
+    "curate.py": "3e0d2d5550e7c0afbf349feda4b4d8037b458a37a393f1a55dad67e979edc747",
+    "D_CONTRACT.json": "7e5259c5cfa5bffcaf5cd5cdfa8fe3323d4c75f52580c60f6b9cd18d9a466d3d",
+    "run.py": "e0c32046c9626f2d2e9883e24f5c8e96cbe593adaf78f74373aaeb3102a5e2cb",
+    "close.py": "7749728292977113d7ea01039b3355cab3f2d17a7bf6c605c84048f749b7cd61",
+    "NUMERICS.md": "ff6551ffdd481221c57deb16423de80e9c043d55d2ef7128af26df48e4fd4186",
+    "test_certificate.py": "8a0a2981c7495bb17c537bb7a4e013a51a42bb26031ac61c27620eee6af8a95d",
+    "README.md": "7d8edc9c1dae9a3a93ee4412fbe1a4a24f4e6df2ebc44e1f93139e1698257184",
+    "test_update.py": "2fe159758c996607bb5a5438be729a2e541a58d96ed5850615bf9cc4ebae112c",
+    "distance.cpp": "b25484d3eb558b08c6d4a65212d463bd8cda7ca1fad59d3fcf3d64f5182f1bb9",
+    "verify.py": "2ff918fac3274e696b4b96641c18fa1259544962d94ea89bcc8dc816a8bb2ff4",
+    "CLAIM_EVIDENCE.md": "8a85d332dec6069620c0f678cb764a76f990a91e72bc3a29966739b8763f4dd3",
+    "DECISION.md": "40e2d028a617c4431ff47cbf3c49982ab1f17f766feffe9fe38020ad0040d32e",
+    "report.py": "6b4ac4f6a12a50d74ebe1fa3cec61a9b1fb5d5b3f679db2beac2e82e224457f8",
+    "CONTRACT.json": "a25f9f9591a45dfa11205cd178a2f442e93b98cc6a5cbad583a046ef987dbf2b"
+  },
+  "static_driver_changes": [
+    "Explicit prior-campaign input replaces hardcoded prior capture directory",
+    "Automatic D admission now checks oracle<=30% jointly as specified; actual joint candidate set remains empty",
+    "Regression added for joint admission"
+  ],
+  "D_driver_changes": [
+    "Entry binds static verification to exact proof and all raw files; closure verifies historical exact bindings",
+    "Affected-slot scope wording corrected"
+  ],
+  "distance_cpp_unchanged": true,
+  "historical_source_policy": "Executed copies retained outside Git; raw source hashes are not rewritten as the hardened delivered driver identities",
+  "raw_vector_policy": "Data, references, masks, score tables, layouts, ownership arrays and binaries remain outside Git with original manifests"
+}

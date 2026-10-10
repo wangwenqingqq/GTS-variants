@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "proof_sha256": "57062d79d3b49abe35e2c859eefe10cc26ee48fc2adcac0e2592f8ac2211105d",
+  "verification_source_sha256": "d897c14a553d816b2d26e11fc64aa43822aab0da493170c39e80739497b96601",
+  "fresh_library_sha256": "871a234c9bc8ae93f8f12350d394617d2df3084654a082351237cc396e841e76",
+  "fresh_compiler_command": [
+    "g++",
+    "-std=c++17",
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fopenmp",
+    "-shared",
+    "-fPIC",
+    "${SOURCE_ROOT}/distance.cpp",
+    "-o",
+    "${RAW_VERIFY}/distance.so"
+  ],
+  "all_rows_reconstructed": true,
+  "all_summaries_reconstructed": true,
+  "original_and_fresh_library_passed_tests": true,
+  "fresh_distance_pairs_recomputed": 48000000,
+  "actual_false_prune_blocks": 0,
+  "decision": "CONDITIONAL",
+  "delivered_driver_sha256": "e0c32046c9626f2d2e9883e24f5c8e96cbe593adaf78f74373aaeb3102a5e2cb",
+  "result_hashes": {
+    "LAYOUT_RESULTS.json": "a0bc6c82584dc89487082730c97739d3d4ec907402bf2cb1a8867905a7fadc8c",
+    "ORACLE_BLOCK_RESULTS.json": "01ed484fb439277ffd41196e4500214db2a5a0ab015afe37c57b400823fd56ef",
+    "CERT_SWEEP.json": "b4e060fe37d9c8239703e443d82b98587b32753cee0c217d1121f62b6291c1d5",
+    "UPDATE_LOCALITY.json": "e44afd87e6d9faba0da72f29a3aa86ff66bd1a909a09414c251ff2a4fa3b56d9",
+    "DECISION.json": "f8b67bf6252263c115a49f21c16ec6df4f9559000370d6fffa4348f68b23e695"
+  },
+  "raw_receipt_sha256": "365a9986f2ba5c36b79b1315bbb419d1e46847310b9cb51d1e9daf7de120be7c",
+  "curation": "Only source/output paths in compiler command made portable"
+}

@@ -1,0 +1,150 @@
+{
+  "experiment": "GTSPP_20261010_block_certificate_global_pivots",
+  "baseline_commit": "db89d2f1aa66b934f3b99b5730efafa87cee5a71",
+  "scope": "Offline structural counts only; no GPU launch, no timing or end-to-end claim",
+  "shape": {
+    "N": 1000000,
+    "D": 960,
+    "dtype": "FP32",
+    "metric": "L2",
+    "B": 1,
+    "queries_per_snapshot": 32,
+    "radius_bits": "0x3f34a3d8"
+  },
+  "snapshots": [
+    "initial",
+    "first_rebuilt"
+  ],
+  "layouts": {
+    "L0": "identity physical row order",
+    "L1": "nonempty leaf IDs ascending; each leaf's physical IDs ascending",
+    "L2": "nonempty depth-3 subtree IDs ascending; each subtree's physical IDs ascending",
+    "L3": "DFS ascending child ID; each leaf retains qualified tree order"
+  },
+  "ownership": "Global shared pivots, explicitly confirmed by the user before measurement",
+  "pivot_counts": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "strategies": {
+    "S0": "first eight distinct physical pivot row IDs in nonempty qualified tree nodes, ascending heap node ID, excluding negative root pivot",
+    "S1": "farthest-first traversal seeded at physical row 0; maximize minimum ordered FP64 squared distance to chosen pivots, ties smallest physical row ID; exclude selected rows",
+    "S2": "NumPy PCG64 seed 20261010, choose eight physical row IDs without replacement"
+  },
+  "query_cost": "P distinct query-pivot pairs/query, no early exit; scalar reads = 2*P*total_blocks; counts are not speed",
+  "block_sizes": {
+    "main": 256,
+    "sensitivity_only": [
+      32,
+      512
+    ]
+  },
+  "numerics": "Ordered FP64 C++ subtraction/product/sum, no contraction or fast math; outward interval from squared score using epsilon=(4*D+16)*2^-52; outward division/sqrt/add via nextafter; inflate radius for ordered-reference membership. See NUMERICS.md",
+  "aggregate": "Arithmetic mean across all original 32 queries, each snapshot separate. One identical configuration must pass both snapshots; per-query rows and distribution summaries retained",
+  "oracle_ratio_gate": "Each query whose oracle requires >=1% of total blocks must satisfy surviving <=2*oracle; smaller and zero-result queries reported separately, not used in this ratio gate",
+  "no_go": "If on either snapshot every tested layout/strategy at P=8 has mean surviving-256 fraction >0.80, stop this global certificate design and do not run D. A single deliberately weak configuration does not reject a stronger configuration",
+  "D_admission": "At least one identical layout/strategy/P<=8 configuration reaches mean surviving-256 fraction <=0.70 on both snapshots with zero false prune, and oracle mean <=0.30 on both. Otherwise mark D not run",
+  "GO": "Same P<=4 configuration on both snapshots: mean surviving<=0.50, false prune=0, all non-tiny oracle ratios<=2; D changed fraction<=0.05, moved existing<=0.05*N, global repartition=0",
+  "CONDITIONAL": "No GO and no explicit NO-GO; no CUDA promotion. Query reach 0.50-0.70 with low oracle calls for a different partition/low-cost summary, not more pivots",
+  "updates_if_admitted": "Retain actual first interval 10I10D and second interval 20I20D; separately report second net entering/removing base 10/10. No relabeling 20/20 as 10/10; freeze best-match and split rule before D",
+  "stops": [
+    "false prune rejects the configuration and stops for correctness diagnosis",
+    "no P>8",
+    "no query/oracle-informed pivot or layout",
+    "no long matrix rerun",
+    "no new CUDA kernel this round"
+  ],
+  "runtime": {
+    "CPU_threads": 4,
+    "priority": "nice 15",
+    "GPU_processes": 0
+  },
+  "inputs": {
+    "initial": {
+      "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "reference_sha256": "6417a03c5d08d9b0b9de1058d7cc952054096bed19e74b2e8ee172de56691b26",
+      "masks_sha256": "b91024f798be3697b1443c1006a0f2376325691d2adc9ecfff7752cf5e2439f8",
+      "nodes_sha256": "c26366ab1969e43e679a2c06e38bd1596df956ee7fd1e5d54c517d356072c128",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317",
+      "qids": [
+        88406,
+        865632,
+        881748,
+        916533,
+        40158,
+        242468,
+        40486,
+        900387,
+        703226,
+        791039,
+        724874,
+        671829,
+        722418,
+        152899,
+        737995,
+        144573,
+        570909,
+        347206,
+        63744,
+        625378,
+        136857,
+        201233,
+        72436,
+        617423,
+        810945,
+        789615,
+        601856,
+        433080,
+        415755,
+        282095,
+        66651,
+        326654
+      ]
+    },
+    "first_rebuilt": {
+      "data_sha256": "7320627ab528bb2519720a8a4d43b8c1e3433b486c27cd1897ac1c03d2631da6",
+      "reference_sha256": "18c8c6d119b91a481452dca16da2e1e5b0c5bae1b3212e4ff0349ce04269754b",
+      "masks_sha256": "ceed2f2b539bf4cf0e006a2a8367c199de7344ff9798f314ad70a0d12a1d0c22",
+      "nodes_sha256": "acc9083fd2b03e2563ff61ad3a32130241a2dafbfd09515a5cebe12e287055f7",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "b6c89edea15f13f22ffd18fca9bf0e00e968043c51b0a374bc108332ff3ea1be",
+      "qids": [
+        282091,
+        66650,
+        326650,
+        532560,
+        113260,
+        991585,
+        253497,
+        738154,
+        567973,
+        258318,
+        243005,
+        236353,
+        158329,
+        922178,
+        436359,
+        821767,
+        253944,
+        323617,
+        578176,
+        569440,
+        207665,
+        579738,
+        63627,
+        227,
+        365626,
+        551655,
+        947181,
+        520014,
+        136074,
+        750662,
+        838925,
+        819709
+      ]
+    }
+  }
+}

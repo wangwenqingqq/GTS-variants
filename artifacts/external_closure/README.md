@@ -257,3 +257,7 @@ The two PE source patches reconstruct executed versions in a disposable copy
 with `git apply --unidiff-zero` (resumed executor first, original checker second);
 do not apply them to the current working tree or use them to bypass hardened gates.
 The first checker error and later offline hardening are not performance rejects.
+
+The next block-aligned global-certificate diagnostic is closed as
+[CONDITIONAL](../block_certificate_headroom_20261010/DECISION.md), not a new
+production index or end-to-end acceleration. All original matrices remain unchanged.

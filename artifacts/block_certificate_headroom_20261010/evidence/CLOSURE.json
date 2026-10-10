@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "scope": "CPU-only historical execution/provenance and full count reconciliation; not GPU or end-to-end",
+  "static_proof_sha256": "57062d79d3b49abe35e2c859eefe10cc26ee48fc2adcac0e2592f8ac2211105d",
+  "static_verification_raw_sha256": "365a9986f2ba5c36b79b1315bbb419d1e46847310b9cb51d1e9daf7de120be7c",
+  "update_proof_sha256": "94147581410c3954f8d6dd396e5f7e5818912f8b576c25f6cee1000467353a14",
+  "update_results_raw_sha256": "8a186e145ca4ffae8e8e9fb743266062bb170f3e03a463f055a74ccaa8d59647",
+  "closure_source_sha256": "7749728292977113d7ea01039b3355cab3f2d17a7bf6c605c84048f749b7cd61",
+  "historical_D_source_hashes": {
+    "update.py": "76e82f6dfac86d2a2c551243af41e606e820044c8f94d011ab7e96e61851f4ad",
+    "D_CONTRACT.json": "7e5259c5cfa5bffcaf5cd5cdfa8fe3323d4c75f52580c60f6b9cd18d9a466d3d",
+    "run.py": "e0c32046c9626f2d2e9883e24f5c8e96cbe593adaf78f74373aaeb3102a5e2cb"
+  },
+  "delivered_D_source_hashes": {
+    "update.py": "f789824c52f4e445f5217ede42ee04f355a36ff095efdbacaeb597541bb572b1",
+    "D_CONTRACT.json": "7e5259c5cfa5bffcaf5cd5cdfa8fe3323d4c75f52580c60f6b9cd18d9a466d3d",
+    "run.py": "e0c32046c9626f2d2e9883e24f5c8e96cbe593adaf78f74373aaeb3102a5e2cb"
+  },
+  "static_raw_inventory_verified": true,
+  "D_actual_static_inputs_bound": true,
+  "D_288_records_reconciled": true,
+  "all_9216_post_update_queries_false_prune_zero": true,
+  "scope_corrections": [
+    "Affected slots checked after each update; untouched slots preserved by construction",
+    "Independent interval initializations, not sustained maintenance",
+    "Insert matching scans all summaries, despite local writes"
+  ],
+  "decision": "CONDITIONAL",
+  "source_hardening": "Historical D driver lacked explicit verification-to-proof/checkpoint pin; closure checked actual exact input bindings. Delivered entry now enforces it; original source identity retained"
+}
