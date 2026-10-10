@@ -1,12 +1,38 @@
-# External closure (in progress)
+# External closure: static matrix complete; later gates remain open
 
-**2026-10-10 checkpoint:** [second static interruption](STATIC_SECOND_STOP.md)
-retains48/72 valid rows, not a complete ranking. The new independent
-[GPU-Tree first-loss campaign](tree_gap/RESULTS.md) diagnoses the retained
-kNN failure:80 bounded repaired results pass, but memcheck fails. Independently,
-range passes64 target queries across two N1M/D960 snapshots. No P change, formal
-tree timing or conditional10K workflow launch is implied.
+**Current checkpoint (2026-10-10):72/72 valid external results**, assembled as
+4+44+24. Both failed attempts remain preserved;74 external attempts plus18
+prior internal = **92/102**. The separately authorized second recovery is
+complete and the driver has exited. Full outputs, isolation, identities, order
+and the frozen six-round estimator were reverified. See
+[completion](STATIC_RECOVERY2.md) and [bound receipt](evidence/STATIC_RECOVERY2_COMPLETE.json).
 
+P beats the admitted single-thread CPU controls but loses to both strong GPU
+scans in every pair/order stratum at both N1M/D960 snapshots. Paired P/scan time
+is1.585/1.586 for kNN and6.333/5.499 for range. These are static Host-ready
+passes, not dynamic workflow or full-program time. Read the
+[kNN table](EXTERNAL_KNN_RESULTS.md), [range table](EXTERNAL_RANGE_RESULTS.md),
+[lifecycle table](EXTERNAL_LIFECYCLE_RESULTS.md) and
+[claim/decision ledger](EXTERNAL_STATIC_DECISION.md).
+
+The [second interruption](STATIC_SECOND_STOP.md) is a historical48/72 checkpoint,
+not the current state. The independent [GPU-Tree diagnosis](tree_gap/RESULTS.md)
+retains80 bounded repaired outputs followed by a memcheck failure; unchanged
+range-only code passes64 target queries, not formal Host-ready timing. No new
+native measurement, tree supplement or conditional10K run has been launched.
+[Remaining gates](NEXT_GATES.md) call for a same-semantics short external mixed
+check before any long comparison.
+
+`static_recovery2.py` is the exactly24-entry recovery/verifier, not a generic
+retry runner. `static_results2.py` merges only the verified4+44+24 matrix and
+reproduces the original pure estimator. For private re-verification, import the
+unchanged executed source tree through `PYTHONPATH`; the standalone offline
+analyzer may reside separately. Keep original source locations/receipts intact;
+never rewrite paths or fabricate a68-row COMPLETE record. The public JSON and
+three reports preserve all72 rows, phase distributions and both old failures.
+
+The implementation and historical admission notes below retain their original
+scopes; their former incomplete status is superseded by the checkpoint above.
 
 This folder implements staged baseline admission from the pinned 5598585 source.
 Read `CONTRACT.md` and the existing `../rebuild_tree_baselines/BASELINES.md`.
@@ -98,8 +124,8 @@ the strengthened CPU boundary rechecks without relabeling old execution sources.
 ## Direct cumulative / strengthened-reference short campaign
 
 See [measured direct R/T/P results](RTP_RESULTS.md) and the existing
-[claim-evidence ledger](../build_distance_tiles/CLAIMS.md). External B remains
-pending; the internal results do not substitute for external controls.
+[claim-evidence ledger](../build_distance_tiles/CLAIMS.md). External B is closed at the current checkpoint above; the internal results
+do not substitute for those external controls.
 
 `RTP_CONTRACT.json` fixes R/T/P, all six permutations, the unchanged admitted
 binary and timing/statistical boundaries. `rtp.py --stage bridge` admits the new
@@ -124,7 +150,7 @@ Both outputs must be fresh paths; never overwrite original campaign evidence.
 
 ## Formal external static Host-ready adapters
 
-See [qualification and current boundaries](STATIC_QUALIFICATION.md). The complete
+Historical3aac39e checkpoint: see [qualification boundaries](STATIC_QUALIFICATION.md). The planned
 72-process matrix stopped after4 passes and a pre-construction CPU Flat
 interpreter failure; this checkpoint publishes no ranking. Preserve the failed
 process and do not automatically restart it.

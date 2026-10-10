@@ -1,66 +1,80 @@
-# Remaining execution gates — no primary launch implied
+# Remaining gates after complete external static evidence
 
-The supplied Stage B/C ceiling remains 102, not a requirement to fill blocked
-rows. Stage A is qualification, not the requested external ranking or cumulative
-end-to-end result. Never populate a missing external timing with zero or replace
-a failed identity silently.
+## Current checkpoint (2026-10-10)
 
-**Current checkpoint (2026-10-10):** the first recovery stopped again after44
-valid observations; with the original4 there are48/72 valid external rows.
-The next GPU range observation is invalid under the isolation guard and23
-entries are unattempted. Both failed attempts remain; total primary attempts
-including internal R/T/P are68/102. See [second stop](STATIC_SECOND_STOP.md).
-No automatic recovery or duplicate driver is authorized by this checkpoint.
-The old qualifier budget remains32/32; the separately registered
-[GPU-Tree diagnosis](tree_gap/CONTRACT.json) is not charged to that old gate.
-Complete external tables and any 10K service comparison remain gated.
+The separately authorized24-entry recovery is complete:4+44+24 =72 valid
+external observations, with both failed attempts preserved. Total primaries are
+74 external +18 internal =92/102. The old qualifier gate remains32/32; the
+separate GPU-Tree diagnostic campaign remains6/8. No driver is active and no
+automatic further native run is implied. See [completion](STATIC_RECOVERY2.md)
+and [claim/decision ledger](EXTERNAL_STATIC_DECISION.md).
 
-The numbered list preserves the original gates. Items2–3 now have qualified
-adapters and an interrupted bounded recovery; no complete ranking is implied.
+P beats the admitted single-thread CPU methods but loses both static tasks to
+strong GPU scans, in all six pairs and both order strata at both snapshots.
+The [kNN](EXTERNAL_KNN_RESULTS.md), [range](EXTERNAL_RANGE_RESULTS.md) and
+[lifecycle](EXTERNAL_LIFECYCLE_RESULTS.md) tables are complete within scope;
+GPU-Tree/MVPT remain absent from formal timing, not zero/infinite or defeated.
+The102 ceiling is not a requirement to fill blocked rows, and its remaining10
+slots do not authorize a new campaign automatically.
 
-1. Bind the final Stage A proof, original execution source hashes and fixed CPU
-   leaf choices. Keep author GPU_TREE's native membership failure, unsafe tail
-   and bounded safety-overlay results distinct. MVPT provenance remains open.
-2. Freeze the formal static adapters and cost instrumentation. Candidate P uses
-   PAR_STRONG/FULL/TILED. CPU Flat inclusive adapter must be explicitly named;
-   raw-native strict comparator evidence is not renamed. The range scan currently
-   copies additional native squared fields for qualification, so its formal
-   Host-ready timing source and validation observer cost still require a freeze.
-3. Exactly eight warmups/task, 32 B1 measured calls/task, one build/process,
-   separate representation/build/pass/release accounting. Preserve the six
-   supplied method/task permutations. CPU single-thread, GPU isolation/NUMA and
-   full payload checks are required on every formal process. Existing diagnostics
-   are not held-out generalization tests. Publish EXTERNAL_STATIC_RESULTS only
-   after complete fresh-process evidence, not from Stage A timer columns.
-4. Internal C is complete: the new NATIVE/FULL/TILED combination passed its
-   independent bounded replay, inherited full-output/state bridge and sanitizers.
-   One unchanged binary ran 336 events/128 range/128 kNN/40I/40D/two rebuilds in
-   the six orders RTP, PTR, TPR, RPT, PRT, TRP. Direct R/P, T/P and R/T estimates
-   use bootstrap 20000, seed 2026101002. Preserve raw rows, the offline-checker
-   failure/recovery and distinct executed/verification source identities. Do not
-   multiply historical ratios or use these internal results as external B data.
-5. Keep all rejected rows and the 96B context-symbol limitation. No global
-   default, new optimization, 100k/1B or automatic 10k mixed campaign. The latter
-   needs its separate occurrence-ID logical trace and maintenance-policy gates.
-6. Methods/evaluation prose remains private (Overleaf only); write it only after
-   the actual external/cumulative tables and claim-evidence map are available.
+## Next cheap external gate — before a long run
 
-## Supplied sustained-workload gate (2026-10-10; not launched)
+1. Select a concrete external mixed-service identity using a mature retrieval
+   core. Inspect its actual update/output implementation, not assumed API parity.
+2. Freeze query vectors, insert vectors and delete occurrence IDs for one short
+   same-semantics workload; duplicate occurrences remain distinct. Do not use
+   mutable physical row IDs as cross-backend requests.
+3. Qualify full kNN and range outputs after updates, paid ID mapping/copies,
+   filtering before correct top-K selection, buffer membership and a fixed final
+   logical state. Freeze native maintenance policies independently; a scan need
+   not pay for an unnecessary tree rebuild.
+4. Separate preparation/context/warmup, continuous service, bounded client
+   consumption/release and serialization. Count real maintenance once and do
+   not add CPU waiting as a second independent GPU cost.
+5. Register only the actual new adapter checks, process budget and timeout after
+   inspection. No new optimization, short timing, tree supplement or long run is
+   launched by this note. Preserve a negative mixed result rather than expanding
+   to10K to seek a favorable average.
 
-The next conditional workload is **10,000 queries plus2,000 updates**, not10,000
-total events:5,000 range,5,000 kNN,1,000 inserts and1,000 deletes, N1M/D960/B1/K8.
-P keeps threshold10; the expected50 rebuilds must be verified by logical replay.
-Freeze actual query/insert vectors and delete occurrence IDs, preserving duplicate
-occurrences. Do not impose P's maintenance policy on an external method.
+## GPU-Tree branch — still task-specific
 
-Prefer a qualified external E; use T only for an explicitly internal sustained
-comparison. Register exactly two methods and six rounds (12 new primaries), plus
-only the qualification required by the actual new adapter. No budget is taken
-from the exhausted old gate. Require complete outputs, paid maintenance, fixed
-terminal state, bounded consumption, memory-growth checks and an explicit guard
-timeout before launch. Separate preparation/context/warmup, service execution,
-client consumption and file serialization; retain early/middle/late throughput,
-per-type p50/p95/p99, maintenance tails and Host/Device memory trajectories.
-Neither the native kNN repair nor range-only static qualification yet admits an
-external mixed-service comparator. The96B context-symbol limitation remains;
-service-memory stability would not establish universal leak cleanliness.
+The bound-only kNN repair passes80 bounded outputs but fails memcheck at the
+native1-based queue capacity. Do not add another queue repair or spend remaining
+conditional sanitizer slots automatically. Unchanged range-only code passes64
+N1M/D960 queries over two snapshots, but its query-ID wrapper uses pre-resident
+queries. A charged Host-input adapter and corresponding qualification are needed
+before timing; target correctness alone does not admit that new adapter.
+
+Only after admission may a separately registered range-only GPU_TREE_SUPPLEMENT
+remeasure both that identity and P in the same new rounds: two snapshots, two
+methods, six balanced rounds, at most24 primary processes. Never divide new tree
+times by old matrix P times. MVPT provenance/full-output gaps remain open.
+
+## Conditional sustained-workload gate — not launched
+
+The proposed workload is **10,000 queries plus2,000 updates**, not10,000 total
+events:5,000 range,5,000 kNN,1,000 inserts,1,000 deletes; N1M/D960/B1/K8. P keeps
+threshold10; logical replay must verify the expected50 rebuilds. Freeze actual
+vectors and delete occurrence IDs, with duplicate occurrences preserved.
+
+Prefer a qualified external E; use T only for explicitly internal sustained
+behavior. Choose one question and exactly two methods/six rounds (12 new primary
+processes), not both matrices. New qualification and process budgets must be
+separately registered; none is silently borrowed from the exhausted old gate.
+
+Require full independently checked outputs, paid maintenance and terminal-state
+policy, bounded output consumption, memory-growth checks and a workload-appropriate
+guard timeout. Retain early/middle/late throughput; per-type p50/p95/p99;
+maintenance tails; Host/Device memory trajectories and final live owned bytes.
+Keep disk persistence separate from Host-ready service and client consumption.
+The96B context-symbol limitation remains; stable service memory would not prove
+universal leak cleanliness.
+
+## Retained internal evidence and publication boundary
+
+R/T/P's18 fixed short-workflow processes and their direct ratios remain unchanged;
+R includes common numerical/safety repairs, not untouched original GTS. Do not
+multiply historical ratios or use internal results as new external evidence.
+No new TILED/WARP/FUSED/BOUND tuning,100k/1B expansion or global default follows
+from this matrix. A completed comparison is not a novelty gate. Methods and
+manuscript content remain private in the existing Overleaf workflow.

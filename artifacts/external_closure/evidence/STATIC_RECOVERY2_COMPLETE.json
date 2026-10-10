@@ -1,0 +1,79 @@
+{
+  "status": "COMPLETED_AND_OFFLINE_VERIFIED",
+  "source_checkpoint": "a7e32c38cbc689068c1bf11f0fe1ba07289e12cc",
+  "new_registered_attempts": 24,
+  "new_valid": 24,
+  "preserved_valid": 48,
+  "valid_matrix": 72,
+  "retained_failed_attempts": 2,
+  "external_attempts": 74,
+  "total_primary_attempts_including_RTP": 92,
+  "primary_ceiling": 102,
+  "new_GPU_qualifiers": 0,
+  "qualification_attempts_unchanged": 32,
+  "recovery_contract_sha256": "c643e5dd1ab9a496b13d27d812103ad1f34ce68da220d6658d1591d046a1260b",
+  "published_prior_stop_sha256": "db53d516b2358f152b26d9f2046d639066e2a4f53ef29f840e9c86a1169fb96a",
+  "preflight_sha256": "9cb8251ea60a9c9d4d9c1ccafa85d264cc610d4f7b08f695e3d3652ca9ca06e8",
+  "completed_stage_receipt_sha256": "192cd76370259a3d8862a6e5408efe51a3e6f4f851184ed428d7c9666eae191b",
+  "registration_sha256": "15c2762486509c7cd3e9c5cfef5148a64f12e2323cfb4825500319d6ca0f4806",
+  "rows_sha256": "bfdeafad785a5816dfd63ac9c6d91ab2ceb2ecda2e41d96264451fa7656e4aa1",
+  "executed_source_sha256": {
+    "STATIC_RECOVERY.json": "ec510214853d36127b3f11f2a5a3b51ade73b8366efca9d6b7ade57be980f1db",
+    "static_preflight.py": "21add4fbe6be1b716424e38b6dc0a8e633b38c67678ac1e528f7af34515ec54f",
+    "STATIC_CONTRACT.json": "0deb988b995d48b0a49a3f329b607107e352edd29a96af2260c09acdadd272f3",
+    "static_campaign.py": "a47f1fdef1362137b536aefb49f1de0f996abf7b7b2ca912002c0b3f5af63196",
+    "static_check.py": "90699e4a47f32ce12072fbe75317f9b8dfc6b309d4ebbbc16749848ce09aebf5",
+    "static_native.py": "97a3069e12dd845e5816155389a537349d38d670861913dcbd0b20a32a4a9fb1",
+    "static_process.py": "874953c7302f4087b95967bb88d3fee54fdb051c70348a60a1a9b045cf1bebe7",
+    "native_cpu.py": "d51fc53a71072254b886307a0e0036cd5615ef110f40d45b07fa0e67f2ccde59",
+    "qualify.py": "f10eb0f0475e59852119a436698771bf78c140083d8eeffaef3b234443c9d31e",
+    "common.py": "bb2ed5e1cced5305831cec13a57b79b4145afc85e4db2dee5af365dcb0dd0103",
+    "../rebuild_tree_baselines/cpu.py": "8c53b0717d5238ff6aa18636794824084495db2ef5581ece14dcaf1c614f457b",
+    "../unified_target_workflow/validate.py": "7b58a173fb92815c84bc4dba02a5454bbc8d3eae90d81b8526c9b396571f7ce7",
+    "STATIC_RECOVERY2.json": "c643e5dd1ab9a496b13d27d812103ad1f34ce68da220d6658d1591d046a1260b",
+    "static_recovery2.py": "39f506ebcc20a6e1f157f3ecc2df9dec8031c589d5b507c66558da330809d993",
+    "static_guard.py": "36e9b8f341093613e8671be47f956ea0ae34de66e2f1723326f81b84fd09a4cb",
+    "static_second_stop.py": "c48fd7e954edb3214f3ea6d70688a1b102a08098a385d384dafc8aebbc3906a8",
+    "test_static_guard.py": "242b01ff8be7a6b0bb4ba948f5512183c1128f0029dfe418814c2661083abc3b",
+    "test_static_recovery2.py": "bd14c7def9ef1cfd0b998c54d44825adf969bc84d3bff2708e62caa8f08342c2",
+    "evidence/STATIC_SECOND_STOP.json": "db53d516b2358f152b26d9f2046d639066e2a4f53ef29f840e9c86a1169fb96a"
+  },
+  "guard_sha256": "36e9b8f341093613e8671be47f956ea0ae34de66e2f1723326f81b84fd09a4cb",
+  "CPU_tests": {
+    "test_static_guard.py": {
+      "source_sha256": "242b01ff8be7a6b0bb4ba948f5512183c1128f0029dfe418814c2661083abc3b",
+      "stdout": "PASS snapshot-exit, new child, unknown exit, PID reuse, mixed foreign cases\nPASS live Linux descendant starttime and exit-window ownership; no GPU use\n",
+      "stderr": ""
+    },
+    "test_static_recovery2.py": {
+      "source_sha256": "bd14c7def9ef1cfd0b998c54d44825adf969bc84d3bff2708e62caa8f08342c2",
+      "stdout": "PASS exact4+44+24 schedule,92 attempts, missing/extra/reordered rejection and two-sided observer replay\n",
+      "stderr": ""
+    }
+  },
+  "raw_bundle": {
+    "name": "recovery2_complete_raw.tar.gz",
+    "sha256": "12e3715d4463a7c385b19fe08393265b92bde05c27d337554ad526645c073b05",
+    "bytes": 3202997,
+    "scope": "Private complete recovery2 outputs, guards, registrations, executed driver, preflight, analysis sources and reports; no dataset/index binaries"
+  },
+  "executed_source_archive_sha256": "d3e8cf9d64a9e8c5145db9dab8da3b3039572dd421690ea5f4ba2a500a8a2ce6",
+  "offline_analysis": {
+    "failed_checker_sha256": "746701e938c86186f828f2701c433091356a44805e1a99af6250de6192144f7a",
+    "failed_log_sha256": "8b74f53dd94ddaf3fd7501c16e1d0f8de10db5b47cd8635f7ed85fdb13262518",
+    "failure": "Formal-snapshot metadata collection incorrectly included bounded qualification input. No result emitted; no native rerun.",
+    "corrected_checker_sha256": "2b674febae2cfcfc9c2ca2adba7ecf936d9f10c6ee61df917988a43c2d2a0725",
+    "corrected_test_sha256": "ddf112e2539e0db6dad60c3560c9f99ee3e6cf45284e1c504187c1e670e34b25",
+    "passed_log_sha256": "be92989c5513240f205195dfb61a8a88705505bb8e6d6cb5f1c82773526b01ef",
+    "estimator_unchanged": true
+  },
+  "reports": {
+    "EXTERNAL_KNN_RESULTS.md": "4572cc863e8d6ce567e0e766fddfdd37bd1a213fddd12170b7337f17fa69bc32",
+    "EXTERNAL_RANGE_RESULTS.md": "e93a84c42315b2b057198105081e399b244e28838d49ff134db9ad84f0c59585",
+    "EXTERNAL_LIFECYCLE_RESULTS.md": "215a0766a93f441ec0a2b6758db331a3510781a685f5e0267f5ff7825464d8b7",
+    "EXTERNAL_STATIC_COMPLETE.json": "0811acb86db74d9f7daa1843cf5a9c2fb2f5f77836bd66f2d21226e3214c5eb6"
+  },
+  "long_workload_launched": false,
+  "tree_supplement_launched": false,
+  "manuscript_published": false
+}

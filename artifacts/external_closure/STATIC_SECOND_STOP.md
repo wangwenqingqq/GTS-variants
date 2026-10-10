@@ -2,6 +2,10 @@
 
 2026-10-10; parent checkpoint `b94a5d9`.
 
+Historical stop record: a [separate second recovery](STATIC_RECOVERY2.md) was
+later explicitly authorized. This record and its48-row proof remain immutable
+evidence of the stop, not the current matrix status.
+
 The first recovery stopped again. Original4 valid observations plus44 valid
 recovery observations give **48/72**, not a complete six-method/two-snapshot
 matrix. The next entry, `first_rebuilt_r3_GPU_RANGE_COMPLETE`, exited normally

@@ -1,4 +1,9 @@
-# Authorized static-matrix recovery
+# Authorized static-matrix recovery (historical)
+
+This records the first recovery authorization, not live status. It subsequently
+stopped with44 valid rows; see [second stop](STATIC_SECOND_STOP.md) and the
+[separately authorized second recovery](STATIC_RECOVERY2.md). Do not relaunch
+the original68-entry driver.
 
 The user approved correcting the CPU environment and resuming at the failed
 entry, **without rerunning any of the four passed processes**. This supersedes

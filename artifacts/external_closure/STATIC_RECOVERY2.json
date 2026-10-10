@@ -1,0 +1,19 @@
+{
+  "status": "AUTHORIZED_BOUNDED_SECOND_RECOVERY",
+  "source_checkpoint": "a7e32c38cbc689068c1bf11f0fe1ba07289e12cc",
+  "published_second_stop_sha256": "db53d516b2358f152b26d9f2046d639066e2a4f53ef29f840e9c86a1169fb96a",
+  "authorization": "User approved a separately registered24-entry recovery after process-ownership tests pass. Preserve48 valid observations and both failed attempts; no further automatic replacement.",
+  "original_contract_sha256": "0deb988b995d48b0a49a3f329b607107e352edd29a96af2260c09acdadd272f3",
+  "original_prefix": 4,
+  "first_recovery_prefix": 44,
+  "retained_failed_attempts": 2,
+  "new_attempts": 24,
+  "first_label": "first_rebuilt_r3_GPU_RANGE_COMPLETE",
+  "valid_complete_matrix": 72,
+  "expected_total_primary_attempts": 92,
+  "primary_ceiling": 102,
+  "additional_GPU_qualifiers": 0,
+  "change": "Only the observer records owned PID/starttime identities before and after each GPU-app snapshot; unknown and reused PIDs still fail.",
+  "unchanged": ["native APIs, binaries and kernels", "data and observed queries", "quality and Host-ready timing", "warmups, order and six-round estimator", "same admitted GPU and NUMA node", "1200-second per-process guard and stop on first failure"],
+  "output": "Separate recovery2 directory; never modify primary/recovery sources, receipts or COMPLETE status"
+}

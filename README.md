@@ -1,20 +1,42 @@
 # Original GTS experiment deliveries and evidence alignment
 
-## External closure and GPU-Tree diagnosis (2026-10-10)
+## External static matrix complete; strong GPU scans remain faster (2026-10-10)
 
-[Second interruption](artifacts/external_closure/STATIC_SECOND_STOP.md): **48/72**
-external observations are valid. The next observation failed isolation and23
-remain unattempted; both failed attempts are preserved. No static-matrix driver is active and
-no automatic retry or complete external ranking is admitted. Including the
-earlier internal18, primary attempts total68/102; a separately authorized24-row
-recovery would bring this to92/102.
+**All72 valid observations are verified**:4 original +44 first-recovery +24
+second-recovery. Both failed attempts remain excluded but counted;74 external
+attempts plus18 prior internal = **92/102**. The driver has completed. The
+[completion proof](artifacts/external_closure/evidence/STATIC_RECOVERY2_COMPLETE.json)
+binds unchanged executors, all outputs, guards, order and the frozen estimator.
 
-[GPU-Tree diagnosis](artifacts/external_closure/tree_gap/RESULTS.md) identifies
-premature pruning by an underfilled kNN heap. The minimal bound repair passes80
-complete bounded results but fails memcheck on a native queue capacity error.
-kNN remains blocked; the unchanged range-only identity passes64 complete queries
-across two N1M/D960 snapshots, without formal timing admission.
-No new performance gain, sustained workload or manuscript publication is claimed.
+FP32 GIST **N1,000,000/D960/B1/K8**, two snapshots, six paired rounds;
+32-query Host-input-to-complete-Host-output passes on prebuilt indexes:
+
+| Task | Initial: scan / P median ms | First rebuilt: scan / P median ms | Paired P/scan time ratio |
+|---|---:|---:|---:|
+| kNN: GPU Flat versus P |138.169 /219.049|138.281 /219.256|1.585 /1.586|
+| Complete range: GPU scan versus P |110.487 /694.854|110.415 /603.353|6.333 /5.499|
+
+Both scans beat P in every paired round and both order strata; the intervals
+exclude parity. P beats the admitted **single-thread** CPU methods, including
+CPU Flat, but that does not rescue a strong-GPU static-superiority claim.
+This is neither full-program time nor a dynamic update workflow. See the
+[kNN table](artifacts/external_closure/EXTERNAL_KNN_RESULTS.md),
+[range table](artifacts/external_closure/EXTERNAL_RANGE_RESULTS.md),
+[scoped lifecycle table](artifacts/external_closure/EXTERNAL_LIFECYCLE_RESULTS.md),
+and [claim/decision ledger](artifacts/external_closure/EXTERNAL_STATIC_DECISION.md).
+Single-task GPU timings are not divided by P's dual-task lifecycle.
+
+[GPU-Tree diagnosis](artifacts/external_closure/tree_gap/RESULTS.md) remains
+separate: the minimal bound repair passes80 bounded results but fails memcheck
+on a native queue-capacity error; kNN stays blocked. The unchanged range-only
+identity passes64 target queries, without formal Host-ready timing admission.
+MVPT provenance/output and the96B context-symbol limitation remain open.
+
+The [second recovery](artifacts/external_closure/STATIC_RECOVERY2.md) preserves
+both interruptions and the old48-row proof. No further native timing, tree
+supplement,10K sustained run or manuscript publication was launched. The next
+gate is a qualified same-semantics short mixed external comparison, not an
+automatic long run or a new optimization. Historical checkpoints follow.
 
 ## External static B: first authorized recovery checkpoint (historical, 2026-10-10)
 
