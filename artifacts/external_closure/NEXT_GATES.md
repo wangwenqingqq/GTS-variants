@@ -5,16 +5,18 @@ rows. Stage A is qualification, not the requested external ranking or cumulative
 end-to-end result. Never populate a missing external timing with zero or replace
 a failed identity silently.
 
-**Current checkpoint:** the [authorized recovery](STATIC_RECOVERY.md) is running
-only the original schedule's remaining68 entries. Four passed primaries and the
-failed fifth invocation remain immutable; the exact6+4+1 gate and both import
-preflights passed. GPU qualifiers remain32/32. Completion would total91/102
-primary attempts, not91 completed processes at this checkpoint. Do not restart
-or duplicate this driver. The complete72-row result and combined offline
-analysis remain pending; GPU_TREE/MVPT remain explicit missing comparators.
+**Current checkpoint (2026-10-10):** the first recovery stopped again after44
+valid observations; with the original4 there are48/72 valid external rows.
+The next GPU range observation is invalid under the isolation guard and23
+entries are unattempted. Both failed attempts remain; total primary attempts
+including internal R/T/P are68/102. See [second stop](STATIC_SECOND_STOP.md).
+No automatic recovery or duplicate driver is authorized by this checkpoint.
+The old qualifier budget remains32/32; the separately registered
+[GPU-Tree diagnosis](tree_gap/CONTRACT.json) is not charged to that old gate.
+Complete external tables and any 10K service comparison remain gated.
 
 The numbered list preserves the original gates. Items2–3 now have qualified
-adapters and an active bounded recovery; no complete ranking is implied.
+adapters and an interrupted bounded recovery; no complete ranking is implied.
 
 1. Bind the final Stage A proof, original execution source hashes and fixed CPU
    leaf choices. Keep author GPU_TREE's native membership failure, unsafe tail
@@ -42,3 +44,23 @@ adapters and an active bounded recovery; no complete ranking is implied.
    needs its separate occurrence-ID logical trace and maintenance-policy gates.
 6. Methods/evaluation prose remains private (Overleaf only); write it only after
    the actual external/cumulative tables and claim-evidence map are available.
+
+## Supplied sustained-workload gate (2026-10-10; not launched)
+
+The next conditional workload is **10,000 queries plus2,000 updates**, not10,000
+total events:5,000 range,5,000 kNN,1,000 inserts and1,000 deletes, N1M/D960/B1/K8.
+P keeps threshold10; the expected50 rebuilds must be verified by logical replay.
+Freeze actual query/insert vectors and delete occurrence IDs, preserving duplicate
+occurrences. Do not impose P's maintenance policy on an external method.
+
+Prefer a qualified external E; use T only for an explicitly internal sustained
+comparison. Register exactly two methods and six rounds (12 new primaries), plus
+only the qualification required by the actual new adapter. No budget is taken
+from the exhausted old gate. Require complete outputs, paid maintenance, fixed
+terminal state, bounded consumption, memory-growth checks and an explicit guard
+timeout before launch. Separate preparation/context/warmup, service execution,
+client consumption and file serialization; retain early/middle/late throughput,
+per-type p50/p95/p99, maintenance tails and Host/Device memory trajectories.
+Neither the native kNN repair nor range-only static qualification yet admits an
+external mixed-service comparator. The96B context-symbol limitation remains;
+service-memory stability would not establish universal leak cleanliness.

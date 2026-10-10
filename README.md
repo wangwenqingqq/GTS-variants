@@ -1,14 +1,31 @@
 # Original GTS experiment deliveries and evidence alignment
 
-## External static B: authorized recovery (2026-10-10)
+## External closure and GPU-Tree diagnosis (2026-10-10)
+
+[Second interruption](artifacts/external_closure/STATIC_SECOND_STOP.md): **48/72**
+external observations are valid. The next observation failed isolation and23
+remain unattempted; both failed attempts are preserved. No static-matrix driver is active and
+no automatic retry or complete external ranking is admitted. Including the
+earlier internal18, primary attempts total68/102; a separately authorized24-row
+recovery would bring this to92/102.
+
+[GPU-Tree diagnosis](artifacts/external_closure/tree_gap/RESULTS.md) identifies
+premature pruning by an underfilled kNN heap. The minimal bound repair passes80
+complete bounded results but fails memcheck on a native queue capacity error.
+kNN remains blocked; the unchanged range-only identity passes64 complete queries
+across two N1M/D960 snapshots, without formal timing admission.
+No new performance gain, sustained workload or manuscript publication is claimed.
+
+## External static B: first authorized recovery checkpoint (historical, 2026-10-10)
 
 [Bounded recovery](artifacts/external_closure/STATIC_RECOVERY.md) corrects the
 CPU Flat interpreter/dependency routing after explicit authorization. The four
 successful observations and failed fifth invocation remain untouched; only the
 remaining68 entries run, in original order. Both installed environments pass
 import-only preflight and the6+4+1 offline identity/output gate passes. This is
-an active incomplete matrix, not a six-round external ranking. If all complete,
-primary attempts total91/102; GPU qualification remains32/32. No extra GPU
+an incomplete matrix at that historical checkpoint, not a six-round external
+ranking. The then-planned total was91/102, superseded by the second stop above;
+GPU qualification remains32/32. No extra GPU
 qualification, new kernels, long workload or paper publication.
 
 ## External static B: Host-ready admission checkpoint (2026-10-10)

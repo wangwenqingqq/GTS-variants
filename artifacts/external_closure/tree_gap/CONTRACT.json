@@ -1,0 +1,14 @@
+{
+  "experiment": "GTSPP_20261010_gpu_tree_first_loss",
+  "source_checkpoint": "b94a5d9dcd4648813f93f188347118bdeda029b4",
+  "scope": "Supplementary correctness diagnosis; not timing or the exhausted prior 32-slot admission gate",
+  "failure": {"N":4096,"D":17,"B":1,"K":8,"PNUM":8,"query_row":0,"data_sha256":"bd391cbf3486b306ac7aa6977903391feaa8708d9725bc792d7124134e4a9acd"},
+  "max_new_GPU_processes":8,
+  "slots":["native_trace","reuse_trace","bounded_regression","memcheck","racecheck","synccheck","initial_snapshot","first_rebuilt_snapshot"],
+  "trace_chain":["ordered FP64 reference occurrences","built topology and partition routing","retained partitions and trees","traversal and leaf input","local top-K","global merge","Host delivery"],
+  "trace_observer":"Read-only copies and diagnostic printf; compare full output bytes with the retained uninstrumented native/reuse failure; not performance evidence",
+  "invariants":["formal duplicate-occurrence input and queries unchanged","no relaxed membership or numeric gate","no parameter search or replacement algorithm","native, reuse, safety and semantic repairs have distinct identities"],
+  "stop":"No automatic failed/slow process replacement. Record every attempt before launch. Stop the affected qualification branch on failure.",
+  "supplemental_timing":"Conditional only after task-specific bounded, sanitizer and two-target-snapshot qualification; separately register at most 24 fresh GPU_TREE/P processes",
+  "sustained":"Separate conditional registration; no automatic 10K launch"
+}

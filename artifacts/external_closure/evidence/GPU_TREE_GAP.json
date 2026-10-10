@@ -1,0 +1,259 @@
+{
+  "status": "CORRECTNESS_CHECKPOINT_NOT_TIMING",
+  "trace": {
+    "status": "MEASURED_FIRST_LOSS_NOT_PERFORMANCE",
+    "scope": "Frozen N4096/D17 duplicate-occurrence case, PNUM8/K8, native one call and ownership-only32 calls",
+    "data_sha256": "bd391cbf3486b306ac7aa6977903391feaa8708d9725bc792d7124134e4a9acd",
+    "diagnostics": [
+      {
+        "label": "native_trace",
+        "full_output_byte_parity": true,
+        "reference_top8": [
+          0,
+          1,
+          2263,
+          3385,
+          2548,
+          2101,
+          374,
+          394
+        ],
+        "delivered_top8": [
+          0,
+          1,
+          2263,
+          3385,
+          2548,
+          2101,
+          1809,
+          1797
+        ],
+        "true_eighth_distance": 0.965016685288017,
+        "retained_roots": 11,
+        "published_bound": 0.952549934387207,
+        "first_losses": [
+          {
+            "occurrence": 374,
+            "partition": 0,
+            "root": 0,
+            "node": 171,
+            "node_lower_bound": 0.961247087,
+            "premature_bound": 0.952549934,
+            "heap_size": 3,
+            "stage": "initial bound traversal before leaf verification"
+          },
+          {
+            "occurrence": 394,
+            "partition": 0,
+            "root": 0,
+            "node": 171,
+            "node_lower_bound": 0.961247087,
+            "premature_bound": 0.952549934,
+            "heap_size": 3,
+            "stage": "initial bound traversal before leaf verification"
+          }
+        ],
+        "trace_sha256": "a4b3eb891a4fb3be3609285ed1f208d902f12fa70df7d5d4f82e88e200d054df",
+        "receipt_sha256": "5f544b9e3fa511db27206014b9fe1485f6f318f74e7a35579c77ad4f3bb59e6e"
+      },
+      {
+        "label": "reuse_trace",
+        "full_output_byte_parity": true,
+        "reference_top8": [
+          0,
+          1,
+          2263,
+          3385,
+          2548,
+          2101,
+          374,
+          394
+        ],
+        "delivered_top8": [
+          0,
+          1,
+          2263,
+          3385,
+          2548,
+          2101,
+          1809,
+          1797
+        ],
+        "true_eighth_distance": 0.965016685288017,
+        "retained_roots": 11,
+        "published_bound": 0.952549934387207,
+        "first_losses": [
+          {
+            "occurrence": 374,
+            "partition": 0,
+            "root": 0,
+            "node": 171,
+            "node_lower_bound": 0.961247087,
+            "premature_bound": 0.952549934,
+            "heap_size": 3,
+            "stage": "initial bound traversal before leaf verification"
+          },
+          {
+            "occurrence": 394,
+            "partition": 0,
+            "root": 0,
+            "node": 171,
+            "node_lower_bound": 0.961247087,
+            "premature_bound": 0.952549934,
+            "heap_size": 3,
+            "stage": "initial bound traversal before leaf verification"
+          }
+        ],
+        "trace_sha256": "b18d3ff781fa468a6ed8efeb80775c167dbddb836ba059b485d478d641b5f8b9",
+        "receipt_sha256": "0e5d71f065db6816982e2aaead55847b53011d9b31c39653d4b69256ad3e091b"
+      }
+    ],
+    "registration_sha256": "b08de6401ffed010ef5e14080505546b694a846153898468906c70eaaeb3a3e2",
+    "execution_sha256": "c13d7e9596e630cdb0c0b7133f3632ed0452f5244c7de7c035f10582d0648d17"
+  },
+  "repair": [
+    {
+      "label": "bounded_regression",
+      "passed": true,
+      "queries": 80,
+      "knn_queries": 48,
+      "range_queries": 32,
+      "items": 33196,
+      "first_knn_ids": [
+        0,
+        1,
+        2263,
+        3385,
+        2548,
+        2101,
+        374,
+        394
+      ],
+      "output_hashes": {
+        "bounded_regression.ids.i32": "d73cd7c6dc60cca0829a114a9ea61a77aeaf7cb67796301a56a35b2c3ee97bf1",
+        "bounded_regression.dist.f32": "1f2463adc612180995bd605e743aec491c0f075c21a85308b7df5bd99d19a6a6",
+        "bounded_regression.queries.csv": "a6c6ecdae879ba39bf8c5b86056fb4f29dc8b69fb6aad226986959799b5ad60f",
+        "bounded_regression.native.json": "37eb4bd71f0228d14f6f63e48ba70e97d849d2090220893f8106268431fceb99",
+        "bounded_regression.quality.json": "d68997cc0fac205f6a69996cb01917b861b8e036b0b7b4761aeae60d15fc6ed0"
+      },
+      "guards": {
+        "command.json": "aec93689132c1413a7c6c53e9e9d6984b823e60d85689adb80b4cdca7af9bd9d",
+        "before.json": "2173dd2575ba46b0366861987a3126821764237165796f2ee0a5fd1c6503c7c5",
+        "checks.json": "07d3422e238a179ee6ab55555e59e3e82c4c46037564cf398c0c230e3168ba07",
+        "after.json": "f0a9eb58e4b32ecdafa916c5cdf291b8714a9d107a301bd6d5d62e4f1ba03346",
+        "stdout.log": "5be207c2459778b2e7c2831ff8d9218969d5553f7def44e14d34384e4a9c7f4a",
+        "receipt.json": "f7d1f75205810415bd8a97027917fa4586e3f50a62aee7660b95d57a1c62d6ac",
+        "gpu.csv": "155106ea82460702b7f5e8ac85d7792a9d2a2a1c421314fe4e88cee850c262a1",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "memcheck",
+      "passed": false,
+      "exit_code": 97,
+      "first_error": "Invalid global write, initPQ, priority_queue.cuh:49; one-based capacity500 with500-element array",
+      "receipt_sha256": "ebf56001ba361ef1da8f6846fa2b2fa99aa8fec01aff6a1b4120baafed56dd66",
+      "stdout_sha256": "1ce6c58a66096edf3e1a011b881c047eab292f9860c97342fe9353f10fd4e23a"
+    }
+  ],
+  "repair_registration_sha256": "9578678a3d5d7c519a15d1367b50a7694d2631d98ca6778903756d8e3d19c180",
+  "repair_binary_sha256": "afed2f38ce79384b73b6324789128c8d0f3f3ced9c49fa95ffe2326d3ffc87da",
+  "range_targets": [
+    {
+      "label": "initial",
+      "guard_exit": 0,
+      "receipt_sha256": "d1774f7ff30b1fcec17adcb26a693efd200f6385cc7eae60ace2167255178e9d",
+      "quality_passed": true,
+      "queries": 32,
+      "items": 6590,
+      "outputs": {
+        "initial.native.json": "b2a4739b9c8fcdc958ca49fd00800d4c4ee13d1e5f0adbb186759cf25898b8c7",
+        "initial.ids.i32": "baa2fe00a8a51b585203827e516348f83908d2edb056f019bc9534bd6f7ddec8",
+        "initial.dist.f32": "450606861ad7326d72be0db5283bcb6d48a041543f43750e0cb223529ec23604",
+        "initial.queries.csv": "2046cda2ebe158aa5e8de6bdae2584e956bbdf528a61668c4ddd0636baab104c"
+      },
+      "guards": {
+        "command.json": "7bc8b85fc43513c8983eb1074f332d91828a1fea54eeb872889c64731c529da5",
+        "before.json": "1b95e027ab0079d035b76fa4327c8d6e243396c028769fcd5d2e6f0c3fb0de46",
+        "checks.json": "58a4086d8ef37a8869c441a01bd09d9d19947f18161883c49cc28f90742ebb84",
+        "after.json": "169a450a553251df23338e5848c03d97d39c6bd6a110bacdf5ad53f9fb37067f",
+        "stdout.log": "cd4ba6f55fbb145ae20f243c623785aae0331b23954c7bfb1059547827d842d3",
+        "receipt.json": "d1774f7ff30b1fcec17adcb26a693efd200f6385cc7eae60ace2167255178e9d",
+        "gpu.csv": "bb6b4059b113094b37920b7c5c7d39988ff9a4796e6ef393582a31efa4f1eea1",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "quality_summary": {
+        "complete_queries_passed": 32,
+        "all_memberships_passed": true,
+        "max_delivered_squared_error_scale1": 2.0446905981130747e-06
+      }
+    },
+    {
+      "label": "first_rebuilt",
+      "guard_exit": 0,
+      "receipt_sha256": "cd1831b7df533df74d12f93952e9cea0ee1c3323d05ca33b80a23a80574537ae",
+      "quality_passed": true,
+      "queries": 32,
+      "items": 12429,
+      "outputs": {
+        "first_rebuilt.dist.f32": "29ec82b3f4e3137fc5027d68aada40918f119811f38eb56da936de60d7be75b2",
+        "first_rebuilt.ids.i32": "8fb46f477a3038991ba084628feb4a66bfdd58520df14b520124a6e7e36d1ad6",
+        "first_rebuilt.native.json": "423d208acc146dfd9773e9ee106210a14c85daf1ba72acecc7336554c4706cdd",
+        "first_rebuilt.queries.csv": "7e740de2189ba809f60867b90d6b8965255a0c4d1a5de5d8fd4a613af5837b99"
+      },
+      "guards": {
+        "command.json": "5cae496d9ff2bf68c5a5f1f9af5ab0c40e92e0ef88526c6e8051668e43b03c5b",
+        "before.json": "169a450a553251df23338e5848c03d97d39c6bd6a110bacdf5ad53f9fb37067f",
+        "checks.json": "e194830ec02f085b5bc7f28c6e03acbd0cf1a7cf12e6634b11b288cefcb21284",
+        "after.json": "180dc36e23f746a88fcae414d567a3203a30385087adb4de6d394c1b2c62800f",
+        "stdout.log": "1db636118ff5069eb16c873a7d80fcfeb50e8f6fd5a799780b1c25bf92ecc231",
+        "receipt.json": "cd1831b7df533df74d12f93952e9cea0ee1c3323d05ca33b80a23a80574537ae",
+        "gpu.csv": "59d123227bff7228b5676c1f7e3c3bc329f44deac7218286c9abf8b86be9b3f6",
+        "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "quality_summary": {
+        "complete_queries_passed": 32,
+        "all_memberships_passed": true,
+        "max_delivered_squared_error_scale1": 1.0954247659511474e-06
+      }
+    }
+  ],
+  "range_complete": true,
+  "new_GPU_processes": 6,
+  "pending_targets": [],
+  "budget": 8,
+  "skipped_repair_slots": [
+    "racecheck",
+    "synccheck"
+  ],
+  "blocked_knn": "K-bound repair passes bounded outputs but fails memcheck; no replacement or performance admission",
+  "limits": [
+    "Range and kNN identities remain distinct",
+    "No new end-to-end timing",
+    "No universal leak-clean or novelty claim",
+    "Formal Host-input timing and any supplemental matrix require separate registration"
+  ],
+  "verification_source_sha256": {
+    "test_repair.py": "8bdbb1cf6df6b38aa8207c5919c8b3dc31ec718c2315395fdc4f905848052f98",
+    "prepare_trace.py": "504db48407e806c6c84a65dc5b8d043fa740273727a262ffe50c9e9bbfb5f6b4",
+    "test_admission.py": "0bafb886aff437dd09e1d3439ebca544f5f7a4a54fc0ac4431efa9ff71e92e49",
+    "analyze_trace.py": "7dcefe1bbe894463020d37edaf8710f2262c1ce5aabf4b0613145ee2a124b3ce",
+    "range_targets.py": "f012a7355a3689d0eae02675d6d4fa0bf09dcb834de152628e5a996ccffd16cf",
+    "verify.py": "8d41bbafc1242377dc9cd00928dd7f3a2be91decddc251fc7d00cfe749fc37e1",
+    "prepare_repair.py": "ef10bfa6515f5709a22e2b8a4543042c2afdc96ee0d25c2022e112263e74c1c2"
+  },
+  "private_proof_sha256": "85158629c8327b623b1a40033e7f60f92e8e250e99403bc71fcabc69b57c38ad",
+  "private_evidence_archives_sha256": {
+    "tree_prior.tar.gz": "8197db60824e48adce2629a09b8186239914153ea1e40e0026f0790dc4d37ed7",
+    "trace_raw.tar.gz": "3eccad2bcb5b917c7d0295eb6b4c571d357b17c9c3dc561524085fa4ae80585c",
+    "trace_source_linux.tar.gz": "71c8b25a90f65a178f80a694f90a6db00a1f343baadcec4d548ac69cff81a7f4",
+    "repair_raw_received.tar.gz": "1fb3729f72e39c32f854f2d4d16ef37ea0b7814e8bca1f3c8919cd5070c3a996",
+    "range_raw_final.tar.gz": "8ca58dcc5489da1d7119a537e1e26c8a79ea89ff2f02e31bc881dc960db2996d"
+  },
+  "task_identities": {
+    "range": "GPU_TREE_SAFE_ADAPT_RANGE_ONLY",
+    "knn_repair": "GPU_TREE_SAFE_KBOUND_ADAPT_REJECTED_SAFETY",
+    "native_trace": "unchanged search plus observational tracing",
+    "reuse_trace": "ownership-only reuse plus observational tracing"
+  }
+}

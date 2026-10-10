@@ -1,5 +1,13 @@
 # External closure (in progress)
 
+**2026-10-10 checkpoint:** [second static interruption](STATIC_SECOND_STOP.md)
+retains48/72 valid rows, not a complete ranking. The new independent
+[GPU-Tree first-loss campaign](tree_gap/RESULTS.md) diagnoses the retained
+kNN failure:80 bounded repaired results pass, but memcheck fails. Independently,
+range passes64 target queries across two N1M/D960 snapshots. No P change, formal
+tree timing or conditional10K workflow launch is implied.
+
+
 This folder implements staged baseline admission from the pinned 5598585 source.
 Read `CONTRACT.md` and the existing `../rebuild_tree_baselines/BASELINES.md`.
 No new primary result is implied by compilation or qualification.
