@@ -1,0 +1,51 @@
+{
+  "experiment": "gts_20261011_leaf_execution_geometry",
+  "scope": "diagnostic only; no optimization or formal timing",
+  "baseline": "Pinned original GTS kNN plus the existing complete-ID adapter; no pivot cache",
+  "upstream": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "parent_evidence_commit": "8790960fd278a3a932c6a0a71506fd9709994c52",
+  "dataset": {
+    "name": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "metric": "L2",
+    "dtype": "FP32 resident input",
+    "sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7"
+  },
+  "index_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+  "query_sha256": "5857859ff9e0ba524e6a03733b3d94485c7f52b19919ab7e1e86296910f13941",
+  "queries": 32,
+  "K": 8,
+  "B": 1,
+  "self_match": "included; self distance shortcut is not membership exclusion",
+  "distance": "original FP32 input subtraction, double accumulation and Euclidean-distance field; no reassociation",
+  "processes": "one fresh G0 control and one Gcount process on fixed32; no public time ratio",
+  "gpu": "user-authorized physical GPU1; freeze UUID privately after idle/NUMA0/lock checks; no foreign process signals",
+  "invariants": [
+    "same data/index/query IDs",
+    "same native bounds and traversal",
+    "same output fields and complete G0/Gcount bitwise outputs"
+  ],
+  "qualification": "CPU instrumentation reversibility and parser tests; D96/960 N4097 synthetic K1/8/32, full oracle, ties/self; memcheck/racecheck/synccheck count kernel on fixed synthetic fixture; final fixed32 all-result oracle",
+  "per_node_record": "40 bytes: lower,node_bound,leaf_bound FP32; tested(1 bounded,2 labelled),passed,visits,valid_mask,compute_mask,accepted_mask,leaf_task uint32",
+  "participation": "GPU-recorded per-object participation masks; count lanes in the original distance loop; not hardware scheduler occupancy, eligible warps, or dynamic SASS counts",
+  "accepted": "passes the existing leaf disk filter, not final top-k membership",
+  "whole_leaf_prunable": "strict original leaf lower > current disk at leaf entry, only when original bound was evaluated; equality retained",
+  "no_contribution": "no returned top-k ID in the leaf; retrospective only, not a safe pruning certificate",
+  "final_bound_screen": "lower > final kth is retrospective and unavailable at leaf entry; never counted as online eliminable work",
+  "packing_simulator": "same visited leaf order, whole leaves only, no distance or layout change; two-leaf, three-leaf and sequential capacity32 packing; structural warp counts only",
+  "gate": "diagnose whole-leaf >20% existing-information opportunity, or no-contribution >=30% PLUS a safe predicate, or widespread <=8/32 distance lanes, or whole-leaf packing materially increases distance-lane fill; no new GPU mechanism in this delivery",
+  "stop": "stop at first runtime/quality/hash/admission failure; preserve faults, no favorable replacements",
+  "novelty": "Diagnostic inventory, not a novelty claim. Existing bound recheck is rejected if already enforced. Generic packing is not presumed novel; independent prior-art/mechanism gate precedes later implementation.",
+  "not_claimed": [
+    "performance benefit",
+    "SM occupancy",
+    "warp loop reduction from prior cache timing",
+    "current GTSPP measurement",
+    "N<K",
+    "B32",
+    "updates",
+    "concurrency"
+  ],
+  "plan_sha256": "e611ac96057e8c95ebef3425e9b75e53dbc6592734e81e60d2e20375ab4a0907"
+}

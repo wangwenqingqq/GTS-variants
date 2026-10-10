@@ -1,0 +1,82 @@
+{
+  "upstream": {
+    "upstream_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+    "original": {
+      "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+      "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+      "include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+      "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+      "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+    },
+    "adapted": {
+      "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+      "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "include/search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+      "include/tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+      "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+      "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+    }
+  },
+  "generator_sha256": "9794ec1c458289cf6985f4d95fb13b6155265bbcdf89f8f2e9173a92727e1e78",
+  "adapter_sha256": "1a1a5b46ed98371575c5fe9fcf70866611db68e90d0fb5c75441b313c4e96ea1",
+  "base_driver_sha256": "1c7c16e2578835bb4c696906e548bff2c8d35c73ee21d215774b258cadd86bab",
+  "files": {
+    "bench.cu": "7c66af419fb6bcbe745a1b9622b36f85c8dcef898a01b01c1d6ae8a3fef1cc2b",
+    "shared/SOURCE_PINS.json": "26f76ee692d52c0369888724ddc0c2f636196c0cbc4ed9adc65c72217eb49a09",
+    "shared/adaptation.patch": "db20592d6dcf12099c0bc0879a4b49b30b84a0251e089d52035977a9ecdef924",
+    "count/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "count/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "count/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "count/include/geometry.cuh": "b70b3121b50edd3e6f59042cb5ba8422a43aaf5ef5378ded7d12593e283fa091",
+    "count/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "count/include/search_v2.cuh": "6111c99d9ec0908f727aa452e9acdf3049be78b516627241021379e8cf68eea1",
+    "count/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "count/include/tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+    "count/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b",
+    "shared/adapted/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "shared/adapted/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "shared/adapted/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "shared/adapted/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "shared/adapted/include/search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+    "shared/adapted/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "shared/adapted/include/tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+    "shared/adapted/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b",
+    "shared/original/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "shared/original/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "shared/original/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "shared/original/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "shared/original/include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "shared/original/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "shared/original/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "shared/original/src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+  },
+  "binaries": {
+    "G0.bench": "4d111cc9002aa5c716e160a102e12d65ffd6cbfba800cf23ed442164c51e6662",
+    "Gcount.bench": "a6605a971dfeb2b22725bacac25d656d9b4b127dedddaff1ac5eca3d6d0d38e0"
+  },
+  "collection": {
+    "run.py": "42c7b57172fb39c49725dc6bc50a958c80e27428ba76a67f7ed2a5a08ae643ed",
+    "analyze.py": "6a654775952e9158c5ccd0f7c23941e2977a9450dc8b4b1e009d94878c998b35",
+    "CONTRACT.json": "4c7b3526d41ac64b6b91d64d9ccc91ecdb1aaea23ec155e3f6240f896cb4110f",
+    "diag32.qid": "5857859ff9e0ba524e6a03733b3d94485c7f52b19919ab7e1e86296910f13941",
+    "locked.py": "b1a592febfa261e8135b9cd07221c25b24658c5e6739dd3560dff0ff31da5691",
+    "helpers/run_locked.py": "dfe30c6d7ed4d4000b6789dc9ca26564db47d002eddc6649b390726cf826c61f",
+    "helpers/native_ivf.py": "23abd847d013c143cee82a5abc3ec87f1fa3305934ad6a5c8c306a4352daf27b",
+    "helpers/verify_outputs.py": "3c18bbfdff8b037ec1687a15fb5ff916a056f5a28f48aacfcc59cebefcfe08c4"
+  },
+  "gpu_identity_sha256": "94515d9c9c2c807ec0fdbc7f33693456ed40d13b8d35ca2727cc4907faaddd57",
+  "numa": 0,
+  "software": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "driver": "590.48.01",
+    "nvcc": "13.1.115",
+    "target": "sm_120",
+    "build_flags": "-O3 -lineinfo -std=c++17 -arch=sm_120 --extended-lambda",
+    "runtime_python": "3.12.3"
+  }
+}

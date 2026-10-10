@@ -1,0 +1,2077 @@
+{
+  "scope": "GPU work-participation sidecars plus CPU retrospective classification; not timing or hardware occupancy",
+  "index_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+  "geometry_sha256": "2c5f0ab508d772bfa32561ad12e5efde787e41392b087786ef389bd7ce3b7e04",
+  "result_sha256": "e7c85e83ff7be7d0534328af02f63877b6abc6e603b10c6ecfb266b02ff7915e",
+  "oracle_sha256": "c1880467e036af81041af1d5ec9ac32b31641cb1c5dc2277f7f441be0dc4d374",
+  "N": 1000000,
+  "D": 960,
+  "Q": 32,
+  "K": 8,
+  "totals": {
+    "nodes_labelled_without_bound": 3520,
+    "node_bound_tests": 3365870,
+    "node_bound_passes": 3262461,
+    "leaf_bound_tests": 3019410,
+    "leaf_bound_rejections": 90336,
+    "visited_leaves": 2929074,
+    "valid_objects": 29290740,
+    "distance_objects": 29290708,
+    "accepted_objects": 27388,
+    "leaf_distance_dimensions": 28119079680,
+    "launched_ctas": 2929074,
+    "launched_warps": 46865184,
+    "distance_active_warps": 2929074,
+    "zero_distance_warps": 43936110,
+    "distance_warps_at_most_8_lanes": 0,
+    "no_disk_survivor_leaves": 2906484,
+    "no_returned_topk_leaves": 2928828,
+    "no_legal_topk_member_leaves": 2928828,
+    "online_existing_bound_prunable": 0,
+    "node_to_leaf_bound_changes": 0,
+    "missing_leaf_bound": 0,
+    "retrospective_lower_above_final_kth": 52517
+  },
+  "all_distance_dimensions": 28442203200,
+  "pivot_distances": 336587,
+  "histograms": {
+    "objects_per_leaf": {
+      "10": 2929074
+    },
+    "distance_lanes_per_object_warp": {
+      "10": 2929042,
+      "9": 32
+    },
+    "accepted_objects_per_leaf": {
+      "0": 2906484,
+      "1": 19274,
+      "2": 2494,
+      "3": 494,
+      "4": 167,
+      "5": 75,
+      "7": 23,
+      "6": 39,
+      "8": 13,
+      "9": 8,
+      "10": 3
+    }
+  },
+  "packing_structural_warps": {
+    "2": 1464546,
+    "3": 976369,
+    "32": 976369
+  },
+  "rows": [
+    {
+      "qid": 340678,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 107980,
+        "node_bound_passes": 106210,
+        "leaf_bound_tests": 97160,
+        "leaf_bound_rejections": 1648,
+        "visited_leaves": 95512,
+        "valid_objects": 955120,
+        "distance_objects": 955119,
+        "accepted_objects": 534,
+        "leaf_distance_dimensions": 916914240,
+        "launched_ctas": 95512,
+        "launched_warps": 1528192,
+        "distance_active_warps": 95512,
+        "zero_distance_warps": 1432680,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95013,
+        "no_returned_topk_leaves": 95505,
+        "no_legal_topk_member_leaves": 95505,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1215
+      },
+      "pivot_distances": 10798,
+      "pivot_dimensions": 10366080,
+      "all_distance_dimensions": 927280320,
+      "objects_per_leaf": {
+        "10": 95512
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 95511,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 95512
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95013,
+        "1": 466,
+        "2": 31,
+        "3": 2
+      },
+      "entry_bound_minmax": [
+        1.46263587474823,
+        1.46263587474823
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.4624817371368408
+      ],
+      "final_kth_euclidean": 1.3294684886932373,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 47756,
+        "3": 31838,
+        "32": 31838
+      }
+    },
+    {
+      "qid": 518106,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108630,
+        "node_bound_passes": 107902,
+        "leaf_bound_tests": 97750,
+        "leaf_bound_rejections": 611,
+        "visited_leaves": 97139,
+        "valid_objects": 971390,
+        "distance_objects": 971389,
+        "accepted_objects": 1071,
+        "leaf_distance_dimensions": 932533440,
+        "launched_ctas": 97139,
+        "launched_warps": 1554224,
+        "distance_active_warps": 97139,
+        "zero_distance_warps": 1457085,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96192,
+        "no_returned_topk_leaves": 97131,
+        "no_legal_topk_member_leaves": 97131,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 580
+      },
+      "pivot_distances": 10863,
+      "pivot_dimensions": 10428480,
+      "all_distance_dimensions": 942961920,
+      "objects_per_leaf": {
+        "10": 97139
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97138,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97139
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96192,
+        "1": 841,
+        "4": 2,
+        "2": 90,
+        "3": 14
+      },
+      "entry_bound_minmax": [
+        1.1799622774124146,
+        1.1799622774124146
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.1789300441741943
+      ],
+      "final_kth_euclidean": 1.057073950767517,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48570,
+        "3": 32380,
+        "32": 32380
+      }
+    },
+    {
+      "qid": 973242,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108470,
+        "node_bound_passes": 107178,
+        "leaf_bound_tests": 97650,
+        "leaf_bound_rejections": 1219,
+        "visited_leaves": 96431,
+        "valid_objects": 964310,
+        "distance_objects": 964309,
+        "accepted_objects": 826,
+        "leaf_distance_dimensions": 925736640,
+        "launched_ctas": 96431,
+        "launched_warps": 1542896,
+        "distance_active_warps": 96431,
+        "zero_distance_warps": 1446465,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95679,
+        "no_returned_topk_leaves": 96424,
+        "no_legal_topk_member_leaves": 96424,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 924
+      },
+      "pivot_distances": 10847,
+      "pivot_dimensions": 10413120,
+      "all_distance_dimensions": 936149760,
+      "objects_per_leaf": {
+        "10": 96431
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96430,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96431
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95679,
+        "2": 65,
+        "1": 683,
+        "3": 3,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.345852017402649,
+        1.345852017402649
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.345818281173706
+      ],
+      "final_kth_euclidean": 1.216833472251892,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 48216,
+        "3": 32144,
+        "32": 32144
+      }
+    },
+    {
+      "qid": 604005,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108190,
+        "node_bound_passes": 106890,
+        "leaf_bound_tests": 97390,
+        "leaf_bound_rejections": 1219,
+        "visited_leaves": 96171,
+        "valid_objects": 961710,
+        "distance_objects": 961709,
+        "accepted_objects": 565,
+        "leaf_distance_dimensions": 923240640,
+        "launched_ctas": 96171,
+        "launched_warps": 1538736,
+        "distance_active_warps": 96171,
+        "zero_distance_warps": 1442565,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95653,
+        "no_returned_topk_leaves": 96164,
+        "no_legal_topk_member_leaves": 96164,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 671
+      },
+      "pivot_distances": 10819,
+      "pivot_dimensions": 10386240,
+      "all_distance_dimensions": 933626880,
+      "objects_per_leaf": {
+        "10": 96171
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96170,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96171
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95653,
+        "1": 476,
+        "2": 39,
+        "3": 2,
+        "5": 1
+      },
+      "entry_bound_minmax": [
+        1.22572922706604,
+        1.22572922706604
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.2255557775497437
+      ],
+      "final_kth_euclidean": 1.1338489055633545,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 48086,
+        "3": 32057,
+        "32": 32057
+      }
+    },
+    {
+      "qid": 243831,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108930,
+        "node_bound_passes": 108236,
+        "leaf_bound_tests": 98020,
+        "leaf_bound_rejections": 577,
+        "visited_leaves": 97443,
+        "valid_objects": 974430,
+        "distance_objects": 974429,
+        "accepted_objects": 1712,
+        "leaf_distance_dimensions": 935451840,
+        "launched_ctas": 97443,
+        "launched_warps": 1559088,
+        "distance_active_warps": 97443,
+        "zero_distance_warps": 1461645,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96050,
+        "no_returned_topk_leaves": 97435,
+        "no_legal_topk_member_leaves": 97435,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 847
+      },
+      "pivot_distances": 10893,
+      "pivot_dimensions": 10457280,
+      "all_distance_dimensions": 945909120,
+      "objects_per_leaf": {
+        "10": 97443
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97442,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97443
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96050,
+        "1": 1145,
+        "2": 195,
+        "3": 41,
+        "5": 1,
+        "4": 9,
+        "7": 1,
+        "6": 1
+      },
+      "entry_bound_minmax": [
+        1.141906976699829,
+        1.141906976699829
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.1418780088424683
+      ],
+      "final_kth_euclidean": 0.9740145802497864,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48722,
+        "3": 32481,
+        "32": 32481
+      }
+    },
+    {
+      "qid": 815929,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108760,
+        "node_bound_passes": 107849,
+        "leaf_bound_tests": 97900,
+        "leaf_bound_rejections": 827,
+        "visited_leaves": 97073,
+        "valid_objects": 970730,
+        "distance_objects": 970729,
+        "accepted_objects": 313,
+        "leaf_distance_dimensions": 931899840,
+        "launched_ctas": 97073,
+        "launched_warps": 1553168,
+        "distance_active_warps": 97073,
+        "zero_distance_warps": 1456095,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96772,
+        "no_returned_topk_leaves": 97065,
+        "no_legal_topk_member_leaves": 97065,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 602
+      },
+      "pivot_distances": 10876,
+      "pivot_dimensions": 10440960,
+      "all_distance_dimensions": 942340800,
+      "objects_per_leaf": {
+        "10": 97073
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97072,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97073
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96772,
+        "1": 290,
+        "2": 10,
+        "3": 1
+      },
+      "entry_bound_minmax": [
+        1.3226712942123413,
+        1.3226712942123413
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.3224846124649048
+      ],
+      "final_kth_euclidean": 1.2208880186080933,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48537,
+        "3": 32358,
+        "32": 32358
+      }
+    },
+    {
+      "qid": 901755,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108080,
+        "node_bound_passes": 106681,
+        "leaf_bound_tests": 97270,
+        "leaf_bound_rejections": 1297,
+        "visited_leaves": 95973,
+        "valid_objects": 959730,
+        "distance_objects": 959729,
+        "accepted_objects": 720,
+        "leaf_distance_dimensions": 921339840,
+        "launched_ctas": 95973,
+        "launched_warps": 1535568,
+        "distance_active_warps": 95973,
+        "zero_distance_warps": 1439595,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95300,
+        "no_returned_topk_leaves": 95965,
+        "no_legal_topk_member_leaves": 95965,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1089
+      },
+      "pivot_distances": 10808,
+      "pivot_dimensions": 10375680,
+      "all_distance_dimensions": 931715520,
+      "objects_per_leaf": {
+        "10": 95973
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 95972,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 95973
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95300,
+        "1": 629,
+        "2": 41,
+        "3": 3
+      },
+      "entry_bound_minmax": [
+        1.7794677019119263,
+        1.7794677019119263
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.779433012008667
+      ],
+      "final_kth_euclidean": 1.6473731994628906,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 47987,
+        "3": 31991,
+        "32": 31991
+      }
+    },
+    {
+      "qid": 781030,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 109150,
+        "node_bound_passes": 108599,
+        "leaf_bound_tests": 98260,
+        "leaf_bound_rejections": 476,
+        "visited_leaves": 97784,
+        "valid_objects": 977840,
+        "distance_objects": 977839,
+        "accepted_objects": 1339,
+        "leaf_distance_dimensions": 938725440,
+        "launched_ctas": 97784,
+        "launched_warps": 1564544,
+        "distance_active_warps": 97784,
+        "zero_distance_warps": 1466760,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96588,
+        "no_returned_topk_leaves": 97776,
+        "no_legal_topk_member_leaves": 97776,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 506
+      },
+      "pivot_distances": 10915,
+      "pivot_dimensions": 10478400,
+      "all_distance_dimensions": 949203840,
+      "objects_per_leaf": {
+        "10": 97784
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97783,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97784
+      },
+      "accepted_objects_per_leaf": {
+        "1": 1077,
+        "2": 98,
+        "3": 18,
+        "0": 96588,
+        "4": 3
+      },
+      "entry_bound_minmax": [
+        1.4082523584365845,
+        1.4082523584365845
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.4081461429595947
+      ],
+      "final_kth_euclidean": 1.287251353263855,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48892,
+        "3": 32595,
+        "32": 32595
+      }
+    },
+    {
+      "qid": 937491,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108270,
+        "node_bound_passes": 107506,
+        "leaf_bound_tests": 97420,
+        "leaf_bound_rejections": 641,
+        "visited_leaves": 96779,
+        "valid_objects": 967790,
+        "distance_objects": 967789,
+        "accepted_objects": 761,
+        "leaf_distance_dimensions": 929077440,
+        "launched_ctas": 96779,
+        "launched_warps": 1548464,
+        "distance_active_warps": 96779,
+        "zero_distance_warps": 1451685,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96124,
+        "no_returned_topk_leaves": 96771,
+        "no_legal_topk_member_leaves": 96771,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 518
+      },
+      "pivot_distances": 10827,
+      "pivot_dimensions": 10393920,
+      "all_distance_dimensions": 939471360,
+      "objects_per_leaf": {
+        "10": 96779
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96778,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96779
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96124,
+        "1": 565,
+        "3": 11,
+        "2": 77,
+        "5": 1,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.155747890472412,
+        1.155747890472412
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.155055284500122
+      ],
+      "final_kth_euclidean": 1.052823781967163,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48390,
+        "3": 32260,
+        "32": 32260
+      }
+    },
+    {
+      "qid": 110153,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 106820,
+        "node_bound_passes": 104338,
+        "leaf_bound_tests": 96040,
+        "leaf_bound_rejections": 2284,
+        "visited_leaves": 93756,
+        "valid_objects": 937560,
+        "distance_objects": 937559,
+        "accepted_objects": 699,
+        "leaf_distance_dimensions": 900056640,
+        "launched_ctas": 93756,
+        "launched_warps": 1500096,
+        "distance_active_warps": 93756,
+        "zero_distance_warps": 1406340,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 93136,
+        "no_returned_topk_leaves": 93748,
+        "no_legal_topk_member_leaves": 93748,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1734
+      },
+      "pivot_distances": 10682,
+      "pivot_dimensions": 10254720,
+      "all_distance_dimensions": 910311360,
+      "objects_per_leaf": {
+        "10": 93756
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 93755,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 93756
+      },
+      "accepted_objects_per_leaf": {
+        "0": 93136,
+        "1": 551,
+        "2": 59,
+        "3": 10
+      },
+      "entry_bound_minmax": [
+        1.7353955507278442,
+        1.7353955507278442
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.7353882789611816
+      ],
+      "final_kth_euclidean": 1.5923322439193726,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 46878,
+        "3": 31252,
+        "32": 31252
+      }
+    },
+    {
+      "qid": 829282,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108970,
+        "node_bound_passes": 108286,
+        "leaf_bound_tests": 98080,
+        "leaf_bound_rejections": 591,
+        "visited_leaves": 97489,
+        "valid_objects": 974890,
+        "distance_objects": 974889,
+        "accepted_objects": 865,
+        "leaf_distance_dimensions": 935893440,
+        "launched_ctas": 97489,
+        "launched_warps": 1559824,
+        "distance_active_warps": 97489,
+        "zero_distance_warps": 1462335,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96682,
+        "no_returned_topk_leaves": 97481,
+        "no_legal_topk_member_leaves": 97481,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 657
+      },
+      "pivot_distances": 10897,
+      "pivot_dimensions": 10461120,
+      "all_distance_dimensions": 946354560,
+      "objects_per_leaf": {
+        "10": 97489
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97488,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97489
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96682,
+        "1": 754,
+        "2": 48,
+        "3": 5
+      },
+      "entry_bound_minmax": [
+        1.5429097414016724,
+        1.5429097414016724
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.542398452758789
+      ],
+      "final_kth_euclidean": 1.417796015739441,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48745,
+        "3": 32497,
+        "32": 32497
+      }
+    },
+    {
+      "qid": 732308,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108750,
+        "node_bound_passes": 108001,
+        "leaf_bound_tests": 97880,
+        "leaf_bound_rejections": 654,
+        "visited_leaves": 97226,
+        "valid_objects": 972260,
+        "distance_objects": 972259,
+        "accepted_objects": 1002,
+        "leaf_distance_dimensions": 933368640,
+        "launched_ctas": 97226,
+        "launched_warps": 1555616,
+        "distance_active_warps": 97226,
+        "zero_distance_warps": 1458390,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96329,
+        "no_returned_topk_leaves": 97218,
+        "no_legal_topk_member_leaves": 97218,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 697
+      },
+      "pivot_distances": 10875,
+      "pivot_dimensions": 10440000,
+      "all_distance_dimensions": 943808640,
+      "objects_per_leaf": {
+        "10": 97226
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97225,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97226
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96329,
+        "3": 11,
+        "1": 805,
+        "2": 80,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.2089900970458984,
+        1.2089900970458984
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.2089563608169556
+      ],
+      "final_kth_euclidean": 1.0721328258514404,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48613,
+        "3": 32409,
+        "32": 32409
+      }
+    },
+    {
+      "qid": 736950,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108710,
+        "node_bound_passes": 106319,
+        "leaf_bound_tests": 97820,
+        "leaf_bound_rejections": 2272,
+        "visited_leaves": 95548,
+        "valid_objects": 955480,
+        "distance_objects": 955479,
+        "accepted_objects": 506,
+        "leaf_distance_dimensions": 917259840,
+        "launched_ctas": 95548,
+        "launched_warps": 1528768,
+        "distance_active_warps": 95548,
+        "zero_distance_warps": 1433220,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95161,
+        "no_returned_topk_leaves": 95541,
+        "no_legal_topk_member_leaves": 95541,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 4184
+      },
+      "pivot_distances": 10871,
+      "pivot_dimensions": 10436160,
+      "all_distance_dimensions": 927696000,
+      "objects_per_leaf": {
+        "10": 95548
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 95547,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 95548
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95161,
+        "1": 309,
+        "2": 52,
+        "3": 18,
+        "5": 3,
+        "4": 3,
+        "6": 2
+      },
+      "entry_bound_minmax": [
+        0.9083588123321533,
+        0.9083588123321533
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        0.9083222150802612
+      ],
+      "final_kth_euclidean": 0.7646049857139587,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 47774,
+        "3": 31850,
+        "32": 31850
+      }
+    },
+    {
+      "qid": 392219,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108760,
+        "node_bound_passes": 108002,
+        "leaf_bound_tests": 97920,
+        "leaf_bound_rejections": 694,
+        "visited_leaves": 97226,
+        "valid_objects": 972260,
+        "distance_objects": 972259,
+        "accepted_objects": 900,
+        "leaf_distance_dimensions": 933368640,
+        "launched_ctas": 97226,
+        "launched_warps": 1555616,
+        "distance_active_warps": 97226,
+        "zero_distance_warps": 1458390,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96405,
+        "no_returned_topk_leaves": 97218,
+        "no_legal_topk_member_leaves": 97218,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 554
+      },
+      "pivot_distances": 10876,
+      "pivot_dimensions": 10440960,
+      "all_distance_dimensions": 943809600,
+      "objects_per_leaf": {
+        "10": 97226
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97225,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97226
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96405,
+        "2": 58,
+        "1": 753,
+        "3": 9,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.3466942310333252,
+        1.3466942310333252
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.3465616703033447
+      ],
+      "final_kth_euclidean": 1.248708963394165,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48613,
+        "3": 32409,
+        "32": 32409
+      }
+    },
+    {
+      "qid": 229605,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108410,
+        "node_bound_passes": 107548,
+        "leaf_bound_tests": 97600,
+        "leaf_bound_rejections": 793,
+        "visited_leaves": 96807,
+        "valid_objects": 968070,
+        "distance_objects": 968069,
+        "accepted_objects": 1230,
+        "leaf_distance_dimensions": 929346240,
+        "launched_ctas": 96807,
+        "launched_warps": 1548912,
+        "distance_active_warps": 96807,
+        "zero_distance_warps": 1452105,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95762,
+        "no_returned_topk_leaves": 96799,
+        "no_legal_topk_member_leaves": 96799,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 572
+      },
+      "pivot_distances": 10841,
+      "pivot_dimensions": 10407360,
+      "all_distance_dimensions": 939753600,
+      "objects_per_leaf": {
+        "10": 96807
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96806,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96807
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95762,
+        "4": 5,
+        "1": 897,
+        "2": 125,
+        "3": 15,
+        "7": 1,
+        "5": 1,
+        "6": 1
+      },
+      "entry_bound_minmax": [
+        1.2500736713409424,
+        1.2500736713409424
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.249657154083252
+      ],
+      "final_kth_euclidean": 1.1499550342559814,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48404,
+        "3": 32269,
+        "32": 32269
+      }
+    },
+    {
+      "qid": 164592,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108930,
+        "node_bound_passes": 107754,
+        "leaf_bound_tests": 98060,
+        "leaf_bound_rejections": 1099,
+        "visited_leaves": 96961,
+        "valid_objects": 969610,
+        "distance_objects": 969609,
+        "accepted_objects": 705,
+        "leaf_distance_dimensions": 930824640,
+        "launched_ctas": 96961,
+        "launched_warps": 1551376,
+        "distance_active_warps": 96961,
+        "zero_distance_warps": 1454415,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96284,
+        "no_returned_topk_leaves": 96954,
+        "no_legal_topk_member_leaves": 96954,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1365
+      },
+      "pivot_distances": 10893,
+      "pivot_dimensions": 10457280,
+      "all_distance_dimensions": 941281920,
+      "objects_per_leaf": {
+        "10": 96961
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96960,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96961
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96284,
+        "1": 651,
+        "2": 24,
+        "3": 2
+      },
+      "entry_bound_minmax": [
+        1.6310358047485352,
+        1.6310358047485352
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.6308376789093018
+      ],
+      "final_kth_euclidean": 1.450477123260498,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 48481,
+        "3": 32321,
+        "32": 32321
+      }
+    },
+    {
+      "qid": 675196,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108310,
+        "node_bound_passes": 107516,
+        "leaf_bound_tests": 97440,
+        "leaf_bound_rejections": 655,
+        "visited_leaves": 96785,
+        "valid_objects": 967850,
+        "distance_objects": 967849,
+        "accepted_objects": 774,
+        "leaf_distance_dimensions": 929135040,
+        "launched_ctas": 96785,
+        "launched_warps": 1548560,
+        "distance_active_warps": 96785,
+        "zero_distance_warps": 1451775,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96213,
+        "no_returned_topk_leaves": 96777,
+        "no_legal_topk_member_leaves": 96777,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 540
+      },
+      "pivot_distances": 10831,
+      "pivot_dimensions": 10397760,
+      "all_distance_dimensions": 939532800,
+      "objects_per_leaf": {
+        "10": 96785
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96784,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96785
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96213,
+        "1": 444,
+        "2": 79,
+        "3": 33,
+        "4": 10,
+        "5": 5,
+        "8": 1
+      },
+      "entry_bound_minmax": [
+        0.9005353450775146,
+        0.9005353450775146
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        0.9005230665206909
+      ],
+      "final_kth_euclidean": 0.7958201766014099,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48393,
+        "3": 32262,
+        "32": 32262
+      }
+    },
+    {
+      "qid": 923300,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108390,
+        "node_bound_passes": 106770,
+        "leaf_bound_tests": 97580,
+        "leaf_bound_rejections": 1549,
+        "visited_leaves": 96031,
+        "valid_objects": 960310,
+        "distance_objects": 960309,
+        "accepted_objects": 1070,
+        "leaf_distance_dimensions": 921896640,
+        "launched_ctas": 96031,
+        "launched_warps": 1536496,
+        "distance_active_warps": 96031,
+        "zero_distance_warps": 1440465,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95054,
+        "no_returned_topk_leaves": 96025,
+        "no_legal_topk_member_leaves": 96025,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1963
+      },
+      "pivot_distances": 10839,
+      "pivot_dimensions": 10405440,
+      "all_distance_dimensions": 932302080,
+      "objects_per_leaf": {
+        "10": 96031
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96030,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96031
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95054,
+        "1": 894,
+        "2": 75,
+        "3": 6,
+        "4": 2
+      },
+      "entry_bound_minmax": [
+        1.5123504400253296,
+        1.5123504400253296
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.512067437171936
+      ],
+      "final_kth_euclidean": 1.301984429359436,
+      "returned_topk_leaf_count": 6,
+      "packing_structural_warps": {
+        "2": 48016,
+        "3": 32011,
+        "32": 32011
+      }
+    },
+    {
+      "qid": 55921,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108490,
+        "node_bound_passes": 107897,
+        "leaf_bound_tests": 97610,
+        "leaf_bound_rejections": 462,
+        "visited_leaves": 97148,
+        "valid_objects": 971480,
+        "distance_objects": 971479,
+        "accepted_objects": 1303,
+        "leaf_distance_dimensions": 932619840,
+        "launched_ctas": 97148,
+        "launched_warps": 1554368,
+        "distance_active_warps": 97148,
+        "zero_distance_warps": 1457220,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96046,
+        "no_returned_topk_leaves": 97140,
+        "no_legal_topk_member_leaves": 97140,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 503
+      },
+      "pivot_distances": 10849,
+      "pivot_dimensions": 10415040,
+      "all_distance_dimensions": 943034880,
+      "objects_per_leaf": {
+        "10": 97148
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97147,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97148
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96046,
+        "1": 927,
+        "3": 21,
+        "2": 152,
+        "5": 1,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.1518641710281372,
+        1.1518641710281372
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.1514643430709839
+      ],
+      "final_kth_euclidean": 1.0398064851760864,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48574,
+        "3": 32383,
+        "32": 32383
+      }
+    },
+    {
+      "qid": 469125,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 56960,
+        "node_bound_passes": 29066,
+        "leaf_bound_tests": 46380,
+        "leaf_bound_rejections": 22910,
+        "visited_leaves": 23470,
+        "valid_objects": 234700,
+        "distance_objects": 234699,
+        "accepted_objects": 919,
+        "leaf_distance_dimensions": 225311040,
+        "launched_ctas": 23470,
+        "launched_warps": 375520,
+        "distance_active_warps": 23470,
+        "zero_distance_warps": 352050,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 23210,
+        "no_returned_topk_leaves": 23462,
+        "no_legal_topk_member_leaves": 23462,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 2885
+      },
+      "pivot_distances": 5696,
+      "pivot_dimensions": 5468160,
+      "all_distance_dimensions": 230779200,
+      "objects_per_leaf": {
+        "10": 23470
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 23469,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 23470
+      },
+      "accepted_objects_per_leaf": {
+        "0": 23210,
+        "1": 71,
+        "5": 29,
+        "6": 20,
+        "7": 17,
+        "4": 35,
+        "3": 26,
+        "8": 7,
+        "2": 44,
+        "9": 8,
+        "10": 3
+      },
+      "entry_bound_minmax": [
+        0.33275488018989563,
+        0.33275488018989563
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        0.33275318145751953
+      ],
+      "final_kth_euclidean": 0.2755945920944214,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 11735,
+        "3": 7824,
+        "32": 7824
+      }
+    },
+    {
+      "qid": 836101,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 109550,
+        "node_bound_passes": 108673,
+        "leaf_bound_tests": 98590,
+        "leaf_bound_rejections": 772,
+        "visited_leaves": 97818,
+        "valid_objects": 978180,
+        "distance_objects": 978179,
+        "accepted_objects": 1348,
+        "leaf_distance_dimensions": 939051840,
+        "launched_ctas": 97818,
+        "launched_warps": 1565088,
+        "distance_active_warps": 97818,
+        "zero_distance_warps": 1467270,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96757,
+        "no_returned_topk_leaves": 97810,
+        "no_legal_topk_member_leaves": 97810,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 2182
+      },
+      "pivot_distances": 10955,
+      "pivot_dimensions": 10516800,
+      "all_distance_dimensions": 949568640,
+      "objects_per_leaf": {
+        "10": 97818
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97817,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97818
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96757,
+        "1": 859,
+        "2": 150,
+        "4": 12,
+        "3": 32,
+        "5": 5,
+        "7": 2,
+        "6": 1
+      },
+      "entry_bound_minmax": [
+        1.234769582748413,
+        1.234769582748413
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.2343637943267822
+      ],
+      "final_kth_euclidean": 0.9741755127906799,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48909,
+        "3": 32606,
+        "32": 32606
+      }
+    },
+    {
+      "qid": 472444,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 106800,
+        "node_bound_passes": 104333,
+        "leaf_bound_tests": 96030,
+        "leaf_bound_rejections": 2277,
+        "visited_leaves": 93753,
+        "valid_objects": 937530,
+        "distance_objects": 937529,
+        "accepted_objects": 604,
+        "leaf_distance_dimensions": 900027840,
+        "launched_ctas": 93753,
+        "launched_warps": 1500048,
+        "distance_active_warps": 93753,
+        "zero_distance_warps": 1406295,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 93212,
+        "no_returned_topk_leaves": 93745,
+        "no_legal_topk_member_leaves": 93745,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1318
+      },
+      "pivot_distances": 10680,
+      "pivot_dimensions": 10252800,
+      "all_distance_dimensions": 910280640,
+      "objects_per_leaf": {
+        "10": 93753
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 93752,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 93753
+      },
+      "accepted_objects_per_leaf": {
+        "0": 93212,
+        "1": 486,
+        "2": 47,
+        "3": 8
+      },
+      "entry_bound_minmax": [
+        1.7516019344329834,
+        1.7516019344329834
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.751516342163086
+      ],
+      "final_kth_euclidean": 1.6335493326187134,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 46877,
+        "3": 31251,
+        "32": 31251
+      }
+    },
+    {
+      "qid": 315725,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 105550,
+        "node_bound_passes": 100128,
+        "leaf_bound_tests": 94800,
+        "leaf_bound_rejections": 5127,
+        "visited_leaves": 89673,
+        "valid_objects": 896730,
+        "distance_objects": 896729,
+        "accepted_objects": 678,
+        "leaf_distance_dimensions": 860859840,
+        "launched_ctas": 89673,
+        "launched_warps": 1434768,
+        "distance_active_warps": 89673,
+        "zero_distance_warps": 1345095,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 89178,
+        "no_returned_topk_leaves": 89666,
+        "no_legal_topk_member_leaves": 89666,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 4389
+      },
+      "pivot_distances": 10555,
+      "pivot_dimensions": 10132800,
+      "all_distance_dimensions": 870992640,
+      "objects_per_leaf": {
+        "10": 89673
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 89672,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 89673
+      },
+      "accepted_objects_per_leaf": {
+        "0": 89178,
+        "1": 372,
+        "2": 87,
+        "3": 19,
+        "4": 12,
+        "5": 3,
+        "6": 2
+      },
+      "entry_bound_minmax": [
+        1.809868335723877,
+        1.809868335723877
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.8098427057266235
+      ],
+      "final_kth_euclidean": 1.6248797178268433,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 44837,
+        "3": 29891,
+        "32": 29891
+      }
+    },
+    {
+      "qid": 677187,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108540,
+        "node_bound_passes": 107692,
+        "leaf_bound_tests": 97710,
+        "leaf_bound_rejections": 772,
+        "visited_leaves": 96938,
+        "valid_objects": 969380,
+        "distance_objects": 969379,
+        "accepted_objects": 793,
+        "leaf_distance_dimensions": 930603840,
+        "launched_ctas": 96938,
+        "launched_warps": 1551008,
+        "distance_active_warps": 96938,
+        "zero_distance_warps": 1454070,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96247,
+        "no_returned_topk_leaves": 96930,
+        "no_legal_topk_member_leaves": 96930,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 591
+      },
+      "pivot_distances": 10854,
+      "pivot_dimensions": 10419840,
+      "all_distance_dimensions": 941023680,
+      "objects_per_leaf": {
+        "10": 96938
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96937,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96938
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96247,
+        "1": 598,
+        "2": 85,
+        "3": 7,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.3903906345367432,
+        1.3903906345367432
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.3901976346969604
+      ],
+      "final_kth_euclidean": 1.2954378128051758,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48469,
+        "3": 32313,
+        "32": 32313
+      }
+    },
+    {
+      "qid": 715939,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108450,
+        "node_bound_passes": 105975,
+        "leaf_bound_tests": 97510,
+        "leaf_bound_rejections": 2280,
+        "visited_leaves": 95230,
+        "valid_objects": 952300,
+        "distance_objects": 952299,
+        "accepted_objects": 1302,
+        "leaf_distance_dimensions": 914207040,
+        "launched_ctas": 95230,
+        "launched_warps": 1523680,
+        "distance_active_warps": 95230,
+        "zero_distance_warps": 1428450,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 94438,
+        "no_returned_topk_leaves": 95223,
+        "no_legal_topk_member_leaves": 95223,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 7964
+      },
+      "pivot_distances": 10845,
+      "pivot_dimensions": 10411200,
+      "all_distance_dimensions": 924618240,
+      "objects_per_leaf": {
+        "10": 95230
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 95229,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 95230
+      },
+      "accepted_objects_per_leaf": {
+        "0": 94438,
+        "1": 475,
+        "2": 199,
+        "6": 5,
+        "4": 33,
+        "3": 68,
+        "5": 11,
+        "8": 1
+      },
+      "entry_bound_minmax": [
+        2.327580690383911,
+        2.327580690383911
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        2.327505350112915
+      ],
+      "final_kth_euclidean": 1.9593348503112793,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 47615,
+        "3": 31744,
+        "32": 31744
+      }
+    },
+    {
+      "qid": 983764,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 68270,
+        "node_bound_passes": 42373,
+        "leaf_bound_tests": 57650,
+        "leaf_bound_rejections": 22004,
+        "visited_leaves": 35646,
+        "valid_objects": 356460,
+        "distance_objects": 356459,
+        "accepted_objects": 444,
+        "leaf_distance_dimensions": 342200640,
+        "launched_ctas": 35646,
+        "launched_warps": 570336,
+        "distance_active_warps": 35646,
+        "zero_distance_warps": 534690,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 35356,
+        "no_returned_topk_leaves": 35638,
+        "no_legal_topk_member_leaves": 35638,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 4384
+      },
+      "pivot_distances": 6827,
+      "pivot_dimensions": 6553920,
+      "all_distance_dimensions": 348754560,
+      "objects_per_leaf": {
+        "10": 35646
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 35645,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 35646
+      },
+      "accepted_objects_per_leaf": {
+        "0": 35356,
+        "1": 188,
+        "2": 65,
+        "3": 24,
+        "4": 11,
+        "5": 2
+      },
+      "entry_bound_minmax": [
+        0.48827633261680603,
+        0.48827633261680603
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        0.48826920986175537
+      ],
+      "final_kth_euclidean": 0.4146791398525238,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 17823,
+        "3": 11882,
+        "32": 11882
+      }
+    },
+    {
+      "qid": 307198,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108810,
+        "node_bound_passes": 108269,
+        "leaf_bound_tests": 97930,
+        "leaf_bound_rejections": 442,
+        "visited_leaves": 97488,
+        "valid_objects": 974880,
+        "distance_objects": 974879,
+        "accepted_objects": 627,
+        "leaf_distance_dimensions": 935883840,
+        "launched_ctas": 97488,
+        "launched_warps": 1559808,
+        "distance_active_warps": 97488,
+        "zero_distance_warps": 1462320,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96922,
+        "no_returned_topk_leaves": 97480,
+        "no_legal_topk_member_leaves": 97480,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 344
+      },
+      "pivot_distances": 10881,
+      "pivot_dimensions": 10445760,
+      "all_distance_dimensions": 946329600,
+      "objects_per_leaf": {
+        "10": 97488
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 97487,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 97488
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96922,
+        "1": 509,
+        "2": 54,
+        "3": 2,
+        "4": 1
+      },
+      "entry_bound_minmax": [
+        1.0352168083190918,
+        1.0352168083190918
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.0350295305252075
+      ],
+      "final_kth_euclidean": 0.939620316028595,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48744,
+        "3": 32496,
+        "32": 32496
+      }
+    },
+    {
+      "qid": 565119,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108880,
+        "node_bound_passes": 107200,
+        "leaf_bound_tests": 98030,
+        "leaf_bound_rejections": 1618,
+        "visited_leaves": 96412,
+        "valid_objects": 964120,
+        "distance_objects": 964119,
+        "accepted_objects": 374,
+        "leaf_distance_dimensions": 925554240,
+        "launched_ctas": 96412,
+        "launched_warps": 1542592,
+        "distance_active_warps": 96412,
+        "zero_distance_warps": 1446180,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96071,
+        "no_returned_topk_leaves": 96404,
+        "no_legal_topk_member_leaves": 96404,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 2416
+      },
+      "pivot_distances": 10888,
+      "pivot_dimensions": 10452480,
+      "all_distance_dimensions": 936006720,
+      "objects_per_leaf": {
+        "10": 96412
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96411,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96412
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96071,
+        "1": 312,
+        "2": 27,
+        "3": 1,
+        "5": 1
+      },
+      "entry_bound_minmax": [
+        1.6487783193588257,
+        1.6487783193588257
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.6486988067626953
+      ],
+      "final_kth_euclidean": 1.4108314514160156,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48206,
+        "3": 32138,
+        "32": 32138
+      }
+    },
+    {
+      "qid": 414915,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108160,
+        "node_bound_passes": 107309,
+        "leaf_bound_tests": 97290,
+        "leaf_bound_rejections": 697,
+        "visited_leaves": 96593,
+        "valid_objects": 965930,
+        "distance_objects": 965929,
+        "accepted_objects": 844,
+        "leaf_distance_dimensions": 927291840,
+        "launched_ctas": 96593,
+        "launched_warps": 1545488,
+        "distance_active_warps": 96593,
+        "zero_distance_warps": 1448895,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95877,
+        "no_returned_topk_leaves": 96586,
+        "no_legal_topk_member_leaves": 96586,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 427
+      },
+      "pivot_distances": 10816,
+      "pivot_dimensions": 10383360,
+      "all_distance_dimensions": 937675200,
+      "objects_per_leaf": {
+        "10": 96593
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96592,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96593
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95877,
+        "1": 611,
+        "2": 88,
+        "3": 13,
+        "6": 1,
+        "4": 3
+      },
+      "entry_bound_minmax": [
+        0.9465053081512451,
+        0.9465053081512451
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        0.9462794065475464
+      ],
+      "final_kth_euclidean": 0.8578951358795166,
+      "returned_topk_leaf_count": 7,
+      "packing_structural_warps": {
+        "2": 48297,
+        "3": 32198,
+        "32": 32198
+      }
+    },
+    {
+      "qid": 972134,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108370,
+        "node_bound_passes": 107572,
+        "leaf_bound_tests": 97500,
+        "leaf_bound_rejections": 665,
+        "visited_leaves": 96835,
+        "valid_objects": 968350,
+        "distance_objects": 968349,
+        "accepted_objects": 590,
+        "leaf_distance_dimensions": 929615040,
+        "launched_ctas": 96835,
+        "launched_warps": 1549360,
+        "distance_active_warps": 96835,
+        "zero_distance_warps": 1452525,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 96356,
+        "no_returned_topk_leaves": 96827,
+        "no_legal_topk_member_leaves": 96827,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 363
+      },
+      "pivot_distances": 10837,
+      "pivot_dimensions": 10403520,
+      "all_distance_dimensions": 940018560,
+      "objects_per_leaf": {
+        "10": 96835
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96834,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96835
+      },
+      "accepted_objects_per_leaf": {
+        "0": 96356,
+        "1": 398,
+        "2": 63,
+        "3": 12,
+        "4": 3,
+        "8": 1,
+        "5": 2
+      },
+      "entry_bound_minmax": [
+        1.0235008001327515,
+        1.0235008001327515
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        1.023012399673462
+      ],
+      "final_kth_euclidean": 0.9498286247253418,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48418,
+        "3": 32279,
+        "32": 32279
+      }
+    },
+    {
+      "qid": 674150,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 108460,
+        "node_bound_passes": 107245,
+        "leaf_bound_tests": 97610,
+        "leaf_bound_rejections": 1111,
+        "visited_leaves": 96499,
+        "valid_objects": 964990,
+        "distance_objects": 964989,
+        "accepted_objects": 1232,
+        "leaf_distance_dimensions": 926389440,
+        "launched_ctas": 96499,
+        "launched_warps": 1543984,
+        "distance_active_warps": 96499,
+        "zero_distance_warps": 1447485,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 95390,
+        "no_returned_topk_leaves": 96491,
+        "no_legal_topk_member_leaves": 96491,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 1304
+      },
+      "pivot_distances": 10846,
+      "pivot_dimensions": 10412160,
+      "all_distance_dimensions": 936801600,
+      "objects_per_leaf": {
+        "10": 96499
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 96498,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 96499
+      },
+      "accepted_objects_per_leaf": {
+        "0": 95390,
+        "2": 95,
+        "1": 1001,
+        "3": 11,
+        "4": 2
+      },
+      "entry_bound_minmax": [
+        2.069979190826416,
+        2.069979190826416
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        2.0698981285095215
+      ],
+      "final_kth_euclidean": 1.904157042503357,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 48250,
+        "3": 32167,
+        "32": 32167
+      }
+    },
+    {
+      "qid": 440744,
+      "totals": {
+        "nodes_labelled_without_bound": 110,
+        "node_bound_tests": 98070,
+        "node_bound_passes": 87144,
+        "leaf_bound_tests": 87530,
+        "leaf_bound_rejections": 10093,
+        "visited_leaves": 77437,
+        "valid_objects": 774370,
+        "distance_objects": 774369,
+        "accepted_objects": 738,
+        "leaf_distance_dimensions": 743394240,
+        "launched_ctas": 77437,
+        "launched_warps": 1238992,
+        "distance_active_warps": 77437,
+        "zero_distance_warps": 1161555,
+        "distance_warps_at_most_8_lanes": 0,
+        "no_disk_survivor_leaves": 77027,
+        "no_returned_topk_leaves": 77429,
+        "no_legal_topk_member_leaves": 77429,
+        "online_existing_bound_prunable": 0,
+        "node_to_leaf_bound_changes": 0,
+        "missing_leaf_bound": 0,
+        "retrospective_lower_above_final_kth": 4229
+      },
+      "pivot_distances": 9807,
+      "pivot_dimensions": 9414720,
+      "all_distance_dimensions": 752808960,
+      "objects_per_leaf": {
+        "10": 77437
+      },
+      "distance_lanes_per_object_warp": {
+        "10": 77436,
+        "9": 1
+      },
+      "valid_lanes_per_object_warp": {
+        "10": 77437
+      },
+      "accepted_objects_per_leaf": {
+        "0": 77027,
+        "1": 237,
+        "2": 92,
+        "3": 46,
+        "8": 3,
+        "4": 15,
+        "6": 6,
+        "5": 9,
+        "7": 2
+      },
+      "entry_bound_minmax": [
+        0.5253012776374817,
+        0.5253012776374817
+      ],
+      "leaf_lower_minmax": [
+        0.0,
+        0.5252920389175415
+      ],
+      "final_kth_euclidean": 0.4636174142360687,
+      "returned_topk_leaf_count": 8,
+      "packing_structural_warps": {
+        "2": 38719,
+        "3": 25813,
+        "32": 25813
+      }
+    }
+  ]
+}
