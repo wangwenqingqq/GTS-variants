@@ -12,7 +12,8 @@ def curate(root):
     recheck=read(root/'QUALIFICATION_RECHECK_R3.json')
     assert recheck['passed'] and recheck['GPU_reruns']==0
     assert recheck['admission_sha256']==cpu.sha(root/'campaign_r2/qualification/ADMISSION.json')
-    assert recheck['new_source_sha256']==campaign.sources()
+    assert recheck['new_source_sha256']=={n:cpu.sha(root/'repo_r3/artifacts/external_closure'/n) for n in recheck['new_source_sha256']}
+    assert recheck['new_source_sha256']['static_check.py']==cpu.sha(HERE/'static_check.py')
     assert recheck['old_source_sha256']==proof['source_sha256']
     assert recheck['registration_sha256']==proof['registration_sha256']==cpu.sha(root/'campaign_r2/qualification/REGISTERED.json')
     assert proof['contract_sha256']==cpu.sha(HERE/'STATIC_CONTRACT.json')

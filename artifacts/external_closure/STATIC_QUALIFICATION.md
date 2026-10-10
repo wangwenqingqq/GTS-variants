@@ -1,5 +1,8 @@
 # External static B: qualified Host-ready adapters
 
+Historical checkpoint3aac39e; see [later authorized recovery](STATIC_RECOVERY.md)
+for current execution status. The qualification/failure records below are unchanged.
+
 **The new adapters pass six GPU qualification processes and an independent
 stricter offline recheck. This is not an external speedup result.** The 72-process
 formal matrix was launched after admission and stopped after4 passed processes

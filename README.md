@@ -1,6 +1,17 @@
 # Original GTS experiment deliveries and evidence alignment
 
-## External static B: Host-ready admission (2026-10-10)
+## External static B: authorized recovery (2026-10-10)
+
+[Bounded recovery](artifacts/external_closure/STATIC_RECOVERY.md) corrects the
+CPU Flat interpreter/dependency routing after explicit authorization. The four
+successful observations and failed fifth invocation remain untouched; only the
+remaining68 entries run, in original order. Both installed environments pass
+import-only preflight and the6+4+1 offline identity/output gate passes. This is
+an active incomplete matrix, not a six-round external ranking. If all complete,
+primary attempts total91/102; GPU qualification remains32/32. No extra GPU
+qualification, new kernels, long workload or paper publication.
+
+## External static B: Host-ready admission checkpoint (2026-10-10)
 
 [Host-ready adapter qualification](artifacts/external_closure/STATIC_QUALIFICATION.md)
 passes six new GPU checks and a stricter full-output offline recheck. P now

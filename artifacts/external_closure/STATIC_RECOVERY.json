@@ -1,0 +1,27 @@
+{
+  "status": "AUTHORIZED_BOUNDED_ENVIRONMENT_RECOVERY",
+  "source_checkpoint": "3aac39e4f2bde2463d467c8420e7e072c8a6dadf",
+  "original_contract_sha256": "0deb988b995d48b0a49a3f329b607107e352edd29a96af2260c09acdadd272f3",
+  "preserved_valid_prefix": 4,
+  "retained_failed_attempts": 1,
+  "unattempted_original_entries": 67,
+  "new_attempts": 68,
+  "expected_total_primary_attempts": 91,
+  "primary_ceiling": 102,
+  "additional_GPU_qualifiers": 0,
+  "changes": [
+    "CPU Flat uses the installed qualified Faiss interpreter",
+    "threadpoolctl limited to KD/Ball; CPU Flat native omp setter/getter enforces one thread",
+    "import-only dependency preflight before any new primary",
+    "separate recovery receipts without overwriting initial four valid observations or failed CPU Flat attempt"
+  ],
+  "unchanged": [
+    "data and query/task/method order",
+    "kernels, binaries and native APIs",
+    "precision and quality tolerance",
+    "Host-ready and phase timing scope",
+    "six-round estimator and stop-on-first-new-failure"
+  ],
+  "authorization": "User approved correcting the environment and resuming at the failed entry without rerunning passed samples. No additional automatic replacement is authorized.",
+  "original_stopped_proof_sha256": "b7988f95c22f38648342f608a0ac070bb40848c8beaf894f99cb1822896cd15b"
+}

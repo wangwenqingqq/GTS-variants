@@ -3,7 +3,7 @@
 import copy,json,tempfile,subprocess,sys
 from pathlib import Path
 import numpy as np
-from static_campaign import CONTRACT,jobs,admission_structure,guard_labels
+from static_campaign import CONTRACT,jobs,admission_structure,guard_labels,stopped_structure
 from static_check import requests,check
 
 def main():
@@ -14,6 +14,18 @@ def main():
     else:raise AssertionError('missing dependency passed preflight')
     run=jobs('primary');assert len(run)==72 and len(jobs('qualification'))==6
     methods=set(j['method'] for j in run);assert len(methods)==6
+    assert jobs('recovery')==run[4:] and len(jobs('recovery'))==68
+    prior={j['label']:{'passed':True} for j in run[:4]};attempted={j['label'] for j in run[:5]}
+    public=dict(rows=[{'label':j['label']} for j in run[:4]],failure={'label':run[4]['label']})
+    stopped_structure({'jobs':run},prior,attempted,public)
+    for bad in ({**public,'rows':public['rows'][:3]},{**public,'rows':[]},{**public,'failure':{'label':run[5]['label']}}):
+        try:stopped_structure({'jobs':run},prior,attempted,bad)
+        except AssertionError:pass
+        else:raise AssertionError('truncated public prefix silently accepted')
+    for changed_rows,changed_labels in ((dict(list(prior.items())[:3]),attempted),(prior,attempted|{'unexpected_attempt'}),(prior,set(prior))):
+        try:stopped_structure({'jobs':run},changed_rows,changed_labels,public)
+        except AssertionError:pass
+        else:raise AssertionError('incomplete or extra prefix admitted for recovery')
     for left in methods:
         for right in methods-{left}:assert sum(o.index(left)<o.index(right) for o in CONTRACT['orders'])==3
     assert sum(j['method'].startswith('CPU') for j in run)==36

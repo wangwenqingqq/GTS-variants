@@ -63,3 +63,23 @@ complete static result is admitted. The installed Faiss environment lacks the
 threadpool inspection package used by trees; a bare interpreter substitution
 would fail too. A recovery must fix only that CPU dependency routing, preflight
 both existing interpreters, and preserve the original R3 execution identity.
+
+## R4: explicitly authorized dependency recovery
+
+The user authorized resuming at the failed entry while preserving all four
+passed processes. The original STOPPED proof is hash-pinned, with exactly4
+public/private passed labels and the original fifth failure. A second gate
+revision rejects truncated public row lists instead of allowing zip truncation.
+Both the pre-audit and final offline records are retained; neither runs GPU work.
+The final6+4+1 binding passed before recovery launch.
+
+CPU Flat now uses the existing Faiss interpreter and its native single-thread
+control, not the unnecessary tree-only threadpool dependency. Both interpreter
+preflights pass. The driver schedules exactly68 entries into a separate recovery
+namespace. All original payloads/requests/receipts remain. The patch is applied
+in R4 source; it was only prepared, not applied, at3aac39e. Completion is still
+pending; no new failure may trigger another automatic replacement.
+
+The first recovered CPU Flat process passes all80 complete-output checks under
+the corrected interpreter/thread control. This confirms the failed environment
+path is repaired, not a full-matrix or paired-performance result.

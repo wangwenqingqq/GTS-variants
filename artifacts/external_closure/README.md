@@ -157,3 +157,13 @@ patch, not runtime behavior. `static_preflight.py --tree-python "$TREE_PYTHON"
 --faiss-python "$FAISS_PYTHON" --output "$PRIVATE_PREFLIGHT"` checks existing
 imports and thread APIs without index/query/GPU work. These checks pass, but no
 bounded recovery has been executed or admitted by this checkpoint.
+
+### Later checkpoint: authorized recovery
+
+The preceding stopped/unapplied statements describe3aac39e. After explicit
+approval, the CPU-only patch is applied and `--stage recovery` runs exactly the
+original schedule after the preserved four rows. It verifies the fixed STOPPED
+proof, full6+4+1 evidence and import preflight before launch; new paths cannot
+replace the old failure. Supply `--original-source` for R3 as well as the R2
+qualification source. See STATIC_RECOVERY.md. The full4+68 real-result analysis
+is pending, not validated by these launch checks.

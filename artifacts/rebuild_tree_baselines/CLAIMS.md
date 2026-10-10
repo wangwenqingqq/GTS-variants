@@ -69,3 +69,11 @@ The first4 static primaries pass; the fifth fails before CPU Flat construction
 because the launcher selected the tree-only interpreter without Faiss. This
 is an environment-routing failure, not external correctness or speed evidence.
 All attempts remain, cumulative primary23/102; no automatic replacement.
+
+### Authorized continuation after the environment stop
+
+A later explicit authorization permits the one CPU dependency recovery while
+preserving all four successful observations and the failed fifth invocation.
+The source/dependency/6+4+1 gates pass and only the remaining68 entries run.
+This is an active incomplete experiment, not an external performance claim.
+No internal ratio, native membership failure or novelty boundary is changed.

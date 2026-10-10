@@ -7,10 +7,11 @@ from qualify import cpu
 from static_check import requests,reference,check,read
 HERE=Path(__file__).resolve().parent
 CONTRACT=read(HERE/'STATIC_CONTRACT.json')
-SOURCES=['STATIC_CONTRACT.json','static_campaign.py','static_check.py','static_native.py','static_process.py','native_cpu.py','qualify.py','common.py','../rebuild_tree_baselines/cpu.py','../unified_target_workflow/validate.py']
+SOURCES=['STATIC_RECOVERY.json','static_preflight.py','STATIC_CONTRACT.json','static_campaign.py','static_check.py','static_native.py','static_process.py','native_cpu.py','qualify.py','common.py','../rebuild_tree_baselines/cpu.py','../unified_target_workflow/validate.py']
 def sources():return {name:cpu.sha(HERE/name) for name in SOURCES}
 
 def jobs(stage):
+    if stage=='recovery':return jobs('primary')[4:]
     if stage=='qualification':
         return [dict(label=name,method='GTSPP_P' if name.startswith('P_') else 'GPU_RANGE_COMPLETE',snapshot='initial' if name=='P_initial' else 'first_rebuilt' if name=='P_first_rebuilt' else 'bounded',order='knn,range',tool=next((t for t in ('memcheck','racecheck','synccheck') if name.endswith(t)),None)) for name in CONTRACT['qualifiers']]
     return [dict(label=f'{snap}_r{r}_{m}',method=m,snapshot=snap,round=r,order=CONTRACT['task_orders'][r-1],tool=None) for snap in CONTRACT['snapshots'] for r,order in enumerate(CONTRACT['orders'],1) for m in order if m!='GPU_TREE_ADAPT']
@@ -60,8 +61,8 @@ def admission_structure(admitted,reg,actual_labels,binding):
 
 def qualification_gate(a):
     folder=a.work/'qualification';admitted=read(folder/'ADMISSION.json');reg=read(folder/'REGISTERED.json')
-    source=sources()
-    for name in ('static_campaign.py','static_check.py'):source[name]=cpu.sha(a.qualification_source/name)
+    source=sources();source.pop('STATIC_RECOVERY.json');source.pop('static_preflight.py')
+    for name in ('static_campaign.py','static_check.py','static_native.py'):source[name]=cpu.sha(a.qualification_source/name)
     assert source['static_campaign.py']==cpu.sha(folder/'EXECUTED.py')
     admission_structure(admitted,reg,guard_labels(folder/'guards'),
         dict(registration_sha256=cpu.sha(folder/'REGISTERED.json'),inputs_sha256=cpu.sha(a.work/'INPUTS.json'),
@@ -85,28 +86,72 @@ def qualification_gate(a):
             assert ('RACECHECK SUMMARY: 0 hazards displayed (0 errors, 0 warnings)' if job['tool']=='racecheck' else 'ERROR SUMMARY: 0 errors') in log
     return admitted
 
+def stopped_structure(reg,rows,labels,public):
+    assert [r['label'] for r in public['rows']]==[j['label'] for j in jobs('primary')[:4]]
+    assert public['failure']['label']==jobs('primary')[4]['label']
+    assert reg['jobs']==jobs('primary')
+    assert set(rows)=={j['label'] for j in jobs('primary')[:4]}
+    assert labels=={j['label'] for j in jobs('primary')[:5]}
+    assert all(r['passed'] for r in rows.values())
+
+def stopped_prefix(a):
+    folder=a.work/'primary';reg=read(folder/'REGISTERED.json');rows=read(folder/'ROWS.json')
+    assert cpu.sha(HERE/'evidence/STATIC_STOPPED.json')==read(HERE/'STATIC_RECOVERY.json')['original_stopped_proof_sha256']
+    proof=read(HERE/'evidence/STATIC_STOPPED.json');assert proof['status']=='STOPPED_INCOMPLETE_NO_FORMAL_RANKING'
+    assert not (folder/'COMPLETE.json').exists()
+    stopped_structure(reg,rows,guard_labels(folder/'guards'),proof)
+    assert cpu.sha(folder/'REGISTERED.json')==proof['registration_sha256'] and cpu.sha(folder/'EXECUTED.py')==proof['executed_sha256']
+    assert reg['source_sha256']==proof['source_sha256']=={n:cpu.sha(a.original_source/n) for n in proof['source_sha256']}
+    assert set(proof['source_sha256'])==set(SOURCES)-{'STATIC_RECOVERY.json','static_preflight.py'}
+    for k,v in dict(contract_sha256=cpu.sha(HERE/'STATIC_CONTRACT.json'),inputs_sha256=cpu.sha(a.work/'INPUTS.json'),build_sha256=cpu.sha(a.build/'BUILD.json'),guard_sha256=cpu.sha(a.guard),gpu=a.gpu,numa_node=a.numa_node).items():assert reg[k]==v
+    assert all(cpu.sha(folder/p)==h for p,h in proof['failed_file_hashes'].items())
+    failed=proof['failure']['label'];assert not list((folder/'outputs').glob(failed+'.*'))
+    receipt=read(folder/'guards'/failed/'receipt.json');assert receipt['exit_code']==1 and not receipt['runtime_valid'] and receipt['stop_reason'] is None
+    assert "No module named 'faiss'" in (folder/'guards'/failed/'stderr.log').read_text()
+    inputs=read(a.work/'INPUTS.json')['records'];guards={}
+    for job,public in zip(jobs('primary')[:4],proof['rows']):
+        label=job['label'];assert label==public['label'];g=folder/'guards'/label
+        guards[label]=guard_check(g);assert cpu.sha(g/'receipt.json')==public['receipt_sha256']
+        receipt=read(g/'receipt.json');cmd=read(folder/(label+'.command.json'))
+        assert receipt['gpu']==a.gpu and receipt['command'][1:3]==[f'--cpunodebind={a.numa_node}',f'--membind={a.numa_node}']
+        assert receipt['command'][3:]==cmd['command'] and cmd['environment']==reg['environment']
+        assert cmd['request_sha256']==cpu.sha(a.work/'requests'/(label+'.txt'))
+        r=inputs[job['snapshot']];gold=read(a.work/'reference'/job['snapshot']/'REFERENCE.json');gold['folder']=a.work/'reference'/job['snapshot']
+        actual=check(folder/'outputs'/label,job['method'],requests(r['qids'],job['method'],job['order']),gold)
+        assert actual==rows[label] and actual['output_hashes']==public['output_hashes']
+    return dict(registration_sha256=proof['registration_sha256'],rows_sha256=cpu.sha(folder/'ROWS.json'),source_sha256=reg['source_sha256'],guard_hashes=guards,failed_receipt_sha256=proof['failure']['receipt_sha256'],retained_passes=4,retained_failures=1)
+
 def run(a):
-    a.work=outside_repo(a.work);inputs=verify_inputs(a.work);stage=a.work/a.stage;stage.mkdir(exist_ok=False);(stage/'outputs').mkdir()
-    if a.stage=='primary':admitted=qualification_gate(a)
+    a.work=outside_repo(a.work);inputs=verify_inputs(a.work);stage=a.work/a.stage;assert not stage.exists()
+    if a.stage in ('primary','recovery'):admitted=qualification_gate(a)
+    if a.stage=='recovery':
+        recovery=read(HERE/'STATIC_RECOVERY.json');assert recovery['new_attempts']==len(jobs('recovery'))==68 and recovery['original_contract_sha256']==cpu.sha(HERE/'STATIC_CONTRACT.json')
+        prior=stopped_prefix(a)
+        from static_preflight import inspect,TREE,FAISS
+        preflight=dict(tree=inspect(a.cpu_python,TREE),faiss=inspect(a.gpu_python,FAISS))
+    stage.mkdir();(stage/'outputs').mkdir()
+    if a.stage=='recovery':(stage/'requests').mkdir();cpu.save(stage/'DEPENDENCIES_PREFLIGHT.json',preflight)
     build=read(a.build/'BUILD.json');assert all(cpu.sha(a.build/'bin'/n)==h for n,h in build['binaries'].items())
     prepared=read(a.build/'PREPARED.json');assert all(cpu.sha(a.build/'source'/n)==h for n,h in prepared['sources'].items())
     env={k:v for k,v in os.environ.items() if not k.startswith(('BUILD_','TARGET_','PAR_','KNN_','U10_','REGION_'))}
     libs=read(a.build/'BUILD_REGISTERED.json')['library_search_dirs'];env['LD_LIBRARY_PATH']=':'.join(libs+['/usr/local/cuda-13.1/lib64',env.get('LD_LIBRARY_PATH','')])
     env.update(OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1',NUMEXPR_NUM_THREADS='1',REGION_MODE='PAR_STRONG',KNN_MODE='FULL',BUILD_MAPPING='TILED',TARGET_WARMUP='0',U10_OBSERVE='1',U10_TREE_AUDIT='0',TARGET_RESTORE_AUDIT='0')
     reg=dict(jobs=jobs(a.stage),contract_sha256=cpu.sha(HERE/'STATIC_CONTRACT.json'),source_sha256=sources(),build_sha256=cpu.sha(a.build/'BUILD.json'),binaries=build['binaries'],inputs_sha256=cpu.sha(a.work/'INPUTS.json'),guard_sha256=cpu.sha(a.guard),gpu=a.gpu,numa_node=a.numa_node,registered_unix=time.time(),environment={k:env[k] for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','REGION_MODE','KNN_MODE','BUILD_MAPPING','TARGET_WARMUP','U10_OBSERVE','U10_TREE_AUDIT','TARGET_RESTORE_AUDIT')})
-    if a.stage=='primary':reg['qualification_registration_sha256']=admitted['registration_sha256'];reg['qualification_executed_sha256']=cpu.sha(a.work/'qualification/EXECUTED.py');reg['qualification_checker_sha256']=cpu.sha(a.qualification_source/'static_check.py')
+    if a.stage in ('primary','recovery'):reg['qualification_registration_sha256']=admitted['registration_sha256'];reg['qualification_executed_sha256']=cpu.sha(a.work/'qualification/EXECUTED.py');reg['qualification_checker_sha256']=cpu.sha(a.qualification_source/'static_check.py')
+    if a.stage=='recovery':reg.update(recovery_contract_sha256=cpu.sha(HERE/'STATIC_RECOVERY.json'),preserved_prefix=prior,preflight_sha256=cpu.sha(stage/'DEPENDENCIES_PREFLIGHT.json'))
     cpu.save(stage/'REGISTERED.json',reg);shutil.copy2(__file__,stage/'EXECUTED.py');results={};guards={}
     with (a.work/'campaign.lock').open('a+') as lock:
       fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
       for j in reg['jobs']:
         label=j['label'];r=inputs['records'][j['snapshot']];schedule=requests(r['qids'],j['method'],j['order']);prefix=stage/'outputs'/label
-        req=a.work/'requests'/(label+'.txt');req.write_text(str(len(schedule))+'\n'+''.join(f"{0 if t=='knn' else 1} {q} 0.705625057220459 8\n" for t,q in schedule))
+        request_dir=stage/'requests' if a.stage=='recovery' else a.work/'requests'
+        req=request_dir/(label+'.txt');req.write_text(str(len(schedule))+'\n'+''.join(f"{0 if t=='knn' else 1} {q} 0.705625057220459 8\n" for t,q in schedule))
         if j['method']=='GTSPP_P':
-            events=a.work/'requests'/(label+'.events');events.write_text('80\n'+''.join(f"{3 if t=='knn' else 2} {q}\n" for t,q in schedule))
+            events=request_dir/(label+'.events');events.write_text('80\n'+''.join(f"{3 if t=='knn' else 2} {q}\n" for t,q in schedule))
             cmd=[str(a.build/'bin/target'),r['data'],str(events),'2','0.705625057220459',str(prefix),'8']
         elif j['method']=='GPU_RANGE_COMPLETE':cmd=[str(a.build/'bin/range_static'),r['data'],str(req),str(prefix)]
         else:
-            py=a.gpu_python if j['method']=='GPU_FLAT_KNN' else a.cpu_python
+            py=a.gpu_python if j['method'] in ('GPU_FLAT_KNN','CPU_FLAT') else a.cpu_python
             cmd=[str(py),str(HERE/'static_native.py'),'--method',j['method'],'--data',r['data'],'--snapshot',r['snapshot'],'--output',str(prefix),'--order',j['order']]
         if j['tool']:cmd=[str(a.sanitizer),'--tool',j['tool'],'--error-exitcode','97',*cmd]
         command=[sys.executable,str(HERE/'static_process.py'),'--record',str(stage/(label+'.process.json')),'--',*cmd];cpu.save(stage/(label+'.command.json'),dict(command=command,request_sha256=cpu.sha(req),environment=reg['environment']))
@@ -120,13 +165,13 @@ def run(a):
             text=(folder/'stdout.log').read_text()+(folder/'stderr.log').read_text();token='RACECHECK SUMMARY: 0 hazards displayed (0 errors, 0 warnings)' if j['tool']=='racecheck' else 'ERROR SUMMARY: 0 errors';assert token in text
         gold=read(a.work/'reference'/j['snapshot']/'REFERENCE.json');gold['folder']=a.work/'reference'/j['snapshot']
         result=check(prefix,j['method'],schedule,gold)
-        if a.stage=='primary' and j['method']=='GTSPP_P':
+        if a.stage in ('primary','recovery') and j['method']=='GTSPP_P':
             prior=admitted['rows']['P_'+j['snapshot']]['canonical_sha256'];assert result['canonical_sha256']==prior
         results[label]=result;cpu.save(stage/'ROWS.json',results)
         print('PASS',label,{k:v for k,v in result['timing'].items() if k.endswith('_pass_ms')},flush=True)
       cpu.save(stage/('ADMISSION.json' if a.stage=='qualification' else 'COMPLETE.json'),dict(passed=True,jobs=reg['jobs'],rows=results,guard_hashes=guards,build_sha256=reg['build_sha256'],source_sha256=reg['source_sha256'],contract_sha256=reg['contract_sha256'],registration_sha256=cpu.sha(stage/'REGISTERED.json')))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','run']);p.add_argument('--stage',choices=['qualification','primary']);p.add_argument('--numa-node',type=int);p.add_argument('--gpu')
-    for k in ('work','snapshots','bounded','library','build','guard','cpu-python','gpu-python','sanitizer','qualification-source'):p.add_argument('--'+k,type=Path,required=k=='work')
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','run']);p.add_argument('--stage',choices=['qualification','primary','recovery']);p.add_argument('--numa-node',type=int);p.add_argument('--gpu')
+    for k in ('work','snapshots','bounded','library','build','guard','cpu-python','gpu-python','sanitizer','qualification-source','original-source'):p.add_argument('--'+k,type=Path,required=k=='work')
     a=p.parse_args();assert __debug__; (prepare if a.action=='prepare' else run)(a)

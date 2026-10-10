@@ -33,24 +33,29 @@ def execute(a):
             index=None;res.syncDefaultStreamCurrentDevice();res=None
         representation_bytes=0;index_bytes=data.nbytes;device_memory['built']=memory()
     else:
-        from threadpoolctl import threadpool_limits,threadpool_info
-        limit=threadpool_limits(limits=1);api=NativeCPU('CPU_FLAT' if a.method=='CPU_FLAT' else a.method,leaf=512,inclusive=True)
+        limit=None;api=NativeCPU('CPU_FLAT' if a.method=='CPU_FLAT' else a.method,leaf=512,inclusive=True)
         if a.method=='CPU_FLAT':
             import faiss
             assert faiss.__version__=='1.15.1';faiss.omp_set_num_threads(1);versions['faiss']=faiss.__version__
+            versions['native_omp_threads']=faiss.omp_get_max_threads();assert versions['native_omp_threads']==1
             start=now();api.data=np.array(data,dtype=np.float32,order='C',copy=True);prep=(now()-start)*1000
             start=now();api.index=faiss.IndexFlatL2(data.shape[1]);api.index.add(api.data);build=(now()-start)*1000;index_bytes=data.nbytes
         else:
+            from threadpoolctl import threadpool_limits,threadpool_info
+            limit=threadpool_limits(limits=1)
             import sklearn
             from sklearn.neighbors import KDTree,BallTree
             assert sklearn.__version__=='1.6.1';versions['sklearn']=sklearn.__version__
             start=now();api.data=np.array(data,dtype=np.float64,order='C',copy=True);prep=(now()-start)*1000
             start=now();api.index=(KDTree if a.method=='CPU_KD' else BallTree)(api.data,leaf_size=512,metric='euclidean');build=(now()-start)*1000
             index_bytes=sum(x.nbytes for x in api.index.get_arrays())-api.data.nbytes
-        representation_bytes=api.data.nbytes;versions['implementation_sha256']=cpu.sha(sys.modules[api.index.__class__.__module__].__file__);versions['pools']=threadpool_info()
-        assert all(p['num_threads']==1 for p in versions['pools'])
+        representation_bytes=api.data.nbytes;versions['implementation_sha256']=cpu.sha(sys.modules[api.index.__class__.__module__].__file__)
+        if limit is not None:
+            versions['pools']=threadpool_info();assert all(p['num_threads']==1 for p in versions['pools'])
         def query(task,q):return api.knn(q,8) if task=='knn' else api.range(q,np.float32(.705625057220459))
-        def release():api.release();limit.restore_original_limits()
+        def release():
+            api.release()
+            if limit is not None:limit.restore_original_limits()
     built=cpu.rss();payloads=[];rows=[];at=0;timing={};usage=resource.getrusage(resource.RUSAGE_SELF);warm=now()
     def call(task,qi,qid,warmup):
         nonlocal at
