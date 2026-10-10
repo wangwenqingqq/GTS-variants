@@ -1,0 +1,93 @@
+{
+  "experiment": "gts_20261010_pivot_reuse_original_knn",
+  "state_at_registration": "designed",
+  "upstream": "ZJU-DAILY/GTS@3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "shared_adapter": "native_knn_faiss_ivf_20261003/prepare_gts.py and gts_bench.cu: full IDs, MAX_H=6, 1GiB workspace, no timed console output",
+  "dataset": {
+    "name": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "metric": "L2",
+    "dtype": "FP32 resident input",
+    "sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7"
+  },
+  "index_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+  "K": 8,
+  "B": 1,
+  "self_match": "included, original object identity",
+  "modes": {
+    "G0": "Unchanged original kNN with the shared complete-output adapter",
+    "G1": "Query-local full pivot-distance reuse only"
+  },
+  "deleted_equivalent_modes": {
+    "G2": "Original getDisPQ -> sort_by_key -> updateDisK already uses encountered pivot objects to tighten the legal bound",
+    "G3": "No independent G2 mechanism is added; it would duplicate G1"
+  },
+  "invariants": [
+    "same index/pivots/workspace",
+    "same arithmetic and rounding locations",
+    "same per-level pivot bound and node priority",
+    "bit-identical complete ordered IDs and distance fields G0/G1",
+    "identical node/leaf decisions G0/G1",
+    "no Graph, PAR, TILED, new layout or precision change"
+  ],
+  "diagnostic_queries": "First32 of the prior frozen GIST final256, not selected for reuse benefit",
+  "confirmation_queries": {
+    "count": 256,
+    "seed": 202610101334,
+    "generation": "only after code/parameters/mapping freeze; exclude inventoried historical in-dataset GIST IDs; disclose inventory incompleteness"
+  },
+  "warmup_queries_per_process": 2,
+  "timing_scope": "Continuous host-ready 256-query pass, including cache resets, lookup/write/read, query transfer, original traversal/allocation/sort, complete result return/free/synchronization; setup/index/mapping/warmup/oracle/files excluded and reported separately",
+  "process_orders": [
+    [
+      "G0",
+      "G1"
+    ],
+    [
+      "G1",
+      "G0"
+    ],
+    [
+      "G1",
+      "G0"
+    ],
+    [
+      "G0",
+      "G1"
+    ],
+    [
+      "G1",
+      "G0"
+    ],
+    [
+      "G0",
+      "G1"
+    ]
+  ],
+  "statistics": {
+    "primary": "geometric mean of process-paired G0_time/G1_time",
+    "bootstrap_pairs": 20000,
+    "bootstrap_seed": 202610101333,
+    "interval": "95% percentile, paired process as unit",
+    "report": [
+      "all raw rounds",
+      "process wins",
+      "order split",
+      "marginal median ratio",
+      "additional memory"
+    ],
+    "interpretation": "fixed query-set run variation, not distribution generalization; CI crossing1 is inconclusive"
+  },
+  "qualification": [
+    "independent exhaustive oracle and frozen tie rule",
+    "bitwise pivot/leaf primitive bridge",
+    "cache reset/alternating queries/repeated-index and pointer churn",
+    "memcheck/racecheck/synccheck for new code",
+    "full-result audit for every formal process"
+  ],
+  "fault_rule": "Abort campaign at first hash drift, foreign GPU activity, failed lock, runtime failure or correctness failure. Preserve every rejected receipt. No repeated replacement seeking a faster run; any replacement requires a separately registered whole-round retry.",
+  "gpu_admission": "User authorized physical GPU1; freeze its UUID and NUMA0 after live idle/lock admission; GPU0 service untouched; all timings freshly remeasured",
+  "novelty_gate": "Existing GTS pivot-bound use is prior behavior. Distance caching is not assumed novel. This experiment tests implementation redundancy and complete net cost, not external superiority or dynamic updates.",
+  "requested_plan_sha256": "b907c813ac4815172d37065420d99e845fd0c8ba37aea3747b57a5d295b92d39"
+}

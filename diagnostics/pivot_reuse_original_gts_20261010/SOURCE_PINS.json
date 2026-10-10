@@ -1,0 +1,113 @@
+{
+  "upstream": {
+    "upstream_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+    "original": {
+      "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+      "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+      "include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+      "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+      "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+    },
+    "adapted": {
+      "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+      "include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "include/search_v2.cuh": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+      "include/tree.cuh": "ccf4b16fc660e9c16bd1f0b654318def8f7d629d1235d077ee5314d802e41e39",
+      "include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+      "src/main.cu": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+    }
+  },
+  "generator_sha256": "8241b52d1bebc6059ccc150aa32f3943ef249fed93245f5e53d85bfa1e8ca40a",
+  "shared_adapter_sha256": "1a1a5b46ed98371575c5fe9fcf70866611db68e90d0fb5c75441b313c4e96ea1",
+  "shared_driver_sha256": "1c7c16e2578835bb4c696906e548bff2c8d35c73ee21d215774b258cadd86bab",
+  "variants": {
+    "G0": {
+      "enabled": 0,
+      "counts": 0,
+      "search_sha256": "c27108fbd2d9ba3aba1d395db5682b34821dbf33d8a4d589d79566c49a0b4b6c",
+      "support_sha256": "e0f5af90f2c1561beace340e9e7750c9eb1c2c649ab7d1b847c1699ece5e6f51"
+    },
+    "G1": {
+      "enabled": 1,
+      "counts": 0,
+      "search_sha256": "038b80137645c7f501469fdd3667c56c90b41d0553cd6820d566d35afe6355c2",
+      "support_sha256": "e0f5af90f2c1561beace340e9e7750c9eb1c2c649ab7d1b847c1699ece5e6f51"
+    },
+    "G0_count": {
+      "enabled": 0,
+      "counts": 1,
+      "search_sha256": "55ada8a12e489477bc75bd590a76612a5fbb20d35da0f64666448e9b13899107",
+      "support_sha256": "e0f5af90f2c1561beace340e9e7750c9eb1c2c649ab7d1b847c1699ece5e6f51"
+    },
+    "G1_count": {
+      "enabled": 1,
+      "counts": 1,
+      "search_sha256": "55ada8a12e489477bc75bd590a76612a5fbb20d35da0f64666448e9b13899107",
+      "support_sha256": "e0f5af90f2c1561beace340e9e7750c9eb1c2c649ab7d1b847c1699ece5e6f51"
+    }
+  },
+  "driver_sha256": "49553ccc72add194895ddd211557923b8e1889cea6ac612362d80dd675e0f378",
+  "collection_artifacts": {
+    "v2/SOURCE_PINS.json": "059bc6147d0e42cf631c64b3dc13c041fabd83b4d379f82897ed3db2ad89740f",
+    "v2/G0.bench": "3ab4e0b5c71bfadd9cd594a604345d24f2ef93cf0417a861d45593f6e5b2940a",
+    "v2/G1.bench": "1411ed773f41d40f22551553cb0e1bf45404d2f3c6955ae82932ab797e4fc487",
+    "v2/G0_count.bench": "6e38ce98448a70651eb90cb9b4de1167fc70e1d2363a5923705150512fafba9b",
+    "v2/G1_count.bench": "2755038f5e72af254dacfbd79f22c370753be0be4ca958eedc4dea66ff4c5519",
+    "v2/test_cache": "5f56318062350b2cba668400b503657c6a68cf51e7df4f148924ce2732dd1449",
+    "helpers/run_locked.py": "dfe30c6d7ed4d4000b6789dc9ca26564db47d002eddc6649b390726cf826c61f",
+    "helpers/native_ivf.py": "23abd847d013c143cee82a5abc3ec87f1fa3305934ad6a5c8c306a4352daf27b",
+    "helpers/verify_outputs.py": "3c18bbfdff8b037ec1687a15fb5ff916a056f5a28f48aacfcc59cebefcfe08c4",
+    "locked.py": "b1a592febfa261e8135b9cd07221c25b24658c5e6739dd3560dff0ff31da5691",
+    "CONTRACT.json": "77e1e06110657ef3a4c9849f5fda3a9de16b233dd47da5d0bc9c9a0a5dce50c5",
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "index_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0"
+  },
+  "hardware_identity_sha256": "6e592c1771e09999d051b9e8ff6108458635d72adebb47fc6449096e2e4b491c",
+  "software": {
+    "GPU": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "architecture": "SM120",
+    "driver": "590.48.01",
+    "CUDA": "13.1.115",
+    "Linux_kernel": "6.17.0-20-generic",
+    "CPU": "Intel Xeon Gold 6530",
+    "NUMA": 0,
+    "CPU_affinity": "0-15,64-79",
+    "compiler_options": [
+      "-O3",
+      "-lineinfo",
+      "-std=c++17",
+      "-arch=sm_120",
+      "--extended-lambda"
+    ],
+    "clock_power_changes": "none"
+  },
+  "static_resources": {
+    "G0": {
+      "getDisPQ": {
+        "signature": "Function getDisPQ(TN*, float*, int*, int*, int*, char*, int*, int, int, int, double*, int, int, int, int, int, int):",
+        "metadata": "REG:50 STACK:47528 SHARED:0 LOCAL:0 CONSTANT[2]:12 CONSTANT[0]:1000 TEXTURE:0 SURFACE:0 SAMPLER:0"
+      },
+      "dataProcessKnn": {
+        "signature": "Function dataProcessKnn(TN*, float*, float*, int*, int*, char*, int*, double*, int, int*, int, int*, int):",
+        "metadata": "REG:48 STACK:47528 SHARED:0 LOCAL:0 CONSTANT[2]:24 CONSTANT[0]:996 TEXTURE:0 SURFACE:0 SAMPLER:0"
+      },
+      "raw_sha256": "211a213a5d3dcc391a1388f330e6ea45cf05c540e4b91b85ca8f7de13725b4d7"
+    },
+    "G1": {
+      "getDisPQ": {
+        "signature": "Function getDisPQ(TN*, float*, int*, int*, int*, char*, int*, int, int, int, double*, int, int, int, int, int, int, int*, int*, double*):",
+        "metadata": "REG:52 STACK:47528 SHARED:0 LOCAL:0 CONSTANT[2]:24 CONSTANT[0]:1024 TEXTURE:0 SURFACE:0 SAMPLER:0"
+      },
+      "dataProcessKnn": {
+        "signature": "Function dataProcessKnn(TN*, float*, float*, int*, int*, char*, int*, double*, int, int*, int, int*, int, int*, int*, double*):",
+        "metadata": "REG:48 STACK:47528 SHARED:0 LOCAL:0 CONSTANT[2]:24 CONSTANT[0]:1024 TEXTURE:0 SURFACE:0 SAMPLER:0"
+      },
+      "raw_sha256": "6e3a0feac8ebf39a5c00a9884fd47bd45bbd6e0ce12ae63971819c6f2a5ec5d2"
+    }
+  }
+}
