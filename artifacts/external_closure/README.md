@@ -1,6 +1,13 @@
-# External closure: static matrix complete; later gates remain open
+# External closure: pruning-value diagnosis complete
 
-**Current checkpoint (2026-10-10):72/72 valid external results**, assembled as
+**Latest checkpoint:** the [tree-pruning diagnosis](pruning_value/TREE_PRUNING_VALUE.md)
+adds two actual-tree snapshots, four same-arithmetic modes and stable-instance
+maintenance accounting. All11 bounded diagnostic processes and3,904 complete
+answers pass. It selects a block-aligned safe-pruning research boundary, not
+a new speedup or production variant. Earlier static/dynamic matrices are retained
+and were not rerun. The early-exit proposal is paused; no10K/100K is launched.
+
+**Historical static checkpoint (2026-10-10):72/72 valid external results**, assembled as
 4+44+24. Both failed attempts remain preserved;74 external attempts plus18
 prior internal = **92/102**. The separately authorized second recovery is
 complete and the driver has exited. Full outputs, isolation, identities, order

@@ -1,6 +1,15 @@
 # Remaining gates after complete external static evidence
 
-## Current checkpoint (2026-10-10)
+## Latest gate (2026-10-10)
+
+The [completed pruning-value diagnosis](pruning_value/TREE_PRUNING_VALUE.md)
+supersedes the old automatic next-step order below. The external P/E short trace
+and two-snapshot diagnosis are closed. Before any further GPU campaign, identify
+one distinct block-aligned safe-pruning design, kill-test its nearest prior art,
+and prove its safety/cost boundary. No ordinary packing/cache/fusion label is
+automatically a new contribution. No long-run or GPU-Tree repair is launched.
+
+## Historical static checkpoint (2026-10-10)
 
 The separately authorized24-entry recovery is complete:4+44+24 =72 valid
 external observations, with both failed attempts preserved. Total primaries are

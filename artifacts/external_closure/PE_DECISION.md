@@ -1,6 +1,15 @@
 # Current-P residual costs and selected branch
 
-## Decision
+## Later diagnostic checkpoint (2026-10-10)
+
+The leaf-early-exit proposal below is historical and **paused** by the subsequent
+[tree-pruning diagnosis](pruning_value/TREE_PRUNING_VALUE.md). Two frozen range
+snapshots and the four-mode diagnostic are complete; the selected next boundary
+is cheap safe certificates aligned with physical verification blocks, not
+automatic leaf early-exit or another fusion. All prior positive/negative evidence
+remains unchanged. No new mechanism or long campaign is admitted.
+
+## Historical decision
 
 **Select branch 2: do not expand the current P to a 10K matrix.** The qualified
 short dynamic service still loses to E_ADAPT: paired E/P 0.202847, CI95
