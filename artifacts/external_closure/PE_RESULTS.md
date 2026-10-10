@@ -96,10 +96,11 @@ P median inclusive rebuild ACK sum: 2772.176464 ms (overlaps insert ACKs).
 
 These device-used samples are every 200 ms over the **whole process**, including
 warmup/setup/context, and can miss true peaks. They are not owned-allocation
-peaks or measured-trace-only peaks. E service-built snapshot is 4,527,489,024
-bytes; it excludes later lazy query workspace. Its shared vector/norm storage
-is 3,840,153,600 / 4,000,160 bytes. P in-service sampled peak is
-21,931,753,472 bytes. E retains 873,824 client result bytes including native
+peaks or measured-trace-only peaks. E service-built snapshot median is 4,527,489,024
+bytes (range 4,493,934,592–4,577,820,672); it excludes later lazy query workspace.
+Its shared vector/norm storage is 3,840,153,600 / 4,000,160 bytes.
+P in-service sampled peak median is 21,943,287,808 bytes
+(range 21,931,753,472–21,954,822,144). E retains 873,824 client result bytes including native
 squared fields; P output capacity is 828,672 bytes. Context/library allocations
 remaining at service release are not represented as leaked service vectors.
 

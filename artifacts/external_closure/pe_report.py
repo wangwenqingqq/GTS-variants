@@ -76,12 +76,15 @@ def render(x):
     for method in ('P','E'):
         values=[r['whole_process_200ms_samples']['peak_device_MiB'] for r in x['rows'] if r['method']==method]
         lines.append(f'| {method} | {st.median(values):.0f} | {min(values):.0f}–{max(values):.0f} |')
+    mem=lambda method,key:[r['memory'][key] for r in x['rows'] if r['method']==method]
+    pb=mem('P','sampled_device_peak_bytes');eb=mem('E','device_used_built_bytes')
     lines+=['','These device-used samples are every 200 ms over the **whole process**, including',
         'warmup/setup/context, and can miss true peaks. They are not owned-allocation',
-        'peaks or measured-trace-only peaks. E service-built snapshot is 4,527,489,024',
-        'bytes; it excludes later lazy query workspace. Its shared vector/norm storage',
-        'is 3,840,153,600 / 4,000,160 bytes. P in-service sampled peak is',
-        '21,931,753,472 bytes. E retains 873,824 client result bytes including native',
+        f'peaks or measured-trace-only peaks. E service-built snapshot median is {st.median(eb):,.0f}',
+        f'bytes (range {min(eb):,}–{max(eb):,}); it excludes later lazy query workspace.',
+        'Its shared vector/norm storage is 3,840,153,600 / 4,000,160 bytes.',
+        f'P in-service sampled peak median is {st.median(pb):,.0f} bytes',
+        f'(range {min(pb):,}–{max(pb):,}). E retains 873,824 client result bytes including native',
         'squared fields; P output capacity is 828,672 bytes. Context/library allocations',
         'remaining at service release are not represented as leaked service vectors.','',
         '## Qualification, recovery, and evidence identity','',
