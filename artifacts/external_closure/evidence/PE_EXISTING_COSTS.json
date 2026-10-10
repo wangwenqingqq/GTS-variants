@@ -1,0 +1,235 @@
+{
+  "source_sha256": "90958b933f020dd17392c5b4660b7168cc38337f80accbf569b8440d9b3466de",
+  "labels": [
+    "round_1_P",
+    "round_2_P",
+    "round_3_P",
+    "round_4_P",
+    "round_5_P",
+    "round_6_P"
+  ],
+  "trace_ms": [
+    6482.499215,
+    6526.574692,
+    6383.916884,
+    6477.201384,
+    6196.728172,
+    6475.446419
+  ],
+  "stages": [
+    {
+      "name": "query.tree",
+      "calls": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "per_process_ms": [
+        2632.460076,
+        2624.1884769999997,
+        2563.8207650000004,
+        2619.7009289999996,
+        2536.565072999999,
+        2630.2515409999996
+      ],
+      "median_ms": 2621.9447029999997,
+      "median_fraction_of_own_trace": 0.40526836455270776
+    },
+    {
+      "name": "query.buffer",
+      "calls": [
+        38,
+        38,
+        38,
+        38,
+        38,
+        38
+      ],
+      "per_process_ms": [
+        13.105979000000001,
+        13.404183999999999,
+        13.118731999999998,
+        11.178665,
+        11.207861000000003,
+        12.542344999999997
+      ],
+      "median_ms": 12.824162,
+      "median_fraction_of_own_trace": 0.0019793280158626166
+    },
+    {
+      "name": "query.prefix_merge",
+      "calls": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "per_process_ms": [
+        28.82231099999999,
+        23.635769000000007,
+        22.549364999999998,
+        19.451624000000002,
+        22.828265000000012,
+        27.036548
+      ],
+      "median_ms": 23.23201700000001,
+      "median_fraction_of_own_trace": 0.003652694192233223
+    },
+    {
+      "name": "delete.prefix_lookup",
+      "calls": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "per_process_ms": [
+        2.035923,
+        3.128887999999999,
+        3.525273,
+        3.8765310000000004,
+        2.7236490000000004,
+        1.9577010000000004
+      ],
+      "median_ms": 2.9262685,
+      "median_fraction_of_own_trace": 0.0004594687704301628
+    },
+    {
+      "name": "delete.buffer_merge",
+      "calls": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "per_process_ms": [
+        5.490447,
+        8.397054,
+        8.104025,
+        7.903440000000001,
+        6.389086000000001,
+        6.399292999999999
+      ],
+      "median_ms": 7.1513665,
+      "median_fraction_of_own_trace": 0.0011256177437872256
+    },
+    {
+      "name": "rebuild.compaction",
+      "calls": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "per_process_ms": [
+        734.14976,
+        767.3073830000001,
+        731.7408929999999,
+        735.2440670000001,
+        637.254122,
+        724.924636
+      ],
+      "median_ms": 732.9453265,
+      "median_fraction_of_own_trace": 0.11338182612110467
+    },
+    {
+      "name": "rebuild.construct",
+      "calls": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "per_process_ms": [
+        1331.985914,
+        1320.965195,
+        1329.573359,
+        1334.319578,
+        1282.758495,
+        1329.23019
+      ],
+      "median_ms": 1329.4017745,
+      "median_fraction_of_own_trace": 0.20573830939898524
+    },
+    {
+      "name": "rebuild.reset",
+      "calls": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "per_process_ms": [
+        3.0805360000000004,
+        3.349476,
+        2.669366,
+        2.923924,
+        2.9479800000000003,
+        2.902088
+      ],
+      "median_ms": 2.9359520000000003,
+      "median_fraction_of_own_trace": 0.00046331293965422207
+    },
+    {
+      "name": "safe_refit_update",
+      "calls": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "per_process_ms": [
+        696.975416,
+        693.8838820000001,
+        688.694195,
+        696.7089269999999,
+        681.001943,
+        697.694454
+      ],
+      "median_ms": 695.2964045,
+      "median_fraction_of_own_trace": 0.10765393773812344
+    },
+    {
+      "name": "PAR_plan_update",
+      "calls": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "per_process_ms": [
+        28.738128,
+        32.799395,
+        28.280411,
+        31.333509,
+        29.815274000000002,
+        30.241567
+      ],
+      "median_ms": 30.028420500000003,
+      "median_fraction_of_own_trace": 0.004740822262806833
+    }
+  ],
+  "scope": "inclusive existing per-process Host intervals; overlaps, not independent GPU times or removable-cost estimates",
+  "radius_upper_calls": "unknown; source confirms one per active parent CTA",
+  "distinct_radius_dimension_pairs": 1,
+  "multiplications_per_radius_call": 963
+}

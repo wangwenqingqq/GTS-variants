@@ -1,0 +1,291 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "exact_keeper_warmup_and336_payloads": true,
+  "measured_trace_span_ns": [
+    10930528209,
+    17368628585
+  ],
+  "diagnostic_trace_ms": 6438.100376,
+  "counter": {
+    "radius_upper_calls": 1006009,
+    "d": 960,
+    "distinct_parameter_pairs": 1
+  },
+  "inferred_directed_multiplications": 968786667,
+  "kernels": [
+    {
+      "name": "rex::verify_materialized(rex::View, const int *, float, int *, float *, rex::Work)",
+      "calls": 128,
+      "total_ms": 1793.45446,
+      "mean_ms": 14.01136296875
+    },
+    {
+      "name": "getPivotDisTiled(float *, char *, int *, TN *, int *, double *, int *, int, int *, int *, int)",
+      "calls": 10,
+      "total_ms": 1199.096333,
+      "mean_ms": 119.9096333
+    },
+    {
+      "name": "void verify_distances<(int)1, (bool)0, (bool)1>(const float *, const float *, const int *, const double *, const unsigned char *, double *, int, int, int)",
+      "calls": 128,
+      "total_ms": 844.274756,
+      "mean_ms": 6.59589653125
+    },
+    {
+      "name": "rex::parent_groups(rex::View, const int *, int, const int *, int *, int *, float, rex::Work)",
+      "calls": 640,
+      "total_ms": 811.498884,
+      "mean_ms": 1.2679670062500001
+    },
+    {
+      "name": "target::refit(const float *, const TN *, const int *, const int *, int, int, double *, double *)",
+      "calls": 2,
+      "total_ms": 686.255065,
+      "mean_ms": 343.1275325
+    },
+    {
+      "name": "getNewData(float *, float *, char *, char *, int *, int *, int *, int *, int, int *, int *, int)",
+      "calls": 2,
+      "total_ms": 487.649854,
+      "mean_ms": 243.824927
+    },
+    {
+      "name": "nodeSplit(TN *, int *, double *, int *, int, int *, float *, int *, int *, char *, int *)",
+      "calls": 10,
+      "total_ms": 110.761411,
+      "mean_ms": 11.0761411
+    },
+    {
+      "name": "rex::collect(rex::View, const int *, const int *, const float *, int *, float *)",
+      "calls": 128,
+      "total_ms": 32.569382,
+      "mean_ms": 0.254448296875
+    },
+    {
+      "name": "pack32(const float *, const int *, float *, int, int)",
+      "calls": 2,
+      "total_ms": 25.12751,
+      "mean_ms": 12.563755
+    },
+    {
+      "name": "block_topk(const double *, const int *, const Neighbor *, Neighbor *, int, int, int, bool)",
+      "calls": 512,
+      "total_ms": 21.460075,
+      "mean_ms": 0.041914208984375
+    },
+    {
+      "name": "target_buffer(int *, float *, int, const int *, int, float, int *, Object)",
+      "calls": 38,
+      "total_ms": 9.18674,
+      "mean_ms": 0.24175631578947368
+    },
+    {
+      "name": "mergeTotalResult(int, int *, int *, int *, float *, Object, float *, int *, int)",
+      "calls": 128,
+      "total_ms": 8.980595,
+      "mean_ms": 0.0701608984375
+    },
+    {
+      "name": "uk::publish(const float *, float *, const int *, const int *, const int *, int *, unsigned char *, int, int, int)",
+      "calls": 128,
+      "total_ms": 5.846961,
+      "mean_ms": 0.0456793828125
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+      "calls": 228,
+      "total_ms": 3.952294,
+      "mean_ms": 0.01733462280701754
+    },
+    {
+      "name": "initIndexData(int *, TN *, int *, int *, int *)",
+      "calls": 2,
+      "total_ms": 3.949831,
+      "mean_ms": 1.9749155
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, const int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::NullType, unsigned int, int, (bool)0, cub::CUB_300104_SM_1200::NullType>(T2, T3, T4, int, T5, T6, T7)",
+      "calls": 128,
+      "total_ms": 3.494215,
+      "mean_ms": 0.0272985546875
+    },
+    {
+      "name": "findIdx(int *, int, int *, int, int, int *)",
+      "calls": 40,
+      "total_ms": 1.866819,
+      "mean_ms": 0.046670474999999996
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, int, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)",
+      "calls": 80,
+      "total_ms": 1.080643,
+      "mean_ms": 0.0135080375
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<int, int *>, unsigned int, int, (bool)0, int>(T2, T3, T4, int, T5, T6, T7)",
+      "calls": 128,
+      "total_ms": 0.64365,
+      "mean_ms": 0.005028515625
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)",
+      "calls": 138,
+      "total_ms": 0.571904,
+      "mean_ms": 0.004144231884057971
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>>(T1, int)",
+      "calls": 484,
+      "total_ms": 0.400768,
+      "mean_ms": 0.0008280330578512396
+    },
+    {
+      "name": "final_output(const Neighbor *, int *, float *, int, int)",
+      "calls": 128,
+      "total_ms": 0.271328,
+      "mean_ms": 0.00211975
+    },
+    {
+      "name": "rex::materialize(rex::View, const int *, int, const int *, int *, rex::Work)",
+      "calls": 128,
+      "total_ms": 0.225344,
+      "mean_ms": 0.0017605
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)",
+      "calls": 138,
+      "total_ms": 0.18912,
+      "mean_ms": 0.0013704347826086957
+    },
+    {
+      "name": "uk::normalize(int *, float *, int)",
+      "calls": 128,
+      "total_ms": 0.131361,
+      "mean_ms": 0.0010262578125
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)",
+      "calls": 10,
+      "total_ms": 0.107137,
+      "mean_ms": 0.010713700000000001
+    },
+    {
+      "name": "getRnn(int *, Object, Object, int)",
+      "calls": 38,
+      "total_ms": 0.041729,
+      "mean_ms": 0.0010981315789473684
+    },
+    {
+      "name": "mergeInResult(int, int *, int *, int *, int *)",
+      "calls": 20,
+      "total_ms": 0.029344,
+      "mean_ms": 0.0014672
+    },
+    {
+      "name": "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, unsigned long long>(T2 *)",
+      "calls": 10,
+      "total_ms": 0.011584,
+      "mean_ms": 0.0011584000000000002
+    }
+  ],
+  "runtime": [
+    {
+      "name": "cudaStreamSynchronize_v3020",
+      "calls": 770,
+      "inclusive_ms": 2621.415466
+    },
+    {
+      "name": "cudaDeviceSynchronize_v3020",
+      "calls": 726,
+      "inclusive_ms": 2558.732719
+    },
+    {
+      "name": "cudaMemcpy_v3020",
+      "calls": 852,
+      "inclusive_ms": 891.974752
+    },
+    {
+      "name": "cudaFree_v3020",
+      "calls": 1620,
+      "inclusive_ms": 205.504939
+    },
+    {
+      "name": "cudaMalloc_v3020",
+      "calls": 794,
+      "inclusive_ms": 17.905742
+    },
+    {
+      "name": "cudaLaunchKernel_v7000",
+      "calls": 3684,
+      "inclusive_ms": 13.381454
+    },
+    {
+      "name": "cudaMemset_v3020",
+      "calls": 539,
+      "inclusive_ms": 8.802892
+    },
+    {
+      "name": "cudaMallocManaged_v6000",
+      "calls": 788,
+      "inclusive_ms": 2.912355
+    },
+    {
+      "name": "cudaMemcpyAsync_v3020",
+      "calls": 138,
+      "inclusive_ms": 1.476664
+    },
+    {
+      "name": "cuKernelGetName",
+      "calls": 3684,
+      "inclusive_ms": 0.378221
+    },
+    {
+      "name": "cudaMemsetAsync_v3020",
+      "calls": 100,
+      "inclusive_ms": 0.375191
+    },
+    {
+      "name": "cudaMemGetInfo_v3020",
+      "calls": 2,
+      "inclusive_ms": 0.028035
+    }
+  ],
+  "radius_isolated_time": "unknown; containing kernel includes distances, synchronization, traversal and diagnostic atomic",
+  "scope": "one extra atomic per active parent CTA; NSYS perturbed timing, not primary denominator or hoist speedup",
+  "hashes": {
+    "cost.sqlite": "a31b85ec24a1b4626dd5f75ff16776ee3bee2b69a97be369af603224b0fa8ede",
+    "cost.nsys-rep": "328ad8d24e5129be06104fa8b3b442cf23b85fda9f77889d2c2be7b54f24a688",
+    "out.cost.json": "81c0b1a8fdb975d340cc16cb13a8739046c6d63083b052491f4738e586e49af2",
+    "receipt.json": "b2b77071c69ccc26fa88bc7d56c968abb5560821dda14eb64feea01ed726e0ed"
+  },
+  "checker_sha256": "5d3796f2ab0b6a6c81129046e983942aa0833d8657de8aa7f552bbbee8088d51",
+  "binary_sha256": "0b977060dee91d74f62d5312a03f377b08f5a90d452aae9cd380cfb7033872f0",
+  "registration_sha256": "7eea9250ab0a29e50e84443d4b8f40791b803ffdf542a0101fc254d6338da129",
+  "build_registration_sha256": "933eff7d9f19fd7b06bda0973c3de5a32becc6f8a1303853cb25d6e50beaf5cb",
+  "sources": {
+    "include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "include/region_output.cuh": "d9f10004b43c3f40a732fec44aa45ccda2fdbb0be6d5e4b2d7cc30fd7d4172d6",
+    "include/knn_verify.cuh": "1924d5fb4e20693c22ff1a60106ac3fbdde542f40f768dce2dee39edb249894e",
+    "include/region_exec.cuh": "30b58e52d2a92e1cac560890f667b3bb7f1936b835b5662b85c275f7f03db2b5",
+    "include/region_plan.hpp": "44e11c15d4bd2e9ff6ef5ee96dfed242d088b41c256a45692ee63f5cf09e6bf5",
+    "include/search.cuh": "76e62136f39e8d968c637bc1c1180d3807c5d7a2d77e2a5305acc8ce09cea787",
+    "include/region_types.hpp": "caa80f5a02cb4eac3e1efe2a9a1c1a3a7d8a53174f7f2ec3fc5e7a591cd03e77",
+    "include/input.hpp": "73a8bf18c5824d655fe271e014e9aa7349b3ec95c94d37a811291f67b9d438c7",
+    "include/legacy_ops.cuh": "6b78cf61ab221f1d38f289ce8ad5c7b3f3dfa52cd6e281d03423b991d12d2ef4",
+    "include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "include/numeric.cuh": "6b770c8cd9646475ec7e24c1075a6b4917a5607c7b4faf87ffe33f7fe0981454",
+    "include/knn_cutoff.cuh": "e482955ab761eaab25f0fb3001eff4e282f8064f5173072e5bde08a288e30ea5",
+    "include/parallel_range.cuh": "eb83901ef08b67b9033c4ba0b19a172fc6817850f872073ffcbedf8784007642",
+    "include/u10_trace.hpp": "77dfd8fbf81030f44c4251d40aec1d81c6ef120bba77abeb6006f7259d244951",
+    "include/region_bridge.cuh": "244d04dd8b59149029ab03683aa1cf776737435dfb54d957a41faddeaec48e7a",
+    "include/knn_live.cuh": "2aafe1214955f12b50179238094f9a4c6df25c4d192d13a6834c0c054061147e",
+    "include/search_naive.cuh": "ae8c0f16c5a66357b0fb35f0b24714223ea67482909326eb95ee571d24e45023",
+    "include/build_tiles.hpp": "18a60ecf8529f4b1a1218851376ef39b43bbcade5a33e8885ffcc45d83328411",
+    "include/search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+    "include/update.cuh": "1264cddaab4915ed178900ad4e69a2d13a8577acf0ec6789772fc0c45cc00844",
+    "include/knn_select.cuh": "3f3f3d36da64a4d6dbe2011475059a07ac56b169d51a75e5c20ec11b253d2fde",
+    "include/tree.cuh": "8096e3f92ba33697191357be721cf608f2387245bbacdc8480a071fa678b56e4",
+    "src/main.cu": "8ed87d2cdd290577b6a53edabec5c515ab87e496aff8de27e905da398a70c3fa"
+  },
+  "private_source_sha256": "4ec4c04020253b6b51ac975e6fb5e7613ec17d1c3d28d4e1d29d3aa7db07bb65"
+}

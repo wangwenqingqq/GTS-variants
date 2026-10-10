@@ -201,3 +201,52 @@ proof, full6+4+1 evidence and import preflight before launch; new paths cannot
 replace the old failure. Supply `--original-source` for R3 as well as the R2
 qualification source. See STATIC_RECOVERY.md. The full4+68 real-result analysis
 is pending, not validated by these launch checks.
+
+## Logical short dynamic P/E follow-up
+
+The full72 static matrix remains closed; this is a separate experiment, not a
+rerun. `PE_CONTRACT.json` fixes336 logical events, the two methods, fresh budgets,
+field/membership gates and the PE/EP estimator. `pe_trace.py` replays physical
+history once into immutable Host query/insert vectors and distinct occurrence
+IDs. `pe_common.hpp` implements only validation/rank mapping; it is not an index.
+
+```sh
+python3 artifacts/external_closure/test_pe.py
+python3 artifacts/external_closure/pe_prepare.py --parent "$QUALIFIED_TILED_BUILD" --work "$PE_P_BUILD"
+python3 artifacts/external_closure/pe_build_e.py --range-build "$QUALIFIED_STATIC_BUILD" \
+  --faiss-source "$FAISS_SOURCE" --faiss-archive "$FAISS_STATIC_ARCHIVE" \
+  --cuda "$CUDA_HOME" --work "$PE_E_BUILD"
+python3 artifacts/external_closure/pe_campaign.py --help
+```
+
+The E build consumes the existing qualified static cuVS compiler recipe and
+installed Faiss1.15.1 library; no new dependency or custom distance/Top-K kernel.
+`pe_check.py` independently validates the bounded replay and binds target outputs
+to the previously exhaustive-qualified same336-event reference. Reference
+physical ranks are converted to logical occurrence IDs, never sent to E.
+External native fields retain their5e-5 tolerance and exact membership/tie-aware
+K requirement; P retains ordered-FP64 exact bits. `pe_results.py` refuses a partial
+12-job matrix. `pe_diagnostic.py` is a separately counted attribution probe with
+one atomic per active parent; its perturbed durations never become formal timing.
+
+### Measured closure, not a pending launch
+
+[PE_RESULTS.md](PE_RESULTS.md) contains all12 formal observations and their
+limitations;[PE_DECISION.md](PE_DECISION.md) selects branch2, no10K expansion.
+Eleven qualifiers used, one first-checker failure retained/admitted offline,
+one separate diagnostic. Do not rerun the closed campaign automatically.
+
+`pe_binding.py` independently checks the original+recovery registration chain,
+exact23 process inventory, all complete warmup/measured outputs and frozen336
+identity; `pe_results.py` requires that proof before estimating ratios. These
+two analysis entries intentionally bind this historical stopped-first-checker
+plus authorized-recovery campaign; they are not generic analyzers for a future
+all-success fresh run. A new campaign needs its own registration and matching
+analysis contract, not fabricated recovery records.
+`pe_curate.py --raw "$PRIVATE_COMPLETE_EVIDENCE" --output "$FRESH_PUBLIC_STAGING"`
+whitelists public evidence and hashes. `pe_report.py` regenerates PE_RESULTS.md
+from evidence/PE_RESULTS.json. Raw data/receipts/configuration are not published.
+The two PE source patches reconstruct executed versions in a disposable copy
+with `git apply --unidiff-zero` (resumed executor first, original checker second);
+do not apply them to the current working tree or use them to bypass hardened gates.
+The first checker error and later offline hardening are not performance rejects.

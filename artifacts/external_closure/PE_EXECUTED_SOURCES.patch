@@ -1,0 +1,62 @@
+--- a/artifacts/external_closure/pe_campaign.py
++++ b/artifacts/external_closure/pe_campaign.py
+@@ -3 +2,0 @@
+-if not __debug__:raise RuntimeError('Python assertions must remain enabled')
+@@ -54 +52,0 @@
+-    a.work=outside_repo(a.work)
+@@ -70 +67,0 @@
+-    a.work=outside_repo(a.work)
+--- a/artifacts/external_closure/pe_check.py
++++ b/artifacts/external_closure/pe_check.py
+@@ -3 +2,0 @@
+-if not __debug__:raise RuntimeError('Python assertions must remain enabled')
+@@ -29 +28 @@
+-    at=qi=0;reports=[];live_counts=[];physical=base_live=N;buffer=0
++    at=qi=0;reports=[];live_counts=[]
+@@ -31,11 +30,2 @@
+-        n_before=int(alive.sum());before_state=(physical,buffer)
+-        if flag==0:
+-            buffer+=1
+-            if buffer==10:physical=base_live+buffer;base_live=physical;buffer=0
+-        elif flag==1:
+-            if old_index<base_live:base_live-=1
+-            else:buffer-=1
+-        assert base_live>=0 and 0<=buffer<10
+-        if flag==0:
+-            assert qv[step].tobytes()==x[s].tobytes(),'frozen insertion vector mismatch'
+-            source[oid]=s;alive[oid]=True
++        n_before=int(alive.sum())
++        if flag==0:source[oid]=s;alive[oid]=True
+@@ -46 +35,0 @@
+-            assert method=='P' or int(r['flag'])==flag
+@@ -85 +73,0 @@
+-        else:assert tuple(int(state[k]) for k in ('base_before','buffer_before','base_after','buffer_after'))==(*before_state,physical,buffer)
+@@ -88 +75,0 @@
+-    if refrows is not None:assert qi==len(refrows),'reference trace prefix is not complete'
+--- a/artifacts/external_closure/pe_diagnostic.py
++++ b/artifacts/external_closure/pe_diagnostic.py
+@@ -3 +2,0 @@
+-if not __debug__:raise RuntimeError('Python assertions must remain enabled')
+@@ -6 +4,0 @@
+-from common import outside_repo
+@@ -11 +9 @@
+-    work=outside_repo(work);assert not work.exists();work.mkdir(parents=True)
++    assert not work.exists();work.mkdir(parents=True)
+--- a/artifacts/external_closure/pe_prepare.py
++++ b/artifacts/external_closure/pe_prepare.py
+@@ -3 +2,0 @@
+-if not __debug__:raise RuntimeError('Python assertions must remain enabled')
+@@ -6 +4,0 @@
+-from common import outside_repo
+@@ -11 +9 @@
+-    work=outside_repo(work);assert not work.exists();work.mkdir(parents=True);source=json.loads((parent/'PREPARED.json').read_text())
++    assert not work.exists();work.mkdir(parents=True);source=json.loads((parent/'PREPARED.json').read_text())
+--- a/artifacts/external_closure/pe_trace.py
++++ b/artifacts/external_closure/pe_trace.py
+@@ -3 +2,0 @@
+-if not __debug__:raise RuntimeError('Python assertions must remain enabled')
+@@ -6 +4,0 @@
+-from common import outside_repo
+@@ -43 +41 @@
+-    prefix=outside_repo(Path(prefix));assert not list(prefix.parent.glob(prefix.name+'.*'))
++    prefix=Path(prefix);assert not list(prefix.parent.glob(prefix.name+'.*'))

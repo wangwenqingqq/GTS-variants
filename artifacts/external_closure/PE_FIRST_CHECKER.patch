@@ -1,0 +1,55 @@
+--- a/artifacts/external_closure/pe_campaign.py
++++ b/artifacts/external_closure/pe_campaign.py
+@@ -52,15 +51,0 @@
+-def recover(a):
+-    original=read(a.work/'REGISTERED.json');failed=read(a.work/'qualification/RESULTS.json')
+-    assert not (a.work/'RECOVERY.json').exists() and not (a.work/'recovery').exists()
+-    assert not failed['complete'] and failed['rows'][0]['label']=='P_bounded' and failed['rows'][0]['status']=='failed'
+-    assert all(r['status']=='not_executed_after_stop' for r in failed['rows'][1:])
+-    receipt=read(a.work/'qualification/guards/P_bounded/receipt.json');assert receipt['runtime_valid']
+-    c=a.work/'cases/bounded';p=a.work/'qualification/outputs/P_bounded'
+-    recheck={suffix or 'measured':check(c/'data.f32bin',c/events,str(c/'trace')+suffix,str(p)+suffix,'P')
+-             for suffix,events in (('','events.txt'),('.warmup','warmup.events'))}
+-    updated={**original,'source_hashes':source_hashes(),'original_registration_sha256':cpu.sha(a.work/'REGISTERED.json'),
+-        'original_failure_sha256':cpu.sha(a.work/'qualification/RESULTS.json'),'first_sample_offline_recheck':recheck,
+-        'authorized_scope':'human-approved checker repair; no rerun of P_bounded; remaining10 qualifiers then original12 primaries only if qualified',
+-        'recovery_jobs':jobs('qualification')[1:],'registered_unix':time.time()}
+-    cpu.save(a.work/'RECOVERY.json',updated)
+-
+@@ -68,2 +53 @@
+-    registration=a.work/('RECOVERY.json' if a.stage in ('recovery','primary') and (a.work/'RECOVERY.json').exists() else 'REGISTERED.json')
+-    reg=read(registration);assert reg['source_hashes']==source_hashes() and reg['reference']==reference(a)
++    reg=read(a.work/'REGISTERED.json');assert reg['source_hashes']==source_hashes() and reg['reference']==reference(a)
+@@ -74,6 +58,2 @@
+-        if registration.name=='RECOVERY.json':
+-            q=read(a.work/'recovery/RESULTS.json');assert q['complete'] and len(q['rows'])==len(jobs('qualification'))-1
+-            assert all(r['status']=='passed' for r in q['rows']) and all(v['passed'] for v in reg['first_sample_offline_recheck'].values())
+-        else:
+-            q=read(a.work/'qualification/RESULTS.json');assert q['complete'] and len(q['rows'])==len(jobs('qualification')) and all(r['status']=='passed' for r in q['rows'])
+-    out=a.work/a.stage;out.mkdir(exist_ok=False);(out/'outputs').mkdir();selected=jobs('qualification')[1:] if a.stage=='recovery' else jobs(a.stage);rows=[]
++        q=read(a.work/'qualification/RESULTS.json');assert q['complete'] and len(q['rows'])==len(jobs('qualification')) and all(r['status']=='passed' for r in q['rows'])
++    out=a.work/a.stage;out.mkdir(exist_ok=False);(out/'outputs').mkdir();selected=jobs(a.stage);rows=[]
+@@ -82 +62 @@
+-    cpu.save(out/'REGISTERED.json',dict(parent_sha256=cpu.sha(registration),jobs=selected,environment={k:env[k] for k in ('LD_LIBRARY_PATH','OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','REGION_MODE','BUILD_MAPPING','KNN_MODE','TARGET_WARMUP','U10_OBSERVE','U10_TREE_AUDIT','TARGET_RESTORE_AUDIT')},before_execution=True))
++    cpu.save(out/'REGISTERED.json',dict(parent_sha256=cpu.sha(a.work/'REGISTERED.json'),jobs=selected,environment=env|{'PE_TRACE':'per-job frozen case trace'},before_execution=True))
+@@ -111 +91 @@
+-    p=argparse.ArgumentParser();p.add_argument('action',choices=('register','recover','run'));p.add_argument('--stage',choices=('qualification','recovery','primary'),default='qualification')
++    p=argparse.ArgumentParser();p.add_argument('action',choices=('register','run'));p.add_argument('--stage',choices=('qualification','primary'),default='qualification')
+@@ -114 +94 @@
+-    a=p.parse_args();assert __debug__;{'register':register,'recover':recover,'run':run}[a.action](a)
++    a=p.parse_args();assert __debug__;(register if a.action=='register' else run)(a)
+--- a/artifacts/external_closure/pe_check.py
++++ b/artifacts/external_closure/pe_check.py
+@@ -79,2 +79,2 @@
+-        summary=json.loads(Path(prefix+'.summary.json').read_text());region=json.loads(Path(prefix+'.region.json').read_text());mirror=json.loads(Path(prefix+'.unified.json').read_text());numeric=json.loads(Path(prefix+'.numeric.json').read_text());meta=json.loads(Path(prefix+'.pe.json').read_text())
+-        assert region['mode']==1 and mirror['knn_mode']=='FULL'
++        summary=json.loads(Path(prefix+'.summary.json').read_text());region=json.loads(Path(prefix+'.region.json').read_text());mirror=json.loads(Path(prefix+'.unified.json').read_text());numeric=json.loads(Path(prefix+'.numeric.json').read_text());tiles=json.loads(Path(prefix+'.build_tiles.json').read_text());meta=json.loads(Path(prefix+'.pe.json').read_text())
++        assert region['mode']==1 and mirror['knn_mode']=='FULL' and tiles['mode']=='TILED'
+@@ -82,6 +82 @@
+-        assert mirror['refreshes']==region['refreshes']==numeric['refreshes']==rebuilds+1
+-        # Native tile accounting is process-cumulative and written only at main exit.
+-        if not prefix.endswith('.warmup'):
+-            tiles=json.loads(Path(prefix+'.build_tiles.json').read_text())
+-            assert tiles['mode']=='TILED' and not tiles['audit'] and tiles['new_owned_GPU_bytes']==0
+-            assert tiles['build_calls']==rebuilds+3  # two warmup builds plus measured cold/rebuilds
++        assert tiles['build_calls']==mirror['refreshes']==region['refreshes']==numeric['refreshes']==rebuilds+1
