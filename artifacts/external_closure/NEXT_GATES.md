@@ -95,3 +95,19 @@ The cheap <=4-query-distance gate failed; local-write simulation does not rescue
 it. See [decision](../block_certificate_headroom_20261010/DECISION.md) and its
 contracts/closure. Do not widen P beyond 8 or mix these structural counts into
 the existing formal end-to-end ratios.
+
+## Certificate-aware partition follow-up (2026-10-11)
+
+The bounded S0/S1 × P0/P1/P2/P3 offline test is complete. Tighter recursive
+partitions help, but same-configuration survival is still 68.8995% / 67.8749%
+on GIST N1M/D960. The explicit <=50% GO and <=65% positive conditional band
+both fail; the optimistic per-snapshot >70% family-NO-GO does not trigger.
+The predeclared fallback is **CONDITIONAL / uncovered_interval**. Preserve this
+uncertainty; do not convert it into either a positive gate or impossibility.
+
+The selected capacity-aware 4167-block initialization retains local writes in
+10I10D and 20I20D simulations; its separate query measurements do not rescue
+the static gate. No automatic CUDA prototype, more pivots, partition variants,
+or long run follows. A genuinely different <=4-distance-equivalent safe-summary
+hypothesis needs its own prior-art kill test and approval before new experiments.
+See [contract and complete evidence](../certificate_aware_partition_20261010/README.md).

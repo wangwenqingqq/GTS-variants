@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "policy": "Whitelist scalar counts and proof receipts; no numeric rewrites or private input paths",
+  "files": [
+    {
+      "raw_file": "run/PARTITION_STATS.json",
+      "published_file": "partition/PARTITION_STATS.json",
+      "sha256": "e113531795393e65d37053e58bd07b923768d555e681483ff82fdc027958e6f3",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "run/BLOCK_STATS.csv.gz",
+      "published_file": "partition/BLOCK_STATS.csv.gz",
+      "sha256": "dba38c7453b0b8ad8247116f6dc3f33bc119c7485bb7b0f8e540c4adfce27908",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "run/BLOCK_SELECTIVITY.json",
+      "published_file": "query/BLOCK_SELECTIVITY.json",
+      "sha256": "cf7ffdaa8191d5d85b041a41278f395fddce1d4e3b242b5bc43a9ef14ea75137",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "run/DECISION.json",
+      "published_file": "evidence/DECISION.json",
+      "sha256": "7114f8afab610111ef9e728c12f66283742864f0abba09b15edf293bf62e4c2d",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "run/PROOF.json",
+      "published_file": "evidence/STATIC_PROOF.json",
+      "sha256": "fd3765b91e0f20ab9e5168485a8fa6a94475e8eb5091f1fd4bb7a3de63eb3184",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "run/REGISTERED.json",
+      "published_file": "evidence/STATIC_REGISTERED.json",
+      "sha256": "738d5dda5e2d3a67e6ee47661c6b2c09888acf9a582e9ebb4f9c4908fdb4d658",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "verification/VERIFY.json",
+      "published_file": "evidence/STATIC_VERIFY.json",
+      "sha256": "6b26e96fbbd8d4a1a88040a0b2f739af81c787b63644caab71796f7f9b5a0421",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "update/PROOF.json",
+      "published_file": "evidence/UPDATE_PROOF.json",
+      "sha256": "93b34c45f259c656df3219f43bd68dccf28440a307eb3a8e79cef8e33958ae67",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "update/REGISTERED.json",
+      "published_file": "evidence/UPDATE_REGISTERED.json",
+      "sha256": "b52ee34cce3ee91dbec655d09c1065682c26b60d3162178e1a9fafb6bf7245e8",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "update/UPDATE_RECHECK.json",
+      "published_file": "update/UPDATE_RECHECK.json",
+      "sha256": "ba1e6e8696d045efddcda2d217ea8337538873092cb8777768e9859dee3e525a",
+      "byte_identical": true
+    },
+    {
+      "raw_file": "ENVIRONMENT.json",
+      "published_file": "evidence/ENVIRONMENT.json",
+      "sha256": "d3f6b6bcb12408b0c5b1b5a36069007e9c3325991b19f322bdb34dd4ceca5518",
+      "byte_identical": true
+    }
+  ],
+  "per_block_uncompressed_sha256": "16a7a81fbf7453ce3c10afc574a925bccfd0fe005664dd900e69dadde3f9c818",
+  "excluded": "All object coordinates, references, occurrence/lineage arrays and partition NPZ files remain external with hashes in the proofs"
+}

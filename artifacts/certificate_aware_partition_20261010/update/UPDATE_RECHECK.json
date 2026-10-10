@@ -1,0 +1,1998 @@
+{
+  "rows": [
+    {
+      "snapshot": "initial",
+      "ending_snapshot": "first_rebuilt",
+      "strategy": "S1",
+      "partition": "P2",
+      "pivot_count": 4,
+      "physical_capacity": 256,
+      "active_capacity": 240,
+      "nominal_slack_fraction": 0.0625,
+      "actual_initial_empty_slot_fraction": 0.06257499400047994,
+      "min_initial_block_size": 239,
+      "max_initial_block_size": 240,
+      "initial_total_blocks": 4167,
+      "final_total_blocks": 4167,
+      "global_initialization_passes": 1,
+      "initialization_objects": 1000000,
+      "actual_inserts": 10,
+      "actual_deletes": 10,
+      "changed_blocks": 20,
+      "changed_block_fraction": 0.004799616030717543,
+      "moved_existing_objects": 0,
+      "moved_existing_fraction": 0.0,
+      "moved_existing_events": 0,
+      "all_vector_move_events": 0,
+      "splits": 0,
+      "certificate_refreshes": 20,
+      "global_repartition": 0,
+      "placement_blocks_examined": 41670,
+      "initial_query_survival_mean": 0.6887748980081594,
+      "post_update_query_survival_mean": 0.6887748980081594,
+      "locality_gate_passed": true,
+      "initial_state_sha256": "63ca2db943bf9abcae7c77a3104da709df4cea288c891172a5250f0d53427254",
+      "final_state_sha256": "3ffb40fa9626e046936561d288417a87e73386e3e1ff43f7a75ec3c3e68ae14f",
+      "full_final_occurrence_lineage_and_bounds_verified": true,
+      "initial_queries": [
+        {
+          "query": 0,
+          "qid": 88406,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3526,
+          "surviving_block_fraction": 0.8461723062155028,
+          "surviving_active_objects": 846180,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 1,
+          "qid": 865632,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3369,
+          "surviving_block_fraction": 0.80849532037437,
+          "surviving_active_objects": 808487,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 2,
+          "qid": 881748,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3078,
+          "surviving_block_fraction": 0.7386609071274298,
+          "surviving_active_objects": 738673,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 3,
+          "qid": 916533,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3444,
+          "surviving_block_fraction": 0.8264938804895609,
+          "surviving_active_objects": 826504,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 4,
+          "qid": 40158,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3052,
+          "surviving_block_fraction": 0.732421406287497,
+          "surviving_active_objects": 732416,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 5,
+          "qid": 242468,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3719,
+          "surviving_block_fraction": 0.892488600911927,
+          "surviving_active_objects": 892484,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 6,
+          "qid": 40486,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2722,
+          "surviving_block_fraction": 0.6532277417806576,
+          "surviving_active_objects": 653237,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 7,
+          "qid": 900387,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 231,
+          "surviving_blocks": 2857,
+          "surviving_block_fraction": 0.685625149988001,
+          "surviving_active_objects": 685642,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 8,
+          "qid": 703226,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2541,
+          "surviving_block_fraction": 0.6097912167026638,
+          "surviving_active_objects": 609803,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 9,
+          "qid": 791039,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3347,
+          "surviving_block_fraction": 0.8032157427405807,
+          "surviving_active_objects": 803207,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 10,
+          "qid": 724874,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3711,
+          "surviving_block_fraction": 0.89056875449964,
+          "surviving_active_objects": 890573,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 11,
+          "qid": 671829,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3723,
+          "surviving_block_fraction": 0.8934485241180705,
+          "surviving_active_objects": 893451,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 12,
+          "qid": 722418,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2489,
+          "surviving_block_fraction": 0.5973122150227982,
+          "surviving_active_objects": 597319,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 13,
+          "qid": 152899,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3714,
+          "surviving_block_fraction": 0.8912886969042476,
+          "surviving_active_objects": 891283,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 14,
+          "qid": 737995,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3218,
+          "surviving_block_fraction": 0.7722582193424526,
+          "surviving_active_objects": 772261,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 15,
+          "qid": 144573,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3360,
+          "surviving_block_fraction": 0.8063354931605472,
+          "surviving_active_objects": 806343,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 16,
+          "qid": 570909,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3539,
+          "surviving_block_fraction": 0.8492920566354691,
+          "surviving_active_objects": 849304,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 17,
+          "qid": 347206,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3278,
+          "surviving_block_fraction": 0.7866570674346053,
+          "surviving_active_objects": 786668,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 18,
+          "qid": 63744,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3615,
+          "surviving_block_fraction": 0.8675305975521959,
+          "surviving_active_objects": 867539,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 19,
+          "qid": 625378,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 179,
+          "surviving_block_fraction": 0.04295656347492201,
+          "surviving_active_objects": 42960,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 20,
+          "qid": 136857,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2376,
+          "surviving_block_fraction": 0.5701943844492441,
+          "surviving_active_objects": 570180,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 21,
+          "qid": 201233,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3077,
+          "surviving_block_fraction": 0.738420926325894,
+          "surviving_active_objects": 738417,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 22,
+          "qid": 72436,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 140,
+          "surviving_block_fraction": 0.033597312215022795,
+          "surviving_active_objects": 33599,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 23,
+          "qid": 617423,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2809,
+          "surviving_block_fraction": 0.6741060715142788,
+          "surviving_active_objects": 674119,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 24,
+          "qid": 810945,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 222,
+          "surviving_blocks": 1218,
+          "surviving_block_fraction": 0.29229661627069836,
+          "surviving_active_objects": 292302,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 25,
+          "qid": 789615,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2638,
+          "surviving_block_fraction": 0.6330693544516439,
+          "surviving_active_objects": 633062,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 26,
+          "qid": 601856,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 2,
+          "surviving_blocks": 2935,
+          "surviving_block_fraction": 0.7043436525077994,
+          "surviving_active_objects": 704369,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 27,
+          "qid": 433080,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2225,
+          "surviving_block_fraction": 0.5339572834173266,
+          "surviving_active_objects": 533970,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 28,
+          "qid": 415755,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2920,
+          "surviving_block_fraction": 0.7007439404847612,
+          "surviving_active_objects": 700748,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 29,
+          "qid": 282095,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3089,
+          "surviving_block_fraction": 0.7413006959443245,
+          "surviving_active_objects": 741296,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 30,
+          "qid": 66651,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2646,
+          "surviving_block_fraction": 0.6349892008639308,
+          "surviving_active_objects": 634990,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 31,
+          "qid": 326654,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3290,
+          "surviving_block_fraction": 0.7895368370530358,
+          "surviving_active_objects": 789533,
+          "false_prune_blocks": 0
+        }
+      ],
+      "post_update_queries": [
+        {
+          "query": 0,
+          "qid": 88406,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3526,
+          "surviving_block_fraction": 0.8461723062155028,
+          "surviving_active_objects": 846180,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 1,
+          "qid": 865632,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3369,
+          "surviving_block_fraction": 0.80849532037437,
+          "surviving_active_objects": 808487,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 2,
+          "qid": 881748,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3078,
+          "surviving_block_fraction": 0.7386609071274298,
+          "surviving_active_objects": 738673,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 3,
+          "qid": 916533,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3444,
+          "surviving_block_fraction": 0.8264938804895609,
+          "surviving_active_objects": 826507,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 4,
+          "qid": 40158,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3052,
+          "surviving_block_fraction": 0.732421406287497,
+          "surviving_active_objects": 732413,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 5,
+          "qid": 242468,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3719,
+          "surviving_block_fraction": 0.892488600911927,
+          "surviving_active_objects": 892484,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 6,
+          "qid": 40486,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2722,
+          "surviving_block_fraction": 0.6532277417806576,
+          "surviving_active_objects": 653233,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 7,
+          "qid": 900387,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 231,
+          "surviving_blocks": 2857,
+          "surviving_block_fraction": 0.685625149988001,
+          "surviving_active_objects": 685642,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 8,
+          "qid": 703226,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2541,
+          "surviving_block_fraction": 0.6097912167026638,
+          "surviving_active_objects": 609804,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 9,
+          "qid": 791039,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3347,
+          "surviving_block_fraction": 0.8032157427405807,
+          "surviving_active_objects": 803208,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 10,
+          "qid": 724874,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3711,
+          "surviving_block_fraction": 0.89056875449964,
+          "surviving_active_objects": 890573,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 11,
+          "qid": 671829,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3723,
+          "surviving_block_fraction": 0.8934485241180705,
+          "surviving_active_objects": 893451,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 12,
+          "qid": 722418,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2489,
+          "surviving_block_fraction": 0.5973122150227982,
+          "surviving_active_objects": 597314,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 13,
+          "qid": 152899,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3714,
+          "surviving_block_fraction": 0.8912886969042476,
+          "surviving_active_objects": 891282,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 14,
+          "qid": 737995,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3218,
+          "surviving_block_fraction": 0.7722582193424526,
+          "surviving_active_objects": 772259,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 15,
+          "qid": 144573,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3360,
+          "surviving_block_fraction": 0.8063354931605472,
+          "surviving_active_objects": 806343,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 16,
+          "qid": 570909,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3539,
+          "surviving_block_fraction": 0.8492920566354691,
+          "surviving_active_objects": 849305,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 17,
+          "qid": 347206,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3278,
+          "surviving_block_fraction": 0.7866570674346053,
+          "surviving_active_objects": 786668,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 18,
+          "qid": 63744,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3615,
+          "surviving_block_fraction": 0.8675305975521959,
+          "surviving_active_objects": 867540,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 19,
+          "qid": 625378,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 179,
+          "surviving_block_fraction": 0.04295656347492201,
+          "surviving_active_objects": 42959,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 20,
+          "qid": 136857,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2376,
+          "surviving_block_fraction": 0.5701943844492441,
+          "surviving_active_objects": 570178,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 21,
+          "qid": 201233,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3077,
+          "surviving_block_fraction": 0.738420926325894,
+          "surviving_active_objects": 738414,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 22,
+          "qid": 72436,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 140,
+          "surviving_block_fraction": 0.033597312215022795,
+          "surviving_active_objects": 33599,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 23,
+          "qid": 617423,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2809,
+          "surviving_block_fraction": 0.6741060715142788,
+          "surviving_active_objects": 674120,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 24,
+          "qid": 810945,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 222,
+          "surviving_blocks": 1218,
+          "surviving_block_fraction": 0.29229661627069836,
+          "surviving_active_objects": 292305,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 25,
+          "qid": 789615,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2638,
+          "surviving_block_fraction": 0.6330693544516439,
+          "surviving_active_objects": 633059,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 26,
+          "qid": 601856,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 2,
+          "surviving_blocks": 2935,
+          "surviving_block_fraction": 0.7043436525077994,
+          "surviving_active_objects": 704369,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 27,
+          "qid": 433080,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2225,
+          "surviving_block_fraction": 0.5339572834173266,
+          "surviving_active_objects": 533970,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 28,
+          "qid": 415755,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2920,
+          "surviving_block_fraction": 0.7007439404847612,
+          "surviving_active_objects": 700749,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 29,
+          "qid": 282095,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3089,
+          "surviving_block_fraction": 0.7413006959443245,
+          "surviving_active_objects": 741294,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 30,
+          "qid": 66651,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2646,
+          "surviving_block_fraction": 0.6349892008639308,
+          "surviving_active_objects": 634987,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 31,
+          "qid": 326654,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3290,
+          "surviving_block_fraction": 0.7895368370530358,
+          "surviving_active_objects": 789533,
+          "false_prune_blocks": 0
+        }
+      ],
+      "events": [
+        {
+          "step": 1,
+          "action": "delete",
+          "occurrence": 927889,
+          "affected_blocks": [
+            1617
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 3,
+          "action": "insert",
+          "occurrence": 1000000,
+          "affected_blocks": [
+            2215
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 6,
+          "action": "delete",
+          "occurrence": 140554,
+          "affected_blocks": [
+            2043
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 8,
+          "action": "insert",
+          "occurrence": 1000001,
+          "affected_blocks": [
+            1449
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 11,
+          "action": "delete",
+          "occurrence": 675366,
+          "affected_blocks": [
+            3137
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 13,
+          "action": "insert",
+          "occurrence": 1000002,
+          "affected_blocks": [
+            2825
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 16,
+          "action": "delete",
+          "occurrence": 213111,
+          "affected_blocks": [
+            3923
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 18,
+          "action": "insert",
+          "occurrence": 1000003,
+          "affected_blocks": [
+            2868
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 21,
+          "action": "delete",
+          "occurrence": 421626,
+          "affected_blocks": [
+            3465
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 23,
+          "action": "insert",
+          "occurrence": 1000004,
+          "affected_blocks": [
+            3495
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 26,
+          "action": "delete",
+          "occurrence": 22592,
+          "affected_blocks": [
+            268
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 28,
+          "action": "insert",
+          "occurrence": 1000005,
+          "affected_blocks": [
+            3864
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 31,
+          "action": "delete",
+          "occurrence": 470111,
+          "affected_blocks": [
+            3599
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 33,
+          "action": "insert",
+          "occurrence": 1000006,
+          "affected_blocks": [
+            3503
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 36,
+          "action": "delete",
+          "occurrence": 169928,
+          "affected_blocks": [
+            769
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 38,
+          "action": "insert",
+          "occurrence": 1000007,
+          "affected_blocks": [
+            2309
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 41,
+          "action": "delete",
+          "occurrence": 338423,
+          "affected_blocks": [
+            2501
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 43,
+          "action": "insert",
+          "occurrence": 1000008,
+          "affected_blocks": [
+            188
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 46,
+          "action": "delete",
+          "occurrence": 975244,
+          "affected_blocks": [
+            2392
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 48,
+          "action": "insert",
+          "occurrence": 1000009,
+          "affected_blocks": [
+            3404
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        }
+      ]
+    },
+    {
+      "snapshot": "first_rebuilt",
+      "ending_snapshot": "second_rebuilt",
+      "strategy": "S1",
+      "partition": "P2",
+      "pivot_count": 4,
+      "physical_capacity": 256,
+      "active_capacity": 240,
+      "nominal_slack_fraction": 0.0625,
+      "actual_initial_empty_slot_fraction": 0.06257499400047994,
+      "min_initial_block_size": 239,
+      "max_initial_block_size": 240,
+      "initial_total_blocks": 4167,
+      "final_total_blocks": 4167,
+      "global_initialization_passes": 1,
+      "initialization_objects": 1000000,
+      "actual_inserts": 20,
+      "actual_deletes": 20,
+      "changed_blocks": 30,
+      "changed_block_fraction": 0.007199424046076314,
+      "moved_existing_objects": 0,
+      "moved_existing_fraction": 0.0,
+      "moved_existing_events": 0,
+      "all_vector_move_events": 0,
+      "splits": 0,
+      "certificate_refreshes": 40,
+      "global_repartition": 0,
+      "placement_blocks_examined": 83340,
+      "initial_query_survival_mean": 0.6784182265418768,
+      "post_update_query_survival_mean": 0.6784182265418768,
+      "locality_gate_passed": true,
+      "initial_state_sha256": "3ffb40fa9626e046936561d288417a87e73386e3e1ff43f7a75ec3c3e68ae14f",
+      "final_state_sha256": "43fdba868f472f9952ad807b0c1dce6b73dce18dc3aecfd7998945d514a820b2",
+      "full_final_occurrence_lineage_and_bounds_verified": true,
+      "initial_queries": [
+        {
+          "query": 0,
+          "qid": 282091,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3089,
+          "surviving_block_fraction": 0.7413006959443245,
+          "surviving_active_objects": 741296,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 1,
+          "qid": 66650,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2646,
+          "surviving_block_fraction": 0.6349892008639308,
+          "surviving_active_objects": 634990,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 2,
+          "qid": 326650,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3290,
+          "surviving_block_fraction": 0.7895368370530358,
+          "surviving_active_objects": 789533,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 3,
+          "qid": 532560,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2062,
+          "surviving_block_fraction": 0.49484041276697865,
+          "surviving_active_objects": 494861,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 4,
+          "qid": 113260,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 1335,
+          "surviving_block_fraction": 0.320374370050396,
+          "surviving_active_objects": 320393,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 5,
+          "qid": 991585,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3278,
+          "surviving_block_fraction": 0.7866570674346053,
+          "surviving_active_objects": 786681,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 6,
+          "qid": 253497,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3792,
+          "surviving_block_fraction": 0.9100071994240461,
+          "surviving_active_objects": 910013,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 7,
+          "qid": 738154,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 1887,
+          "surviving_block_fraction": 0.4528437724982001,
+          "surviving_active_objects": 452855,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 8,
+          "qid": 567973,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3212,
+          "surviving_block_fraction": 0.7708183345332373,
+          "surviving_active_objects": 770813,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 9,
+          "qid": 258318,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3762,
+          "surviving_block_fraction": 0.9028077753779697,
+          "surviving_active_objects": 902805,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 10,
+          "qid": 243005,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3427,
+          "surviving_block_fraction": 0.8224142068634509,
+          "surviving_active_objects": 822411,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 11,
+          "qid": 236353,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3181,
+          "surviving_block_fraction": 0.7633789296856252,
+          "surviving_active_objects": 763382,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 12,
+          "qid": 158329,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3735,
+          "surviving_block_fraction": 0.896328293736501,
+          "surviving_active_objects": 896334,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 13,
+          "qid": 922178,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2471,
+          "surviving_block_fraction": 0.5929925605951524,
+          "surviving_active_objects": 592989,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 14,
+          "qid": 436359,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 69,
+          "surviving_block_fraction": 0.01655867530597552,
+          "surviving_active_objects": 16559,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 15,
+          "qid": 821767,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3079,
+          "surviving_block_fraction": 0.7389008879289657,
+          "surviving_active_objects": 738896,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 16,
+          "qid": 253944,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3628,
+          "surviving_block_fraction": 0.8706503479721622,
+          "surviving_active_objects": 870651,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 17,
+          "qid": 323617,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2258,
+          "surviving_block_fraction": 0.5418766498680105,
+          "surviving_active_objects": 541891,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 18,
+          "qid": 578176,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 106,
+          "surviving_blocks": 482,
+          "surviving_block_fraction": 0.11567074634029277,
+          "surviving_active_objects": 115676,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 19,
+          "qid": 569440,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 32,
+          "surviving_blocks": 3578,
+          "surviving_block_fraction": 0.8586513078953684,
+          "surviving_active_objects": 858661,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 20,
+          "qid": 207665,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 3,
+          "surviving_blocks": 3462,
+          "surviving_block_fraction": 0.8308135349172067,
+          "surviving_active_objects": 830814,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 21,
+          "qid": 579738,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3390,
+          "surviving_block_fraction": 0.8135349172066235,
+          "surviving_active_objects": 813531,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 22,
+          "qid": 63627,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3691,
+          "surviving_block_fraction": 0.8857691384689225,
+          "surviving_active_objects": 885776,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 23,
+          "qid": 227,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 329,
+          "surviving_blocks": 2232,
+          "surviving_block_fraction": 0.5356371490280778,
+          "surviving_active_objects": 535649,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 24,
+          "qid": 365626,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 4,
+          "surviving_blocks": 2695,
+          "surviving_block_fraction": 0.6467482601391888,
+          "surviving_active_objects": 646741,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 25,
+          "qid": 551655,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3556,
+          "surviving_block_fraction": 0.8533717302615791,
+          "surviving_active_objects": 853386,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 26,
+          "qid": 947181,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 4,
+          "surviving_blocks": 3535,
+          "surviving_block_fraction": 0.8483321334293257,
+          "surviving_active_objects": 848337,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 27,
+          "qid": 520014,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2584,
+          "surviving_block_fraction": 0.6201103911687065,
+          "surviving_active_objects": 620124,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 28,
+          "qid": 136074,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 1593,
+          "surviving_block_fraction": 0.38228941684665224,
+          "surviving_active_objects": 382289,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 29,
+          "qid": 750662,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3087,
+          "surviving_block_fraction": 0.7408207343412527,
+          "surviving_active_objects": 740816,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 30,
+          "qid": 838925,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2866,
+          "surviving_block_fraction": 0.6877849772018239,
+          "surviving_active_objects": 687788,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 31,
+          "qid": 819709,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3511,
+          "surviving_block_fraction": 0.8425725941924646,
+          "surviving_active_objects": 842570,
+          "false_prune_blocks": 0
+        }
+      ],
+      "post_update_queries": [
+        {
+          "query": 0,
+          "qid": 282091,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3089,
+          "surviving_block_fraction": 0.7413006959443245,
+          "surviving_active_objects": 741297,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 1,
+          "qid": 66650,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2646,
+          "surviving_block_fraction": 0.6349892008639308,
+          "surviving_active_objects": 634989,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 2,
+          "qid": 326650,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3290,
+          "surviving_block_fraction": 0.7895368370530358,
+          "surviving_active_objects": 789532,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 3,
+          "qid": 532560,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2062,
+          "surviving_block_fraction": 0.49484041276697865,
+          "surviving_active_objects": 494863,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 4,
+          "qid": 113260,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 1335,
+          "surviving_block_fraction": 0.320374370050396,
+          "surviving_active_objects": 320395,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 5,
+          "qid": 991585,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3278,
+          "surviving_block_fraction": 0.7866570674346053,
+          "surviving_active_objects": 786682,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 6,
+          "qid": 253497,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3792,
+          "surviving_block_fraction": 0.9100071994240461,
+          "surviving_active_objects": 910014,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 7,
+          "qid": 738154,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 1887,
+          "surviving_block_fraction": 0.4528437724982001,
+          "surviving_active_objects": 452854,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 8,
+          "qid": 567973,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3212,
+          "surviving_block_fraction": 0.7708183345332373,
+          "surviving_active_objects": 770813,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 9,
+          "qid": 258318,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3762,
+          "surviving_block_fraction": 0.9028077753779697,
+          "surviving_active_objects": 902806,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 10,
+          "qid": 243005,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3427,
+          "surviving_block_fraction": 0.8224142068634509,
+          "surviving_active_objects": 822410,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 11,
+          "qid": 236353,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3181,
+          "surviving_block_fraction": 0.7633789296856252,
+          "surviving_active_objects": 763382,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 12,
+          "qid": 158329,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3735,
+          "surviving_block_fraction": 0.896328293736501,
+          "surviving_active_objects": 896336,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 13,
+          "qid": 922178,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2471,
+          "surviving_block_fraction": 0.5929925605951524,
+          "surviving_active_objects": 592988,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 14,
+          "qid": 436359,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 69,
+          "surviving_block_fraction": 0.01655867530597552,
+          "surviving_active_objects": 16558,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 15,
+          "qid": 821767,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3079,
+          "surviving_block_fraction": 0.7389008879289657,
+          "surviving_active_objects": 738897,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 16,
+          "qid": 253944,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3628,
+          "surviving_block_fraction": 0.8706503479721622,
+          "surviving_active_objects": 870653,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 17,
+          "qid": 323617,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2258,
+          "surviving_block_fraction": 0.5418766498680105,
+          "surviving_active_objects": 541891,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 18,
+          "qid": 578176,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 106,
+          "surviving_blocks": 482,
+          "surviving_block_fraction": 0.11567074634029277,
+          "surviving_active_objects": 115675,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 19,
+          "qid": 569440,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 32,
+          "surviving_blocks": 3578,
+          "surviving_block_fraction": 0.8586513078953684,
+          "surviving_active_objects": 858664,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 20,
+          "qid": 207665,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 3,
+          "surviving_blocks": 3462,
+          "surviving_block_fraction": 0.8308135349172067,
+          "surviving_active_objects": 830814,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 21,
+          "qid": 579738,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3390,
+          "surviving_block_fraction": 0.8135349172066235,
+          "surviving_active_objects": 813530,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 22,
+          "qid": 63627,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3691,
+          "surviving_block_fraction": 0.8857691384689225,
+          "surviving_active_objects": 885778,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 23,
+          "qid": 227,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 329,
+          "surviving_blocks": 2232,
+          "surviving_block_fraction": 0.5356371490280778,
+          "surviving_active_objects": 535650,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 24,
+          "qid": 365626,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 4,
+          "surviving_blocks": 2695,
+          "surviving_block_fraction": 0.6467482601391888,
+          "surviving_active_objects": 646741,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 25,
+          "qid": 551655,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3556,
+          "surviving_block_fraction": 0.8533717302615791,
+          "surviving_active_objects": 853388,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 26,
+          "qid": 947181,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 4,
+          "surviving_blocks": 3535,
+          "surviving_block_fraction": 0.8483321334293257,
+          "surviving_active_objects": 848339,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 27,
+          "qid": 520014,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2584,
+          "surviving_block_fraction": 0.6201103911687065,
+          "surviving_active_objects": 620125,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 28,
+          "qid": 136074,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 1593,
+          "surviving_block_fraction": 0.38228941684665224,
+          "surviving_active_objects": 382291,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 29,
+          "qid": 750662,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3087,
+          "surviving_block_fraction": 0.7408207343412527,
+          "surviving_active_objects": 740816,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 30,
+          "qid": 838925,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 2866,
+          "surviving_block_fraction": 0.6877849772018239,
+          "surviving_active_objects": 687787,
+          "false_prune_blocks": 0
+        },
+        {
+          "query": 31,
+          "qid": 819709,
+          "total_blocks": 4167,
+          "oracle_required_blocks": 1,
+          "surviving_blocks": 3511,
+          "surviving_block_fraction": 0.8425725941924646,
+          "surviving_active_objects": 842570,
+          "false_prune_blocks": 0
+        }
+      ],
+      "events": [
+        {
+          "step": 85,
+          "action": "insert",
+          "occurrence": 1000010,
+          "affected_blocks": [
+            1914
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 87,
+          "action": "delete",
+          "occurrence": 1000010,
+          "affected_blocks": [
+            1914
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 90,
+          "action": "insert",
+          "occurrence": 1000011,
+          "affected_blocks": [
+            1059
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 92,
+          "action": "delete",
+          "occurrence": 1000011,
+          "affected_blocks": [
+            1059
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 95,
+          "action": "insert",
+          "occurrence": 1000012,
+          "affected_blocks": [
+            1610
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 97,
+          "action": "delete",
+          "occurrence": 1000012,
+          "affected_blocks": [
+            1610
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 100,
+          "action": "insert",
+          "occurrence": 1000013,
+          "affected_blocks": [
+            1337
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 102,
+          "action": "delete",
+          "occurrence": 1000013,
+          "affected_blocks": [
+            1337
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 105,
+          "action": "insert",
+          "occurrence": 1000014,
+          "affected_blocks": [
+            2251
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 107,
+          "action": "delete",
+          "occurrence": 1000014,
+          "affected_blocks": [
+            2251
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 110,
+          "action": "insert",
+          "occurrence": 1000015,
+          "affected_blocks": [
+            2556
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 112,
+          "action": "delete",
+          "occurrence": 1000015,
+          "affected_blocks": [
+            2556
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 115,
+          "action": "insert",
+          "occurrence": 1000016,
+          "affected_blocks": [
+            217
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 117,
+          "action": "delete",
+          "occurrence": 1000016,
+          "affected_blocks": [
+            217
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 120,
+          "action": "insert",
+          "occurrence": 1000017,
+          "affected_blocks": [
+            2454
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 122,
+          "action": "delete",
+          "occurrence": 1000017,
+          "affected_blocks": [
+            2454
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 125,
+          "action": "insert",
+          "occurrence": 1000018,
+          "affected_blocks": [
+            906
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 127,
+          "action": "delete",
+          "occurrence": 1000018,
+          "affected_blocks": [
+            906
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 130,
+          "action": "insert",
+          "occurrence": 1000019,
+          "affected_blocks": [
+            1843
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000001
+        },
+        {
+          "step": 132,
+          "action": "delete",
+          "occurrence": 1000019,
+          "affected_blocks": [
+            1843
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 169,
+          "action": "delete",
+          "occurrence": 33798,
+          "affected_blocks": [
+            1440
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 171,
+          "action": "insert",
+          "occurrence": 1000020,
+          "affected_blocks": [
+            4036
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 174,
+          "action": "delete",
+          "occurrence": 512544,
+          "affected_blocks": [
+            1727
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 176,
+          "action": "insert",
+          "occurrence": 1000021,
+          "affected_blocks": [
+            1731
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 179,
+          "action": "delete",
+          "occurrence": 172447,
+          "affected_blocks": [
+            935
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 181,
+          "action": "insert",
+          "occurrence": 1000022,
+          "affected_blocks": [
+            3811
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 184,
+          "action": "delete",
+          "occurrence": 664752,
+          "affected_blocks": [
+            1542
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 186,
+          "action": "insert",
+          "occurrence": 1000023,
+          "affected_blocks": [
+            3065
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 189,
+          "action": "delete",
+          "occurrence": 348290,
+          "affected_blocks": [
+            136
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 191,
+          "action": "insert",
+          "occurrence": 1000024,
+          "affected_blocks": [
+            3732
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 194,
+          "action": "delete",
+          "occurrence": 939389,
+          "affected_blocks": [
+            1269
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 196,
+          "action": "insert",
+          "occurrence": 1000025,
+          "affected_blocks": [
+            3219
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 199,
+          "action": "delete",
+          "occurrence": 382569,
+          "affected_blocks": [
+            3525
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 201,
+          "action": "insert",
+          "occurrence": 1000026,
+          "affected_blocks": [
+            970
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 204,
+          "action": "delete",
+          "occurrence": 258168,
+          "affected_blocks": [
+            3988
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 206,
+          "action": "insert",
+          "occurrence": 1000027,
+          "affected_blocks": [
+            844
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 209,
+          "action": "delete",
+          "occurrence": 696297,
+          "affected_blocks": [
+            3794
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 211,
+          "action": "insert",
+          "occurrence": 1000028,
+          "affected_blocks": [
+            2329
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        },
+        {
+          "step": 214,
+          "action": "delete",
+          "occurrence": 388538,
+          "affected_blocks": [
+            2070
+          ],
+          "existing_move_events": 0,
+          "live_objects": 999999
+        },
+        {
+          "step": 216,
+          "action": "insert",
+          "occurrence": 1000029,
+          "affected_blocks": [
+            1896
+          ],
+          "existing_move_events": 0,
+          "live_objects": 1000000
+        }
+      ]
+    }
+  ],
+  "selection": [
+    "S1",
+    "P2"
+  ],
+  "static_decision": {
+    "decision": "CONDITIONAL",
+    "reason": "uncovered_interval",
+    "GO": [],
+    "strong_GO": [],
+    "conditional_supported": [],
+    "best_per_snapshot": {
+      "initial": 0.688995361328125,
+      "first_rebuilt": 0.6646403890453033
+    },
+    "top_one": [
+      "S1",
+      "P2"
+    ],
+    "top_one_survival": {
+      "initial": 0.688995361328125,
+      "first_rebuilt": 0.6787490844726562
+    },
+    "GPU_admitted_this_round": false,
+    "scope": "Only the fixed global-pivot interval family, tested partitions, snapshots and queries; no general impossibility claim"
+  },
+  "independent_initialization_per_interval": true,
+  "sustained_ownership_demonstrated": false,
+  "false_prune_blocks": 0,
+  "query_rows": 128,
+  "GPU_processes": 0,
+  "CPU_locality_claim": false,
+  "reason": "Insertion scans all block centroids; locality concerns writes/moves, not total work or latency"
+}

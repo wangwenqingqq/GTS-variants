@@ -1,0 +1,186 @@
+{
+  "experiment": "GTSPP_20261011_certificate_aware_partition",
+  "baseline_commit": "b89264e2af42639d8c27947f83ddf15d8f379c77",
+  "scope": "CPU-only deterministic structural counts; no timing, CUDA, or end-to-end claim",
+  "shape": {
+    "N": 1000000,
+    "D": 960,
+    "dtype": "FP32",
+    "metric": "L2",
+    "B": 1,
+    "queries_per_snapshot": 32,
+    "radius_bits": "0x3f34a3d8"
+  },
+  "snapshots": [
+    "initial",
+    "first_rebuilt"
+  ],
+  "strategies": [
+    "S0",
+    "S1"
+  ],
+  "partitions": [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "physical_capacity": 256,
+  "main_pivots": 4,
+  "trend_pivots": 2,
+  "trend": "Reuse P=4 partitions; filter with first two pivot dimensions only; no extra partition search",
+  "pivot_selection": "Exact first four entries of the verified prior S0/S1 sequences, independently for each snapshot; no reselection",
+  "partition_definitions": {
+    "P0": "Fixed prior L3 DFS permutation, chunk 256; not per-snapshot query-selected best",
+    "P1": "Lexicographic (sqrt(score_p1),...,sqrt(score_p4), immutable occurrence ID), chunk 256",
+    "P2": "Recursive widest local norm span, tie lowest pivot dimension; sort by (norm, occurrence ID); split at floor(n/2); left then right; stop n<=256",
+    "P3": "P2 but local norm span / snapshot-global norm span; zero global span contributes zero"
+  },
+  "partition_boundary": "Keep recursive leaf boundaries, never flatten/rechunk. P0/P1 have 3907 blocks (last 64); P2/P3 have 4096 blocks of 244/245. Report counts, sizes, physical occupancy and surviving active objects.",
+  "numerics": "Reuse baseline NUMERICS.md and interval/rejected/radius_upper without changes. Norm signatures are rounded FP64 sqrt; certificate uses conservative outward endpoints, not rounded norms.",
+  "oracle": "Original 32 exhaustive ordered-FP64 references; membership score<=FP32_radius_squared; query, radius, oracle never enter partition or pivot construction",
+  "aggregate": "Arithmetic mean of all original 32 queries per snapshot, no query selection",
+  "gates": {
+    "GO": "At least one identical S/P partition, P=4, zero false prune, mean surviving block fraction <=0.50 on BOTH snapshots",
+    "STRONG_GO": "GO with both means <=0.35; final label GO",
+    "CONDITIONAL_SUPPORTED": "No GO; a joint configuration has both means <=0.65, at least one >0.50, and both mean oracle fractions <=0.10",
+    "NO_GO_GLOBAL_PIVOT": "No GO; among certificate-aware P1/P2/P3 and S0/S1, per-snapshot minimum mean surviving fraction is >0.70 in at least one snapshot and >0.50 in the other. Optimistic per-snapshot envelope protects against rejecting a better tested method.",
+    "UNCOVERED": "Otherwise CONDITIONAL with reason=uncovered_interval, not evidence that the stated 50%-65% gate passed. No CUDA, no expanded search or automatic new-summary experiment.",
+    "correctness": "Any false prune or input/provenance failure stops immediately, no performance judgment"
+  },
+  "top_one": "Among S0/S1 x P1/P2/P3 at P4, minimize (max(snapshot means), arithmetic mean of snapshot means, strategy string, partition string); frozen before observing results",
+  "updates": {
+    "selection": "One identical top-one configuration, two independently initialized intervals, not sustained ownership across rebuilds",
+    "physical_capacity": 256,
+    "active_capacity": 240,
+    "nominal_slack": 0.0625,
+    "authorized_initialization": "User confirmed capacity-aware balanced initialization on 2026-10-11, before measurements. For P2/P3 root leaf budget=ceil(N/240). At each node with m>1 target leaves: choose same split dimension; left leaf budget=floor(m/2); cut=floor(n*left_budget/m); right gets remainder. Stop m=1. Preserve resulting variable leaf boundaries; never flatten/rechunk. P0/P1 retain their ordering and chunk 240.",
+    "actual_occupancy": "Report actual block sizes and 1-N/(256*num_blocks), not nominal slack as exact measured slack. Re-evaluate this distinct initialization before and after updates.",
+    "placement_and_split": "Reuse baseline Ownership.apply/refresh/query: scan all block centroids for best match, lowest-ID tie, lowest hole insertion, local split at 257; no change to rules. Global scan cost is not local computation.",
+    "validation": "After each event affected ownership/slots/bounds; full final occurrence+lineage state against next snapshot; original 32 queries before and after; false prune=0",
+    "gate": "changed_blocks/initial_blocks <=0.05, moved_existing/N<=0.05, global repartition during events=0; initialization is global and reported separately",
+    "intervals": [
+      {
+        "snapshot": "initial",
+        "end": "first_rebuilt",
+        "through_step": 48,
+        "actual_inserts": 10,
+        "actual_deletes": 10
+      },
+      {
+        "snapshot": "first_rebuilt",
+        "end": "second_rebuilt",
+        "through_step": 216,
+        "actual_inserts": 20,
+        "actual_deletes": 20,
+        "net_entering_base": 10,
+        "net_removing_base": 10
+      }
+    ]
+  },
+  "runtime": {
+    "CPU_threads_max": 4,
+    "nice": 15,
+    "GPU_processes": 0
+  },
+  "novelty": "Established pivot-space partition/median split/interval filtering; this is a bounded falsification diagnostic, not a new-method novelty claim. Before any later CUDA prototype require a separate nearest-prior-art kill test.",
+  "prior_proof_sha256": "57062d79d3b49abe35e2c859eefe10cc26ee48fc2adcac0e2592f8ac2211105d",
+  "prior_verification_sha256": "365a9986f2ba5c36b79b1315bbb419d1e46847310b9cb51d1e9daf7de120be7c",
+  "prepared_sha256": "c0da41dbc6d7b844b2a26a133365e93e55090667a80ad793986bfab6dbfb82a3",
+  "occurrence_sha256": {
+    "initial": "ffcae47455758e16b2a9085b0e752f14c21f7dc1b034d470201e694c2d19c520",
+    "first_rebuilt": "5910e8481764c331794d16467f29069a6c5dde3cbef7efb553a66a520744aaa8",
+    "second_rebuilt": "980e8359774e3b0075decd8b423b9fa6d179a1ca3c1b6fd1001924b5c2c0f99f"
+  },
+  "lineage_sha256": {
+    "initial": "ffcae47455758e16b2a9085b0e752f14c21f7dc1b034d470201e694c2d19c520",
+    "first_rebuilt": "daceac13c668b0ad273505501ac3b8c3ad336d7cbb61d5a5de4814f588594494",
+    "second_rebuilt": "c9ce8d10ea33036e33d5d90bcaab0dd60785597c52a8dddc359b7c3f78695b86"
+  },
+  "inputs": {
+    "initial": {
+      "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "reference_sha256": "6417a03c5d08d9b0b9de1058d7cc952054096bed19e74b2e8ee172de56691b26",
+      "masks_sha256": "b91024f798be3697b1443c1006a0f2376325691d2adc9ecfff7752cf5e2439f8",
+      "nodes_sha256": "c26366ab1969e43e679a2c06e38bd1596df956ee7fd1e5d54c517d356072c128",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317",
+      "qids": [
+        88406,
+        865632,
+        881748,
+        916533,
+        40158,
+        242468,
+        40486,
+        900387,
+        703226,
+        791039,
+        724874,
+        671829,
+        722418,
+        152899,
+        737995,
+        144573,
+        570909,
+        347206,
+        63744,
+        625378,
+        136857,
+        201233,
+        72436,
+        617423,
+        810945,
+        789615,
+        601856,
+        433080,
+        415755,
+        282095,
+        66651,
+        326654
+      ]
+    },
+    "first_rebuilt": {
+      "data_sha256": "7320627ab528bb2519720a8a4d43b8c1e3433b486c27cd1897ac1c03d2631da6",
+      "reference_sha256": "18c8c6d119b91a481452dca16da2e1e5b0c5bae1b3212e4ff0349ce04269754b",
+      "masks_sha256": "ceed2f2b539bf4cf0e006a2a8367c199de7344ff9798f314ad70a0d12a1d0c22",
+      "nodes_sha256": "acc9083fd2b03e2563ff61ad3a32130241a2dafbfd09515a5cebe12e287055f7",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "b6c89edea15f13f22ffd18fca9bf0e00e968043c51b0a374bc108332ff3ea1be",
+      "qids": [
+        282091,
+        66650,
+        326650,
+        532560,
+        113260,
+        991585,
+        253497,
+        738154,
+        567973,
+        258318,
+        243005,
+        236353,
+        158329,
+        922178,
+        436359,
+        821767,
+        253944,
+        323617,
+        578176,
+        569440,
+        207665,
+        579738,
+        63627,
+        227,
+        365626,
+        551655,
+        947181,
+        520014,
+        136074,
+        750662,
+        838925,
+        819709
+      ]
+    }
+  }
+}

@@ -261,3 +261,13 @@ The first checker error and later offline hardening are not performance rejects.
 The next block-aligned global-certificate diagnostic is closed as
 [CONDITIONAL](../block_certificate_headroom_20261010/DECISION.md), not a new
 production index or end-to-end acceleration. All original matrices remain unchanged.
+
+## Certificate-aware partition checkpoint (2026-10-11)
+
+The [partition-only follow-up](../certificate_aware_partition_20261010/README.md)
+is **CONDITIONAL / uncovered_interval, not GPU-admitted**. On GIST N1M/D960,
+the same four-pivot S1/P2 configuration retains 68.8995% / 67.8749% of physical
+blocks. Local-write checks pass under a separately evaluated 240-active
+initialization, but neither query GO nor the stated positive conditional band
+passes. No new GPU or end-to-end timing was performed. See the
+[five-question decision](../certificate_aware_partition_20261010/DECISION.md).
