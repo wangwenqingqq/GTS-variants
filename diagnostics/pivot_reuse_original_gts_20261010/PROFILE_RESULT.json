@@ -1,0 +1,466 @@
+{
+  "scope": "diagnostic only, no formal speed ratio",
+  "results": {
+    "G0": {
+      "scope": "Complete formal.query_pass NVTX interval; first32 final GIST queries, K8; diagnostic only",
+      "range_ms": 11233.634796,
+      "gpu_work_union_ms": 10872.130558,
+      "gpu_work_coverage": 0.9678194774385294,
+      "runtime_api_union_ms": 11006.721056,
+      "runtime_api_coverage": 0.9798005058807148,
+      "no_recorded_gpu_work_ms": 361.50423799999953,
+      "kernel_calls": 1792,
+      "kernels": {
+        "dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int)": {
+          "calls": 32,
+          "inclusive_ms": 9987.76334
+        },
+        "getDisPQ(TN *, float *, int *, int *, int *, char *, int *, int, int, int, double *, int, int, int, int, int, int)": {
+          "calls": 96,
+          "inclusive_ms": 774.3984939999999
+        },
+        "updateDisK(int, double *, float *, int, int, int, int)": {
+          "calls": 96,
+          "inclusive_ms": 34.59709999999999
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+          "calls": 288,
+          "inclusive_ms": 33.50303
+        },
+        "labelCNode(int *, int, int, int, double *, int, int, int, int, int)": {
+          "calls": 64,
+          "inclusive_ms": 14.422326000000004
+        },
+        "getQCountKnn(int, int, double *, int, int, int, int)": {
+          "calls": 32,
+          "inclusive_ms": 11.169746000000002
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)": {
+          "calls": 512,
+          "inclusive_ms": 6.312820000000004
+        },
+        "mergeResKnn(int, int, double *, int, int *, int, int, float *, int, TN *, int *, int *, float *, int)": {
+          "calls": 32,
+          "inclusive_ms": 3.1488090000000004
+        },
+        "initDisK(float *, int)": {
+          "calls": 32,
+          "inclusive_ms": 2.003601
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)": {
+          "calls": 64,
+          "inclusive_ms": 1.1158979999999996
+        },
+        "mergeLNodeKnn(int, int, double *, int, int, int, int, int *, int, int, int)": {
+          "calls": 32,
+          "inclusive_ms": 0.6231649999999999
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)": {
+          "calls": 64,
+          "inclusive_ms": 0.512223
+        },
+        "nodeProcessKnn(TN *, float *, int *, int, int, int, double *, int, int, int, int, int)": {
+          "calls": 96,
+          "inclusive_ms": 0.32444399999999995
+        },
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<double, double, double, unsigned int, cuda::std::__4::plus<void>>::Policy1000, double *, double *, cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<double, double *>, unsigned int, double, (bool)0, double>(T2, T3, T4, int, T5, T6, T7)": {
+          "calls": 32,
+          "inclusive_ms": 0.252381
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+          "calls": 64,
+          "inclusive_ms": 0.168383
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+          "calls": 96,
+          "inclusive_ms": 0.11356800000000009
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, double *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+          "calls": 32,
+          "inclusive_ms": 0.073312
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, unsigned long long>(T2 *)": {
+          "calls": 64,
+          "inclusive_ms": 0.07331100000000002
+        },
+        "initPListKnn(double *, int)": {
+          "calls": 32,
+          "inclusive_ms": 0.044736
+        },
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>>(T1, int)": {
+          "calls": 32,
+          "inclusive_ms": 0.027071999999999995
+        }
+      },
+      "cuda_api": {
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 576,
+          "inclusive_ms": 10831.131683
+        },
+        "cudaMalloc_v3020": {
+          "calls": 672,
+          "inclusive_ms": 83.79343700000001
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 1056,
+          "inclusive_ms": 37.42398100000004
+        },
+        "cudaFree_v3020": {
+          "calls": 736,
+          "inclusive_ms": 34.404084999999995
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 1792,
+          "inclusive_ms": 8.248970999999987
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 512,
+          "inclusive_ms": 4.71481
+        },
+        "cudaMemsetAsync_v3020": {
+          "calls": 640,
+          "inclusive_ms": 2.506723
+        },
+        "cudaMemcpy_v3020": {
+          "calls": 96,
+          "inclusive_ms": 1.8983130000000006
+        },
+        "cudaMemGetInfo_v3020": {
+          "calls": 32,
+          "inclusive_ms": 1.4552619999999996
+        },
+        "cudaMemset_v3020": {
+          "calls": 32,
+          "inclusive_ms": 0.521269
+        },
+        "cudaMallocManaged_v6000": {
+          "calls": 64,
+          "inclusive_ms": 0.4162019999999999
+        },
+        "cuKernelGetName": {
+          "calls": 1792,
+          "inclusive_ms": 0.20631999999999978
+        }
+      },
+      "copy_kind_activity": {
+        "11": {
+          "calls": 630,
+          "inclusive_ms": 0.8399600000000018,
+          "bytes": 2809856,
+          "label": "Unified Host-to-Device"
+        },
+        "12": {
+          "calls": 631,
+          "inclusive_ms": 0.36767199999999994,
+          "bytes": 2871296,
+          "label": "Unified Device-to-Host"
+        },
+        "2": {
+          "calls": 448,
+          "inclusive_ms": 0.2539509999999992,
+          "bytes": 3584,
+          "label": "Device-to-Host"
+        },
+        "8": {
+          "calls": 128,
+          "inclusive_ms": 0.12223700000000007,
+          "bytes": 563200,
+          "label": "Device-to-Device"
+        },
+        "1": {
+          "calls": 32,
+          "inclusive_ms": 0.08166400000000001,
+          "bytes": 128,
+          "label": "Host-to-Device"
+        }
+      },
+      "sqlite_sha256": "a31c8acc8742bc25d06e9d1037f6e1afd77163bfa47aa45175b3c420ca5cb417",
+      "warning": "Temporal GPU coverage is not SM utilization. Inclusive CUDA API duration overlaps GPU work and may contain CPU spinning, driver work or blocking; it is not measured CPU computation. No coalescing counters or causal optimization control collected.",
+      "quality": {
+        "recall_deterministic": 1.0,
+        "recall_tie_aware": 1.0,
+        "missing_neighbor_slots": 0,
+        "complete_query_fraction": 1.0,
+        "per_query_recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "distance_max_abs": 5.991023988016764e-08,
+        "distance_max_relative_scale1": 5.693928363849222e-08,
+        "squared_distance_max_relative_scale1": 1.1387857039792376e-07,
+        "distance_tolerance_pass": true,
+        "nonnegative_pass": true,
+        "nondecreasing_distance_pass": true,
+        "distance_max_relative_nonzero": 5.693928363849222e-08,
+        "zero_distance_max_abs": 0.0,
+        "zero_distance_slots": 34
+      },
+      "receipt_sha256": "78afcdefdff8631095d46a85185d347e5f4cdecbef8e2eacf4cc93bf2fbdfe31",
+      "nsys_report_sha256": "1c97e7c7c1e0410815614d731df00261dd72ced930c5d7df11e5b3cdadb33daa",
+      "binary_sha256": "3ab4e0b5c71bfadd9cd594a604345d24f2ef93cf0417a861d45593f6e5b2940a"
+    },
+    "G1": {
+      "scope": "Complete formal.query_pass NVTX interval; first32 final GIST queries, K8; diagnostic only",
+      "range_ms": 11223.623005,
+      "gpu_work_union_ms": 10872.465742,
+      "gpu_work_coverage": 0.9687126640975412,
+      "runtime_api_union_ms": 10999.658638,
+      "runtime_api_coverage": 0.9800452699720736,
+      "no_recorded_gpu_work_ms": 351.15726299999915,
+      "kernel_calls": 1792,
+      "kernels": {
+        "dataProcessKnn(TN *, float *, float *, int *, int *, char *, int *, double *, int, int *, int, int *, int, int *, int *, double *)": {
+          "calls": 32,
+          "inclusive_ms": 9988.451160000002
+        },
+        "getDisPQ(TN *, float *, int *, int *, int *, char *, int *, int, int, int, double *, int, int, int, int, int, int, int *, int *, double *)": {
+          "calls": 96,
+          "inclusive_ms": 774.1754859999998
+        },
+        "updateDisK(int, double *, float *, int, int, int, int)": {
+          "calls": 96,
+          "inclusive_ms": 34.764993
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, unsigned int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+          "calls": 288,
+          "inclusive_ms": 32.880561
+        },
+        "labelCNode(int *, int, int, int, double *, int, int, int, int, int)": {
+          "calls": 64,
+          "inclusive_ms": 14.707072000000002
+        },
+        "getQCountKnn(int, int, double *, int, int, int, int)": {
+          "calls": 32,
+          "inclusive_ms": 11.788046999999997
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, int, int, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T7 *, T7 *, T5 *, const T5 *, T3 *, const T3 *, T4 *, const T4 *, T6, int, int, T8)": {
+          "calls": 512,
+          "inclusive_ms": 6.318362999999999
+        },
+        "mergeResKnn(int, int, double *, int, int *, int, int, float *, int, TN *, int *, int *, float *, int)": {
+          "calls": 32,
+          "inclusive_ms": 2.8114099999999995
+        },
+        "initDisK(float *, int)": {
+          "calls": 32,
+          "inclusive_ms": 1.581879
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortSingleTileKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(const T3 *, T3 *, const T4 *, T4 *, T5, int, int, T6)": {
+          "calls": 64,
+          "inclusive_ms": 1.116565
+        },
+        "mergeLNodeKnn(int, int, double *, int, int, int, int, int *, int, int, int)": {
+          "calls": 32,
+          "inclusive_ms": 0.73382
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, (cub::CUB_300104_SM_1200::SortOrder)0, double, unsigned long long, cub::CUB_300104_SM_1200::detail::identity_decomposer_t>(T4 *, const T3 *, T4, int, int, T5)": {
+          "calls": 64,
+          "inclusive_ms": 0.511198
+        },
+        "nodeProcessKnn(TN *, float *, int *, int, int, int, double *, int, int, int, int, int)": {
+          "calls": 96,
+          "inclusive_ms": 0.3168600000000001
+        },
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<double, double, double, unsigned int, cuda::std::__4::plus<void>>::Policy1000, double *, double *, cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>, cuda::std::__4::plus<void>, cub::CUB_300104_SM_1200::detail::InputValue<double, double *>, unsigned int, double, (bool)0, double>(T2, T3, T4, int, T5, T6, T7)": {
+          "calls": 32,
+          "inclusive_ms": 0.25254299999999996
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+          "calls": 64,
+          "inclusive_ms": 0.163518
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>(T2, T3, T4, T5, T6, T8)": {
+          "calls": 96,
+          "inclusive_ms": 0.11571099999999995
+        },
+        "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, double, unsigned long long>::Policy1000, unsigned long long>(T2 *)": {
+          "calls": 64,
+          "inclusive_ms": 0.07350400000000001
+        },
+        "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, double *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>(T2, T5 *, T3, cub::CUB_300104_SM_1200::GridEvenShare<T3>, T4, T6)": {
+          "calls": 32,
+          "inclusive_ms": 0.07302400000000002
+        },
+        "initPListKnn(double *, int)": {
+          "calls": 32,
+          "inclusive_ms": 0.043807
+        },
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<double, (bool)1>>(T1, int)": {
+          "calls": 32,
+          "inclusive_ms": 0.027391999999999996
+        }
+      },
+      "cuda_api": {
+        "cudaDeviceSynchronize_v3020": {
+          "calls": 576,
+          "inclusive_ms": 10831.940732999994
+        },
+        "cudaMalloc_v3020": {
+          "calls": 736,
+          "inclusive_ms": 77.32916499999997
+        },
+        "cudaStreamSynchronize_v3020": {
+          "calls": 1056,
+          "inclusive_ms": 36.85836300000001
+        },
+        "cudaFree_v3020": {
+          "calls": 800,
+          "inclusive_ms": 32.88910400000003
+        },
+        "cudaLaunchKernel_v7000": {
+          "calls": 1792,
+          "inclusive_ms": 8.034568999999996
+        },
+        "cudaMemcpyAsync_v3020": {
+          "calls": 512,
+          "inclusive_ms": 4.653937000000002
+        },
+        "cudaMemGetInfo_v3020": {
+          "calls": 32,
+          "inclusive_ms": 2.7510039999999996
+        },
+        "cudaMemsetAsync_v3020": {
+          "calls": 640,
+          "inclusive_ms": 2.3050830000000024
+        },
+        "cudaMemcpy_v3020": {
+          "calls": 96,
+          "inclusive_ms": 1.6932690000000001
+        },
+        "cudaMemset_v3020": {
+          "calls": 64,
+          "inclusive_ms": 0.656649
+        },
+        "cudaMallocManaged_v6000": {
+          "calls": 64,
+          "inclusive_ms": 0.34845999999999994
+        },
+        "cuKernelGetName": {
+          "calls": 1792,
+          "inclusive_ms": 0.19830200000000195
+        }
+      },
+      "copy_kind_activity": {
+        "11": {
+          "calls": 638,
+          "inclusive_ms": 0.8533980000000014,
+          "bytes": 2842624,
+          "label": "Unified Host-to-Device"
+        },
+        "12": {
+          "calls": 640,
+          "inclusive_ms": 0.3884380000000021,
+          "bytes": 2965504,
+          "label": "Unified Device-to-Host"
+        },
+        "2": {
+          "calls": 448,
+          "inclusive_ms": 0.2553579999999995,
+          "bytes": 3584,
+          "label": "Device-to-Host"
+        },
+        "8": {
+          "calls": 128,
+          "inclusive_ms": 0.1229110000000001,
+          "bytes": 563200,
+          "label": "Device-to-Device"
+        },
+        "1": {
+          "calls": 32,
+          "inclusive_ms": 0.08044699999999999,
+          "bytes": 128,
+          "label": "Host-to-Device"
+        }
+      },
+      "sqlite_sha256": "777667289dd1dc0605dcd24c0adcfc4077137cda9b373fe88e7311ec89f22ad1",
+      "warning": "Temporal GPU coverage is not SM utilization. Inclusive CUDA API duration overlaps GPU work and may contain CPU spinning, driver work or blocking; it is not measured CPU computation. No coalescing counters or causal optimization control collected.",
+      "quality": {
+        "recall_deterministic": 1.0,
+        "recall_tie_aware": 1.0,
+        "missing_neighbor_slots": 0,
+        "complete_query_fraction": 1.0,
+        "per_query_recall": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "distance_max_abs": 5.991023988016764e-08,
+        "distance_max_relative_scale1": 5.693928363849222e-08,
+        "squared_distance_max_relative_scale1": 1.1387857039792376e-07,
+        "distance_tolerance_pass": true,
+        "nonnegative_pass": true,
+        "nondecreasing_distance_pass": true,
+        "distance_max_relative_nonzero": 5.693928363849222e-08,
+        "zero_distance_max_abs": 0.0,
+        "zero_distance_slots": 34
+      },
+      "receipt_sha256": "42a699aca062826a390282e7ef43ad8be43369fd2c832475d5eefe806787c2b2",
+      "nsys_report_sha256": "be56b06a6b15aa5aec6cc2c01a2cfc0e6afaf7b515bb88b909ef4304e75423be",
+      "binary_sha256": "1411ed773f41d40f22551553cb0e1bf45404d2f3c6955ae82932ab797e4fc487"
+    }
+  },
+  "contract_sha256": "95f2e3fede90be742b36f0ac2d25232ab26605f871a7e8c57636f0cc25103682",
+  "frozen_manifest_sha256": "825e925a3981698bcc75960422d7a8c6e65a895f2d23c4e423c7fe7f98a62e12",
+  "trace_analyzer_sha256": "c900fef05dc39901f37bc9d44de38a1e7fec590e774b30dfb2fee02d1870e274",
+  "nsys_executable_sha256": "dff002f06a6068fad71ea64ff84bde41278b5a93b0916d27989bc6c9bb84f535",
+  "full_bins_bit_identical": true
+}

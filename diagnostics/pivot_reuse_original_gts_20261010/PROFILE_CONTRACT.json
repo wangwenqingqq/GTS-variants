@@ -1,0 +1,18 @@
+{
+  "scope": "Post-confirmation fixed32 diagnostic only; no formal latency replacement",
+  "modes_and_order": [
+    "G0",
+    "G1"
+  ],
+  "queries": "Same diag32.qid and exhaustive oracle as final guarded diagnosis",
+  "K": 8,
+  "B": 1,
+  "warmup_queries": 2,
+  "trace": "cuda,nvtx,osrt; sample=none; cpuctxsw=none; NVTX capture formal.query_pass only; capture-range-end=stop",
+  "binary_identity": "Same final guarded binary hashes; no instrumentation rebuild",
+  "admission": "After complete formal gate; same UUID/NUMA, locked serial processes, no foreign activity",
+  "acceptance": "Complete result quality and G0/G1 bin equality; complete NVTX interval and zero CUDA API return errors",
+  "report": "Kernel/API counts and inclusive durations, GPU work interval union, memory-copy payloads and raw report hashes",
+  "boundaries": "Inclusive CUDA API time overlaps GPU work and may include waiting/spinning; not measured CPU arithmetic. Temporal GPU coverage is not SM utilization. No NCU DRAM/L2-traffic attribution or standalone cache-module timer is claimed.",
+  "trace_analyzer_sha256": "c900fef05dc39901f37bc9d44de38a1e7fec590e774b30dfb2fee02d1870e274"
+}

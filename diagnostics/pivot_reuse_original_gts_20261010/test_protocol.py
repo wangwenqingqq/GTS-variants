@@ -6,10 +6,11 @@ from pathlib import Path
 import tempfile
 import shutil
 from prepare import prepare,kernel
-from audit_index import audit
+from audit_index import audit,warp_screen
 from run import runtime_errors
 from locked import snapshot
 from analyze import paired
+from boundary import add_ties
 import subprocess
 from unittest.mock import patch
 
@@ -19,6 +20,14 @@ def main(source,index):
     assert paired([2.]*6,[1.]*6,orders)['decision']=='confirmed_win'
     assert paired([1.]*6,[2.]*6,orders)['decision']=='confirmed_regression'
     assert paired([1.]*6,[1.]*6,orders)['decision']=='inconclusive'
+    for distances in ([float(i) for i in range(40)],[0.]*9+list(map(float,range(1,32))),[0.]*40,[0.]*30+[1.]*10):
+        record={'ids':list(range(32)),'squared':distances[:32],
+                'ties':{'32':{'boundary_ids':[i for i,d in enumerate(distances) if d==distances[31]]}}}
+        reference=add_ties({'records':[record]},[1,2,7,8,9,31,32])
+        for k in (1,2,7,8,9,31,32):
+            tie=reference['records'][0]['ties'][str(k)]
+            assert tie['strictly_closer_ids']==[i for i,d in enumerate(distances) if d<distances[k-1]]
+            assert tie['boundary_ids']==[i for i,d in enumerate(distances) if d==distances[k-1]]
     assert not runtime_errors('========= ERROR SUMMARY: 0 errors\nRACECHECK SUMMARY: 0 hazards\nPASS')
     assert runtime_errors('getDisPQ error: invalid argument') and runtime_errors('FAIL: bad cache')
     with patch('locked.subprocess.check_output',side_effect=subprocess.TimeoutExpired('nvidia-smi',10)):
@@ -49,6 +58,9 @@ def main(source,index):
     x=audit(index)
     assert x['N']==1000000 and x['D']==960 and x['evaluated_pivot_groups_if_all_live']==11100
     assert x['unique_evaluated_objects']==11099 and all(r['same_level_aliases']==0 for r in x['levels'])
+    screen=warp_screen(index)
+    assert screen['leaf_sizes']=={10:100000} and screen['max_evaluated_pivots_in_one_leaf']==2
+    assert screen['leaves_with_at_most_one_nonpivot']==0
     print('PASS exact G0, unchanged G1 decisions/math, source-drift rejection, fixed index partition/alias screen')
 
 if __name__=='__main__':

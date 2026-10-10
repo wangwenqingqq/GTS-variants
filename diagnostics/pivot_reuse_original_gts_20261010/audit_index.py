@@ -45,6 +45,30 @@ def audit(path):
             'arithmetic_opportunity_no_pruning':len(evaluated)/(n+len(evaluated)),
             'scope':'Static structural screen, not active-query counts or measured latency'}
 
+def warp_screen(path):
+    """Post-collection cache-coverage bound; never a dynamic SASS count."""
+    audit(path)
+    raw=path.read_bytes();n,d,h,c=struct.unpack_from('<4i',raw);off=16+4*n
+    ids=struct.unpack_from(f'<{n}i',raw,16)
+    nodes=list(struct.iter_unpack('<ifiii',raw[off:off+20*c]))
+    flags=struct.unpack_from(f'<{c}i',raw,off+20*c);pivots=set();start=1
+    for level in range(1,h):
+        width=10**level
+        if level>2:pivots.update(nodes[i][0] for i in range(start,start+width,10) if not flags[i])
+        start+=width
+    sizes=Counter();misses=Counter();maxcached=0
+    for node,flag in zip(nodes,flags):
+        if not flag and node[4]:
+            missing=sum(i not in pivots for i in ids[node[3]:node[3]+node[2]])
+            sizes[node[2]]+=1;misses[missing]+=1;maxcached=max(maxcached,node[2]-missing)
+    return {'scope':'Post-collection CPU-only static index bound, not dynamic SASS counters',
+            'index_sha256':hashlib.sha256(raw).hexdigest(),'unique_evaluated_pivot_objects':len(pivots),
+            'leaf_sizes':dict(sizes),'nonpivot_objects_per_leaf':dict(misses),
+            'max_evaluated_pivots_in_one_leaf':maxcached,
+            'leaves_with_at_most_one_nonpivot':sum(v for k,v in misses.items() if k<=1),
+            'boundary':'The self-distance shortcut skips at most one remaining object; no dynamic instruction reduction is claimed from this static bound.'}
+
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('index',type=Path);p.add_argument('out',type=Path)
-    a=p.parse_args();assert not a.out.exists();a.out.write_text(json.dumps(audit(a.index),indent=2)+'\n')
+    p.add_argument('--warp-screen',action='store_true',help='Post-collection static leaf cache-coverage bound')
+    a=p.parse_args();assert not a.out.exists();a.out.write_text(json.dumps((warp_screen if a.warp_screen else audit)(a.index),indent=2)+'\n')

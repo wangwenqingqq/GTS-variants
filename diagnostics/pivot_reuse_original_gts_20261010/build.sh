@@ -8,7 +8,7 @@ test ! -e "$out" || { echo 'Scratch already exists; refusing overwrite' >&2; exi
 python3 "$here/prepare.py" "$source" "$out/v2"
 mkdir "$out/helpers"
 cp "$base"/{run_locked.py,native_ivf.py,verify_outputs.py} "$out/helpers/"
-cp "$here"/{run.py,locked.py,CONTRACT.json} "$out/"
+cp "$here"/{run.py,locked.py,analyze.py,CONTRACT.json} "$out/"
 cp "$here/test_cache.cu" "$out/v2/"
 nvcc="${CUDA_HOME:-/usr/local/cuda}/bin/nvcc"
 for mode in G0 G1 G0_count G1_count; do

@@ -1,0 +1,40 @@
+{
+  "scope": "Separate post-confirmation correctness-only extension; never a timing replacement or denominator",
+  "frozen_production_binaries": "Same G0/G1 hashes as SOURCE_PINS.json; no rebuild or adapter modification",
+  "admitted_matrix": {
+    "N": 4097,
+    "D": [
+      96,
+      960
+    ],
+    "B": 1,
+    "K": [
+      1,
+      2,
+      7,
+      8,
+      9,
+      31,
+      32
+    ],
+    "queries": "Existing fixed33 duplicate/tie/self fixture"
+  },
+  "targeted_query": "Self query at the last allocated nonempty leaf of each pinned synthetic index; GPU leaves execute in parallel, so this is not a total device-visit-order certificate",
+  "negative_admission": [
+    "N4/K8",
+    "B32",
+    "K33"
+  ],
+  "quality": "Independent exhaustive reference, legal exact ties, original distance field tolerance, sorted nonnegative complete fields and bit-identical G0/G1 outputs",
+  "fault_rule": "Stop at first unexpected runtime/quality failure; retain all evidence, no favorable replacements",
+  "not_certified": "Original root-leaf N<K result semantics and arbitrary externally edited alias indexes remain unsupported; rejection is not successful full search",
+  "reference_sha256": {
+    "synthetic_96.f32bin": "23a13c2bc3398f16bd29ca9b026cd019e83822d520acaa182c6bcd6ed9029ef5",
+    "synthetic_960.f32bin": "93a830433992c8ba0edbb691f187c9591e773ad13928b059a5610e73adf6a0fd",
+    "synthetic96.index": "bab47ae6148bfe05fe3a2453f7c16b92fff5aca78b41c7c26f7c8ea239ccaf62",
+    "synthetic960.index": "5b7963bb920e6abf364fc6d3988ea126f7f16926cde0ca93a294058b1af767dc",
+    "oracle_synthetic96.json": "4712339a9d440bffa08d35e9eae54d8a2cad76f5ecba82ca10e6105fbb82ec2c",
+    "oracle_synthetic960.json": "ac396f4c28d3bb7061ca273bc3a454e27d916baeb4f3187899ecf27a0784d515",
+    "fixtures/synthetic_ragged33.qid": "8755c83168deb638eae3fed0c15edd05ef32c4e32e8c480e2501a1a15e30e347"
+  }
+}

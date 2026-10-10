@@ -31,6 +31,10 @@ def paired(a,b,orders):
 def validate_chain(root):
     """Verify the complete frozen evidence chain before interpreting any timing."""
     identity=json.loads((root/'IDENTITY.json').read_text())
+    for name,digest in identity.items():
+        if name in ('data_sha256','index_sha256','gpu','numa'):continue
+        path=(root/name).resolve();assert path.is_relative_to(root.resolve()),name
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==digest,('artifact drift',name)
     gates={}
     for phase in ('diagnose','qualify','freeze','formal'):
         gate=json.loads((root/(phase+'.gate.json')).read_text())

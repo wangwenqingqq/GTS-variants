@@ -30,6 +30,24 @@ python3 "$NEW_SCRATCH/run.py" formal $ARGS
 python3 analyze.py "$NEW_SCRATCH" "$NEW_SCRATCH/SUMMARY.json"
 ```
 
+Optional separately preregistered correctness/attribution extensions run only
+after the complete formal gate; they never replace its observations:
+
+```sh
+python3 boundary.py --campaign "$NEW_SCRATCH" --reference "$REFERENCE_ROOT" \
+  --out "$NEW_BOUNDARY_SCRATCH" --python "$CUDA_PYTHON" \
+  --gpu "$IDLE_GPU_UUID" --numa "$VERIFIED_NUMA"
+python3 profile.py --campaign "$NEW_SCRATCH" --reference "$REFERENCE_ROOT" \
+  --data "$GIST_DATA" --out "$NEW_PROFILE_SCRATCH" --python "$CUDA_PYTHON" \
+  --trace-analyzer ../native_knn_faiss_ivf_20261003/analyze_profiles.py \
+  --gpu "$IDLE_GPU_UUID" --numa "$VERIFIED_NUMA"
+python3 audit_index.py "$PINNED_GIST_INDEX" "$NEW_WARP_SCREEN_JSON" --warp-screen
+```
+
+All extension output directories must be new. Contracts and input/source hashes
+are recorded before their first process and checked again after collection.
+An explicit unsupported-input rejection is not a successful N<K full search.
+
 Scripts refuse existing evidence paths, hash drift, occupied GPU/lock failure,
 native runtime-error logs, sanitizer errors and incomplete/incorrect outputs.
 Telemetry has a10s bound; inherited runner cleanup only reaps its own benchmark
