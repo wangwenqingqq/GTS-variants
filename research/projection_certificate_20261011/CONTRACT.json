@@ -1,0 +1,85 @@
+{
+  "experiment": "gts_20261011_projection_certificate_gist1m_d960_k8_b1",
+  "base_commit": "1e77f6e40ca28a85ffc5d7f635cf7c2f652c4d9b",
+  "shape": [
+    1000000,
+    960,
+    8,
+    1
+  ],
+  "queries": [
+    660835,
+    90208,
+    359924,
+    374533,
+    96985,
+    702545,
+    55715,
+    470632
+  ],
+  "levels": [
+    3,
+    4,
+    5
+  ],
+  "prefixes": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "random_seed": 20261011,
+  "bridge_seed": 2026101103,
+  "bridge_pairs_per_level": [
+    43,
+    43,
+    42
+  ],
+  "projection": "uncentered P*x; stored FP64 rows certified contractive by exact rational Gram infinity norm; common scaling (1-2^-40)",
+  "PCA": "all database rows only; two fixed-order 8192-row FP64 passes, centered covariance; descending eigenvalues; canonical sign; no query fitting",
+  "score_contract": "unchanged ordered RN-FP64 squared L2, FMA disabled, original full-path native bound and U*",
+  "projection_contract": "ascending coordinate separate FP64 multiply and add, FE_TONEAREST, no FMA, no FTZ/DAZ",
+  "projection_absolute_envelope": 1e-08,
+  "original_distance_absolute_envelope": 0.0001,
+  "metadata": "signed outward FP32 lo/hi pairs, zero padding, 16-byte alignment, level-local only",
+  "bound": "directed-down gaps, squared gaps, monotone lower-rounded prefix sum, sqrt, original-distance envelope; max with unchanged native full-path bound",
+  "promotion": {
+    "families": [
+      "PCA"
+    ],
+    "prefixes": [
+      4,
+      8
+    ],
+    "levels": [
+      3,
+      4
+    ],
+    "gap_min": 0.5,
+    "G0_pruning_min": 0.3,
+    "aligned_bytes_max": 64
+  },
+  "kill": "maximum PCA-8 gap across all levels < 0.30",
+  "leaf_only": "PCA-8 L5 gap >= 0.50 and L3/L4 both < 0.20",
+  "stage_C": "only if maximum PCA-8 gap is in [0.30,0.50): scale each PCA row by sqrt(lambda_8/lambda_i), certify contraction anew; same gates; otherwise skip",
+  "pivot_comparator": "strongest prior GLOBAL or REGION_ORACLE within aligned-byte budget (<= budget); additionally record strongest unlimited-budget pivot to resolve literal same-or-larger wording conservatively",
+  "cost_model": {
+    "bound_scalar_ops": "(8*k+3)*C0_survivor_query_region_pairs + 2*8*k",
+    "outward_nextafter_ops": "(4*k+2)*C0_survivor_query_region_pairs + 2*8*k",
+    "metadata_bytes_read": "C0_survivor_query_region_pairs*aligned_bytes",
+    "query_projection_coordinate_updates": "8*k*960",
+    "avoided_original_coordinate_updates": "newly_pruned_G0_objects*960"
+  },
+  "resource_contract": "CPU only; 4 low-priority cores for full PCA, 1 for ordered projection; advisory lock; bounded process; no latency estimator",
+  "forbidden": [
+    "GPU execution",
+    "CUDA implementation",
+    "latency claim",
+    "learned projection",
+    "new partition",
+    "new queries",
+    "threshold changes",
+    "formal256",
+    "10K"
+  ]
+}

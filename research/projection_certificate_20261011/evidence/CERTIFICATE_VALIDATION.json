@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "stage_A": "PASS",
+  "validations": [
+    {
+      "family": "RANDOM_ORTHO",
+      "level": 3,
+      "bounds_checked": 32000,
+      "false_topK_prunes": 0,
+      "bound_above_truth": 0,
+      "nested": true
+    },
+    {
+      "family": "PCA",
+      "level": 3,
+      "bounds_checked": 32000,
+      "false_topK_prunes": 0,
+      "bound_above_truth": 0,
+      "nested": true
+    },
+    {
+      "family": "RANDOM_ORTHO",
+      "level": 4,
+      "bounds_checked": 320000,
+      "false_topK_prunes": 0,
+      "bound_above_truth": 0,
+      "nested": true
+    },
+    {
+      "family": "PCA",
+      "level": 4,
+      "bounds_checked": 320000,
+      "false_topK_prunes": 0,
+      "bound_above_truth": 0,
+      "nested": true
+    },
+    {
+      "family": "RANDOM_ORTHO",
+      "level": 5,
+      "bounds_checked": 3200000,
+      "false_topK_prunes": 0,
+      "bound_above_truth": 0,
+      "nested": true
+    },
+    {
+      "family": "PCA",
+      "level": 5,
+      "bounds_checked": 3200000,
+      "false_topK_prunes": 0,
+      "bound_above_truth": 0,
+      "nested": true
+    }
+  ],
+  "candidate_bounds_checked": 7104000,
+  "false_topK_prunes": 0,
+  "bound_above_truth": 0,
+  "C0_bridge": true,
+  "original_ownership_unchanged": true,
+  "native_full_path_retained": true,
+  "new_certificate_level_local": true,
+  "serialized_metadata": {
+    "RANDOM_ORTHO_L3_K1.bin": {
+      "bytes": 16000,
+      "sha256": "4891bceecff7a5592d1223816f07644d14c5d638298c680a4ea1a2e85aae9bb5",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L3_K2.bin": {
+      "bytes": 16000,
+      "sha256": "80f2a7281e764a0a037ee6bb974634d33b2aa155638616d2335f3ffbe57cc2f9",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L3_K4.bin": {
+      "bytes": 32000,
+      "sha256": "79267523e9f97db1dae9aa4d770575cfad09f9c95d3dc82d8e656d9042fd767e",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L3_K8.bin": {
+      "bytes": 64000,
+      "sha256": "e600b58f8b34f9d75e7c90b385675d61f61a04ae4d4b5b98f093f2aec7359cf8",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L3_K1.bin": {
+      "bytes": 16000,
+      "sha256": "16aee5a57cc67832fe9d4794069f0165acd561611121ca013ffb755ca7629b3f",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L3_K2.bin": {
+      "bytes": 16000,
+      "sha256": "aaaf5d43d374f04baec6532f5b27c87fc9988768f7bf5c52cffa0fcfbcef6ee8",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L3_K4.bin": {
+      "bytes": 32000,
+      "sha256": "cefae93238b743fe41ae0300083b74006428c39d258b6c50cd6fb8a407c6979f",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L3_K8.bin": {
+      "bytes": 64000,
+      "sha256": "32ebb91e342881555dd0da8dc8ad888b5e92b5fe6351bf22ab6adb147b205171",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L4_K1.bin": {
+      "bytes": 160000,
+      "sha256": "d98d57f335a9fae317b3d109f825132ac8674455c6bf097d315c4bf9cff68ce2",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L4_K2.bin": {
+      "bytes": 160000,
+      "sha256": "b2533335123a4f2b8b3a3dcde1b211056a580d4cd89a4b6e7ac5c98325f383b8",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L4_K4.bin": {
+      "bytes": 320000,
+      "sha256": "3d55c0c8347f90ab81755643b8b5a66397095765c07e2a65dc69b16d247083a6",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L4_K8.bin": {
+      "bytes": 640000,
+      "sha256": "4dacad33d6efa7155f576bbb1d5cb80b872ae08191a5594ad9831eed9c6765c5",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L4_K1.bin": {
+      "bytes": 160000,
+      "sha256": "4a42c5b910692a15bd838a3bce32620970e4ab859d8b2771f87b683b1238737f",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L4_K2.bin": {
+      "bytes": 160000,
+      "sha256": "e5996f9bb0162483f4779192a5f4e3628c57921325bb4f75648878e6e7cfad39",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L4_K4.bin": {
+      "bytes": 320000,
+      "sha256": "c0fafec5bba44078b791c12594b831d238ae7b5399b3f78a6aeca33b0bb23c84",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L4_K8.bin": {
+      "bytes": 640000,
+      "sha256": "0dc861109fcc1c7b554c072c37f87da2b99beef3277baaac7385c17ae96ef62e",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L5_K1.bin": {
+      "bytes": 1600000,
+      "sha256": "781c5983ba402f936739c8ed3450be17205178144ce8483a0091512150ed4e56",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L5_K2.bin": {
+      "bytes": 1600000,
+      "sha256": "a662561420760cd27849e9f40c249de390cbcb637b714e7e09219de71f88bf7e",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L5_K4.bin": {
+      "bytes": 3200000,
+      "sha256": "bcbcd72985c5cd39afeb5b437eaf73ad433e94bc1ffb94f8e95e984f6c2c32d1",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "RANDOM_ORTHO_L5_K8.bin": {
+      "bytes": 6400000,
+      "sha256": "5e2af8a6351a94bca0e06fb04efd5fa547e0a91f372da988164d20185e436883",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L5_K1.bin": {
+      "bytes": 1600000,
+      "sha256": "67c237a57888f60003aa84159f7acc9af52194736d80caaaae1b294a2db43aa4",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L5_K2.bin": {
+      "bytes": 1600000,
+      "sha256": "957828248faab0d1e3c6adad5bf3532be538b4efb59ab33633160299ce53a7dc",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L5_K4.bin": {
+      "bytes": 3200000,
+      "sha256": "8b4c9dce423f072333a2b28d5c9d2771c77d220709eec7ffd0d45a434dfaf3dd",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    },
+    "PCA_L5_K8.bin": {
+      "bytes": 6400000,
+      "sha256": "23afa1932c1c0808c5ebc683ed9691ca043d02863f4919f47c1d6aae9cdef3d5",
+      "endpoint_roundtrip": true,
+      "zero_padding": true
+    }
+  },
+  "basis_contraction_independently_rechecked": true,
+  "GPU_used": false,
+  "source_sha256": "863d78695ce0c21cf2a52c13f4ffbbec0038e5b3c9226f8ff6941d6df7914784",
+  "math_sha256": "598e14933d35bed7b6c74696d39c5239721971c08382c54ecaafbf689ffafdef",
+  "elapsed_resource_seconds": 1.4203089169459417
+}
