@@ -1,0 +1,187 @@
+{
+  "experiment": "gtspp_20261011_fixed3_current_par_full",
+  "revision": 1,
+  "scope": "Bounded engineering attribution; not a novelty claim or external-baseline closure",
+  "selection": "Human selected current P: PAR_STRONG / FULL / TILED",
+  "hardware": {
+    "physical_gpu": 1,
+    "sm": "sm_120",
+    "driver": "590.48.01",
+    "toolkit": "13.1.115",
+    "numa_node": 0,
+    "clocks": "unchanged; record before each process",
+    "locks": [
+      "/tmp/gtspp_gpu1.lock",
+      "/tmp/gts_auto_knn_pro6000_gpu1.lock"
+    ],
+    "isolation": "whole-phase inherited locks; pre/during/post foreign-PID checks; owned process groups only",
+    "gpu_uuid_sha256": "94515d9c9c2c807ec0fdbc7f33693456ed40d13b8d35ca2727cc4907faaddd57"
+  },
+  "shape": {
+    "N": 1000000,
+    "D": 960,
+    "dtype": "FP32 input; ordered RN FP64 subtract/multiply/add; RN sqrt to FP32 field",
+    "B": 1,
+    "K": 8,
+    "radius": 0.705625057220459,
+    "events": 336,
+    "range": 128,
+    "knn": 128,
+    "insert": 40,
+    "delete": 40,
+    "rebuilds": 2,
+    "graph": false,
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "events_sha256": "5f440b3f5442499cd404fcb4821be95cf5cb4d04af63f7b6ead4bd10fec5ef96"
+  },
+  "modes": {
+    "P0": "exact current-P source; one range leaf / 256-thread CTA",
+    "P1": "one range leaf / 32-thread CTA; launch only",
+    "P2": "three canonical range-list entries / 32-thread CTA; ten lanes per leaf, stride ten; inactive entries not compacted"
+  },
+  "invariants": [
+    "PAR traversal/materialization/pruning",
+    "ordered FP64 distance arithmetic",
+    "FULL kNN",
+    "TILED build",
+    "updates/rebuilds/refits",
+    "stable canonical output slots/collection",
+    "logical occurrence IDs and complete outputs"
+  ],
+  "unit": {
+    "D": [
+      128,
+      960
+    ],
+    "leaf_sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "list_lengths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "radius_cases": [
+      "zero",
+      "one",
+      "nextafter below one",
+      "nextafter above one",
+      "large"
+    ],
+    "duplicates": true,
+    "deletions": true,
+    "inactive_lists": true,
+    "pointer_churn": 3,
+    "oracle": "CPU ordered FP64 with dyadic high-entropy inputs; exact hit and field bits"
+  },
+  "qualification": [
+    "3 unit normal",
+    "P1/P2 unit memcheck,racecheck,synccheck",
+    "3 bounded mixed workflow full CPU oracle",
+    "P1/P2 bounded mixed workflow memcheck,racecheck,synccheck",
+    "3 target mixed workflow bound qualified native-rank reference and exact-bit outputs"
+  ],
+  "process_budget": {
+    "qualification": 21,
+    "work": 3,
+    "profile": 6,
+    "formal": 18,
+    "maximum": 48,
+    "replacement": 0,
+    "ncu_probe": "one diagnostic unit process; no permission escalation"
+  },
+  "profile_orders": [
+    [
+      "P0",
+      "P1",
+      "P2"
+    ],
+    [
+      "P2",
+      "P1",
+      "P0"
+    ]
+  ],
+  "formal_orders": [
+    [
+      "P0",
+      "P1",
+      "P2"
+    ],
+    [
+      "P2",
+      "P1",
+      "P0"
+    ],
+    [
+      "P1",
+      "P0",
+      "P2"
+    ],
+    [
+      "P2",
+      "P0",
+      "P1"
+    ],
+    [
+      "P1",
+      "P2",
+      "P0"
+    ],
+    [
+      "P0",
+      "P2",
+      "P1"
+    ]
+  ],
+  "gate_E": "all correctness/sanitizers pass; work sidecars bit-identical; actual NSYS grid equals ceil(total canonical leaves/3); P2 leaf inclusive duration below P1 in both reverse profiler rounds; NCU unsupported metrics remain unavailable",
+  "primary": {
+    "timer": "summary.trace_ms for complete measured native.trace (336 events)",
+    "included": "serialized logical request ACKs, input vector uploads, query allocations/launch/synchronization, complete host-ready IDs/fields, updates, compaction/rebuild/refit/refresh, final drain",
+    "excluded": "cold initial setup/build, separate real 19-event warmup, oracle, counters, profiler, file output",
+    "fresh_processes_per_mode": 6,
+    "estimator": "process-paired geometric P0/P1, P1/P2, P0/P2 ratios",
+    "bootstrap": 20000,
+    "seed": 2026101101,
+    "interval": "95% process-level paired percentile bootstrap",
+    "acceptance": "P1/P2 CI lower > 1 and at least 5/6 process wins; no independent FULL-kNN claim",
+    "secondary": "ACK p10/median/p90 by operation; process total by range/knn/update; order strata; marginal median ratios"
+  },
+  "stop": "first runtime, isolation, source, correctness, sanitizer or attribution failure; preserve failed attempt; do not proceed to formal after Gate E failure",
+  "limitations": [
+    "not Safe-C1, not legacy archive, not original GTS",
+    "no D96 or K1/K32 claim for this modern P contract",
+    "full N1M sanitizer not admitted; bounded actual workflow and exhaustive real leaf unit only",
+    "shared inherited full-program leak not resolved here",
+    "no all-GPU-tree, new pruning, query-layout, instruction/traffic or occupancy claim without direct evidence"
+  ],
+  "publication_view": {
+    "kind": "UUID-redacted view; measurement contract preserved privately",
+    "measurement_contract_sha256": "930e8c9e48acce975c86af3a2596257e6c53039fb7989acf7151a24af8808a79",
+    "unchanged": "workload, variants, timers, budgets, gates and acceptance rules"
+  }
+}

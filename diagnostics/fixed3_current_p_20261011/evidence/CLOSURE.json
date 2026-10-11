@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "scope": "Offline post-campaign hashes; no new GPU process; UUID/paths omitted",
+  "phases": {
+    "qualify": {
+      "processes": 21,
+      "passed": true,
+      "gate_sha256": "edfbc67ae0a113c0daee5a1d21d77292720f2927e915eb745c7701a83ec3b77c"
+    },
+    "work": {
+      "processes": 3,
+      "passed": true,
+      "gate_sha256": "d26174bf6ae0e514f90cfa9636fd4deba09cd7e9d875cbf9afa3b4bf0ac698d7"
+    },
+    "profile": {
+      "processes": 7,
+      "passed": true,
+      "gate_sha256": "6f11c394ff9b445f1cb32550f3f3fb4976042f2bca4b51a8d8c07cb1277a39b2"
+    },
+    "formal": {
+      "processes": 18,
+      "passed": true,
+      "gate_sha256": "097fa36229bedfcc212a84a1a4d0357fb708192fb09b04f58d85465aff6d4779"
+    }
+  },
+  "main_processes": 48,
+  "diagnostic_NCU_probes": 1,
+  "original_registration_sha256": "864bad51b33cb4d4f1af658701aed3c2209c4ce03d53987c079c31c70edfc501",
+  "resume_registration_sha256": "e33599d0fc85f51b49fe52c752615b0b3965cb7cf0af50cf4b041069255c1501",
+  "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+  "parent_registration_sha256": "8c7b7f723b68549a4b495c88a897aa19b39abd193c61feafbe08469cee167b30",
+  "reference_hashes": {
+    "round_1_P.region.json": "5e12c0a71f856d356ead3155e2f94b3d770111526cda9eb27064c82492e6b938",
+    "round_1_P.warmup.dist.f32": "b2238c4fc1dd2caf5373a89138510c483124af464c3d971ff837d2106c4720b6",
+    "round_1_P.warmup.numeric.json": "ca0fef23ff2b8ac50122e64ee3cd2ff82d7050984b7379138b51b48d7c4f3cdd",
+    "round_1_P.warmup.ids.i32": "ab0488a26edeb72d94b9b2a97338442f9f91049b8fe71d35600ed8925506dc27",
+    "round_1_P.warmup.summary.json": "2d55a05bf73130b58955b38f1b4dd1467ccd1f8903ea5796c988063c7386dac7",
+    "round_1_P.ops.csv": "db0931f33891ce01c645f89f879d3e4776d5fcbea8021123de2ce2000ea127ad",
+    "round_1_P.warmup.queries.csv": "2d42bd7c8252545ed8e74005f131d04c66bd5ec6cbbf68045390c535c05641b5",
+    "round_1_P.summary.json": "06480347bae3e82afd993f78046be17b67e0bfdeaea15d7eb98acf8d2c7a546d",
+    "round_1_P.warmup.unified.json": "a123f6d0b0d18e6b5ada67adfe88e6ab7dd2de2fc7298d3cec97c7bfe689b74d",
+    "round_1_P.numeric.json": "2c00570c0f54ee1a2a42cc8af8dce8690a698f701b4a3258f30f957c35b86c27",
+    "round_1_P.unified.json": "ad3ded40666b56e7d1c29104fcfaf36f3e912faa8861658a3f38b33a1595bca7",
+    "round_1_P.queries.csv": "b39ce9b33b6d69fd126b428fb8d9c2dfd8e748bca1abf26fe36da5044bd8874a",
+    "round_1_P.warmup.region.json": "9cabce4246db0023881cb70b388866cc50d2c9c96dc232d1f1fdaca30de24994",
+    "round_1_P.scope.json": "3c845c50b4407765898136706906957b120d9c384a4d56adf8bc9bb95dae6c30",
+    "round_1_P.build_tiles.json": "153e18dbcd542af652d83534081143cb1be4480a4339e87f89579cb5ec4d9a6b",
+    "round_1_P.ids.i32": "7babf284cb0903f1c1e43480262f949345c518a07233ac1bf4c6ee39bc309854",
+    "round_1_P.dist.f32": "be18f7c490c83d4e05867049b4e9f4168022b4fff82a9b5a66d480cccd600537",
+    "round_1_P.warmup.ops.csv": "7c5ded18e45a91f9092ad84575d7188c44f0f2a358067d6bdd3ad5b3b256e761"
+  },
+  "frozen_root_inputs": 250,
+  "checker_files": 149,
+  "qualified_payload_files_rebound_to_original_quality_hashes": 234,
+  "unit_payload_closure": "Nine deterministic real-kernel payloads independently revalidated by CPU-only verify_unit_payload.py; see UNIT_PAYLOAD_CLOSURE.json",
+  "gpu_clear_after": true,
+  "retained_failures": [
+    "first static shared admission",
+    "mutable outer run.log incorrectly frozen; original21 retained, offline resumed without rerun"
+  ]
+}
