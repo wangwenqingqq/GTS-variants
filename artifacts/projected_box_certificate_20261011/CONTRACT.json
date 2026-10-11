@@ -1,0 +1,165 @@
+{
+  "shape": {
+    "N": 1000000,
+    "D": 960,
+    "dtype": "FP32",
+    "metric": "L2",
+    "B": 1,
+    "queries_per_snapshot": 32,
+    "radius_bits": "0x3f34a3d8"
+  },
+  "snapshots": [
+    "initial",
+    "first_rebuilt"
+  ],
+  "partition": "Frozen S1/P2; 4096 strict-median leaves of 244/245 objects; not the 4167-block slack initialization",
+  "partition_proof_sha256": "fd3765b91e0f20ab9e5168485a8fa6a94475e8eb5091f1fd4bb7a3de63eb3184",
+  "partition_verification_sha256": "6b26e96fbbd8d4a1a88040a0b2f739af81c787b63644caab71796f7f9b5a0421",
+  "partition_sha256": {
+    "initial": "8319cd24b0ccde10546d7077539f0ce6914435924dbce2db3f8eea009832e8e8",
+    "first_rebuilt": "4669b54d898b8cd15bc5b56fc7dfd9e96a8bd0c11e5d20a10203e13bdd8bb560"
+  },
+  "global4_result_sha256": "cf7ffdaa8191d5d85b041a41278f395fddce1d4e3b242b5bc43a9ef14ea75137",
+  "prior_score_proof_sha256": "57062d79d3b49abe35e2c859eefe10cc26ee48fc2adcac0e2592f8ac2211105d",
+  "prior_score_verification_sha256": "365a9986f2ba5c36b79b1315bbb419d1e46847310b9cb51d1e9daf7de120be7c",
+  "inputs": {
+    "initial": {
+      "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "reference_sha256": "6417a03c5d08d9b0b9de1058d7cc952054096bed19e74b2e8ee172de56691b26",
+      "masks_sha256": "b91024f798be3697b1443c1006a0f2376325691d2adc9ecfff7752cf5e2439f8",
+      "nodes_sha256": "c26366ab1969e43e679a2c06e38bd1596df956ee7fd1e5d54c517d356072c128",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317",
+      "qids": [
+        88406,
+        865632,
+        881748,
+        916533,
+        40158,
+        242468,
+        40486,
+        900387,
+        703226,
+        791039,
+        724874,
+        671829,
+        722418,
+        152899,
+        737995,
+        144573,
+        570909,
+        347206,
+        63744,
+        625378,
+        136857,
+        201233,
+        72436,
+        617423,
+        810945,
+        789615,
+        601856,
+        433080,
+        415755,
+        282095,
+        66651,
+        326654
+      ]
+    },
+    "first_rebuilt": {
+      "data_sha256": "7320627ab528bb2519720a8a4d43b8c1e3433b486c27cd1897ac1c03d2631da6",
+      "reference_sha256": "18c8c6d119b91a481452dca16da2e1e5b0c5bae1b3212e4ff0349ce04269754b",
+      "masks_sha256": "ceed2f2b539bf4cf0e006a2a8367c199de7344ff9798f314ad70a0d12a1d0c22",
+      "nodes_sha256": "acc9083fd2b03e2563ff61ad3a32130241a2dafbfd09515a5cebe12e287055f7",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "b6c89edea15f13f22ffd18fca9bf0e00e968043c51b0a374bc108332ff3ea1be",
+      "qids": [
+        282091,
+        66650,
+        326650,
+        532560,
+        113260,
+        991585,
+        253497,
+        738154,
+        567973,
+        258318,
+        243005,
+        236353,
+        158329,
+        922178,
+        436359,
+        821767,
+        253944,
+        323617,
+        578176,
+        569440,
+        207665,
+        579738,
+        63627,
+        227,
+        365626,
+        551655,
+        947181,
+        520014,
+        136074,
+        750662,
+        838925,
+        819709
+      ]
+    }
+  },
+  "occurrence_sha256": {
+    "initial": "ffcae47455758e16b2a9085b0e752f14c21f7dc1b034d470201e694c2d19c520",
+    "first_rebuilt": "5910e8481764c331794d16467f29069a6c5dde3cbef7efb553a66a520744aaa8"
+  },
+  "experiment": "GTSPP_20261011_projected_box_PCA4",
+  "baseline_commit": "b3ac5ed66e81152a021c9692b4e57ee5cbc16953",
+  "scope": "CPU-only offline structural discrimination; 64 fixed query rows, one initial-only PCA-4 family; no CUDA, updates, hierarchy, timing comparison or automatic K8",
+  "local_ball_proof_sha256": "8e117fed3d4eca60a973592cb10ea2092ff188ed175367ffa32d222c24ee27a5",
+  "local_ball_verify_sha256": "1fe16513adf30c02d4c6c89c24d8a25d9430ee54ebd186cc155f20e7bf143d9a",
+  "local_ball_result_sha256": "73fe73e0b6dbea87b0a23f10f44a38fbb36e1ecce8056b0dde4009dcec7bc7a8",
+  "direction_rule": {
+    "name": "D0 initial-only centered PCA-4",
+    "chunk_rows": 8192,
+    "mean": "FP64 sum(axis=0) within chunks in physical row order, add chunks in ascending start order, divide N",
+    "covariance": "Second pass: FP64 centered chunk transpose times centered chunk; add in ascending chunk order; symmetric (C+C.T)/2; divide N; no query/radius/oracle consulted",
+    "solver": "numpy.linalg.eigh on full D960 covariance, ascending eigenvalues reversed; first four; sign largest-absolute component positive; first dimension wins absolute ties",
+    "degeneracy": "Abort if any top-four adjacent eigenvalue gap or fourth/fifth boundary <=1e-10*max(1,top eigenvalue); do not invent tied directions",
+    "validation": "Freeze all 960 eigenvalues, covariance hash, direction bytes and means; repeat eigh on same covariance bitwise; residual<=1e-10 and Gram infinity deviation<=1e-10",
+    "portability": "Determinism scoped to pinned NumPy/LAPACK/BLAS, thread count and chunk order; directions explicitly retained; bitwise cross-library regeneration not claimed",
+    "represented_directions": "FP64 D-by-4; numerical near orthonormality is insufficient for safety; exact rational Gram + row-sum spectral bound repairs contraction"
+  },
+  "numerics": "Strict ordered-FP64 dots, no reassociation/FMA; outward absolute dot envelope from one FP32 infinity-norm reduction/vector; exact-rational represented-direction Gram row-sum upper bound A2; lower interval-to-box squared sum; reject only LB2_lower > upward(A2*reference_radius2_upper). Equality retained.",
+  "gates": {
+    "correctness": "Any false prune, malformed input, PCA qualification failure or identity mismatch aborts before structural decision",
+    "GO_ANISO": "BOTH mean<=0.50 and p90<=0.70 and GLOBAL4-minus-box>=0.15; zero false prune",
+    "STRONG_GO_ANISO": "Must first pass GO_ANISO; then BOTH means<=0.35; label GO_ANISO",
+    "NO_GO_PROJECTED_BOX": "At least one SAME snapshot box mean>0.65 and GLOBAL4-minus-box<0.10",
+    "CONDITIONAL_SUPPORTED": "No GO/no NO-GO, both means<=0.65, at least one mean>0.50, and EACH improvement>=0.15",
+    "UNCOVERED": "CONDITIONAL_ANISO with reason uncovered_interval, K8_admissible=false; not a positive gate",
+    "next_phase": "No automatic next run. K8 can be separately registered only if specified conditional band passes; GO only permits discussion/design, not launch in this round"
+  },
+  "cost_proxy": {
+    "projection": "4 full-D dot products plus one full-D maximum-absolute-coordinate reduction for safe errors, fused in one input pass; do not hide the extra reduction",
+    "endpoints": "8 FP64/block: 262144 bytes for 4096; same endpoint count as GLOBAL4",
+    "directions": "4*960*8=30720 bytes (FP64), versus GLOBAL4 pivots 4*960*4=15360 FP32 bytes; optional pivot IDs separate",
+    "survivors": "Add one full-D exact distance per surviving object, without reuse. Report both dot-only+survivor and fully charged 5+survivor reduction-count proxy; operations are not instruction/latency equivalent",
+    "bytes": "Logical coordinate payload (one query, shared across projections) plus direction payload plus surviving FP32 coordinates; not actual cache/DRAM traffic",
+    "PCA": "Measured wall/process CPU seconds, process peak RSS and explicit live temporary NumPy arrays; reused signatures and data not free; no build-time comparison claimed"
+  },
+  "runtime": {
+    "OpenMP_threads_max": 4,
+    "BLAS_threads": 4,
+    "nice_requested": 15,
+    "GPU_processes": 0,
+    "timing": "Only offline PCA construction resource accounting, not query/E2E timing"
+  },
+  "novelty_gate": {
+    "status": "Diagnostic only; no novelty claim for PCA/projection/box filtering",
+    "prior_art": [
+      "https://www.vldb.org/conf/1998/p194.pdf",
+      "https://page.mi.fu-berlin.de/~rote/Papers/pdf/Bounds%2Bon%2Bthe%2Bquality%2Bof%2Bthe%2BPCA%2Bbounding%2Bboxes.pdf"
+    ],
+    "claim_boundary": "Success/failure concerns top-four initial global PCA axes on fixed pivot partition, not a causal proof about all block anisotropy."
+  }
+}

@@ -281,3 +281,17 @@ on 63/64 queries, with zero false prune and full independent reconstruction.
 This stops the tested C0 single-ball route. No center tuning, multiple balls,
 update, hierarchy or CUDA run follows. These are CPU structural counts, not
 new end-to-end results; previous formal measurements remain unchanged.
+
+## Fixed PCA-4 projected-box checkpoint (2026-10-11)
+
+The [projected-box follow-up](../projected_box_certificate_20261011/README.md)
+is **NO_GO_PROJECTED_BOX**. On GIST N1M/D960 and unchanged S1/P2 blocks,
+one full-initial PCA4 map retains 74.4102% / 75.1266% versus GLOBAL4
+68.8995% / 67.8749%. Ten queries improve and 54 regress; false prune is zero
+and all 64 rows pass independent scalar reconstruction. PCA construction and
+qualification cost 9.543945293 seconds wall / 31.575067 CPU seconds; these
+are not query or cold-start full-index times. The safe query cost proxy pays
+four dots plus one max-absolute reduction, not identical pivot instructions.
+No K8, direction tuning, update, hierarchy or CUDA follows. This rejects the
+tested global variance-axis box, not all anisotropy or GPU trees. See the
+[five-question decision](../projected_box_certificate_20261011/DECISION.md).

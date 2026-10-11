@@ -124,3 +124,22 @@ CUDA or long runs. Any genuinely different mechanism needs a new Gate 0
 review, quality/cost contract and authorization; this is not an automatic
 next launch. Do not generalize this fixed C0 rejection to every local summary
 or GPU tree, and do not replace historical end-to-end evidence with proxies.
+
+## Fixed PCA-4 projected-box stop (2026-10-11)
+
+The authorized initial-fitted PCA4 test is closed as **NO_GO_PROJECTED_BOX**.
+Both snapshots individually satisfy mean survival >65% and improvement over
+GLOBAL4 <10 percentage points: 74.4102% / 75.1266%, or regressions of
+5.5107 / 7.2517 points. p90 remains 93.0078% / 92.6782%; the oracle needs
+only 0.3654% / 0.3746%. Zero false prune and independent reconstruction of
+all 2M object projections, 64 queries and 8192 boxes do not rescue selectivity.
+
+Preserve the [decision and full cost boundaries](../projected_box_certificate_20261011/DECISION.md).
+K8 is not admitted. Do not try random directions, multiple PCA maps, multi-box,
+adaptive directions, repartition, update, hierarchy or CUDA under this campaign.
+This result does not establish whether the residual gap is mainly anisotropy:
+global variance axes need not expose local range-separation geometry. Reassess
+the low-cost whole-block-summary hypothesis before proposing a genuinely
+different, prior-art-cleared mechanism with a new cost/quality contract.
+No next experiment is automatically authorized, and existing end-to-end
+measurements and the private manuscript remain unchanged.
