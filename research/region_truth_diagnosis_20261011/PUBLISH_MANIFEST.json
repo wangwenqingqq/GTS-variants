@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-11",
+  "repository": "wangwenqingqq/GTS-variants",
+  "branch": "experiments/region-truth-diagnosis-20261011",
+  "base_commit": "b800019240a42fe5409e2643816368730a1161f3",
+  "scope": "offline eight-query diagnosis only; no GPU implementation/performance admission",
+  "excluded": "local raw vectors, large score/CSV outputs, executables, private host paths and logs",
+  "files": {
+    ".gitignore": {
+      "bytes": 20,
+      "sha256": "94e8e70ea7f42be858f927964c68ef42501f2bc6509708d53baa01486a5f58fa"
+    },
+    "CONTRACT.yaml": {
+      "bytes": 2768,
+      "sha256": "da799314d12ae1c8a49c289d7f2c37812e25428c9d77a50501dbbe947a211f1d"
+    },
+    "DECISION.md": {
+      "bytes": 6094,
+      "sha256": "4219fe089bfb16fae95bc716101a81a5c9de4452086fa03e0188937d7d936189"
+    },
+    "LEDGER.md": {
+      "bytes": 3512,
+      "sha256": "52291a9041d6ab0e78bac4e785a3867dd6440759faea17edde6ce9ff8dd979ca"
+    },
+    "README.md": {
+      "bytes": 11712,
+      "sha256": "cd3e512ad14d66d0da97cdebf0be390fef090142fab2158b3338c73b9304f1e6"
+    },
+    "analyze_region_truth.py": {
+      "bytes": 18440,
+      "sha256": "874a91305d2fc698b85cbf82ab92f72c7e59c3a9471d2e5741657a97f6d37ef2"
+    },
+    "evidence/ANALYSIS_RECEIPT.json": {
+      "bytes": 1521,
+      "sha256": "da50341a2d79e7852ee3aed6dfc29e05eab8b9316cc700752b41bda85eb0f595"
+    },
+    "evidence/CPU_TESTS.txt": {
+      "bytes": 1072,
+      "sha256": "76d4bcb6c97114f187cd7dea50e650fd1deadbfe634297ef3ff33105b5660d93"
+    },
+    "evidence/FIGURE_QA.json": {
+      "bytes": 1067,
+      "sha256": "8b67a5262028e47d668116695ff716c140c454ce0c68df4a10225dfd2d90670b"
+    },
+    "evidence/G0_trace8.json.gz": {
+      "bytes": 13648,
+      "sha256": "5e3a612bd8f2b3ca6793bd0aafeb87df73e7cd790b242158abd006cb165f5c15"
+    },
+    "evidence/QUERY_MANIFEST.json": {
+      "bytes": 2839,
+      "sha256": "34c5e7eaff764c4083a7e375a161a169f28fe87a82aa3dd32053549423eeea60"
+    },
+    "evidence/RAW_MANIFEST.json": {
+      "bytes": 4521,
+      "sha256": "4059eb108edec6873230bb369c3e255027ffdc5f7754dcce7aa48a71adecccee"
+    },
+    "evidence/REPRODUCTION_CHECK.json": {
+      "bytes": 1157,
+      "sha256": "4b972b41217a3be0fcc135aeda4737069e2944986eeb3983591016c4df36b4fb"
+    },
+    "evidence/SAMPLE_MANIFEST.json": {
+      "bytes": 35563,
+      "sha256": "9571df4fdd3dc37eb7778d08fd03997cd5a8a657089e01059c80adcedd8ffca2"
+    },
+    "evidence/SCAN_RECEIPT.json": {
+      "bytes": 754,
+      "sha256": "c62fd24c40d62bc17190adde19c128de9fc05b8494b1125e7609c524cb76f57c"
+    },
+    "evidence/SOURCE.json": {
+      "bytes": 434,
+      "sha256": "a8e41b2dc49ef475f21d31894a87a8820c4fcc34dd7f8eac460ae79081ebb44c"
+    },
+    "evidence/TREE_IDENTITY.json": {
+      "bytes": 1322,
+      "sha256": "f3de0ab7503e5f6c53308fd740c7b8d2969816442518fe20bd3cda327b66edb0"
+    },
+    "evidence/VALIDATION.json": {
+      "bytes": 32420,
+      "sha256": "4a4095ecb5796f3aec8d6ca7a12e8a70cf8272b1a914e8ec1a9b9a5e21d0cbe1"
+    },
+    "evidence/aggregate_summary.json": {
+      "bytes": 2547,
+      "sha256": "1cf7ae34ff770bd96e24584e1f6d9ba9a6cebaf0bdf929747c9ae5f234c4ec45"
+    },
+    "evidence/figures/PLOT_RECEIPT.json": {
+      "bytes": 15200,
+      "sha256": "3f3281fbf1f80fa113bd53b9964cd0fe06522ba730745249d2a71b2f0a92ea0e"
+    },
+    "evidence/figures/all_figures.pdf": {
+      "bytes": 689511,
+      "sha256": "79155b3f81a6fcd8895b65242001ec8f98c5b49071cd07a578f8467bacba854a"
+    },
+    "evidence/figures/figure1_classes.pdf": {
+      "bytes": 44151,
+      "sha256": "79adb7d92cfc5d6e82ea721361388b21f8a32aeba1916e4835954f03fa436dee"
+    },
+    "evidence/figures/figure1_classes.png": {
+      "bytes": 131894,
+      "sha256": "d49807a47332230b9f97d0d1348982017a9bf29dfbf35d98e669628673757509"
+    },
+    "evidence/figures/figure2_bound_gap.pdf": {
+      "bytes": 568243,
+      "sha256": "8358e49a680271f385ba3077d30cf9260c1c132a649d69218bd6e51cdd3f5947"
+    },
+    "evidence/figures/figure2_bound_gap.png": {
+      "bytes": 230092,
+      "sha256": "661473d3e6d2ccf5816c2f38da799124bdcdb1f202408b86e80d98dbed6babaa"
+    },
+    "evidence/figures/figure3_relative_radius.pdf": {
+      "bytes": 36237,
+      "sha256": "1da3945b4dd49a27ab3b62c324e3eafce84ffe3539bc735fa06e377165b27b58"
+    },
+    "evidence/figures/figure3_relative_radius.png": {
+      "bytes": 81417,
+      "sha256": "f9aaf0521d2f6b521523732489957580691419b34abff8f88196dcabba22b5de"
+    },
+    "evidence/figures/figure4_region_size.pdf": {
+      "bytes": 41913,
+      "sha256": "b8469e391face7c78846c2a383b55dc54954f416b98edf66b1a5c004363a081d"
+    },
+    "evidence/figures/figure4_region_size.png": {
+      "bytes": 107172,
+      "sha256": "4bbc2ce8ceb559c5f3f2403f08f26483bb04c944cc2bef0b57a215fa2eaf0d57"
+    },
+    "evidence/oracle8.bin": {
+      "bytes": 784,
+      "sha256": "b3ba8da61e0ed0fbc1c47b8228aabc24d7b03c5124d691a8ce6ca86a689abb7b"
+    },
+    "evidence/per_query_summary.csv": {
+      "bytes": 2758,
+      "sha256": "8a86f8c7e79b49c75da57281b944ad66ea8334b20da030d1bc30cd0df8739545"
+    },
+    "evidence/scatter_density.json": {
+      "bytes": 479828,
+      "sha256": "6cd04641c534b5fbe9b6f4dc1a53c1aa4c38610c919b30427f0ea701631e724d"
+    },
+    "freeze.py": {
+      "bytes": 4328,
+      "sha256": "6fe06b4dcd913c966b876d27c1b5e2ce7c1a711d672800db697857e153f5a5e6"
+    },
+    "plot_region_truth.py": {
+      "bytes": 7370,
+      "sha256": "930eb00ee8b6045ed98579b003590a290d6e88ba7d846b3979720f084f0e96db"
+    },
+    "prepare_scores.py": {
+      "bytes": 1969,
+      "sha256": "4bfcf51ecdee5eb254bf4fa578bdbb1e1407bc005b1b11350842e3dc2821df74"
+    },
+    "region_truth8.qid": {
+      "bytes": 55,
+      "sha256": "e542100167d06aff7c37a37ae125b12ece056c89f9960b367e2aa6dc5e899206"
+    },
+    "run_scores.py": {
+      "bytes": 3455,
+      "sha256": "7a3df681279a18c268084cb578b105ade1ba4cfc734c48a1acb1ba66103e4fdc"
+    },
+    "test_diagnosis.py": {
+      "bytes": 3327,
+      "sha256": "f9bf5239dac78e7dee4f640c74f303eee31bb62c694aa890e78fd226d05686f2"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "query_count": 8,
+  "query_region_rows": 800000,
+  "scope": "eight frozen stratified development queries, not population average or deployable performance",
+  "class_order": [
+    "CURRENTLY_PRUNABLE",
+    "CERTIFICATE_FAILURE",
+    "PARTITION_FAILURE"
+  ],
+  "region_weighted": {
+    "counts": [
+      189828,
+      610112,
+      60
+    ],
+    "denominator": 800000,
+    "fractions": [
+      0.237285,
+      0.76264,
+      7.5e-05
+    ]
+  },
+  "object_weighted": {
+    "counts": [
+      1898280,
+      6101120,
+      600
+    ],
+    "denominator": 8000000,
+    "fractions": [
+      0.237285,
+      0.76264,
+      7.5e-05
+    ]
+  },
+  "visited_object_weighted": {
+    "counts": [
+      1065620,
+      6101120,
+      600
+    ],
+    "denominator": 7167340,
+    "fractions": [
+      0.14867719404967533,
+      0.8512390928852266,
+      8.371306509806985e-05
+    ]
+  },
+  "current_leaf_object_visit_fraction": 0.8959175,
+  "current_prunable_fraction": 0.237285,
+  "certificate_failure_fraction": 0.76264,
+  "partition_failure_fraction": 7.5e-05,
+  "perfect_certificate_residual_fraction": 7.5e-05,
+  "M1_visited_certificate_fraction": 0.8512390928852266,
+  "M2_visited_partition_fraction": 8.371306509806985e-05,
+  "M3_global_truth_residual_fraction": 7.5e-05,
+  "decision": "CERTIFICATE_ROUTE",
+  "visited_threshold_only_fraction": 0.14867719404967533,
+  "threshold_only_saved_global_fraction": 0.1332025,
+  "fixed_Ustar_current_bound_residual_fraction": 0.762715,
+  "per_query_decisions": [
+    "CERTIFICATE_ROUTE",
+    "INSUFFICIENT_EVIDENCE",
+    "CERTIFICATE_ROUTE",
+    "CERTIFICATE_ROUTE",
+    "CERTIFICATE_ROUTE",
+    "CERTIFICATE_ROUTE",
+    "CERTIFICATE_ROUTE",
+    "CERTIFICATE_ROUTE"
+  ],
+  "truth_residual_objects_per_query": [
+    70,
+    70,
+    80,
+    80,
+    80,
+    70,
+    80,
+    70
+  ],
+  "at_or_below_Ustar_objects_per_query": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "per_query_metrics": {
+    "M1_visited_certificate_fraction": {
+      "mean": 0.8112416223821695,
+      "minimum": 0.174692034827475,
+      "maximum": 0.9897834124638248
+    },
+    "M2_visited_partition_fraction": {
+      "mean": 8.644690519826055e-05,
+      "minimum": 7.153587524143358e-05,
+      "maximum": 0.0001295864341515791
+    },
+    "M3_global_truth_residual_fraction": {
+      "mean": 7.500000000000001e-05,
+      "minimum": 7e-05,
+      "maximum": 8e-05
+    }
+  },
+  "no_inference_about_cheap_certificate_feasibility": true,
+  "terminal_size_variation": false,
+  "no_inference_about_upper_level_partition_quality": true
+}

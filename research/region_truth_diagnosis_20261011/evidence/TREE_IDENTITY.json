@@ -1,0 +1,54 @@
+{
+  "kind": "static CPU tree inventory, not runtime traversal",
+  "N": 1000000,
+  "D": 960,
+  "height": 6,
+  "capacity": 111111,
+  "tree_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+  "leaf_size_histogram": {
+    "10": 100000
+  },
+  "complete_unique_leaf_ownership": true,
+  "queried_pivot_slots_all_regions": 11100,
+  "queried_distinct_pivot_rows_all_regions": 11099,
+  "pivot_to_pivot_repeats_all_regions": 1,
+  "full_leaf_visit_conditional_saved_distance_fraction": 0.010978142616951835,
+  "denominator": "distance invocations with all regions visited; not time, coordinate updates or DRAM bytes",
+  "levels": [
+    {
+      "level": 1,
+      "nodes": 10,
+      "leaves": 0,
+      "group_pivots": 1,
+      "distinct_group_pivots": 1
+    },
+    {
+      "level": 2,
+      "nodes": 100,
+      "leaves": 0,
+      "group_pivots": 10,
+      "distinct_group_pivots": 10
+    },
+    {
+      "level": 3,
+      "nodes": 1000,
+      "leaves": 0,
+      "group_pivots": 100,
+      "distinct_group_pivots": 100
+    },
+    {
+      "level": 4,
+      "nodes": 10000,
+      "leaves": 0,
+      "group_pivots": 1000,
+      "distinct_group_pivots": 1000
+    },
+    {
+      "level": 5,
+      "nodes": 100000,
+      "leaves": 100000,
+      "group_pivots": 10000,
+      "distinct_group_pivots": 10000
+    }
+  ]
+}
