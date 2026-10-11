@@ -1,0 +1,122 @@
+{
+  "experiment": "gts_20261011_fixed3_leaf_packing",
+  "state_at_registration": "designed",
+  "base_commit": "e90290af2256a3e78b5c0896c214cd8abfe0eaf9",
+  "upstream": "ZJU-DAILY/GTS@3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "dataset": {
+    "name": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "metric": "L2",
+    "dtype": "FP32 resident input",
+    "sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7"
+  },
+  "index_sha256": "4fcd14b52ec49bed23a2e49c416a80cee70ce0ed3ea2a436bbb6132dbe4bfed0",
+  "B": 1,
+  "K": 8,
+  "qualification_K": [
+    1,
+    8,
+    32
+  ],
+  "arithmetic": "Original FP32 subtraction, ordered double accumulation, Euclidean float output; no reassociation",
+  "self": "included; identity shortcut retained",
+  "workspace_bytes": 1073741824,
+  "modes": {
+    "G0": "Original 512 threads, one leaf per CTA",
+    "G1": "32 threads, one leaf per CTA; all other THREAD_NUM uses unchanged",
+    "G2": "32 threads, three leaves per CTA, ten lanes per leaf, lane-stride10 over all20 original slots; lanes30/31 inactive"
+  },
+  "work_invariants": [
+    "visited leaf node IDs and original task order",
+    "all object IDs",
+    "valid/distance masks",
+    "pivot and leaf distance dimensions",
+    "node tests, passes and bounds",
+    "accepted masks",
+    "full ordered IDs/distance bit equality"
+  ],
+  "warmup_queries": 2,
+  "diag_process_orders": [
+    [
+      "G0",
+      "G1",
+      "G2"
+    ],
+    [
+      "G2",
+      "G1",
+      "G0"
+    ]
+  ],
+  "formal_process_orders": [
+    [
+      "G0",
+      "G1",
+      "G2"
+    ],
+    [
+      "G2",
+      "G1",
+      "G0"
+    ],
+    [
+      "G1",
+      "G0",
+      "G2"
+    ],
+    [
+      "G2",
+      "G0",
+      "G1"
+    ],
+    [
+      "G1",
+      "G2",
+      "G0"
+    ],
+    [
+      "G0",
+      "G2",
+      "G1"
+    ]
+  ],
+  "diagnostic_scope": "fixed32, two reverse-order fresh processes/mode under NSYS; profiler leaf inclusive durations are mechanism evidence only",
+  "ncu_scope": "One matching first diagnostic leaf launch per mode, fixed32 sequence, skip first2 warmup leaf launches; diagnostic counters, not formal latency",
+  "gate_E": "All correctness/resource/sanitizer/work gates; G2 leaf-inclusive sum < G1 in BOTH NSYS order rounds, matching structural counts, and at least one direct physical counter consistent with mapping (CTA/warps/instructions). Otherwise STOP without256-query formal runs. G1 leaf benefit judged independently on both rounds. No extra candidates or favorable replacements.",
+  "formal_scope": "One complete256-query Host-ready pass per fresh process; query transfer/allocation/traversal/materialization/sort/full ID-distance return/free/sync included; static data/index load,warmup,oracle,profiler,filewrites excluded",
+  "statistics": {
+    "primary": "Geometric mean of six round-paired time ratios, separately G0/G1,G1/G2,G0/G2",
+    "bootstrap_pairs": 20000,
+    "bootstrap_seed": 2026101101,
+    "CI": "95% percentile, whole process round unit",
+    "win_gate": "CI lower>1 AND at least5/6 process wins; otherwise inconclusive unless CI upper<1",
+    "report": [
+      "all observations and order",
+      "p10/median/p90",
+      "arithmetic/geometric means",
+      "marginal median ratio",
+      "process wins",
+      "all6 order strata plus pair-relative-order splits"
+    ],
+    "interpretation": "Fixed reused confirmation-set run variation, not fresh-query or distribution generalization"
+  },
+  "gpu": "User-authorized physicalGPU1/NUMA0, same UUID as diagnosis, live idle and shared lock before every process; no foreign signals or GPU settings changes",
+  "fault_rule": "Stop on first mismatch, invalid runtime, foreign activity, unsupported admission or input drift; retain all failures. No automatic replacement. Missing NCU counters individually unsupported, not invented.",
+  "qualification": "D96/960 N4097 existing tie/self/equal-vector fixtures K1/8/32 and last nonempty leaf; G1/G2 memcheck/racecheck/synccheck; isolated real leaf-kernel all-slot fixture forces1/2/3-leaf tails, size1..20 and self/equal-ID-distinct cases; separate count binaries only for work receipts",
+  "uncovered": [
+    "N<K",
+    "B32",
+    "updates",
+    "concurrency",
+    "Graph",
+    "layout changes",
+    "current GTSPP",
+    "external superiority"
+  ],
+  "novelty": "Engineering attribution of conventional task packing, not a new research thesis. Generic packing novelty killed by prior tree/SIMT work; this bounded experiment does not rescue it.",
+  "requested_plan_sha256": "70afc8a18b94c4511e673455b8168cd4bc00c56fd66f64517d37af9dcd274442",
+  "diag32.qid_sha256": "5857859ff9e0ba524e6a03733b3d94485c7f52b19919ab7e1e86296910f13941",
+  "confirm256.qid_sha256": "11a990a3dd9995a8110fe361879aa88cfbfac3caa548770dff8c293dc9e8d63f",
+  "profiling_admission": "Before runtime tests, ncu --query-metrics on physicalGPU1 returned ERR_NVGPUCTRPERM. No privilege escalation or driver change. NCU hardware counters unavailable; retain probe. E5 uses NSYS-recorded runtime CTA/grid counts and same-work lower leaf duration, not a scheduling-overhead hardware counter. No unsupported quantity is imputed."
+}
