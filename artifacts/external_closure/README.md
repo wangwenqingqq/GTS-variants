@@ -295,3 +295,15 @@ four dots plus one max-absolute reduction, not identical pivot instructions.
 No K8, direction tuning, update, hierarchy or CUDA follows. This rejects the
 tested global variance-axis box, not all anisotropy or GPU trees. See the
 [five-question decision](../projected_box_certificate_20261011/DECISION.md).
+
+## GLOBAL4 granularity checkpoint (2026-10-11)
+
+The [fixed-summary granularity test](../pruning_granularity_20261011/README.md)
+is **NO_GO_GRANULARITY**. On GIST N1M/D960, maximum256 ->32 leaves reduce
+mean surviving objects only from68.8981% ->66.7223% and67.8736% ->65.5008%,
+while endpoint/filter state grows8x. All320 rows have zero false prune,
+independent partition/endpoint/oracle reconstruction passes, and256 exactly
+reproduces the prior anchor. Tile fractions and object fractions are distinct.
+No update, tile16/8, new pivots/summaries or CUDA follows. These are structural
+counts and uncalibrated cost sensitivity, not new end-to-end timings.
+See the [decision and negative-evidence boundary](../pruning_granularity_20261011/DECISION.md).

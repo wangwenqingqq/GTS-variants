@@ -143,3 +143,21 @@ the low-cost whole-block-summary hypothesis before proposing a genuinely
 different, prior-art-cleared mechanism with a new cost/quality contract.
 No next experiment is automatically authorized, and existing end-to-end
 measurements and the private manuscript remain unchanged.
+
+## GLOBAL4 finer-whole-tile stop (2026-10-11)
+
+The authorized512/256/128/64/32 crossover diagnostic is closed as
+**NO_GO_GRANULARITY**, not a positive coarse-ownership/fine-execution gate.
+Even maximum32 leaves retain66.7223% /65.5008% of objects, only2.1758 /
+2.3727 percentage points below the exact256 anchor, with8x metadata/checks.
+All64 queries improve at each finer target versus256; this small positive
+signal does not rescue the mean/gain gates. The prescribed lambda proxies
+prefer256 or512 on both snapshots, not a measured GPU sweet spot.
+
+Preserve the [complete decision](../pruning_granularity_20261011/DECISION.md).
+No10I10D/20I20D, tile16/8, more pivots/summaries, hierarchy, CUDA or long
+campaign follows. Under this fixed S1/P2 GLOBAL4 contract, coarse256 alone
+is not the main explanation of poor selectivity; this does not reject every
+tree or exact-pruning design. Reassess the work-unit/algorithm thesis before
+registering a distinct, non-subsumed mechanism. Old end-to-end measurements
+and confidential manuscript remain unchanged; no next run is authorized here.
