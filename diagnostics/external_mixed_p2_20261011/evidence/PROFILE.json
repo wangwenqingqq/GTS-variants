@@ -1,0 +1,4956 @@
+{
+  "P2": {
+    "method": "P2",
+    "sqlite_sha256": "ea3bead03899bbc29d6fd2bc3d1fc1c7171b1226c8e38f76068f726b2af6358f",
+    "boundary": "second native.trace, query NVTX ranges; includes final release in aggregate kernel/API ledger",
+    "diagnostic_window_ms": 5290.197782,
+    "kernel_calls": 3684,
+    "kernel_inclusive_ms": 4900.900231,
+    "kernel_families": {
+      "rex::parent_groups": {
+        "calls": 640,
+        "inclusive_ms": 781.495193
+      },
+      "rex::materialize": {
+        "calls": 128,
+        "inclusive_ms": 0.22492800000000016
+      },
+      "rex::verify_materialized": {
+        "calls": 128,
+        "inclusive_ms": 801.741637
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, unsigned int, cuda::std::__4::plus<int>, int, cuda::std::__4::identity>": {
+        "calls": 138,
+        "inclusive_ms": 0.5656959999999999
+      },
+      "void cub::CUB_300104_SM_1200::detail::reduce::DeviceReduceSingleTileKernel<cub::CUB_300104_SM_1200::detail::reduce::policy_hub<int, unsigned int, cuda::std::__4::plus<int>>::Policy1000, int *, int *, int, cuda::std::__4::plus<int>, int, int, cuda::std::__4::identity>": {
+        "calls": 138,
+        "inclusive_ms": 0.18092800000000028
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, ": {
+        "calls": 484,
+        "inclusive_ms": 0.3915220000000012
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, ": {
+        "calls": 356,
+        "inclusive_ms": 3.666731
+      },
+      "rex::collect": {
+        "calls": 128,
+        "inclusive_ms": 27.44403500000001
+      },
+      "mergeTotalResult": {
+        "calls": 128,
+        "inclusive_ms": 9.286581000000012
+      },
+      "findIdx": {
+        "calls": 40,
+        "inclusive_ms": 0.14873599999999998
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceScanKernel<cub::CUB_300104_SM_1200::detail::scan::policy_hub<int, int, int, unsigned int, cuda::std::__4::plus<void>>::Policy1000, const int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, ": {
+        "calls": 128,
+        "inclusive_ms": 3.4955629999999993
+      },
+      "uk::publish": {
+        "calls": 128,
+        "inclusive_ms": 4.508844999999999
+      },
+      "void verify_distances<": {
+        "calls": 128,
+        "inclusive_ms": 806.25926
+      },
+      "block_topk": {
+        "calls": 512,
+        "inclusive_ms": 20.486891000000043
+      },
+      "final_output": {
+        "calls": 128,
+        "inclusive_ms": 0.2618879999999998
+      },
+      "uk::normalize": {
+        "calls": 128,
+        "inclusive_ms": 0.12668900000000025
+      },
+      "target_buffer": {
+        "calls": 38,
+        "inclusive_ms": 8.811283999999999
+      },
+      "getRnn": {
+        "calls": 38,
+        "inclusive_ms": 0.04105599999999999
+      },
+      "getNewData": {
+        "calls": 2,
+        "inclusive_ms": 487.501426
+      },
+      "initIndexData": {
+        "calls": 2,
+        "inclusive_ms": 2.661991
+      },
+      "getPivotDisTiled": {
+        "calls": 10,
+        "inclusive_ms": 1145.343232
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortHistogramKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, ": {
+        "calls": 10,
+        "inclusive_ms": 0.105378
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortExclusiveSumKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, unsigned long long>": {
+        "calls": 10,
+        "inclusive_ms": 0.011231999999999997
+      },
+      "void cub::CUB_300104_SM_1200::detail::radix_sort::DeviceRadixSortOnesweepKernel<cub::CUB_300104_SM_1200::detail::radix::policy_hub<double, int, unsigned long long>::Policy1000, ": {
+        "calls": 80,
+        "inclusive_ms": 1.0370569999999997
+      },
+      "nodeSplit": {
+        "calls": 10,
+        "inclusive_ms": 105.557481
+      },
+      "target::refit": {
+        "calls": 2,
+        "inclusive_ms": 664.450697
+      },
+      "pack32": {
+        "calls": 2,
+        "inclusive_ms": 25.064321
+      },
+      "mergeInResult": {
+        "calls": 20,
+        "inclusive_ms": 0.029953000000000007
+      }
+    },
+    "api_families": {
+      "cudaMallocManaged_v6000": {
+        "calls": 788,
+        "inclusive_ms": 3.0018479999999967
+      },
+      "cudaMalloc_v3020": {
+        "calls": 794,
+        "inclusive_ms": 19.410408999999976
+      },
+      "cudaMemset_v3020": {
+        "calls": 539,
+        "inclusive_ms": 7.647245999999995
+      },
+      "cudaMemcpy_v3020": {
+        "calls": 1148,
+        "inclusive_ms": 857.8268329999995
+      },
+      "cuKernelGetName": {
+        "calls": 3684,
+        "inclusive_ms": 0.3469309999999996
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 3684,
+        "inclusive_ms": 13.08047299999998
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 770,
+        "inclusive_ms": 1598.4540469999988
+      },
+      "cudaMemcpyAsync_v3020": {
+        "calls": 138,
+        "inclusive_ms": 1.4939039999999995
+      },
+      "cudaFree_v3020": {
+        "calls": 1620,
+        "inclusive_ms": 198.917251
+      },
+      "cudaDeviceSynchronize_v3020": {
+        "calls": 726,
+        "inclusive_ms": 2469.9849129999984
+      },
+      "cudaMemsetAsync_v3020": {
+        "calls": 100,
+        "inclusive_ms": 0.38161699999999993
+      },
+      "cudaMemGetInfo_v3020": {
+        "calls": 2,
+        "inclusive_ms": 0.255737
+      }
+    },
+    "copy_ledger": {
+      "1": {
+        "bytes": 11404328,
+        "device_ms": 1.545604
+      },
+      "2": {
+        "bytes": 27104272,
+        "device_ms": 2.647012
+      },
+      "8": {
+        "bytes": 7680084560,
+        "device_ms": 10.417146
+      },
+      "11": {
+        "bytes": 3997696,
+        "device_ms": 0.557925
+      },
+      "12": {
+        "bytes": 3936256,
+        "device_ms": 0.384174
+      }
+    },
+    "client_D2H": {
+      "bytes": 436912,
+      "device_ms": 0.4392320000000007,
+      "API_inclusive_ms": 835.9202460000002,
+      "API_overlap_kernel_inclusive_ms": 828.571023,
+      "per_query": [
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 0,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002336,
+          "client_D2H_API_inclusive_ms": 0.028875
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.604927,
+          "step": 2,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00192,
+          "client_D2H_API_inclusive_ms": 6.638883
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 4,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.023797
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.976885,
+          "step": 5,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 7.005673
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 7,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.026031
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.954935,
+          "step": 9,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.988861
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 10,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.023107
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.658113,
+          "step": 12,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.686297
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 14,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.025486
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.599975,
+          "step": 15,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.628501
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 17,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.024876
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.598289,
+          "step": 19,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.62661
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 20,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.022741
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.416158,
+          "step": 22,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.455243
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 24,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.024983
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.416171,
+          "step": 25,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.449401
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 27,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024823
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.417098,
+          "step": 29,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.45221
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 30,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024512
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.416086,
+          "step": 32,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.444433
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 34,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.026489
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.454037,
+          "step": 35,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.490759
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 37,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.023398
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.756536,
+          "step": 39,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.784416
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 40,
+          "flag": 2,
+          "count": 5443,
+          "client_D2H_bytes": 43544,
+          "client_D2H_device_ms": 0.003648,
+          "client_D2H_API_inclusive_ms": 0.02956
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.536231,
+          "step": 42,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.568432
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 44,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.025569
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.417409,
+          "step": 45,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.449581
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 47,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.024985
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.602744,
+          "step": 49,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00192,
+          "client_D2H_API_inclusive_ms": 6.62944
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 50,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.029115
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.898958,
+          "step": 51,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.928693
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 52,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.024881
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.587024,
+          "step": 53,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.615156
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 54,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.026967
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.923185,
+          "step": 55,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.954321
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 56,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.026708
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355798,
+          "step": 57,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.389713
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 58,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.0263
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.351099,
+          "step": 59,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.377702
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 60,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.026359
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.35524,
+          "step": 61,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.389208
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 62,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.026807
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357329,
+          "step": 63,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388555
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 64,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.026769
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356864,
+          "step": 65,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388884
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 66,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.025767
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.352383,
+          "step": 67,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388775
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 68,
+          "flag": 2,
+          "count": 49,
+          "client_D2H_bytes": 392,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.028241
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.35535,
+          "step": 69,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.390559
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 70,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.02702
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.404054,
+          "step": 71,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.452571
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 72,
+          "flag": 2,
+          "count": 4637,
+          "client_D2H_bytes": 37096,
+          "client_D2H_device_ms": 0.003136,
+          "client_D2H_API_inclusive_ms": 0.044803
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.680862,
+          "step": 73,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.716
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 74,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.02897
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.715369,
+          "step": 75,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.746466
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 76,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.026078
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.722185,
+          "step": 77,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.748856
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 78,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.026738
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.358136,
+          "step": 79,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388914
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 80,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.02633
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356184,
+          "step": 81,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387695
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 82,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003168,
+          "client_D2H_API_inclusive_ms": 0.025348
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356463,
+          "step": 83,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.387112
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 84,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.025385
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.411112,
+          "step": 86,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.438278
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 88,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025378
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355131,
+          "step": 89,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.387186
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 91,
+          "flag": 2,
+          "count": 15459,
+          "client_D2H_bytes": 123672,
+          "client_D2H_device_ms": 0.003904,
+          "client_D2H_API_inclusive_ms": 0.048935
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.333848,
+          "step": 93,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.366461
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 94,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.025711
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.405307,
+          "step": 96,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.437174
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 98,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.025016
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.393609,
+          "step": 99,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.42535
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 101,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.022204
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.749741,
+          "step": 103,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.781404
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 104,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.021002
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.414694,
+          "step": 106,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.449579
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 108,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024499
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355451,
+          "step": 109,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387126
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 111,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024469
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.352672,
+          "step": 113,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.387294
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 114,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.024969
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.41339,
+          "step": 116,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.443074
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 118,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.021025
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357706,
+          "step": 119,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386653
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 121,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.030734
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357932,
+          "step": 123,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387333
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 124,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024965
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.409155,
+          "step": 126,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.440768
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 128,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.025102
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356044,
+          "step": 129,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387986
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 131,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024361
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.400051,
+          "step": 133,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.429492
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 134,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.026046
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.736241,
+          "step": 135,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.768625
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 136,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003008,
+          "client_D2H_API_inclusive_ms": 0.025699
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.739712,
+          "step": 137,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.764747
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 138,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.022847
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.737236,
+          "step": 139,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.76574
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 140,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025416
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356731,
+          "step": 141,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.38672
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 142,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.025501
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355997,
+          "step": 143,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386886
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 144,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.003136,
+          "client_D2H_API_inclusive_ms": 0.02863
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356488,
+          "step": 145,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386594
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 146,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002976,
+          "client_D2H_API_inclusive_ms": 0.025607
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355053,
+          "step": 147,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386049
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 148,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.024784
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355066,
+          "step": 149,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.386857
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 150,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024162
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.358518,
+          "step": 151,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.38765
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 152,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024533
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357159,
+          "step": 153,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386714
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 154,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.02487
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.41855,
+          "step": 155,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.449164
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 156,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024995
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.735153,
+          "step": 157,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.767764
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 158,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00224,
+          "client_D2H_API_inclusive_ms": 0.024574
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.73639,
+          "step": 159,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.768695
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 160,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.025348
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.748515,
+          "step": 161,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.781049
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 162,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.025094
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356381,
+          "step": 163,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386932
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 164,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.024677
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.358237,
+          "step": 165,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387686
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 166,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024141
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357215,
+          "step": 167,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387104
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 168,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024715
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356552,
+          "step": 170,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.392813
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 172,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.025169
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.409264,
+          "step": 173,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.439426
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 175,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002208,
+          "client_D2H_API_inclusive_ms": 0.024567
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.409803,
+          "step": 177,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.439439
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 178,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.02527
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.412798,
+          "step": 180,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.442272
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 182,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.02517
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.461837,
+          "step": 183,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.492256
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 185,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.02369
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.769363,
+          "step": 187,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.803821
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 188,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.025597
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.590017,
+          "step": 190,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.621909
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 192,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025285
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.416113,
+          "step": 193,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.450746
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 195,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.025634
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.415316,
+          "step": 197,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.451446
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 198,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003008,
+          "client_D2H_API_inclusive_ms": 0.025171
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.418607,
+          "step": 200,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.452158
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 202,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024581
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.42194,
+          "step": 203,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.450595
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 205,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024211
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.416799,
+          "step": 207,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.451888
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 208,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.024188
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.419,
+          "step": 210,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.449409
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 212,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002176,
+          "client_D2H_API_inclusive_ms": 0.021071
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.466927,
+          "step": 213,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.496706
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 215,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002144,
+          "client_D2H_API_inclusive_ms": 0.02496
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.622778,
+          "step": 217,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00192,
+          "client_D2H_API_inclusive_ms": 6.653989
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 218,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003424,
+          "client_D2H_API_inclusive_ms": 0.024478
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.733107,
+          "step": 219,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.767956
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 220,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002688,
+          "client_D2H_API_inclusive_ms": 0.024046
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357687,
+          "step": 221,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.388417
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 222,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002784,
+          "client_D2H_API_inclusive_ms": 0.026015
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355916,
+          "step": 223,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387124
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 224,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.0024,
+          "client_D2H_API_inclusive_ms": 0.025432
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357547,
+          "step": 225,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387645
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 226,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.025505
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.352502,
+          "step": 227,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387072
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 228,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002688,
+          "client_D2H_API_inclusive_ms": 0.025464
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357702,
+          "step": 229,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.387756
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 230,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002688,
+          "client_D2H_API_inclusive_ms": 0.025417
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.35777,
+          "step": 231,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386948
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 232,
+          "flag": 2,
+          "count": 584,
+          "client_D2H_bytes": 4672,
+          "client_D2H_device_ms": 0.002688,
+          "client_D2H_API_inclusive_ms": 0.02711
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.353358,
+          "step": 233,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.388477
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 234,
+          "flag": 2,
+          "count": 12,
+          "client_D2H_bytes": 96,
+          "client_D2H_device_ms": 0.002592,
+          "client_D2H_API_inclusive_ms": 0.022481
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.352516,
+          "step": 235,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.387408
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 236,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.024956
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.407716,
+          "step": 237,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.438868
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 238,
+          "flag": 2,
+          "count": 3,
+          "client_D2H_bytes": 24,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.026152
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.726522,
+          "step": 239,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.756008
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 240,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025678
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.76232,
+          "step": 241,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.793543
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 242,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025668
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.732604,
+          "step": 243,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.759143
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 244,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.025473
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355174,
+          "step": 245,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387304
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 246,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003072,
+          "client_D2H_API_inclusive_ms": 0.02555
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355912,
+          "step": 247,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387234
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 248,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025646
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355695,
+          "step": 249,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.387458
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 250,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003008,
+          "client_D2H_API_inclusive_ms": 0.025498
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.358185,
+          "step": 251,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386256
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 252,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.024646
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.413522,
+          "step": 254,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.449415
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 256,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.024938
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356321,
+          "step": 257,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.38747
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 259,
+          "flag": 2,
+          "count": 48,
+          "client_D2H_bytes": 384,
+          "client_D2H_device_ms": 0.002112,
+          "client_D2H_API_inclusive_ms": 0.026537
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.354521,
+          "step": 261,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387435
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 262,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002688,
+          "client_D2H_API_inclusive_ms": 0.025286
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.444892,
+          "step": 264,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.474233
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 266,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.025076
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.73773,
+          "step": 267,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.76848
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 269,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002784,
+          "client_D2H_API_inclusive_ms": 0.021247
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.350606,
+          "step": 271,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.37968
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 272,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025823
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.414906,
+          "step": 274,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.449823
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 276,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025162
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357731,
+          "step": 277,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388098
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 279,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.024399
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357642,
+          "step": 281,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386661
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 282,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025235
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.411041,
+          "step": 284,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.44069
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 286,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00272,
+          "client_D2H_API_inclusive_ms": 0.02566
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357115,
+          "step": 287,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386923
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 289,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025429
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355829,
+          "step": 291,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387731
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 292,
+          "flag": 2,
+          "count": 18,
+          "client_D2H_bytes": 144,
+          "client_D2H_device_ms": 0.002688,
+          "client_D2H_API_inclusive_ms": 0.026095
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.412574,
+          "step": 294,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.449324
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 296,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025542
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.422134,
+          "step": 297,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.44992
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 299,
+          "flag": 2,
+          "count": 13445,
+          "client_D2H_bytes": 107560,
+          "client_D2H_device_ms": 0.003616,
+          "client_D2H_API_inclusive_ms": 0.040099
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.71789,
+          "step": 301,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.747837
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 302,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003104,
+          "client_D2H_API_inclusive_ms": 0.027104
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357297,
+          "step": 303,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388332
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 304,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025823
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355212,
+          "step": 305,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.38761
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 306,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.003008,
+          "client_D2H_API_inclusive_ms": 0.024361
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355523,
+          "step": 307,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386657
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 308,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.003008,
+          "client_D2H_API_inclusive_ms": 0.024997
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.354038,
+          "step": 309,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387637
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 310,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.00304,
+          "client_D2H_API_inclusive_ms": 0.025506
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.357264,
+          "step": 311,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387786
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 312,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.023752
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356941,
+          "step": 313,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.386341
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 314,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025011
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356871,
+          "step": 315,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.386862
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 316,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002848,
+          "client_D2H_API_inclusive_ms": 0.036647
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.433553,
+          "step": 317,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.462192
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 318,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002752,
+          "client_D2H_API_inclusive_ms": 0.025098
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.742835,
+          "step": 319,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.770512
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 320,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025774
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.76473,
+          "step": 321,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.790414
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 322,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.025951
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.745276,
+          "step": 323,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.772988
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 324,
+          "flag": 2,
+          "count": 13762,
+          "client_D2H_bytes": 110096,
+          "client_D2H_device_ms": 0.003616,
+          "client_D2H_API_inclusive_ms": 0.050534
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.717777,
+          "step": 325,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.74711
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 326,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025942
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.352445,
+          "step": 327,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000832,
+          "client_D2H_API_inclusive_ms": 6.385603
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 328,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.025882
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.354396,
+          "step": 329,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.000768,
+          "client_D2H_API_inclusive_ms": 6.39137
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 330,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002624,
+          "client_D2H_API_inclusive_ms": 0.025284
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.356542,
+          "step": 331,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.387046
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 332,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.02548
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.354389,
+          "step": 333,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.385664
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 334,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 8,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.025462
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 6.355571,
+          "step": 335,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0008,
+          "client_D2H_API_inclusive_ms": 6.388116
+        }
+      ]
+    },
+    "scope": "Partial explicit full ID/field D2H output attribution. P2 last two copies in NVTX query; E last 3 range /2 K copies in input-bound slot. Host map, retention, sqrt and synchronization not separately isolated. Native-squared E range copy is included. Do not sum API wait plus same GPU duration or compare these to primary unprofiled latency."
+  },
+  "E": {
+    "method": "E",
+    "sqlite_sha256": "def74a88503c2178a28dda31c9bb8ce790700a6cf08cfbd3ebe1baf6d59f5f0e",
+    "boundary": "after second capacity-sized database upload; 296 per-event H2D vectors map to all nondelete operations; first service submission to first final cudaFree (no exact Host-end marker)",
+    "diagnostic_window_ms": 1260.280784,
+    "kernel_calls": 2728,
+    "kernel_inclusive_ms": 1144.794543,
+    "kernel_families": {
+      "pairwise_matrix_kernel": {
+        "calls": 128,
+        "inclusive_ms": 400.793201
+      },
+      "flags_kernel": {
+        "calls": 128,
+        "inclusive_ms": 0.6272319999999997
+      },
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, ": {
+        "calls": 128,
+        "inclusive_ms": 0.09875300000000006
+      },
+      "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, ": {
+        "calls": 128,
+        "inclusive_ms": 0.6584320000000001
+      },
+      "fields_kernel": {
+        "calls": 128,
+        "inclusive_ms": 0.3884830000000003
+      },
+      "void faiss::gpu::l2NormRowMajor<float, float4, ": {
+        "calls": 168,
+        "inclusive_ms": 0.41401699999999975
+      },
+      "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, float, float, ": {
+        "calls": 512,
+        "inclusive_ms": 316.7645879999999
+      },
+      "void faiss::gpu::l2SelectMinK<int, float, ": {
+        "calls": 512,
+        "inclusive_ms": 423.61543199999966
+      },
+      "void faiss::gpu::sumAlongRows<float, ": {
+        "calls": 512,
+        "inclusive_ms": 0.7589779999999993
+      },
+      "void faiss::gpu::incrementIndex<long>": {
+        "calls": 128,
+        "inclusive_ms": 0.159936
+      },
+      "void faiss::gpu::blockSelectPair<float, long, ": {
+        "calls": 128,
+        "inclusive_ms": 0.36928299999999964
+      },
+      "void cub::CUB_300104_SM_1200::detail::transform::transform_kernel<cub::CUB_300104_SM_1200::detail::transform::policy_hub<": {
+        "calls": 128,
+        "inclusive_ms": 0.14620799999999995
+      }
+    },
+    "api_families": {
+      "cudaMemcpyAsync_v3020": {
+        "calls": 1360,
+        "inclusive_ms": 409.2622389999998
+      },
+      "cuKernelGetName": {
+        "calls": 2728,
+        "inclusive_ms": 0.2645530000000039
+      },
+      "cudaLaunchKernelExC_ptsz_v11060": {
+        "calls": 128,
+        "inclusive_ms": 0.44219999999999987
+      },
+      "cudaLaunchKernel_v7000": {
+        "calls": 2600,
+        "inclusive_ms": 9.430806999999986
+      },
+      "cudaStreamSynchronize_v3020": {
+        "calls": 848,
+        "inclusive_ms": 735.9720529999989
+      },
+      "cudaDeviceSynchronize_v3020": {
+        "calls": 336,
+        "inclusive_ms": 0.6593919999999993
+      },
+      "cudaHostAlloc_v3020": {
+        "calls": 1,
+        "inclusive_ms": 91.523882
+      },
+      "cudaStreamCreateWithFlags_v5000": {
+        "calls": 4,
+        "inclusive_ms": 0.018718
+      },
+      "cudaFree_v3020": {
+        "calls": 1,
+        "inclusive_ms": 0.001518
+      },
+      "cudaMalloc_v3020": {
+        "calls": 4,
+        "inclusive_ms": 0.31816
+      },
+      "cudaEventCreateWithFlags_v3020": {
+        "calls": 402,
+        "inclusive_ms": 0.1771450000000001
+      },
+      "cudaEventRecord_v3020": {
+        "calls": 384,
+        "inclusive_ms": 0.3032839999999998
+      },
+      "cudaStreamWaitEvent_v3020": {
+        "calls": 512,
+        "inclusive_ms": 0.30921200000000015
+      },
+      "cudaEventDestroy_v3020": {
+        "calls": 384,
+        "inclusive_ms": 0.15902199999999989
+      },
+      "cuStreamGetGreenCtx": {
+        "calls": 1536,
+        "inclusive_ms": 0.16407299999999905
+      }
+    },
+    "copy_ledger": {
+      "1": {
+        "bytes": 1144832,
+        "device_ms": 0.220608
+      },
+      "2": {
+        "bytes": 866144,
+        "device_ms": 0.422817
+      },
+      "8": {
+        "bytes": 76880,
+        "device_ms": 0.038624
+      }
+    },
+    "client_D2H": {
+      "bytes": 865632,
+      "device_ms": 0.37241699999999994,
+      "API_inclusive_ms": 5.556280000000004,
+      "API_overlap_kernel_inclusive_ms": 0.0,
+      "per_query": [
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 0,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.002016,
+          "client_D2H_API_inclusive_ms": 0.02828
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 2,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.0016,
+          "client_D2H_API_inclusive_ms": 0.023204
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 4,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001984,
+          "client_D2H_API_inclusive_ms": 0.027556
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 5,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.018325
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 7,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.026808
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 9,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.018711
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 10,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001664,
+          "client_D2H_API_inclusive_ms": 0.025057
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 12,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00144,
+          "client_D2H_API_inclusive_ms": 0.018562
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 14,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001664,
+          "client_D2H_API_inclusive_ms": 0.026911
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 15,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001312,
+          "client_D2H_API_inclusive_ms": 0.013232
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 17,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001792,
+          "client_D2H_API_inclusive_ms": 0.026075
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 19,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.018133
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 20,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001664,
+          "client_D2H_API_inclusive_ms": 0.025922
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 22,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001344,
+          "client_D2H_API_inclusive_ms": 0.018998
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 24,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.020954
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 25,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017259
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 27,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.024925
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 29,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017147
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 30,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.020906
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 32,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001344,
+          "client_D2H_API_inclusive_ms": 0.0179
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 34,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001664,
+          "client_D2H_API_inclusive_ms": 0.025559
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 35,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.018262
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 37,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.0016,
+          "client_D2H_API_inclusive_ms": 0.025735
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 39,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017384
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 40,
+          "flag": 2,
+          "count": 5443,
+          "client_D2H_bytes": 87088,
+          "client_D2H_device_ms": 0.0032,
+          "client_D2H_API_inclusive_ms": 0.046057
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 42,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017249
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 44,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.0016,
+          "client_D2H_API_inclusive_ms": 0.026858
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 45,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016488
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 47,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001696,
+          "client_D2H_API_inclusive_ms": 0.025665
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 49,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017912
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 50,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024763
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 51,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017631
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 52,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025757
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 53,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016624
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 54,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025308
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 55,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018072
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 56,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025076
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 57,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016532
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 58,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025275
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 59,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017325
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 60,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001696,
+          "client_D2H_API_inclusive_ms": 0.025338
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 61,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.017693
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 62,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.02186
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 63,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017452
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 64,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025805
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 65,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017146
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 66,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025512
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 67,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018105
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 68,
+          "flag": 2,
+          "count": 49,
+          "client_D2H_bytes": 784,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.028556
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 69,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001152,
+          "client_D2H_API_inclusive_ms": 0.018101
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 70,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.02471
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 71,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017062
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 72,
+          "flag": 2,
+          "count": 4637,
+          "client_D2H_bytes": 74192,
+          "client_D2H_device_ms": 0.002656,
+          "client_D2H_API_inclusive_ms": 0.038664
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 73,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.015679
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 74,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025886
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 75,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016948
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 76,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025607
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 77,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017839
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 78,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.02082
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 79,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.01726
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 80,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.0016,
+          "client_D2H_API_inclusive_ms": 0.026361
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 81,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001152,
+          "client_D2H_API_inclusive_ms": 0.016733
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 82,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.023676
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 83,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018101
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 84,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024665
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 86,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017006
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 88,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025789
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 89,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017747
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 91,
+          "flag": 2,
+          "count": 15459,
+          "client_D2H_bytes": 247344,
+          "client_D2H_device_ms": 0.005824,
+          "client_D2H_API_inclusive_ms": 0.065636
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 93,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017927
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 94,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024593
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 96,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.0162
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 98,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025587
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 99,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017142
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 101,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025346
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 103,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.018047
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 104,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025358
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 106,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017155
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 108,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025599
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 109,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.017115
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 111,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.022972
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 113,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016732
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 114,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.02536
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 116,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017995
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 118,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.020609
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 119,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017782
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 121,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001664,
+          "client_D2H_API_inclusive_ms": 0.025859
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 123,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.01738
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 124,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025657
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 126,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.013195
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 128,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.029682
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 129,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016882
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 131,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.024746
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 133,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016585
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 134,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025218
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 135,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017413
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 136,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.0016,
+          "client_D2H_API_inclusive_ms": 0.025771
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 137,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016936
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 138,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025427
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 139,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017308
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 140,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024169
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 141,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017066
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 142,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.025358
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 143,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018248
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 144,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024863
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 145,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017006
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 146,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.023646
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 147,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017089
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 148,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.025627
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 149,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018621
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 150,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024766
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 151,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.01696
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 152,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025773
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 153,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016512
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 154,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025395
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 155,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017018
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 156,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024751
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 157,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.01735
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 158,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.031455
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 159,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.016381
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 160,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025498
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 161,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017906
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 162,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025284
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 163,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016986
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 164,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.025801
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 165,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016786
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 166,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.02507
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 167,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018243
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 168,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.019548
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 170,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017641
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 172,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.025633
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 173,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017278
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 175,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.02559
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 177,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018249
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 178,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024796
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 180,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018271
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 182,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.026053
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 183,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.01656
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 185,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025501
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 187,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.018495
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 188,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024546
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 190,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017677
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 192,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.02518
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 193,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017388
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 195,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.02571
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 197,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018058
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 198,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.024456
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 200,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017659
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 202,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.02554
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 203,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016698
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 205,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.020631
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 207,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018282
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 208,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024736
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 210,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.018191
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 212,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025641
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 213,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016893
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 215,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.025534
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 217,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017688
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 218,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024318
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 219,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.01724
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 220,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025723
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 221,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017104
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 222,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025225
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 223,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.0161
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 224,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.024854
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 225,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.018709
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 226,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025161
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 227,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017045
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 228,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024807
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 229,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.013997
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 230,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025048
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 231,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017076
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 232,
+          "flag": 2,
+          "count": 584,
+          "client_D2H_bytes": 9344,
+          "client_D2H_device_ms": 0.001952,
+          "client_D2H_API_inclusive_ms": 0.028785
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 233,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017712
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 234,
+          "flag": 2,
+          "count": 12,
+          "client_D2H_bytes": 192,
+          "client_D2H_device_ms": 0.001344,
+          "client_D2H_API_inclusive_ms": 0.025053
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 235,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001312,
+          "client_D2H_API_inclusive_ms": 0.016963
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 236,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.025183
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 237,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016776
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 238,
+          "flag": 2,
+          "count": 3,
+          "client_D2H_bytes": 48,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024928
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 239,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.017466
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 240,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.025054
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 241,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001312,
+          "client_D2H_API_inclusive_ms": 0.01649
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 242,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024774
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 243,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001312,
+          "client_D2H_API_inclusive_ms": 0.017532
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 244,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024941
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 245,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.01653
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 246,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024694
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 247,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017032
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 248,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.02497
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 249,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017142
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 250,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001632,
+          "client_D2H_API_inclusive_ms": 0.024739
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 251,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017535
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 252,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.024459
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 254,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016689
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 256,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024866
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 257,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017138
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 259,
+          "flag": 2,
+          "count": 48,
+          "client_D2H_bytes": 768,
+          "client_D2H_device_ms": 0.001152,
+          "client_D2H_API_inclusive_ms": 0.02512
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 261,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017125
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 262,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024766
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 264,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017388
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 266,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024648
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 267,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016795
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 269,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.02429
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 271,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001344,
+          "client_D2H_API_inclusive_ms": 0.016835
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 272,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.02474
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 274,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.01704
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 276,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024781
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 277,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017158
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 279,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.02467
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 281,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001312,
+          "client_D2H_API_inclusive_ms": 0.01698
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 282,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024422
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 284,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016916
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 286,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024433
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 287,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016745
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 289,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024767
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 291,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017359
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 292,
+          "flag": 2,
+          "count": 18,
+          "client_D2H_bytes": 288,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.024679
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 294,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.015455
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 296,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.025387
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 297,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017202
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 299,
+          "flag": 2,
+          "count": 13445,
+          "client_D2H_bytes": 215120,
+          "client_D2H_device_ms": 0.00592,
+          "client_D2H_API_inclusive_ms": 0.059361
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 301,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017618
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 302,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001472,
+          "client_D2H_API_inclusive_ms": 0.024461
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 303,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001152,
+          "client_D2H_API_inclusive_ms": 0.016901
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 304,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.024507
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 305,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016899
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 306,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024931
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 307,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017415
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 308,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024786
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 309,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.016315
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 310,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024731
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 311,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017035
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 312,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024698
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 313,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.016705
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 314,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.02479
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 315,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001248,
+          "client_D2H_API_inclusive_ms": 0.017192
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 316,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.025017
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 317,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.01728
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 318,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.01976
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 319,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.00128,
+          "client_D2H_API_inclusive_ms": 0.017693
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 320,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024902
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 321,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017508
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 322,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001504,
+          "client_D2H_API_inclusive_ms": 0.019222
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 323,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017321
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 324,
+          "flag": 2,
+          "count": 13762,
+          "client_D2H_bytes": 220192,
+          "client_D2H_device_ms": 0.005408,
+          "client_D2H_API_inclusive_ms": 0.061996
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 325,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001184,
+          "client_D2H_API_inclusive_ms": 0.017436
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 326,
+          "flag": 2,
+          "count": 2,
+          "client_D2H_bytes": 32,
+          "client_D2H_device_ms": 0.001472,
+          "client_D2H_API_inclusive_ms": 0.02561
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 327,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017358
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 328,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024552
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 329,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017336
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 330,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.02442
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 331,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.017637
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 332,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001568,
+          "client_D2H_API_inclusive_ms": 0.024693
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 333,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001216,
+          "client_D2H_API_inclusive_ms": 0.016911
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 334,
+          "flag": 2,
+          "count": 1,
+          "client_D2H_bytes": 16,
+          "client_D2H_device_ms": 0.001536,
+          "client_D2H_API_inclusive_ms": 0.024567
+        },
+        {
+          "output_API_overlap_kernel_inclusive_ms": 0.0,
+          "step": 335,
+          "flag": 3,
+          "count": 8,
+          "client_D2H_bytes": 64,
+          "client_D2H_device_ms": 0.001185,
+          "client_D2H_API_inclusive_ms": 0.017674
+        }
+      ]
+    },
+    "scope": "Partial explicit full ID/field D2H output attribution. P2 last two copies in NVTX query; E last 3 range /2 K copies in input-bound slot. Host map, retention, sqrt and synchronization not separately isolated. Native-squared E range copy is included. Do not sum API wait plus same GPU duration or compare these to primary unprofiled latency."
+  }
+}
