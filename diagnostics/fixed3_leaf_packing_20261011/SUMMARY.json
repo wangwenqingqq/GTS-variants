@@ -1,0 +1,396 @@
+{
+  "scope": "One complete256-query Host-ready pass per fresh process; query transfer/allocation/traversal/materialization/sort/full ID-distance return/free/sync included; static data/index load,warmup,oracle,profiler,filewrites excluded",
+  "distributions": {
+    "G0": {
+      "raw_ms": [
+        90556.138609,
+        89747.925045,
+        89690.948626,
+        89770.393232,
+        89719.487044,
+        89764.200009
+      ],
+      "p10_ms": 89705.21783499999,
+      "median_ms": 89756.062527,
+      "p90_ms": 90163.26592050001,
+      "arithmetic_mean_ms": 89874.84876083332,
+      "geometric_mean_ms": 89874.33030854801
+    },
+    "G1": {
+      "raw_ms": [
+        89338.175154,
+        89186.981139,
+        89266.372626,
+        89228.506165,
+        89244.235903,
+        89235.716769
+      ],
+      "p10_ms": 89207.743652,
+      "median_ms": 89239.97633599999,
+      "p90_ms": 89302.27389,
+      "arithmetic_mean_ms": 89249.99795933333,
+      "geometric_mean_ms": 89249.98609160702
+    },
+    "G2": {
+      "raw_ms": [
+        35073.307856,
+        35053.129045,
+        35077.239141,
+        35071.38022,
+        35059.920423,
+        35165.595
+      ],
+      "p10_ms": 35056.524734000006,
+      "median_ms": 35072.344037999996,
+      "p90_ms": 35121.4170705,
+      "arithmetic_mean_ms": 35083.42861416667,
+      "geometric_mean_ms": 35083.40842841326
+    }
+  },
+  "rows": [
+    {
+      "round": 1,
+      "position": 0,
+      "mode": "G0",
+      "Q": 256,
+      "total_ms": 90556.138609
+    },
+    {
+      "round": 1,
+      "position": 1,
+      "mode": "G1",
+      "Q": 256,
+      "total_ms": 89338.175154
+    },
+    {
+      "round": 1,
+      "position": 2,
+      "mode": "G2",
+      "Q": 256,
+      "total_ms": 35073.307856
+    },
+    {
+      "round": 2,
+      "position": 0,
+      "mode": "G2",
+      "Q": 256,
+      "total_ms": 35053.129045
+    },
+    {
+      "round": 2,
+      "position": 1,
+      "mode": "G1",
+      "Q": 256,
+      "total_ms": 89186.981139
+    },
+    {
+      "round": 2,
+      "position": 2,
+      "mode": "G0",
+      "Q": 256,
+      "total_ms": 89747.925045
+    },
+    {
+      "round": 3,
+      "position": 0,
+      "mode": "G1",
+      "Q": 256,
+      "total_ms": 89266.372626
+    },
+    {
+      "round": 3,
+      "position": 1,
+      "mode": "G0",
+      "Q": 256,
+      "total_ms": 89690.948626
+    },
+    {
+      "round": 3,
+      "position": 2,
+      "mode": "G2",
+      "Q": 256,
+      "total_ms": 35077.239141
+    },
+    {
+      "round": 4,
+      "position": 0,
+      "mode": "G2",
+      "Q": 256,
+      "total_ms": 35071.38022
+    },
+    {
+      "round": 4,
+      "position": 1,
+      "mode": "G0",
+      "Q": 256,
+      "total_ms": 89770.393232
+    },
+    {
+      "round": 4,
+      "position": 2,
+      "mode": "G1",
+      "Q": 256,
+      "total_ms": 89228.506165
+    },
+    {
+      "round": 5,
+      "position": 0,
+      "mode": "G1",
+      "Q": 256,
+      "total_ms": 89244.235903
+    },
+    {
+      "round": 5,
+      "position": 1,
+      "mode": "G2",
+      "Q": 256,
+      "total_ms": 35059.920423
+    },
+    {
+      "round": 5,
+      "position": 2,
+      "mode": "G0",
+      "Q": 256,
+      "total_ms": 89719.487044
+    },
+    {
+      "round": 6,
+      "position": 0,
+      "mode": "G0",
+      "Q": 256,
+      "total_ms": 89764.200009
+    },
+    {
+      "round": 6,
+      "position": 1,
+      "mode": "G2",
+      "Q": 256,
+      "total_ms": 35165.595
+    },
+    {
+      "round": 6,
+      "position": 2,
+      "mode": "G1",
+      "Q": 256,
+      "total_ms": 89235.716769
+    }
+  ],
+  "ratios": {
+    "G0_over_G1": {
+      "paired_geometric_ratio": 1.006995454501249,
+      "bootstrap_95": [
+        1.0053299031097447,
+        1.0097325305535358
+      ],
+      "candidate_process_wins": 6,
+      "raw_paired_ratios": [
+        1.0136331803610326,
+        1.006289526776624,
+        1.0047562815370448,
+        1.0060730263263395,
+        1.005325286683126,
+        1.0059223286273147
+      ],
+      "marginal_median_ratio": 1.0057831278333924,
+      "relative_order_split": {
+        "G0_before_other": 1.0085364309767884,
+        "G1_before_other": 1.005456832535101
+      },
+      "all_order_strata": [
+        {
+          "order": [
+            "G0",
+            "G1",
+            "G2"
+          ],
+          "ratio": 1.0136331803610326
+        },
+        {
+          "order": [
+            "G2",
+            "G1",
+            "G0"
+          ],
+          "ratio": 1.006289526776624
+        },
+        {
+          "order": [
+            "G1",
+            "G0",
+            "G2"
+          ],
+          "ratio": 1.0047562815370448
+        },
+        {
+          "order": [
+            "G2",
+            "G0",
+            "G1"
+          ],
+          "ratio": 1.0060730263263395
+        },
+        {
+          "order": [
+            "G1",
+            "G2",
+            "G0"
+          ],
+          "ratio": 1.005325286683126
+        },
+        {
+          "order": [
+            "G0",
+            "G2",
+            "G1"
+          ],
+          "ratio": 1.0059223286273147
+        }
+      ],
+      "decision": "confirmed_win"
+    },
+    "G1_over_G2": {
+      "paired_geometric_ratio": 2.5439371511955353,
+      "bootstrap_95": [
+        2.5412113680445505,
+        2.545908534873667
+      ],
+      "candidate_process_wins": 6,
+      "raw_paired_ratios": [
+        2.5471841869262666,
+        2.5443372266283224,
+        2.5448517275597404,
+        2.544197166044696,
+        2.545477423401509,
+        2.537585863938887
+      ],
+      "marginal_median_ratio": 2.5444542925135183,
+      "relative_order_split": {
+        "G1_before_other": 2.5458375884881668,
+        "G2_before_other": 2.5420381325565997
+      },
+      "all_order_strata": [
+        {
+          "order": [
+            "G0",
+            "G1",
+            "G2"
+          ],
+          "ratio": 2.5471841869262666
+        },
+        {
+          "order": [
+            "G2",
+            "G1",
+            "G0"
+          ],
+          "ratio": 2.5443372266283224
+        },
+        {
+          "order": [
+            "G1",
+            "G0",
+            "G2"
+          ],
+          "ratio": 2.5448517275597404
+        },
+        {
+          "order": [
+            "G2",
+            "G0",
+            "G1"
+          ],
+          "ratio": 2.544197166044696
+        },
+        {
+          "order": [
+            "G1",
+            "G2",
+            "G0"
+          ],
+          "ratio": 2.545477423401509
+        },
+        {
+          "order": [
+            "G0",
+            "G2",
+            "G1"
+          ],
+          "ratio": 2.537585863938887
+        }
+      ],
+      "decision": "confirmed_win"
+    },
+    "G0_over_G2": {
+      "paired_geometric_ratio": 2.561733147790761,
+      "bootstrap_95": [
+        2.556026369521077,
+        2.5704200622020186
+      ],
+      "candidate_process_wins": 6,
+      "raw_paired_ratios": [
+        2.5819104083594024,
+        2.5603399037439623,
+        2.5569557588460494,
+        2.559648142413484,
+        2.559032820426547,
+        2.552614281345161
+      ],
+      "marginal_median_ratio": 2.559169196953348,
+      "relative_order_split": {
+        "G0_before_other": 2.5637943862647132,
+        "G2_before_other": 2.5596735665105634
+      },
+      "all_order_strata": [
+        {
+          "order": [
+            "G0",
+            "G1",
+            "G2"
+          ],
+          "ratio": 2.5819104083594024
+        },
+        {
+          "order": [
+            "G2",
+            "G1",
+            "G0"
+          ],
+          "ratio": 2.5603399037439623
+        },
+        {
+          "order": [
+            "G1",
+            "G0",
+            "G2"
+          ],
+          "ratio": 2.5569557588460494
+        },
+        {
+          "order": [
+            "G2",
+            "G0",
+            "G1"
+          ],
+          "ratio": 2.559648142413484
+        },
+        {
+          "order": [
+            "G1",
+            "G2",
+            "G0"
+          ],
+          "ratio": 2.559032820426547
+        },
+        {
+          "order": [
+            "G0",
+            "G2",
+            "G1"
+          ],
+          "ratio": 2.552614281345161
+        }
+      ],
+      "decision": "confirmed_win"
+    }
+  }
+}
