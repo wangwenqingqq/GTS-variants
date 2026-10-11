@@ -271,3 +271,13 @@ blocks. Local-write checks pass under a separately evaluated 240-active
 initialization, but neither query GO nor the stated positive conditional band
 passes. No new GPU or end-to-end timing was performed. See the
 [five-question decision](../certificate_aware_partition_20261010/DECISION.md).
+
+## Fixed local-ball checkpoint (2026-10-11)
+
+The [one-center follow-up](../block_local_ball_20261011/README.md) is
+**NO_GO_LOCAL_BALL**. On the unchanged 4096-block S1/P2 layout, LOCAL_BALL
+retains 92.2501% / 93.4250% versus GLOBAL4 68.8995% / 67.8749%; it is worse
+on 63/64 queries, with zero false prune and full independent reconstruction.
+This stops the tested C0 single-ball route. No center tuning, multiple balls,
+update, hierarchy or CUDA run follows. These are CPU structural counts, not
+new end-to-end results; previous formal measurements remain unchanged.

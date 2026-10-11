@@ -1,0 +1,154 @@
+{
+  "experiment": "GTSPP_20261011_block_local_ball",
+  "baseline_commit": "a85360852d3b44b03a885d1ad03fda5e945ad7e0",
+  "scope": "CPU-only design-space discrimination; exactly one center rule, two snapshots and 64 original queries; no update, hierarchy, CUDA or timing",
+  "shape": {
+    "N": 1000000,
+    "D": 960,
+    "dtype": "FP32",
+    "metric": "L2",
+    "B": 1,
+    "queries_per_snapshot": 32,
+    "radius_bits": "0x3f34a3d8"
+  },
+  "snapshots": [
+    "initial",
+    "first_rebuilt"
+  ],
+  "partition": "Frozen S1/P2; 4096 strict-median leaves of 244/245 objects; not the 4167-block slack initialization",
+  "partition_proof_sha256": "fd3765b91e0f20ab9e5168485a8fa6a94475e8eb5091f1fd4bb7a3de63eb3184",
+  "partition_verification_sha256": "6b26e96fbbd8d4a1a88040a0b2f739af81c787b63644caab71796f7f9b5a0421",
+  "partition_sha256": {
+    "initial": "8319cd24b0ccde10546d7077539f0ce6914435924dbce2db3f8eea009832e8e8",
+    "first_rebuilt": "4669b54d898b8cd15bc5b56fc7dfd9e96a8bd0c11e5d20a10203e13bdd8bb560"
+  },
+  "global4_result_sha256": "cf7ffdaa8191d5d85b041a41278f395fddce1d4e3b242b5bc43a9ef14ea75137",
+  "prior_score_proof_sha256": "57062d79d3b49abe35e2c859eefe10cc26ee48fc2adcac0e2592f8ac2211105d",
+  "prior_score_verification_sha256": "365a9986f2ba5c36b79b1315bbb419d1e46847310b9cb51d1e9daf7de120be7c",
+  "inputs": {
+    "initial": {
+      "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+      "reference_sha256": "6417a03c5d08d9b0b9de1058d7cc952054096bed19e74b2e8ee172de56691b26",
+      "masks_sha256": "b91024f798be3697b1443c1006a0f2376325691d2adc9ecfff7752cf5e2439f8",
+      "nodes_sha256": "c26366ab1969e43e679a2c06e38bd1596df956ee7fd1e5d54c517d356072c128",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317",
+      "qids": [
+        88406,
+        865632,
+        881748,
+        916533,
+        40158,
+        242468,
+        40486,
+        900387,
+        703226,
+        791039,
+        724874,
+        671829,
+        722418,
+        152899,
+        737995,
+        144573,
+        570909,
+        347206,
+        63744,
+        625378,
+        136857,
+        201233,
+        72436,
+        617423,
+        810945,
+        789615,
+        601856,
+        433080,
+        415755,
+        282095,
+        66651,
+        326654
+      ]
+    },
+    "first_rebuilt": {
+      "data_sha256": "7320627ab528bb2519720a8a4d43b8c1e3433b486c27cd1897ac1c03d2631da6",
+      "reference_sha256": "18c8c6d119b91a481452dca16da2e1e5b0c5bae1b3212e4ff0349ce04269754b",
+      "masks_sha256": "ceed2f2b539bf4cf0e006a2a8367c199de7344ff9798f314ad70a0d12a1d0c22",
+      "nodes_sha256": "acc9083fd2b03e2563ff61ad3a32130241a2dafbfd09515a5cebe12e287055f7",
+      "empty_sha256": "6043cc907d3dbcd90e6bf4025ab21d48f4054d459f59ddc721169a58d8566205",
+      "order_sha256": "b6c89edea15f13f22ffd18fca9bf0e00e968043c51b0a374bc108332ff3ea1be",
+      "qids": [
+        282091,
+        66650,
+        326650,
+        532560,
+        113260,
+        991585,
+        253497,
+        738154,
+        567973,
+        258318,
+        243005,
+        236353,
+        158329,
+        922178,
+        436359,
+        821767,
+        253944,
+        323617,
+        578176,
+        569440,
+        207665,
+        579738,
+        63627,
+        227,
+        365626,
+        551655,
+        947181,
+        520014,
+        136074,
+        750662,
+        838925,
+        819709
+      ]
+    }
+  },
+  "occurrence_sha256": {
+    "initial": "ffcae47455758e16b2a9085b0e752f14c21f7dc1b034d470201e694c2d19c520",
+    "first_rebuilt": "5910e8481764c331794d16467f29069a6c5dde3cbef7efb553a66a520744aaa8"
+  },
+  "center_rule": {
+    "name": "C0 Signature-Medoid Center",
+    "signature": "sqrt(first four ordered-FP64 S1 pivot scores), fixed from prior proof; no queries, radius or oracle",
+    "mean": "FP64 left-to-right accumulation in frozen block-member order separately in each of four dimensions, divide by block size",
+    "score": "Squared distance to signature mean: subtract/multiply FP64, add terms in pivot dimension order 0..3, no reassociation or contraction",
+    "selection": "Min score, exact FP64 ties choose smallest immutable occurrence ID; one member center per block. This is nearest-to-signature-mean, not exact original-space medoid optimization."
+  },
+  "numerics": "Ordered FP64 full-D subtraction/product/sum; no fast math/FMA. Prior envelope e=(4D+16)*2^-52. Cover radius=max(member norm upper endpoints); reject only query-center lower > nextup(R_B+r_upper); equality retained.",
+  "aggregate": "All original 32 queries per snapshot, arithmetic mean; quantiles NumPy linear method; no averaging across snapshots for gates",
+  "gates": {
+    "GO_LOCAL": "Zero false prune; BOTH snapshots mean<=0.50 and p90<=0.70",
+    "STRONG_GO_LOCAL": "Must first satisfy GO_LOCAL, then BOTH means<=0.35; final label remains GO_LOCAL",
+    "CONDITIONAL_SUPPORTED": "No GO or NO-GO; both means<=0.65, at least one >0.50, and each snapshot improves GLOBAL4 by >=0.15 absolute fraction (15 percentage points)",
+    "NO_GO_LOCAL_BALL": "On at least one SAME snapshot, local mean>0.65 AND global4_mean-local_mean<0.10 (10 percentage points)",
+    "UNCOVERED": "CONDITIONAL_LOCAL with reason=uncovered_interval; not a positive conditional-band pass. No automatic next family, update, hierarchy or CUDA experiment.",
+    "correctness": "Any false prune, invalid input or provenance mismatch stops immediately before structural decision."
+  },
+  "cost_proxy": {
+    "GLOBAL4": "4 full-D query-pivot distances; 8 FP64 endpoints/block (262144 bytes for 4096); pivot coordinate payload=4*D*4. Optional pivot IDs reported separately.",
+    "LOCAL_BALL": "4096 full-D query-center distances; one FP64 radius/block=32768 bytes. Separate optional 64-bit center IDs=32768 bytes; packed center coordinate payload=4096*D*4=15728640 bytes. No center-distance reuse or conditional hierarchy assumed.",
+    "FULL_SCAN": "N full-D distances; coordinate payload=N*D*4=3840000000 bytes; no summary required.",
+    "remaining_verification": "For each candidate summary, report surviving live objects and modeled total distance evaluations = summary distances + surviving objects. No executed verifier, coordinate reuse, caching, or measured transactions claimed.",
+    "bytes": "Decimal MB/GB and exact bytes. Coordinate bytes exclude query coordinates/cache behavior unless separately named. Not measured traffic or time."
+  },
+  "runtime": {
+    "CPU_threads_max": 4,
+    "priority_nice": 15,
+    "GPU_processes": 0,
+    "timing": "not collected"
+  },
+  "novelty_gate": {
+    "status": "No novelty claim; bounded diagnostic of established ball filtering",
+    "nearest_prior_art": "M-tree: An Efficient Access Method for Similarity Search in Metric Spaces (VLDB 1997), covering radius and triangle-inequality range pruning",
+    "source": "https://www.vldb.org/conf/1997/P426.PDF",
+    "boundary": "Do not promote classic local ball ported to GPU as novel; future co-design requires separate prior-art and same-contract end-to-end gates."
+  }
+}

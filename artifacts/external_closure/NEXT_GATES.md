@@ -111,3 +111,16 @@ the static gate. No automatic CUDA prototype, more pivots, partition variants,
 or long run follows. A genuinely different <=4-distance-equivalent safe-summary
 hypothesis needs its own prior-art kill test and approval before new experiments.
 See [contract and complete evidence](../certificate_aware_partition_20261010/README.md).
+
+## Fixed local-ball stop (2026-10-11)
+
+The authorized fixed-S1/P2, one-C0-center offline test is closed as
+**NO_GO_LOCAL_BALL**, with zero false prune. Both snapshot means exceed 92%
+and both fail the frozen same-snapshot NO-GO test against GLOBAL4. The 4096
+query-center distances and center payload do not yield better selectivity.
+Preserve the [decision and negative evidence](../block_local_ball_20261011/DECISION.md).
+Do not tune the center, add multi-ball variants, update checks, hierarchy,
+CUDA or long runs. Any genuinely different mechanism needs a new Gate 0
+review, quality/cost contract and authorization; this is not an automatic
+next launch. Do not generalize this fixed C0 rejection to every local summary
+or GPU tree, and do not replace historical end-to-end evidence with proxies.
