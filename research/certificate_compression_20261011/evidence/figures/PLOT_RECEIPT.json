@@ -1,0 +1,19 @@
+{
+  "source_sha256": "28fd53fcf5223c9b671f57c148955965381267288925b763a6d4a0932fbf525b",
+  "summary_csv_sha256": "ef0dacb1347df3414219abb7643e309f7d60744f7253a16a2cfee0a0a43881ee",
+  "rows": 30,
+  "queries": 8,
+  "levels": [
+    3,
+    4,
+    5
+  ],
+  "leaf_alias": 5,
+  "aggregation": "pooled counts, not mean of per-query ratios",
+  "figure3_denominator": "original G0 visited objects at the SAME level; not threshold-only work",
+  "figure4_units": "two panels, coordinate updates and bytes never added",
+  "figure4_metadata": "base-surviving query-regions times aligned record bytes; no cache model",
+  "figure4_avoided_work": "incremental C0-to-candidate object updates; fixed U* counterfactual",
+  "no_latency_or_population_or_confidence_interval_claim": true,
+  "uncertainty": "deterministic complete counts of the frozen 8 queries; no random-run error bars"
+}

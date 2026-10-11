@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "stageA2_stageA3_all_files_byte_identical": true,
+  "generated_CPP_stage1_and_build2_byte_identical": true,
+  "regression_tests": 8,
+  "final_staged_replay": "source-isolated git checkout-index staged2; raw input arrays retained outside staged source",
+  "numeric_outputs_byte_identical": [
+    "per_level_summary.csv",
+    "per_query_summary.csv",
+    "aggregate_summary.json",
+    "GLOBAL_PIVOTS.json"
+  ],
+  "serialized_metadata_records_byte_identical": 30,
+  "region_selection_arrays_byte_identical": 3,
+  "validation_identical_except_elapsed_seconds": true,
+  "CSV_LF_bridge": "eval2 CRLF -> eval3 LF, no numeric or metadata differences",
+  "compiled_portability_gate": "Apple clang++ compile only; measured Linux g++ execution separately recorded",
+  "worker_interface_and_local_samples": "WORKER_BRIDGE.json",
+  "safety_candidate_bounds": 56832000,
+  "zero_false_topK_prunes": true,
+  "no_GPU_execution": true
+}
