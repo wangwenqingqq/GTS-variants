@@ -1,0 +1,470 @@
+{
+  "experiment": "gtspp_20261012_l3_residual_attribution_n1m_d960",
+  "contract_sha256": "459c66f66698f4fe9c6af9165df0f6bda8356420494c95a8309307016fde5017",
+  "gpu_construction_processes": 0,
+  "rebuilds": [
+    {
+      "totals": {
+        "objects": 999990,
+        "changed_objects": 290070,
+        "descendant_leaves": 100000,
+        "changed_leaves": 29008
+      },
+      "groups": [
+        {
+          "group": "SAME_PIVOT",
+          "parents": 734,
+          "objects": 733997,
+          "changed_objects": 28927,
+          "descendant_leaves": 73400,
+          "changed_leaves": 2893,
+          "retained_objects": 733912,
+          "imported_common_objects": 85,
+          "exported_common_objects": 80,
+          "retained_changed_objects": 28842,
+          "imported_changed_objects": 85,
+          "l4_pre_pivots": 7340,
+          "l4_surviving_within_parent": 7080,
+          "l4_correspondence_pairs": 7340,
+          "l4_same_pivot_under_correspondence": 7080,
+          "segment_crossing_objects": 260,
+          "multiple_boundary_crossing_objects": 0,
+          "crossings_by_boundary": [
+            18,
+            26,
+            26,
+            37,
+            44,
+            36,
+            36,
+            27,
+            10
+          ],
+          "rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 1.0,
+            "max": 2.0
+          },
+          "normalized_rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.001,
+            "max": 0.002
+          },
+          "input_rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 1.0,
+            "max": 3.0
+          },
+          "common_rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "object_churn_fraction": 0.03941024282115595,
+          "leaf_churn_fraction": 0.0394141689373297,
+          "segment_crossing_fraction": 0.0003542659065392036,
+          "l4_pivot_survival_fraction": 0.9645776566757494,
+          "same_pivot_key_tie": {
+            "retained_common_objects": 733912,
+            "tied_in_either_build_common_subgroup_objects": 24115,
+            "non_tied_in_both_builds_objects": 709797,
+            "non_tied_full_rank_changed_objects": 24587,
+            "non_tied_common_only_rank_changed_objects": 0,
+            "persistent_common_tie_subgroups": 11166,
+            "reordered_persistent_common_tie_subgroups": 0,
+            "ordinal_position_changed_objects_in_persistent_tie_subgroups": 0,
+            "common_only_rank_changed_objects": 0,
+            "pre_common_tie_objects": 24115,
+            "post_common_tie_objects": 24115,
+            "encoded_offset_comparable_parents": 734,
+            "encoded_offset_noncomparable_parents": 0,
+            "exact_encoded_key_changed_objects": 0
+          },
+          "share_of_remaining_object_churn": 0.0997242045023615,
+          "share_of_remaining_leaf_churn": 0.09973110865968009
+        },
+        {
+          "group": "CHANGED_PIVOT",
+          "parents": 266,
+          "objects": 265993,
+          "changed_objects": 261143,
+          "descendant_leaves": 26600,
+          "changed_leaves": 26115,
+          "retained_objects": 265696,
+          "imported_common_objects": 297,
+          "exported_common_objects": 302,
+          "retained_changed_objects": 260846,
+          "imported_changed_objects": 297,
+          "l4_pre_pivots": 2660,
+          "l4_surviving_within_parent": 79,
+          "l4_correspondence_pairs": 1350,
+          "l4_same_pivot_under_correspondence": 53,
+          "segment_crossing_objects": 220297,
+          "multiple_boundary_crossing_objects": 162372,
+          "crossings_by_boundary": [
+            43587,
+            74509,
+            94656,
+            105374,
+            107060,
+            99879,
+            84722,
+            63296,
+            35585
+          ],
+          "rank_absolute_quantiles": {
+            "p50": 214.0,
+            "p90": 607.0,
+            "p95": 718.0,
+            "p99": 875.0,
+            "max": 999.0
+          },
+          "normalized_rank_absolute_quantiles": {
+            "p50": 0.214,
+            "p90": 0.607,
+            "p95": 0.718,
+            "p99": 0.875,
+            "max": 0.999
+          },
+          "input_rank_absolute_quantiles": {
+            "p50": 1.0,
+            "p90": 1.0,
+            "p95": 2.0,
+            "p99": 2.0,
+            "max": 3.0
+          },
+          "common_rank_absolute_quantiles": null,
+          "object_churn_fraction": 0.98176643746264,
+          "leaf_churn_fraction": 0.9817669172932331,
+          "segment_crossing_fraction": 0.829131789714561,
+          "l4_pivot_survival_fraction": 0.029699248120300753,
+          "same_pivot_key_tie": null,
+          "share_of_remaining_object_churn": 0.9002757954976385,
+          "share_of_remaining_leaf_churn": 0.90026889134032
+        },
+        {
+          "group": "UNKNOWN",
+          "parents": 0,
+          "objects": 0,
+          "changed_objects": 0,
+          "descendant_leaves": 0,
+          "changed_leaves": 0,
+          "retained_objects": 0,
+          "imported_common_objects": 0,
+          "exported_common_objects": 0,
+          "retained_changed_objects": 0,
+          "imported_changed_objects": 0,
+          "l4_pre_pivots": 0,
+          "l4_surviving_within_parent": 0,
+          "l4_correspondence_pairs": 0,
+          "l4_same_pivot_under_correspondence": 0,
+          "segment_crossing_objects": 0,
+          "multiple_boundary_crossing_objects": 0,
+          "crossings_by_boundary": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rank_absolute_quantiles": null,
+          "normalized_rank_absolute_quantiles": null,
+          "input_rank_absolute_quantiles": null,
+          "common_rank_absolute_quantiles": null,
+          "object_churn_fraction": null,
+          "leaf_churn_fraction": null,
+          "segment_crossing_fraction": null,
+          "l4_pivot_survival_fraction": null,
+          "same_pivot_key_tie": null,
+          "share_of_remaining_object_churn": 0.0,
+          "share_of_remaining_leaf_churn": 0.0
+        }
+      ],
+      "matched_parents": 1000,
+      "pre_cohort_object_sensitivity": {
+        "SAME_PIVOT": {
+          "objects": 733992,
+          "changed_objects": 28922
+        },
+        "CHANGED_PIVOT": {
+          "objects": 265998,
+          "changed_objects": 261148
+        },
+        "UNKNOWN": {
+          "objects": 0,
+          "changed_objects": 0
+        }
+      },
+      "descriptive_l4_groups_beneath_same_pivot_l3": {
+        "SAME_PIVOT": {
+          "parents": 7080,
+          "objects": 708000,
+          "changed_objects": 3580,
+          "descendant_leaves": 70800,
+          "changed_leaves": 358
+        },
+        "CHANGED_PIVOT": {
+          "parents": 260,
+          "objects": 25997,
+          "changed_objects": 25347,
+          "descendant_leaves": 2600,
+          "changed_leaves": 2535
+        },
+        "UNKNOWN": {
+          "parents": 0,
+          "objects": 0,
+          "changed_objects": 0,
+          "descendant_leaves": 0,
+          "changed_leaves": 0
+        }
+      },
+      "PIVOT_DOMINANT_pass": true,
+      "rebuild": 1,
+      "parent_details_sha256": "8147148131d8f4edb77a1165607b78ed2a5d9237fa69517e8c113b8f531ed445"
+    },
+    {
+      "totals": {
+        "objects": 999990,
+        "changed_objects": 299080,
+        "descendant_leaves": 100000,
+        "changed_leaves": 29909
+      },
+      "groups": [
+        {
+          "group": "SAME_PIVOT",
+          "parents": 721,
+          "objects": 720994,
+          "changed_objects": 23124,
+          "descendant_leaves": 72100,
+          "changed_leaves": 2313,
+          "retained_objects": 720939,
+          "imported_common_objects": 55,
+          "exported_common_objects": 57,
+          "retained_changed_objects": 23069,
+          "imported_changed_objects": 55,
+          "l4_pre_pivots": 7210,
+          "l4_surviving_within_parent": 7005,
+          "l4_correspondence_pairs": 7210,
+          "l4_same_pivot_under_correspondence": 7005,
+          "segment_crossing_objects": 204,
+          "multiple_boundary_crossing_objects": 0,
+          "crossings_by_boundary": [
+            14,
+            25,
+            28,
+            30,
+            27,
+            30,
+            23,
+            17,
+            10
+          ],
+          "rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 1.0,
+            "max": 1.0
+          },
+          "normalized_rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.001,
+            "max": 0.001
+          },
+          "input_rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 1.0,
+            "max": 2.0
+          },
+          "common_rank_absolute_quantiles": {
+            "p50": 0.0,
+            "p90": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "max": 0.0
+          },
+          "object_churn_fraction": 0.032072388951919155,
+          "leaf_churn_fraction": 0.03208044382801664,
+          "segment_crossing_fraction": 0.0002829643007244718,
+          "l4_pivot_survival_fraction": 0.9715672676837726,
+          "same_pivot_key_tie": {
+            "retained_common_objects": 720939,
+            "tied_in_either_build_common_subgroup_objects": 23392,
+            "non_tied_in_both_builds_objects": 697547,
+            "non_tied_full_rank_changed_objects": 19759,
+            "non_tied_common_only_rank_changed_objects": 0,
+            "persistent_common_tie_subgroups": 10946,
+            "reordered_persistent_common_tie_subgroups": 0,
+            "ordinal_position_changed_objects_in_persistent_tie_subgroups": 0,
+            "common_only_rank_changed_objects": 0,
+            "pre_common_tie_objects": 23392,
+            "post_common_tie_objects": 23392,
+            "encoded_offset_comparable_parents": 721,
+            "encoded_offset_noncomparable_parents": 0,
+            "exact_encoded_key_changed_objects": 0
+          },
+          "share_of_remaining_object_churn": 0.07731710579109269,
+          "share_of_remaining_leaf_churn": 0.0773345815640777
+        },
+        {
+          "group": "CHANGED_PIVOT",
+          "parents": 279,
+          "objects": 278996,
+          "changed_objects": 275956,
+          "descendant_leaves": 27900,
+          "changed_leaves": 27596,
+          "retained_objects": 278701,
+          "imported_common_objects": 295,
+          "exported_common_objects": 293,
+          "retained_changed_objects": 275661,
+          "imported_changed_objects": 295,
+          "l4_pre_pivots": 2790,
+          "l4_surviving_within_parent": 57,
+          "l4_correspondence_pairs": 1408,
+          "l4_same_pivot_under_correspondence": 33,
+          "segment_crossing_objects": 234819,
+          "multiple_boundary_crossing_objects": 174490,
+          "crossings_by_boundary": [
+            46654,
+            79593,
+            101439,
+            112809,
+            114050,
+            106509,
+            90873,
+            68266,
+            38304
+          ],
+          "rank_absolute_quantiles": {
+            "p50": 223.0,
+            "p90": 608.0,
+            "p95": 715.0,
+            "p99": 867.0,
+            "max": 999.0
+          },
+          "normalized_rank_absolute_quantiles": {
+            "p50": 0.223,
+            "p90": 0.608,
+            "p95": 0.715,
+            "p99": 0.867,
+            "max": 0.999
+          },
+          "input_rank_absolute_quantiles": {
+            "p50": 1.0,
+            "p90": 1.0,
+            "p95": 1.0,
+            "p99": 2.0,
+            "max": 2.0
+          },
+          "common_rank_absolute_quantiles": null,
+          "object_churn_fraction": 0.9891037864342141,
+          "leaf_churn_fraction": 0.9891039426523297,
+          "segment_crossing_fraction": 0.8425481071112052,
+          "l4_pivot_survival_fraction": 0.02043010752688172,
+          "same_pivot_key_tie": null,
+          "share_of_remaining_object_churn": 0.9226828942089074,
+          "share_of_remaining_leaf_churn": 0.9226654184359223
+        },
+        {
+          "group": "UNKNOWN",
+          "parents": 0,
+          "objects": 0,
+          "changed_objects": 0,
+          "descendant_leaves": 0,
+          "changed_leaves": 0,
+          "retained_objects": 0,
+          "imported_common_objects": 0,
+          "exported_common_objects": 0,
+          "retained_changed_objects": 0,
+          "imported_changed_objects": 0,
+          "l4_pre_pivots": 0,
+          "l4_surviving_within_parent": 0,
+          "l4_correspondence_pairs": 0,
+          "l4_same_pivot_under_correspondence": 0,
+          "segment_crossing_objects": 0,
+          "multiple_boundary_crossing_objects": 0,
+          "crossings_by_boundary": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rank_absolute_quantiles": null,
+          "normalized_rank_absolute_quantiles": null,
+          "input_rank_absolute_quantiles": null,
+          "common_rank_absolute_quantiles": null,
+          "object_churn_fraction": null,
+          "leaf_churn_fraction": null,
+          "segment_crossing_fraction": null,
+          "l4_pivot_survival_fraction": null,
+          "same_pivot_key_tie": null,
+          "share_of_remaining_object_churn": 0.0,
+          "share_of_remaining_leaf_churn": 0.0
+        }
+      ],
+      "matched_parents": 1000,
+      "pre_cohort_object_sensitivity": {
+        "SAME_PIVOT": {
+          "objects": 720996,
+          "changed_objects": 23126
+        },
+        "CHANGED_PIVOT": {
+          "objects": 278994,
+          "changed_objects": 275954
+        },
+        "UNKNOWN": {
+          "objects": 0,
+          "changed_objects": 0
+        }
+      },
+      "descriptive_l4_groups_beneath_same_pivot_l3": {
+        "SAME_PIVOT": {
+          "parents": 7005,
+          "objects": 700497,
+          "changed_objects": 2657,
+          "descendant_leaves": 70050,
+          "changed_leaves": 266
+        },
+        "CHANGED_PIVOT": {
+          "parents": 205,
+          "objects": 20497,
+          "changed_objects": 20467,
+          "descendant_leaves": 2050,
+          "changed_leaves": 2047
+        },
+        "UNKNOWN": {
+          "parents": 0,
+          "objects": 0,
+          "changed_objects": 0,
+          "descendant_leaves": 0,
+          "changed_leaves": 0
+        }
+      },
+      "PIVOT_DOMINANT_pass": true,
+      "rebuild": 2,
+      "parent_details_sha256": "7113e9a23aa005d63c25e716a5ce86dd818d913d020f0ead22fcdd05f37a6d4a"
+    }
+  ],
+  "decision": "PIVOT_DOMINANT"
+}
