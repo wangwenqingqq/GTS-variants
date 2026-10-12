@@ -1,0 +1,231 @@
+{
+  "scope": "source-derived CPU replay against eight prior NCU captures, not new GPU execution",
+  "N": 1000000,
+  "D": 960,
+  "source_query_tile_constant": 64,
+  "source_block_threads": 256,
+  "source_dynamic_shared_bytes": 36864,
+  "rows": [
+    {
+      "B": 1,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 2879000000,
+      "inflation": 64.02222994095172
+    },
+    {
+      "B": 2,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 5758000000,
+      "inflation": 32.01111497047586
+    },
+    {
+      "B": 4,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 11516000000,
+      "inflation": 16.00555748523793
+    },
+    {
+      "B": 8,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 23032000000,
+      "inflation": 8.002778742618965
+    },
+    {
+      "B": 16,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 46064000000,
+      "inflation": 4.001389371309482
+    },
+    {
+      "B": 32,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 92128000000,
+      "inflation": 2.000694685654741
+    },
+    {
+      "B": 64,
+      "query_tiles": 1,
+      "padded_query_rows": 64,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        376,
+        1,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 61440000000,
+      "FP32_FFMA": 61440000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 184320000000,
+      "useful_ops": 184256000000,
+      "inflation": 1.0003473428273706
+    },
+    {
+      "B": 128,
+      "query_tiles": 2,
+      "padded_query_rows": 128,
+      "Mblk": 64,
+      "Nblk": 64,
+      "Kblk": 32,
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "grid": [
+        188,
+        2,
+        1
+      ],
+      "dynamic_shared_bytes": 36864,
+      "FP32_FADD": 122880000000,
+      "FP32_FFMA": 122880000000,
+      "FP32_FMUL": 0,
+      "executed_FP32_proxy": 368640000000,
+      "useful_ops": 368512000000,
+      "inflation": 1.0003473428273706
+    }
+  ],
+  "grid_budget_boundary": {
+    "blocks": 376,
+    "SMs": 188,
+    "blocks_per_SM": 2,
+    "status": "inferred from existing B1 grid and source grid formula; not a new occupancy API query"
+  },
+  "normalization_note": "Predicted inflation = padded query rows/B * 3D/(3D-1); exactly equals existing emitted scalar opcode proxy/useful convention",
+  "main_kernel_reads": {
+    "database_payload_bytes": 3840000000,
+    "B1_measured_read_bytes": 3840961280,
+    "B64_measured_read_bytes": 3840320000,
+    "B128_measured_read_bytes": 7597184512,
+    "B1_read_payload_ratio": 1.0002503333333332,
+    "B64_read_payload_ratio": 1.0000833333333334
+  },
+  "original_traffic_gate": {
+    "separation_log2": 0.10656801692446027,
+    "required_at_least_log2": 1,
+    "passed": false
+  },
+  "original_verdict": "PARTIAL_PADDING"
+}

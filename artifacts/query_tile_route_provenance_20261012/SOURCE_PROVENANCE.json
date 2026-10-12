@@ -1,0 +1,171 @@
+{
+  "base_commit": "0901d7c4bb3604e9779eb02ef5c0b435f5b2ee42",
+  "new_GPU_launches": 0,
+  "cuVS_package_version": "26.08.01",
+  "cuVS_package_commit": "88cd8fedf10bd878f3c1ae28c98c9dfdeb73bb95",
+  "release_tag": "v26.08.01",
+  "release_tag_commit": "25b1be43a8c127e5ab6d2f29f20c62dbfd3351ab",
+  "common_tag_source_files_byte_equal": 34,
+  "exact_installed_header_bindings": [
+    {
+      "installed_role": "include/cuvs/distance/pairwise_distance.h",
+      "upstream_path": "c/include/cuvs/distance/pairwise_distance.h",
+      "sha256": "c8f9cc0a0abbbab32f82d734a758d25353cd234846af49b905970cef5744e5a8",
+      "byte_equal": true
+    },
+    {
+      "installed_role": "include/cuvs/detail/jit_lto/pairwise_matrix/pairwise_matrix_fragments.hpp",
+      "upstream_path": "cpp/include/cuvs/detail/jit_lto/pairwise_matrix/pairwise_matrix_fragments.hpp",
+      "sha256": "d9a00b643ed949517e1a719760ce0e5ac7f0bbd2b895490a6258ddbe7aa57dea",
+      "byte_equal": true
+    }
+  ],
+  "package_metadata_files": [
+    {
+      "role": "GIT_COMMIT",
+      "bytes": 41,
+      "sha256": "0c52ac1c4d0c708873698a48c46834ab4d29d4262c3e485536368d6696e48d27"
+    },
+    {
+      "role": "VERSION",
+      "bytes": 8,
+      "sha256": "044d64b1460faa40b84dfb4106983b58c744bf3b9c7f5a28ba55b5fd6a5c3ec9"
+    },
+    {
+      "role": "_version.py",
+      "bytes": 495,
+      "sha256": "1b4ea91c0885e78e2c2afefcb79889863b6e0b954aa9bbd4ed8c56a6bcfa25bc"
+    },
+    {
+      "role": "include/cuvs/distance/pairwise_distance.h",
+      "bytes": 1585,
+      "sha256": "c8f9cc0a0abbbab32f82d734a758d25353cd234846af49b905970cef5744e5a8"
+    },
+    {
+      "role": "include/cuvs/detail/jit_lto/pairwise_matrix/pairwise_matrix_fragments.hpp",
+      "bytes": 1392,
+      "sha256": "d9a00b643ed949517e1a719760ce0e5ac7f0bbd2b895490a6258ddbe7aa57dea"
+    },
+    {
+      "role": "include/cuvs/version_config.h",
+      "bytes": 215,
+      "sha256": "0a2b6d3211ece2190a05d8bc9893dc0f97927b9d30b4a1a8a434b6b6f7941c9a"
+    }
+  ],
+  "RAFT_package_headers": [
+    {
+      "role": "GIT_COMMIT",
+      "bytes": 41,
+      "sha256": "ee64d6a21f019cfc5a1e40b324b1a44a6b1f101d35d2ae332ee731acd0a97f5c"
+    },
+    {
+      "role": "VERSION",
+      "bytes": 8,
+      "sha256": "af05fe4eb4037f5d2528769743ae09c6b2bd4d751361ecbd16fc3138c2067b56"
+    },
+    {
+      "role": "include/raft/linalg/contractions.cuh",
+      "bytes": 9116,
+      "sha256": "5bfe2d1c62426413d889722c00287b8d2d45f98ab45f93b6dc4baeac6597cd32"
+    },
+    {
+      "role": "include/raft/linalg/detail/contractions.cuh",
+      "bytes": 8745,
+      "sha256": "e03f914f6765d265a0e868e1ecd1f86c49101fd4f089ecf4157f7ed4638548fb"
+    }
+  ],
+  "RAFT_public_header_byte_equal": [
+    {
+      "path": "cpp/include/raft/linalg/contractions.cuh",
+      "url": "https://raw.githubusercontent.com/NVIDIA/raft/ebf92684b8a15addcddb43f442a382d528e8bd77/cpp/include/raft/linalg/contractions.cuh",
+      "sha256": "5bfe2d1c62426413d889722c00287b8d2d45f98ab45f93b6dc4baeac6597cd32",
+      "installed_byte_equal": true
+    },
+    {
+      "path": "cpp/include/raft/linalg/detail/contractions.cuh",
+      "url": "https://raw.githubusercontent.com/NVIDIA/raft/ebf92684b8a15addcddb43f442a382d528e8bd77/cpp/include/raft/linalg/detail/contractions.cuh",
+      "sha256": "e03f914f6765d265a0e868e1ecd1f86c49101fd4f089ecf4157f7ed4638548fb",
+      "installed_byte_equal": true
+    }
+  ],
+  "rehashed_native_ELFs": [
+    {
+      "role": "libcuvs_c.so",
+      "sha256": "65154cff6816603c3e5b5402189b3d3bc061dd617cc497864aa004d49e107761",
+      "bytes": 2873513,
+      "literal_identity_markers": {
+        "pairwise_matrix_kernel": {
+          "found": false,
+          "offset": -1
+        },
+        "PairwiseMatrixPlanner": {
+          "found": false,
+          "offset": -1
+        },
+        "JIT compiling launcher for kernel": {
+          "found": false,
+          "offset": -1
+        },
+        "pairwise_matrix_jit_dispatch": {
+          "found": false,
+          "offset": -1
+        },
+        "88cd8fedf10bd878f3c1ae28c98c9dfdeb73bb95": {
+          "found": false,
+          "offset": -1
+        }
+      }
+    },
+    {
+      "role": "libcuvs.so",
+      "sha256": "cd410645aed37455f1ab0e9ba36a00edba54a9ab293350cfc26947a72b97f087",
+      "bytes": 271208337,
+      "literal_identity_markers": {
+        "pairwise_matrix_kernel": {
+          "found": false,
+          "offset": -1
+        },
+        "PairwiseMatrixPlanner": {
+          "found": false,
+          "offset": -1
+        },
+        "JIT compiling launcher for kernel": {
+          "found": false,
+          "offset": -1
+        },
+        "pairwise_matrix_jit_dispatch": {
+          "found": false,
+          "offset": -1
+        },
+        "88cd8fedf10bd878f3c1ae28c98c9dfdeb73bb95": {
+          "found": false,
+          "offset": -1
+        }
+      }
+    }
+  ],
+  "prior_input_hashes": {
+    "counters/EXECUTED_WORK.json": "748dda13dfbfe26a699499928fc23a3a8be0e50882a6c4ec2bca7024b27c2ef3",
+    "geometry/FUNCTION_IDENTITY.json": "74f50365a8f53f3d5da34a94beca447e3070913b873455b1933db2e50d30efcb",
+    "models/TILE_MODEL_FIT.json": "e6053df7f93f09ac28de7cd27871dac1565da960fa5ae3b4bb669861825bf007",
+    "CONTRACT.json": "5e98db1ee03d7c63f2873168b102ecb49fb1eeeb200ed4643a5c520c3baf67f3",
+    "traffic/DRAM_SCALING.json": "f2aee525efcd4a59e446263fe22784fbf147898292b2a420ddd9ef7b255cf105",
+    "evidence/INPUT_IDENTITY.json": "d40c942f66a6808b0fabf1305f737d950780a314418b5c2f0f238c6d7bff5b9b",
+    "batch.cu": "376545e5e9dee36a96d72bb90552258088603e692d1175171e9966dfdf7434fa",
+    "../external_closure/range_service.cu": "53bfd07fe17c5fd0c351032823005ce05b6dc59cf081c433e29a5ad8b2100015"
+  },
+  "runtime_module_bytes_acquired": false,
+  "runtime_module_sha256": null,
+  "selected_function_hash_scope": "Existing NCU-exported normalized selected instruction text, not full JIT cubin",
+  "original_campaign_verdict": "PARTIAL_PADDING",
+  "original_traffic_gate_retained": true,
+  "complete_library_dependency_build_lock_acquired": false,
+  "route_status": "source-supported, not exact-module-bound",
+  "grid_occupancy_budget": {
+    "blocks": 376,
+    "SMs": 188,
+    "blocks_per_SM": 2,
+    "status": "inferred from existing B1 grid and source grid formula; not a new occupancy API query"
+  },
+  "publication_boundary": "Only derived source/counter receipts and immutable public links. No vendor source/SASS/cubin dump, vectors, deployment placement, private manuscript or credentials."
+}

@@ -1,0 +1,32 @@
+{
+  "base_commit": "0901d7c4bb3604e9779eb02ef5c0b435f5b2ee42",
+  "stage": "CPU-only dispatch/kernel-route provenance continuation",
+  "frozen_before_source_extraction": true,
+  "new_GPU_launch_budget": 0,
+  "implementation_changes": false,
+  "forbidden": [
+    "GPU benchmarks/profiling",
+    "kernel/library/heuristic/data/layout changes",
+    "verdict gate revision",
+    "paper changes"
+  ],
+  "inputs": {
+    "campaign": "query_tile_padding_20261012",
+    "geometry_json_sha256": "74f50365a8f53f3d5da34a94beca447e3070913b873455b1933db2e50d30efcb",
+    "library_sha256": "cd410645aed37455f1ab0e9ba36a00edba54a9ab293350cfc26947a72b97f087",
+    "selected_normalized_function_sha256": "f6e1bd34e8b38fbd76b8d52ed335ab0492ce748daa1e3fa00885d503cbf1e2ec",
+    "cuVS_package_version": "26.8.1"
+  },
+  "questions": [
+    "Which source/build route explains pairwise_matrix_kernel?",
+    "Which query axis/tile and grid formulas can be independently recovered?",
+    "Is upstream source the exact installed source or only structural evidence?"
+  ],
+  "evidence_levels": [
+    "exact runtime module/function bound",
+    "exact installed parent ELF/source string",
+    "immutable upstream source (structural unless bound)",
+    "inference"
+  ],
+  "stop_rule": "Report unresolved links without inventing module identity. Keep original PARTIAL_PADDING because retained traffic gate fails. No optimization admission."
+}
