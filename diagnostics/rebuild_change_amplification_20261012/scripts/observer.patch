@@ -1,0 +1,17 @@
+--- include/tree.cuh
++++ include/tree.cuh
+@@ -54,0 +55 @@
++#include "build_counts.hpp"
+@@ -490,0 +492 @@
++        rca::before_build(cur_level,block_num,start_idx,node_list,split_list);
+--- include/update.cuh
++++ include/update.cuh
+@@ -351,0 +352,2 @@
++#include "snapshot.hpp"
++
+@@ -379,0 +382 @@
++        rca::event(i,update_list[i].update_flag);
+@@ -391,0 +395 @@
++                rca::pre(node_list,empty_list,id_list,max_node_num[0],tree_size,data_info[0],is_delete,insert_list,in_size);
+@@ -454,0 +459 @@
++                rca::post(node_list,empty_list,id_list,max_node_num[0],tree_size,data_info[0],is_delete,insert_list,in_size);

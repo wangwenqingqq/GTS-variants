@@ -1,0 +1,537 @@
+{
+  "schema": 1,
+  "scope": "one diagnostic replay, two actual rebuilds; no latency result",
+  "decision": "NO_GO_LOCAL_MAINTENANCE",
+  "rebuilds": [
+    {
+      "rebuild": 1,
+      "trigger_step_zero_based": 48,
+      "logical": {
+        "insert_count": 10,
+        "delete_count": 10,
+        "update_count": 20,
+        "insert_ids": [
+          1000000,
+          1000001,
+          1000002,
+          1000003,
+          1000004,
+          1000005,
+          1000006,
+          1000007,
+          1000008,
+          1000009
+        ],
+        "delete_ids": [
+          927889,
+          140554,
+          675366,
+          213111,
+          421626,
+          22592,
+          470111,
+          169928,
+          338423,
+          975244
+        ],
+        "unique_touched_count": 20,
+        "unique_touched_fraction": 2e-05,
+        "net_set_changed": 20,
+        "net_set_fraction": 2e-05,
+        "previous_published_base_count": 1000000,
+        "live_pre": 1000000,
+        "live_post": 1000000
+      },
+      "positions": {
+        "same_position": 22592,
+        "moved": 977398,
+        "new_base_admissions": 10,
+        "removed_tombstones": 10,
+        "common_live_base": 999990,
+        "moved_fraction_common": 0.9774077740777408,
+        "relocation_per_unique_touched": 48869.9,
+        "all_live_including_pending": {
+          "total": 1000000,
+          "same_position": 22592,
+          "moved": 977408,
+          "moved_fraction": 0.977408,
+          "new_logical_occurrences_across_rebuild": 0,
+          "deleted_logical_occurrences_across_rebuild": 0,
+          "relocation_per_unique_touched": 48870.4
+        }
+      },
+      "leaf": {
+        "total_pre": 100000,
+        "total_post": 100000,
+        "unchanged_membership": 18,
+        "modified_descriptive": 94498,
+        "new_descriptive": 5484,
+        "removed_descriptive": 5484,
+        "unmatched_new_canonical": 99982,
+        "unmatched_removed_canonical": 99982,
+        "changed_fraction_post": 0.99982,
+        "common_live_objects": 999990,
+        "objects_same_membership": 180,
+        "objects_changed_membership": 999810,
+        "object_change_fraction": 0.999819998199982
+      },
+      "leaf_live_filtered": {
+        "total_pre": 100000,
+        "total_post": 100000,
+        "unchanged_membership": 18,
+        "modified_descriptive": 94500,
+        "new_descriptive": 5482,
+        "removed_descriptive": 5482,
+        "unmatched_new_canonical": 99982,
+        "unmatched_removed_canonical": 99982,
+        "changed_fraction_post": 0.99982,
+        "common_live_objects": 999990,
+        "objects_same_membership": 180,
+        "objects_changed_membership": 999810,
+        "object_change_fraction": 0.999819998199982
+      },
+      "nodes": {
+        "total": 111111,
+        "matched_subtree_memberships": 18,
+        "fully_unchanged": 0,
+        "topology_changed": 111111,
+        "numeric_only_changed": 0,
+        "changed_fraction": 1.0,
+        "canonical_pivot_changed_among_matched": 18,
+        "unmatched_pivot_ownership": 111093,
+        "pivot_references_post": 111110,
+        "pivot_ownership_state_changed": 111110,
+        "root_split_pivot_pre": 499999,
+        "root_split_pivot_post": 500006,
+        "unique_pivot_occurrences_pre": 11110,
+        "unique_pivot_occurrences_post": 11109,
+        "unique_pivot_occurrences_retained": 142,
+        "categories": {
+          "A_observed_direct_dependency": 49,
+          "U_changed_unmatched_dependency_unknown": 111044,
+          "B_changed_matched_no_direct_dependency": 18
+        },
+        "by_level": {
+          "0": {
+            "topology": 1
+          },
+          "1": {
+            "topology": 10
+          },
+          "2": {
+            "topology": 100
+          },
+          "3": {
+            "topology": 1000
+          },
+          "4": {
+            "topology": 10000
+          },
+          "5": {
+            "topology": 100000
+          }
+        }
+      },
+      "numeric": {
+        "total_refit_entries": 222222,
+        "canonical_identical_same_topology": 0,
+        "canonical_numeric_changed_same_topology": 0,
+        "structurally_unmatched_entries": 222222,
+        "canonical_state_changed": 222222,
+        "canonical_state_changed_fraction": 1.0,
+        "raw_positional_bit_changed": 211109,
+        "raw_positional_bit_identical": 11113
+      },
+      "pack": {
+        "total": 960000000,
+        "physical_bit_changed": 937510467,
+        "physical_bit_identical": 22489533,
+        "physical_change_fraction": 0.976573403125,
+        "survivor_coordinate_changed": 0,
+        "survivor_objects_changed": 0,
+        "new_coordinate_entries": 9600,
+        "removed_coordinate_entries": 9600,
+        "canonical_changed_post": 9600,
+        "canonical_identical": 959990400,
+        "canonical_changed_fraction": 1e-05
+      },
+      "plan": {
+        "total": 2283344,
+        "canonical_changed": 2283117,
+        "canonical_identical": 227,
+        "canonical_changed_fraction": 0.999900584406029,
+        "raw_changed": 999998,
+        "raw_identical": 1283346,
+        "by_field": {
+          "regions": {
+            "total": 60000,
+            "canonical_changed": 60000,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "leaf_slot": {
+            "total": 111111,
+            "canonical_changed": 111093,
+            "canonical_identical": 18,
+            "raw_changed": 0
+          },
+          "slot_pid": {
+            "total": 1000000,
+            "canonical_changed": 999820,
+            "canonical_identical": 180,
+            "raw_changed": 999998
+          },
+          "leaves": {
+            "total": 100000,
+            "canonical_changed": 99982,
+            "canonical_identical": 18,
+            "raw_changed": 0
+          },
+          "owners": {
+            "total": 1000000,
+            "canonical_changed": 1000000,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "parents": {
+            "total": 11111,
+            "canonical_changed": 11111,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "skeleton": {
+            "total": 1111,
+            "canonical_changed": 1111,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "level_offsets": {
+            "total": 6,
+            "canonical_changed": 0,
+            "canonical_identical": 6,
+            "raw_changed": 0
+          },
+          "skeleton_offsets": {
+            "total": 5,
+            "canonical_changed": 0,
+            "canonical_identical": 5,
+            "raw_changed": 0
+          }
+        }
+      },
+      "work": {
+        "objects_compaction_candidates": 1000010,
+        "objects_compacted": 1000000,
+        "compaction_coordinate_writes": 960000000,
+        "temporary_D2D_copy_bytes": 3840042240,
+        "construction_unique_objects": 1000000,
+        "construction_pivot_scoring_tasks": 5000000,
+        "construction_split_boundary_distance_tasks": 111110,
+        "construction_total_distance_tasks": 5111110,
+        "construction_sort_API_input_slots": 5000000,
+        "active_split_nodes": 11111,
+        "nodes_constructed": 111111,
+        "leaves_constructed": 100000,
+        "nodes_refitted": 111111,
+        "refit_distance_tasks": 5000000,
+        "refit_scalar_entries_written": 222222,
+        "knn_pack_entries_regenerated": 960000000,
+        "par_plan_scalar_entries_regenerated": 2283344,
+        "classification": "source-exact task counts and regenerated final-payload cardinalities from captured runtime inputs; hidden library/store instruction count unknown"
+      },
+      "amplification": {
+        "construction_unique_per_unique_mutation": 50000.0,
+        "construction_pivot_scoring_per_unique_mutation": 250000.0,
+        "construction_total_distance_tasks_per_unique_mutation": 255555.5,
+        "construction_unique_per_membership_changed_object": 1.0001900361068603,
+        "leaf_reconstruction_per_changed_leaf": 1.000180032405833,
+        "refit_nodes_per_changed_node": 1.0,
+        "refit_scalars_per_changed_canonical_state": 1.0,
+        "refit_scalars_per_numeric_only_changes": null,
+        "pack_per_physical_changed": 1.023988567372443,
+        "pack_per_canonical_changed": 100000.0,
+        "plan_per_canonical_changed": 1.000099425478414
+      },
+      "gate": {
+        "no_go_local": true,
+        "go_maintenance": false,
+        "strong_go": false
+      }
+    },
+    {
+      "rebuild": 2,
+      "trigger_step_zero_based": 216,
+      "logical": {
+        "insert_count": 20,
+        "delete_count": 20,
+        "update_count": 40,
+        "insert_ids": [
+          1000010,
+          1000011,
+          1000012,
+          1000013,
+          1000014,
+          1000015,
+          1000016,
+          1000017,
+          1000018,
+          1000019,
+          1000020,
+          1000021,
+          1000022,
+          1000023,
+          1000024,
+          1000025,
+          1000026,
+          1000027,
+          1000028,
+          1000029
+        ],
+        "delete_ids": [
+          1000010,
+          1000011,
+          1000012,
+          1000013,
+          1000014,
+          1000015,
+          1000016,
+          1000017,
+          1000018,
+          1000019,
+          33798,
+          512544,
+          172447,
+          664752,
+          348290,
+          939389,
+          382569,
+          258168,
+          696297,
+          388538
+        ],
+        "unique_touched_count": 30,
+        "unique_touched_fraction": 3e-05,
+        "net_set_changed": 20,
+        "net_set_fraction": 2e-05,
+        "previous_published_base_count": 1000000,
+        "live_pre": 1000000,
+        "live_post": 1000000
+      },
+      "positions": {
+        "same_position": 33797,
+        "moved": 966193,
+        "new_base_admissions": 10,
+        "removed_tombstones": 10,
+        "common_live_base": 999990,
+        "moved_fraction_common": 0.9662026620266203,
+        "relocation_per_unique_touched": 32206.433333333334,
+        "all_live_including_pending": {
+          "total": 1000000,
+          "same_position": 33797,
+          "moved": 966203,
+          "moved_fraction": 0.966203,
+          "new_logical_occurrences_across_rebuild": 0,
+          "deleted_logical_occurrences_across_rebuild": 0,
+          "relocation_per_unique_touched": 32206.766666666666
+        }
+      },
+      "leaf": {
+        "total_pre": 100000,
+        "total_post": 100000,
+        "unchanged_membership": 15,
+        "modified_descriptive": 94437,
+        "new_descriptive": 5548,
+        "removed_descriptive": 5548,
+        "unmatched_new_canonical": 99985,
+        "unmatched_removed_canonical": 99985,
+        "changed_fraction_post": 0.99985,
+        "common_live_objects": 999990,
+        "objects_same_membership": 150,
+        "objects_changed_membership": 999840,
+        "object_change_fraction": 0.999849998499985
+      },
+      "leaf_live_filtered": {
+        "total_pre": 100000,
+        "total_post": 100000,
+        "unchanged_membership": 15,
+        "modified_descriptive": 94436,
+        "new_descriptive": 5549,
+        "removed_descriptive": 5549,
+        "unmatched_new_canonical": 99985,
+        "unmatched_removed_canonical": 99985,
+        "changed_fraction_post": 0.99985,
+        "common_live_objects": 999990,
+        "objects_same_membership": 150,
+        "objects_changed_membership": 999840,
+        "object_change_fraction": 0.999849998499985
+      },
+      "nodes": {
+        "total": 111111,
+        "matched_subtree_memberships": 15,
+        "fully_unchanged": 0,
+        "topology_changed": 111111,
+        "numeric_only_changed": 0,
+        "changed_fraction": 1.0,
+        "canonical_pivot_changed_among_matched": 15,
+        "unmatched_pivot_ownership": 111096,
+        "pivot_references_post": 111110,
+        "pivot_ownership_state_changed": 111110,
+        "root_split_pivot_pre": 500006,
+        "root_split_pivot_post": 500012,
+        "unique_pivot_occurrences_pre": 11109,
+        "unique_pivot_occurrences_post": 11109,
+        "unique_pivot_occurrences_retained": 126,
+        "categories": {
+          "A_observed_direct_dependency": 48,
+          "U_changed_unmatched_dependency_unknown": 111048,
+          "B_changed_matched_no_direct_dependency": 15
+        },
+        "by_level": {
+          "0": {
+            "topology": 1
+          },
+          "1": {
+            "topology": 10
+          },
+          "2": {
+            "topology": 100
+          },
+          "3": {
+            "topology": 1000
+          },
+          "4": {
+            "topology": 10000
+          },
+          "5": {
+            "topology": 100000
+          }
+        }
+      },
+      "numeric": {
+        "total_refit_entries": 222222,
+        "canonical_identical_same_topology": 0,
+        "canonical_numeric_changed_same_topology": 0,
+        "structurally_unmatched_entries": 222222,
+        "canonical_state_changed": 222222,
+        "canonical_state_changed_fraction": 1.0,
+        "raw_positional_bit_changed": 211109,
+        "raw_positional_bit_identical": 11113
+      },
+      "pack": {
+        "total": 960000000,
+        "physical_bit_changed": 926759931,
+        "physical_bit_identical": 33240069,
+        "physical_change_fraction": 0.965374928125,
+        "survivor_coordinate_changed": 0,
+        "survivor_objects_changed": 0,
+        "new_coordinate_entries": 9600,
+        "removed_coordinate_entries": 9600,
+        "canonical_changed_post": 9600,
+        "canonical_identical": 959990400,
+        "canonical_changed_fraction": 1e-05
+      },
+      "plan": {
+        "total": 2283344,
+        "canonical_changed": 2283153,
+        "canonical_identical": 191,
+        "canonical_changed_fraction": 0.9999163507557337,
+        "raw_changed": 999999,
+        "raw_identical": 1283345,
+        "by_field": {
+          "regions": {
+            "total": 60000,
+            "canonical_changed": 60000,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "leaf_slot": {
+            "total": 111111,
+            "canonical_changed": 111096,
+            "canonical_identical": 15,
+            "raw_changed": 0
+          },
+          "slot_pid": {
+            "total": 1000000,
+            "canonical_changed": 999850,
+            "canonical_identical": 150,
+            "raw_changed": 999999
+          },
+          "leaves": {
+            "total": 100000,
+            "canonical_changed": 99985,
+            "canonical_identical": 15,
+            "raw_changed": 0
+          },
+          "owners": {
+            "total": 1000000,
+            "canonical_changed": 1000000,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "parents": {
+            "total": 11111,
+            "canonical_changed": 11111,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "skeleton": {
+            "total": 1111,
+            "canonical_changed": 1111,
+            "canonical_identical": 0,
+            "raw_changed": 0
+          },
+          "level_offsets": {
+            "total": 6,
+            "canonical_changed": 0,
+            "canonical_identical": 6,
+            "raw_changed": 0
+          },
+          "skeleton_offsets": {
+            "total": 5,
+            "canonical_changed": 0,
+            "canonical_identical": 5,
+            "raw_changed": 0
+          }
+        }
+      },
+      "work": {
+        "objects_compaction_candidates": 1000010,
+        "objects_compacted": 1000000,
+        "compaction_coordinate_writes": 960000000,
+        "temporary_D2D_copy_bytes": 3840042240,
+        "construction_unique_objects": 1000000,
+        "construction_pivot_scoring_tasks": 5000000,
+        "construction_split_boundary_distance_tasks": 111110,
+        "construction_total_distance_tasks": 5111110,
+        "construction_sort_API_input_slots": 5000000,
+        "active_split_nodes": 11111,
+        "nodes_constructed": 111111,
+        "leaves_constructed": 100000,
+        "nodes_refitted": 111111,
+        "refit_distance_tasks": 5000000,
+        "refit_scalar_entries_written": 222222,
+        "knn_pack_entries_regenerated": 960000000,
+        "par_plan_scalar_entries_regenerated": 2283344,
+        "classification": "source-exact task counts and regenerated final-payload cardinalities from captured runtime inputs; hidden library/store instruction count unknown"
+      },
+      "amplification": {
+        "construction_unique_per_unique_mutation": 33333.333333333336,
+        "construction_pivot_scoring_per_unique_mutation": 166666.66666666666,
+        "construction_total_distance_tasks_per_unique_mutation": 170370.33333333334,
+        "construction_unique_per_membership_changed_object": 1.0001600256040966,
+        "leaf_reconstruction_per_changed_leaf": 1.0001500225033755,
+        "refit_nodes_per_changed_node": 1.0,
+        "refit_scalars_per_changed_canonical_state": 1.0,
+        "refit_scalars_per_numeric_only_changes": null,
+        "pack_per_physical_changed": 1.0358669682278268,
+        "pack_per_canonical_changed": 100000.0,
+        "plan_per_canonical_changed": 1.0000836562420476
+      },
+      "gate": {
+        "no_go_local": true,
+        "go_maintenance": false,
+        "strong_go": false
+      }
+    }
+  ]
+}
