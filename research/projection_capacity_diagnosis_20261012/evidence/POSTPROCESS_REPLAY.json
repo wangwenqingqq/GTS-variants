@@ -1,0 +1,21 @@
+{
+  "status": "PASS_EXACT_PRIMARY_COUNTS_AND_BOUNDED_FLOAT_STATS",
+  "aggregate_bit_identical": true,
+  "CSV_byte_identity": {
+    "hard_dimension_thresholds.csv": true,
+    "per_query_capacity.csv": true,
+    "per_query_dimension_thresholds.csv": true,
+    "per_level_capacity.csv": true,
+    "threshold_crossings.csv": true,
+    "projection_loss_summary.csv": false
+  },
+  "descriptive_float_changed_cells": 51,
+  "max_float_stat_absolute_difference": 2.3283064365386963e-10,
+  "max_float_stat_ULPs": 4.0,
+  "canonical_worker_stats_unchanged": true,
+  "worker_python": "3.12.3",
+  "worker_numpy": "1.26.4",
+  "replay_python": "3.13.12",
+  "replay_numpy": "2.4.3",
+  "scope": "all integer gates/counts and thresholds byte-identical; NumPy descriptive sum/quantile roundoff is disclosed, not a distance/safety mismatch"
+}

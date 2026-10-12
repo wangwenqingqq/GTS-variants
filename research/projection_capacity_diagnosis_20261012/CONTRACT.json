@@ -1,0 +1,133 @@
+{
+  "experiment": "GTSpp_20261012_projection_capacity_P2_fullPCA",
+  "base_commit": "5dea0d5bfb2f0e58e022b7733a54f9f1e07522e4",
+  "dataset": "GIST",
+  "N": 1000000,
+  "D": 960,
+  "K": 8,
+  "B": 1,
+  "queries": [
+    660835,
+    90208,
+    359924,
+    374533,
+    96985,
+    702545,
+    55715,
+    470632
+  ],
+  "hard_queries": [
+    359924,
+    374533,
+    96985,
+    702545,
+    55715,
+    470632
+  ],
+  "U_star_squared_hex": [
+    "0x1.a4e21ce918a12p-4",
+    "0x1.5e8b642217719p+2",
+    "0x1.c23a66e8768a3p+0",
+    "0x1.93ac9a02e418ap-1",
+    "0x1.13c1cfac5faccp+0",
+    "0x1.4f3758e92fa83p+0",
+    "0x1.a6f9477553d1dp-1",
+    "0x1.70937f7673bf6p-1"
+  ],
+  "partition": "unchanged PCA_BALANCED P2",
+  "levels": [
+    3,
+    4,
+    5
+  ],
+  "dimensions": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    960
+  ],
+  "physical_query_level_dimension_cells": 192,
+  "PCA": {
+    "rows": 1000000,
+    "centered_covariance": true,
+    "construction_block_rows": 8192,
+    "full_single_eigh": true,
+    "nested_prefixes": true,
+    "common_full_basis_contraction_scale": true,
+    "queries_only_ordinary_database_rows": true,
+    "no_query_or_U_conditioning": true,
+    "projection_cache_dtype": "FP64",
+    "projection_cache_bytes": 7680000000
+  },
+  "primary_level": 4,
+  "per_level_decisions_required": true,
+  "thresholds": "first tested k only; null is not attained on frozen grid, not zero or interpolated minimum",
+  "decision_precedence": [
+    "CAPACITY_LIMITED",
+    "PCA_DIRECTION_LIMITED",
+    "MODERATE_CAPACITY_REQUIREMENT",
+    "HIGH_DIMENSION_INTRINSIC",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "decision_rules": {
+    "D1": "exists tested k<=64: guaranteed hard>=70% AND guaranteed worst-hard>=40%",
+    "D2": "first guaranteed hard70 in128/256 AND possible hard64<70%",
+    "D3": "possible hard256<60% OR possible canary359924 at256<30%",
+    "D4": "possible hard512<70%; threshold above512 only in this grid"
+  },
+  "uncertainty": "guaranteed lower/possible upper arithmetic envelopes; positives use guaranteed, negatives use possible; original truth caps possible alignment; ambiguous gates insufficient; all predicate overlaps retained",
+  "original_score_contract": "unchanged ascending-dimension separate RN-FP64 original squared L2 cache; strict truth_sq>U_star_squared",
+  "arithmetic": {
+    "ETA": 1e-08,
+    "RHO": 0.0001,
+    "common_all_k_margin": true,
+    "matrix": "signed directed outer-product Gram intervals and Gershgorin, recertify rounded stored full matrix",
+    "projection": "FP64 BLAS, bounded different summation order/FMA; original scores unchanged",
+    "prefix": "nonnegative RN-FP64 sequential cumsum of separate difference squared terms",
+    "full960": "certified near-isometry plus measured bridge; not original bitwise arithmetic endpoint"
+  },
+  "independent": {
+    "original_region_pairs": 24,
+    "prefix_cell_checks": 192,
+    "all_members": true,
+    "projection": "separate ordered FP64 dimension loop; envelope comparison, not bitwise BLAS equality",
+    "truth": "original vectors independently scored, exact cache equality"
+  },
+  "admission": {
+    "CPU_affinity_count": 1,
+    "library_threads": 1,
+    "nice": 10,
+    "exclusive_task_lock": true,
+    "phase_timeout_seconds": 1800,
+    "resource_accounting_not_latency": true,
+    "GPU_visible": false
+  },
+  "forbidden": [
+    "GPU",
+    "latency",
+    "ANN",
+    "repartition",
+    "query/U tuning",
+    "per-k fitting",
+    "ball/ellipse",
+    "multi-view",
+    "nonlinear/learned representation",
+    "formal256",
+    "10K"
+  ],
+  "acceptance": [
+    "all192cells",
+    "full distance and mask monotonicity",
+    "full safe bound <=original truth",
+    "zero false prune",
+    "full old original truth/U/partition bridge",
+    "independent24pairs/192prefixchecks",
+    "certified full stored matrix",
+    "raw source/input/output hashes"
+  ],
+  "claim_boundary": "information in full projected point sets is not cheaply compressible metadata; protocol bucket is not intrinsic-dimension estimate, proof of superior alternate directions or system speedup"
+}

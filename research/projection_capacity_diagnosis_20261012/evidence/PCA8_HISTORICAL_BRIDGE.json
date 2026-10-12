@@ -1,0 +1,219 @@
+{
+  "previous_commit": "5dea0d5bfb2f0e58e022b7733a54f9f1e07522e4",
+  "previous_oracle_csv_sha256": "cd7b2649550f0bd61075000de16b9f0c25c1f98a82b8853a7ee4b850ee7eac1f",
+  "previous_point_set_oracle": [
+    {
+      "level": "3",
+      "scope": "all8",
+      "truth_prunable_objects": "7951000",
+      "guaranteed_projected_prunable_objects": "3641000",
+      "possible_projected_prunable_objects": "3641000",
+      "guaranteed_alignment": "0.457929820148409",
+      "ceiling_alignment": "0.457929820148409",
+      "diagnostic_only": "True",
+      "projection_loss_gap_median": "0.5567597683344853",
+      "AABB_geometry_gap_median": "0.0742780874922302"
+    },
+    {
+      "level": "3",
+      "scope": "hard6",
+      "truth_prunable_objects": "5960000",
+      "guaranteed_projected_prunable_objects": "1780000",
+      "possible_projected_prunable_objects": "1780000",
+      "guaranteed_alignment": "0.2986577181208054",
+      "ceiling_alignment": "0.2986577181208054",
+      "diagnostic_only": "True",
+      "projection_loss_gap_median": "0.5567800164969936",
+      "AABB_geometry_gap_median": "0.07520808054020683"
+    },
+    {
+      "level": "4",
+      "scope": "all8",
+      "truth_prunable_objects": "7994300",
+      "guaranteed_projected_prunable_objects": "4290600",
+      "possible_projected_prunable_objects": "4291400",
+      "guaranteed_alignment": "0.5367074040253681",
+      "ceiling_alignment": "0.5368074753261699",
+      "diagnostic_only": "True",
+      "projection_loss_gap_median": "0.5509758322211153",
+      "AABB_geometry_gap_median": "0.08663522347088365"
+    },
+    {
+      "level": "4",
+      "scope": "hard6",
+      "truth_prunable_objects": "5995500",
+      "guaranteed_projected_prunable_objects": "2370700",
+      "possible_projected_prunable_objects": "2371500",
+      "guaranteed_alignment": "0.3954132265866066",
+      "ceiling_alignment": "0.3955466599949963",
+      "diagnostic_only": "True",
+      "projection_loss_gap_median": "0.5509795796660186",
+      "AABB_geometry_gap_median": "0.09158232901085026"
+    },
+    {
+      "level": "5",
+      "scope": "all8",
+      "truth_prunable_objects": "7999390",
+      "guaranteed_projected_prunable_objects": "5049150",
+      "possible_projected_prunable_objects": "5049880",
+      "guaranteed_alignment": "0.6311918783807265",
+      "ceiling_alignment": "0.6312831353390697",
+      "diagnostic_only": "True",
+      "projection_loss_gap_median": "0.548199873755529",
+      "AABB_geometry_gap_median": "0.08977340753553209"
+    },
+    {
+      "level": "5",
+      "scope": "hard6",
+      "truth_prunable_objects": "5999540",
+      "guaranteed_projected_prunable_objects": "3092280",
+      "possible_projected_prunable_objects": "3092990",
+      "guaranteed_alignment": "0.515419515496188",
+      "ceiling_alignment": "0.5155378579024392",
+      "diagnostic_only": "True",
+      "projection_loss_gap_median": "0.5481493626434667",
+      "AABB_geometry_gap_median": "0.09556918074458137"
+    }
+  ],
+  "current_PCA8_rows": [
+    {
+      "k": 8,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 3641000,
+      "possible_objects": 3642000,
+      "all_alignment": 0.457929820148409,
+      "all_possible_alignment": 0.45805559049176203,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 1780000,
+      "hard_possible_objects": 1781000,
+      "hard_alignment": 0.2986577181208054,
+      "hard_possible_alignment": 0.2988255033557047,
+      "worst_hard_alignment": 0.07661290322580645,
+      "canary_alignment": 0.07661290322580645,
+      "canary_possible_alignment": 0.07661290322580645,
+      "explained_variance_ratio": 0.47903782530800953,
+      "hard_safe_counts": [
+        76000,
+        254000,
+        305000,
+        202000,
+        357000,
+        586000
+      ],
+      "hard_possible_counts": [
+        76000,
+        254000,
+        306000,
+        202000,
+        357000,
+        586000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 8,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 4290600,
+      "possible_objects": 4292300,
+      "all_alignment": 0.5367074040253681,
+      "all_possible_alignment": 0.5369200555395719,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 2370700,
+      "hard_possible_objects": 2372300,
+      "hard_alignment": 0.3954132265866066,
+      "hard_possible_alignment": 0.3956800934033859,
+      "worst_hard_alignment": 0.10308246597277822,
+      "canary_alignment": 0.10308246597277822,
+      "canary_possible_alignment": 0.10318254603682947,
+      "explained_variance_ratio": 0.47903782530800953,
+      "hard_safe_counts": [
+        103000,
+        330200,
+        463900,
+        287700,
+        511800,
+        674100
+      ],
+      "hard_possible_counts": [
+        103100,
+        330300,
+        464500,
+        288200,
+        512000,
+        674200
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 8,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 5049150,
+      "possible_objects": 5050480,
+      "all_alignment": 0.6311918783807265,
+      "all_possible_alignment": 0.6313581410582557,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 3092280,
+      "hard_possible_objects": 3093580,
+      "hard_alignment": 0.515419515496188,
+      "hard_possible_alignment": 0.5156361987752395,
+      "worst_hard_alignment": 0.13604088327066166,
+      "canary_alignment": 0.13604088327066166,
+      "canary_possible_alignment": 0.13610088807104567,
+      "explained_variance_ratio": 0.47903782530800953,
+      "hard_safe_counts": [
+        136030,
+        473870,
+        602560,
+        405610,
+        709000,
+        765210
+      ],
+      "hard_possible_counts": [
+        136090,
+        474120,
+        602880,
+        405880,
+        709210,
+        765400
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    }
+  ],
+  "construction_bridge": {
+    "previous_basis_sha256": "cc26193ad57a30c1994a56c541de1e7c0085a8f191bec51dd96f53e2439d0025",
+    "same_full_database_and_covariance_block_procedure": true,
+    "previous_fit_threads": 4,
+    "current_fit_threads": 1,
+    "max_unit_direction_difference": 1.0269562977782698e-15,
+    "top8_variance_ratio_difference": -1.1102230246251565e-16,
+    "bit_identical_anchor_required": false,
+    "comparison_boundary": "same PCA procedure; full-matrix common scaling and BLAS arithmetic replace prior top8 scaling and ordered projection"
+  },
+  "same_original_truth_membership_queries_U": true,
+  "bit_identical_projection_anchor_claimed": false,
+  "numeric_scope": "prior oracle used narrower projected-distance-only envelope; current safe/possible adds common full960 coordinate/arithmetic/original-score margin. Similar counts are not equality of arithmetic contracts."
+}

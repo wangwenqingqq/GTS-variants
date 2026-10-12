@@ -1,0 +1,1105 @@
+{
+  "base_commit": "5dea0d5bfb2f0e58e022b7733a54f9f1e07522e4",
+  "partition": "PCA_BALANCED",
+  "dimensions": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    960
+  ],
+  "levels": [
+    3,
+    4,
+    5
+  ],
+  "primary_level": 4,
+  "decision": "CAPACITY_LIMITED",
+  "per_level_decisions": {
+    "3": {
+      "decision": "MODERATE_CAPACITY_REQUIREMENT",
+      "predicates": {
+        "CAPACITY_LIMITED": false,
+        "PCA_DIRECTION_LIMITED": false,
+        "MODERATE_CAPACITY_REQUIREMENT": true,
+        "HIGH_DIMENSION_INTRINSIC": false
+      },
+      "overlapping_predicates": [
+        "MODERATE_CAPACITY_REQUIREMENT"
+      ],
+      "K70_hard_first_tested_guaranteed": 128
+    },
+    "4": {
+      "decision": "CAPACITY_LIMITED",
+      "predicates": {
+        "CAPACITY_LIMITED": true,
+        "PCA_DIRECTION_LIMITED": false,
+        "MODERATE_CAPACITY_REQUIREMENT": false,
+        "HIGH_DIMENSION_INTRINSIC": false
+      },
+      "overlapping_predicates": [
+        "CAPACITY_LIMITED"
+      ],
+      "K70_hard_first_tested_guaranteed": 64
+    },
+    "5": {
+      "decision": "CAPACITY_LIMITED",
+      "predicates": {
+        "CAPACITY_LIMITED": true,
+        "PCA_DIRECTION_LIMITED": false,
+        "MODERATE_CAPACITY_REQUIREMENT": false,
+        "HIGH_DIMENSION_INTRINSIC": false
+      },
+      "overlapping_predicates": [
+        "CAPACITY_LIMITED"
+      ],
+      "K70_hard_first_tested_guaranteed": 32
+    }
+  },
+  "hard_dimension_thresholds": [
+    {
+      "level": 3,
+      "K50_hard_guaranteed": 32,
+      "K50_hard_possible": 32,
+      "K70_hard_guaranteed": 128,
+      "K70_hard_possible": 128,
+      "K90_hard_guaranteed": 256,
+      "K90_hard_possible": 256
+    },
+    {
+      "level": 4,
+      "K50_hard_guaranteed": 16,
+      "K50_hard_possible": 16,
+      "K70_hard_guaranteed": 64,
+      "K70_hard_possible": 64,
+      "K90_hard_guaranteed": 128,
+      "K90_hard_possible": 128
+    },
+    {
+      "level": 5,
+      "K50_hard_guaranteed": 8,
+      "K50_hard_possible": 8,
+      "K70_hard_guaranteed": 32,
+      "K70_hard_possible": 32,
+      "K90_hard_guaranteed": 64,
+      "K90_hard_possible": 64
+    }
+  ],
+  "rows": [
+    {
+      "k": 8,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 3641000,
+      "possible_objects": 3642000,
+      "all_alignment": 0.457929820148409,
+      "all_possible_alignment": 0.45805559049176203,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 1780000,
+      "hard_possible_objects": 1781000,
+      "hard_alignment": 0.2986577181208054,
+      "hard_possible_alignment": 0.2988255033557047,
+      "worst_hard_alignment": 0.07661290322580645,
+      "canary_alignment": 0.07661290322580645,
+      "canary_possible_alignment": 0.07661290322580645,
+      "explained_variance_ratio": 0.47903782530800953,
+      "hard_safe_counts": [
+        76000,
+        254000,
+        305000,
+        202000,
+        357000,
+        586000
+      ],
+      "hard_possible_counts": [
+        76000,
+        254000,
+        306000,
+        202000,
+        357000,
+        586000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 16,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 4227000,
+      "possible_objects": 4229000,
+      "all_alignment": 0.5316312413532889,
+      "all_possible_alignment": 0.531882782039995,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 2340000,
+      "hard_possible_objects": 2342000,
+      "hard_alignment": 0.3926174496644295,
+      "hard_possible_alignment": 0.39295302013422817,
+      "worst_hard_alignment": 0.12096774193548387,
+      "canary_alignment": 0.12096774193548387,
+      "canary_possible_alignment": 0.12096774193548387,
+      "explained_variance_ratio": 0.5836617992941672,
+      "hard_safe_counts": [
+        120000,
+        316000,
+        479000,
+        272000,
+        513000,
+        640000
+      ],
+      "hard_possible_counts": [
+        120000,
+        317000,
+        479000,
+        272000,
+        514000,
+        640000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 32,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 4984000,
+      "possible_objects": 4987000,
+      "all_alignment": 0.6268393912715382,
+      "all_possible_alignment": 0.6272167023015973,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 3078000,
+      "hard_possible_objects": 3081000,
+      "hard_alignment": 0.5164429530201342,
+      "hard_possible_alignment": 0.5169463087248322,
+      "worst_hard_alignment": 0.15524193548387097,
+      "canary_alignment": 0.15524193548387097,
+      "canary_possible_alignment": 0.15524193548387097,
+      "explained_variance_ratio": 0.6759458143335761,
+      "hard_safe_counts": [
+        154000,
+        454000,
+        679000,
+        381000,
+        688000,
+        722000
+      ],
+      "hard_possible_counts": [
+        154000,
+        454000,
+        681000,
+        382000,
+        688000,
+        722000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 64,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 6080000,
+      "possible_objects": 6081000,
+      "all_alignment": 0.7646836875864671,
+      "all_possible_alignment": 0.7648094579298201,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 4150000,
+      "hard_possible_objects": 4151000,
+      "hard_alignment": 0.6963087248322147,
+      "hard_possible_alignment": 0.6964765100671141,
+      "worst_hard_alignment": 0.3316532258064516,
+      "canary_alignment": 0.3316532258064516,
+      "canary_possible_alignment": 0.3316532258064516,
+      "explained_variance_ratio": 0.7739511505035579,
+      "hard_safe_counts": [
+        329000,
+        662000,
+        854000,
+        632000,
+        856000,
+        817000
+      ],
+      "hard_possible_counts": [
+        329000,
+        662000,
+        854000,
+        632000,
+        857000,
+        817000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 128,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 7017000,
+      "possible_objects": 7019000,
+      "all_alignment": 0.8825304993082631,
+      "all_possible_alignment": 0.8827820399949692,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 5058000,
+      "hard_possible_objects": 5060000,
+      "hard_alignment": 0.8486577181208054,
+      "hard_possible_alignment": 0.8489932885906041,
+      "worst_hard_alignment": 0.5524193548387096,
+      "canary_alignment": 0.5524193548387096,
+      "canary_possible_alignment": 0.5534274193548387,
+      "explained_variance_ratio": 0.8638242712213903,
+      "hard_safe_counts": [
+        548000,
+        873000,
+        949000,
+        808000,
+        963000,
+        917000
+      ],
+      "hard_possible_counts": [
+        549000,
+        873000,
+        949000,
+        808000,
+        963000,
+        918000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 256,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 7661000,
+      "possible_objects": 7665000,
+      "all_alignment": 0.9635266004276192,
+      "all_possible_alignment": 0.9640296818010313,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 5682000,
+      "hard_possible_objects": 5686000,
+      "hard_alignment": 0.9533557046979866,
+      "hard_possible_alignment": 0.9540268456375839,
+      "worst_hard_alignment": 0.8487903225806451,
+      "canary_alignment": 0.8487903225806451,
+      "canary_possible_alignment": 0.8497983870967742,
+      "explained_variance_ratio": 0.9356988010777768,
+      "hard_safe_counts": [
+        842000,
+        967000,
+        980000,
+        927000,
+        987000,
+        979000
+      ],
+      "hard_possible_counts": [
+        843000,
+        968000,
+        980000,
+        928000,
+        987000,
+        980000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 512,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 7915000,
+      "possible_objects": 7915000,
+      "all_alignment": 0.9954722676392906,
+      "all_possible_alignment": 0.9954722676392906,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 5926000,
+      "hard_possible_objects": 5926000,
+      "hard_alignment": 0.9942953020134229,
+      "hard_possible_alignment": 0.9942953020134229,
+      "worst_hard_alignment": 0.9828629032258065,
+      "canary_alignment": 0.9828629032258065,
+      "canary_possible_alignment": 0.9828629032258065,
+      "explained_variance_ratio": 0.9833071206735123,
+      "hard_safe_counts": [
+        975000,
+        992000,
+        990000,
+        983000,
+        993000,
+        993000
+      ],
+      "hard_possible_counts": [
+        975000,
+        992000,
+        990000,
+        983000,
+        993000,
+        993000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 960,
+      "level": 3,
+      "truth_objects": 7951000,
+      "safe_objects": 7951000,
+      "possible_objects": 7951000,
+      "all_alignment": 1.0,
+      "all_possible_alignment": 1.0,
+      "hard_truth_objects": 5960000,
+      "hard_safe_objects": 5960000,
+      "hard_possible_objects": 5960000,
+      "hard_alignment": 1.0,
+      "hard_possible_alignment": 1.0,
+      "worst_hard_alignment": 1.0,
+      "canary_alignment": 1.0,
+      "canary_possible_alignment": 1.0,
+      "explained_variance_ratio": 1.0,
+      "hard_safe_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ],
+      "hard_possible_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ],
+      "hard_truth_counts": [
+        992000,
+        993000,
+        992000,
+        996000,
+        993000,
+        994000
+      ]
+    },
+    {
+      "k": 8,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 4290600,
+      "possible_objects": 4292300,
+      "all_alignment": 0.5367074040253681,
+      "all_possible_alignment": 0.5369200555395719,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 2370700,
+      "hard_possible_objects": 2372300,
+      "hard_alignment": 0.3954132265866066,
+      "hard_possible_alignment": 0.3956800934033859,
+      "worst_hard_alignment": 0.10308246597277822,
+      "canary_alignment": 0.10308246597277822,
+      "canary_possible_alignment": 0.10318254603682947,
+      "explained_variance_ratio": 0.47903782530800953,
+      "hard_safe_counts": [
+        103000,
+        330200,
+        463900,
+        287700,
+        511800,
+        674100
+      ],
+      "hard_possible_counts": [
+        103100,
+        330300,
+        464500,
+        288200,
+        512000,
+        674200
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 16,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 5098100,
+      "possible_objects": 5099500,
+      "all_alignment": 0.6377168732722065,
+      "all_possible_alignment": 0.6378919980486096,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 3147600,
+      "hard_possible_objects": 3149000,
+      "hard_alignment": 0.5249937453089817,
+      "hard_possible_alignment": 0.5252272537736635,
+      "worst_hard_alignment": 0.14871897518014413,
+      "canary_alignment": 0.14871897518014413,
+      "canary_possible_alignment": 0.14881905524419536,
+      "explained_variance_ratio": 0.5836617992941672,
+      "hard_safe_counts": [
+        148600,
+        453600,
+        688000,
+        374300,
+        740400,
+        742700
+      ],
+      "hard_possible_counts": [
+        148700,
+        454000,
+        688000,
+        374500,
+        741000,
+        742800
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 32,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 5924600,
+      "possible_objects": 5926800,
+      "all_alignment": 0.7411030359130881,
+      "all_possible_alignment": 0.7413782319902931,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 3960200,
+      "hard_possible_objects": 3962400,
+      "hard_alignment": 0.6605287298807438,
+      "hard_possible_alignment": 0.6608956717538154,
+      "worst_hard_alignment": 0.20966773418734988,
+      "canary_alignment": 0.20966773418734988,
+      "canary_possible_alignment": 0.20966773418734988,
+      "explained_variance_ratio": 0.6759458143335761,
+      "hard_safe_counts": [
+        209500,
+        657500,
+        860800,
+        509400,
+        887100,
+        835900
+      ],
+      "hard_possible_counts": [
+        209500,
+        658000,
+        861200,
+        510200,
+        887200,
+        836300
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 64,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 6890600,
+      "possible_objects": 6892300,
+      "all_alignment": 0.8619391316312873,
+      "all_possible_alignment": 0.8621517831454911,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 4912900,
+      "hard_possible_objects": 4914600,
+      "hard_alignment": 0.8194312400967392,
+      "hard_possible_alignment": 0.8197147860895672,
+      "worst_hard_alignment": 0.4450560448358687,
+      "canary_alignment": 0.4450560448358687,
+      "canary_possible_alignment": 0.4457566052842274,
+      "explained_variance_ratio": 0.7739511505035579,
+      "hard_safe_counts": [
+        444700,
+        842900,
+        965100,
+        752800,
+        968400,
+        939000
+      ],
+      "hard_possible_counts": [
+        445400,
+        843100,
+        965100,
+        753300,
+        968500,
+        939200
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 128,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 7577300,
+      "possible_objects": 7578800,
+      "all_alignment": 0.9478378344570506,
+      "all_possible_alignment": 0.948025468146054,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 5586700,
+      "hard_possible_objects": 5588100,
+      "hard_alignment": 0.9318155283129014,
+      "hard_possible_alignment": 0.9320490367775832,
+      "worst_hard_alignment": 0.7459967974379503,
+      "canary_alignment": 0.7459967974379503,
+      "canary_possible_alignment": 0.7464971977582066,
+      "explained_variance_ratio": 0.8638242712213903,
+      "hard_safe_counts": [
+        745400,
+        971700,
+        992500,
+        896400,
+        994900,
+        985800
+      ],
+      "hard_possible_counts": [
+        745900,
+        971900,
+        992600,
+        896800,
+        994900,
+        986000
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 256,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 7912700,
+      "possible_objects": 7913400,
+      "all_alignment": 0.9897927273182142,
+      "all_possible_alignment": 0.9898802897064158,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 5916400,
+      "hard_possible_objects": 5917100,
+      "hard_alignment": 0.9868067717454758,
+      "hard_possible_alignment": 0.9869235259778167,
+      "worst_hard_alignment": 0.9574659727782225,
+      "canary_alignment": 0.9574659727782225,
+      "canary_possible_alignment": 0.9578662930344275,
+      "explained_variance_ratio": 0.9356988010777768,
+      "hard_safe_counts": [
+        956700,
+        995900,
+        997800,
+        970600,
+        998600,
+        996800
+      ],
+      "hard_possible_counts": [
+        957100,
+        996000,
+        997800,
+        970700,
+        998600,
+        996900
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 512,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 7988200,
+      "possible_objects": 7988200,
+      "all_alignment": 0.9992369563313861,
+      "all_possible_alignment": 0.9992369563313861,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 5989600,
+      "hard_possible_objects": 5989600,
+      "hard_alignment": 0.9990159286131265,
+      "hard_possible_alignment": 0.9990159286131265,
+      "worst_hard_alignment": 0.9970979685780046,
+      "canary_alignment": 0.997898318654924,
+      "canary_possible_alignment": 0.997898318654924,
+      "explained_variance_ratio": 0.9833071206735123,
+      "hard_safe_counts": [
+        997100,
+        999000,
+        999000,
+        996400,
+        999200,
+        998900
+      ],
+      "hard_possible_counts": [
+        997100,
+        999000,
+        999000,
+        996400,
+        999200,
+        998900
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 960,
+      "level": 4,
+      "truth_objects": 7994300,
+      "safe_objects": 7994300,
+      "possible_objects": 7994300,
+      "all_alignment": 1.0,
+      "all_possible_alignment": 1.0,
+      "hard_truth_objects": 5995500,
+      "hard_safe_objects": 5995500,
+      "hard_possible_objects": 5995500,
+      "hard_alignment": 1.0,
+      "hard_possible_alignment": 1.0,
+      "worst_hard_alignment": 1.0,
+      "canary_alignment": 1.0,
+      "canary_possible_alignment": 1.0,
+      "explained_variance_ratio": 1.0,
+      "hard_safe_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ],
+      "hard_possible_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ],
+      "hard_truth_counts": [
+        999200,
+        999200,
+        999200,
+        999300,
+        999300,
+        999300
+      ]
+    },
+    {
+      "k": 8,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 5049150,
+      "possible_objects": 5050480,
+      "all_alignment": 0.6311918783807265,
+      "all_possible_alignment": 0.6313581410582557,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 3092280,
+      "hard_possible_objects": 3093580,
+      "hard_alignment": 0.515419515496188,
+      "hard_possible_alignment": 0.5156361987752395,
+      "worst_hard_alignment": 0.13604088327066166,
+      "canary_alignment": 0.13604088327066166,
+      "canary_possible_alignment": 0.13610088807104567,
+      "explained_variance_ratio": 0.47903782530800953,
+      "hard_safe_counts": [
+        136030,
+        473870,
+        602560,
+        405610,
+        709000,
+        765210
+      ],
+      "hard_possible_counts": [
+        136090,
+        474120,
+        602880,
+        405880,
+        709210,
+        765400
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 16,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 5970750,
+      "possible_objects": 5972270,
+      "all_alignment": 0.7464006630505576,
+      "all_possible_alignment": 0.7465906775391623,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 3992720,
+      "hard_possible_objects": 3994210,
+      "hard_alignment": 0.665504355333909,
+      "hard_possible_alignment": 0.6657527077075909,
+      "worst_hard_alignment": 0.22426794143531484,
+      "canary_alignment": 0.22426794143531484,
+      "canary_possible_alignment": 0.2244179534362749,
+      "explained_variance_ratio": 0.5836617992941672,
+      "hard_safe_counts": [
+        224250,
+        655080,
+        839080,
+        511660,
+        914090,
+        848560
+      ],
+      "hard_possible_counts": [
+        224400,
+        655450,
+        839250,
+        512080,
+        914270,
+        848760
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 32,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 6691790,
+      "possible_objects": 6693010,
+      "all_alignment": 0.836537535987119,
+      "all_possible_alignment": 0.8366900476161307,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 4706130,
+      "hard_possible_objects": 4707350,
+      "hard_alignment": 0.7844151384939512,
+      "hard_possible_alignment": 0.7846184874173686,
+      "worst_hard_alignment": 0.3362969037523002,
+      "canary_alignment": 0.3362969037523002,
+      "canary_possible_alignment": 0.3364869189535163,
+      "explained_variance_ratio": 0.6759458143335761,
+      "hard_safe_counts": [
+        336270,
+        838580,
+        953220,
+        661800,
+        975900,
+        940360
+      ],
+      "hard_possible_counts": [
+        336460,
+        838810,
+        953310,
+        662260,
+        975930,
+        940580
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 64,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 7460680,
+      "possible_objects": 7461520,
+      "all_alignment": 0.932656115028771,
+      "all_possible_alignment": 0.9327611230356314,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 5468120,
+      "hard_possible_objects": 5468950,
+      "hard_alignment": 0.9114232091126987,
+      "hard_possible_alignment": 0.9115615530524007,
+      "worst_hard_alignment": 0.663963117049364,
+      "canary_alignment": 0.663963117049364,
+      "canary_possible_alignment": 0.6644031522521802,
+      "explained_variance_ratio": 0.7739511505035579,
+      "hard_safe_counts": [
+        663910,
+        956270,
+        993900,
+        870480,
+        995170,
+        988390
+      ],
+      "hard_possible_counts": [
+        664350,
+        956360,
+        993910,
+        870690,
+        995210,
+        988430
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 128,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 7870140,
+      "possible_objects": 7870630,
+      "all_alignment": 0.9838425179919968,
+      "all_possible_alignment": 0.9839037726626655,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 5872130,
+      "hard_possible_objects": 5872600,
+      "hard_alignment": 0.9787633718585091,
+      "hard_possible_alignment": 0.9788417111978585,
+      "worst_hard_alignment": 0.9184034722777822,
+      "canary_alignment": 0.9184034722777822,
+      "canary_possible_alignment": 0.9186934954796384,
+      "explained_variance_ratio": 0.8638242712213903,
+      "hard_safe_counts": [
+        918330,
+        996260,
+        999210,
+        960920,
+        999390,
+        998020
+      ],
+      "hard_possible_counts": [
+        918620,
+        996300,
+        999220,
+        961030,
+        999390,
+        998040
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 256,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 7985960,
+      "possible_objects": 7986040,
+      "all_alignment": 0.9983211219855515,
+      "all_possible_alignment": 0.9983311227481095,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 5986590,
+      "hard_possible_objects": 5986670,
+      "hard_alignment": 0.9978415011817573,
+      "hard_possible_alignment": 0.9978548355373912,
+      "worst_hard_alignment": 0.9938695708699609,
+      "canary_alignment": 0.994069525562045,
+      "canary_possible_alignment": 0.994109528762301,
+      "explained_variance_ratio": 0.9356988010777768,
+      "hard_safe_counts": [
+        993990,
+        999560,
+        999770,
+        993800,
+        999840,
+        999630
+      ],
+      "hard_possible_counts": [
+        994030,
+        999570,
+        999770,
+        993820,
+        999840,
+        999640
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 512,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 7998680,
+      "possible_objects": 7998680,
+      "all_alignment": 0.9999112432322964,
+      "all_possible_alignment": 0.9999112432322964,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 5998870,
+      "hard_possible_objects": 5998870,
+      "hard_alignment": 0.9998883247715659,
+      "hard_possible_alignment": 0.9998883247715659,
+      "worst_hard_alignment": 0.9996399747982359,
+      "canary_alignment": 0.9997899831986559,
+      "canary_possible_alignment": 0.9997899831986559,
+      "explained_variance_ratio": 0.9833071206735123,
+      "hard_safe_counts": [
+        999710,
+        999890,
+        999900,
+        999570,
+        999910,
+        999890
+      ],
+      "hard_possible_counts": [
+        999710,
+        999890,
+        999900,
+        999570,
+        999910,
+        999890
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    },
+    {
+      "k": 960,
+      "level": 5,
+      "truth_objects": 7999390,
+      "safe_objects": 7999390,
+      "possible_objects": 7999390,
+      "all_alignment": 1.0,
+      "all_possible_alignment": 1.0,
+      "hard_truth_objects": 5999540,
+      "hard_safe_objects": 5999540,
+      "hard_possible_objects": 5999540,
+      "hard_alignment": 1.0,
+      "hard_possible_alignment": 1.0,
+      "worst_hard_alignment": 1.0,
+      "canary_alignment": 1.0,
+      "canary_possible_alignment": 1.0,
+      "explained_variance_ratio": 1.0,
+      "hard_safe_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ],
+      "hard_possible_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ],
+      "hard_truth_counts": [
+        999920,
+        999920,
+        999920,
+        999930,
+        999920,
+        999930
+      ]
+    }
+  ],
+  "decision_scope": "protocol buckets on fixed projected point sets; not proof of compressibility, better alternative directions or intrinsic dimensionality",
+  "grid_thresholds_only": true,
+  "possible_alignment_counts_intersect_original_truth": true,
+  "uncertainty": "directed arithmetic envelope only; no population CI or timing claim"
+}

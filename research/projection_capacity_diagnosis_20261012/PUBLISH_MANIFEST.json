@@ -1,0 +1,219 @@
+{
+  "base_commit": "5dea0d5bfb2f0e58e022b7733a54f9f1e07522e4",
+  "branch": "experiments/projection-capacity-diagnosis-20261012",
+  "scope": "task-owned source, derived full PCA transform/proofs, curated scalar capacities and four figures; no original/projected database vectors or private invocation",
+  "files": {
+    "research/projection_capacity_diagnosis_20261012/.gitignore": {
+      "bytes": 20,
+      "sha256": "94e8e70ea7f42be858f927964c68ef42501f2bc6509708d53baa01486a5f58fa"
+    },
+    "research/projection_capacity_diagnosis_20261012/CONTRACT.json": {
+      "bytes": 4079,
+      "sha256": "521f7572a23a7807988fa1891af02dbf8fb4ba42a62a78f08ec23f548b0f1556"
+    },
+    "research/projection_capacity_diagnosis_20261012/DECISION.md": {
+      "bytes": 3043,
+      "sha256": "bc6658c1c47f622897768f75d102e2c68f3a4ed348f8f2d64ca9a0f0e26ff1ed"
+    },
+    "research/projection_capacity_diagnosis_20261012/LEDGER.md": {
+      "bytes": 4631,
+      "sha256": "13f12d5e60bcf85c863dd7bf63914c85ade640f9adae91c8bb22f6eb86f1260d"
+    },
+    "research/projection_capacity_diagnosis_20261012/PRIOR_ART.md": {
+      "bytes": 2846,
+      "sha256": "8285b92fa20ce3ef49b4d1a1fff6ba90e694b80cd06f51592cac5b5282005258"
+    },
+    "research/projection_capacity_diagnosis_20261012/README.md": {
+      "bytes": 9131,
+      "sha256": "b2b8f8bcefd65c8349554bf35893db6e23a9393a012b3f3b9755b3a96fc38759"
+    },
+    "research/projection_capacity_diagnosis_20261012/SAFETY.md": {
+      "bytes": 4968,
+      "sha256": "5fe8d28f7b67153701077db250ffc2182a24229dcb17a6dbfb7b90e7eec8e3a3"
+    },
+    "research/projection_capacity_diagnosis_20261012/analyze_capacity.py": {
+      "bytes": 7578,
+      "sha256": "13dfa68db905ffb78c50be1094ae8d9c2d5688868d8180012238935c3cb24876"
+    },
+    "research/projection_capacity_diagnosis_20261012/build_full_pca.py": {
+      "bytes": 5289,
+      "sha256": "c50d3255f051fd4850cc79d3ca505eba93f4fae285597057bd8b791808d85349"
+    },
+    "research/projection_capacity_diagnosis_20261012/common.py": {
+      "bytes": 6089,
+      "sha256": "8f7879430750fae3eb5bb338bfa3058810d44f4ef42d6eca446cdcec75768bf7"
+    },
+    "research/projection_capacity_diagnosis_20261012/compute_prefix_oracle.py": {
+      "bytes": 4340,
+      "sha256": "b95b6c1613488b319bfd5f404d85d91b495781e6a0f7015c56794f664da80e78"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/ANALYSIS_RECEIPT.json": {
+      "bytes": 266,
+      "sha256": "0ed03ba60a73d3d350cde8928eecd7116918b9a7c61fec3fb8e92533c8dbc76e"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/ARITHMETIC_PROOF.json": {
+      "bytes": 491,
+      "sha256": "cd96be0ba9e08cae8d94e4ed00b6699c12eac9fc231a861de23f1d4630e8517a"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/BUILD_RECEIPT.json": {
+      "bytes": 932,
+      "sha256": "faa04d69a6685a3f28e79cf902ee23340790c5471307a215408ef90ad039dc5e"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/COST_ACCOUNTING.json": {
+      "bytes": 811,
+      "sha256": "2a5306a3993acc6b51a2f3026d97f53acc7015e2ea454e917a5484e294e511d5"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/CROSS_RUNTIME_REPLAY.json": {
+      "bytes": 514,
+      "sha256": "b0d9bd487f6c7914b24c1547e09baf2fd325a0d9bab2289d40c59e3ee690d5f1"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/FIGURE_QA.json": {
+      "bytes": 2794,
+      "sha256": "4ea872a5eb2b86e27d2535ffb5c667ca43bb21d0ea82534364741e9ee1a4889a"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/INDEPENDENT_VALIDATION.json": {
+      "bytes": 9034,
+      "sha256": "a59eaa4c28a9f73d6a67a637f0741f9aa38604b094ba6449b63369c9c94fc64a"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/INPUT_IDENTITY.json": {
+      "bytes": 949,
+      "sha256": "2741f848c42cce69d4a63c7d93277217d75d8d91bd731540b6aa33449cfdb991"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/MATRIX_PROOF.json": {
+      "bytes": 540,
+      "sha256": "319847d8adf6106ffa004aabe741d503ee8bf33c14b7ef2f59b39ad3066322c5"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/MONOTONICITY_VALIDATION.json": {
+      "bytes": 1680,
+      "sha256": "63a8cd0f136555ff7d09307b2d66007d4a9b4c9f5c6b5ab5617035db4bc41dc9"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/ORACLE_RECEIPT.json": {
+      "bytes": 593,
+      "sha256": "bcfa1b407b909b5444291a0680e011d758d2af4fdfd2852c6da32327f5157664"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/OUTPUT_MANIFEST.json": {
+      "bytes": 3089,
+      "sha256": "3c58b10ae6a781d6307cecdb917a06f7d7b8c3794583811eb8abf7cd39037515"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/PCA8_CONSTRUCTION_BRIDGE.json": {
+      "bytes": 523,
+      "sha256": "338ed180ebf0e39c4058cc64176f952de644258930cdd8097d639c7e184cd3f5"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/PCA8_HISTORICAL_BRIDGE.json": {
+      "bytes": 7064,
+      "sha256": "49b95727ca9c5c4f0f7ab758202ec89674ff36fea0ac0894e34865d18270fd32"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/PCA_PREFIX_MANIFEST.json": {
+      "bytes": 2747,
+      "sha256": "4c3e3c6e9a2dd0dd8aa6c6aca2990ba9c46b8a2c4530f29a5a009839a69d396e"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/PCA_SPECTRUM.json": {
+      "bytes": 27001,
+      "sha256": "db89419092918b914146911c986da29804bc86796f01eb8c4443e0fe3701d136"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/POSTPROCESS_REPLAY.json": {
+      "bytes": 822,
+      "sha256": "822113a9200c01d820967c99906dd6e07c70e66bed149bdd9da414051bbac312"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/REPLAY_SAMPLES.json": {
+      "bytes": 2739,
+      "sha256": "4719869382d138bf3d3a9912ebc9c552a7051a08b38e38738f661b063eaaeeb4"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/SAFETY_VALIDATION.json": {
+      "bytes": 882,
+      "sha256": "9d687a5d8e888d53b8edc72fbb0dae8523df4366511472d43c6e260f4e4cefc2"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/SOURCE_FREEZE.json": {
+      "bytes": 1954,
+      "sha256": "31711c3687f13d43f65f60a7a7a0ca9c95ff77594ea176b1f27068d8185a452b"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/aggregate_summary.json": {
+      "bytes": 27457,
+      "sha256": "eb1c4c000781d9dc2411d3b02d5caf3ef5ae0c7b9f818a80cfc36236ec3fed2f"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/basis.f64": {
+      "bytes": 7372800,
+      "sha256": "db8caf7967e2058e3ffe2e82a940b29e58ead60d533c6874febfe836a7828153"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/PLOT_RECEIPT.json": {
+      "bytes": 582,
+      "sha256": "e5402bc91c13a489221cfef9c70b37870cdac9d79d2160d321bafedbd8bd38ea"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure1_capacity_curve.pdf": {
+      "bytes": 32959,
+      "sha256": "7f9b839b4697f08891ce333730c4a293dd32bd394eb09cb0e4ddbb43c42e3f80"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure1_capacity_curve.png": {
+      "bytes": 155252,
+      "sha256": "6dc834ee95f97401f9a7c318aede8d268eaff513f5b2d14afa32b7d36aade2da"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure2_hard_queries.pdf": {
+      "bytes": 36440,
+      "sha256": "d9f23191a62907dea9fde64051c3ee94a82b0b5882d377b242394eda6d0f2d94"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure2_hard_queries.png": {
+      "bytes": 230494,
+      "sha256": "4d7ec18725297cfdd226227f7243755cd6d77e807da16a0492b845cd93d16162"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure3_variance_vs_capacity.pdf": {
+      "bytes": 32159,
+      "sha256": "5fc35779c269f9a255f652fbfdb4513feb7795819019d5ca2a624102fd8ef7e5"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure3_variance_vs_capacity.png": {
+      "bytes": 121013,
+      "sha256": "727fb3d0aa0baa477525a722e0302df5622ef8027f59cb07fcc6b4a60fa6abea"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure4_projection_loss.pdf": {
+      "bytes": 31799,
+      "sha256": "9b9bb2535a00da3500a656b4b34673042c1aab5a13ed30c0db9586303f403331"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/figure4_projection_loss.png": {
+      "bytes": 163672,
+      "sha256": "2b23f8f22302b5d805ae2d801daa47ad3b68f010ae39c1d372575498ce511897"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/figures/projection_capacity_evidence.pdf": {
+      "bytes": 131779,
+      "sha256": "28b0a91b73fa7ab0b0a417b3a66ba45045b341c0dbd48494eefc9ca21a00630e"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/hard_dimension_thresholds.csv": {
+      "bytes": 184,
+      "sha256": "b60fa0519f8ebd280a84d9c7c238a791fe7012afc81cd066c6cfbdc676ee9d0e"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/per_level_capacity.csv": {
+      "bytes": 4860,
+      "sha256": "b43d25dcbb1ef05c1a933412d43305996f8dcd908744cca0c8c68bd9d6e84e51"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/per_query_capacity.csv": {
+      "bytes": 23973,
+      "sha256": "f866f5f5f2f5e3b893a18d80aaa542a614b2518107182549e90cbf2e4d9ef163"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/per_query_dimension_thresholds.csv": {
+      "bytes": 2333,
+      "sha256": "b3125609b7fb25acf289b47dd778ab193341da6c90f48dfcd483268e10dc64a8"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/projection_loss_summary.csv": {
+      "bytes": 6596,
+      "sha256": "5e010b8ba62d5c862707cb5872a802100f1bfb2a65211421e277bc58f1b17048"
+    },
+    "research/projection_capacity_diagnosis_20261012/evidence/threshold_crossings.csv": {
+      "bytes": 1543,
+      "sha256": "deba9c20c9694604f9cbe97f01763fb72994b54844c078749dc31d03671a3b50"
+    },
+    "research/projection_capacity_diagnosis_20261012/plot.py": {
+      "bytes": 5906,
+      "sha256": "8091942ddb94f607d0837f952a211fbc5c01a6a0e00ea5eb3f278e8a92b0a8a4"
+    },
+    "research/projection_capacity_diagnosis_20261012/replay.py": {
+      "bytes": 4435,
+      "sha256": "088c8e2599c97d61c91353fff89cdf84a353295f61bbc1bdaed94dafc14edcd8"
+    },
+    "research/projection_capacity_diagnosis_20261012/test_monotonicity.py": {
+      "bytes": 2700,
+      "sha256": "97350a111a6fb077fccc5356986e31fe07a52ab6ebf20000db55e651d552b421"
+    },
+    "research/projection_capacity_diagnosis_20261012/validate_independent.py": {
+      "bytes": 3662,
+      "sha256": "eb74f9a0b4a4ca9fc0b874d8b51e6fc6bdf979eb0406fade3d631d82728cc34e"
+    }
+  }
+}
