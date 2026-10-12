@@ -1,0 +1,31 @@
+{
+  "names": [
+    [
+      "fields_kernel(const float *, const int *, const int *, float *, double *, int)",
+      128
+    ],
+    [
+      "flags_kernel(const float *, int *, unsigned char *, int, double, bool)",
+      128
+    ],
+    [
+      "pairwise_matrix_kernel",
+      1
+    ],
+    [
+      "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)",
+      128
+    ],
+    [
+      "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)",
+      128
+    ]
+  ],
+  "native": [
+    [
+      "pairwise_matrix_kernel",
+      1
+    ]
+  ],
+  "scope": "one full-N B128 selected invocation"
+}

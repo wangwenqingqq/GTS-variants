@@ -1,0 +1,153 @@
+{
+  "models": {
+    "T64": {
+      "T": 64,
+      "expected_work": [
+        184256000000.0,
+        184256000000.0,
+        184256000000.0,
+        184256000000.0,
+        184256000000.0,
+        184256000000.0,
+        184256000000.0
+      ],
+      "relative_errors": [
+        0.0003473428273706148,
+        0.0003473428273706148,
+        0.0003473428273706148,
+        0.0003473428273706148,
+        0.0003473428273706148,
+        0.0003473428273706148,
+        0.0003473428273706148
+      ],
+      "median_relative_error": 0.0003473428273706148,
+      "max_relative_error": 0.0003473428273706148
+    },
+    "T16": {
+      "T": 16,
+      "expected_work": [
+        46064000000.0,
+        46064000000.0,
+        46064000000.0,
+        46064000000.0,
+        46064000000.0,
+        92128000000.0,
+        184256000000.0
+      ],
+      "relative_errors": [
+        3.0013893713094824,
+        3.0013893713094824,
+        3.0013893713094824,
+        3.0013893713094824,
+        3.0013893713094824,
+        1.0006946856547412,
+        0.0003473428273706148
+      ],
+      "median_relative_error": 3.0013893713094824,
+      "max_relative_error": 3.0013893713094824
+    },
+    "T32": {
+      "T": 32,
+      "expected_work": [
+        92128000000.0,
+        92128000000.0,
+        92128000000.0,
+        92128000000.0,
+        92128000000.0,
+        92128000000.0,
+        184256000000.0
+      ],
+      "relative_errors": [
+        1.0006946856547412,
+        1.0006946856547412,
+        1.0006946856547412,
+        1.0006946856547412,
+        1.0006946856547412,
+        1.0006946856547412,
+        0.0003473428273706148
+      ],
+      "median_relative_error": 1.0006946856547412,
+      "max_relative_error": 1.0006946856547412
+    },
+    "T128": {
+      "T": 128,
+      "expected_work": [
+        368512000000.0,
+        368512000000.0,
+        368512000000.0,
+        368512000000.0,
+        368512000000.0,
+        368512000000.0,
+        368512000000.0
+      ],
+      "relative_errors": [
+        0.4998263285863147,
+        0.4998263285863147,
+        0.4998263285863147,
+        0.4998263285863147,
+        0.4998263285863147,
+        0.4998263285863147,
+        0.4998263285863147
+      ],
+      "median_relative_error": 0.4998263285863147,
+      "max_relative_error": 0.4998263285863147
+    },
+    "M0": {
+      "c": 18.14915893415372,
+      "relative_errors": [
+        2.5275590551181106,
+        0.7637795275590553,
+        0.11811023622047234,
+        0.5590551181102361,
+        0.7795275590551181,
+        0.8897637795275591,
+        0.9448818897637795
+      ],
+      "median_relative_error": 0.7795275590551181
+    }
+  },
+  "B64_inflation": 1.0003473428273706,
+  "B64_B1_inflation_ratio": 0.015625,
+  "geometry_support": {
+    "passed": false,
+    "same_function_block_grid_B1_through_B64": true,
+    "doubled_query_axis_candidates": [],
+    "B128_same_function": true,
+    "scope": "independent discrete launch-geometry support among the four frozen tile candidates; not direct recovered source constant"
+  },
+  "traffic": {
+    "FP32_per_query_normalized_B64": 0.015625,
+    "DRAM_per_query_normalized_B64": 0.01682287413674852,
+    "separation_log2": 0.10656801692446027,
+    "passed_decoupling_gate": false,
+    "caveat": "shared database reuse can decrease both per-query proxies together; failed decoupling is not evidence of no arithmetic padding"
+  },
+  "decision": "PARTIAL_PADDING",
+  "B1_reproduction": {
+    "same_campaign_original_keeper": {
+      "median": 3.217926890625,
+      "p10": 3.2142773125,
+      "p90": 3.223349421875,
+      "process_values": [
+        3.2150713125,
+        3.2231249375,
+        3.2159089375,
+        3.22357390625,
+        3.2134833125,
+        3.21994484375
+      ]
+    },
+    "B1_keeper_unpaired_mean_ratio": 1.0154728472392487,
+    "ratio_ci95": [
+      1.0109661490397583,
+      1.0202378934208514
+    ],
+    "historical_median_ratio": 0.973226610054072,
+    "scope": "stability/reproduction gate, not genuinely paired performance comparison",
+    "passed": true,
+    "counter_reproduction": true,
+    "selected_function_identity_reproduced": true
+  },
+  "final_decision_valid": true,
+  "scope": "diagnostic only; no new mechanism, native keeper promotion or E2E improvement"
+}

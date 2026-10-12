@@ -1,0 +1,115 @@
+{
+  "experiment": "GTSPP_20261012_QUERY_TILE_PADDING",
+  "base_commit": "518d8464d3b451c80a719d0a3092c64c47303084",
+  "plan_sha256": "83b84803a0ca1c13fe5f37a8cb02d475f66bf3bee37a5495b1f3827fec2294de",
+  "scope": "diagnostic-only; no optimization or performance promotion",
+  "workload": {
+    "dataset": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "B": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "dtype": "FP32 row-major",
+    "metric": "L2Unexpanded",
+    "radius_bits": "0x3f34a3d8",
+    "useful_ops_per_query": 2879000000
+  },
+  "query_pool": {
+    "primary": "original32 in original order for B<=32",
+    "extension": "original32 prefix plus96 distinct uniform-seeded qids, disjoint from existing8 calibration qids",
+    "seed": 2026101211,
+    "B64_B128": "registered extended pool128; unique queries within each invocation; repeat invocations explicitly, never duplicate a query within a batch",
+    "schedule": "8 warmup plus32 measured invocations; cyclic contiguous B-query groups; measured starts from pool index0. B1 reproduces original8+32 order"
+  },
+  "semantics": {
+    "path": "same original Scan kernels and cuVS exact library containers; host batch driver only changes pairwise tensor batch shape",
+    "distance": "true native [B,D] x [N,D] -> [B,N] row-major FP32 squared scores",
+    "epilogue": "unchanged flags_kernel + CUB Flagged + fields_kernel per contiguous score row; complete ordered IDs/FP32 Euclidean fields and charged FP64 cast observer + D2H",
+    "quality": "complete membership against ordered-FP64 oracle without membership tolerance; fields/native squared scale tolerance5e-5; B1 complete payload bytes must equal original keeper"
+  },
+  "measurement": {
+    "processes_per_B": 6,
+    "orders": [
+      "forward",
+      "reverse",
+      "forward",
+      "reverse",
+      "forward",
+      "reverse"
+    ],
+    "warmup_invocations": 8,
+    "measured_invocations": 32,
+    "primary": "median of six process mean invocation ACKs; p10/p90; ms/query=ACK/B; QPS=1000B/ACK; continuous32-invocation pass retained",
+    "profilers": "one independent selected first-measured invocation per B; all actual distance launches must be covered; profiler durations never primary ACK",
+    "NCU": "same captured base metrics and LaunchStats; cache-control none, clock-control none; first measured cudaProfilerApi range only",
+    "repeated_single": "optional control omitted; throughput comparison column N/A, never use different-pool B1 as paired repeated-single",
+    "B1_reproduction": "all original payload hashes exact; FADD/FFMA +/-1%, normalized function identity same when available; new same-campaign keeper/current B1 timing mean ratio95% CI inside[0.8,1.2]; historical primary median ratio[0.8,1.2] only stability check",
+    "guard": "same shared GPU lock and two-sided-starttime foreign-process guard; same prior device UUID and matching NUMA privately pinned; no settings or foreign signals"
+  },
+  "models": {
+    "M0": "executed/useful=c, c mean observed inflation",
+    "M1_tiles": [
+      64,
+      16,
+      32,
+      128
+    ],
+    "expected": "ceil(B/T)*T*useful_ops_per_query",
+    "fit_B": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "relative_error": "abs(observed-expectation)/expectation",
+    "primary_T": 64,
+    "primary_median_relative_error_max": 0.15,
+    "B64_inflation_max": 1.5
+  },
+  "gates": {
+    "CONFIRM_PADDING": "T64 median relative error<=.15 AND inflation64<=1.5 AND independently supported native64 tile/batch dispatch geometry AND arithmetic and DRAM/query change demonstrably decoupled",
+    "traffic_decoupled": "abs(log2(FLOPs64/FLOPs1 per-query)-log2(DRAM64/DRAM1 per-query))>=1; at least2x distinct normalized factors, point diagnostic not sampling CI",
+    "geometry": "reported runtime function/source route or launch query-axis tile boundary consistent with64, plus exact normalized selected-function comparison; arithmetic ratio alone is not geometry evidence",
+    "REJECT_PADDING": "no substantial decline: inflation64/inflation1>=.8 with M0 median error<=.15; OR T64 median error>.30 AND inflation64/inflation1>=.5",
+    "PARTIAL_PADDING": "all other incomplete/ambiguous cases; significant decline but unmet CONFIRM conditions; retained traffic gate may fail even for arithmetic padding plus database reuse",
+    "missing": "do not force a biological/mechanism decision after runtime/quality/provenance failure; artifact remains incomplete/unvalidated until authorized recovery",
+    "counterexample": "fixed query-tile arithmetic and database reuse can both lower per-query work by1/B; synchronous changes do NOT prove absence of arithmetic padding but fail original CONFIRM traffic gate"
+  },
+  "budget": {
+    "max_top_level_starts": 80,
+    "qualification": 13,
+    "keeper": 6,
+    "primary": 48,
+    "ncu": 8,
+    "reserve": 5
+  },
+  "stop": "first isolation/runtime/quality/provenance failure stops; retain records and unused schedule; no automatic retries, substitutions or settings changes",
+  "prior_art": "Known baseline diagnostic, no novelty claim. Detailed PRIOR_ART only after CONFIRM per plan; no optimization in any decision branch",
+  "publication": "curated task-owned source/scalars/figures/hashes only; vectors/full payloads/vendor reports/SASS/private placement stay external; manuscript untouched",
+  "metrics": [
+    "gpu__time_duration.avg",
+    "dram__bytes.sum",
+    "dram__bytes_op_read.sum",
+    "dram__bytes_op_write.sum",
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+    "sm__warps_active.avg.pct_of_peak_sustained_active",
+    "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum",
+    "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum",
+    "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum",
+    "smsp__sass_thread_inst_executed_op_dadd_pred_on.sum",
+    "smsp__sass_thread_inst_executed_op_dmul_pred_on.sum",
+    "smsp__sass_thread_inst_executed_op_dfma_pred_on.sum",
+    "lts__t_bytes.sum"
+  ]
+}
