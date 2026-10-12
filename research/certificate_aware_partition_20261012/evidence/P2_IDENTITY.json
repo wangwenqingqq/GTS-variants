@@ -1,0 +1,42 @@
+{
+  "partition": "PCA_BALANCED",
+  "permutation": {
+    "sha256": "1d235d18c768bee0b91cbebab17cce5809a7ec6ee676dfe55903a87b91fddf36",
+    "bytes": 4000000
+  },
+  "metadata_truth": {
+    "sha256": "86281401e929e6670091d2017a01e7b7265d193758f55ad37b649b9a23091d43",
+    "bytes": 13140582
+  },
+  "ownership": {
+    "status": "PASS",
+    "objects": 1000000,
+    "unique_objects": 1000000,
+    "depth": 5,
+    "balanced": true,
+    "nested": true,
+    "exactly_one_leaf": true
+  },
+  "construction": {
+    "process_CPU_seconds": 1.1890746239999999,
+    "elapsed_resource_seconds": 1.1929625570774078,
+    "scope": "max-spread recursive partition generation",
+    "permutation_bytes": 4000000,
+    "scratch_scope": "largest explicit arrays in one sort, excludes allocator/sort internals",
+    "sort_count": 11111,
+    "sorted_object_occurrences": 5000000,
+    "explicit_peak_scratch_bytes": 76000000,
+    "axis_counts": [
+      369,
+      172,
+      643,
+      3786,
+      1073,
+      1799,
+      1785,
+      1484
+    ]
+  },
+  "frozen_basis": "same a7af442 PCA8",
+  "queries_used_in_construction": false
+}

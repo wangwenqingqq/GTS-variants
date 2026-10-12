@@ -1,0 +1,55 @@
+{
+  "CPU": "INTEL(R) XEON(R) GOLD 6530",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "CPU_affinity_count": 1,
+  "thread_config": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "GPU_used": false,
+  "costs": {
+    "GTS_ORIGINAL": {
+      "process_CPU_seconds": 0.5285934399999999,
+      "elapsed_resource_seconds": 0.528764336835593,
+      "scope": "prebuilt index load/audit only; original GTS build unknown",
+      "sort_count": null,
+      "permutation_bytes": 4000000,
+      "explicit_peak_scratch_bytes": null
+    },
+    "RANDOM_BALANCED": {
+      "process_CPU_seconds": 0.01878085099999982,
+      "elapsed_resource_seconds": 0.018897623987868428,
+      "scope": "random permutation generation",
+      "sort_count": 0,
+      "permutation_bytes": 4000000,
+      "explicit_peak_scratch_bytes": 8000000,
+      "scratch_scope": "temporary int64 permutation array; excludes allocator internals"
+    },
+    "PCA_BALANCED": {
+      "process_CPU_seconds": 1.1890746239999999,
+      "elapsed_resource_seconds": 1.1929625570774078,
+      "scope": "max-spread recursive partition generation",
+      "permutation_bytes": 4000000,
+      "scratch_scope": "largest explicit arrays in one sort, excludes allocator/sort internals",
+      "sort_count": 11111,
+      "sorted_object_occurrences": 5000000,
+      "explicit_peak_scratch_bytes": 76000000,
+      "axis_counts": [
+        369,
+        172,
+        643,
+        3786,
+        1073,
+        1799,
+        1785,
+        1484
+      ]
+    }
+  },
+  "process_cumulative_peak_RSS_KiB": 4828892,
+  "peak_scope": "entire worker including mapped input data and independent validation, not per-partition scratch",
+  "elapsed_resource_seconds": 17.3421790311113,
+  "no_latency_measured": true
+}

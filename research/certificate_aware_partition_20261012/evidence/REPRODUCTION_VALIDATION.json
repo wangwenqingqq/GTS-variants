@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "source_runtime": "Python3.12.3 NumPy1.26.4",
+  "replay_runtime": "Python3.13.12 NumPy2.4.3",
+  "byte_identical_files": [
+    "CERTIFICATE_VALIDATION.json",
+    "GTS_ORIGINAL_L3_C4.bin",
+    "GTS_ORIGINAL_L3_C8.bin",
+    "GTS_ORIGINAL_L4_C4.bin",
+    "GTS_ORIGINAL_L4_C8.bin",
+    "GTS_ORIGINAL_L5_C4.bin",
+    "GTS_ORIGINAL_L5_C8.bin",
+    "P0_NATIVE_BRIDGE.json",
+    "PCA_BALANCED_L3_C4.bin",
+    "PCA_BALANCED_L3_C8.bin",
+    "PCA_BALANCED_L4_C4.bin",
+    "PCA_BALANCED_L4_C8.bin",
+    "PCA_BALANCED_L5_C4.bin",
+    "PCA_BALANCED_L5_C8.bin",
+    "RANDOM_BALANCED_L3_C4.bin",
+    "RANDOM_BALANCED_L3_C8.bin",
+    "RANDOM_BALANCED_L4_C4.bin",
+    "RANDOM_BALANCED_L4_C8.bin",
+    "RANDOM_BALANCED_L5_C4.bin",
+    "RANDOM_BALANCED_L5_C8.bin",
+    "aggregate_summary.json",
+    "contamination_summary.csv",
+    "leave_660835_out.csv",
+    "per_level_partition_summary.csv",
+    "per_query_partition_summary.csv",
+    "region_contamination.csv"
+  ],
+  "primary_counts_and_decision_byte_identical": true,
+  "metadata_all18_byte_identical": true,
+  "strict_all_file_byte_check": "six supplementary diagonal means differ in last bits; not represented as bit-identical",
+  "compactness_reduction_differences": [
+    {
+      "partition": "GTS_ORIGINAL",
+      "level": 4,
+      "k": 4,
+      "field": "mean_projected_diagonal",
+      "absolute_difference": 4.440892098500626e-16,
+      "analytic_reduction_envelope": 9.490664560320584e-12
+    },
+    {
+      "partition": "GTS_ORIGINAL",
+      "level": 4,
+      "k": 8,
+      "field": "mean_projected_diagonal",
+      "absolute_difference": 8.881784197001252e-16,
+      "analytic_reduction_envelope": 1.2533415766321188e-11
+    },
+    {
+      "partition": "RANDOM_BALANCED",
+      "level": 4,
+      "k": 8,
+      "field": "mean_projected_diagonal",
+      "absolute_difference": 8.881784197001252e-16,
+      "analytic_reduction_envelope": 2.516412877058092e-11
+    },
+    {
+      "partition": "RANDOM_BALANCED",
+      "level": 5,
+      "k": 4,
+      "field": "mean_projected_diagonal",
+      "absolute_difference": 4.440892098500626e-16,
+      "analytic_reduction_envelope": 1.2352137654309936e-10
+    },
+    {
+      "partition": "RANDOM_BALANCED",
+      "level": 5,
+      "k": 8,
+      "field": "mean_projected_diagonal",
+      "absolute_difference": 8.881784197001252e-16,
+      "analytic_reduction_envelope": 1.3965066982582817e-10
+    },
+    {
+      "partition": "PCA_BALANCED",
+      "level": 4,
+      "k": 8,
+      "field": "mean_projected_diagonal",
+      "absolute_difference": 8.881784197001252e-16,
+      "analytic_reduction_envelope": 1.0860472793545237e-11
+    }
+  ],
+  "max_mean_absolute_difference": 8.881784197001252e-16,
+  "scope": "independent runtime replay of all cached region bounds, native bridge, serialized records and diagnostics; no new data scan or latency"
+}

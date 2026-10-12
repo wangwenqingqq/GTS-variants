@@ -1,0 +1,31 @@
+{
+  "partition": "RANDOM_BALANCED",
+  "permutation": {
+    "sha256": "9ab0e28e894a84afc633a7fc1b2cd3ab5a0394935f373526fb6b64973adb7803",
+    "bytes": 4000000
+  },
+  "metadata_truth": {
+    "sha256": "8a45dfe1f519e6bfb46d5e3572e1e2136dfd85483f8d39fa240f7ad75dfd158c",
+    "bytes": 13082549
+  },
+  "ownership": {
+    "status": "PASS",
+    "objects": 1000000,
+    "unique_objects": 1000000,
+    "depth": 5,
+    "balanced": true,
+    "nested": true,
+    "exactly_one_leaf": true
+  },
+  "construction": {
+    "process_CPU_seconds": 0.01878085099999982,
+    "elapsed_resource_seconds": 0.018897623987868428,
+    "scope": "random permutation generation",
+    "sort_count": 0,
+    "permutation_bytes": 4000000,
+    "explicit_peak_scratch_bytes": 8000000,
+    "scratch_scope": "temporary int64 permutation array; excludes allocator internals"
+  },
+  "frozen_basis": "same a7af442 PCA8",
+  "queries_used_in_construction": false
+}
