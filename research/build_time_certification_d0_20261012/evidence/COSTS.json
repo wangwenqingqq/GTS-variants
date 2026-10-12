@@ -1,0 +1,50 @@
+{
+  "status": "theoretical source-level accounting; not timing, SASS or measured DRAM",
+  "counts": {
+    "n": 1000000,
+    "d": 960,
+    "levels": 5,
+    "nodes": 111111,
+    "children_per_level": [
+      10,
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "coordinate_payload": 3840000000,
+    "source_operand_bytes_per_sweep_per_level": 7680000000,
+    "object_operand_bytes_per_sweep_per_level": 3840000000,
+    "pivot_operand_bytes_per_sweep_per_level": 3840000000,
+    "safe_directed_sub_calls_per_level": 1920000000,
+    "safe_directed_mul_calls_per_level": 1920000000,
+    "safe_directed_add_calls_per_level": 1920000000,
+    "safe_directed_total_calls_per_level": 5760000000,
+    "safe_directed_sqrt_calls_per_level": 2000000,
+    "sidecar_capacity_bytes": 16000000,
+    "sidecar_write_bytes_per_level": 16000000,
+    "sidecar_read_bytes_per_level": 16000000,
+    "sidecar_roundtrip_bytes_per_level": 32000000,
+    "sidecar_roundtrip_bytes_per_rebuild": 160000000,
+    "source_coordinate_operand_bytes_removed_per_rebuild": 38400000000,
+    "net_source_operand_bytes_removed_excluding_other_costs_per_rebuild": 38240000000,
+    "final_bound_bytes": 1777776,
+    "native_key_bytes": 8000000,
+    "native_order_bytes": 4000000,
+    "extra_owner_map_bytes": 0,
+    "extra_endpoint_permutation_bytes": 0,
+    "validation_d2h_payload_bytes": 6666664,
+    "validation_host_vectors_payload_bytes": 14666664,
+    "native_boundary_tasks": 111110,
+    "native_boundary_coordinate_iterations": 106665600
+  },
+  "unknowns": [
+    "sort scratch/traffic",
+    "C2 register pressure/spills",
+    "reduction scratch and alignment overhead",
+    "real L1/L2/DRAM traffic",
+    "managed-memory migration",
+    "total launch delta",
+    "all performance effects"
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "file": "include/tree.cuh",
+    "start": 176,
+    "end": 295,
+    "purpose": "tiled scoring; pivot, FP32 subtraction, nominal double accumulator and encoded key"
+  },
+  {
+    "file": "include/tree.cuh",
+    "start": 297,
+    "end": 421,
+    "purpose": "child segments, inherited pivot and separate native float boundary computation"
+  },
+  {
+    "file": "include/tree.cuh",
+    "start": 456,
+    "end": 549,
+    "purpose": "native allocation, score/sync/sort/split/sync/control loop and scratch frees"
+  },
+  {
+    "file": "include/numeric.cuh",
+    "start": 17,
+    "end": 24,
+    "purpose": "ordered directed norm_query: two subtracts, squares/adds and roots"
+  },
+  {
+    "file": "include/numeric.cuh",
+    "start": 44,
+    "end": 57,
+    "purpose": "refit register folding and 256-thread block reduction; no global pair sidecar"
+  },
+  {
+    "file": "include/numeric.cuh",
+    "start": 62,
+    "end": 93,
+    "purpose": "host structural validation, bounds allocation, refit and epoch publication"
+  },
+  {
+    "file": "include/update.cuh",
+    "start": 440,
+    "end": 455,
+    "purpose": "construction then refresh_bounds and remaining region/live publication"
+  },
+  {
+    "file": "include/input.hpp",
+    "start": 45,
+    "end": 55,
+    "purpose": "shape/metric restriction and finite FP32 coordinate check"
+  },
+  {
+    "file": "include/config.cuh",
+    "start": 5,
+    "end": 5,
+    "purpose": "short aliases float"
+  }
+]

@@ -1,0 +1,1223 @@
+{
+  "scope": "One scoring level aligned with the next refit node level; repeat five times for captured rebuild. Conceptual C2/B1 designs, not implementations.",
+  "normalization": "Compare nodes, edge value/type/storage/lifetime/owner/readiness, and memory states; execution labels are not deletion evidence.",
+  "graphs": {
+    "B0": {
+      "nodes": [
+        "LEVEL_INPUT",
+        "DATA",
+        "NATIVE_READ",
+        "NOMINAL",
+        "KEY",
+        "SORT",
+        "SPLIT",
+        "BOUNDARY_READ",
+        "BOUNDARY_NOMINAL",
+        "TREE",
+        "VALIDATE",
+        "PUBLISH",
+        "QUERY",
+        "REFIT_READ",
+        "SAFE",
+        "REDUCE",
+        "BOUNDS"
+      ],
+      "edges": [
+        {
+          "producer": "LEVEL_INPUT",
+          "consumer": "NATIVE_READ",
+          "value": "pre-sort physical order, parent interval, flags and pivot selection",
+          "value_type": "int32 metadata/order",
+          "lifetime": "current scoring level",
+          "storage": "device global -> registers/shared pivot",
+          "synchronization": "previous split/init ready; same-block pivot barrier",
+          "owner_identity": "scoring parent and physical rows"
+        },
+        {
+          "producer": "LEVEL_INPUT",
+          "consumer": "SPLIT",
+          "value": "unchanged parent interval and split flag",
+          "value_type": "TN + int32",
+          "lifetime": "current split task",
+          "storage": "device global -> registers",
+          "synchronization": "previous split/init ready and current native sort complete",
+          "owner_identity": "scoring parent"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "NATIVE_READ",
+          "value": "object and parent-pivot coordinates",
+          "value_type": "FP32 x,y",
+          "lifetime": "coordinate iteration",
+          "storage": "device global to registers",
+          "synchronization": "before scoring; existing stream",
+          "owner_identity": "physical row r / parent pivot p"
+        },
+        {
+          "producer": "NATIVE_READ",
+          "consumer": "NOMINAL",
+          "value": "unchanged nominal operands",
+          "value_type": "FP32 subtraction; nominal double accumulator",
+          "lifetime": "coordinate loop / scoring task",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "parent"
+        },
+        {
+          "producer": "NOMINAL",
+          "consumer": "KEY",
+          "value": "encoded nominal sort key",
+          "value_type": "FP64",
+          "lifetime": "score through native sort; allocation reused per level",
+          "storage": "device global dis_list[N]",
+          "synchronization": "scoring completion / existing device synchronization",
+          "owner_identity": "slot s within parent"
+        },
+        {
+          "producer": "KEY",
+          "consumer": "SORT",
+          "value": "keys and paired physical-row values",
+          "value_type": "FP64 key + int32 row",
+          "lifetime": "native sort invocation",
+          "storage": "device global arrays; sort scratch unknown",
+          "synchronization": "native Thrust sort completion",
+          "owner_identity": "slot -> permuted slot, physical row preserved"
+        },
+        {
+          "producer": "SORT",
+          "consumer": "SPLIT",
+          "value": "sorted physical-row order",
+          "value_type": "int32 order[N]",
+          "lifetime": "split through later build/query",
+          "storage": "device global id_list[N]",
+          "synchronization": "native sort completion before split",
+          "owner_identity": "parent interval -> child subinterval"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "BOUNDARY_READ",
+          "value": "child first-row and parent-pivot coordinates",
+          "value_type": "FP32 x,y",
+          "lifetime": "boundary coordinate iteration",
+          "storage": "device global to registers",
+          "synchronization": "sorted order ready",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "BOUNDARY_READ",
+          "value": "child lid and inherited pivot",
+          "value_type": "int32 lid,pid",
+          "lifetime": "child boundary computation",
+          "storage": "registers / node metadata",
+          "synchronization": "native sort completion",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "BOUNDARY_READ",
+          "consumer": "BOUNDARY_NOMINAL",
+          "value": "unchanged boundary operands",
+          "value_type": "FP32 subtraction and float accumulation",
+          "lifetime": "boundary task",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "BOUNDARY_NOMINAL",
+          "consumer": "TREE",
+          "value": "TN.min_dis and native flags",
+          "value_type": "FP32 scalar + int32 metadata",
+          "lifetime": "persistent tree",
+          "storage": "device global nodes/flags",
+          "synchronization": "existing split completion / device synchronization",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "TREE",
+          "value": "child lid,size,pid,is_leaf",
+          "value_type": "TN metadata",
+          "lifetime": "persistent tree",
+          "storage": "device global node_list",
+          "synchronization": "existing split completion / device synchronization",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "TREE",
+          "consumer": "VALIDATE",
+          "value": "final nodes, empty flags, physical permutation",
+          "value_type": "TN + int32",
+          "lifetime": "host refresh scope",
+          "storage": "D2H to host vectors",
+          "synchronization": "existing refresh synchronization and copies",
+          "owner_identity": "final tree"
+        },
+        {
+          "producer": "VALIDATE",
+          "consumer": "PUBLISH",
+          "value": "valid physical permutation and node/leaf coverage",
+          "value_type": "structural status",
+          "lifetime": "refresh -> epoch publication",
+          "storage": "host status / managed Bounds metadata",
+          "synchronization": "host validation succeeds before publication",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "PUBLISH",
+          "consumer": "QUERY",
+          "value": "bounds base/nodes/n/d/epoch identity",
+          "value_type": "pointer/int/uint64 metadata",
+          "lifetime": "persistent until refresh/release",
+          "storage": "managed metadata",
+          "synchronization": "all bound producers complete before publication",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "TREE",
+          "consumer": "REFIT_READ",
+          "value": "final node pivot and member interval/order",
+          "value_type": "TN + int32",
+          "lifetime": "post-build refit",
+          "storage": "device global -> registers",
+          "synchronization": "tree finalized and host validation complete",
+          "owner_identity": "final node"
+        },
+        {
+          "producer": "VALIDATE",
+          "consumer": "REFIT_READ",
+          "value": "validated physical structure",
+          "value_type": "structural status",
+          "lifetime": "post-build refit",
+          "storage": "host control -> kernel launch",
+          "synchronization": "refresh validation and allocation before refit",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "REFIT_READ",
+          "value": "coordinates loaded again for (row,node.pid)",
+          "value_type": "FP32 x,y",
+          "lifetime": "refit coordinate iteration",
+          "storage": "device global -> registers",
+          "synchronization": "refit launch after construction",
+          "owner_identity": "physical pair (r,p), final node"
+        },
+        {
+          "producer": "REFIT_READ",
+          "consumer": "SAFE",
+          "value": "promoted coordinate operands",
+          "value_type": "FP64 x,y; ordered RD/RU loop",
+          "lifetime": "coordinate iteration / pair",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "physical pair (r,p), final node"
+        },
+        {
+          "producer": "SAFE",
+          "consumer": "REDUCE",
+          "value": "pair endpoints folded immediately into thread partials",
+          "value_type": "two FP64",
+          "lifetime": "pair -> node block reduction",
+          "storage": "registers -> shared low[256],high[256]",
+          "synchronization": "initial block barrier + eight reduction rounds",
+          "owner_identity": "final node; no global per-pair endpoints"
+        },
+        {
+          "producer": "REDUCE",
+          "consumer": "BOUNDS",
+          "value": "min(lo),max(hi); root [0,+inf]",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global lo[NN],hi[NN]",
+          "synchronization": "post-refit device synchronization",
+          "owner_identity": "final node"
+        },
+        {
+          "producer": "BOUNDS",
+          "consumer": "PUBLISH",
+          "value": "completed numeric bounds",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global",
+          "synchronization": "refit completion plus validated structure",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "BOUNDS",
+          "consumer": "QUERY",
+          "value": "published lower and upper bounds",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global",
+          "synchronization": "epoch guard after completion",
+          "owner_identity": "query node"
+        }
+      ],
+      "memory": [
+        {
+          "state": "coordinate payload",
+          "producer": "input",
+          "consumer": "scoring/boundary/refit or certificate",
+          "cardinality": 960000000,
+          "bytes": 3840000000,
+          "lifetime": "whole index epoch",
+          "storage": "device-accessible global"
+        },
+        {
+          "state": "native nominal keys",
+          "producer": "scoring",
+          "consumer": "native sort",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "allocation across build; values one level",
+          "storage": "device global"
+        },
+        {
+          "state": "physical order",
+          "producer": "native init/sort",
+          "consumer": "split/gather/query/validation",
+          "cardinality": 1000000,
+          "bytes": 4000000,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "TN nodes",
+          "producer": "split",
+          "consumer": "validation/refit/query",
+          "cardinality": 111111,
+          "bytes": 2222220,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "empty flags",
+          "producer": "init/split",
+          "consumer": "validation/refit",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "split flags",
+          "producer": "init/split",
+          "consumer": "host-observable reduce",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "construction; freed at return",
+          "storage": "device global"
+        },
+        {
+          "state": "parent pivot list",
+          "producer": "scoring",
+          "consumer": "native split",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "construction; values current level",
+          "storage": "device global"
+        },
+        {
+          "state": "final lower+upper",
+          "producer": "numeric reduction",
+          "consumer": "query",
+          "cardinality": 222222,
+          "bytes": 1777776,
+          "lifetime": "persistent until refresh/release",
+          "storage": "device global"
+        },
+        {
+          "state": "native sort scratch",
+          "producer": "native sort",
+          "consumer": "native sort",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "sort invocation",
+          "storage": "device allocator-dependent"
+        },
+        {
+          "state": "host validation vectors",
+          "producer": "refresh D2H / host init",
+          "consumer": "structure checks",
+          "cardinality": "nodes NN + empty NN + order/seen/cover 3N",
+          "bytes": 14666664,
+          "lifetime": "refresh host scope",
+          "storage": "host heap payload; allocator overhead unknown"
+        },
+        {
+          "state": "per-pair endpoint sidecar",
+          "producer": "none",
+          "consumer": "none",
+          "cardinality": 0,
+          "bytes": 0,
+          "lifetime": "none: pair endpoint dies after thread fold",
+          "storage": "none"
+        },
+        {
+          "state": "refit shared lower+upper",
+          "producer": "thread partials",
+          "consumer": "node block reduce",
+          "cardinality": 512,
+          "bytes": 4096,
+          "lifetime": "one node block",
+          "storage": "shared memory per resident block"
+        },
+        {
+          "state": "refit registers",
+          "producer": "ordered interval/thread fold",
+          "consumer": "node reduce",
+          "cardinality": "per active thread",
+          "bytes": null,
+          "lifetime": "coordinate/pair/node loop",
+          "storage": "registers; compiler lowering unmeasured"
+        }
+      ],
+      "execution": "native score/sort/split for five levels; one post-build numeric refit kernel (NN blocks of 256 threads); existing host validation and epoch update"
+    },
+    "C2": {
+      "nodes": [
+        "LEVEL_INPUT",
+        "DATA",
+        "NATIVE_READ",
+        "NOMINAL",
+        "KEY",
+        "SORT",
+        "SPLIT",
+        "BOUNDARY_READ",
+        "BOUNDARY_NOMINAL",
+        "TREE",
+        "VALIDATE",
+        "PUBLISH",
+        "QUERY",
+        "SAFE",
+        "SIDECAR",
+        "GATHER",
+        "REDUCE",
+        "BOUNDS",
+        "NEXT_LEVEL"
+      ],
+      "edges": [
+        {
+          "producer": "LEVEL_INPUT",
+          "consumer": "NATIVE_READ",
+          "value": "pre-sort physical order, parent interval, flags and pivot selection",
+          "value_type": "int32 metadata/order",
+          "lifetime": "current scoring level",
+          "storage": "device global -> registers/shared pivot",
+          "synchronization": "previous split/init ready; same-block pivot barrier",
+          "owner_identity": "scoring parent and physical rows"
+        },
+        {
+          "producer": "LEVEL_INPUT",
+          "consumer": "SPLIT",
+          "value": "unchanged parent interval and split flag",
+          "value_type": "TN + int32",
+          "lifetime": "current split task",
+          "storage": "device global -> registers",
+          "synchronization": "previous split/init ready and current native sort complete",
+          "owner_identity": "scoring parent"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "NATIVE_READ",
+          "value": "object and parent-pivot coordinates",
+          "value_type": "FP32 x,y",
+          "lifetime": "coordinate iteration",
+          "storage": "device global to registers",
+          "synchronization": "before scoring; existing stream",
+          "owner_identity": "physical row r / parent pivot p"
+        },
+        {
+          "producer": "NATIVE_READ",
+          "consumer": "NOMINAL",
+          "value": "unchanged nominal operands",
+          "value_type": "FP32 subtraction; nominal double accumulator",
+          "lifetime": "coordinate loop / scoring task",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "parent"
+        },
+        {
+          "producer": "NOMINAL",
+          "consumer": "KEY",
+          "value": "encoded nominal sort key",
+          "value_type": "FP64",
+          "lifetime": "score through native sort; allocation reused per level",
+          "storage": "device global dis_list[N]",
+          "synchronization": "scoring completion / existing device synchronization",
+          "owner_identity": "slot s within parent"
+        },
+        {
+          "producer": "KEY",
+          "consumer": "SORT",
+          "value": "keys and paired physical-row values",
+          "value_type": "FP64 key + int32 row",
+          "lifetime": "native sort invocation",
+          "storage": "device global arrays; sort scratch unknown",
+          "synchronization": "native Thrust sort completion",
+          "owner_identity": "slot -> permuted slot, physical row preserved"
+        },
+        {
+          "producer": "SORT",
+          "consumer": "SPLIT",
+          "value": "sorted physical-row order",
+          "value_type": "int32 order[N]",
+          "lifetime": "split through later build/query",
+          "storage": "device global id_list[N]",
+          "synchronization": "native sort completion before split",
+          "owner_identity": "parent interval -> child subinterval"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "BOUNDARY_READ",
+          "value": "child first-row and parent-pivot coordinates",
+          "value_type": "FP32 x,y",
+          "lifetime": "boundary coordinate iteration",
+          "storage": "device global to registers",
+          "synchronization": "sorted order ready",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "BOUNDARY_READ",
+          "value": "child lid and inherited pivot",
+          "value_type": "int32 lid,pid",
+          "lifetime": "child boundary computation",
+          "storage": "registers / node metadata",
+          "synchronization": "native sort completion",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "BOUNDARY_READ",
+          "consumer": "BOUNDARY_NOMINAL",
+          "value": "unchanged boundary operands",
+          "value_type": "FP32 subtraction and float accumulation",
+          "lifetime": "boundary task",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "BOUNDARY_NOMINAL",
+          "consumer": "TREE",
+          "value": "TN.min_dis and native flags",
+          "value_type": "FP32 scalar + int32 metadata",
+          "lifetime": "persistent tree",
+          "storage": "device global nodes/flags",
+          "synchronization": "existing split completion / device synchronization",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "TREE",
+          "value": "child lid,size,pid,is_leaf",
+          "value_type": "TN metadata",
+          "lifetime": "persistent tree",
+          "storage": "device global node_list",
+          "synchronization": "existing split completion / device synchronization",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "TREE",
+          "consumer": "VALIDATE",
+          "value": "final nodes, empty flags, physical permutation",
+          "value_type": "TN + int32",
+          "lifetime": "host refresh scope",
+          "storage": "D2H to host vectors",
+          "synchronization": "existing refresh synchronization and copies",
+          "owner_identity": "final tree"
+        },
+        {
+          "producer": "VALIDATE",
+          "consumer": "PUBLISH",
+          "value": "valid physical permutation and node/leaf coverage",
+          "value_type": "structural status",
+          "lifetime": "refresh -> epoch publication",
+          "storage": "host status / managed Bounds metadata",
+          "synchronization": "host validation succeeds before publication",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "PUBLISH",
+          "consumer": "QUERY",
+          "value": "bounds base/nodes/n/d/epoch identity",
+          "value_type": "pointer/int/uint64 metadata",
+          "lifetime": "persistent until refresh/release",
+          "storage": "managed metadata",
+          "synchronization": "all bound producers complete before publication",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "NATIVE_READ",
+          "consumer": "SAFE",
+          "value": "same loaded coordinate operands, explicitly promoted",
+          "value_type": "FP64 x,y; ordered RD/RU loop",
+          "lifetime": "coordinate iteration / pair",
+          "storage": "registers",
+          "synchronization": "program order; native nominal path preserved",
+          "owner_identity": "physical pair (r,p), scoring parent"
+        },
+        {
+          "producer": "SAFE",
+          "consumer": "SIDECAR",
+          "value": "pair lower and upper endpoints",
+          "value_type": "two FP64",
+          "lifetime": "score to child reduction in same level",
+          "storage": "lo[r],hi[r] device global, keyed by physical row",
+          "synchronization": "score completion before native sort/split consumer",
+          "owner_identity": "physical row r in this level; parent pivot p"
+        },
+        {
+          "producer": "SIDECAR",
+          "consumer": "GATHER",
+          "value": "endpoints by sorted physical row",
+          "value_type": "two FP64",
+          "lifetime": "post-sort child interval traversal",
+          "storage": "global -> registers",
+          "synchronization": "score ready and native sort complete",
+          "owner_identity": "row r -> child owner"
+        },
+        {
+          "producer": "SORT",
+          "consumer": "GATHER",
+          "value": "r = id_list[s]",
+          "value_type": "int32",
+          "lifetime": "one gather iteration",
+          "storage": "existing global order -> register",
+          "synchronization": "native sort completion",
+          "owner_identity": "sorted slot s -> physical row r"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "GATHER",
+          "value": "[child.lid,child.lid+child.size) and inherited pivot",
+          "value_type": "int32 segment descriptor",
+          "lifetime": "child reduction",
+          "storage": "existing metadata / split-local registers",
+          "synchronization": "child descriptor ready; same-block barrier if cooperative",
+          "owner_identity": "parent -> child, no materialized N-owner map"
+        },
+        {
+          "producer": "GATHER",
+          "consumer": "REDUCE",
+          "value": "finite nonnegative pair endpoints",
+          "value_type": "two FP64",
+          "lifetime": "thread partials through block/segment completion",
+          "storage": "registers/shared; implementation scratch unknown",
+          "synchronization": "reduction barriers required by chosen mapping",
+          "owner_identity": "child member set"
+        },
+        {
+          "producer": "REDUCE",
+          "consumer": "BOUNDS",
+          "value": "min(lo), max(hi); root special [0,+inf]",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent to query/refresh",
+          "storage": "global final lo[NN],hi[NN]",
+          "synchronization": "reduction completion; consume-before-sidecar-overwrite",
+          "owner_identity": "child/node"
+        },
+        {
+          "producer": "REDUCE",
+          "consumer": "NEXT_LEVEL",
+          "value": "level endpoints fully consumed",
+          "value_type": "completion event/control",
+          "lifetime": "end level -> next producer",
+          "storage": "stream/control, not an N-array",
+          "synchronization": "done before overwriting lo[r],hi[r]",
+          "owner_identity": "this level -> next level"
+        },
+        {
+          "producer": "BOUNDS",
+          "consumer": "PUBLISH",
+          "value": "final node endpoints",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global",
+          "synchronization": "all level reductions done; validation retained",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "BOUNDS",
+          "consumer": "QUERY",
+          "value": "published lower and upper bounds",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global",
+          "synchronization": "epoch guard after completion",
+          "owner_identity": "query node"
+        }
+      ],
+      "memory": [
+        {
+          "state": "coordinate payload",
+          "producer": "input",
+          "consumer": "scoring/boundary/refit or certificate",
+          "cardinality": 960000000,
+          "bytes": 3840000000,
+          "lifetime": "whole index epoch",
+          "storage": "device-accessible global"
+        },
+        {
+          "state": "native nominal keys",
+          "producer": "scoring",
+          "consumer": "native sort",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "allocation across build; values one level",
+          "storage": "device global"
+        },
+        {
+          "state": "physical order",
+          "producer": "native init/sort",
+          "consumer": "split/gather/query/validation",
+          "cardinality": 1000000,
+          "bytes": 4000000,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "TN nodes",
+          "producer": "split",
+          "consumer": "validation/refit/query",
+          "cardinality": 111111,
+          "bytes": 2222220,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "empty flags",
+          "producer": "init/split",
+          "consumer": "validation/refit",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "split flags",
+          "producer": "init/split",
+          "consumer": "host-observable reduce",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "construction; freed at return",
+          "storage": "device global"
+        },
+        {
+          "state": "parent pivot list",
+          "producer": "scoring",
+          "consumer": "native split",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "construction; values current level",
+          "storage": "device global"
+        },
+        {
+          "state": "final lower+upper",
+          "producer": "numeric reduction",
+          "consumer": "query",
+          "cardinality": 222222,
+          "bytes": 1777776,
+          "lifetime": "persistent until refresh/release",
+          "storage": "device global"
+        },
+        {
+          "state": "native sort scratch",
+          "producer": "native sort",
+          "consumer": "native sort",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "sort invocation",
+          "storage": "device allocator-dependent"
+        },
+        {
+          "state": "host validation vectors",
+          "producer": "refresh D2H / host init",
+          "consumer": "structure checks",
+          "cardinality": "nodes NN + empty NN + order/seen/cover 3N",
+          "bytes": 14666664,
+          "lifetime": "refresh host scope",
+          "storage": "host heap payload; allocator overhead unknown"
+        },
+        {
+          "state": "level lower sidecar",
+          "producer": "safe scoring",
+          "consumer": "child gather/reduction",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "one level; no overwrite before consume done",
+          "storage": "device global, physical-row indexed"
+        },
+        {
+          "state": "level upper sidecar",
+          "producer": "safe scoring",
+          "consumer": "child gather/reduction",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "one level; no overwrite before consume done",
+          "storage": "device global, physical-row indexed"
+        },
+        {
+          "state": "additional N-entry owner map",
+          "producer": "none",
+          "consumer": "none",
+          "cardinality": 0,
+          "bytes": 0,
+          "lifetime": "none; segment owner computed from existing TN",
+          "storage": "none"
+        },
+        {
+          "state": "additional endpoint permutation payload",
+          "producer": "none",
+          "consumer": "none",
+          "cardinality": 0,
+          "bytes": 0,
+          "lifetime": "none; existing id_list carries physical identity",
+          "storage": "none"
+        },
+        {
+          "state": "certificate/reduction registers and shared scratch",
+          "producer": "score/gather",
+          "consumer": "safe loop/segment reduce",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "producer or reduction block",
+          "storage": "registers/shared; compiler footprint unknown"
+        },
+        {
+          "state": "alignment padding/allocator metadata",
+          "producer": "allocator",
+          "consumer": "allocator",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "sidecar allocation",
+          "storage": "unknown beyond two 8-byte-aligned arrays"
+        }
+      ],
+      "execution": "strong ordinary composition: preserve native sorting; split kernel may compute segment min/max directly (ordinary block reduction), so no mandatory owner-map or standalone reduction launch"
+    },
+    "B1_Z": {
+      "nodes": [
+        "LEVEL_INPUT",
+        "DATA",
+        "NATIVE_READ",
+        "NOMINAL",
+        "KEY",
+        "SORT",
+        "SPLIT",
+        "BOUNDARY_READ",
+        "BOUNDARY_NOMINAL",
+        "TREE",
+        "VALIDATE",
+        "PUBLISH",
+        "QUERY",
+        "SAFE",
+        "SIDECAR",
+        "GATHER",
+        "REDUCE",
+        "BOUNDS",
+        "NEXT_LEVEL"
+      ],
+      "edges": [
+        {
+          "producer": "LEVEL_INPUT",
+          "consumer": "NATIVE_READ",
+          "value": "pre-sort physical order, parent interval, flags and pivot selection",
+          "value_type": "int32 metadata/order",
+          "lifetime": "current scoring level",
+          "storage": "device global -> registers/shared pivot",
+          "synchronization": "previous split/init ready; same-block pivot barrier",
+          "owner_identity": "scoring parent and physical rows"
+        },
+        {
+          "producer": "LEVEL_INPUT",
+          "consumer": "SPLIT",
+          "value": "unchanged parent interval and split flag",
+          "value_type": "TN + int32",
+          "lifetime": "current split task",
+          "storage": "device global -> registers",
+          "synchronization": "previous split/init ready and current native sort complete",
+          "owner_identity": "scoring parent"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "NATIVE_READ",
+          "value": "object and parent-pivot coordinates",
+          "value_type": "FP32 x,y",
+          "lifetime": "coordinate iteration",
+          "storage": "device global to registers",
+          "synchronization": "before scoring; existing stream",
+          "owner_identity": "physical row r / parent pivot p"
+        },
+        {
+          "producer": "NATIVE_READ",
+          "consumer": "NOMINAL",
+          "value": "unchanged nominal operands",
+          "value_type": "FP32 subtraction; nominal double accumulator",
+          "lifetime": "coordinate loop / scoring task",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "parent"
+        },
+        {
+          "producer": "NOMINAL",
+          "consumer": "KEY",
+          "value": "encoded nominal sort key",
+          "value_type": "FP64",
+          "lifetime": "score through native sort; allocation reused per level",
+          "storage": "device global dis_list[N]",
+          "synchronization": "scoring completion / existing device synchronization",
+          "owner_identity": "slot s within parent"
+        },
+        {
+          "producer": "KEY",
+          "consumer": "SORT",
+          "value": "keys and paired physical-row values",
+          "value_type": "FP64 key + int32 row",
+          "lifetime": "native sort invocation",
+          "storage": "device global arrays; sort scratch unknown",
+          "synchronization": "native Thrust sort completion",
+          "owner_identity": "slot -> permuted slot, physical row preserved"
+        },
+        {
+          "producer": "SORT",
+          "consumer": "SPLIT",
+          "value": "sorted physical-row order",
+          "value_type": "int32 order[N]",
+          "lifetime": "split through later build/query",
+          "storage": "device global id_list[N]",
+          "synchronization": "native sort completion before split",
+          "owner_identity": "parent interval -> child subinterval"
+        },
+        {
+          "producer": "DATA",
+          "consumer": "BOUNDARY_READ",
+          "value": "child first-row and parent-pivot coordinates",
+          "value_type": "FP32 x,y",
+          "lifetime": "boundary coordinate iteration",
+          "storage": "device global to registers",
+          "synchronization": "sorted order ready",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "BOUNDARY_READ",
+          "value": "child lid and inherited pivot",
+          "value_type": "int32 lid,pid",
+          "lifetime": "child boundary computation",
+          "storage": "registers / node metadata",
+          "synchronization": "native sort completion",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "BOUNDARY_READ",
+          "consumer": "BOUNDARY_NOMINAL",
+          "value": "unchanged boundary operands",
+          "value_type": "FP32 subtraction and float accumulation",
+          "lifetime": "boundary task",
+          "storage": "registers",
+          "synchronization": "program order",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "BOUNDARY_NOMINAL",
+          "consumer": "TREE",
+          "value": "TN.min_dis and native flags",
+          "value_type": "FP32 scalar + int32 metadata",
+          "lifetime": "persistent tree",
+          "storage": "device global nodes/flags",
+          "synchronization": "existing split completion / device synchronization",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "TREE",
+          "value": "child lid,size,pid,is_leaf",
+          "value_type": "TN metadata",
+          "lifetime": "persistent tree",
+          "storage": "device global node_list",
+          "synchronization": "existing split completion / device synchronization",
+          "owner_identity": "child"
+        },
+        {
+          "producer": "TREE",
+          "consumer": "VALIDATE",
+          "value": "final nodes, empty flags, physical permutation",
+          "value_type": "TN + int32",
+          "lifetime": "host refresh scope",
+          "storage": "D2H to host vectors",
+          "synchronization": "existing refresh synchronization and copies",
+          "owner_identity": "final tree"
+        },
+        {
+          "producer": "VALIDATE",
+          "consumer": "PUBLISH",
+          "value": "valid physical permutation and node/leaf coverage",
+          "value_type": "structural status",
+          "lifetime": "refresh -> epoch publication",
+          "storage": "host status / managed Bounds metadata",
+          "synchronization": "host validation succeeds before publication",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "PUBLISH",
+          "consumer": "QUERY",
+          "value": "bounds base/nodes/n/d/epoch identity",
+          "value_type": "pointer/int/uint64 metadata",
+          "lifetime": "persistent until refresh/release",
+          "storage": "managed metadata",
+          "synchronization": "all bound producers complete before publication",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "NATIVE_READ",
+          "consumer": "SAFE",
+          "value": "same loaded coordinate operands, explicitly promoted",
+          "value_type": "FP64 x,y; ordered RD/RU loop",
+          "lifetime": "coordinate iteration / pair",
+          "storage": "registers",
+          "synchronization": "program order; native nominal path preserved",
+          "owner_identity": "physical pair (r,p), scoring parent"
+        },
+        {
+          "producer": "SAFE",
+          "consumer": "SIDECAR",
+          "value": "pair lower and upper endpoints",
+          "value_type": "two FP64",
+          "lifetime": "score to child reduction in same level",
+          "storage": "lo[r],hi[r] device global, keyed by physical row",
+          "synchronization": "score completion before native sort/split consumer",
+          "owner_identity": "physical row r in this level; parent pivot p"
+        },
+        {
+          "producer": "SIDECAR",
+          "consumer": "GATHER",
+          "value": "endpoints by sorted physical row",
+          "value_type": "two FP64",
+          "lifetime": "post-sort child interval traversal",
+          "storage": "global -> registers",
+          "synchronization": "score ready and native sort complete",
+          "owner_identity": "row r -> child owner"
+        },
+        {
+          "producer": "SORT",
+          "consumer": "GATHER",
+          "value": "r = id_list[s]",
+          "value_type": "int32",
+          "lifetime": "one gather iteration",
+          "storage": "existing global order -> register",
+          "synchronization": "native sort completion",
+          "owner_identity": "sorted slot s -> physical row r"
+        },
+        {
+          "producer": "SPLIT",
+          "consumer": "GATHER",
+          "value": "[child.lid,child.lid+child.size) and inherited pivot",
+          "value_type": "int32 segment descriptor",
+          "lifetime": "child reduction",
+          "storage": "existing metadata / split-local registers",
+          "synchronization": "child descriptor ready; same-block barrier if cooperative",
+          "owner_identity": "parent -> child, no materialized N-owner map"
+        },
+        {
+          "producer": "GATHER",
+          "consumer": "REDUCE",
+          "value": "finite nonnegative pair endpoints",
+          "value_type": "two FP64",
+          "lifetime": "thread partials through block/segment completion",
+          "storage": "registers/shared; implementation scratch unknown",
+          "synchronization": "reduction barriers required by chosen mapping",
+          "owner_identity": "child member set"
+        },
+        {
+          "producer": "REDUCE",
+          "consumer": "BOUNDS",
+          "value": "min(lo), max(hi); root special [0,+inf]",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent to query/refresh",
+          "storage": "global final lo[NN],hi[NN]",
+          "synchronization": "reduction completion; consume-before-sidecar-overwrite",
+          "owner_identity": "child/node"
+        },
+        {
+          "producer": "REDUCE",
+          "consumer": "NEXT_LEVEL",
+          "value": "level endpoints fully consumed",
+          "value_type": "completion event/control",
+          "lifetime": "end level -> next producer",
+          "storage": "stream/control, not an N-array",
+          "synchronization": "done before overwriting lo[r],hi[r]",
+          "owner_identity": "this level -> next level"
+        },
+        {
+          "producer": "BOUNDS",
+          "consumer": "PUBLISH",
+          "value": "final node endpoints",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global",
+          "synchronization": "all level reductions done; validation retained",
+          "owner_identity": "tree epoch"
+        },
+        {
+          "producer": "BOUNDS",
+          "consumer": "QUERY",
+          "value": "published lower and upper bounds",
+          "value_type": "two FP64 per node",
+          "lifetime": "persistent",
+          "storage": "device global",
+          "synchronization": "epoch guard after completion",
+          "owner_identity": "query node"
+        }
+      ],
+      "memory": [
+        {
+          "state": "coordinate payload",
+          "producer": "input",
+          "consumer": "scoring/boundary/refit or certificate",
+          "cardinality": 960000000,
+          "bytes": 3840000000,
+          "lifetime": "whole index epoch",
+          "storage": "device-accessible global"
+        },
+        {
+          "state": "native nominal keys",
+          "producer": "scoring",
+          "consumer": "native sort",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "allocation across build; values one level",
+          "storage": "device global"
+        },
+        {
+          "state": "physical order",
+          "producer": "native init/sort",
+          "consumer": "split/gather/query/validation",
+          "cardinality": 1000000,
+          "bytes": 4000000,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "TN nodes",
+          "producer": "split",
+          "consumer": "validation/refit/query",
+          "cardinality": 111111,
+          "bytes": 2222220,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "empty flags",
+          "producer": "init/split",
+          "consumer": "validation/refit",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "persistent tree",
+          "storage": "device global"
+        },
+        {
+          "state": "split flags",
+          "producer": "init/split",
+          "consumer": "host-observable reduce",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "construction; freed at return",
+          "storage": "device global"
+        },
+        {
+          "state": "parent pivot list",
+          "producer": "scoring",
+          "consumer": "native split",
+          "cardinality": 111111,
+          "bytes": 444444,
+          "lifetime": "construction; values current level",
+          "storage": "device global"
+        },
+        {
+          "state": "final lower+upper",
+          "producer": "numeric reduction",
+          "consumer": "query",
+          "cardinality": 222222,
+          "bytes": 1777776,
+          "lifetime": "persistent until refresh/release",
+          "storage": "device global"
+        },
+        {
+          "state": "native sort scratch",
+          "producer": "native sort",
+          "consumer": "native sort",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "sort invocation",
+          "storage": "device allocator-dependent"
+        },
+        {
+          "state": "host validation vectors",
+          "producer": "refresh D2H / host init",
+          "consumer": "structure checks",
+          "cardinality": "nodes NN + empty NN + order/seen/cover 3N",
+          "bytes": 14666664,
+          "lifetime": "refresh host scope",
+          "storage": "host heap payload; allocator overhead unknown"
+        },
+        {
+          "state": "level lower sidecar",
+          "producer": "safe scoring",
+          "consumer": "child gather/reduction",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "one level; no overwrite before consume done",
+          "storage": "device global, physical-row indexed"
+        },
+        {
+          "state": "level upper sidecar",
+          "producer": "safe scoring",
+          "consumer": "child gather/reduction",
+          "cardinality": 1000000,
+          "bytes": 8000000,
+          "lifetime": "one level; no overwrite before consume done",
+          "storage": "device global, physical-row indexed"
+        },
+        {
+          "state": "additional N-entry owner map",
+          "producer": "none",
+          "consumer": "none",
+          "cardinality": 0,
+          "bytes": 0,
+          "lifetime": "none; segment owner computed from existing TN",
+          "storage": "none"
+        },
+        {
+          "state": "additional endpoint permutation payload",
+          "producer": "none",
+          "consumer": "none",
+          "cardinality": 0,
+          "bytes": 0,
+          "lifetime": "none; existing id_list carries physical identity",
+          "storage": "none"
+        },
+        {
+          "state": "certificate/reduction registers and shared scratch",
+          "producer": "score/gather",
+          "consumer": "safe loop/segment reduce",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "producer or reduction block",
+          "storage": "registers/shared; compiler footprint unknown"
+        },
+        {
+          "state": "alignment padding/allocator metadata",
+          "producer": "allocator",
+          "consumer": "allocator",
+          "cardinality": "implementation-dependent",
+          "bytes": null,
+          "lifetime": "sidecar allocation",
+          "storage": "unknown beyond two 8-byte-aligned arrays"
+        }
+      ],
+      "execution": "Z: call direct split-segment aggregation ownership-aware propagation; execution naming/placement only relative to the strong C2 above"
+    }
+  }
+}

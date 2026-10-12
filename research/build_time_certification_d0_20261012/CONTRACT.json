@@ -1,0 +1,41 @@
+{
+  "id": "gtspp_20261012_build_time_certification_d0",
+  "parent_commit": "04c4e0d7d891ce348c2e29bbd5a4e65bf0834b6a",
+  "gate0_decision_sha256": "06df80f604981616639127e8e78ead4d69497f58bca93f8330bcc8071f807e3f",
+  "pair_result_sha256": "e9f4741fee50d493b912dcc47d8b8af5798c4f82900e82985dfe68e87f98547e",
+  "user_plan_sha256": "aeb0507e4fcfae0489ab0de0d166970d1e671803b5288c63b011c65af1ab9f5a",
+  "gpu_process_budget": 0,
+  "prototype_budget": 0,
+  "timing_budget": 0,
+  "coordinate_shape": {
+    "n": 1000000,
+    "d": 960,
+    "coordinate_bytes": 4,
+    "levels": 5,
+    "tree_order": 10
+  },
+  "comparison": "B0 vs strongest ordinary C2 vs at most one retained B1 design; no implementation.",
+  "invariants": [
+    "Native FP32 subtraction and nominal double accumulation/key unchanged",
+    "Native sort value type, tie ordering, pivots, boundary float arithmetic and topology unchanged",
+    "Final node lo/hi bit-identical; no tolerance or widened-output substitution",
+    "Occurrence identity is physical row, not logical user ID",
+    "Host structural validation, epoch checks and query correctness retained"
+  ],
+  "decision_rules": {
+    "pass_rule": "A constructive B1 removes a real necessary C2 dependency under all frozen invariants, and the mechanism-specific nearest source does not subsume it.",
+    "conditional_rule": "A specified graph has a real physical difference, but prior overlap or cost advantage is unresolved; no implementation in this round.",
+    "kill_rule": "No admitted B1 deletion, or normalized graph equivalence; stop this thesis before implementation. Unknown future mechanisms are not disproved."
+  },
+  "prohibited": [
+    "GPU processes",
+    "CPU/GPU prototype",
+    "timing or milliseconds forecast",
+    "baseline external rerun",
+    "global 5M certificate cache",
+    "changing lo/hi contract",
+    "calling C2 a contribution",
+    "simultaneously retaining X/Y/Z",
+    "paper edits"
+  ]
+}
