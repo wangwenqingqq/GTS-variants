@@ -1,0 +1,123 @@
+{
+  "experiment": "GTSPP_20261012_NON_PADDED_B1_BASELINE",
+  "base_commit": "682c40488fdc7c2f55ec64776790d5da1b359385",
+  "plan_sha256": "ced9391e8beff3b6e3b06f4eae79a963a165374fb98cf6d04bca69ed15525763",
+  "scope": "baseline strengthening / research-direction gate; no novelty, compression or manuscript change",
+  "Gate0": {
+    "classification": "NO_MATCHING_PATH (inspected routes)",
+    "selected_path": "C",
+    "prior_art_sha256": "3c42169b34ff3bd17786aab4ca62d254ba0ae522af01a262509a6f1b9d225f6f",
+    "sources_sha256": "c31444cc7ad9f9d1493fce2fbfa805a853d5f91e96e02cfc951eef0fbd4ea8e4"
+  },
+  "workload": {
+    "dataset": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "dtype": "FP32 row-major",
+    "metric": "L2Unexpanded squared differences",
+    "radius_bits": "0x3f34a3d8",
+    "queries": "original fixed32, same order;8 original warmup queries then32 measured",
+    "snapshot": "initial",
+    "logical_database_bytes": 3840000000,
+    "useful_FP32_ops_per_query": 2879000000
+  },
+  "semantics": {
+    "N0": "immutable native batch B1 binary / original Scan::range",
+    "N1": "direct FP32 squared differences/FMA with warp sum; no expanded-L2/norm-dot reformulation",
+    "membership": "inclusive double(FP32_squared)<=double(radius)^2; exact complete members against ordered-FP64 oracle;0 FN/FP, no tolerance",
+    "outputs": "all IDs ascending row index; duplicate vectors remain separate IDs; FP32 Euclidean fields plus inherited charged FP64 cast of native FP32 squared scores",
+    "fields": "both squared-score and field-squared relative error <=5e-5*max(1,ordered_FP64_score); candidate vs native also <=5e-5 on native scale; candidate not promised bit identity",
+    "N0_identity": "all three complete payload hashes must match parent keeper",
+    "R0": "unchanged reachable READ_ONLY coalesced coordinate checksum plus reduction/H2D/scalarD2H; structural reference, not search and not universal lower bound"
+  },
+  "hardware": {
+    "device": "same admitted RTX PRO6000 Blackwell Server Edition as prior campaign;188SM;placement private",
+    "driver": "590.48.01",
+    "nvcc": "13.1 V13.1.115",
+    "ncu": "2025.4.1.0",
+    "cuVS": "26.8.1",
+    "no_settings_changes": true,
+    "isolation": "original static_guard two-sided process starttime; existing four shared per-GPU locks plus campaign flock; inspect before each process; fail first foreign activity"
+  },
+  "qualification": {
+    "candidate": "bounded4096 and target1M:all40 queries and complete arrays checked; fixtures include duplicates,empty result,inclusive boundary,warp tails,pointer churn/two streams/100 repetitions",
+    "sanitizers": [
+      "memcheck",
+      "racecheck",
+      "synccheck"
+    ],
+    "sanitizer_scope": "same candidate binary synthetic exact/boundary/tail/stress fixtures; full-N quality separately; no full-N sanitizer claim",
+    "target_quality_first": true,
+    "Graph": "not used/admitted; no Graph or all-shape production claim"
+  },
+  "measurement": {
+    "primary": "Host request ready to complete Host output ready; query H2D,distance,threshold,complete materialization,D2H,completion",
+    "excluded": [
+      "context creation",
+      "dataset disk load",
+      "one-time build",
+      "profiler overhead"
+    ],
+    "fresh_processes_per_mode": 6,
+    "warmup": 8,
+    "measured": 32,
+    "round_orders": [
+      [
+        "N0",
+        "N1",
+        "R0"
+      ],
+      [
+        "R0",
+        "N1",
+        "N0"
+      ],
+      [
+        "N0",
+        "N1",
+        "R0"
+      ],
+      [
+        "R0",
+        "N1",
+        "N0"
+      ],
+      [
+        "N0",
+        "N1",
+        "R0"
+      ],
+      [
+        "R0",
+        "N1",
+        "N0"
+      ]
+    ],
+    "estimator": "median of six process mean ACKs; process p10/p90;32-query pass wall retained",
+    "paired": "genuinely round-paired geometric N1/N0 and R0/N0 ratios; process bootstrap20000 seed2026101212;wins and both order strata retained",
+    "recovery": "(medianN0-medianN1)/(medianN0-medianR0); bootstrap matched-round triples for CI; undefined/nonpositive denominator unclassified",
+    "bandwidth": "fresh independent main-kernel diagnostic per mode:DRAM bytes/kernel duration, decimal GB/s; not logical bytes divided by full ACK",
+    "profiler": "one independent selected first-measured-query capture each N0,N1,R0; NCU timings diagnostic only; no profiler numbers in primary comparison"
+  },
+  "gates": {
+    "BASELINE_FIXED_MEMORY_LIMIT": "N1 inflation<=1.5 AND latency_recovery>=.70 AND N1<=1.15*R0",
+    "BASELINE_FIXED_RESIDUAL_COMPUTE": "N1 inflation<=1.5 AND N1>1.15*R0 AND (N1-R0)/N1>=.20; label triggers future primitive diagnosis, not proof of compute saturation",
+    "BASELINE_NOT_FIXED": "N1 inflation>2 OR latency_recovery<.30",
+    "uncovered": "human clarified:UNCLASSIFIED; keep original thresholds,stop follow-on directions; no forced label",
+    "confidence": "original point gates, all process CIs/order strata disclosed; measurement or quality/provenance failure means unvalidated, not a mechanistic class"
+  },
+  "budget": {
+    "qualification": 8,
+    "primary": 18,
+    "NCU": 3,
+    "conditional_dynamic": 2,
+    "max_top_level_GPU_starts": 31,
+    "reserve": 0,
+    "additional_R0_NCU_reason": "needed for requested same-round bandwidth recovery; plan N0/N1 captures retained",
+    "dynamic_admission": "only after static quality+work gate and demonstrably faster same-contract N1; separate frozen dynamic contract before adaptation;one old/new336-event pair only,no long workflow"
+  },
+  "stop": "first runtime/isolation/quality/sanitizer/provenance failure; retain failed+unexecuted jobs; no automatic retry,tuning or replacement",
+  "conditional_direction": "MEMORY_LIMIT permits decision to enter representation only; no Gate1 implementation this round; residual compute requires new prior-art kill test",
+  "publication": "task-owned source,scalar evidence,hashes,figures only;vectors,full output,placement/vendor reports/SASS stay private;Overleaf manuscript untouched"
+}

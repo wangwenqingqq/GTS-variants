@@ -1,0 +1,433 @@
+{
+  "kernel": "squared_l2_b1(const float *, const float *, float *, int, int)",
+  "diagnostic_only": true,
+  "capture_count": 1,
+  "metrics": {
+    "dram__bytes.avg": {
+      "value": 240819840.0,
+      "unit": "byte"
+    },
+    "dram__bytes.max": {
+      "value": 240835072.0,
+      "unit": "byte"
+    },
+    "dram__bytes.min": {
+      "value": 240809216.0,
+      "unit": "byte"
+    },
+    "dram__bytes.sum": {
+      "value": 3853117440.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_read.avg": {
+      "value": 240009136.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_read.max": {
+      "value": 240018176.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_read.min": {
+      "value": 240004096.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_read.sum": {
+      "value": 3840146176.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_write.avg": {
+      "value": 810704.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_write.max": {
+      "value": 816896.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_write.min": {
+      "value": 805120.0,
+      "unit": "byte"
+    },
+    "dram__bytes_op_write.sum": {
+      "value": 12971264.0,
+      "unit": "byte"
+    },
+    "gpu__time_duration.avg": {
+      "value": 2517536.0,
+      "unit": "ns"
+    },
+    "gpu__time_duration.max": {
+      "value": 2517536.0,
+      "unit": "ns"
+    },
+    "gpu__time_duration.min": {
+      "value": 2517536.0,
+      "unit": "ns"
+    },
+    "gpu__time_duration.sum": {
+      "value": 2517536.0,
+      "unit": "ns"
+    },
+    "launch__barrier_count": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__block_dim_x": {
+      "value": 256.0,
+      "unit": "block"
+    },
+    "launch__block_dim_y": {
+      "value": 1.0,
+      "unit": "block"
+    },
+    "launch__block_dim_z": {
+      "value": 1.0,
+      "unit": "block"
+    },
+    "launch__block_size": {
+      "value": 256.0,
+      "unit": ""
+    },
+    "launch__cluster_dim_x": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__cluster_dim_y": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__cluster_dim_z": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__cluster_max_active": {
+      "value": 0.0,
+      "unit": "cluster"
+    },
+    "launch__cluster_max_potential_size": {
+      "value": 8.0,
+      "unit": "block"
+    },
+    "launch__cluster_scheduling_policy": {
+      "value": "PolicySpread",
+      "unit": ""
+    },
+    "launch__cluster_size": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__context_id": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "launch__device_id": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__execution_model": {
+      "value": "SIMT",
+      "unit": ""
+    },
+    "launch__func_cache_config": {
+      "value": "CachePreferNone",
+      "unit": ""
+    },
+    "launch__function_pcs": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "launch__grid_dim_x": {
+      "value": 125000.0,
+      "unit": ""
+    },
+    "launch__grid_dim_y": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "launch__grid_dim_z": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "launch__grid_size": {
+      "value": 125000.0,
+      "unit": ""
+    },
+    "launch__occupancy_cluster_gpu_pct": {
+      "value": 0.0,
+      "unit": "%"
+    },
+    "launch__occupancy_cluster_pct": {
+      "value": 0.0,
+      "unit": "%"
+    },
+    "launch__occupancy_limit_barriers": {
+      "value": 24.0,
+      "unit": "block"
+    },
+    "launch__occupancy_limit_blocks": {
+      "value": 24.0,
+      "unit": "block"
+    },
+    "launch__occupancy_limit_registers": {
+      "value": 6.0,
+      "unit": "block"
+    },
+    "launch__occupancy_limit_shared_mem": {
+      "value": 16.0,
+      "unit": "block"
+    },
+    "launch__occupancy_limit_warps": {
+      "value": 6.0,
+      "unit": "block"
+    },
+    "launch__occupancy_per_barrier_count": {
+      "value": 512.0,
+      "unit": ""
+    },
+    "launch__occupancy_per_block_size": {
+      "value": 2484.0,
+      "unit": ""
+    },
+    "launch__occupancy_per_cluster_size": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__occupancy_per_register_count": {
+      "value": 4976.0,
+      "unit": ""
+    },
+    "launch__occupancy_per_shared_mem_size": {
+      "value": 1176.0,
+      "unit": ""
+    },
+    "launch__persisting_l2_cache_size": {
+      "value": 25165824.0,
+      "unit": "byte"
+    },
+    "launch__preferred_cluster_dim_x": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__preferred_cluster_dim_y": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__preferred_cluster_dim_z": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__preferred_cluster_size": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__registers_per_thread": {
+      "value": 37.0,
+      "unit": "register/thread"
+    },
+    "launch__registers_per_thread_allocated": {
+      "value": 40.0,
+      "unit": "register/thread"
+    },
+    "launch__shared_mem_config_size": {
+      "value": 16384.0,
+      "unit": "byte"
+    },
+    "launch__shared_mem_per_block": {
+      "value": 1024.0,
+      "unit": "byte/block"
+    },
+    "launch__shared_mem_per_block_allocated": {
+      "value": 1024.0,
+      "unit": "byte/block"
+    },
+    "launch__shared_mem_per_block_driver": {
+      "value": 1024.0,
+      "unit": "byte/block"
+    },
+    "launch__shared_mem_per_block_dynamic": {
+      "value": 0.0,
+      "unit": "byte/block"
+    },
+    "launch__shared_mem_per_block_static": {
+      "value": 0.0,
+      "unit": "byte/block"
+    },
+    "launch__sm_count": {
+      "value": 188.0,
+      "unit": "SM"
+    },
+    "launch__stack_size": {
+      "value": 1024.0,
+      "unit": ""
+    },
+    "launch__stream_id": {
+      "value": 13.0,
+      "unit": ""
+    },
+    "launch__thread_count": {
+      "value": 32000000.0,
+      "unit": "thread"
+    },
+    "launch__tpc_count": {
+      "value": 94.0,
+      "unit": ""
+    },
+    "launch__tpc_enabled": {
+      "value": "all",
+      "unit": ""
+    },
+    "launch__user_grid_dim_x": {
+      "value": 125000.0,
+      "unit": ""
+    },
+    "launch__user_grid_dim_y": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "launch__user_grid_dim_z": {
+      "value": 1.0,
+      "unit": ""
+    },
+    "launch__user_grid_size": {
+      "value": 125000.0,
+      "unit": ""
+    },
+    "launch__uses_blocks_as_clusters": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__uses_cdp": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__uses_green_context": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__uses_mps": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__uses_vgpu": {
+      "value": 0.0,
+      "unit": ""
+    },
+    "launch__waves_per_multiprocessor": {
+      "value": 110.82,
+      "unit": ""
+    },
+    "lts__t_bytes.avg": {
+      "value": 60523929.5,
+      "unit": "byte"
+    },
+    "lts__t_bytes.max": {
+      "value": 60694816.0,
+      "unit": "byte"
+    },
+    "lts__t_bytes.min": {
+      "value": 60501152.0,
+      "unit": "byte"
+    },
+    "lts__t_bytes.sum": {
+      "value": 3873531488.0,
+      "unit": "byte"
+    },
+    "sm__maximum_warps_avg_per_active_cycle": {
+      "value": 48.0,
+      "unit": "warp"
+    },
+    "sm__maximum_warps_per_active_cycle_pct": {
+      "value": 100.0,
+      "unit": "%"
+    },
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+      "value": 11.97,
+      "unit": "%"
+    },
+    "sm__throughput.max.pct_of_peak_sustained_elapsed": {
+      "value": 12.42,
+      "unit": "%"
+    },
+    "sm__throughput.min.pct_of_peak_sustained_elapsed": {
+      "value": 11.79,
+      "unit": "%"
+    },
+    "sm__throughput.sum.pct_of_peak_sustained_elapsed": {
+      "value": 11.97,
+      "unit": "%"
+    },
+    "sm__warps_active.avg.pct_of_peak_sustained_active": {
+      "value": 85.35,
+      "unit": "%"
+    },
+    "sm__warps_active.max.pct_of_peak_sustained_active": {
+      "value": 86.18,
+      "unit": "%"
+    },
+    "sm__warps_active.min.pct_of_peak_sustained_active": {
+      "value": 84.55,
+      "unit": "%"
+    },
+    "sm__warps_active.sum.pct_of_peak_sustained_active": {
+      "value": 85.35,
+      "unit": "%"
+    },
+    "smsp__maximum_warps_avg_per_active_cycle": {
+      "value": 12.0,
+      "unit": "warp"
+    },
+    "smsp__sass_thread_inst_executed_op_fadd_pred_on.avg": {
+      "value": 1448138.3,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fadd_pred_on.max": {
+      "value": 2079990.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fadd_pred_on.min": {
+      "value": 1010592.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fadd_pred_on.sum": {
+      "value": 1089000000.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_ffma_pred_on.avg": {
+      "value": 1276595.74,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_ffma_pred_on.max": {
+      "value": 1833600.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_ffma_pred_on.min": {
+      "value": 890880.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_ffma_pred_on.sum": {
+      "value": 960000000.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fmul_pred_on.avg": {
+      "value": 0.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fmul_pred_on.max": {
+      "value": 0.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fmul_pred_on.min": {
+      "value": 0.0,
+      "unit": "inst"
+    },
+    "smsp__sass_thread_inst_executed_op_fmul_pred_on.sum": {
+      "value": 0.0,
+      "unit": "inst"
+    }
+  },
+  "kernel_ms": 2.517536,
+  "DRAM_GBs": 1530.5113571365014,
+  "read_GBs": 1525.3589922845192,
+  "executed_FP32_proxy": 3009000000.0,
+  "work_inflation": 1.04515456755818,
+  "raw_CSV_sha256": "f8afe63b09b55b956167c5a5478de251cc5bb2b858f965e8d15d8a9cad31c29f"
+}

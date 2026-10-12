@@ -1,0 +1,305 @@
+{
+  "checked_before_implementation": true,
+  "refs": {
+    "NVIDIA/cuvs": {
+      "main": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "latest_tag": "v26.10.00",
+      "latest_commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "checked_unix": 1791811010.130047
+    },
+    "NVIDIA/raft": {
+      "main": "56b4b2ef9e4b7abec6b2ef122fc24cf9b9d5a3dc",
+      "latest_tag": "v26.08.00",
+      "latest_commit": "ebf92684b8a15addcddb43f442a382d528e8bd77",
+      "checked_unix": 1791811013.613317
+    },
+    "facebookresearch/faiss": {
+      "main": "cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc",
+      "latest_tag": "v1.15.1",
+      "latest_commit": "75c755c5a1fc854756aaf3bd1131213aeb21d8d1",
+      "checked_unix": 1791811016.695082
+    },
+    "NVIDIA/cutlass": {
+      "main": "ee98dbdfd5727085ef86a018009215c2230904e3",
+      "latest_tag": "v4.8.0",
+      "latest_commit": "098de2a652cf8f00fd70b2df54051c7eccbb855a",
+      "checked_unix": 1791811020.930681
+    }
+  },
+  "files": [
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/distance/detail/pairwise_matrix/dispatch-inl.cuh",
+      "bytes": 4790,
+      "sha256": "2763f35cbaf524f9d9c7582a9e99c51bfc7dd1f5ece7132a6999b55be144a92d",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/distance/detail/pairwise_matrix/dispatch-inl.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/distance/detail/pairwise_matrix/jit_lto_kernels/pairwise_matrix_jit.cuh",
+      "bytes": 7541,
+      "sha256": "34e83e5d7e7a504955406d5a260381b5bc7fb14a87397b906af787a154e46d48",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/distance/detail/pairwise_matrix/jit_lto_kernels/pairwise_matrix_jit.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/distance/detail/pairwise_matrix/pairwise_matrix_sm80.cuh",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/distance/detail/pairwise_matrix/pairwise_matrix_sm80.cuh",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/distance/detail/distance_ops/l2_unexp.cuh",
+      "bytes": 2136,
+      "sha256": "7c060101017b99fc34992afe7903420831bf77c4aba02bcb4ed4adc62cc4d11e",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/distance/detail/distance_ops/l2_unexp.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/neighbors/detail/knn_brute_force.cuh",
+      "bytes": 43787,
+      "sha256": "55cc117026961c35343fecf16a0a9bbf5dd17c2f8c96f1342821d235c44ce4ad",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/neighbors/detail/knn_brute_force.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/neighbors/detail/faiss_distance.cuh",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/neighbors/detail/faiss_distance.cuh",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/include/cuvs/distance/pairwise_distance.hpp",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/include/cuvs/distance/pairwise_distance.hpp",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/src/distance/detail/pairwise_matrix/dispatch-inl.cuh",
+      "bytes": 4790,
+      "sha256": "2763f35cbaf524f9d9c7582a9e99c51bfc7dd1f5ece7132a6999b55be144a92d",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/src/distance/detail/pairwise_matrix/dispatch-inl.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/src/distance/detail/pairwise_matrix/jit_lto_kernels/pairwise_matrix_jit.cuh",
+      "bytes": 7541,
+      "sha256": "34e83e5d7e7a504955406d5a260381b5bc7fb14a87397b906af787a154e46d48",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/src/distance/detail/pairwise_matrix/jit_lto_kernels/pairwise_matrix_jit.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/src/distance/detail/pairwise_matrix/pairwise_matrix_sm80.cuh",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/src/distance/detail/pairwise_matrix/pairwise_matrix_sm80.cuh",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/src/distance/detail/distance_ops/l2_unexp.cuh",
+      "bytes": 2136,
+      "sha256": "7c060101017b99fc34992afe7903420831bf77c4aba02bcb4ed4adc62cc4d11e",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/src/distance/detail/distance_ops/l2_unexp.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/src/neighbors/detail/knn_brute_force.cuh",
+      "bytes": 43787,
+      "sha256": "55cc117026961c35343fecf16a0a9bbf5dd17c2f8c96f1342821d235c44ce4ad",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/src/neighbors/detail/knn_brute_force.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/src/neighbors/detail/faiss_distance.cuh",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/src/neighbors/detail/faiss_distance.cuh",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24ee1bf1cb17cad0ac611e39643af39ee1870124",
+      "variant": "release",
+      "path": "cpp/include/cuvs/distance/pairwise_distance.hpp",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24ee1bf1cb17cad0ac611e39643af39ee1870124/cpp/include/cuvs/distance/pairwise_distance.hpp",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/raft",
+      "commit": "56b4b2ef9e4b7abec6b2ef122fc24cf9b9d5a3dc",
+      "variant": "main",
+      "path": "cpp/include/raft/linalg/contractions.cuh",
+      "bytes": 9116,
+      "sha256": "5bfe2d1c62426413d889722c00287b8d2d45f98ab45f93b6dc4baeac6597cd32",
+      "url": "https://raw.githubusercontent.com/NVIDIA/raft/56b4b2ef9e4b7abec6b2ef122fc24cf9b9d5a3dc/cpp/include/raft/linalg/contractions.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "facebookresearch/faiss",
+      "commit": "cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc",
+      "variant": "main",
+      "path": "faiss/gpu/impl/Distance.cu",
+      "bytes": 23651,
+      "sha256": "545ab0e6bca00bfdd6837ae087b84bbb88ecc12ed03f688741997c0b19b8d70f",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc/faiss/gpu/impl/Distance.cu",
+      "status": "retrieved"
+    },
+    {
+      "repo": "facebookresearch/faiss",
+      "commit": "cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc",
+      "variant": "main",
+      "path": "faiss/gpu/impl/GeneralDistance.cuh",
+      "bytes": 15553,
+      "sha256": "51d610d931fdb51d1e3a7a0e4209775f8a93a632d08c7c831418c382421a317b",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc/faiss/gpu/impl/GeneralDistance.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "facebookresearch/faiss",
+      "commit": "cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc",
+      "variant": "main",
+      "path": "faiss/gpu/impl/DistanceUtils.cuh",
+      "bytes": 11790,
+      "sha256": "cc56a54feb20b10b1167d900f630747f5585302da5f391109d083d0c5378d752",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc/faiss/gpu/impl/DistanceUtils.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "facebookresearch/faiss",
+      "commit": "cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc",
+      "variant": "main",
+      "path": "faiss/gpu/GpuDistance.cu",
+      "bytes": 23648,
+      "sha256": "1a23d93c8b43d955867403e7dbea180c1bbe7f6d1b5a3f8fbb80dba6b65c362d",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc/faiss/gpu/GpuDistance.cu",
+      "status": "retrieved"
+    },
+    {
+      "repo": "facebookresearch/faiss",
+      "commit": "cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc",
+      "variant": "main",
+      "path": "faiss/gpu/GpuDistance.h",
+      "bytes": 5961,
+      "sha256": "e037302f0f34bb7fc28bcff09ef531ec045fe0cdc4ff370406ebf304f1b6f81d",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/cec5702b0b1c31f242b9d35d5f193b0d80ccd9dc/faiss/gpu/GpuDistance.h",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cutlass",
+      "commit": "ee98dbdfd5727085ef86a018009215c2230904e3",
+      "variant": "main",
+      "path": "examples/000_matrix_multiply/matrix_multiply.cu",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cutlass/ee98dbdfd5727085ef86a018009215c2230904e3/examples/000_matrix_multiply/matrix_multiply.cu",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/distance/detail/pairwise_matrix/dispatch_sm80.cuh",
+      "bytes": 2905,
+      "sha256": "a191bc47523393353e4b4f6402cde2bcb9773ae029c49913db2d3ba6d8eb7550",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/distance/detail/pairwise_matrix/dispatch_sm80.cuh",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/neighbors/detail/faiss_distance_utils.h",
+      "bytes": 2290,
+      "sha256": "15190cabd7e8f62c331b4b3e7145778443cae9a4a3b15e148c7010a1842a5142",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/neighbors/detail/faiss_distance_utils.h",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/include/cuvs/distance/distance.hpp",
+      "bytes": 16696,
+      "sha256": "4b1509dcb9dda80af570c5b265602445ede8b4d6081cce2d235901aa34e841b3",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/include/cuvs/distance/distance.hpp",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cuvs",
+      "commit": "24b0b17069ee1547354d15847d9c614dd4fb4a43",
+      "variant": "main",
+      "path": "cpp/src/distance/detail/pairwise_matrix/jit_lto_kernels/pairwise_matrix_fragments.cu",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cuvs/24b0b17069ee1547354d15847d9c614dd4fb4a43/cpp/src/distance/detail/pairwise_matrix/jit_lto_kernels/pairwise_matrix_fragments.cu",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "NVIDIA/cutlass",
+      "commit": "ee98dbdfd5727085ef86a018009215c2230904e3",
+      "variant": "main",
+      "path": "examples/00_basic_gemm/basic_gemm.cu",
+      "bytes": 14698,
+      "sha256": "2abd83bd93f3b53b5acfba545adc1fab753540adf9afd67bddcba4255d47cc3b",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cutlass/ee98dbdfd5727085ef86a018009215c2230904e3/examples/00_basic_gemm/basic_gemm.cu",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cutlass",
+      "commit": "ee98dbdfd5727085ef86a018009215c2230904e3",
+      "variant": "main",
+      "path": "include/cutlass/gemm/kernel/gemv.h",
+      "bytes": 18403,
+      "sha256": "c2c1a17e56a7c36f036dbd0fc5e8b5755b6345b01eab5ac2c678f926f86ef3ce",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cutlass/ee98dbdfd5727085ef86a018009215c2230904e3/include/cutlass/gemm/kernel/gemv.h",
+      "status": "retrieved"
+    },
+    {
+      "repo": "NVIDIA/cutlass",
+      "commit": "ee98dbdfd5727085ef86a018009215c2230904e3",
+      "variant": "main",
+      "path": "include/cutlass/gemm/kernel/gemv_batched_strided.h",
+      "bytes": 8953,
+      "sha256": "0ed102b15d23baf59978d952172c39c8298bf125b9ad405811c0c7fe4822c7e2",
+      "url": "https://raw.githubusercontent.com/NVIDIA/cutlass/ee98dbdfd5727085ef86a018009215c2230904e3/include/cutlass/gemm/kernel/gemv_batched_strided.h",
+      "status": "retrieved"
+    }
+  ],
+  "installed_source_commit": "88cd8fedf10bd878f3c1ae28c98c9dfdeb73bb95",
+  "installed_RAFT_commit": "ebf92684b8a15addcddb43f442a382d528e8bd77"
+}

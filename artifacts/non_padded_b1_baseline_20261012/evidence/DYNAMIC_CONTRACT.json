@@ -1,0 +1,60 @@
+{
+  "before_GPU": true,
+  "static_decision_sha256": "cc4a32afbaf7d3e8dacfb528cabd3519549db892487e6c69b603154d427a7ad7",
+  "source_hashes": {
+    "artifacts/non_padded_b1_baseline_20261012/CONTRACT.json": "6647d7ed4a4454f9b848e41234b78cd98cdf052718b5c3b0788921ece392ba72",
+    "artifacts/non_padded_b1_baseline_20261012/PRIOR_ART.md": "3c42169b34ff3bd17786aab4ca62d254ba0ae522af01a262509a6f1b9d225f6f",
+    "artifacts/non_padded_b1_baseline_20261012/SOURCES.json": "c31444cc7ad9f9d1493fce2fbfa805a853d5f91e96e02cfc951eef0fbd4ea8e4",
+    "artifacts/non_padded_b1_baseline_20261012/b1_distance.cuh": "2a40ac8d98b196472e98882704f5b7019268c7028b2f835438651ca94da3f3e5",
+    "artifacts/non_padded_b1_baseline_20261012/fixtures.hpp": "9883e0148b2c88606e4026af03e30d5c36bc346fe79a8aa1a074b4e61a85bc42",
+    "artifacts/non_padded_b1_baseline_20261012/prepare.py": "b32135079bb72a09a1755110418c5d8ab69ff3d67fbd24be4ecd042661965b46",
+    "artifacts/non_padded_b1_baseline_20261012/campaign.py": "2fb65836dd12a828f953853a66897ca8d8a2f454ca4a10a315aa939e5282549f",
+    "artifacts/non_padded_b1_baseline_20261012/test_contract.py": "ab4b922bc12a34f45ee93b86ffd4e50a789b2266a28704490f2040fc379e4b98",
+    "artifacts/query_tile_padding_20261012/batch.cu": "376545e5e9dee36a96d72bb90552258088603e692d1175171e9966dfdf7434fa",
+    "artifacts/external_closure/range_service.cu": "53bfd07fe17c5fd0c351032823005ce05b6dc59cf081c433e29a5ad8b2100015",
+    "artifacts/external_closure/static_guard.py": "36e9b8f341093613e8671be47f956ea0ae34de66e2f1723326f81b84fd09a4cb",
+    "artifacts/external_closure/common.py": "bb2ed5e1cced5305831cec13a57b79b4145afc85e4db2dee5af365dcb0dd0103",
+    "artifacts/unified_target_workflow/run.py": "df589fac6fce481098b212e53e8ab2724e3ded280c125a63caef27b143a68509",
+    "artifacts/unified_search_update/run.py": "414c8cbece562832658bac680d4ba33a036a69cb353b8ac9cba1f91ccb85ce50",
+    "artifacts/unified_search_update/protocol.py": "0f816d970fac17bc30d5fdc8c71d71e9081019b5d74942ddba1e3d18b1a66f5f",
+    "artifacts/par_range_update/reproduce.py": "e3647d578dc6381b55481e9bc2fc712af4a9dc1ce1c25fcb0f4e8bb5235d835b",
+    "artifacts/par_range_update/fixtures.py": "8a3a3c2741bedbf01b0dc31afbe31d90b503f73dbd80e8ca98f4bb09c3cf64be",
+    "diagnostics/region_exec_20261008/audit_closure.py": "930330a47f55db83005e2afd4eaad9c56c56405985d481564874c13c7c047381",
+    "artifacts/external_closure/pe_e.cu": "5a3eaca767e5eaa5c610c2729f8a1e66e9f9f0b1ca5982068318aa45a9fbbdfb",
+    "artifacts/external_closure/pe_common.hpp": "d8d1b5019981bdf5e69320d14b99b08f9426dbdb74a98ea8e95509cdca6442b3",
+    "artifacts/external_closure/pe_check.py": "1fc5b6626979677f4938157e1811cbd94eb4049819785e67793fbb50d0f3da29",
+    "artifacts/external_closure/pe_trace.py": "e1537684f3284961561ef83a57059b5f8ddfa62390767b8dfd020648394d88b4",
+    "artifacts/external_closure/qualify.py": "f10eb0f0475e59852119a436698771bf78c140083d8eeffaef3b234443c9d31e",
+    "artifacts/rebuild_tree_baselines/cpu.py": "8c53b0717d5238ff6aa18636794824084495db2ef5581ece14dcaf1c614f457b",
+    "artifacts/unified_target_workflow/validate.py": "7b58a173fb92815c84bc4dba02a5454bbc8d3eae90d81b8526c9b396571f7ce7",
+    "artifacts/non_padded_b1_baseline_20261012/dynamic.py": "b7a08e3adfd1a3d2e94c706ae12114fa22824a1259b9feafa29f6b76a0eb1603"
+  },
+  "radius": 0.705625057220459,
+  "capacity": 1000040,
+  "max_live": 1000009,
+  "event_counts": {
+    "measured": {
+      "0": 40,
+      "1": 40,
+      "2": 128,
+      "3": 128
+    },
+    ".warmup": {
+      "0": 10,
+      "1": 1,
+      "2": 4,
+      "3": 4
+    }
+  },
+  "jobs": [
+    "old",
+    "strengthened"
+  ],
+  "max_additional_starts": 2,
+  "registered_unix": 1791814050.8609502,
+  "scope": "one old/new process pair; inherited trace_ms includes release; query/update ACKs unchanged; no CI or sustained claim",
+  "unchanged": "kNN, norm maintenance, insertion, swap deletion, bookkeeping, outputs, timers, setup, release; device kernel unchanged",
+  "stop": "first failure; retain failed/unexecuted jobs; no retry",
+  "private_registration_sha256": "1ef15db085c3d3f89efbcfe6d2dcbd5b16bc82fb0e27c718fcbc535f8627d473",
+  "separate_admission": "Frozen after static MEMORY_LIMIT,before adaptation build/GPU execution"
+}
