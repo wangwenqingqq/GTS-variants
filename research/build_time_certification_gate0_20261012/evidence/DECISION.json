@@ -1,0 +1,24 @@
+{
+  "decision": "CONDITIONAL",
+  "generic_thesis": "KILL",
+  "gpu_only_thesis": "KILL",
+  "system_novelty_risk": "HIGH",
+  "narrow_joint_contract": "NOT ESTABLISHED AS NOVEL",
+  "gate0_pass": false,
+  "decisive_source_ids": [
+    "mvp",
+    "gnat",
+    "ompl_gnat",
+    "ompl_kcenters",
+    "pmtree",
+    "karras2012",
+    "cgal_filtered",
+    "cuda_double"
+  ],
+  "gpu_processes_started": 0,
+  "prototype_status": "not implemented",
+  "performance_measured": false,
+  "allowed_next": "Design only: cheapest differentiation test against classic bound reuse plus generic directed arithmetic; no automatic implementation.",
+  "forbidden_claim": "First build-time metric-tree bounds, first GPU bound fusion, or proven novel safe producer.",
+  "reopen_condition": "A dependency/ownership obstacle not solved by ordinary per-level sidecars plus reduction, and reproducible same-contract advantage over that composition, not just over a redundant two-pass baseline."
+}

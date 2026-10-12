@@ -1,0 +1,248 @@
+{
+  "checked_on": "2026-10-12",
+  "copyright_boundary": "Metadata and original analysis only; no primary full texts or third-party code redistributed.",
+  "sources": [
+    {
+      "id": "mvp",
+      "kind": "primary_paper",
+      "title": "Indexing Large Metric Spaces for Similarity Search Queries",
+      "authors": "Bozkaya; Ozsoyoglu",
+      "year_venue": "1999, ACM TODS 24(3):361\u2013404",
+      "url": "https://www.cs.cmu.edu/~eugene/refs/f-series/Bozkaya-ozsoyoglu-99.pdf",
+      "sha256": "91ddd9def7e8e8de8825482f6709c95d175af0a472dd4e9c5ee4d7011a9c3ea0",
+      "bytes": 281776,
+      "pdf_page_count": 44,
+      "checked_sections": "VP structure/construction: Section 3.3; MVP structure/construction: Section 4.2; PDF p3 multiway VP min/max radii",
+      "checked_pdf_pages_1_based": [
+        1,
+        3,
+        10,
+        11,
+        14,
+        15,
+        16
+      ],
+      "local_filename": "mvp.pdf",
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "gnat",
+      "kind": "primary_paper",
+      "title": "Near Neighbor Search in Large Metric Spaces",
+      "authors": "Brin",
+      "year_venue": "1995, VLDB:574\u2013584",
+      "url": "https://www.vldb.org/conf/1995/P574.PDF",
+      "sha256": "5e00795fd4844a549d7e27977ce62b63e4abbe149991cb58af25f2a5e08149f3",
+      "bytes": 1211557,
+      "pdf_page_count": 11,
+      "checked_sections": "Section 4.1 construction and search; Sections 4.2\u20134.3 split-point and degree selection",
+      "checked_pdf_pages_1_based": [
+        6,
+        7
+      ],
+      "local_filename": "gnat.pdf",
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "pmtree",
+      "kind": "primary_paper",
+      "title": "Pivoting M-tree: A Metric Access Method for Efficient Similarity Search",
+      "authors": "Skopal",
+      "year_venue": "2004, DATESO:27\u201337 (CEUR Vol.98)",
+      "url": "https://ceur-ws.org/Vol-98/paper3.pdf",
+      "sha256": "f0352d889b16b384f73b72b7554b42ee7cc864e09518d210bb44f7ac4d48881c",
+      "bytes": 587215,
+      "pdf_page_count": 11,
+      "checked_sections": "Sections 3.1\u20133.3: pivot distances, hyper-ring definition, insertion and splitting",
+      "checked_pdf_pages_1_based": [
+        1,
+        5,
+        6
+      ],
+      "local_filename": "pmtree.pdf",
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "mtree_bulk",
+      "kind": "primary_paper",
+      "title": "Bulk Loading the M-tree",
+      "authors": "Ciaccia; Patella",
+      "year_venue": "1998, ADC (institution-hosted 12-page manuscript)",
+      "url": "https://www-db.disi.unibo.it/research/papers/ADC98.pdf",
+      "checked_sections": "Sections 3\u20134, BulkLoading pseudocode (upper-region radius update), Sections 5.1\u20135.2 distance reuse",
+      "checked_pdf_pages_1_based": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "local_filename": "mtree_bulk.pdf",
+      "sha256": "3b84d71ae21399d74ab14dc616495753ccb28caceb3b6f4d01c7e93c4d6c8455",
+      "bytes": 185605,
+      "retrieval": "privately retained original bytes",
+      "pdf_page_count": 12
+    },
+    {
+      "id": "slim",
+      "kind": "primary_paper",
+      "title": "Slim-trees: High Performance Metric Trees Minimizing Overlap Between Nodes",
+      "authors": "Traina Jr.; Traina; Seeger; Faloutsos",
+      "year_venue": "2000, EDBT:51\u201361 (long author manuscript)",
+      "url": "https://www.cs.cmu.edu/~christos/PUBLICATIONS/EDBT_SlimTree.pdf",
+      "sha256": "b06a82e264e55263dbe49311da7266e6c380cdd7a958862b3cc8b54c45cd79cc",
+      "bytes": 214702,
+      "pdf_page_count": 16,
+      "checked_sections": "Sections 3\u20134: node metadata and MST split; Section 6: explicit Slim-down post-processing",
+      "checked_pdf_pages_1_based": [
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "local_filename": "slim.pdf",
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "ompl_gnat",
+      "kind": "official_source",
+      "title": "NearestNeighborsGNAT.h",
+      "authors": "OMPL project",
+      "year_venue": "Pinned source revision",
+      "url": "https://raw.githubusercontent.com/ompl/ompl/73bd861b15dd7d39129ceecf66b74387d3d84884/src/ompl/datastructures/NearestNeighborsGNAT.h",
+      "local_filename": "ompl_gnat.h",
+      "checked_sections": "Lines 416\u2013442, 494\u2013541, 594\u2013609, 646\u2013659",
+      "commit": "73bd861b15dd7d39129ceecf66b74387d3d84884",
+      "sha256": "2a8b9c603a537e77db713d9f93776f8de47976433ac685f59394d77bd7ac7314",
+      "bytes": 34029,
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "ompl_kcenters",
+      "kind": "official_source",
+      "title": "GreedyKCenters.h",
+      "authors": "OMPL project",
+      "year_venue": "Same pinned revision",
+      "url": "https://raw.githubusercontent.com/ompl/ompl/73bd861b15dd7d39129ceecf66b74387d3d84884/src/ompl/datastructures/GreedyKCenters.h",
+      "local_filename": "ompl_kcenters.h",
+      "checked_sections": "Lines 74\u2013119: complete selected-center distance matrix producer",
+      "commit": "73bd861b15dd7d39129ceecf66b74387d3d84884",
+      "sha256": "becd9089f12799ca19c0922e888d5475320a086fcc9fc43956d039711643e867",
+      "bytes": 5430,
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "karras2012",
+      "kind": "primary_paper",
+      "title": "Maximizing Parallelism in the Construction of BVHs, Octrees, and k-d Trees",
+      "authors": "Karras",
+      "year_venue": "2012, High Performance Graphics",
+      "url": "https://research.nvidia.com/sites/default/files/pubs/2012-06_Maximizing-Parallelism-in/karras2012hpg_paper.pdf",
+      "local_filename": "karras2012.pdf",
+      "checked_sections": "Section 4 BVH pipeline and separate bottom-up bounding-box propagation",
+      "checked_pdf_pages_1_based": [
+        1,
+        3,
+        4
+      ],
+      "sha256": "d398e0b8f6514f5b9286e0a46b829d43ab7f90ac21410b8f19700a799bd9572e",
+      "bytes": 268781,
+      "retrieval": "privately retained original bytes",
+      "pdf_page_count": 5
+    },
+    {
+      "id": "str",
+      "kind": "primary_report",
+      "title": "STR: A Simple and Efficient Algorithm for R-Tree Packing",
+      "authors": "Leutenegger; Edgington; Lopez",
+      "year_venue": "1997, NASA CR-201661 / ICASE 97-14; report version",
+      "url": "https://ia600900.us.archive.org/27/items/nasa_techdoc_19970016975/19970016975.pdf",
+      "local_filename": "str.pdf",
+      "checked_sections": "Sections 2.1\u20132.2; NASA report front page. Primary report retained from archival mirror, not a secondary analysis.",
+      "checked_pdf_pages_1_based": [
+        1,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "sha256": "cf482f6a872d832fa472c2a92e348f050df8541ab2a6e603d0770e8eef2542a4",
+      "bytes": 1338706,
+      "retrieval": "privately retained original bytes",
+      "pdf_page_count": 34
+    },
+    {
+      "id": "gpu_kdtree",
+      "kind": "primary_paper",
+      "title": "Real-Time KD-Tree Construction on Graphics Hardware",
+      "authors": "Zhou; Hou; Wang; Guo",
+      "year_venue": "2008, Microsoft Research institutional PDF (10 pages)",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2008-52.pdf",
+      "local_filename": null,
+      "checked_sections": "Sections 3.1\u20133.3, Algorithms 1\u20133; Section 5.1 photon-point sorted bounds; read through web PDF reader",
+      "checked_pdf_pages_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "sha256": null,
+      "bytes": null,
+      "pdf_page_count": 10,
+      "retrieval": "web PDF reader only; direct download returned HTTP 403 twice; no byte-reproducibility claim"
+    },
+    {
+      "id": "robust_bvh",
+      "kind": "primary_paper",
+      "title": "Robust BVH Ray Traversal",
+      "authors": "Ize",
+      "year_venue": "2013, JCGT 2(2):12\u201328",
+      "url": "https://jcgt.org/published/0002/02/02/paper.pdf",
+      "local_filename": "robust_bvh.pdf",
+      "checked_sections": "Sections 2\u20133 numerical error analysis; Section 6 construction-time padding caveat; Section 7 conclusions",
+      "checked_pdf_pages_1_based": [
+        1,
+        2,
+        3,
+        13,
+        14,
+        16
+      ],
+      "sha256": "7d3411edbc82de4bcf0fa0eaba2471a19832da4298268d7454eb8d30993cf8ae",
+      "bytes": 4906190,
+      "retrieval": "privately retained original bytes",
+      "pdf_page_count": 17
+    },
+    {
+      "id": "cgal_filtered",
+      "kind": "official_documentation",
+      "title": "CGAL::Filtered_kernel<CK>",
+      "authors": "CGAL project",
+      "year_venue": "Release 3.3.1, 25 August 2007",
+      "url": "https://doc.cgal.org/Manual/3.3.1/doc_html/cgal_manual/Kernel_23_ref/Class_Filtered_kernel.html",
+      "local_filename": "cgal_filtered.html",
+      "checked_sections": "Definition, Example, Implementation, fixed release footer",
+      "sha256": "aa563cab29d9ef7237eba60baf5b4498354c8a2e668838bcdf77c21b34a7faf8",
+      "bytes": 4265,
+      "retrieval": "privately retained original bytes"
+    },
+    {
+      "id": "cuda_double",
+      "kind": "official_documentation",
+      "title": "Double Precision Intrinsics",
+      "authors": "NVIDIA",
+      "year_venue": "CUDA Math API 13.1.0",
+      "url": "https://docs.nvidia.com/cuda/archive/13.1.0/cuda-math-api/cuda_math_api/group__CUDA__MATH__INTRINSIC__DOUBLE.html",
+      "local_filename": "cuda_double.html",
+      "checked_sections": "__dsub_rd/ru, __dmul_rd/ru, __dadd_rd/ru, __dsqrt_rd/ru; rounding modes and no-FMA-merging notes",
+      "sha256": "71f80a43554b758130c57676428339ae9b871f6d0d65a9de4fca4185d2ba374d",
+      "bytes": 111674,
+      "retrieval": "privately retained original bytes"
+    }
+  ]
+}

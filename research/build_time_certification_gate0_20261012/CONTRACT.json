@@ -1,0 +1,39 @@
+{
+  "experiment_id": "gtspp_20261012_build_time_certification_prior_art_gate0",
+  "parent_commit": "71e93bf7ffaf8650ecab933eab0e5f97a5c60910",
+  "baseline_pair_result_sha256": "e9f4741fee50d493b912dcc47d8b8af5798c4f82900e82985dfe68e87f98547e",
+  "question": "Is topology-preserving dual nominal/certified construction with level-local child-bound finalization a distinct mechanism or known construction-bound reuse?",
+  "gpu_process_budget": 0,
+  "prototype_budget": 0,
+  "performance_claims": false,
+  "scope": [
+    "A metric-tree bulk construction: M-tree, Slim-tree, PM-tree, VP/MVP, GNAT",
+    "B integrated bounds in GPU BVH, kd/R spatial hierarchies",
+    "C actual same computed distance used for construction decisions and pruning metadata, versus a separate bound/refit traversal",
+    "D directed-rounding conservative numerical controls; distinguish generic arithmetic from index construction"
+  ],
+  "criteria": {
+    "kill_generic": "Same metric build distances directly derive query bounds with no independent object-distance certification pass. CPU qualifies.",
+    "kill_gpu_only": "Moving that generic recipe to GPU or parallel reduction alone is not algorithm novelty.",
+    "high_system_risk": "Topology build plus bound finalization is standard in spatial hierarchies; distinguish stage integration from literal single-kernel fusion.",
+    "pass": "All dependency, numeric dual-path preservation and physical level-local ownership/lifetime differences established against nearest sources; absence in this finite search is not global novelty proof.",
+    "conditional": "Generic recipe is known, but the joint native-topology/directly-rounded certificate/level-local producer contract is not established in checked nearest sources; only design a cheap differentiation test, not implement now.",
+    "kill_full": "Nearest source demonstrably covers the joint claimed mechanism, not merely one control component."
+  },
+  "search_policy": "Primary papers, author/institution-hosted copies and exact-version official source. Search snippets and negative searches are leads, not evidence. Unsupported refit-removal/rounding claims remain UNKNOWN.",
+  "allowed_decisions": [
+    "PASS",
+    "CONDITIONAL",
+    "KILL"
+  ],
+  "prohibited": [
+    "GPU run",
+    "prototype",
+    "cache",
+    "loosening bit-exact lo/hi",
+    "external rerun",
+    "paper novelty claim",
+    "reviving generic stable partition"
+  ],
+  "user_plan_sha256": "731514c5e91cfb48dc2601a4a4df35477a6a63be919ced72ebc18e8398a46a60"
+}

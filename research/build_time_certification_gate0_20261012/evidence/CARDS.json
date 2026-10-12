@@ -1,0 +1,255 @@
+[
+  {
+    "id": "vp_mvp",
+    "family": "A/C",
+    "index_type": "Metric VP/MVP",
+    "exact_or_approximate": "Exact metric search in the mathematical distance model",
+    "construction_stages": "Compute vantage distances; order and partition at medians/cutoffs; record query metadata; recursively build children.",
+    "build_computes_distances": "YES",
+    "distances_reused_for_node_bounds": "YES",
+    "separate_post_build_refit": "NO",
+    "topology_bound_fusion": "YES",
+    "numeric_contract": "Mathematical metric values; no explicit directed FP64 rounding contract established.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "VP child shells use min/max build distances; MVP medians and selected stored PATH distances support later pruning.",
+    "key_difference": "No joint unchanged-native-FP32 ordering plus separately rounded FP64 certificate demonstrated.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "NO refit describes the published construction recipe, not a measured elimination against GTSPP. MVP persistent PATH arrays are not ephemeral sidecars.",
+    "source_ids": [
+      "mvp"
+    ],
+    "locators": "PDF p3, Section 3.3 pp10\u201311; Section 4.2 pp14\u201316"
+  },
+  {
+    "id": "gnat",
+    "family": "A/C",
+    "index_type": "Metric GNAT",
+    "exact_or_approximate": "Exact range search in the mathematical metric model",
+    "construction_stages": "Select split points; assign objects to nearest split point; form cross-region min/max distance ranges; recurse.",
+    "build_computes_distances": "YES",
+    "distances_reused_for_node_bounds": "YES",
+    "separate_post_build_refit": "NO",
+    "topology_bound_fusion": "YES",
+    "numeric_contract": "Mathematical min/max ranges; directed floating-point enclosure not specified.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Construction expressly reuses within-node distances for query-pruning ranges; no later coordinate-distance certification stage is in the simplified recipe.",
+    "key_difference": "Multi-center Voronoi membership is not native GTS equal-cardinality ordering; no dual arithmetic producer contract.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "The paper establishes algorithmic reuse, not exact source arithmetic or one-kernel GPU fusion.",
+    "source_ids": [
+      "gnat"
+    ],
+    "locators": "Section 4.1 and preceding motivation, PDF p6 (printed p579)"
+  },
+  {
+    "id": "ompl_gnat",
+    "family": "C/A",
+    "index_type": "Metric GNAT implementation",
+    "exact_or_approximate": "Exact-search intent under a caller-supplied metric; floating-point safety depends on that callback",
+    "construction_stages": "GreedyKCenters fills a double matrix; argmin assigns members; the same matrix updates radii and cross-region ranges; recurse.",
+    "build_computes_distances": "YES",
+    "distances_reused_for_node_bounds": "YES",
+    "separate_post_build_refit": "NO",
+    "topology_bound_fusion": "YES",
+    "numeric_contract": "double callback distances with ordinary comparisons/min/max, not outward-directed interval pairs.",
+    "safe_interval_certificate": "NO",
+    "nearest_overlap": "A concrete producer/consumer control: dists(j,i) serves split decisions and persistent pruning metadata without another distance callback for bounds.",
+    "key_difference": "No FP32 legacy-order/FP64 sidecar pair. Matrix is local to split, but remains alive through child recursion: not proven one-level peak scratch.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "NO separate refit is scoped to this split flow. Parent data capacity transfers to local tmp; both tmp and dists remain alive through child recursion and are destroyed when split returns.",
+    "source_ids": [
+      "ompl_gnat",
+      "ompl_kcenters"
+    ],
+    "locators": "GNAT lines 416\u2013442, 494\u2013541, 594\u2013609, 646\u2013659; KCenters lines 74\u2013119"
+  },
+  {
+    "id": "pmtree",
+    "family": "A/C",
+    "index_type": "Metric PM-tree",
+    "exact_or_approximate": "Exact metric-search intent; optional compressed pivot metadata is discussed separately",
+    "construction_stages": "Choose lifetime-fixed pivots; insertion updates ancestor hyper-rings and leaf pivot distances; split unions child intervals or leaf distances.",
+    "build_computes_distances": "YES",
+    "distances_reused_for_node_bounds": "YES",
+    "separate_post_build_refit": "NO",
+    "topology_bound_fusion": "YES",
+    "numeric_contract": "Hyper-ring intervals are mathematical distance ranges, not an explicitly outward-rounded arithmetic interval evaluation.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Already-computed pivot distances and child ranges become pruning metadata during insert/split without a described post-build object-distance certification sweep.",
+    "key_difference": "Global pivots and persistent PD/HR metadata differ from GTS level-specific scoring and one-level sidecar.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "This checked source describes insertion/splitting, not a dedicated PM-tree bulk loader. Do not relabel hyper-rings as directed FP64 certificates.",
+    "source_ids": [
+      "pmtree"
+    ],
+    "locators": "Sections 3.1\u20133.3, PDF pp5\u20136 (printed pp31\u201332)"
+  },
+  {
+    "id": "mtree_bulk",
+    "family": "A/C",
+    "index_type": "Metric M-tree bulk loader",
+    "exact_or_approximate": "Exact metric-search intent",
+    "construction_stages": "Sample and cluster; recursively build subtrees and supertree; redistribute/rebalance; attach subtrees; update upper-region radii.",
+    "build_computes_distances": "YES",
+    "distances_reused_for_node_bounds": "PARTIAL",
+    "separate_post_build_refit": "CONDITIONAL",
+    "topology_bound_fusion": "PARTIAL",
+    "numeric_contract": "Mathematical metric distances and covering radii; floating-point enclosure unspecified.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Previous-level root distances and sample distances prune later construction calculations; covering metadata is part of assembly.",
+    "key_difference": "The pseudocode explicitly retains an upper-region radius-update step, so it does not establish elimination of all bound finalization.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "Do not promote reuse for construction decisions into proof that every bound reuses the same scored pairs or that no additional distances are evaluated.",
+    "source_ids": [
+      "mtree_bulk"
+    ],
+    "locators": "Sections 3\u20134, PDF pp3\u20136; Sections 5.1\u20135.2 pp6\u20137"
+  },
+  {
+    "id": "slim",
+    "family": "A",
+    "index_type": "Metric Slim-tree",
+    "exact_or_approximate": "Exact metric-search intent",
+    "construction_stages": "Insert and split; MST splits weighted object graph and selects representatives; optional Slim-down relocates objects and corrects radii.",
+    "build_computes_distances": "YES",
+    "distances_reused_for_node_bounds": "PARTIAL",
+    "separate_post_build_refit": "CONDITIONAL",
+    "topology_bound_fusion": "PARTIAL",
+    "numeric_contract": "Mathematical representative distances and radii; interval arithmetic unspecified.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Split graph distances and representative/radius selection are closely coupled; query bounds are maintained as index metadata.",
+    "key_difference": "Slim-down is an explicit post-construction overlap optimization that changes membership, not GTSPP numeric certification.",
+    "novelty_risk": "MEDIUM",
+    "material_caveat": "The manuscript does not fix distance-matrix storage/reuse semantics for all bounds; no blanket separate-refit-removal claim.",
+    "source_ids": [
+      "slim"
+    ],
+    "locators": "Sections 3\u20134 pp3\u20135; Section 6 pp8\u20139, 16-page author version"
+  },
+  {
+    "id": "karras2012",
+    "family": "B",
+    "index_type": "GPU spatial BVH/radix hierarchy",
+    "exact_or_approximate": "Geometric acceleration; no approximate-neighbor quality target",
+    "construction_stages": "Morton keys; sort; construct radix topology; then assign internal AABBs by leaf-to-root parallel propagation with atomic arrival counters.",
+    "build_computes_distances": "NO",
+    "distances_reused_for_node_bounds": "NO",
+    "separate_post_build_refit": "YES",
+    "topology_bound_fusion": "PARTIAL",
+    "numeric_contract": "Geometric AABB union; directed FP64 metric certificate not specified.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Topology and bounds belong to the build pipeline, and propagation consumes recorded parent pointers.",
+    "key_difference": "Bounding-box propagation remains a distinct post-topology step; the single-kernel claim concerns radix topology, not topology plus all bounds.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "Do not call a separate bottom-up bounding pass eliminated, nor equate AABB unions with D960 pivot/object arithmetic.",
+    "source_ids": [
+      "karras2012"
+    ],
+    "locators": "Section 4, PDF p4; GPU implementation paragraph preceding it"
+  },
+  {
+    "id": "gpu_kdtree",
+    "family": "B",
+    "index_type": "GPU spatial kd-tree for triangles/points",
+    "exact_or_approximate": "Acceleration and kNN application; finite-rounding guarantee not established",
+    "construction_stages": "BFS large/small-node stages; triangle AABB chunk and segmented reductions; split/clip; output layout. Photon version uses sorted coordinate extrema.",
+    "build_computes_distances": "NO",
+    "distances_reused_for_node_bounds": "NO",
+    "separate_post_build_refit": "NO",
+    "topology_bound_fusion": "PARTIAL",
+    "numeric_contract": "Spatial bounds; explicit directed interval certification not established.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Bounds are computed during level build; the photon variant obtains tight large-node boxes from maintained sorted coordinates.",
+    "key_difference": "Several GPU passes and output reordering remain; this is not a same-distance dual FP32/FP64 metric producer.",
+    "novelty_risk": "HIGH",
+    "material_caveat": "NO standalone post-build numeric refit in the described recipe does not mean bounds need no passes. Primary PDF read via web; local download unavailable.",
+    "source_ids": [
+      "gpu_kdtree"
+    ],
+    "locators": "Sections 3.1\u20133.3, PDF pp3\u20135; Section 5.1 p7"
+  },
+  {
+    "id": "str",
+    "family": "B",
+    "index_type": "Spatial R-tree packing",
+    "exact_or_approximate": "Geometric intersection index",
+    "construction_stages": "Sort by rectangle centers; tile and pack leaves; enclosing node rectangles provide the input metadata at the next level.",
+    "build_computes_distances": "NO",
+    "distances_reused_for_node_bounds": "NO",
+    "separate_post_build_refit": "NO",
+    "topology_bound_fusion": "YES",
+    "numeric_contract": "Bounding rectangles of input rectangles; no directed metric interval contract.",
+    "safe_interval_certificate": "UNKNOWN",
+    "nearest_overlap": "Packed groups immediately have bounding metadata; higher-level packing operates on those node rectangles.",
+    "key_difference": "Spatial rectangle union, not high-dimensional metric scoring or nominal-safe arithmetic separation.",
+    "novelty_risk": "MEDIUM",
+    "material_caveat": "NO independent numeric refit is scoped to the packing description. Archival NASA report has 34 PDF pages including front matter/blanks, not the shorter conference pagination.",
+    "source_ids": [
+      "str"
+    ],
+    "locators": "Sections 2.1\u20132.2, PDF pp7\u201310"
+  },
+  {
+    "id": "robust_bvh",
+    "family": "D",
+    "index_type": "BVH numerical robustness",
+    "exact_or_approximate": "Conservative ray/box traversal; not metric-neighbor indexing",
+    "construction_stages": "Analyze traversal error; pad inverse direction or exit distance. Construction-time bounding-box padding is evaluated as an alternative.",
+    "build_computes_distances": "NO",
+    "distances_reused_for_node_bounds": "NO",
+    "separate_post_build_refit": "UNKNOWN",
+    "topology_bound_fusion": "NO",
+    "numeric_contract": "Conservative traversal error control, primarily FP32; not a dual metric-distance interval producer.",
+    "safe_interval_certificate": "PARTIAL",
+    "nearest_overlap": "Proves safe pruning needs a numeric contract, and considers bounds padded during construction.",
+    "key_difference": "Padding depends on admissible ray origins; the preferred controls are traversal-side, not same-pair build/refit fusion.",
+    "novelty_risk": "MEDIUM",
+    "material_caveat": "Generic robustness and construction padding are prior art, but this work neither specifies GTSPP bit-exact lo/hi nor an independent refit to remove.",
+    "source_ids": [
+      "robust_bvh"
+    ],
+    "locators": "Sections 2\u20133; Section 6 PDF pp13\u201314; Section 7 p16"
+  },
+  {
+    "id": "cgal_filtered",
+    "family": "D",
+    "index_type": "Geometry kernel, not an index",
+    "exact_or_approximate": "Exact predicates with potentially inexact geometric constructions",
+    "construction_stages": "Wrap kernel predicates in interval filters and exact fallback; underlying CK constructions remain the same.",
+    "build_computes_distances": "NO",
+    "distances_reused_for_node_bounds": "NO",
+    "separate_post_build_refit": "UNKNOWN",
+    "topology_bound_fusion": "NO",
+    "numeric_contract": "Interval-filtered/exact predicates alongside unchanged, not necessarily exact CK constructions.",
+    "safe_interval_certificate": "PARTIAL",
+    "nearest_overlap": "Separate nominal construction and certified decision arithmetic is already a general numerical design.",
+    "key_difference": "No metric tree child-bound producer, shared D960 traversal, or post-build refit elimination is established.",
+    "novelty_risk": "MEDIUM",
+    "material_caveat": "This is a numerical control only. Exact predicates can affect decisions; retaining CK constructions does not prove unchanged legacy tree ordering.",
+    "source_ids": [
+      "cgal_filtered"
+    ],
+    "locators": "Release 3.3.1: Definition, Example, Implementation"
+  },
+  {
+    "id": "cuda_double",
+    "family": "D",
+    "index_type": "GPU arithmetic API, not an index",
+    "exact_or_approximate": "Directed rounding primitives, not an exact-search algorithm",
+    "construction_stages": "Device double add/subtract/multiply/square-root expose explicit round-down and round-up variants.",
+    "build_computes_distances": "NO",
+    "distances_reused_for_node_bounds": "NO",
+    "separate_post_build_refit": "UNKNOWN",
+    "topology_bound_fusion": "NO",
+    "numeric_contract": "Directed FP64 operation semantics; a correct interval expression must still be composed and validated.",
+    "safe_interval_certificate": "YES",
+    "nearest_overlap": "Outward-directed arithmetic on GPU is an existing capability, not the proposed algorithmic novelty.",
+    "key_difference": "No topology, ownership, coordinate-load sharing, or tree-bound propagation recipe.",
+    "novelty_risk": "MEDIUM",
+    "material_caveat": "YES is arithmetic capability only, not a published tree certificate. CUDA 13.1 reference is a fixed documentation control, not a GPU/runtime verification this round.",
+    "source_ids": [
+      "cuda_double"
+    ],
+    "locators": "CUDA Math API 13.1, Double Precision Intrinsics"
+  }
+]
