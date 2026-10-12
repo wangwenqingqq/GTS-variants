@@ -1,0 +1,1684 @@
+{
+  "scope": "diagnostic NSYS NVTX query/op spans, GPU activity union clipped per range; no profiler latency promotion",
+  "rows": [
+    {
+      "label": "query_8",
+      "host_span_ms": 3.478717,
+      "GPU_active_ms": 3.289859,
+      "exposed_Host_gap_ms": 0.188858,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.272548,
+        "predicate": 0.004639,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.0008,
+        "copy_Device-to-Host": 0.002464
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.045327,
+        "cudaMemcpyAsync_v3020": 3.232642,
+        "cuKernelGetName": 0.002884,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.034535,
+        "cudaLaunchKernel_v7000": 0.051215,
+        "cudaStreamSynchronize_v3020": 0.005915
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.01978,
+        "cudaMemcpyAsync_v3020": 3.172472,
+        "cuKernelGetName": 0.00166,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.006316,
+        "cudaLaunchKernel_v7000": 0.051215,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_9",
+      "host_span_ms": 3.369586,
+      "GPU_active_ms": 3.292867,
+      "exposed_Host_gap_ms": 0.076719,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.276163,
+        "predicate": 0.004672,
+        "compaction": 0.00624,
+        "output_fields_and_observer": 0.003168,
+        "copy_Host-to-Device": 0.000608,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.014558,
+        "cudaMemcpyAsync_v3020": 3.305741,
+        "cuKernelGetName": 0.00051,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.004279,
+        "cudaLaunchKernel_v7000": 0.015127,
+        "cudaStreamSynchronize_v3020": 0.00911
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.007797,
+        "cudaMemcpyAsync_v3020": 3.261839,
+        "cuKernelGetName": 0.000395,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.015127,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_10",
+      "host_span_ms": 3.358019,
+      "GPU_active_ms": 3.288867,
+      "exposed_Host_gap_ms": 0.069152,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.272355,
+        "predicate": 0.004736,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003104,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.001952
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013597,
+        "cudaMemcpyAsync_v3020": 3.299199,
+        "cuKernelGetName": 0.000508,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003533,
+        "cudaLaunchKernel_v7000": 0.015271,
+        "cudaStreamSynchronize_v3020": 0.007208
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006375,
+        "cudaMemcpyAsync_v3020": 3.259506,
+        "cuKernelGetName": 0.000399,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.015271,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_11",
+      "host_span_ms": 3.362542,
+      "GPU_active_ms": 3.290179,
+      "exposed_Host_gap_ms": 0.072363,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.273475,
+        "predicate": 0.00464,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000672,
+        "copy_Device-to-Host": 0.001984
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013266,
+        "cudaMemcpyAsync_v3020": 3.304136,
+        "cuKernelGetName": 0.000468,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003667,
+        "cudaLaunchKernel_v7000": 0.013928,
+        "cudaStreamSynchronize_v3020": 0.009288
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006896,
+        "cudaMemcpyAsync_v3020": 3.26227,
+        "cuKernelGetName": 0.000359,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013928,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_12",
+      "host_span_ms": 3.362752,
+      "GPU_active_ms": 3.28666,
+      "exposed_Host_gap_ms": 0.076092,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.270276,
+        "predicate": 0.004608,
+        "compaction": 0.00624,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.001952
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013083,
+        "cudaMemcpyAsync_v3020": 3.304907,
+        "cuKernelGetName": 0.000489,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003249,
+        "cudaLaunchKernel_v7000": 0.014028,
+        "cudaStreamSynchronize_v3020": 0.00934
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005934,
+        "cudaMemcpyAsync_v3020": 3.25996,
+        "cuKernelGetName": 0.000377,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014028,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_13",
+      "host_span_ms": 3.363547,
+      "GPU_active_ms": 3.285603,
+      "exposed_Host_gap_ms": 0.077944,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.269348,
+        "predicate": 0.004543,
+        "compaction": 0.006176,
+        "output_fields_and_observer": 0.003104,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.001984
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013628,
+        "cudaMemcpyAsync_v3020": 3.304997,
+        "cuKernelGetName": 0.000478,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003674,
+        "cudaLaunchKernel_v7000": 0.014181,
+        "cudaStreamSynchronize_v3020": 0.009441
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006033,
+        "cudaMemcpyAsync_v3020": 3.258669,
+        "cuKernelGetName": 0.000365,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014181,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_14",
+      "host_span_ms": 3.366702,
+      "GPU_active_ms": 3.292291,
+      "exposed_Host_gap_ms": 0.074411,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.275907,
+        "predicate": 0.004576,
+        "compaction": 0.006208,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.012986,
+        "cudaMemcpyAsync_v3020": 3.308984,
+        "cuKernelGetName": 0.000459,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003272,
+        "cudaLaunchKernel_v7000": 0.013911,
+        "cudaStreamSynchronize_v3020": 0.009511
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005927,
+        "cudaMemcpyAsync_v3020": 3.265527,
+        "cuKernelGetName": 0.000357,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013911,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_15",
+      "host_span_ms": 3.373048,
+      "GPU_active_ms": 3.29549,
+      "exposed_Host_gap_ms": 0.077558,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.278019,
+        "predicate": 0.004864,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002751
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 17828
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.012976,
+        "cudaMemcpyAsync_v3020": 3.313158,
+        "cuKernelGetName": 0.000474,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003855,
+        "cudaLaunchKernel_v7000": 0.01405,
+        "cudaStreamSynchronize_v3020": 0.009098
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005559,
+        "cudaMemcpyAsync_v3020": 3.269231,
+        "cuKernelGetName": 0.000362,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.01405,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_16",
+      "host_span_ms": 3.353829,
+      "GPU_active_ms": 3.291747,
+      "exposed_Host_gap_ms": 0.062082,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.275139,
+        "predicate": 0.004768,
+        "compaction": 0.006176,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.00208
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.01298,
+        "cudaMemcpyAsync_v3020": 3.300237,
+        "cuKernelGetName": 0.000461,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003197,
+        "cudaLaunchKernel_v7000": 0.014091,
+        "cudaStreamSynchronize_v3020": 0.005832
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006091,
+        "cudaMemcpyAsync_v3020": 3.264883,
+        "cuKernelGetName": 0.00036,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014091,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_17",
+      "host_span_ms": 3.366775,
+      "GPU_active_ms": 3.292867,
+      "exposed_Host_gap_ms": 0.073908,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.276323,
+        "predicate": 0.004544,
+        "compaction": 0.006208,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000608,
+        "copy_Device-to-Host": 0.002048
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013911,
+        "cudaMemcpyAsync_v3020": 3.309329,
+        "cuKernelGetName": 0.000484,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.00351,
+        "cudaLaunchKernel_v7000": 0.013018,
+        "cudaStreamSynchronize_v3020": 0.009422
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.007512,
+        "cudaMemcpyAsync_v3020": 3.265541,
+        "cuKernelGetName": 0.000367,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013018,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_18",
+      "host_span_ms": 3.368782,
+      "GPU_active_ms": 3.293187,
+      "exposed_Host_gap_ms": 0.075595,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.276579,
+        "predicate": 0.004736,
+        "compaction": 0.006304,
+        "output_fields_and_observer": 0.003104,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 36
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013223,
+        "cudaMemcpyAsync_v3020": 3.305013,
+        "cuKernelGetName": 0.000466,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003777,
+        "cudaLaunchKernel_v7000": 0.018833,
+        "cudaStreamSynchronize_v3020": 0.01015
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.00613,
+        "cudaMemcpyAsync_v3020": 3.261418,
+        "cuKernelGetName": 0.000364,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.018833,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_19",
+      "host_span_ms": 3.374693,
+      "GPU_active_ms": 3.30189,
+      "exposed_Host_gap_ms": 0.072803,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.285315,
+        "predicate": 0.004608,
+        "compaction": 0.006271,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000608,
+        "copy_Device-to-Host": 0.001952
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013438,
+        "cudaMemcpyAsync_v3020": 3.317114,
+        "cuKernelGetName": 0.000476,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003202,
+        "cudaLaunchKernel_v7000": 0.013966,
+        "cudaStreamSynchronize_v3020": 0.009055
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.00602,
+        "cudaMemcpyAsync_v3020": 3.274682,
+        "cuKernelGetName": 0.000367,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013966,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_20",
+      "host_span_ms": 3.374138,
+      "GPU_active_ms": 3.296163,
+      "exposed_Host_gap_ms": 0.077975,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.279588,
+        "predicate": 0.004703,
+        "compaction": 0.00624,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.00048,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013359,
+        "cudaMemcpyAsync_v3020": 3.316751,
+        "cuKernelGetName": 0.000471,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003675,
+        "cudaLaunchKernel_v7000": 0.014015,
+        "cudaStreamSynchronize_v3020": 0.00835
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005873,
+        "cudaMemcpyAsync_v3020": 3.269146,
+        "cuKernelGetName": 0.000362,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014015,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_21",
+      "host_span_ms": 3.374016,
+      "GPU_active_ms": 3.297123,
+      "exposed_Host_gap_ms": 0.076893,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.280611,
+        "predicate": 0.004576,
+        "compaction": 0.006208,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002144
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013577,
+        "cudaMemcpyAsync_v3020": 3.31687,
+        "cuKernelGetName": 0.000468,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003188,
+        "cudaLaunchKernel_v7000": 0.013399,
+        "cudaStreamSynchronize_v3020": 0.009484
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006023,
+        "cudaMemcpyAsync_v3020": 3.270971,
+        "cuKernelGetName": 0.000354,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013399,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_22",
+      "host_span_ms": 3.36493,
+      "GPU_active_ms": 3.300162,
+      "exposed_Host_gap_ms": 0.064768,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.283715,
+        "predicate": 0.004544,
+        "compaction": 0.006303,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 36
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013208,
+        "cudaMemcpyAsync_v3020": 3.309914,
+        "cuKernelGetName": 0.000453,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003719,
+        "cudaLaunchKernel_v7000": 0.014206,
+        "cudaStreamSynchronize_v3020": 0.006044
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006179,
+        "cudaMemcpyAsync_v3020": 3.272655,
+        "cuKernelGetName": 0.000355,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014206,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_23",
+      "host_span_ms": 3.374171,
+      "GPU_active_ms": 3.297378,
+      "exposed_Host_gap_ms": 0.076793,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.280611,
+        "predicate": 0.004704,
+        "compaction": 0.006207,
+        "output_fields_and_observer": 0.003104,
+        "copy_Host-to-Device": 0.000704,
+        "copy_Device-to-Host": 0.002048
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013035,
+        "cudaMemcpyAsync_v3020": 3.316822,
+        "cuKernelGetName": 0.000469,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003185,
+        "cudaLaunchKernel_v7000": 0.014044,
+        "cudaStreamSynchronize_v3020": 0.008735
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006713,
+        "cudaMemcpyAsync_v3020": 3.269129,
+        "cuKernelGetName": 0.000365,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014044,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_24",
+      "host_span_ms": 3.373279,
+      "GPU_active_ms": 3.300547,
+      "exposed_Host_gap_ms": 0.072732,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.284131,
+        "predicate": 0.004608,
+        "compaction": 0.006208,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.012915,
+        "cudaMemcpyAsync_v3020": 3.316422,
+        "cuKernelGetName": 0.000472,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003699,
+        "cudaLaunchKernel_v7000": 0.013968,
+        "cudaStreamSynchronize_v3020": 0.008799
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005996,
+        "cudaMemcpyAsync_v3020": 3.273826,
+        "cuKernelGetName": 0.000367,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013968,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_25",
+      "host_span_ms": 3.373071,
+      "GPU_active_ms": 3.299811,
+      "exposed_Host_gap_ms": 0.07326,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.283363,
+        "predicate": 0.00464,
+        "compaction": 0.00624,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.001984
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013561,
+        "cudaMemcpyAsync_v3020": 3.316961,
+        "cuKernelGetName": 0.000474,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003192,
+        "cudaLaunchKernel_v7000": 0.013721,
+        "cudaStreamSynchronize_v3020": 0.008674
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006324,
+        "cudaMemcpyAsync_v3020": 3.273137,
+        "cuKernelGetName": 0.000358,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013721,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_26",
+      "host_span_ms": 3.373212,
+      "GPU_active_ms": 3.298978,
+      "exposed_Host_gap_ms": 0.074234,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.282403,
+        "predicate": 0.004704,
+        "compaction": 0.006303,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.001984
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.012897,
+        "cudaMemcpyAsync_v3020": 3.316054,
+        "cuKernelGetName": 0.000466,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003773,
+        "cudaLaunchKernel_v7000": 0.01368,
+        "cudaStreamSynchronize_v3020": 0.009469
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006024,
+        "cudaMemcpyAsync_v3020": 3.272487,
+        "cuKernelGetName": 0.000366,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.01368,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_27",
+      "host_span_ms": 3.36846,
+      "GPU_active_ms": 3.301251,
+      "exposed_Host_gap_ms": 0.067209,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.284676,
+        "predicate": 0.004735,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003104,
+        "copy_Host-to-Device": 0.00048,
+        "copy_Device-to-Host": 0.001984
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013211,
+        "cudaMemcpyAsync_v3020": 3.313269,
+        "cuKernelGetName": 0.00046,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003211,
+        "cudaLaunchKernel_v7000": 0.013787,
+        "cudaStreamSynchronize_v3020": 0.007725
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005835,
+        "cudaMemcpyAsync_v3020": 3.274799,
+        "cuKernelGetName": 0.000355,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013787,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_28",
+      "host_span_ms": 3.365549,
+      "GPU_active_ms": 3.296387,
+      "exposed_Host_gap_ms": 0.069162,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.279844,
+        "predicate": 0.004575,
+        "compaction": 0.006176,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.00064,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013321,
+        "cudaMemcpyAsync_v3020": 3.307335,
+        "cuKernelGetName": 0.000478,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003792,
+        "cudaLaunchKernel_v7000": 0.014212,
+        "cudaStreamSynchronize_v3020": 0.009224
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.007197,
+        "cudaMemcpyAsync_v3020": 3.267973,
+        "cuKernelGetName": 0.00037,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014212,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_29",
+      "host_span_ms": 3.374261,
+      "GPU_active_ms": 3.295874,
+      "exposed_Host_gap_ms": 0.078387,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.279268,
+        "predicate": 0.004703,
+        "compaction": 0.006208,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000575,
+        "copy_Device-to-Host": 0.001984
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013308,
+        "cudaMemcpyAsync_v3020": 3.317028,
+        "cuKernelGetName": 0.000475,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003222,
+        "cudaLaunchKernel_v7000": 0.013607,
+        "cudaStreamSynchronize_v3020": 0.009492
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.00682,
+        "cudaMemcpyAsync_v3020": 3.268307,
+        "cuKernelGetName": 0.000364,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013607,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_30",
+      "host_span_ms": 3.365328,
+      "GPU_active_ms": 3.292419,
+      "exposed_Host_gap_ms": 0.072909,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.275875,
+        "predicate": 0.004576,
+        "compaction": 0.00624,
+        "output_fields_and_observer": 0.003232,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002048
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.014092,
+        "cudaMemcpyAsync_v3020": 3.306829,
+        "cuKernelGetName": 0.000482,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003887,
+        "cudaLaunchKernel_v7000": 0.013638,
+        "cudaStreamSynchronize_v3020": 0.009577
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006659,
+        "cudaMemcpyAsync_v3020": 3.265417,
+        "cuKernelGetName": 0.00037,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013638,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_31",
+      "host_span_ms": 3.36508,
+      "GPU_active_ms": 3.289731,
+      "exposed_Host_gap_ms": 0.075349,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.273283,
+        "predicate": 0.004576,
+        "compaction": 0.006176,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002112
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013167,
+        "cudaMemcpyAsync_v3020": 3.305145,
+        "cuKernelGetName": 0.000465,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0031,
+        "cudaLaunchKernel_v7000": 0.013965,
+        "cudaStreamSynchronize_v3020": 0.009406
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005858,
+        "cudaMemcpyAsync_v3020": 3.260026,
+        "cuKernelGetName": 0.000356,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013965,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_32",
+      "host_span_ms": 3.398535,
+      "GPU_active_ms": 3.290691,
+      "exposed_Host_gap_ms": 0.107844,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.272835,
+        "predicate": 0.004736,
+        "compaction": 0.006432,
+        "output_fields_and_observer": 0.003168,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.003072
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 87092
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013307,
+        "cudaMemcpyAsync_v3020": 3.318366,
+        "cuKernelGetName": 0.000474,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003523,
+        "cudaLaunchKernel_v7000": 0.013318,
+        "cudaStreamSynchronize_v3020": 0.006606
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005996,
+        "cudaMemcpyAsync_v3020": 3.264414,
+        "cuKernelGetName": 0.000362,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013318,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_33",
+      "host_span_ms": 3.372207,
+      "GPU_active_ms": 3.297923,
+      "exposed_Host_gap_ms": 0.074284,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.281315,
+        "predicate": 0.004672,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.00048,
+        "copy_Device-to-Host": 0.002048
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.014384,
+        "cudaMemcpyAsync_v3020": 3.305054,
+        "cuKernelGetName": 0.000487,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003157,
+        "cudaLaunchKernel_v7000": 0.022307,
+        "cudaStreamSynchronize_v3020": 0.009029
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.007905,
+        "cudaMemcpyAsync_v3020": 3.260616,
+        "cuKernelGetName": 0.00038,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.022307,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_34",
+      "host_span_ms": 3.373615,
+      "GPU_active_ms": 3.298978,
+      "exposed_Host_gap_ms": 0.074637,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.281955,
+        "predicate": 0.004832,
+        "compaction": 0.006143,
+        "output_fields_and_observer": 0.003264,
+        "copy_Host-to-Device": 0.000768,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 36
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013491,
+        "cudaMemcpyAsync_v3020": 3.315849,
+        "cuKernelGetName": 0.000482,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003233,
+        "cudaLaunchKernel_v7000": 0.013677,
+        "cudaStreamSynchronize_v3020": 0.00965
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.00626,
+        "cudaMemcpyAsync_v3020": 3.271951,
+        "cuKernelGetName": 0.00037,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013677,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_35",
+      "host_span_ms": 3.38948,
+      "GPU_active_ms": 3.318722,
+      "exposed_Host_gap_ms": 0.070758,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.302179,
+        "predicate": 0.004576,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003167,
+        "copy_Host-to-Device": 0.00048,
+        "copy_Device-to-Host": 0.002048
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013314,
+        "cudaMemcpyAsync_v3020": 3.333108,
+        "cuKernelGetName": 0.000477,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003591,
+        "cudaLaunchKernel_v7000": 0.013688,
+        "cudaStreamSynchronize_v3020": 0.008468
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006082,
+        "cudaMemcpyAsync_v3020": 3.29197,
+        "cuKernelGetName": 0.000366,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013688,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_36",
+      "host_span_ms": 3.401865,
+      "GPU_active_ms": 3.32381,
+      "exposed_Host_gap_ms": 0.078055,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.307202,
+        "predicate": 0.004704,
+        "compaction": 0.006272,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002048
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013676,
+        "cudaMemcpyAsync_v3020": 3.341507,
+        "cuKernelGetName": 0.000481,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003281,
+        "cudaLaunchKernel_v7000": 0.014307,
+        "cudaStreamSynchronize_v3020": 0.008374
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006564,
+        "cudaMemcpyAsync_v3020": 3.293229,
+        "cuKernelGetName": 0.000372,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.014307,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_37",
+      "host_span_ms": 3.400947,
+      "GPU_active_ms": 3.327203,
+      "exposed_Host_gap_ms": 0.073744,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.310915,
+        "predicate": 0.004544,
+        "compaction": 0.006176,
+        "output_fields_and_observer": 0.003104,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013517,
+        "cudaMemcpyAsync_v3020": 3.3424,
+        "cuKernelGetName": 0.000468,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003712,
+        "cudaLaunchKernel_v7000": 0.01381,
+        "cudaStreamSynchronize_v3020": 0.009331
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006203,
+        "cudaMemcpyAsync_v3020": 3.300198,
+        "cuKernelGetName": 0.000362,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.01381,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_38",
+      "host_span_ms": 3.39887,
+      "GPU_active_ms": 3.323426,
+      "exposed_Host_gap_ms": 0.075444,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.307011,
+        "predicate": 0.004576,
+        "compaction": 0.006239,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.0131,
+        "cudaMemcpyAsync_v3020": 3.341921,
+        "cuKernelGetName": 0.00047,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003116,
+        "cudaLaunchKernel_v7000": 0.013831,
+        "cudaStreamSynchronize_v3020": 0.008528
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.006182,
+        "cudaMemcpyAsync_v3020": 3.296012,
+        "cuKernelGetName": 0.000366,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013831,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    },
+    {
+      "label": "query_39",
+      "host_span_ms": 3.400228,
+      "GPU_active_ms": 3.330627,
+      "exposed_Host_gap_ms": 0.069601,
+      "GPU_components_ms": {
+        "distance_fused_read_arithmetic": 3.314211,
+        "predicate": 0.004608,
+        "compaction": 0.006208,
+        "output_fields_and_observer": 0.003136,
+        "copy_Host-to-Device": 0.000448,
+        "copy_Device-to-Host": 0.002016
+      },
+      "copy_bytes": {
+        "copy_Host-to-Device": 3840,
+        "copy_Device-to-Host": 20
+      },
+      "kernel_counts": {
+        "pairwise_matrix_kernel": 1,
+        "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": 1,
+        "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": 1,
+        "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": 1,
+        "fields_kernel(const float *, const int *, const int *, float *, double *, int)": 1
+      },
+      "API_inclusive_ms": {
+        "cudaEventRecord_v3020": 0.013279,
+        "cudaMemcpyAsync_v3020": 3.344225,
+        "cuKernelGetName": 0.000483,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.003605,
+        "cudaLaunchKernel_v7000": 0.013553,
+        "cudaStreamSynchronize_v3020": 0.008271
+      },
+      "API_counts": {
+        "cudaEventRecord_v3020": 8,
+        "cudaMemcpyAsync_v3020": 5,
+        "cuKernelGetName": 5,
+        "cudaLaunchKernelExC_ptsz_v11060": 1,
+        "cudaLaunchKernel_v7000": 4,
+        "cudaStreamSynchronize_v3020": 2
+      },
+      "API_GPU_overlap_ms": {
+        "cudaEventRecord_v3020": 0.005938,
+        "cudaMemcpyAsync_v3020": 3.3044,
+        "cuKernelGetName": 0.000375,
+        "cudaLaunchKernelExC_ptsz_v11060": 0.0,
+        "cudaLaunchKernel_v7000": 0.013553,
+        "cudaStreamSynchronize_v3020": 0.0
+      }
+    }
+  ],
+  "aggregate": {
+    "host_span_ms": 108.080234,
+    "GPU_active_ms": 105.578711,
+    "exposed_Host_gap_ms": 2.501523000000006,
+    "GPU_active_fraction": 0.9768549446330769,
+    "components_ms": {
+      "distance_fused_read_arithmetic": 105.04643800000001,
+      "predicate": 0.14882599999999999,
+      "compaction": 0.19970599999999994,
+      "output_fields_and_observer": 0.100479,
+      "copy_Host-to-Device": 0.016415,
+      "copy_Device-to-Host": 0.066847
+    },
+    "copy_bytes": {
+      "copy_Host-to-Device": 122880,
+      "copy_Device-to-Host": 105568
+    },
+    "API_inclusive_ms": {
+      "cudaEventRecord_v3020": 0.460692,
+      "cudaMemcpyAsync_v3020": 106.00728699999998,
+      "cuKernelGetName": 0.017612,
+      "cudaLaunchKernelExC_ptsz_v11060": 0.14261100000000002,
+      "cudaLaunchKernel_v7000": 0.4963519999999999,
+      "cudaStreamSynchronize_v3020": 0.276606
+    },
+    "API_GPU_overlap_ms": {
+      "cudaEventRecord_v3020": 0.216685,
+      "cudaMemcpyAsync_v3020": 104.59666099999998,
+      "cuKernelGetName": 0.013027000000000002,
+      "cudaLaunchKernelExC_ptsz_v11060": 0.006316,
+      "cudaLaunchKernel_v7000": 0.4963519999999999,
+      "cudaStreamSynchronize_v3020": 0.0
+    },
+    "API_counts": {
+      "cudaEventRecord_v3020": 256,
+      "cudaMemcpyAsync_v3020": 160,
+      "cuKernelGetName": 160,
+      "cudaLaunchKernelExC_ptsz_v11060": 32,
+      "cudaLaunchKernel_v7000": 128,
+      "cudaStreamSynchronize_v3020": 64
+    },
+    "allocation_API_calls": 0
+  },
+  "resources": {
+    "pairwise_matrix_kernel": {
+      "gridX": 376,
+      "gridY": 1,
+      "gridZ": 1,
+      "blockX": 256,
+      "blockY": 1,
+      "blockZ": 1,
+      "registersPerThread": 126,
+      "staticSharedMemory": 0,
+      "dynamicSharedMemory": 36864,
+      "localMemoryPerThread": 0,
+      "localMemoryTotal": 166330368
+    },
+    "flags_kernel(const float *, int *, unsigned char *, int, double, bool)": {
+      "gridX": 3907,
+      "gridY": 1,
+      "gridZ": 1,
+      "blockX": 256,
+      "blockY": 1,
+      "blockZ": 1,
+      "registersPerThread": 16,
+      "staticSharedMemory": 0,
+      "dynamicSharedMemory": 0,
+      "localMemoryPerThread": 0,
+      "localMemoryTotal": 166330368
+    },
+    "void cub::CUB_300104_SM_1200::detail::scan::DeviceCompactInitKernel<cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, int *>(T1, int, T2)": {
+      "gridX": 2,
+      "gridY": 1,
+      "gridZ": 1,
+      "blockX": 128,
+      "blockY": 1,
+      "blockZ": 1,
+      "registersPerThread": 16,
+      "staticSharedMemory": 0,
+      "dynamicSharedMemory": 0,
+      "localMemoryPerThread": 0,
+      "localMemoryTotal": 166330368
+    },
+    "void cub::CUB_300104_SM_1200::detail::select::DeviceSelectSweepKernel<cub::CUB_300104_SM_1200::detail::select::policy_hub<int, unsigned char, int, (bool)0, (cub::CUB_300104_SM_1200::SelectImpl)0>::Policy1000, int *, unsigned char *, int *, int *, cub::CUB_300104_SM_1200::ScanTileState<int, (bool)1>, cub::CUB_300104_SM_1200::NullType, cub::CUB_300104_SM_1200::NullType, int, cub::CUB_300104_SM_1200::detail::select::streaming_context_t<long, (bool)1>, (cub::CUB_300104_SM_1200::SelectImpl)0>(T2, T3, T4, T5, T6, T7, T8, T9, int, T10, cub::CUB_300104_SM_1200::detail::vsmem_t)": {
+      "gridX": 140,
+      "gridY": 1,
+      "gridZ": 1,
+      "blockX": 512,
+      "blockY": 1,
+      "blockZ": 1,
+      "registersPerThread": 64,
+      "staticSharedMemory": 28672,
+      "dynamicSharedMemory": 0,
+      "localMemoryPerThread": 0,
+      "localMemoryTotal": 172490752
+    },
+    "fields_kernel(const float *, const int *, const int *, float *, double *, int)": {
+      "gridX": 3907,
+      "gridY": 1,
+      "gridZ": 1,
+      "blockX": 256,
+      "blockY": 1,
+      "blockZ": 1,
+      "registersPerThread": 16,
+      "staticSharedMemory": 0,
+      "dynamicSharedMemory": 0,
+      "localMemoryPerThread": 0,
+      "localMemoryTotal": 166330368
+    }
+  },
+  "nested": []
+}

@@ -1,0 +1,122 @@
+{
+  "experiment": "GTSPP_20261011_EXACT_SCAN_BREAKDOWN",
+  "base_commit": "77a8d887897ce7bdc9a7d3800cc886b322ec64f5",
+  "plan_sha256": "0e7f1b4633d28aefec9b7ec2f72b569d3f4278b7eca35ec42923e3c1def239bf",
+  "status": "DESIGNED_BEFORE_SOURCE_AND_MEASUREMENT",
+  "workload": {
+    "dataset": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "storage": "FP32 row-major",
+    "metric": "L2",
+    "radius_bits": "0x3f34a3d8",
+    "snapshot": "initial",
+    "queries": "original fixed 32; first 8 repeated warmups"
+  },
+  "keeper": "unchanged qualified cuVS L2Unexpanded + CUB complete range + FP32 Euclidean fields + charged FP64 native-score observer + D2H",
+  "reference": "ordered FP64 full scores; SCAN_MATCHED retained separately, not a native-FP32 comparator",
+  "modes": [
+    "READ_ONLY",
+    "DISTANCE_ONLY",
+    "THRESHOLD_COUNT",
+    "FULL_OUTPUT"
+  ],
+  "dimensions": [
+    128,
+    256,
+    512,
+    960
+  ],
+  "Ns": [
+    100000,
+    250000,
+    500000,
+    1000000
+  ],
+  "calibration_qids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "calibration": "disjoint from measured qids; pooled ordered-FP64 calibration squared scores rank floor(8*target_hits)-1; radius cast to FP32 sqrt once; report attained counts, no post-measurement retuning",
+  "selectivity_targets": {
+    "low": 10,
+    "mid": "unchanged radius",
+    "high": "10 * measured-reference mean D960 hits"
+  },
+  "N_protocol": "same original Host query vectors and D960 radius on deterministic data prefixes; query may be outside prefix; no radius retuning",
+  "measurement": {
+    "warmup": 8,
+    "measured_queries": 32,
+    "process_repetitions": 6,
+    "orders": [
+      "forward",
+      "reverse",
+      "forward",
+      "reverse",
+      "forward",
+      "reverse"
+    ],
+    "primary": "median of six process-level mean query intervals; p10/p90 process distribution; raw 32-query totals and per-query observations retained",
+    "secondary": "genuinely round-paired process log ratios, bootstrap 20000 seed2026101111; no promotion claim",
+    "profilers": "independent diagnostic processes; never public latency denominator",
+    "workspace": "fresh process; persistent build allocations excluded from query but separately recorded; warmup/model/workspace does not cross processes",
+    "GPU": "one explicitly authorized idle single GPU; UUID, local slot and matching NUMA binding are private receipt parameters; do not change identity within a campaign",
+    "clocks": "observe only; no power/clock/compute-mode changes",
+    "lock": "existing two-sided-starttime guard, per-GPU shared lock; all processes serialized"
+  },
+  "roofline": {
+    "logical_bytes": 3840000000,
+    "approx_ops": 2879000000,
+    "official_peak_GBs": 1597,
+    "official_FP32_TFLOPs": 120,
+    "peak_source": "https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/",
+    "sustainable": "same-campaign native D2D CUDA-event combined read+write bandwidth and READ_ONLY read throughput disclosed separately; use larger calibrated streaming rate as reachable-memory reference, not a universal hardware maximum",
+    "traffic": "NCU DRAM/L2/sector counters when supported, logical payload always distinct; one selected measured query main kernel, supporting output kernels via NSYS",
+    "proxy": "2,879 scalar operations/object at D960; exact FP32 instruction FLOPs only if counters support them"
+  },
+  "gates": {
+    "MEMORY_BOUND": "READ_ONLY/FULL>=.70 AND measured DRAM throughput/reachable streaming bandwidth>=.60 AND (FULL-COUNT)/FULL<=.15",
+    "COMPUTE_BOUND": "(DISTANCE-READ)/FULL>=.50 AND arithmetic execution/throughput evidence identifies saturated relevant pipe",
+    "OUTPUT_BOUND": "(FULL-COUNT)/FULL>=.30 AND high-vs-low selectivity cost growth CI lower>1.05",
+    "CONTROL_BOUND": "NSYS GPU active/Host query span<=.60 AND launch/sync/alloc dominates non-GPU time; inclusive API waits are not added to GPU spans",
+    "UPDATE_BOUND": "fixed336 workflow update ACKs>50% continuous trace and exceed query ACKs; no extrapolation to a long workflow",
+    "NEAR_ROOFLINE": ">=.85 reachable bandwidth or relevant compute AND output/control/update no single>20% fraction AND no controlled ablation shows>20% removable share",
+    "priority": "CONTROL, OUTPUT, COMPUTE, MEMORY, NEAR_ROOFLINE; UPDATE only after static phase and may supersede if its gate passes",
+    "confidence": "ratios from six paired process distributions; gate ratios primary point estimates, CI always disclosed; inconsistent order strata or unsupported counters leave classification inconclusive",
+    "uncovered": "record INCONCLUSIVE status and unmet criteria instead of manufacturing one of six labels; no mechanism design admitted",
+    "ambiguity": "MIXED is a diagnostic roofline annotation, not a final system-priority label; MEMORY resource binding and NEAR_ROOFLINE headroom are separate"
+  },
+  "budget": {
+    "max_GPU_processes": 110,
+    "qualification": 8,
+    "keeper": 6,
+    "ablation": 24,
+    "D_scaling": 18,
+    "N_scaling": 18,
+    "selectivity": 12,
+    "bandwidth": 6,
+    "dynamic": 6,
+    "NCU": 3,
+    "NSYS": 2,
+    "matched_reference_diagnostic": 1,
+    "reserved": 6
+  },
+  "stop": "first runtime/isolation/quality/provenance failure stops formal stages; all failed and unexecuted jobs retained, no automatic replacement; compiler-only repairs before qualification are recorded",
+  "prohibited": [
+    "new tree/certificate/partition/pivots",
+    "tile16/8",
+    "optimization kernel",
+    "compression or Tensor Core prototype",
+    "paper edits/upload",
+    "long new workloads"
+  ],
+  "novelty": "roofline/filter-refine and native brute-force scan are established; diagnostic kernels are not system innovations and no new thesis promoted",
+  "curation_note": "Only device-placement prose is parameterized. Raw executed contract bytes/hashes remain private; this public file is not the original registration."
+}

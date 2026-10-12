@@ -1,0 +1,87 @@
+{
+  "binaries": {
+    "probe": "4ef18bc90967f91cd96c8a0db87ec1342f8efcb17cacc874e8fb16eafa1bb211",
+    "dynamic": "f1ed6fe5e906c686cff78ca0c1364f032d280e04335dfe92d3fb504e9343ed68",
+    "cpu": "2957333547a8b34c8a246c38154e78def283622b8f83da828cfce7a0f7c4c1ee"
+  },
+  "registration_sha256": "14d3260e8ef71bf3b151b32ced272b6f4933882618953456334c1d2ec2f15071",
+  "libraries": {
+    "libcuvs_c.so": {
+      "sha256": "65154cff6816603c3e5b5402189b3d3bc061dd617cc497864aa004d49e107761"
+    },
+    "librapids_logger.so": {
+      "sha256": "df3f261a1bd3bf10e4634eb8970f153812c526a7e0b26c16932b6ee85dc51e12"
+    },
+    "libstdc++.so.6": {
+      "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11"
+    },
+    "libgcc_s.so.1": {
+      "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb"
+    },
+    "libc.so.6": {
+      "sha256": "d8db8739a1633c972cec6a4fe0566bdcec6fd088f98723492ab0361f66238f75"
+    },
+    "libcuvs.so": {
+      "sha256": "cd410645aed37455f1ab0e9ba36a00edba54a9ab293350cfc26947a72b97f087"
+    },
+    "librmm.so": {
+      "sha256": "6c5cc33aaf9206d374f5d6b97c132d8a67f456e3b97612f950273eeb5924af06"
+    },
+    "libdl.so.2": {
+      "sha256": "850b46fd4f4478060fc106f4d1dc4aa35c969eb5c9bd98aaf64dc6cb3d6a5e32"
+    },
+    "librt.so.1": {
+      "sha256": "9d1cefae4c0e4995cc35ea3195f805454b2d59a27ad15397a1096e735d341faf"
+    },
+    "libcusolver.so.12": {
+      "sha256": "b0825c65a735cc2eba019194103043b7db05e4e54ef79b788071c20b5582864f"
+    },
+    "libcublas.so.13": {
+      "sha256": "c13e3af56f07357b3419f01f183013577274709637b8a35aec008c3fe6ab6102"
+    },
+    "libcublasLt.so.13": {
+      "sha256": "362e239322fd0989f2657db065615262add7e7a3b6f222070be2a05ecc8d586b"
+    },
+    "libcusparse.so.12": {
+      "sha256": "cadbe1c78feae59b7448dde354bc3c1a60c3da32e0f5902780842f14d475d405"
+    },
+    "libnvJitLink.so.13": {
+      "sha256": "3ba1e744347cd68617b862eccfd98b125482e882b7a6319f42abc9a768513db8"
+    },
+    "libcurand.so.10": {
+      "sha256": "44f629e55711dc90bbb26616e09e92d7648e81e96d60d605cb360d9a8be29ca2"
+    },
+    "libnccl.so.2": {
+      "sha256": "51c81bed3832ebf251d26f9366dac57d5ce3e5b4b1cf8dc29e7d60d665213db4"
+    },
+    "libm.so.6": {
+      "sha256": "1b87a1a50b496cfead2b0ad134c2ff536705c82608db240c7e8aa48d6c0e4217"
+    },
+    "libpthread.so.0": {
+      "sha256": "92dcea07a5b11d939c22a96131d3fbb995e0a84a4d02db7d799bf357689cd794"
+    },
+    "libnvrtc.so.13": {
+      "sha256": "e51d197b3b0d2d9d850d29977423e6ac60661d429a59c440fc04e52b6fc6750a"
+    },
+    "libgomp-855c301a.so.1.0.0": {
+      "sha256": "a730d9ac62b6673bf9fda6699ed7c023db13d2a2ed51b2c76748765018dac108"
+    }
+  },
+  "matched_build": {
+    "binary_sha256": "b3baf8260df3aa28d12a8896b02838e85d5b0cc67652bca37fb7782036d74237",
+    "registration_sha256": "dfb7e1746e23dd03e67cbc10dce355d27d58ea958fa191b150ab3c1b354779d6"
+  },
+  "source_base_commit": "77a8d887897ce7bdc9a7d3800cc886b322ec64f5",
+  "versions": {
+    "driver": "590.48.01",
+    "nvcc": "13.1.115",
+    "NCU": "2025.4.1.0",
+    "NSYS": "2025.5.2",
+    "cuVS": "26.8.1",
+    "RAFT": "26.8.0",
+    "RMM": "26.8.0",
+    "cuPy": "14.1.0",
+    "NVRTC_package": "13.3.33"
+  },
+  "scope": "original pinned native keeper binaries reused and remeasured; diagnostic controls freshly compiled. Codegen/source identities are distinct from commit publication identity"
+}

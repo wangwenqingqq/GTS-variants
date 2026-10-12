@@ -1,0 +1,27 @@
+{
+  "static_complete": true,
+  "decision": "MEMORY_BOUND",
+  "before_dynamic_launch": true,
+  "registered_unix": 1791798447.8020546,
+  "gates": {
+    "MEMORY_BOUND": true,
+    "COMPUTE_BOUND": false,
+    "OUTPUT_BOUND": false,
+    "CONTROL_BOUND": false,
+    "NEAR_ROOFLINE": false
+  },
+  "fractions": {
+    "read_over_full": 0.7591881616740912,
+    "distance_minus_read_over_full": 0.23336501822973651,
+    "full_minus_count_over_full": 0.007509815722853636
+  },
+  "selected_kernel_DRAM_over_reachable": 0.7601209097239192,
+  "source_evidence": {
+    "STATIC_STATS.json": "b57f8fd91097889faa154c2757f32afa9d32cd7a91e034150471a0dfd5dae1e5",
+    "STATIC_TIMELINE.json": "2efd3b0a07af7f67993dce420dddbbb7d47a363dd90963f1cd2063f02332e264",
+    "FORENSIC_R3.json": "b20edb6cb73b8352ecdf52918f251c16877d231b22fb78f6f630dcb4edeff8fc"
+  },
+  "scope": "fixed static range workload; physical memory-bound with arithmetic inflation, not near roofline; no optimization prototype admitted",
+  "counterevidence": "native selected kernel executes184.32G FP32 flop proxy versus2.879G useful proxy; tile-shape explanation remains inference and no64x speedup is implied",
+  "quality_limits": "calibration targets not attained; only fixed32 measured queries; profilers independent of primary denominator"
+}
