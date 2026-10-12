@@ -1,0 +1,207 @@
+{
+  "scope": "new task-only public whitelist; private vectors, endpoint caches, run logs and device configuration excluded",
+  "base_commit": "9797f6940c34ca9fbe927a0eb796a57ebc5298b2",
+  "files": {
+    "research/high_dimensional_certificate_compressibility_20261012/.gitignore": {
+      "bytes": 20,
+      "sha256": "94e8e70ea7f42be858f927964c68ef42501f2bc6509708d53baa01486a5f58fa"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/CONTRACT.json": {
+      "bytes": 4055,
+      "sha256": "5bba5f14cf9cd2d4bf059169bc055b23924384895ffdb5d0675e0f0e62bf6ce7"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/DECISION.md": {
+      "bytes": 1004,
+      "sha256": "a5f0846fa6f8b2e37b14cee633acf5b7d5533da98800e3dc768162d36224cc7a"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/LEDGER.md": {
+      "bytes": 2624,
+      "sha256": "f7ef6cc9d5d98074be37c8a865eac8cb91645470f717808b5bd658dec13fa65b"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/PRIOR_ART.md": {
+      "bytes": 2462,
+      "sha256": "05e70c58e3cb5a79d60124954d1abe90e6011f9568b421ef3d54eca988767fa9"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/README.md": {
+      "bytes": 6188,
+      "sha256": "d5246cb0d90176e004115903d3108f8248dd89d5740e68c5ff6824d164a5aab9"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/SAFETY.md": {
+      "bytes": 2639,
+      "sha256": "15d2177b348460272b8c1a07ece79a81c6b76263f926d60a22fb6cc65b154798"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/aabb_math.py": {
+      "bytes": 4564,
+      "sha256": "e304bc28a8c75404441b40f650e82d647a82d02d24ecf21dc4b2400d67bbba21"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/build_highdim_aabb.py": {
+      "bytes": 2756,
+      "sha256": "64d413e3272cf8a9785f863aef4733e0dbcf3e73ee5b8719ce356409961cec1e"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evaluate_fp32.py": {
+      "bytes": 6290,
+      "sha256": "f53450f6b3b8e3b46189dbd554ae29ffd2b112171a4296e4f7f59649672da7b4"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/BUILD2_RAW_MANIFEST.json": {
+      "bytes": 1469,
+      "sha256": "05bdc2e5a78c6fb4035658dba6646925f3cf0c94d0ded7b3cffef2a5a5b601ec"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/BUILD_VALIDATION.json": {
+      "bytes": 499,
+      "sha256": "04fd5c1993ef2d0f6b99e6f5e501af7b43343b1d2a08edee4ea7e072b47c8bcd"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/CROSS_RUNTIME_REPLAY.json": {
+      "bytes": 536,
+      "sha256": "1ec73a9a340738c078d661b5a96c9c842e9c085bbbcdb4164e4e8d0c0e76faaf"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/CURATED_SNAPSHOT_VALIDATION.json": {
+      "bytes": 560,
+      "sha256": "02ff51db1ab7aba40d66539399dc95296dfb2f7b99e2b1f8ca6efdeef5613dd9"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/EVAL2_RAW_MANIFEST.json": {
+      "bytes": 1333,
+      "sha256": "52bee4308218f2e9112029ff2e4ba0a366ffaed3f67c04821f284da258b9cea5"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/EXECUTION_RECEIPT.json": {
+      "bytes": 1100,
+      "sha256": "69e6f4fcf882a6d269c3cba1814fae79ce01ccf43917fe50ad59474a9d6466cb"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/FIGURE_QA.json": {
+      "bytes": 602,
+      "sha256": "5f05158d3a27e08e4ffe8022f7c8cf98472e47fa43d0ce0db6e044a6279fc688"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/FP32_VALIDATION.json": {
+      "bytes": 453,
+      "sha256": "9167dab59d7b4c42aed670da365c366b7e3721f88425f8946bd37e47e2344d09"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/INDEPENDENT2_RAW_MANIFEST.json": {
+      "bytes": 278,
+      "sha256": "f6c29efcd3d289529cc652a7dc14be9137219633538d6a0a10476b76875f4822"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/INDEPENDENT_VALIDATION.json": {
+      "bytes": 7720,
+      "sha256": "73647cda6e25ace6b0cb70a159bc3873caa810eece79ca4927d91b14507fbfdc"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/INITIAL_SOURCE_FREEZE.json": {
+      "bytes": 2345,
+      "sha256": "03a7c761d994b430791d60f1c0425cfd6a724dec5b30a457cfdb7535acae4694"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/INPUT_IDENTITY.json": {
+      "bytes": 1339,
+      "sha256": "45aad12c978af98cf1f311417c0628f5bb6242437461cc89f26f48c8640a28b0"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/INTEGRITY_ONLY_REVISION.patch": {
+      "bytes": 784,
+      "sha256": "889682f3a28d5c3cace6f1ab757c0c682f557a3f009d28a95479694bf0a27c7b"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/POINTSET_BRIDGE.json": {
+      "bytes": 187,
+      "sha256": "6191fbd4c9f9275e40e040e69dfe86a3d3e02ca3f8b081437b2afbb73ff6607f"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/POSTPROCESS_SOURCE_PINS.json": {
+      "bytes": 262,
+      "sha256": "b3e5f9514da25084c63a31e6c083bdfbbbb7bf1373a74763cc00f3d9842bcfcc"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/QUANTIZATION_VALIDATION.json": {
+      "bytes": 167,
+      "sha256": "488ffaf16cc7a1bca65936a29889d3ac0227119602e8fd68807c0be4f39d5a68"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/REPLAY_SAMPLES.json": {
+      "bytes": 2738,
+      "sha256": "09d2b0fba76f7e06517cbf7683f6753d2d5e9ea55630d795c5b08cbfbc151d59"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/RUN1_RUN2_BRIDGE.json": {
+      "bytes": 390,
+      "sha256": "a41cc366801a879523afe678eefc3d8b197eda95a7727fe139ba89079dd92f70"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/SOURCE_FREEZE.json": {
+      "bytes": 2679,
+      "sha256": "cf777289196dd03e1bfc3163993b0e82eb75db6fb0cabbabae91f93a8d76ee32"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/aggregate_summary.json": {
+      "bytes": 8085,
+      "sha256": "821b6b92cca4a6ff430850d77bd425353a2ed8a8d82121a2ae1cf296b0dc8511"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/cost_proxy.csv": {
+      "bytes": 9241,
+      "sha256": "a0bc73515d4dc3a97e0d8c800ba3aae76a173a6d29b8a7be31d2c6af852ad035"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/PLOT_RECEIPT.json": {
+      "bytes": 570,
+      "sha256": "55fbbe60428d32acd44f681cf2a4a834fa208bb9f2fba5ecd7c5a04a8fe61bfd"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure1_pointset_vs_fp32.pdf": {
+      "bytes": 30763,
+      "sha256": "79119498156e784b59973cd3cff571fb588ada69bd807077140b277574f8b441"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure1_pointset_vs_fp32.png": {
+      "bytes": 92820,
+      "sha256": "d94dc3ff1f6ca812c783fa776ba3f3589363fe90113bf960a6a70917ac228ef2"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure2_retention.pdf": {
+      "bytes": 26648,
+      "sha256": "0287f85a7068090ffe6b0dbeac344f3922c79d36e604810637c70686ae05048b"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure2_retention.png": {
+      "bytes": 60998,
+      "sha256": "540de60027746fce529f98ff5a1e221f8186936d9b567f1d55f6135e7d87dd0d"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure3_canary.pdf": {
+      "bytes": 31175,
+      "sha256": "d5bc06926222d95e367df6a1f0cfc423fba7df66b9447fa8905757be4e5c2ecf"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure3_canary.png": {
+      "bytes": 78951,
+      "sha256": "31b9c659cacb6de2c7dc5fe7509e0c9bb638d4bfd5580ab0b02a17c7ed821512"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure4_bytes_vs_alignment.pdf": {
+      "bytes": 31396,
+      "sha256": "2eb05bfa3f8c4fa9a9d308273f4c4fc1613c89e4a12499cff22bf706993b59a1"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/figure4_bytes_vs_alignment.png": {
+      "bytes": 68394,
+      "sha256": "cc5779c9a97df4d02c904423d588d2ed72e32195aab615fcd421893085ba8ec5"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/figures/highdim_compressibility_evidence.pdf": {
+      "bytes": 118422,
+      "sha256": "2f0b0868d717d3e1c7e5304c089877d92e8013825a31121c3a960aa5caf02ea1"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/metadata_budget.csv": {
+      "bytes": 1124,
+      "sha256": "c3fe250787b0b5778896b4e89d5149c28507c8c9b6437fe803b3ae709c54fbb1"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/per_level_summary.csv": {
+      "bytes": 2476,
+      "sha256": "625346cc28dc8c9572f8bbd01ae4f983a42fb290c90cb0f0faebff6a94833125"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/per_query_summary.csv": {
+      "bytes": 9475,
+      "sha256": "e3e543ebba99a22c978b82c2b846b9804d5c93adb128a9fb26eee7cac64262b2"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/evidence/retention_summary.csv": {
+      "bytes": 835,
+      "sha256": "c3704411183615626a7415d69b2c341e265c7acce7c6e8e1de103c62f554fda9"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/plot.py": {
+      "bytes": 4679,
+      "sha256": "d89a530dc90d756c24ee499a21fcc2a474a49165ced241b03e7e7a3279221b48"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/replay.py": {
+      "bytes": 3059,
+      "sha256": "d5faaae7f1c4088db5bfe6ee14d39fea0f4c489a9421e6101353933d33ce3780"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/test_build_binding.py": {
+      "bytes": 1136,
+      "sha256": "0213631e9b56a0681364419aed82e8f5e66f72b25bbd529fa5d4e50c4b50a210"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/test_safety.py": {
+      "bytes": 2115,
+      "sha256": "f63efbb741b15e4b280ad71dbf3c1a881e0b2aedddb421bb3f6b3fdab4217339"
+    },
+    "research/high_dimensional_certificate_compressibility_20261012/validate_independent.py": {
+      "bytes": 3460,
+      "sha256": "b3b82f3b58206e7c51f7f80d23ff8c8efaf6db7b326cad66f539d4706ed93afb"
+    }
+  },
+  "self_hash": "excluded to avoid recursive hashing"
+}

@@ -1,0 +1,20 @@
+--- initial/aabb_math.py
++++ current/aabb_math.py
+@@ -25,0 +26,9 @@
++
++def build_check(build):
++    receipt=json.loads((build/'BUILD_VALIDATION.json').read_text())
++    assert receipt['status']=='PASS' and receipt['source_freeze_sha256']==sha(HERE/'evidence/SOURCE_FREEZE.json')
++    manifest=json.loads((build/'OUTPUT_MANIFEST.json').read_text())
++    for name in ['aabb_raw.npz','BUILD_VALIDATION.json']:
++        path=build/name;expected=manifest[name]
++        assert path.stat().st_size==expected['bytes'] and sha(path)==expected['sha256'],name
++    return receipt
+--- initial/evaluate_fp32.py
++++ current/evaluate_fp32.py
+@@ -41,0 +42 @@
++    build_check(a.build)
+--- initial/validate_independent.py
++++ current/validate_independent.py
+@@ -21,0 +22 @@
++    build_check(a.build)

@@ -1,0 +1,135 @@
+{
+  "experiment": "high-dimensional-certificate-compressibility-20261012",
+  "base_commit": "9797f6940c34ca9fbe927a0eb796a57ebc5298b2",
+  "requested_plan_sha256": "505ff39e6c9804d47f4d17dfdd3aa8683e6e09d9653a0375ad622c8ee55e4055",
+  "stage": "premeasurement",
+  "dataset": "GIST",
+  "N": 1000000,
+  "D": 960,
+  "K": 8,
+  "B": 1,
+  "queries": [
+    660835,
+    90208,
+    359924,
+    374533,
+    96985,
+    702545,
+    55715,
+    470632
+  ],
+  "hard_query_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "canary": 359924,
+  "partition": "fixed PCA_BALANCED",
+  "levels": {
+    "3": 1000,
+    "4": 100,
+    "5": 10
+  },
+  "dimensions": [
+    32,
+    64,
+    128
+  ],
+  "primary": [
+    64,
+    4
+  ],
+  "query_cells": 72,
+  "original_score": "ascending-dimension separate RN-FP64 subtraction, multiplication, addition; strict squared score > frozen U_star_squared",
+  "safe_prune": "AABB directed lower norm > RN sqrt(U_star_squared); identical cutoff to inherited point-set safe keeper",
+  "arithmetic": {
+    "coordinate_ETA": 1e-08,
+    "common_margin_hex": "0x1.a6078e4da7440p-14",
+    "endpoints": "min/max cached projections +-ETA, nextafter FP64 outward, then FP32 outward",
+    "query": "FP64 cached +-ETA outward interval",
+    "bound": "coordinate positive gaps, square/add/sqrt each rounded down; nondecreasing sums; inherited common margin subtracted down",
+    "basis": "exact inherited full contractive stored matrix; no refit",
+    "zero_denominator": "undefined/null, never 1"
+  },
+  "estimator": "integer pooled hard object counts; Fraction comparisons; each level standalone, not summed across hierarchy",
+  "stage_A": {
+    "normal": [
+      "PCA64 L4 hard retention >=7/10",
+      "PCA64 L4 hard alignment >=3/5",
+      "PCA64 L4 canary retention >=1/2"
+    ],
+    "strong": [
+      "normal promotion is mandatory",
+      "PCA64 L4 hard retention >=17/20",
+      "PCA128 L3 hard retention >=7/10"
+    ],
+    "kill": [
+      "PCA64 L4 hard retention <1/2",
+      "PCA128 L4 hard retention <3/5"
+    ],
+    "middle": "INSUFFICIENT_EVIDENCE; measured but not promoted; no Stage B"
+  },
+  "stage_B": {
+    "admission": "normal Stage A promotion only",
+    "dimension": 64,
+    "levels": [
+      3,
+      4,
+      5
+    ],
+    "formats": [
+      "FP16 outward from FP32",
+      "UINT8 outward enclosing FP16",
+      "INT4 outward enclosing decoded UINT8, only if admitted"
+    ],
+    "uint_grid": "query-independent shared64D FP64 scale and offset; 1024B total per format; directional mul/add decoded endpoints; verify all enclosure nesting",
+    "INT4_admission": [
+      "primary L4 INT8 FP32 retention >=17/20",
+      "hard alignment >=11/20",
+      "point-set retention >=13/20"
+    ],
+    "compact": [
+      "aligned record <=128B",
+      "hard alignment >=3/5",
+      "point-set retention >=7/10",
+      "FP32 retention >=17/20"
+    ],
+    "budget64": [
+      "aligned record <=64B",
+      "hard alignment >=11/20",
+      "point-set retention >=13/20"
+    ],
+    "accounting": "record payload/alignment AND full scale/offset/shared/query/basis overhead separately; no hidden overhead"
+  },
+  "gates": [
+    "G1 all projected endpoint coverage, including coordinate envelope",
+    "G2 AABB lower <=point-set safe lower <=original truth norm",
+    "G3 zero original strict-squared false prunes",
+    "G4 exact72 prior point-set counts",
+    "G5 quantized mask/enclosure nesting if admitted; otherwise N/A",
+    "extra24 all-member independent original-region replay,72 prefixes"
+  ],
+  "execution": {
+    "device": "CPU only",
+    "threads": 1,
+    "timing": "none; logical cost proxies only",
+    "phase_timeout_seconds": 1800,
+    "resource_guard": "single CPU affinity, hidden CUDA, BLAS/OMP/MKL1, task flock, nice10",
+    "disruptive_operations": "none; no process signals, GPU settings or shared service changes"
+  },
+  "forbidden": [
+    "GPU",
+    "latency claims",
+    "PCA refit",
+    "repartition",
+    "query fitting",
+    "learned/nonlinear projection",
+    "ANN",
+    "formal256",
+    "10K",
+    "change K"
+  ]
+}

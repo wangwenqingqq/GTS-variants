@@ -1,0 +1,18 @@
+{
+  "status": "PASS_CURATED_SNAPSHOT",
+  "task_public_files": 51,
+  "dependencies": "only frozen inherited base blobs",
+  "tests": [
+    "test_safety.py",
+    "test_build_binding.py",
+    "replay.py"
+  ],
+  "primary_source_freeze_sha256": "cf777289196dd03e1bfc3163993b0e82eb75db6fb0cabbabae91f93a8d76ee32",
+  "postprocess_source_pins_sha256": "b3e5f9514da25084c63a31e6c083bdfbbbb7bf1373a74763cc00f3d9842bcfcc",
+  "forbidden_in_stage": [
+    "original/projected vectors",
+    "packed private endpoints",
+    "device configuration",
+    "private run logs"
+  ]
+}
