@@ -1,0 +1,27 @@
+{
+  "CPU": "INTEL(R) XEON(R) GOLD 6530",
+  "architecture": "x86_64",
+  "CPU_workers": 1,
+  "priority": "nice10",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "compiler_flags": [
+    "-std=c++17",
+    "-O2",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-associative-math",
+    "-shared",
+    "-fPIC"
+  ],
+  "CPU_library_dependencies": {
+    "libm.so.6": "1b87a1a50b496cfead2b0ad134c2ff536705c82608db240c7e8aa48d6c0e4217",
+    "libc.so.6": "d8db8739a1633c972cec6a4fe0566bdcec6fd088f98723492ab0361f66238f75"
+  },
+  "CUDA_visible_devices": "empty for this process;no global settings changed",
+  "GPU_starts": 0,
+  "no_GPU_libraries_linked": true,
+  "placement": "private",
+  "timing_scope": "No measured latency or physical memory-traffic claim"
+}

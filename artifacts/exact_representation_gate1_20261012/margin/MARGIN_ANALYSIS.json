@@ -1,0 +1,46 @@
+{
+  "boundaries": {
+    "definition": "ordered full squared L2 minus exact threshold; nonhits only",
+    "near": "0<margin<=0.1*threshold",
+    "medium": "0.1*threshold<margin<=threshold",
+    "far": "margin>threshold",
+    "diagnostic_only": true,
+    "boundaries_frozen_before_measurement": true
+  },
+  "groups": {
+    "near": {
+      "count": 6900,
+      "mean": 876.7084057971015,
+      "median": 878.0,
+      "p10": 822.0,
+      "p90": 938.0,
+      "p95": 947.0,
+      "p99": 958.0,
+      "nonhit_fraction": 0.00021566941442003213,
+      "coordinate_savings_fraction": 2.2656187740887782e-05
+    },
+    "medium": {
+      "count": 123572,
+      "mean": 604.3303661023533,
+      "median": 611.0,
+      "p10": 447.0,
+      "p90": 766.0,
+      "p95": 798.0,
+      "p99": 842.0,
+      "nonhit_fraction": 0.003862420417204668,
+      "coordinate_savings_fraction": 0.0017326204384312711
+    },
+    "far": {
+      "count": 31862938,
+      "mean": 165.2790986192171,
+      "median": 155.0,
+      "p10": 45.0,
+      "p90": 293.0,
+      "p95": 344.0,
+      "p99": 454.0,
+      "nonhit_fraction": 0.9959219101683753,
+      "coordinate_savings_fraction": 0.9982447233738279
+    }
+  },
+  "scope": "Diagnostic only; gate includes hits and all objects"
+}

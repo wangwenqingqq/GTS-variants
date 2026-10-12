@@ -1,0 +1,55 @@
+{
+  "scope": "Design-only128/256/512/960 checkpoints; no GPU code or performance admission",
+  "rows": [
+    {
+      "start": 0,
+      "end": 128,
+      "input_pairs": 32000000,
+      "unresolved_after": 20932102,
+      "coordinate_bytes": 16384000000,
+      "mean_input_objects": 1000000.0,
+      "mean_unresolved_after": 654128.1875
+    },
+    {
+      "start": 128,
+      "end": 256,
+      "input_pairs": 20932102,
+      "unresolved_after": 4795038,
+      "coordinate_bytes": 10717236224,
+      "mean_input_objects": 654128.1875,
+      "mean_unresolved_after": 149844.9375
+    },
+    {
+      "start": 256,
+      "end": 512,
+      "input_pairs": 4795038,
+      "unresolved_after": 258463,
+      "coordinate_bytes": 4910118912,
+      "mean_input_objects": 149844.9375,
+      "mean_unresolved_after": 8076.96875
+    },
+    {
+      "start": 512,
+      "end": 960,
+      "input_pairs": 258463,
+      "unresolved_after": 6590,
+      "coordinate_bytes": 463165696,
+      "mean_input_objects": 8076.96875,
+      "mean_unresolved_after": 205.9375
+    }
+  ],
+  "coordinate_bytes_per_query": 1014828776.0,
+  "coordinate_reduction": 0.7357216729166667,
+  "ideal_coordinate_bytes_per_query": 669166459.0,
+  "optional_global_FP64_state_read_write_bytes_per_query": 12992801.5,
+  "optional_int32_continuation_read_write_bytes_per_query": 6496400.75,
+  "not_priced": [
+    "compaction scratch/scan",
+    "masks",
+    "divergence and sectors",
+    "launches",
+    "complete output",
+    "updates",
+    "conservative GPU numerical arithmetic"
+  ]
+}
