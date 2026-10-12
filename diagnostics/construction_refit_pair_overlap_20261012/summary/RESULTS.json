@@ -1,0 +1,670 @@
+{
+  "validation": {
+    "input_files_verified": 190,
+    "keeper_files_verified": 25,
+    "inherited_quality_pass": true,
+    "new_gpu_processes": 0,
+    "helper_sha256": "e5d87bbb8678e54977e414ed0f232f1cc38b740adb81804dc7b68959f2b8cc50"
+  },
+  "rebuilds": [
+    {
+      "rebuild": "R1",
+      "counts": [
+        {
+          "scoring_level": 0,
+          "active_parents": 1,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 10,
+          "captured_boundary_pairs": 10
+        },
+        {
+          "scoring_level": 1,
+          "active_parents": 10,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 100,
+          "captured_boundary_pairs": 100
+        },
+        {
+          "scoring_level": 2,
+          "active_parents": 100,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 1000,
+          "captured_boundary_pairs": 1000
+        },
+        {
+          "scoring_level": 3,
+          "active_parents": 1000,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 10000,
+          "captured_boundary_pairs": 10000
+        },
+        {
+          "scoring_level": 4,
+          "active_parents": 10000,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 100000,
+          "captured_boundary_pairs": 100000
+        }
+      ],
+      "refit_source_count": 5000000,
+      "scoring_vs_refit": {
+        "construction_tasks": 5000000,
+        "refit_tasks": 5000000,
+        "construction_unique": 4999800,
+        "refit_unique": 4999800,
+        "overlap_unique": 4999800,
+        "overlap_over_refit_unique": 1.0,
+        "overlap_over_construction_unique": 1.0,
+        "repeated_refit_tasks": 5000000,
+        "task_overlap_fraction": 1.0
+      },
+      "boundary_vs_refit": {
+        "construction_tasks": 111110,
+        "refit_tasks": 5000000,
+        "construction_unique": 111108,
+        "refit_unique": 4999800,
+        "overlap_unique": 111108,
+        "overlap_over_refit_unique": 0.022222488899555984,
+        "overlap_over_construction_unique": 1.0,
+        "repeated_refit_tasks": 111110,
+        "task_overlap_fraction": 0.022222
+      },
+      "boundary_identity_present_refit_tasks_nonexclusive": 111128,
+      "scoring_boundary_union_overlap_unique": 4999800,
+      "boundary_is_subset_of_scoring": true,
+      "multiplicity_equal": true,
+      "unique_pair_set_sha256": "7690563ee2c78121d4a2a68e32e4a4a8c2072d9d931b565c9feb1b00e8f51a01",
+      "refit_pair_multiplicity_histogram": {
+        "1": 4999600,
+        "2": 200
+      },
+      "owner": {
+        "matching": "maximize same (pair, canonical member set) first, then match residual pair tasks",
+        "same_owner_matched_tasks": 0,
+        "different_owner_matched_tasks": 5000000,
+        "same_owner_task_fraction": 0.0,
+        "unique_overlap_with_any_same_owner_match": 0,
+        "unique_overlap_only_different_owner": 4999800,
+        "adjacent_level_matched_tasks_same_owner": 0,
+        "adjacent_level_matched_tasks_different_owner": 5000000,
+        "boundary_same_owner_matched_tasks": 111110
+      },
+      "aligned_levels": [
+        {
+          "construction_level": 0,
+          "refit_level": 1,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 2,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 3,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 4,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 5,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        }
+      ],
+      "level_matrix": [
+        {
+          "construction_level": 0,
+          "refit_level": 1,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 3,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 5,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 2,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 3,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 5,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 3,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 5,
+          "unique_intersection": 200,
+          "fraction_of_refit_level_tasks": 0.0002
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 3,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 4,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 5,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 3,
+          "unique_intersection": 200,
+          "fraction_of_refit_level_tasks": 0.0002
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 5,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        }
+      ],
+      "numeric": {
+        "scope": "existing nominal construction output -> exact frozen refit interval output",
+        "same_numeric_contract_unique": 0,
+        "convertible_self_pair_unique_optimistic": 11109,
+        "incompatible_nonself_unique": 4988691,
+        "certified_compatible_unique_admission_ceiling_fraction": 0.002221888875555022,
+        "convertible_self_pair_task_optimistic": 11111,
+        "certified_compatible_task_admission_ceiling_fraction": 0.0022222,
+        "ceiling_definition": "existing source-contract-admitted categories plus optimistic trivial self-zero exception; not a mathematical bound on all conversion algorithms or accidental equality",
+        "per_pair_value_bit_equality": "unknown: refit captures node extrema only",
+        "does_not_prove": "every nonself nominal value differs numerically; all future build-produced certificates are impossible"
+      },
+      "storage_identity_overlap_bytes": {
+        "FP32_nominal": 19999200,
+        "FP64_nominal": 39998400,
+        "two_FP64_interval_endpoints": 79996800,
+        "two_uint32_occurrence_ID_mapping": 39998400,
+        "two_uint64_occurrence_ID_mapping": 79996800
+      },
+      "current_scoring_value_survives_to_refit": "NO",
+      "boundary_scalar_lifetime": "YES: TN.min_dis persists, but is a nominal FP32 scalar, not the refit certificate",
+      "decision": "NO_GO_REUSE"
+    },
+    {
+      "rebuild": "R2",
+      "counts": [
+        {
+          "scoring_level": 0,
+          "active_parents": 1,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 10,
+          "captured_boundary_pairs": 10
+        },
+        {
+          "scoring_level": 1,
+          "active_parents": 10,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 100,
+          "captured_boundary_pairs": 100
+        },
+        {
+          "scoring_level": 2,
+          "active_parents": 100,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 1000,
+          "captured_boundary_pairs": 1000
+        },
+        {
+          "scoring_level": 3,
+          "active_parents": 1000,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 10000,
+          "captured_boundary_pairs": 10000
+        },
+        {
+          "scoring_level": 4,
+          "active_parents": 10000,
+          "tiled_loop_source_count": 1000000,
+          "captured_scoring_pairs": 1000000,
+          "nodeSplit_loop_source_count": 100000,
+          "captured_boundary_pairs": 100000
+        }
+      ],
+      "refit_source_count": 5000000,
+      "scoring_vs_refit": {
+        "construction_tasks": 5000000,
+        "refit_tasks": 5000000,
+        "construction_unique": 4999800,
+        "refit_unique": 4999800,
+        "overlap_unique": 4999800,
+        "overlap_over_refit_unique": 1.0,
+        "overlap_over_construction_unique": 1.0,
+        "repeated_refit_tasks": 5000000,
+        "task_overlap_fraction": 1.0
+      },
+      "boundary_vs_refit": {
+        "construction_tasks": 111110,
+        "refit_tasks": 5000000,
+        "construction_unique": 111108,
+        "refit_unique": 4999800,
+        "overlap_unique": 111108,
+        "overlap_over_refit_unique": 0.022222488899555984,
+        "overlap_over_construction_unique": 1.0,
+        "repeated_refit_tasks": 111110,
+        "task_overlap_fraction": 0.022222
+      },
+      "boundary_identity_present_refit_tasks_nonexclusive": 111128,
+      "scoring_boundary_union_overlap_unique": 4999800,
+      "boundary_is_subset_of_scoring": true,
+      "multiplicity_equal": true,
+      "unique_pair_set_sha256": "652c632eeb9dec688813986944e97a2ca767b67b30975914f3dbb997414eddaa",
+      "refit_pair_multiplicity_histogram": {
+        "1": 4999600,
+        "2": 200
+      },
+      "owner": {
+        "matching": "maximize same (pair, canonical member set) first, then match residual pair tasks",
+        "same_owner_matched_tasks": 0,
+        "different_owner_matched_tasks": 5000000,
+        "same_owner_task_fraction": 0.0,
+        "unique_overlap_with_any_same_owner_match": 0,
+        "unique_overlap_only_different_owner": 4999800,
+        "adjacent_level_matched_tasks_same_owner": 0,
+        "adjacent_level_matched_tasks_different_owner": 5000000,
+        "boundary_same_owner_matched_tasks": 111110
+      },
+      "aligned_levels": [
+        {
+          "construction_level": 0,
+          "refit_level": 1,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 2,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 3,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 4,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 5,
+          "construction_tasks": 1000000,
+          "refit_tasks": 1000000,
+          "construction_unique": 1000000,
+          "refit_unique": 1000000,
+          "overlap_unique": 1000000,
+          "overlap_over_refit_unique": 1.0,
+          "overlap_over_construction_unique": 1.0,
+          "repeated_refit_tasks": 1000000,
+          "task_overlap_fraction": 1.0
+        }
+      ],
+      "level_matrix": [
+        {
+          "construction_level": 0,
+          "refit_level": 1,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 3,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 0,
+          "refit_level": 5,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 2,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 3,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 1,
+          "refit_level": 5,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 3,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 2,
+          "refit_level": 5,
+          "unique_intersection": 200,
+          "fraction_of_refit_level_tasks": 0.0002
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 3,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 4,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        },
+        {
+          "construction_level": 3,
+          "refit_level": 5,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 1,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 2,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 3,
+          "unique_intersection": 200,
+          "fraction_of_refit_level_tasks": 0.0002
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 4,
+          "unique_intersection": 0,
+          "fraction_of_refit_level_tasks": 0.0
+        },
+        {
+          "construction_level": 4,
+          "refit_level": 5,
+          "unique_intersection": 1000000,
+          "fraction_of_refit_level_tasks": 1.0
+        }
+      ],
+      "numeric": {
+        "scope": "existing nominal construction output -> exact frozen refit interval output",
+        "same_numeric_contract_unique": 0,
+        "convertible_self_pair_unique_optimistic": 11109,
+        "incompatible_nonself_unique": 4988691,
+        "certified_compatible_unique_admission_ceiling_fraction": 0.002221888875555022,
+        "convertible_self_pair_task_optimistic": 11111,
+        "certified_compatible_task_admission_ceiling_fraction": 0.0022222,
+        "ceiling_definition": "existing source-contract-admitted categories plus optimistic trivial self-zero exception; not a mathematical bound on all conversion algorithms or accidental equality",
+        "per_pair_value_bit_equality": "unknown: refit captures node extrema only",
+        "does_not_prove": "every nonself nominal value differs numerically; all future build-produced certificates are impossible"
+      },
+      "storage_identity_overlap_bytes": {
+        "FP32_nominal": 19999200,
+        "FP64_nominal": 39998400,
+        "two_FP64_interval_endpoints": 79996800,
+        "two_uint32_occurrence_ID_mapping": 39998400,
+        "two_uint64_occurrence_ID_mapping": 79996800
+      },
+      "current_scoring_value_survives_to_refit": "NO",
+      "boundary_scalar_lifetime": "YES: TN.min_dis persists, but is a nominal FP32 scalar, not the refit certificate",
+      "decision": "NO_GO_REUSE"
+    }
+  ],
+  "performance_claim": false
+}

@@ -1,0 +1,148 @@
+[
+  {
+    "file": "include/config.cuh",
+    "sha256": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "locations": [
+      {
+        "source_fragment": "#define short",
+        "one_based_lines": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "file": "include/tree.cuh",
+    "sha256": "8096e3f92ba33697191357be721cf608f2387245bbacdc8480a071fa678b56e4",
+    "locations": [
+      {
+        "source_fragment": "#define THREAD_NUM 512",
+        "one_based_lines": [
+          18
+        ]
+      },
+      {
+        "source_fragment": "__global__ void getPivotDisTiled",
+        "one_based_lines": [
+          176
+        ]
+      },
+      {
+        "source_fragment": "double result = 0;",
+        "one_based_lines": [
+          83,
+          204
+        ]
+      },
+      {
+        "source_fragment": "dis_list[i] = double(result",
+        "one_based_lines": [
+          158,
+          279
+        ]
+      },
+      {
+        "source_fragment": "__global__ void nodeSplit",
+        "one_based_lines": [
+          297
+        ]
+      },
+      {
+        "source_fragment": "node_child.pid = pid_list[nid];",
+        "one_based_lines": [
+          322
+        ]
+      },
+      {
+        "source_fragment": "float result = 0;",
+        "one_based_lines": [
+          329
+        ]
+      },
+      {
+        "source_fragment": "void indexConstru",
+        "one_based_lines": [
+          456
+        ]
+      },
+      {
+        "source_fragment": "thrust::sort_by_key",
+        "one_based_lines": [
+          506
+        ]
+      },
+      {
+        "source_fragment": "cudaFree(dis_list);",
+        "one_based_lines": [
+          545
+        ]
+      }
+    ]
+  },
+  {
+    "file": "include/numeric.cuh",
+    "sha256": "6b770c8cd9646475ec7e24c1075a6b4917a5607c7b4faf87ffe33f7fe0981454",
+    "locations": [
+      {
+        "source_fragment": "Interval norm_query",
+        "one_based_lines": [
+          17
+        ]
+      },
+      {
+        "source_fragment": "double dl=__dsub_rd",
+        "one_based_lines": [
+          20
+        ]
+      },
+      {
+        "source_fragment": "return {__dsqrt_rd",
+        "one_based_lines": [
+          24
+        ]
+      },
+      {
+        "source_fragment": "__global__ void refit",
+        "one_based_lines": [
+          44
+        ]
+      },
+      {
+        "source_fragment": "Interval v=norm_query",
+        "one_based_lines": [
+          50
+        ]
+      },
+      {
+        "source_fragment": "inline void refresh_bounds",
+        "one_based_lines": [
+          62
+        ]
+      },
+      {
+        "source_fragment": "refit<<<nn,256>>>",
+        "one_based_lines": [
+          82
+        ]
+      }
+    ]
+  },
+  {
+    "file": "include/update.cuh",
+    "sha256": "2850ade84ec8a7753f7c57c5321d2c6ec8f9f5da5c71476f2d1eb8b1556d4e4c",
+    "locations": [
+      {
+        "source_fragment": "indexConstru(data_d",
+        "one_based_lines": [
+          440
+        ]
+      },
+      {
+        "source_fragment": "target::refresh_bounds",
+        "one_based_lines": [
+          452
+        ]
+      }
+    ]
+  }
+]

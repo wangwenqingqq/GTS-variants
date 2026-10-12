@@ -1,0 +1,89 @@
+{
+  "experiment_id": "gtspp_20261012_construction_refit_pair_overlap",
+  "parent_commit": "d315215e5186d1fbb0210fe74ed27df1fd8e6483",
+  "hypothesis": "Scoring and refit repeat ordered immutable occurrence pairs; numeric compatibility and current lifetime are separate gates.",
+  "baseline_contract": {
+    "experiment": "GTSPP_20261012_REBUILD_CHANGE_AMPLIFICATION",
+    "parent_commit": "db821b904b04576ab329dafbea6c7eae382e3323",
+    "keeper_binary_sha256": "771f7cf42a23a8e2081f2d2da47d02e747799e9b06dcd4c6e9c0eba093ee0d3c",
+    "keeper": "PAR_STRONG/FULL/TILED/Fixed3, unchanged production binary; separate read-only Host observer binary",
+    "shape": {
+      "N": 1000000,
+      "D": 960,
+      "dtype": "FP32",
+      "metric": "L2",
+      "B": 1,
+      "K": 8,
+      "radius": 0.705625057220459,
+      "events": 336,
+      "insert": 40,
+      "delete": 40,
+      "range": 128,
+      "knn": 128
+    },
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "events_sha256": "5f440b3f5442499cd404fcb4821be95cf5cb4d04af63f7b6ead4bd10fec5ef96",
+    "hardware": {
+      "gpu": 1,
+      "gpu_uuid_sha256": "94515d9c9c2c807ec0fdbc7f33693456ed40d13b8d35ca2727cc4907faaddd57",
+      "sm": 120,
+      "driver": "590.48.01",
+      "toolkit": "13.1.115",
+      "numa": 0,
+      "settings": "unchanged",
+      "scope": "Historical capture provenance, not a new GPU allocation or current availability claim."
+    }
+  },
+  "scope": {
+    "rebuilds": [
+      "R1",
+      "R2"
+    ],
+    "new_gpu_processes": 0,
+    "new_kernels": 0,
+    "performance_measurement": false,
+    "evidence_mode": "CPU analysis of existing original P2 snapshots and native C0 build capture, validated byte-identical against original POST tree/order/empty.",
+    "source_derived_tasks_per_rebuild": {
+      "pivot_scoring": 5000000,
+      "split_boundary": 111110,
+      "refit": 5000000
+    }
+  },
+  "pair": {
+    "ordered": true,
+    "fields": [
+      "pivot_occurrence_id",
+      "object_occurrence_id"
+    ],
+    "physical_row_to_occurrence": "POST_Rn/base.i32",
+    "owner": "SHA256(sorted immutable occurrence members; little-endian int32 bytes); numeric node indices are decoding addresses only.",
+    "level_alignment": "construction scoring L -> refit L+1; also report same-level intersection.",
+    "task_owner_matching": "Maximize SAME_OWNER matches by exact (pair, canonical membership) multiset equality, then assign residual pair-matched tasks to DIFFERENT_OWNER.",
+    "stage_matching": "scoring and boundary overlaps are non-exclusive; union counted once."
+  },
+  "numeric_gate": {
+    "same_numeric": "same input, arithmetic, accumulation, sqrt, rounding and representation",
+    "convertible": "exact deterministic low-cost conversion to the required refit enclosure without recomputing D960",
+    "incompatible": "captured scoring/boundary nominal arithmetic does not certify refit directed-rounding interval contract",
+    "self_pairs": "report separately as an optimistic source-contract admission ceiling for trivial zero conversion; not a bound on all possible conversion mechanisms or accidental equality",
+    "per_pair_value_equality": "unknown unless both producer and consumer outputs exist; refit currently captures aggregate node extrema, not per-pair intervals",
+    "fma": "source-explicit directed refit intrinsics known; pow overload/code-generation FMA in old binaries not disassembled here"
+  },
+  "decision": {
+    "strong_overlap": "both rebuilds identity >=0.8 AND certified numeric-compatible >=0.8",
+    "conditional": "identity >=0.5 AND numeric-compatible >=0.5 but strong gate not met",
+    "no_go_reuse": "identity <0.5 OR source-contract admitted numeric-compatible fraction including optimistic self-zero exception <0.5; decision is scoped to existing nominal outputs and bit-exact frozen refit arrays",
+    "incomplete_gate": "missing inputs or count mismatch stops analysis; no forced decision"
+  },
+  "storage": "unique identity-overlap pairs times 4/8 bytes and separate 8/16-byte mapping; theoretical lower bounds only, not measured VRAM",
+  "prohibited": [
+    "cache",
+    "fusion",
+    "kernel rewrite",
+    "timing campaign",
+    "paper rewrite",
+    "old evidence modification"
+  ],
+  "user_plan_sha256": "fa194151f17da125ea50c549884603db5691d4b19a1e6d3cd5da0a02a68b81e5",
+  "helper_sha256": "e5d87bbb8678e54977e414ed0f232f1cc38b740adb81804dc7b68959f2b8cc50"
+}

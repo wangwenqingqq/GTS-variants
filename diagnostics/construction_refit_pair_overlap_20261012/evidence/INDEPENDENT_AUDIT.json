@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "method": "Independent full CPU reconstruction; no import of the primary analyzer or prior helper. Verified all canonical hashes and concrete pair/owner arrays.",
+  "input_files_verified": 190,
+  "historical_manifests_reverified": true,
+  "independent_checker_sha256": "e03ddb1c1ebaad06a1c506e4db1ee61ddf3603f38044d4ee55c19171cb3cba13",
+  "pair_results": [
+    {
+      "rebuild": 1,
+      "scoring_tasks": 5000000,
+      "refit_tasks": 5000000,
+      "unique": 4999800,
+      "identity_overlap_fraction": 1.0,
+      "task_overlap": 5000000,
+      "scoring_same_owner": 0,
+      "boundary_tasks": 111110,
+      "boundary_unique": 111108,
+      "boundary_matched_tasks": 111110,
+      "boundary_refit_incidence_nonexclusive": 111128,
+      "self_unique": 11109,
+      "self_tasks": 11111,
+      "multiplicity_histogram": {
+        "1": 4999600,
+        "2": 200
+      },
+      "all_pair_owner_outputs_match": true,
+      "owner_dictionary_matches": true
+    },
+    {
+      "rebuild": 2,
+      "scoring_tasks": 5000000,
+      "refit_tasks": 5000000,
+      "unique": 4999800,
+      "identity_overlap_fraction": 1.0,
+      "task_overlap": 5000000,
+      "scoring_same_owner": 0,
+      "boundary_tasks": 111110,
+      "boundary_unique": 111108,
+      "boundary_matched_tasks": 111110,
+      "boundary_refit_incidence_nonexclusive": 111128,
+      "self_unique": 11109,
+      "self_tasks": 11111,
+      "multiplicity_histogram": {
+        "1": 4999600,
+        "2": 200
+      },
+      "all_pair_owner_outputs_match": true,
+      "owner_dictionary_matches": true
+    }
+  ],
+  "numeric_scope": "Existing nominal output -> frozen bit-exact interval arrays only. Per-pair output equality and future certificates remain UNKNOWN."
+}
