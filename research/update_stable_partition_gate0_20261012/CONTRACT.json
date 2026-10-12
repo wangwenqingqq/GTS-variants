@@ -1,0 +1,53 @@
+{
+  "experiment": "gtspp_20261012_update_stable_partition_gate0",
+  "baseline_commit": "9da7faa63fce8d01b2323fefd56ffbac6b24c4c8",
+  "baseline_l3_result_sha256": "4760b3d73ff5d822e804cbfdb31dd6e26e50f9596756362851982dc904227873",
+  "gpu_process_budget": 0,
+  "candidate": "Preserve exact metric-index partition-decision identity by default under sparse insert/delete; absorb updates locally; repartition only under an explicit quality/stability trigger.",
+  "task": "Nearest-prior-art conceptual substitution kill test, not implementation, experiment or paper prose.",
+  "questions": [
+    "insert/delete paths",
+    "pivot/representative lifetime",
+    "split/overflow/rebalance/global rebuild triggers",
+    "explicit structural stability motivation",
+    "generic mechanism equivalence versus a demonstrably different GPU physical-maintenance mechanism"
+  ],
+  "families": [
+    "dynamic metric trees",
+    "incremental hierarchical indexing",
+    "stable/persistent hierarchical partitioning",
+    "buffered/deferred rebuilding indexes"
+  ],
+  "minimum_named_coverage": [
+    "M-tree",
+    "Slim-tree",
+    "PM-tree",
+    "dynamic VP-tree",
+    "MVP-tree",
+    "GNAT/dynamic GNAT",
+    "Cover Tree",
+    "explicit stable hierarchy work",
+    "buffered/deferred rebuild work"
+  ],
+  "evidence_policy": "Only primary full text, official author/publisher metadata or version-pinned official source code establishes technical facts. Secondary search hits are discovery only. UNKNOWN/UNCLEAR remain explicit, especially deletion.",
+  "kill_test": "Remove candidate labels/GPU architecture. If persistent decisions + local admission + explicit structural trigger maps directly onto known exact dynamic indexing, reject generic mechanism novelty even if prior work does not use structural-churn vocabulary or report GPU costs.",
+  "decisions": [
+    "PASS",
+    "CONDITIONAL",
+    "KILL"
+  ],
+  "pass_policy": "PASS needs a clearly non-incremental mechanism difference, not merely a new measured failure mode, stability terminology, GPU port, extra engineering, or lack of one prior paper jointly naming every axis.",
+  "conditional_policy": "Only for an explicit independent proposed mechanism with a discriminating test; no implementation until PASS. Unmeasured GPU co-design remains a future hypothesis, not rescued novelty.",
+  "prohibited": [
+    "GPU construction or benchmark",
+    "C4/C5",
+    "freeze-all",
+    "new kernel",
+    "reviving unsafe incremental baseline",
+    "Safe-C1 port",
+    "changing rebuild threshold",
+    "new workload or external baseline rerun",
+    "paper novelty claim for fixed/persistent pivot alone"
+  ],
+  "frozen_utc": "2026-10-12T13:49:59.008466+00:00"
+}

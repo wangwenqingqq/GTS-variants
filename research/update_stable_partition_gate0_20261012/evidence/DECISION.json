@@ -1,0 +1,33 @@
+{
+  "experiment": "gtspp_20261012_update_stable_partition_gate0",
+  "decision": "KILL",
+  "confidence": "high for the generic candidate; no verdict on an unspecified independent GPU co-design",
+  "mechanism_status": "conceptually subsumed at the proposed abstraction",
+  "implementation_status": "not implemented",
+  "thesis_scope": "generic persistent decisions + local updates + conditional repartition, not all GTS++ research",
+  "gpu_processes_started": 0,
+  "cheap_test": "conceptual substitution from primary sources, not a timing or direct-port experiment",
+  "decisive_sources": [
+    "egnat",
+    "dsat",
+    "dvp_publisher"
+  ],
+  "kill_1": "near overlap, but no claim that one work quantifies GTS sparse churn and GPU cost",
+  "kill_2": "satisfied for generic mechanism",
+  "kill_3": "unknown: packed-GTS same-contract direct portability is untested",
+  "pass_a": "GTS-specific measured failure may differ; does not rescue a known mechanism",
+  "pass_b": "failed: historical decisions and deferred repair already exist",
+  "pass_c": "unknown for a distinct GPU mechanism; GPU as a target alone is insufficient",
+  "reopen": "Specify a non-incremental physical-maintenance or query mechanism not equivalent to the known controls, pass its own nearest-prior-art screen, then demonstrate decisive reproducible same-contract advantage.",
+  "next_action": "Stop stable-partition implementation; retain diagnosis and triage range traversal/verification or a genuinely different maintenance dependency.",
+  "forbidden": [
+    "C4/C5",
+    "freeze-all",
+    "stable-pivot kernel",
+    "unsafe incremental revival",
+    "Safe-C1 port",
+    "rebuild-threshold change",
+    "new GPU run",
+    "unmeasured performance claim"
+  ]
+}
