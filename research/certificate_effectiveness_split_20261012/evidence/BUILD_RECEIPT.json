@@ -1,0 +1,63 @@
+{
+  "CPU": "INTEL(R) XEON(R) GOLD 6530",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "CPU_affinity_count": 1,
+  "thread_config": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "GPU_used": false,
+  "costs": {
+    "PCA_BALANCED": {
+      "process_CPU_seconds": 1.2054057880000002,
+      "sort_count": 11111,
+      "sorted_object_occurrences": 5000000,
+      "explicit_peak_scratch_bytes": 76000000,
+      "axis_counts": [
+        369,
+        172,
+        643,
+        3786,
+        1073,
+        1799,
+        1785,
+        1484
+      ],
+      "scope": "same frozen max-spread reconstruction, CPU counts only"
+    },
+    "ORACLE_ALL8": {
+      "process_CPU_seconds": 35.782510169000005,
+      "elapsed_resource_seconds": 35.810721669811755,
+      "parents": 11111,
+      "candidate_proposals_evaluated": 133332,
+      "sort_operations": 133332,
+      "sorted_object_occurrences": 60000000,
+      "oracle_query_child_bound_evaluations": 10666560,
+      "construction_score_queries": 8,
+      "explicit_array_scratch_proxy_bytes": 256053760,
+      "scratch_scope": "conservative array live-set proxy; excludes allocator/sort internals and retained Python result tables",
+      "scope": "query/U*-dependent greedy oracle construction including every-proposal cached-truth safety check; NOT deployable build time",
+      "independent_G4_CPU_seconds": 17.124619339000006
+    },
+    "ORACLE_HARD6": {
+      "process_CPU_seconds": 35.658595986,
+      "elapsed_resource_seconds": 35.6867050009314,
+      "parents": 11111,
+      "candidate_proposals_evaluated": 133332,
+      "sort_operations": 133332,
+      "sorted_object_occurrences": 60000000,
+      "oracle_query_child_bound_evaluations": 10666560,
+      "construction_score_queries": 6,
+      "explicit_array_scratch_proxy_bytes": 256053760,
+      "scratch_scope": "conservative array live-set proxy; excludes allocator/sort internals and retained Python result tables",
+      "scope": "query/U*-dependent greedy oracle construction including every-proposal cached-truth safety check; NOT deployable build time",
+      "independent_G4_CPU_seconds": 17.125465235999997
+    }
+  },
+  "process_cumulative_peak_RSS_KiB": 696332,
+  "peak_scope": "entire worker including input mappings, result tables, metadata and G4; not isolated per-proposal scratch",
+  "elapsed_resource_seconds": 114.32874954305589,
+  "no_latency_measured": true
+}

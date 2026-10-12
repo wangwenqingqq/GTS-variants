@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "G1_G4": "PASS",
+  "GPU_used": false,
+  "bounds_checked": 3552000,
+  "validations": [
+    {
+      "partition": "GTS_ORIGINAL",
+      "level": 3,
+      "bounds_checked": 8000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "GTS_ORIGINAL",
+      "level": 4,
+      "bounds_checked": 80000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "GTS_ORIGINAL",
+      "level": 5,
+      "bounds_checked": 800000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "PCA_BALANCED",
+      "level": 3,
+      "bounds_checked": 8000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "PCA_BALANCED",
+      "level": 4,
+      "bounds_checked": 80000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "PCA_BALANCED",
+      "level": 5,
+      "bounds_checked": 800000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "ORACLE_ALL8",
+      "level": 3,
+      "bounds_checked": 8000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "ORACLE_ALL8",
+      "level": 4,
+      "bounds_checked": 80000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "ORACLE_ALL8",
+      "level": 5,
+      "bounds_checked": 800000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "ORACLE_HARD6",
+      "level": 3,
+      "bounds_checked": 8000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "ORACLE_HARD6",
+      "level": 4,
+      "bounds_checked": 80000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    },
+    {
+      "partition": "ORACLE_HARD6",
+      "level": 5,
+      "bounds_checked": 800000,
+      "bounds_above_truth": 0,
+      "false_topK_prunes": 0
+    }
+  ],
+  "serialized_metadata": {
+    "GTS_ORIGINAL_L3": {
+      "bytes": 64000,
+      "sha256": "32ebb91e342881555dd0da8dc8ad888b5e92b5fe6351bf22ab6adb147b205171",
+      "roundtrip": true
+    },
+    "GTS_ORIGINAL_L4": {
+      "bytes": 640000,
+      "sha256": "0dc861109fcc1c7b554c072c37f87da2b99beef3277baaac7385c17ae96ef62e",
+      "roundtrip": true
+    },
+    "GTS_ORIGINAL_L5": {
+      "bytes": 6400000,
+      "sha256": "23afa1932c1c0808c5ebc683ed9691ca043d02863f4919f47c1d6aae9cdef3d5",
+      "roundtrip": true
+    },
+    "PCA_BALANCED_L3": {
+      "bytes": 64000,
+      "sha256": "1b6bc3106c6cf1276b324f19249da48709d66dd319adf339d26267c5cf177bfb",
+      "roundtrip": true
+    },
+    "PCA_BALANCED_L4": {
+      "bytes": 640000,
+      "sha256": "8fb320782e91cb54fd63349d7185f7d7c85c653464c2c927cfe176f945d66305",
+      "roundtrip": true
+    },
+    "PCA_BALANCED_L5": {
+      "bytes": 6400000,
+      "sha256": "254f72e6b01a52ef7fbb93465a7edbbf51c6e4615ddf78e284437027c8958a12",
+      "roundtrip": true
+    },
+    "ORACLE_ALL8_L3": {
+      "bytes": 64000,
+      "sha256": "aaa279be1ae61a212d59293bab6227db381f79cf2bb03fb14d2cd2e28b816a44",
+      "roundtrip": true
+    },
+    "ORACLE_ALL8_L4": {
+      "bytes": 640000,
+      "sha256": "9ff28a38cc41af53fd6e9fdc9ae008c094f107d0ef24fc26bb88aa9307ec8484",
+      "roundtrip": true
+    },
+    "ORACLE_ALL8_L5": {
+      "bytes": 6400000,
+      "sha256": "e480c648fc4886598a039627b406ed0c5775ce92fec8719085753ce9a6d21d54",
+      "roundtrip": true
+    },
+    "ORACLE_HARD6_L3": {
+      "bytes": 64000,
+      "sha256": "e73be1e2fc4f39b0520281bbfc0ea4a487d1a51cd8a828cd1c3d369fb463b3d8",
+      "roundtrip": true
+    },
+    "ORACLE_HARD6_L4": {
+      "bytes": 640000,
+      "sha256": "8fe3116a5b8667ce6873914ad320ae21cf01538d254ce1b0ddd144f99e9a60ec",
+      "roundtrip": true
+    },
+    "ORACLE_HARD6_L5": {
+      "bytes": 6400000,
+      "sha256": "e52117edb5339f65541280a7ce067ae2825b5af1c159a0ea05a0fb9f6c6c13d8",
+      "roundtrip": true
+    }
+  },
+  "baseline_pooled_rows_identical": 6,
+  "baseline_per_query_rows_identical": 48,
+  "all_parent_argmax_records_replayed": 22222
+}

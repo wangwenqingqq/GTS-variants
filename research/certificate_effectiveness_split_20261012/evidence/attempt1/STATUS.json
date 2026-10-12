@@ -1,0 +1,19 @@
+{
+  "status": "UNVALIDATED_REFERENCE_CONTRACT",
+  "reason": "Python >=3.12 builtin float sum uses compensated summation; independent radial centroid did not exactly implement sequential FP64 fold. Full measured score/argmax matches alone did not validate that reference arithmetic contract.",
+  "reproducer": "100x8 zeros; first5 coordinates in column0 [1,1e-16,-1,-1e-18,1e-18], others0, IDs0..99, depth4; centroid0 vs about1e-18; 97 radial order positions differ.",
+  "planned_repair": "Change ONLY reference centroid to explicit scalar sequential fold; add regression; fresh frozen second full campaign; retain first sources/receipts/raw run.",
+  "archived_source_map": {
+    "research/certificate_effectiveness_split_20261012/independent.py": {
+      "snapshot": "research/certificate_effectiveness_split_20261012/evidence/attempt1/independent.py.txt",
+      "sha256": "4afaa48f9f71b1005839a3dddcfd67fe7f8894b649a96be71271b9a627663d3d"
+    },
+    "research/certificate_effectiveness_split_20261012/test_oracle.py": {
+      "snapshot": "research/certificate_effectiveness_split_20261012/evidence/attempt1/test_oracle.py.txt",
+      "sha256": "c97b46ccbdea18e23b4026b4f1130ffcac56bc4f9c8895b5bd6aa6144843f9c7"
+    }
+  },
+  "first_input_identity_sha256": "08fcde1b68a332f1c08f166209838619267487e0ca72fa3f75d1649316d2da89",
+  "primary_reference": "https://docs.python.org/3.12/library/functions.html#sum",
+  "archival_note": "Forensic snapshots use .py.txt to avoid import or test discovery; first PASS receipts are historical and overridden by this UNVALIDATED status."
+}

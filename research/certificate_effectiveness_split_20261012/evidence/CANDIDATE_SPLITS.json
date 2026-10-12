@@ -1,0 +1,9 @@
+{
+  "query_independent": true,
+  "axis_ties": "lower dimension wins; spread measured on frozen FP64 coordinates",
+  "sort_ties": "ascending object ID; S10 lex keys (z_a,z_b,ID)",
+  "cyclic": "parent depth modulo 8; root depth 0 uses PC1",
+  "radial": "centroid sums FP64 in ascending object-ID order with sequential accumulate per coordinate; divide by parent size; squared radius separate multiply/add in dimension order 0..7",
+  "duplicates": "keep all 12, including duplicate axis proposals; count exact partition-order duplicates",
+  "children": "sort ascending, cut ten equal contiguous children"
+}

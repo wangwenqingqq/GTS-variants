@@ -1,0 +1,40 @@
+{
+  "status": "PASS_REPAIRED_REFERENCE_FULL_RERUN",
+  "accepted_attempt": 2,
+  "attempt1_status": "UNVALIDATED_REFERENCE_CONTRACT",
+  "source_changes": [
+    "certificate_effectiveness_split_20261012/independent.py",
+    "certificate_effectiveness_split_20261012/test_oracle.py"
+  ],
+  "contract_unchanged": true,
+  "samples_queries_U_basis_and_cache_identities_unchanged": true,
+  "partitions": {
+    "GTS_ORIGINAL": {
+      "permutation_identical": true,
+      "all_metadata_truth_query_and_near_arrays_identical": true,
+      "sha256_permutation": "a55ffaf03e8518a055022f04e5a35792224dce3955c32e264651c7c1d69a9317"
+    },
+    "PCA_BALANCED": {
+      "permutation_identical": true,
+      "all_metadata_truth_query_and_near_arrays_identical": true,
+      "sha256_permutation": "1d235d18c768bee0b91cbebab17cce5809a7ec6ee676dfe55903a87b91fddf36"
+    },
+    "ORACLE_ALL8": {
+      "permutation_identical": true,
+      "all_metadata_truth_query_and_near_arrays_identical": true,
+      "sha256_permutation": "79f3e74c68e406abca675c39838dcb28da852cf249ae1c331ff1d1e29d92f2e7"
+    },
+    "ORACLE_HARD6": {
+      "permutation_identical": true,
+      "all_metadata_truth_query_and_near_arrays_identical": true,
+      "sha256_permutation": "826f440bbc5fd27172f5038c2d5f44831ca34163aa604b8a4ad7aa14b9e1bf0c"
+    }
+  },
+  "all_parent_diagnostics_and_proposal_scores_byte_identical": true,
+  "all_primary_results_and_final_safety_records_byte_identical": true,
+  "attempt2_G4_parent_pairs": 712,
+  "attempt2_regression_tests": 5,
+  "first_input_identity_sha256": "08fcde1b68a332f1c08f166209838619267487e0ca72fa3f75d1649316d2da89",
+  "accepted_input_identity_sha256": "7fffcf06924fdc219ec96f67deda86e41c8e8ad5d5f5147df0da9145e0ad83ff",
+  "meaning": "Only independent reference fold and regression changed. Constructor and outcomes did not change. G4 is admitted only from the repaired second run."
+}

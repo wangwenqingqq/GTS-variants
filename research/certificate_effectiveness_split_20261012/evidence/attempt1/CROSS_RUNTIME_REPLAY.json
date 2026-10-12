@@ -1,0 +1,32 @@
+{
+  "status": "PASS_PRIMARY_EXACT_CROSS_RUNTIME",
+  "construction_evaluator": {
+    "python": "3.12.3",
+    "numpy": "1.26.4"
+  },
+  "portable_evaluator": {
+    "python": "3.13.12",
+    "numpy": "2.4.3"
+  },
+  "byte_identical_result_files": [
+    "CERTIFICATE_VALIDATION.json",
+    "aggregate_summary.json",
+    "contamination_summary.csv",
+    "leave_660835_out.csv",
+    "per_level_summary.csv",
+    "per_query_alignment.csv",
+    "proposal_frequency.csv",
+    "region_contamination.csv"
+  ],
+  "supplementary_float_last_bit_differences": [
+    {
+      "file": "regret_summary.csv",
+      "row": 4,
+      "field": "mean_normalized",
+      "absolute_difference": 3.469446951953614e-18
+    }
+  ],
+  "primary_12_cells_and_96_queries_byte_identical": true,
+  "decision_identical": true,
+  "note": "Supplementary diagnostic reductions are not decision inputs; small last-bit differences are retained, not silently asserted identical."
+}
