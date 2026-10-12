@@ -1,0 +1,50 @@
+{
+  "decision": "LOOKAHEAD_CLOSED",
+  "pooled": {
+    "gain_objects": 570,
+    "denominator": 528000,
+    "gain_fullscan_fraction": 0.0010795454545454546,
+    "parents": 16
+  },
+  "by_parent_depth": {
+    "2": {
+      "gain_objects": 500,
+      "denominator": 480000,
+      "gain_fullscan_fraction": 0.0010416666666666667,
+      "parents": 8
+    },
+    "3": {
+      "gain_objects": 70,
+      "denominator": 48000,
+      "gain_fullscan_fraction": 0.0014583333333333334,
+      "parents": 8
+    }
+  },
+  "safety_bound_checks": 1858560,
+  "bound_above_truth": 0,
+  "false_topK_prunes": 0,
+  "independent_checks": [
+    {
+      "parent_depth": 2,
+      "parent_index": 38,
+      "first_and_all120_second_parents_all12_proposals_independently_equal": true
+    },
+    {
+      "parent_depth": 3,
+      "parent_index": 61,
+      "first_and_all120_second_parents_all12_proposals_independently_equal": true
+    }
+  ],
+  "source_hashes": {
+    "splits.py": "a4ad007cff9b6dcfbb48f788b1047db70688d7ca857c24a581be2a0896ae0af2",
+    "independent.py": "f9602d79f7de74797953c290e0aea2730990285937d1f3ecb174ab7d439751ee"
+  },
+  "samples_sha256": "32f6fcb860aa67d92365bb2da54b410b345b4385f37d36a848ad51bf02313dba",
+  "scope": "same grandchildren horizon, 16 fixed parents, 12 first proposals and 12 child proposals; NOT global upper bound",
+  "sort_calls": 23232,
+  "sort_object_occurrences": 13728000,
+  "GPU_used": false,
+  "no_latency_measured": true,
+  "elapsed_resource_seconds": 11.137635139981285,
+  "CPU_affinity_count": 1
+}

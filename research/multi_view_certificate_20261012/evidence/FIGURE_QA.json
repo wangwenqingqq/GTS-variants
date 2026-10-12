@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "pages": 4,
+  "vector_pdf_sha256": "6d0050c9574939a2f200dbb3d5bd406503132c51a18c8ca830e63975b645a531",
+  "fonts": [
+    {
+      "page": 1,
+      "resource": "/F1",
+      "subtype": "/Type0",
+      "name": "/HERSEX+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "page": 2,
+      "resource": "/F1",
+      "subtype": "/Type0",
+      "name": "/CIVKTZ+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "page": 3,
+      "resource": "/F1",
+      "subtype": "/Type0",
+      "name": "/BSUIIN+TimesNewRomanPSMT",
+      "embedded": true
+    },
+    {
+      "page": 4,
+      "resource": "/F1",
+      "subtype": "/Type0",
+      "name": "/BMBLQF+TimesNewRomanPSMT",
+      "embedded": true
+    }
+  ],
+  "whole_page_render_DPI": 200,
+  "high_DPI_crops": {
+    "pages": [
+      1,
+      2
+    ],
+    "DPI": 600,
+    "checks": [
+      "legend and threshold separation",
+      "canary heatmap numbers and labels"
+    ]
+  },
+  "visual_checks": [
+    "all pages viewed from rendered PDF",
+    "no content truncation or overlapping labels",
+    "zero-baseline bars",
+    "colorblind/grayscale redundant markers and hatches",
+    "fixed-workload counts, no invented uncertainty"
+  ],
+  "earlier_rejected_layout": "first figure legend crossed threshold line; preserved privately; moved legend to empty plot region and re-rendered all pages",
+  "rendered_pages_sha256": {
+    "page-1.png": "adb412f9d8ee56e4f22a42ec48f07cd686355a4cbe269fa574c032c06008eaa8",
+    "page-2.png": "142fbc9a507c4da29f952260894104819a6d6ca7d331f899ddda1fb0a5648608",
+    "page-3.png": "e7a06c62d95f0f43c68d8aef29b576b7c83e5220bc21c7539274aa842693142e",
+    "page-4.png": "21b4b979a53cb3c9acb629e5ef603fbe232a7ba0217937e92d35d9b3f17d1312"
+  }
+}

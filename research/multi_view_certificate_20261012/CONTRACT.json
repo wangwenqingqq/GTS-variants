@@ -1,0 +1,161 @@
+{
+  "experiment": "GTSpp_20261012_multi_view_exact64B",
+  "base_commit": "ee7851ac046f03242daf78c8bb8a932c0f709987",
+  "stage": "offline diagnosis, not a novelty or latency claim",
+  "N": 1000000,
+  "D": 960,
+  "K": 8,
+  "B": 1,
+  "queries": [
+    660835,
+    90208,
+    359924,
+    374533,
+    96985,
+    702545,
+    55715,
+    470632
+  ],
+  "hard_query_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "U_star_squared_hex": [
+    "0x1.a4e21ce918a12p-4",
+    "0x1.5e8b642217719p+2",
+    "0x1.c23a66e8768a3p+0",
+    "0x1.93ac9a02e418ap-1",
+    "0x1.13c1cfac5faccp+0",
+    "0x1.4f3758e92fa83p+0",
+    "0x1.a6f9477553d1dp-1",
+    "0x1.70937f7673bf6p-1"
+  ],
+  "partition": "PCA_BALANCED",
+  "levels": {
+    "3": 1000,
+    "4": 100,
+    "5": 10
+  },
+  "score": "ascending-dimension RN-FP64 squared L2, separate multiply/add; no FMA/reassociation; inherited original score cache",
+  "certificate": "max of independent conservative Euclidean box lower bounds; strict LB > sqrt(U_squared); no cross-view sum",
+  "ETA": 1e-08,
+  "RHO": 0.0001,
+  "region_bytes": 64,
+  "packing": "eight pairs FP32 lo/hi, no per-view padding; whole region 64B",
+  "PCA32_fit": "all 1M rows, block 8192, same old mean/covariance/eigh four-thread procedure; mean and covariance hashes must reproduce old build; signs standardized; no queries/U/labels used",
+  "random": "numpy 1.26.4 default_rng seed 20261012; layouts 2x4 then 4x2 then 8x1; independent QR(960,k) per view in ascending view order; per-view conservative exact-rational certification; no seed sweep",
+  "D2_4x2": [
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "D3": {
+    "2x4": [
+      [
+        1,
+        9,
+        17,
+        25
+      ],
+      [
+        5,
+        13,
+        21,
+        29
+      ]
+    ],
+    "4x2": [
+      [
+        1,
+        17
+      ],
+      [
+        5,
+        21
+      ],
+      [
+        9,
+        25
+      ],
+      [
+        13,
+        29
+      ]
+    ],
+    "8x1": [
+      [
+        1
+      ],
+      [
+        5
+      ],
+      [
+        9
+      ],
+      [
+        13
+      ],
+      [
+        17
+      ],
+      [
+        21
+      ],
+      [
+        25
+      ],
+      [
+        29
+      ]
+    ]
+  },
+  "matrix": {
+    "logical_configs": 16,
+    "physical_configs": 12,
+    "logical_cells": 48,
+    "physical_cells": 36,
+    "aliases": "D1 layouts all alias PCA_BLOCKS; D2 8x1 aliases PCA_BLOCKS 8x1"
+  },
+  "gates": {
+    "promotion": "same L3/L4: hard>=0.55, hard gain>=0.15, worst>=0.25",
+    "strong": "same L3/L4 strong inequalities in plan; precedence strong then signal",
+    "K1": "all 11 distinct multi configurations across L3/L4/L5 have hard gain<0.05",
+    "K2": "at least one L3/L4 cell with hard gain>=0.10 and worst gain<0.05, if no promotion",
+    "K3": "at least one configuration with L5 hard gain>=0.10 and both its L3/L4 gains<0.10, if no promotion/K1/K2",
+    "arithmetic": "exact integer Fraction ratios for gate tests; no rounding before thresholds",
+    "precedence": "SUPPORTED,SIGNAL,KILLED,AVERAGE_ONLY,LEAF_ONLY,INSUFFICIENT_EVIDENCE"
+  },
+  "lookahead": {
+    "parents": "P2 parent depths 2 and 3; eight per depth via independent np.default_rng(20261012) choice sorted; never query selection",
+    "first_proposals": 12,
+    "child_proposals": 12,
+    "children_per_split": 10,
+    "tie_break": "smallest proposal index",
+    "comparator": "choose first proposal by immediate hard6 pruning then best split of each child; same grandchildren horizon as lookahead",
+    "normalizer": "6 * parent object count, full-scan pruning fraction; paired sum counts over frozen parents; separate depth summaries",
+    "closed": "gain<0.10 pooled and at each sampled depth",
+    "open": "gain>=0.15 pooled or at a sampled depth; separate future direction only",
+    "otherwise": "INSUFFICIENT_LOOKAHEAD",
+    "scope": "finite sampled two-level proposal oracle, not global coordination upper bound"
+  },
+  "figure_selection": "Figs2/3 all distinct 2x4 families (PCA_BLOCKS,INTERLEAVED,SPREAD32,RANDOM) at L4, all eight queries; never pick best-result configuration",
+  "resources": "CPU-only CUDA_VISIBLE_DEVICES empty; PCA four NUMA-local cores nice10 BLAS4 then projection/evaluation/lookahead one core BLAS1; task-owned advisory lock; 900s each phase; no foreign signals",
+  "no_latency": true
+}
