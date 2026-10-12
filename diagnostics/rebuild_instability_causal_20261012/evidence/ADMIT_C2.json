@@ -1,0 +1,24 @@
+{
+  "admitted": true,
+  "phase": "C2",
+  "budget": 2,
+  "contract_sha256": "a6c023b8a74d09806107e4a06bbbb6ac6f6f196876982a097358b6a408fb2cab",
+  "evidence_sha256": "07a6e6c5253e00191e065adb03c0f22a0820caa3e4a17405bd536d2d78ecceb1",
+  "reason": "C1 stabilizes root rank/decile boundaries, yet L1 pivots diverge on 7/10 and 10/10 matched near-identical parents; rapid first-two-level instability justifies C2. Root-only mixed result is retained, not a GO.",
+  "facts": [
+    {
+      "rebuild": 1,
+      "C0_leaf_churn": 0.99982,
+      "C1_leaf_churn": 0.84875,
+      "root_changed_segment_objects": 13,
+      "L1_same_pivot_of_10": 3
+    },
+    {
+      "rebuild": 2,
+      "C0_leaf_churn": 0.99985,
+      "C1_leaf_churn": 0.99986,
+      "root_changed_segment_objects": 17,
+      "L1_same_pivot_of_10": 0
+    }
+  ]
+}

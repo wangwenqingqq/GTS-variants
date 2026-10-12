@@ -1,0 +1,9 @@
+--- include/tree.cuh
++++ include/tree.cuh
+@@ -54,0 +55 @@
++#include "counterfactual.hpp"
+@@ -197 +198 @@
+-			pid[0] = id_list[(lid + rid) / 2];
++			pid[0] = causal_forced && causal_forced[nid]>=0 ? causal_forced[nid] : id_list[(lid + rid) / 2];
+@@ -491,0 +493 @@
++        causal::before(cur_level,block_num,start_idx,node_list,id_list);

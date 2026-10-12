@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "contract_sha256": "a6c023b8a74d09806107e4a06bbbb6ac6f6f196876982a097358b6a408fb2cab",
+  "source_audit_sha256": "415cd88ba0d8d4e0ceec7f82031107d1d84422496377538898e6ed6d570442fc",
+  "binary_sha256": "c9377e60e1d1c8a1d7a04e3e6c3673d0d709d730bebd499ebe0d2e02e52acb3f",
+  "build_log_sha256": "38da812347918e65d48b15222c619320be6886aa8b26261351f8a7ddbbcfbe1b",
+  "inputs": {
+    "PRE_R1": {
+      "passed": true,
+      "bit_exact_inverse_pack": true,
+      "aos_sha256": "1d9dfa933a86b1b78ef3de82eb286f85899866c428d373e42613783a13811038",
+      "packed_sha256": "83184f900892502840bdcaaa78c99a264a90c3acfa5e79e40b697502864e2bee",
+      "bytes": 3840000000
+    },
+    "POST_R1": {
+      "passed": true,
+      "bit_exact_inverse_pack": true,
+      "aos_sha256": "87578d3d7f3b28c59221534e921a5c685b965dc51d474c07d2cd73770c586601",
+      "packed_sha256": "3b0b14e3c15731572b5fbfa0a05972e1c0e67325289b6491dc8b8c07dfe88fc0",
+      "bytes": 3840000000
+    },
+    "PRE_R2": {
+      "passed": true,
+      "bit_exact_inverse_pack": true,
+      "aos_sha256": "87578d3d7f3b28c59221534e921a5c685b965dc51d474c07d2cd73770c586601",
+      "packed_sha256": "3b0b14e3c15731572b5fbfa0a05972e1c0e67325289b6491dc8b8c07dfe88fc0",
+      "bytes": 3840000000
+    },
+    "POST_R2": {
+      "passed": true,
+      "bit_exact_inverse_pack": true,
+      "aos_sha256": "ceb3032db75b9df7567c79193f4b5aafbfcf91e45c5eb5e7263fa9f92d4f4fd2",
+      "packed_sha256": "e43b6346bb2f6a3276c8718a0d1495a1c02d3811674fc7c8ca89463a90eed0f2",
+      "bytes": 3840000000
+    }
+  },
+  "runs": {
+    "R1_PRE": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 0,
+      "requested": 0,
+      "admitted": 0,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R1_C0": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 0,
+      "requested": 0,
+      "admitted": 0,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R1_C1": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 1,
+      "requested": 1,
+      "admitted": 1,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R1_C2": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 2,
+      "requested": 11,
+      "admitted": 11,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R1_C3": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 3,
+      "requested": 111,
+      "admitted": 111,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R2_PRE": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 0,
+      "requested": 0,
+      "admitted": 0,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R2_C0": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 0,
+      "requested": 0,
+      "admitted": 0,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R2_C1": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 1,
+      "requested": 1,
+      "admitted": 1,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R2_C2": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 2,
+      "requested": 11,
+      "admitted": 11,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    },
+    "R2_C3": {
+      "passed": true,
+      "decision_rows": 11111,
+      "dose": 3,
+      "requested": 111,
+      "admitted": 111,
+      "fallback": 0,
+      "native_middle_and_actual_device_pid_checked": true,
+      "correspondence_independently_recomputed": true
+    }
+  },
+  "actual_gpu_construction_processes": 10,
+  "failed_prebinary_launches": 1,
+  "prior_closure_sha256": "2055e079f576957c1e0b374869ba96bc76924637686c8edd51adc406adb720ce",
+  "result_sha256": "10b4e569c7ba4ba349117014228c0d9f4433dc8ebde715b92f052fb10186f15b",
+  "prior_snapshot_files_rehashed": 84,
+  "phase_bindings": {
+    "C1": {
+      "registered_sha256": "c974892196c13c0e3dbea418d5d5f8a70a2d636656b8afbcb6cbd805ba78cb2e",
+      "phase_receipt_sha256": "3fa8abc39871e33226fbc94a5a412e4b73c5f03149aefedcf0837559f2426b8e",
+      "budget": 2
+    },
+    "C2": {
+      "registered_sha256": "156003cf381544e09455fe28ae987503affc23ec647250e6dac99a48b682c988",
+      "phase_receipt_sha256": "adcc7de6dec163b2899ddda809343242e363fdf40b8bcc4fd2f296c55ebf2adf",
+      "budget": 2,
+      "admit_sha256": "da5cfa2b3e6805d2a49ae78c78ecbda9d3a520aaa487ed9bb1d09a57d6025462"
+    },
+    "C3": {
+      "registered_sha256": "0ade2155cb9a0ea60545482129ef4b10de71b9413372af408597bacd2fd89336",
+      "phase_receipt_sha256": "d15f688893f473b1f8709200d75558eafb3862671d3e7dda0ccc042471613b3c",
+      "budget": 2,
+      "admit_sha256": "d96e5379a83138b32ceedddf591e35f959b798cc91e205b72c85df1d7a4146ef"
+    },
+    "native": {
+      "registered_sha256": "ee2b8cbe9d4369339d80776020ff548d7e58491195712163c74a18ff00c69968",
+      "phase_receipt_sha256": "80815f532bb49ef5c238a9df5d8dc45d0c848e205f73a90a88a35e3fd8042e04",
+      "budget": 4
+    }
+  },
+  "raw_files": 832,
+  "raw_bytes": 1822068842,
+  "validation_scope": "full inverse-pack bytes and independently reconstructed actual pivot decisions; structural gates only; no performance or production admission",
+  "raw_manifest_sha256": "ca9002158ff23f81143cb7fed332edbf72bcc4fc10e963f89f1548ebd01995e7"
+}

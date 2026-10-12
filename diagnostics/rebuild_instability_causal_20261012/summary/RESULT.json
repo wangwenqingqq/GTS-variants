@@ -1,0 +1,3792 @@
+{
+  "experiment": "early_pivot_causal",
+  "scope": "structural only; no production/performance claim",
+  "rebuilds": [
+    {
+      "rebuild": 1,
+      "modes": [
+        {
+          "mode": "C0",
+          "frozen_levels": 0,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 18,
+              "changed": 99982,
+              "changed_fraction": 0.99982
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 180,
+              "changed_exact_leaf_membership": 999810,
+              "changed_fraction": 0.999819998199982
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19457,
+              "best_overlap_mean_jaccard": 0.06434059538242973,
+              "best_overlap_retained_membership_fraction": 0.11945819458194581,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 5,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 140348,
+                "common_objects_unmatched_or_parent_moved": 859642,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.8596505965059651,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 28,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 31244,
+                "common_objects_unmatched_or_parent_moved": 968746,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9687556875568756,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 199,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10858,
+                "common_objects_unmatched_or_parent_moved": 989132,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9891418914189142,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 115,
+                "pivot_survival_fraction": 0.0115,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2129,
+                "same_pivot_under_correspondence": 2,
+                "common_objects_retained_under_correspondence": 10384,
+                "common_objects_unmatched_or_parent_moved": 989606,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9896158961589616,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 18,
+                "partition_divergence_fraction": 0.99982,
+                "common_objects_same_exact_parent_membership": 180,
+                "common_objects_changed_exact_parent_fraction": 0.999819998199982,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14134,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30134,
+                "common_objects_unmatched_or_parent_moved": 969856,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9698656986569866,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 18,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 100000,
+              "changed": 0,
+              "changed_fraction": 0.0
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 1000000,
+              "changed_exact_leaf_membership": 0,
+              "changed_fraction": 0.0
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 10.0,
+              "best_overlap_mean_jaccard": 1.0,
+              "best_overlap_retained_membership_fraction": 1.0,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 1,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 10,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 10,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 10,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 10,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 100,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 100,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 100,
+                "matched_correspondence": 100,
+                "same_pivot_under_correspondence": 100,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 1000,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 1000,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 1000,
+                "matched_correspondence": 1000,
+                "same_pivot_under_correspondence": 1000,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 10000,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 10000,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 10000,
+                "matched_correspondence": 10000,
+                "same_pivot_under_correspondence": 10000,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 100000,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 100000,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 111111,
+              "fully_identical": 111111,
+              "changed": 0,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 0,
+            "admitted": 0,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                190138,
+                314969,
+                367939,
+                372777,
+                345228,
+                295316,
+                229576,
+                152406,
+                70472
+              ],
+              "changed_segment_objects": 815949,
+              "total_crossing_fraction": 0.8159571595715958,
+              "sum_crossings_not_unique": 2338821,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                186888.0,
+                529959.5999999999,
+                792008.22,
+                880457.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 5,
+              "common_total": 999990,
+              "matched_parent_retained_common": 140348,
+              "unmatched_or_parent_moved_common": 859642,
+              "crossing_per_decile_boundary": [
+                15683,
+                30800,
+                42287,
+                50432,
+                54621,
+                52226,
+                43322,
+                30169,
+                16267
+              ],
+              "changed_segment_objects": 118899,
+              "total_crossing_fraction": 0.8471727420412118,
+              "sum_crossings_not_unique": 335807,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                20237.5,
+                51247.3,
+                72360.0,
+                92200.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 28,
+              "common_total": 999990,
+              "matched_parent_retained_common": 31244,
+              "unmatched_or_parent_moved_common": 968746,
+              "crossing_per_decile_boundary": [
+                4789,
+                7947,
+                10003,
+                11138,
+                11146,
+                10432,
+                9186,
+                6919,
+                3528
+              ],
+              "changed_segment_objects": 25845,
+              "total_crossing_fraction": 0.8271988221738574,
+              "sum_crossings_not_unique": 75088,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1883.5,
+                5492.0,
+                8039.57,
+                9917.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 199,
+              "common_total": 999990,
+              "matched_parent_retained_common": 10858,
+              "unmatched_or_parent_moved_common": 989132,
+              "crossing_per_decile_boundary": [
+                2180,
+                3607,
+                4403,
+                4673,
+                4492,
+                3915,
+                3205,
+                2166,
+                992
+              ],
+              "changed_segment_objects": 9374,
+              "total_crossing_fraction": 0.8633265794805673,
+              "sum_crossings_not_unique": 29633,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                227.0,
+                593.0,
+                858.0,
+                980.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 2129,
+              "common_total": 999990,
+              "matched_parent_retained_common": 10384,
+              "unmatched_or_parent_moved_common": 989606,
+              "crossing_per_decile_boundary": [
+                2123,
+                3647,
+                4495,
+                4789,
+                4644,
+                4113,
+                3416,
+                2333,
+                1085
+              ],
+              "changed_segment_objects": 9112,
+              "total_crossing_fraction": 0.8775038520801233,
+              "sum_crossings_not_unique": 30645,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                25.0,
+                62.0,
+                87.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "af138eb255f211ea6541ce6a81d02d43238f8e3c84aa741317213bef0d0bde3e",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17316,
+              "tie_groups": 15121,
+              "tie_participating_occurrences": 32437,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17350,
+              "tie_groups": 15152,
+              "tie_participating_occurrences": 32502,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17384,
+              "tie_groups": 15189,
+              "tie_participating_occurrences": 32573,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17377,
+              "tie_groups": 15185,
+              "tie_participating_occurrences": 32562,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17216,
+              "tie_groups": 15061,
+              "tie_participating_occurrences": 32277,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        },
+        {
+          "mode": "C1",
+          "frozen_levels": 1,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 15125,
+              "changed": 84875,
+              "changed_fraction": 0.84875
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 151250,
+              "changed_exact_leaf_membership": 848740,
+              "changed_fraction": 0.8487484874848749
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 2.57883,
+              "best_overlap_mean_jaccard": 0.20888475963149336,
+              "best_overlap_retained_membership_fraction": 0.25788557885578856,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.9,
+                "common_objects_same_exact_parent_membership": 100000,
+                "common_objects_changed_exact_parent_fraction": 0.8999989999899999,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 3,
+                "pivot_survival_fraction": 0.3,
+                "exact_membership_matched_same_pivot": 1,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 3,
+                "common_objects_retained_under_correspondence": 999977,
+                "common_objects_unmatched_or_parent_moved": 13,
+                "common_objects_unmatched_or_parent_moved_fraction": 1.3000130001272758e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 15,
+                "partition_divergence_fraction": 0.85,
+                "common_objects_same_exact_parent_membership": 150000,
+                "common_objects_changed_exact_parent_fraction": 0.8499984999849999,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 16,
+                "pivot_survival_fraction": 0.16,
+                "exact_membership_matched_same_pivot": 15,
+                "matched_correspondence": 56,
+                "same_pivot_under_correspondence": 16,
+                "common_objects_retained_under_correspondence": 360301,
+                "common_objects_unmatched_or_parent_moved": 639689,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.6396953969539696,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 151,
+                "partition_divergence_fraction": 0.849,
+                "common_objects_same_exact_parent_membership": 151000,
+                "common_objects_changed_exact_parent_fraction": 0.8489984899848999,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 153,
+                "pivot_survival_fraction": 0.153,
+                "exact_membership_matched_same_pivot": 151,
+                "matched_correspondence": 408,
+                "same_pivot_under_correspondence": 152,
+                "common_objects_retained_under_correspondence": 192924,
+                "common_objects_unmatched_or_parent_moved": 807066,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.8070740707407074,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 1511,
+                "partition_divergence_fraction": 0.8489,
+                "common_objects_same_exact_parent_membership": 151100,
+                "common_objects_changed_exact_parent_fraction": 0.8488984889848898,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 1588,
+                "pivot_survival_fraction": 0.1588,
+                "exact_membership_matched_same_pivot": 1511,
+                "matched_correspondence": 3583,
+                "same_pivot_under_correspondence": 1512,
+                "common_objects_retained_under_correspondence": 167091,
+                "common_objects_unmatched_or_parent_moved": 832899,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.8329073290732907,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 15125,
+                "partition_divergence_fraction": 0.84875,
+                "common_objects_same_exact_parent_membership": 151250,
+                "common_objects_changed_exact_parent_fraction": 0.8487484874848749,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 29793,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 182438,
+                "common_objects_unmatched_or_parent_moved": 817552,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.817560175601756,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 16803,
+              "fully_identical": 16789,
+              "changed": 94322,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 10,
+              "changed": 99990,
+              "changed_fraction": 0.9999
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 100,
+              "changed_exact_leaf_membership": 999900,
+              "changed_fraction": 0.9999
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19619,
+              "best_overlap_mean_jaccard": 0.06441235121002147,
+              "best_overlap_retained_membership_fraction": 0.119619,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 5,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 140350,
+                "common_objects_unmatched_or_parent_moved": 859650,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.85965,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 27,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 30505,
+                "common_objects_unmatched_or_parent_moved": 969495,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969495,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 0.001,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 213,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 11449,
+                "common_objects_unmatched_or_parent_moved": 988551,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.988551,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 100,
+                "pivot_survival_fraction": 0.01,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2067,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 10109,
+                "common_objects_unmatched_or_parent_moved": 989891,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989891,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 10,
+                "partition_divergence_fraction": 0.9999,
+                "common_objects_same_exact_parent_membership": 100,
+                "common_objects_changed_exact_parent_fraction": 0.9999,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14268,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30386,
+                "common_objects_unmatched_or_parent_moved": 969614,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969614,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 11,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 1,
+            "admitted": 1,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                2,
+                2,
+                3,
+                0,
+                1,
+                2,
+                3,
+                0,
+                0
+              ],
+              "changed_segment_objects": 13,
+              "total_crossing_fraction": 1.3000130001300012e-05,
+              "sum_crossings_not_unique": 13,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                3.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 10,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999977,
+              "unmatched_or_parent_moved_common": 13,
+              "crossing_per_decile_boundary": [
+                118220,
+                206962,
+                266823,
+                296676,
+                297244,
+                272976,
+                227795,
+                164673,
+                88113
+              ],
+              "changed_segment_objects": 600861,
+              "total_crossing_fraction": 0.6008748201208628,
+              "sum_crossings_not_unique": 1939482,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                11865.0,
+                53416.0,
+                78584.0,
+                98203.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 56,
+              "common_total": 999990,
+              "matched_parent_retained_common": 360301,
+              "unmatched_or_parent_moved_common": 639689,
+              "crossing_per_decile_boundary": [
+                33445,
+                56654,
+                71562,
+                79652,
+                81956,
+                76818,
+                66810,
+                51495,
+                29606
+              ],
+              "changed_segment_objects": 171036,
+              "total_crossing_fraction": 0.47470309546740086,
+              "sum_crossings_not_unique": 547998,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                343.0,
+                4946.0,
+                8080.0,
+                9979.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 408,
+              "common_total": 999990,
+              "matched_parent_retained_common": 192924,
+              "unmatched_or_parent_moved_common": 807066,
+              "crossing_per_decile_boundary": [
+                7638,
+                12845,
+                15901,
+                17347,
+                17046,
+                15284,
+                12573,
+                9027,
+                4798
+              ],
+              "changed_segment_objects": 35461,
+              "total_crossing_fraction": 0.18380813169952934,
+              "sum_crossings_not_unique": 112459,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                248.0,
+                701.0,
+                986.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 3583,
+              "common_total": 999990,
+              "matched_parent_retained_common": 167091,
+              "unmatched_or_parent_moved_common": 832899,
+              "crossing_per_decile_boundary": [
+                3113,
+                5302,
+                6654,
+                7237,
+                7028,
+                6394,
+                5161,
+                3500,
+                1778
+              ],
+              "changed_segment_objects": 13978,
+              "total_crossing_fraction": 0.08365501433350689,
+              "sum_crossings_not_unique": 46167,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                0.0,
+                61.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "4c91c7d69f06487cd664b7fbb8f037a0c0da100a9d9c8af47ca68cf5d842a84a",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17316,
+              "tie_groups": 15121,
+              "tie_participating_occurrences": 32437,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17353,
+              "tie_groups": 15159,
+              "tie_participating_occurrences": 32512,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17362,
+              "tie_groups": 15168,
+              "tie_participating_occurrences": 32530,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17374,
+              "tie_groups": 15182,
+              "tie_participating_occurrences": 32556,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17215,
+              "tie_groups": 15071,
+              "tie_participating_occurrences": 32286,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        },
+        {
+          "mode": "C2",
+          "frozen_levels": 2,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 40266,
+              "changed": 59734,
+              "changed_fraction": 0.59734
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 402660,
+              "changed_exact_leaf_membership": 597330,
+              "changed_fraction": 0.5973359733597337
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 4.87679,
+              "best_overlap_mean_jaccard": 0.44939277805527805,
+              "best_overlap_retained_membership_fraction": 0.4876838768387684,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.9,
+                "common_objects_same_exact_parent_membership": 100000,
+                "common_objects_changed_exact_parent_fraction": 0.8999989999899999,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 10,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 1,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 10,
+                "common_objects_retained_under_correspondence": 999977,
+                "common_objects_unmatched_or_parent_moved": 13,
+                "common_objects_unmatched_or_parent_moved_fraction": 1.3000130001272758e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 35,
+                "partition_divergence_fraction": 0.65,
+                "common_objects_same_exact_parent_membership": 350000,
+                "common_objects_changed_exact_parent_fraction": 0.6499964999649996,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 46,
+                "pivot_survival_fraction": 0.46,
+                "exact_membership_matched_same_pivot": 35,
+                "matched_correspondence": 100,
+                "same_pivot_under_correspondence": 46,
+                "common_objects_retained_under_correspondence": 999906,
+                "common_objects_unmatched_or_parent_moved": 84,
+                "common_objects_unmatched_or_parent_moved_fraction": 8.400084000836916e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 392,
+                "partition_divergence_fraction": 0.608,
+                "common_objects_same_exact_parent_membership": 392000,
+                "common_objects_changed_exact_parent_fraction": 0.6079960799607996,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 409,
+                "pivot_survival_fraction": 0.409,
+                "exact_membership_matched_same_pivot": 392,
+                "matched_correspondence": 709,
+                "same_pivot_under_correspondence": 408,
+                "common_objects_retained_under_correspondence": 523370,
+                "common_objects_unmatched_or_parent_moved": 476620,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.4766247662476625,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 4014,
+                "partition_divergence_fraction": 0.5986,
+                "common_objects_same_exact_parent_membership": 401400,
+                "common_objects_changed_exact_parent_fraction": 0.5985959859598595,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 4088,
+                "pivot_survival_fraction": 0.4088,
+                "exact_membership_matched_same_pivot": 4014,
+                "matched_correspondence": 6005,
+                "same_pivot_under_correspondence": 4034,
+                "common_objects_retained_under_correspondence": 432815,
+                "common_objects_unmatched_or_parent_moved": 567175,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.567180671806718,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 40266,
+                "partition_divergence_fraction": 0.59734,
+                "common_objects_same_exact_parent_membership": 402660,
+                "common_objects_changed_exact_parent_fraction": 0.5973359733597337,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 53761,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 432692,
+                "common_objects_unmatched_or_parent_moved": 567298,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.5673036730367303,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 44708,
+              "fully_identical": 44674,
+              "changed": 66437,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 14,
+              "changed": 99986,
+              "changed_fraction": 0.99986
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 140,
+              "changed_exact_leaf_membership": 999860,
+              "changed_fraction": 0.99986
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19597,
+              "best_overlap_mean_jaccard": 0.06441803170685521,
+              "best_overlap_retained_membership_fraction": 0.119597,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 5,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 140350,
+                "common_objects_unmatched_or_parent_moved": 859650,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.85965,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 28,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 31245,
+                "common_objects_unmatched_or_parent_moved": 968755,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.968755,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 196,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10729,
+                "common_objects_unmatched_or_parent_moved": 989271,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989271,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 112,
+                "pivot_survival_fraction": 0.0112,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2124,
+                "same_pivot_under_correspondence": 2,
+                "common_objects_retained_under_correspondence": 10392,
+                "common_objects_unmatched_or_parent_moved": 989608,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989608,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 14,
+                "partition_divergence_fraction": 0.99986,
+                "common_objects_same_exact_parent_membership": 140,
+                "common_objects_changed_exact_parent_fraction": 0.99986,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14208,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30308,
+                "common_objects_unmatched_or_parent_moved": 969692,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969692,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 15,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 11,
+            "admitted": 11,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                2,
+                2,
+                3,
+                0,
+                1,
+                2,
+                3,
+                0,
+                0
+              ],
+              "changed_segment_objects": 13,
+              "total_crossing_fraction": 1.3000130001300012e-05,
+              "sum_crossings_not_unique": 13,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                3.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 10,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999977,
+              "unmatched_or_parent_moved_common": 13,
+              "crossing_per_decile_boundary": [
+                2,
+                5,
+                9,
+                10,
+                12,
+                11,
+                12,
+                7,
+                3
+              ],
+              "changed_segment_objects": 71,
+              "total_crossing_fraction": 7.100163303755987e-05,
+              "sum_crossings_not_unique": 71,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                2.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 100,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999906,
+              "unmatched_or_parent_moved_common": 84,
+              "crossing_per_decile_boundary": [
+                90757,
+                152976,
+                193694,
+                216332,
+                220654,
+                204415,
+                173004,
+                129376,
+                72994
+              ],
+              "changed_segment_objects": 456159,
+              "total_crossing_fraction": 0.4562018829769998,
+              "sum_crossings_not_unique": 1454202,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                229.0,
+                4861.0,
+                8172.0,
+                9952.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 709,
+              "common_total": 999990,
+              "matched_parent_retained_common": 523370,
+              "unmatched_or_parent_moved_common": 476620,
+              "crossing_per_decile_boundary": [
+                20140,
+                34345,
+                43765,
+                48567,
+                48991,
+                45308,
+                37960,
+                27902,
+                15287
+              ],
+              "changed_segment_objects": 99102,
+              "total_crossing_fraction": 0.18935361216730037,
+              "sum_crossings_not_unique": 322265,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                262.0,
+                730.0,
+                994.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 6005,
+              "common_total": 999990,
+              "matched_parent_retained_common": 432815,
+              "unmatched_or_parent_moved_common": 567175,
+              "crossing_per_decile_boundary": [
+                5432,
+                9324,
+                11909,
+                13096,
+                13091,
+                11959,
+                9924,
+                7088,
+                3789
+              ],
+              "changed_segment_objects": 25865,
+              "total_crossing_fraction": 0.05975994362487437,
+              "sum_crossings_not_unique": 85612,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                0.0,
+                56.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "afd804bd621427dd8ae2f49f664243b1f850e9e22e5a979b71ed62dd6490ca5a",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17316,
+              "tie_groups": 15121,
+              "tie_participating_occurrences": 32437,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17355,
+              "tie_groups": 15160,
+              "tie_participating_occurrences": 32515,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17363,
+              "tie_groups": 15167,
+              "tie_participating_occurrences": 32530,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17364,
+              "tie_groups": 15172,
+              "tie_participating_occurrences": 32536,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17224,
+              "tie_groups": 15067,
+              "tie_participating_occurrences": 32291,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        },
+        {
+          "mode": "C3",
+          "frozen_levels": 3,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 70992,
+              "changed": 29008,
+              "changed_fraction": 0.29008
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 709920,
+              "changed_exact_leaf_membership": 290070,
+              "changed_fraction": 0.29007290072900727
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 7.67915,
+              "best_overlap_mean_jaccard": 0.7439863140875294,
+              "best_overlap_retained_membership_fraction": 0.7679226792267922,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.9,
+                "common_objects_same_exact_parent_membership": 100000,
+                "common_objects_changed_exact_parent_fraction": 0.8999989999899999,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 10,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 1,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 10,
+                "common_objects_retained_under_correspondence": 999977,
+                "common_objects_unmatched_or_parent_moved": 13,
+                "common_objects_unmatched_or_parent_moved_fraction": 1.3000130001272758e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 35,
+                "partition_divergence_fraction": 0.65,
+                "common_objects_same_exact_parent_membership": 350000,
+                "common_objects_changed_exact_parent_fraction": 0.6499964999649996,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 100,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 35,
+                "matched_correspondence": 100,
+                "same_pivot_under_correspondence": 100,
+                "common_objects_retained_under_correspondence": 999906,
+                "common_objects_unmatched_or_parent_moved": 84,
+                "common_objects_unmatched_or_parent_moved_fraction": 8.400084000836916e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 653,
+                "partition_divergence_fraction": 0.347,
+                "common_objects_same_exact_parent_membership": 653000,
+                "common_objects_changed_exact_parent_fraction": 0.3469934699346994,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 734,
+                "pivot_survival_fraction": 0.734,
+                "exact_membership_matched_same_pivot": 653,
+                "matched_correspondence": 1000,
+                "same_pivot_under_correspondence": 734,
+                "common_objects_retained_under_correspondence": 999608,
+                "common_objects_unmatched_or_parent_moved": 382,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.00038200382003816813,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 7046,
+                "partition_divergence_fraction": 0.2954,
+                "common_objects_same_exact_parent_membership": 704600,
+                "common_objects_changed_exact_parent_fraction": 0.29539295392953935,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 7159,
+                "pivot_survival_fraction": 0.7159,
+                "exact_membership_matched_same_pivot": 7046,
+                "matched_correspondence": 8690,
+                "same_pivot_under_correspondence": 7133,
+                "common_objects_retained_under_correspondence": 772870,
+                "common_objects_unmatched_or_parent_moved": 227120,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.22712227122271222,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 70992,
+                "partition_divergence_fraction": 0.29008,
+                "common_objects_same_exact_parent_membership": 709920,
+                "common_objects_changed_exact_parent_fraction": 0.29007290072900727,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 79753,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 735286,
+                "common_objects_unmatched_or_parent_moved": 264704,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.2647066470664706,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 78727,
+              "fully_identical": 78608,
+              "changed": 32503,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 18,
+              "changed": 99982,
+              "changed_fraction": 0.99982
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 180,
+              "changed_exact_leaf_membership": 999820,
+              "changed_fraction": 0.99982
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19506,
+              "best_overlap_mean_jaccard": 0.06437009105789289,
+              "best_overlap_retained_membership_fraction": 0.119506,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 5,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 140350,
+                "common_objects_unmatched_or_parent_moved": 859650,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.85965,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 28,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 31245,
+                "common_objects_unmatched_or_parent_moved": 968755,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.968755,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 200,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10879,
+                "common_objects_unmatched_or_parent_moved": 989121,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989121,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 94,
+                "pivot_survival_fraction": 0.0094,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2137,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 10425,
+                "common_objects_unmatched_or_parent_moved": 989575,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989575,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 18,
+                "partition_divergence_fraction": 0.99982,
+                "common_objects_same_exact_parent_membership": 180,
+                "common_objects_changed_exact_parent_fraction": 0.99982,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14101,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30066,
+                "common_objects_unmatched_or_parent_moved": 969934,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969934,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 19,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 111,
+            "admitted": 111,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                2,
+                2,
+                3,
+                0,
+                1,
+                2,
+                3,
+                0,
+                0
+              ],
+              "changed_segment_objects": 13,
+              "total_crossing_fraction": 1.3000130001300012e-05,
+              "sum_crossings_not_unique": 13,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                3.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 10,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999977,
+              "unmatched_or_parent_moved_common": 13,
+              "crossing_per_decile_boundary": [
+                2,
+                5,
+                9,
+                10,
+                12,
+                11,
+                12,
+                7,
+                3
+              ],
+              "changed_segment_objects": 71,
+              "total_crossing_fraction": 7.100163303755987e-05,
+              "sum_crossings_not_unique": 71,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                2.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 100,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999906,
+              "unmatched_or_parent_moved_common": 84,
+              "crossing_per_decile_boundary": [
+                17,
+                24,
+                37,
+                42,
+                45,
+                47,
+                35,
+                28,
+                23
+              ],
+              "changed_segment_objects": 298,
+              "total_crossing_fraction": 0.00029802801463337555,
+              "sum_crossings_not_unique": 298,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1000,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999608,
+              "unmatched_or_parent_moved_common": 382,
+              "crossing_per_decile_boundary": [
+                43605,
+                74535,
+                94682,
+                105411,
+                107104,
+                99915,
+                84758,
+                63323,
+                35595
+              ],
+              "changed_segment_objects": 220557,
+              "total_crossing_fraction": 0.2206434922489616,
+              "sum_crossings_not_unique": 708928,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                299.0,
+                756.0,
+                999.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 8690,
+              "common_total": 999990,
+              "matched_parent_retained_common": 772870,
+              "unmatched_or_parent_moved_common": 227120,
+              "crossing_per_decile_boundary": [
+                10139,
+                17346,
+                22093,
+                24624,
+                24873,
+                23089,
+                19724,
+                14774,
+                8332
+              ],
+              "changed_segment_objects": 51053,
+              "total_crossing_fraction": 0.06605638723200538,
+              "sum_crossings_not_unique": 164994,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                0.0,
+                57.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "698a6e9ac2f673ec6bc6b40160b1b2a5b227636790476f3b1d9c354194fe7c8e",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17316,
+              "tie_groups": 15121,
+              "tie_participating_occurrences": 32437,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17355,
+              "tie_groups": 15160,
+              "tie_participating_occurrences": 32515,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17357,
+              "tie_groups": 15162,
+              "tie_participating_occurrences": 32519,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17364,
+              "tie_groups": 15169,
+              "tie_participating_occurrences": 32533,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17246,
+              "tie_groups": 15094,
+              "tie_participating_occurrences": 32340,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        }
+      ]
+    },
+    {
+      "rebuild": 2,
+      "modes": [
+        {
+          "mode": "C0",
+          "frozen_levels": 0,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 15,
+              "changed": 99985,
+              "changed_fraction": 0.99985
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 150,
+              "changed_exact_leaf_membership": 999840,
+              "changed_fraction": 0.999849998499985
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19789,
+              "best_overlap_mean_jaccard": 0.06451395135738013,
+              "best_overlap_retained_membership_fraction": 0.11979019790197902,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 3,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 86812,
+                "common_objects_unmatched_or_parent_moved": 913178,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9131871318713187,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 26,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 41317,
+                "common_objects_unmatched_or_parent_moved": 958673,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9586825868258683,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 201,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10945,
+                "common_objects_unmatched_or_parent_moved": 989045,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9890548905489055,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 110,
+                "pivot_survival_fraction": 0.011,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2073,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10192,
+                "common_objects_unmatched_or_parent_moved": 989798,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9898078980789808,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 15,
+                "partition_divergence_fraction": 0.99985,
+                "common_objects_same_exact_parent_membership": 150,
+                "common_objects_changed_exact_parent_fraction": 0.999849998499985,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14391,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30602,
+                "common_objects_unmatched_or_parent_moved": 969388,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9693976939769398,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 15,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 100000,
+              "changed": 0,
+              "changed_fraction": 0.0
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 1000000,
+              "changed_exact_leaf_membership": 0,
+              "changed_fraction": 0.0
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 10.0,
+              "best_overlap_mean_jaccard": 1.0,
+              "best_overlap_retained_membership_fraction": 1.0,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 1,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 10,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 10,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 10,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 10,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 100,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 100,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 100,
+                "matched_correspondence": 100,
+                "same_pivot_under_correspondence": 100,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 1000,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 1000,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 1000,
+                "matched_correspondence": 1000,
+                "same_pivot_under_correspondence": 1000,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 10000,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 10000,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 10000,
+                "matched_correspondence": 10000,
+                "same_pivot_under_correspondence": 10000,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 100000,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 100000,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 111111,
+              "fully_identical": 111111,
+              "changed": 0,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 0,
+            "admitted": 0,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                193252,
+                335840,
+                411049,
+                430679,
+                408527,
+                355834,
+                280816,
+                190297,
+                90633
+              ],
+              "changed_segment_objects": 843173,
+              "total_crossing_fraction": 0.8431814318143181,
+              "sum_crossings_not_unique": 2696927,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                223991.0,
+                600259.0,
+                804587.22,
+                952498.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 3,
+              "common_total": 999990,
+              "matched_parent_retained_common": 86812,
+              "unmatched_or_parent_moved_common": 913178,
+              "crossing_per_decile_boundary": [
+                18674,
+                30495,
+                34353,
+                34135,
+                31114,
+                25986,
+                19410,
+                12298,
+                6127
+              ],
+              "changed_segment_objects": 68106,
+              "total_crossing_fraction": 0.7845228770216099,
+              "sum_crossings_not_unique": 212592,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                18103.0,
+                59579.0,
+                82355.89,
+                98914.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 26,
+              "common_total": 999990,
+              "matched_parent_retained_common": 41317,
+              "unmatched_or_parent_moved_common": 958673,
+              "crossing_per_decile_boundary": [
+                6649,
+                12020,
+                15501,
+                17413,
+                17995,
+                16875,
+                14349,
+                10317,
+                5348
+              ],
+              "changed_segment_objects": 36203,
+              "total_crossing_fraction": 0.8762252825713387,
+              "sum_crossings_not_unique": 116467,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                2425.0,
+                5927.0,
+                8328.0,
+                9965.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 201,
+              "common_total": 999990,
+              "matched_parent_retained_common": 10945,
+              "unmatched_or_parent_moved_common": 989045,
+              "crossing_per_decile_boundary": [
+                2197,
+                3628,
+                4538,
+                4826,
+                4691,
+                4073,
+                3225,
+                2180,
+                1006
+              ],
+              "changed_segment_objects": 9617,
+              "total_crossing_fraction": 0.87866605756053,
+              "sum_crossings_not_unique": 30364,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                247.0,
+                578.0,
+                823.0,
+                983.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 2073,
+              "common_total": 999990,
+              "matched_parent_retained_common": 10192,
+              "unmatched_or_parent_moved_common": 989798,
+              "crossing_per_decile_boundary": [
+                2113,
+                3575,
+                4467,
+                4940,
+                4693,
+                4261,
+                3419,
+                2362,
+                1168
+              ],
+              "changed_segment_objects": 8935,
+              "total_crossing_fraction": 0.8766679748822606,
+              "sum_crossings_not_unique": 30998,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                26.0,
+                64.0,
+                88.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "ceea173c8b0ce006c0852793970dc2bb983a1ca1f573f6afb82c6317bdb1d803",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17326,
+              "tie_groups": 15131,
+              "tie_participating_occurrences": 32457,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17366,
+              "tie_groups": 15170,
+              "tie_participating_occurrences": 32536,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17368,
+              "tie_groups": 15173,
+              "tie_participating_occurrences": 32541,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17386,
+              "tie_groups": 15192,
+              "tie_participating_occurrences": 32578,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17240,
+              "tie_groups": 15068,
+              "tie_participating_occurrences": 32308,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        },
+        {
+          "mode": "C1",
+          "frozen_levels": 1,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 14,
+              "changed": 99986,
+              "changed_fraction": 0.99986
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 140,
+              "changed_exact_leaf_membership": 999850,
+              "changed_fraction": 0.999859998599986
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.2164,
+              "best_overlap_mean_jaccard": 0.06561313524023274,
+              "best_overlap_retained_membership_fraction": 0.12164121641216412,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 999973,
+                "common_objects_unmatched_or_parent_moved": 17,
+                "common_objects_unmatched_or_parent_moved_fraction": 1.7000170001724157e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 41,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 115544,
+                "common_objects_unmatched_or_parent_moved": 884446,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.8844548445484455,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 235,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 20517,
+                "common_objects_unmatched_or_parent_moved": 979473,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9794827948279483,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 86,
+                "pivot_survival_fraction": 0.0086,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2198,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 12928,
+                "common_objects_unmatched_or_parent_moved": 987062,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9870718707187072,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 14,
+                "partition_divergence_fraction": 0.99986,
+                "common_objects_same_exact_parent_membership": 140,
+                "common_objects_changed_exact_parent_fraction": 0.999859998599986,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 15278,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 32568,
+                "common_objects_unmatched_or_parent_moved": 967422,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.9674316743167432,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 14,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 14,
+              "changed": 99986,
+              "changed_fraction": 0.99986
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 140,
+              "changed_exact_leaf_membership": 999860,
+              "changed_fraction": 0.99986
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19703,
+              "best_overlap_mean_jaccard": 0.06446807027252072,
+              "best_overlap_retained_membership_fraction": 0.119703,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 3,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 86815,
+                "common_objects_unmatched_or_parent_moved": 913185,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.913185,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 0.01,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 26,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 44108,
+                "common_objects_unmatched_or_parent_moved": 955892,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.955892,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 206,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 13226,
+                "common_objects_unmatched_or_parent_moved": 986774,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.986774,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 106,
+                "pivot_survival_fraction": 0.0106,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2087,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10247,
+                "common_objects_unmatched_or_parent_moved": 989753,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989753,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 14,
+                "partition_divergence_fraction": 0.99986,
+                "common_objects_same_exact_parent_membership": 140,
+                "common_objects_changed_exact_parent_fraction": 0.99986,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14355,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30547,
+                "common_objects_unmatched_or_parent_moved": 969453,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969453,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 15,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 1,
+            "admitted": 1,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                2,
+                2,
+                2,
+                3,
+                0,
+                2,
+                2,
+                2,
+                2
+              ],
+              "changed_segment_objects": 17,
+              "total_crossing_fraction": 1.7000170001700017e-05,
+              "sum_crossings_not_unique": 17,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                2.0,
+                2.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 10,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999973,
+              "unmatched_or_parent_moved_common": 17,
+              "crossing_per_decile_boundary": [
+                163663,
+                274158,
+                340286,
+                368486,
+                363216,
+                330098,
+                273580,
+                196965,
+                105111
+              ],
+              "changed_segment_objects": 817197,
+              "total_crossing_fraction": 0.8172190649147527,
+              "sum_crossings_not_unique": 2415563,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                18678.0,
+                55753.0,
+                85593.28000000003,
+                99951.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 41,
+              "common_total": 999990,
+              "matched_parent_retained_common": 115544,
+              "unmatched_or_parent_moved_common": 884446,
+              "crossing_per_decile_boundary": [
+                20722,
+                34672,
+                43590,
+                47884,
+                48313,
+                44772,
+                38355,
+                28804,
+                15598
+              ],
+              "changed_segment_objects": 99059,
+              "total_crossing_fraction": 0.8573270788617323,
+              "sum_crossings_not_unique": 322710,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                2332.0,
+                6097.0,
+                8647.569999999992,
+                9872.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 235,
+              "common_total": 999990,
+              "matched_parent_retained_common": 20517,
+              "unmatched_or_parent_moved_common": 979473,
+              "crossing_per_decile_boundary": [
+                3928,
+                6735,
+                8470,
+                9337,
+                9353,
+                8461,
+                6944,
+                4955,
+                2407
+              ],
+              "changed_segment_objects": 18196,
+              "total_crossing_fraction": 0.8868742993615051,
+              "sum_crossings_not_unique": 60590,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                255.0,
+                620.0,
+                857.0,
+                986.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 2198,
+              "common_total": 999990,
+              "matched_parent_retained_common": 12928,
+              "unmatched_or_parent_moved_common": 987062,
+              "crossing_per_decile_boundary": [
+                2533,
+                4360,
+                5474,
+                5952,
+                5915,
+                5251,
+                4206,
+                2872,
+                1378
+              ],
+              "changed_segment_objects": 11250,
+              "total_crossing_fraction": 0.8702042079207921,
+              "sum_crossings_not_unique": 37941,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                25.0,
+                62.0,
+                87.0,
+                98.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "88ec20d1c7302d8aac1b6fba95768d95da17d1388a26a8dd3202c7b04812bd58",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17326,
+              "tie_groups": 15131,
+              "tie_participating_occurrences": 32457,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17377,
+              "tie_groups": 15179,
+              "tie_participating_occurrences": 32556,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17390,
+              "tie_groups": 15193,
+              "tie_participating_occurrences": 32583,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17405,
+              "tie_groups": 15209,
+              "tie_participating_occurrences": 32614,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17236,
+              "tie_groups": 15089,
+              "tie_participating_occurrences": 32325,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        },
+        {
+          "mode": "C2",
+          "frozen_levels": 2,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 41467,
+              "changed": 58533,
+              "changed_fraction": 0.58533
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 414670,
+              "changed_exact_leaf_membership": 585320,
+              "changed_fraction": 0.5853258532585326
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 4.95584,
+              "best_overlap_mean_jaccard": 0.4590152372189214,
+              "best_overlap_retained_membership_fraction": 0.49558895588955887,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 10,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 10,
+                "common_objects_retained_under_correspondence": 999973,
+                "common_objects_unmatched_or_parent_moved": 17,
+                "common_objects_unmatched_or_parent_moved_fraction": 1.7000170001724157e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 36,
+                "partition_divergence_fraction": 0.64,
+                "common_objects_same_exact_parent_membership": 360000,
+                "common_objects_changed_exact_parent_fraction": 0.6399963999639997,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 47,
+                "pivot_survival_fraction": 0.47,
+                "exact_membership_matched_same_pivot": 36,
+                "matched_correspondence": 100,
+                "same_pivot_under_correspondence": 47,
+                "common_objects_retained_under_correspondence": 999917,
+                "common_objects_unmatched_or_parent_moved": 73,
+                "common_objects_unmatched_or_parent_moved_fraction": 7.300073000726659e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 404,
+                "partition_divergence_fraction": 0.596,
+                "common_objects_same_exact_parent_membership": 404000,
+                "common_objects_changed_exact_parent_fraction": 0.5959959599595996,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 419,
+                "pivot_survival_fraction": 0.419,
+                "exact_membership_matched_same_pivot": 404,
+                "matched_correspondence": 698,
+                "same_pivot_under_correspondence": 418,
+                "common_objects_retained_under_correspondence": 521186,
+                "common_objects_unmatched_or_parent_moved": 478804,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.47880878808788085,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 4137,
+                "partition_divergence_fraction": 0.5863,
+                "common_objects_same_exact_parent_membership": 413700,
+                "common_objects_changed_exact_parent_fraction": 0.5862958629586296,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 4224,
+                "pivot_survival_fraction": 0.4224,
+                "exact_membership_matched_same_pivot": 4137,
+                "matched_correspondence": 5982,
+                "same_pivot_under_correspondence": 4151,
+                "common_objects_retained_under_correspondence": 441375,
+                "common_objects_unmatched_or_parent_moved": 558615,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.5586205862058621,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 41467,
+                "partition_divergence_fraction": 0.58533,
+                "common_objects_same_exact_parent_membership": 414670,
+                "common_objects_changed_exact_parent_fraction": 0.5853258532585326,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 53876,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 442312,
+                "common_objects_unmatched_or_parent_moved": 557678,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.5576835768357684,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 46044,
+              "fully_identical": 46021,
+              "changed": 65090,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 23,
+              "changed": 99977,
+              "changed_fraction": 0.99977
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 230,
+              "changed_exact_leaf_membership": 999770,
+              "changed_fraction": 0.99977
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.19688,
+              "best_overlap_mean_jaccard": 0.06448686738785808,
+              "best_overlap_retained_membership_fraction": 0.119688,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 3,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 86815,
+                "common_objects_unmatched_or_parent_moved": 913185,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.913185,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 26,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 41315,
+                "common_objects_unmatched_or_parent_moved": 958685,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.958685,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 196,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10839,
+                "common_objects_unmatched_or_parent_moved": 989161,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989161,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 115,
+                "pivot_survival_fraction": 0.0115,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2109,
+                "same_pivot_under_correspondence": 2,
+                "common_objects_retained_under_correspondence": 10476,
+                "common_objects_unmatched_or_parent_moved": 989524,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989524,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 23,
+                "partition_divergence_fraction": 0.99977,
+                "common_objects_same_exact_parent_membership": 230,
+                "common_objects_changed_exact_parent_fraction": 0.99977,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14344,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30587,
+                "common_objects_unmatched_or_parent_moved": 969413,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969413,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 24,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 11,
+            "admitted": 11,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                2,
+                2,
+                2,
+                3,
+                0,
+                2,
+                2,
+                2,
+                2
+              ],
+              "changed_segment_objects": 17,
+              "total_crossing_fraction": 1.7000170001700017e-05,
+              "sum_crossings_not_unique": 17,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                2.0,
+                2.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 10,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999973,
+              "unmatched_or_parent_moved_common": 17,
+              "crossing_per_decile_boundary": [
+                2,
+                5,
+                5,
+                6,
+                7,
+                7,
+                8,
+                8,
+                8
+              ],
+              "changed_segment_objects": 56,
+              "total_crossing_fraction": 5.60015120408251e-05,
+              "sum_crossings_not_unique": 56,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                1.0,
+                2.0,
+                2.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 100,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999917,
+              "unmatched_or_parent_moved_common": 73,
+              "crossing_per_decile_boundary": [
+                89858,
+                155279,
+                197891,
+                219966,
+                221586,
+                206924,
+                175713,
+                131667,
+                73870
+              ],
+              "changed_segment_objects": 453241,
+              "total_crossing_fraction": 0.4532786221256364,
+              "sum_crossings_not_unique": 1472754,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                184.0,
+                4913.0,
+                8218.0,
+                9975.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 698,
+              "common_total": 999990,
+              "matched_parent_retained_common": 521186,
+              "unmatched_or_parent_moved_common": 478804,
+              "crossing_per_decile_boundary": [
+                18053,
+                30248,
+                38161,
+                41988,
+                41811,
+                38523,
+                32914,
+                24696,
+                13867
+              ],
+              "changed_segment_objects": 86778,
+              "total_crossing_fraction": 0.16650101883012974,
+              "sum_crossings_not_unique": 280261,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                219.0,
+                711.0,
+                993.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 5982,
+              "common_total": 999990,
+              "matched_parent_retained_common": 441375,
+              "unmatched_or_parent_moved_common": 558615,
+              "crossing_per_decile_boundary": [
+                4981,
+                8472,
+                10644,
+                11771,
+                11670,
+                10702,
+                8872,
+                6384,
+                3303
+              ],
+              "changed_segment_objects": 22976,
+              "total_crossing_fraction": 0.05205550835457377,
+              "sum_crossings_not_unique": 76799,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                0.0,
+                53.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "d4ad50159b048eef1f5ff9f1e9956ad438ac1d6122f127100f6fb2261045e004",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17326,
+              "tie_groups": 15131,
+              "tie_participating_occurrences": 32457,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17360,
+              "tie_groups": 15162,
+              "tie_participating_occurrences": 32522,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17398,
+              "tie_groups": 15202,
+              "tie_participating_occurrences": 32600,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17390,
+              "tie_groups": 15193,
+              "tie_participating_occurrences": 32583,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17250,
+              "tie_groups": 15085,
+              "tie_participating_occurrences": 32335,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        },
+        {
+          "mode": "C3",
+          "frozen_levels": 3,
+          "vs_pre": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 70091,
+              "changed": 29909,
+              "changed_fraction": 0.29908999999999997
+            },
+            "common_live_objects": {
+              "total": 999990,
+              "same_exact_leaf_membership": 700910,
+              "changed_exact_leaf_membership": 299080,
+              "changed_fraction": 0.2990829908299083
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 7.57438,
+              "best_overlap_mean_jaccard": 0.7336022140174925,
+              "best_overlap_retained_membership_fraction": 0.7574455744557446,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 1,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 999990,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 10,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 10,
+                "same_pivot_under_correspondence": 10,
+                "common_objects_retained_under_correspondence": 999973,
+                "common_objects_unmatched_or_parent_moved": 17,
+                "common_objects_unmatched_or_parent_moved_fraction": 1.7000170001724157e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 36,
+                "partition_divergence_fraction": 0.64,
+                "common_objects_same_exact_parent_membership": 360000,
+                "common_objects_changed_exact_parent_fraction": 0.6399963999639997,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 100,
+                "pivot_survival_fraction": 1.0,
+                "exact_membership_matched_same_pivot": 36,
+                "matched_correspondence": 100,
+                "same_pivot_under_correspondence": 100,
+                "common_objects_retained_under_correspondence": 999917,
+                "common_objects_unmatched_or_parent_moved": 73,
+                "common_objects_unmatched_or_parent_moved_fraction": 7.300073000726659e-05,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 661,
+                "partition_divergence_fraction": 0.33899999999999997,
+                "common_objects_same_exact_parent_membership": 661000,
+                "common_objects_changed_exact_parent_fraction": 0.3389933899338994,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 721,
+                "pivot_survival_fraction": 0.721,
+                "exact_membership_matched_same_pivot": 661,
+                "matched_correspondence": 1000,
+                "same_pivot_under_correspondence": 721,
+                "common_objects_retained_under_correspondence": 999640,
+                "common_objects_unmatched_or_parent_moved": 350,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.000350003500035001,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 6971,
+                "partition_divergence_fraction": 0.30289999999999995,
+                "common_objects_same_exact_parent_membership": 697100,
+                "common_objects_changed_exact_parent_fraction": 0.30289302893028935,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 7062,
+                "pivot_survival_fraction": 0.7062,
+                "exact_membership_matched_same_pivot": 6971,
+                "matched_correspondence": 8618,
+                "same_pivot_under_correspondence": 7038,
+                "common_objects_retained_under_correspondence": 756930,
+                "common_objects_unmatched_or_parent_moved": 243060,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.2430624306243062,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 70091,
+                "partition_divergence_fraction": 0.29908999999999997,
+                "common_objects_same_exact_parent_membership": 700910,
+                "common_objects_changed_exact_parent_fraction": 0.2990829908299083,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 78801,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 724603,
+                "common_objects_unmatched_or_parent_moved": 275387,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.27538975389753895,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 77759,
+              "fully_identical": 77723,
+              "changed": 33388,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "vs_native": {
+            "leaf": {
+              "post_total": 100000,
+              "pre_total": 100000,
+              "exact_unchanged": 16,
+              "changed": 99984,
+              "changed_fraction": 0.99984
+            },
+            "common_live_objects": {
+              "total": 1000000,
+              "same_exact_leaf_membership": 160,
+              "changed_exact_leaf_membership": 999840,
+              "changed_fraction": 0.99984
+            },
+            "descriptive_only": {
+              "best_overlap_mean_intersection": 1.1965,
+              "best_overlap_mean_jaccard": 0.06443591651210843,
+              "best_overlap_retained_membership_fraction": 0.11965,
+              "not_gate": "best-overlap does not relax canonical exact identity"
+            },
+            "levels": [
+              {
+                "level": 0,
+                "partitions": 1,
+                "exact_same_partitions": 1,
+                "partition_divergence_fraction": 0.0,
+                "common_objects_same_exact_parent_membership": 1000000,
+                "common_objects_changed_exact_parent_fraction": 0.0,
+                "pre_unique_selected_pivots": 1,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 1,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 1000000,
+                "common_objects_unmatched_or_parent_moved": 0,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.0,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 1,
+                "partitions": 10,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 3,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 86815,
+                "common_objects_unmatched_or_parent_moved": 913185,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.913185,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 2,
+                "partitions": 100,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 100,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": 0.0,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 26,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 41315,
+                "common_objects_unmatched_or_parent_moved": 958685,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.958685,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 3,
+                "partitions": 1000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 1000,
+                "pivot_surviving": 2,
+                "pivot_survival_fraction": 0.002,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 200,
+                "same_pivot_under_correspondence": 0,
+                "common_objects_retained_under_correspondence": 10910,
+                "common_objects_unmatched_or_parent_moved": 989090,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.98909,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 4,
+                "partitions": 10000,
+                "exact_same_partitions": 0,
+                "partition_divergence_fraction": 1.0,
+                "common_objects_same_exact_parent_membership": 0,
+                "common_objects_changed_exact_parent_fraction": 1.0,
+                "pre_unique_selected_pivots": 10000,
+                "pivot_surviving": 114,
+                "pivot_survival_fraction": 0.0114,
+                "exact_membership_matched_same_pivot": 0,
+                "matched_correspondence": 2082,
+                "same_pivot_under_correspondence": 1,
+                "common_objects_retained_under_correspondence": 10303,
+                "common_objects_unmatched_or_parent_moved": 989697,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.989697,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              },
+              {
+                "level": 5,
+                "partitions": 100000,
+                "exact_same_partitions": 16,
+                "partition_divergence_fraction": 0.99984,
+                "common_objects_same_exact_parent_membership": 160,
+                "common_objects_changed_exact_parent_fraction": 0.99984,
+                "pre_unique_selected_pivots": 0,
+                "pivot_surviving": 0,
+                "pivot_survival_fraction": null,
+                "exact_membership_matched_same_pivot": null,
+                "matched_correspondence": 14312,
+                "same_pivot_under_correspondence": null,
+                "common_objects_retained_under_correspondence": 30461,
+                "common_objects_unmatched_or_parent_moved": 969539,
+                "common_objects_unmatched_or_parent_moved_fraction": 0.969539,
+                "full_membership_caveat": "Exact PRE partition membership includes removed occurrences; identity divergence is not object movement. Root remains one corresponding parent."
+              }
+            ],
+            "canonical_topology": {
+              "post_nodes": 111111,
+              "matched_membership": 17,
+              "fully_identical": 0,
+              "changed": 111111,
+              "includes": "inherited pivot, selected split pivot, ordered child membership, leaf flag"
+            }
+          },
+          "freezes": {
+            "requested": 111,
+            "admitted": 111,
+            "fallback": 0,
+            "fallback_reasons": {}
+          },
+          "boundary": [
+            {
+              "level": 0,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999990,
+              "unmatched_or_parent_moved_common": 0,
+              "crossing_per_decile_boundary": [
+                2,
+                2,
+                2,
+                3,
+                0,
+                2,
+                2,
+                2,
+                2
+              ],
+              "changed_segment_objects": 17,
+              "total_crossing_fraction": 1.7000170001700017e-05,
+              "sum_crossings_not_unique": 17,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                2.0,
+                2.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "level": 1,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 10,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999973,
+              "unmatched_or_parent_moved_common": 17,
+              "crossing_per_decile_boundary": [
+                2,
+                5,
+                5,
+                6,
+                7,
+                7,
+                8,
+                8,
+                8
+              ],
+              "changed_segment_objects": 56,
+              "total_crossing_fraction": 5.60015120408251e-05,
+              "sum_crossings_not_unique": 56,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                1.0,
+                1.0,
+                2.0,
+                2.0
+              ]
+            },
+            {
+              "level": 2,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 100,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999917,
+              "unmatched_or_parent_moved_common": 73,
+              "crossing_per_decile_boundary": [
+                20,
+                31,
+                35,
+                34,
+                39,
+                35,
+                35,
+                29,
+                19
+              ],
+              "changed_segment_objects": 277,
+              "total_crossing_fraction": 0.0002770229929084114,
+              "sum_crossings_not_unique": 277,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                1.0,
+                2.0,
+                2.0
+              ]
+            },
+            {
+              "level": 3,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 1000,
+              "common_total": 999990,
+              "matched_parent_retained_common": 999640,
+              "unmatched_or_parent_moved_common": 350,
+              "crossing_per_decile_boundary": [
+                46668,
+                79618,
+                101467,
+                112839,
+                114077,
+                106539,
+                90896,
+                68283,
+                38314
+              ],
+              "changed_segment_objects": 235023,
+              "total_crossing_fraction": 0.23510763874994997,
+              "sum_crossings_not_unique": 758701,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                321.0,
+                756.0,
+                999.0
+              ]
+            },
+            {
+              "level": 4,
+              "correspondence": "unique mutual maximum common occurrence overlap; numeric IDs never matched",
+              "matched_partitions": 8618,
+              "common_total": 999990,
+              "matched_parent_retained_common": 756930,
+              "unmatched_or_parent_moved_common": 243060,
+              "crossing_per_decile_boundary": [
+                9398,
+                16188,
+                20454,
+                22624,
+                22951,
+                21338,
+                18324,
+                13746,
+                7650
+              ],
+              "changed_segment_objects": 46374,
+              "total_crossing_fraction": 0.06126590305576474,
+              "sum_crossings_not_unique": 152673,
+              "absolute_rank_drift_p50_p90_p99_max": [
+                0.0,
+                0.0,
+                56.0,
+                99.0
+              ]
+            }
+          ],
+          "boundary_details_sha256": "2dd753659c1fce033acd5250b5333a138e86a5e0bd6202514e985fd626f3a014",
+          "ties": [
+            {
+              "level": 0,
+              "exact_encoded_key_tied_adjacent_pairs": 17326,
+              "tie_groups": 15131,
+              "tie_participating_occurrences": 32457,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 1,
+              "exact_encoded_key_tied_adjacent_pairs": 17360,
+              "tie_groups": 15162,
+              "tie_participating_occurrences": 32522,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 2,
+              "exact_encoded_key_tied_adjacent_pairs": 17395,
+              "tie_groups": 15200,
+              "tie_participating_occurrences": 32595,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 3,
+              "exact_encoded_key_tied_adjacent_pairs": 17384,
+              "tie_groups": 15190,
+              "tie_participating_occurrences": 32574,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            },
+            {
+              "level": 4,
+              "exact_encoded_key_tied_adjacent_pairs": 17231,
+              "tie_groups": 15076,
+              "tie_participating_occurrences": 32307,
+              "adjacent_input_rank_descents_within_exact_encoded_key_ties": 0,
+              "secondary_key": "none supplied; input rank observed, not added to sort"
+            }
+          ],
+          "validity": true
+        }
+      ]
+    }
+  ]
+}

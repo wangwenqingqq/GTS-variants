@@ -1,0 +1,24 @@
+{
+  "admitted": true,
+  "phase": "C3",
+  "budget": 2,
+  "contract_sha256": "a6c023b8a74d09806107e4a06bbbb6ac6f6f196876982a097358b6a408fb2cab",
+  "evidence_sha256": "391d5764c95428eded051344f8b5f253ce0e049751e1461004e55a2476543635",
+  "C2_closure_sha256": "d24206958eef8ddae34b5ade7352da00297040eb319f9fd7b19fc67d9e092d81",
+  "reason": "Both C2 doses meet the predeclared >=30 percentage-point reduction screen. Native replay, inputs and all actual decisions passed CPU closure. Run only C3; no C4 or freeze-all.",
+  "strict_monotonic_caveat": "R2 C1 is one changed leaf worse than C0; do not silently waive the strict full-dose monotonicity gate.",
+  "facts": [
+    {
+      "rebuild": 1,
+      "C0_leaf_churn": 0.99982,
+      "C2_leaf_churn": 0.59734,
+      "absolute_reduction_percentage_points": 40.248000000000005
+    },
+    {
+      "rebuild": 2,
+      "C0_leaf_churn": 0.99985,
+      "C2_leaf_churn": 0.58533,
+      "absolute_reduction_percentage_points": 41.452
+    }
+  ]
+}
