@@ -1,0 +1,49 @@
+{
+  "status": "PASS_G1_G2_G3_G4_G5",
+  "accepted_attempt": 3,
+  "G1": {
+    "shape_enclosed_object_memberships_per_shape": 3000000,
+    "levels": [
+      3,
+      4,
+      5
+    ],
+    "includes_true_projection_coordinate_error_boxes": true
+  },
+  "G2": {
+    "full_bound_truth_checks": 3552000,
+    "violations": 0
+  },
+  "G3": {
+    "false_topK_prunes": 0
+  },
+  "G4": {
+    "exact_query_level_bridges": 24,
+    "full_endpoints_identical": true
+  },
+  "G5": {
+    "pairs_total": 384,
+    "pairs_per_level": {
+      "3": 128,
+      "4": 128,
+      "5": 128
+    },
+    "all_pair_region_objects": 142080,
+    "independent_original_vectors": 135317,
+    "metadata_mismatch": 0,
+    "bound_mismatch": 0,
+    "truth_mismatch": 0,
+    "independent_AABB_endpoint_exact_pairs": 384
+  },
+  "packed_record_roundtrip_cells": 12,
+  "ellipsoid_bound_proof": "any nonnegative lambda Lagrange dual with operation-wise outward arithmetic; independent of solver convergence",
+  "not_performed": [
+    "GPU",
+    "latency",
+    "formal256",
+    "10K",
+    "ANN",
+    "end-to-end index execution"
+  ],
+  "raw_manifest_sha256": "fc992aa6e64d37be7ccda31e561e25bff5719813dadbc4eca471a6dfafa387cd"
+}

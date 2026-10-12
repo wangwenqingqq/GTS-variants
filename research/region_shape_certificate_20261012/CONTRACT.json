@@ -1,0 +1,118 @@
+{
+  "N": 1000000,
+  "D": 960,
+  "K": 8,
+  "B": 1,
+  "queries": [
+    660835,
+    90208,
+    359924,
+    374533,
+    96985,
+    702545,
+    55715,
+    470632
+  ],
+  "hard_query_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "U_star_squared_hex": [
+    "0x1.a4e21ce918a12p-4",
+    "0x1.5e8b642217719p+2",
+    "0x1.c23a66e8768a3p+0",
+    "0x1.93ac9a02e418ap-1",
+    "0x1.13c1cfac5faccp+0",
+    "0x1.4f3758e92fa83p+0",
+    "0x1.a6f9477553d1dp-1",
+    "0x1.70937f7673bf6p-1"
+  ],
+  "partition": "PCA_BALANCED",
+  "levels": {
+    "3": 1000,
+    "4": 100,
+    "5": 10
+  },
+  "score": "ascending-dimension RN-FP64 squared L2, separate multiply/add; no FMA/reassociation; inherited original score cache",
+  "ETA": 1e-08,
+  "RHO": 0.0001,
+  "experiment": "GTSpp_20261012_region_shape_fixedPCA8",
+  "base_commit": "be30912f1f82ddca7cb820c5d42f573c942df173",
+  "stage": "offline exact-safe geometry diagnosis; not a novelty or latency claim",
+  "shapes": [
+    "AABB",
+    "CENTROID_BALL",
+    "MINIMAX_BALL",
+    "DIAGONAL_ELLIPSOID"
+  ],
+  "metadata": {
+    "AABB": [
+      64,
+      64
+    ],
+    "CENTROID_BALL": [
+      36,
+      48
+    ],
+    "MINIMAX_BALL": [
+      36,
+      48
+    ],
+    "DIAGONAL_ELLIPSOID": [
+      68,
+      80
+    ]
+  },
+  "center": "sort region object IDs ascending; RN-FP64 left fold per coordinate; divide by size; store RN FP32",
+  "ball": "radius: full upper norm of abs(cached_z - stored_center)+ETA; FP32 upward; query lower norm minus stored_radius minus sqrt(8)*ETA upward minus RHO downward",
+  "minimax": {
+    "iterations": 64,
+    "initial_center": "ordered raw FP64 centroid",
+    "update": "at iteration t=1..64, c=c+(farthest_point-c)/(t+1), separate ops",
+    "farthest": "RN-FP64 ordered 8-dimensional squared L2; ties smallest object ID",
+    "selection": "smallest full maximum RN squared radius among initial center and 64 iterates; equal radius keeps earliest",
+    "quality": "approximate center only; no optimizer optimality guarantee; witnessed cached RN half-diameter is only a numerical proxy, not a certified optimal-radius lower bound"
+  },
+  "ellipsoid": {
+    "scale": "FP32 upward max(abs(cached_z - stored_FP32_centroid)+ETA); positive also for zero spread",
+    "factor": "full upper norm of worst abs deviation/ stored scale; FP32 upward",
+    "bound": "nonnegative Lagrange dual: sum_j lambda*d_j^2/(scale_j^2+lambda) - lambda*R^2, downward, then sqrt downward and query ETA/RHO subtraction",
+    "lambda": "inside =>0; outside =>64 fixed bisections between 0 and sqrt(sum((scale*d)^2))/R; all coordinates ordered; optimizer need not be exact for safety"
+  },
+  "matrix": {
+    "physical_cells": 12,
+    "shapes": 4,
+    "levels": 3
+  },
+  "G5": {
+    "pairs_per_level": 128,
+    "total_pairs": 384,
+    "selection": "16 uniform without-replacement region IDs per query per level; default_rng(20261012); level then query then sorted region order; selected before outcomes",
+    "independent": "original vectors: ordered projection and original score; independent centroid/minimax/scales/radii and scalar dual bound; all region objects; no tolerance for metadata/truth equality"
+  },
+  "auxiliary_projected_oracle": "diagnostic only, no new certificate/metadata: each query-region minimum projected point distance interval; upper bound limits every enclosing shape with same fixed projection; never used as deployable bound",
+  "gates": {
+    "strong": "same L3/L4 hard>=3/5, all>=3/5, worst>=1/4, aligned<=64",
+    "signal": "same L3/L4 hard>=9/20, hard gain>=3/20, worst-hard-min alignment gain>=1/10; geometry-only allowed80B, annotate over64B; not matched-budget admission",
+    "K1": "every new shape across BOTH L3/L4 has hard gain<1/20",
+    "K2": "only >128B shapes yield hard gain>=3/20; structurally unreachable in frozen48/80B matrix",
+    "K3": "one shape L5 hard gain>=3/20 and both its L3/L4 hard gains<1/20",
+    "arithmetic": "exact Fraction count ratios; no rounded threshold input",
+    "precedence": "SUPPORTED,SIGNAL,LEAF_ONLY,KILLED,METADATA_HEAVY,INSUFFICIENT_EVIDENCE"
+  },
+  "resources": {
+    "GPU": false,
+    "latency_benchmark": false,
+    "CPU_cores": 1,
+    "threads": 1,
+    "nice": 10,
+    "timeout_seconds": 900,
+    "lock": "task-owned cpu.lock; no foreign signals",
+    "placement": "one CPU core, memory local to its NUMA node; private invocation retains actual core/node IDs"
+  },
+  "figure_selection": "all four shapes all three levels; hard query rescue L4 all six hard queries; dead gap CDF hard6 L4 unweighted query-region pairs; byte scatter all12cells"
+}
