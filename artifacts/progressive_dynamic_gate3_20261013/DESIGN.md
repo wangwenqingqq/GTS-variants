@@ -1,0 +1,9 @@
+# Frozen integration design
+
+One storage/update implementation is inherited from the accepted E_ADAPT adapter. D0 uses the strengthened B1 range; D1 borrows its raw database, stream, query, count, flags and output buffers for the byte-identical Gate2 progressive kernels. D1 owns two16-byte-per-row query-state buffers and a max-capacity stable CUB scratch reservation, not a second vector representation. The fixed128/256/512/960 schedule and numerical fallback stay unchanged.
+
+Ownership: `occurrence[physical]=logical`, `position[logical]=physical/-1`. Insertion appends, deletion swaps the last raw row/norm and updates both maps. Exact local transition witnesses plus independent full-map replay verify every mutation. Result rows are mapped to logical IDs exactly once. All final device-vector bytes are compared to separately reconstructed CPU rows after events, outside timing, then the identical map-copy and release boundary is charged. Host oracle data is validation-only, never a system index or update-time auxiliary representation.
+
+Ready graph: each update completes on the same stream before ACK; each range stage waits for its selected count before consuming the compacted state; each query delivers complete Host fields/IDs before ACK. No overlap, persistent kernel, Graph, reordered coordinate or hidden preparation is introduced. Existing Gate2 warp/CTA/kernel resource and numerical contracts remain binding. New work is host integration, ownership and measurement, not kernel tuning.
+
+Memory classifications separate raw persistent vectors/norms/maps from reusable query workspace and native library reservations. Final validation/export and whole-process CPU use are reported independently. The primary wall denominator is explicitly the sum of event and release segments, not an uninterrupted clock interval containing excluded validation.

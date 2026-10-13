@@ -1,0 +1,71 @@
+{
+  "complete_at_declared_stop": true,
+  "A_decision": "UNCLASSIFIED",
+  "successful_processes": 22,
+  "prior_failed_guard_starts": 1,
+  "total_top_level_starts": 23,
+  "budget_cap": 30,
+  "stage_counts": {
+    "qualification": 10,
+    "A": 12
+  },
+  "unexecuted_conditional_jobs": [
+    {
+      "label": "r1_D0",
+      "mode": "D0",
+      "workload": "B",
+      "round": 1,
+      "order": "forward"
+    },
+    {
+      "label": "r1_D1",
+      "mode": "D1",
+      "workload": "B",
+      "round": 1,
+      "order": "forward"
+    },
+    {
+      "label": "r2_D1",
+      "mode": "D1",
+      "workload": "B",
+      "round": 2,
+      "order": "reverse"
+    },
+    {
+      "label": "r2_D0",
+      "mode": "D0",
+      "workload": "B",
+      "round": 2,
+      "order": "reverse"
+    },
+    {
+      "label": "r3_D0",
+      "mode": "D0",
+      "workload": "B",
+      "round": 3,
+      "order": "forward"
+    },
+    {
+      "label": "r3_D1",
+      "mode": "D1",
+      "workload": "B",
+      "round": 3,
+      "order": "forward"
+    },
+    {
+      "label": "D1_B_dry",
+      "mode": "D1",
+      "workload": "B",
+      "dry": true
+    }
+  ],
+  "all_isolation_receipts_valid": true,
+  "no_query_or_threshold_adjustment": true,
+  "full_dynamic_admission": false,
+  "thesis_admission": false,
+  "new_start_ledger_sha256": "0537c2c7d6ee808125dde852631b0e14d73ea7156c381167e9cd1d3c65ab8a96",
+  "stage_result_sha256": {
+    "qualification": "66e607be4537040dcbc0c20e21c734b07ca273d5ecb27b4c1f9490754ce0316c",
+    "A": "63024388456f8c62ac9e182964fb8fbdca34eb862f940379cb75ad34adb23986"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "experiment": "GTSPP_20261013_dynamic_progressive_gate3",
+  "base_commit": "6baaa376a4b7afe3192ab3ba1b4269993856d479",
+  "phase": "bounded_dynamic_integration_not_paper_admission",
+  "variants": {
+    "D0": "strengthened E_ADAPT; unchanged raw storage, updates, Faiss kNN, logical ownership",
+    "D1": "same; only range uses frozen Gate2 STAGED_COMPACT; database/query/output/stream borrowed, no duplicated vectors"
+  },
+  "A": {
+    "N": 1000000,
+    "D": 960,
+    "events": 336,
+    "counts": {
+      "insert": 40,
+      "delete": 40,
+      "range": 128,
+      "knn": 128
+    },
+    "source": "unchanged original qualified336 logical trace and vectors",
+    "pairs": 6,
+    "order": [
+      [
+        "D0",
+        "D1"
+      ],
+      [
+        "D1",
+        "D0"
+      ],
+      [
+        "D0",
+        "D1"
+      ],
+      [
+        "D1",
+        "D0"
+      ],
+      [
+        "D0",
+        "D1"
+      ],
+      [
+        "D1",
+        "D0"
+      ]
+    ]
+  },
+  "B": {
+    "only_after_A_GO": true,
+    "N": 1000000,
+    "D": 960,
+    "events": 1000,
+    "counts": {
+      "insert": 400,
+      "delete": 400,
+      "range": 100,
+      "knn": 100
+    },
+    "live_bound": 50,
+    "pairs": 3,
+    "order": [
+      [
+        "D0",
+        "D1"
+      ],
+      [
+        "D1",
+        "D0"
+      ],
+      [
+        "D0",
+        "D1"
+      ]
+    ],
+    "seed": 2026101303,
+    "layout": "100 groups: I,D,I,D,R,I,D,I,D,K; max live deviation1; alternate original-live and newly-inserted victims; frozen before A measurement",
+    "vectors": "query vectors sampled without replacement from original A range/kNN pools; inserts repeat frozen range-query vectors with distinct logical IDs"
+  },
+  "warmup": "unchanged original19-event trace with8 queries; fresh service afterwards; no lazy kNN work moved into setup",
+  "quality": {
+    "range": "exact inclusive ordered-FP64 membership; distinct logical occurrences and complete fields",
+    "knn": "unchanged native Faiss8; exact tie-aware member set; tolerance5e-5 scale1",
+    "ID_space": "physical rows mapped once to logical occurrence IDs; never live ranks",
+    "every_update": "record actual local transition; independent replay verifies full live-set/bijection after every mutation outside timing",
+    "final": "all physical rows, logical/reverse maps exported; all final GPU vector bytes compared directly to independent CPU replay; no hashing-only substitute"
+  },
+  "timing": {
+    "primary": "events_ms+release_ms",
+    "events": "all ACKs, count waits, D2H, query temporaries, mapping and client bookkeeping",
+    "release": "final map copy and complete resource release/bookkeeping",
+    "excluded_interval": "full final-vector D2H/bitwise offline validation, map export, serialization; separately timed between events and release by human-approved clarification",
+    "other_exclusions": [
+      "context",
+      "disk load",
+      "one-time initial upload",
+      "warmup",
+      "offline CPU oracle"
+    ],
+    "same_D0_D1": true
+  },
+  "statistics": {
+    "primary": "ratio of medians of fresh complete process totals",
+    "paired": "geometric process log ratio; percentile bootstrap20000 seed2026101303",
+    "retain": [
+      "all samples/order",
+      "p10/p50/p90",
+      "pairedCI95",
+      "wins",
+      "order strata",
+      "operation regressions"
+    ],
+    "sampling_unit": "fresh process rounds, not events"
+  },
+  "A_decision": {
+    "priority": [
+      "quality_failure:NO_GO",
+      "insert_or_delete_total_ACK_ratio>1.5:UPDATE_REGRESSION",
+      "GO",
+      "remaining_NO_GO",
+      "UNCLASSIFIED_stop"
+    ],
+    "GO": {
+      "range_ratio_le": 0.6,
+      "trace_ratio_le": 0.85,
+      "CI95_upper_lt": 0.92,
+      "wins_ge": 5
+    },
+    "NO_GO": {
+      "trace_ratio_ge": 0.95,
+      "range_ratio_gt": 0.75
+    },
+    "strong_GO": {
+      "trace_ratio_le": 0.8,
+      "range_ratio_le": 0.5
+    }
+  },
+  "B_gate": {
+    "insert_process_total_median_ratio_le": 1.25,
+    "delete_process_total_median_ratio_le": 1.25,
+    "range_ratio_le": 0.65,
+    "quality_errors": 0,
+    "interpretation": "process total ACK medians, not median of400 individual events; all event distributions also reported",
+    "failure": "no full dynamic admission; retain A-local evidence; no automatic adjustment/retry"
+  },
+  "stage_robustness": {
+    "pool": "unchanged original Gate2 fixed32 queries; same across all snapshots",
+    "A_snapshots": [
+      "initial",
+      "exact20I20D",
+      "exact40I40D",
+      "final"
+    ],
+    "B_snapshots": [
+      "initial",
+      "exact20I20D",
+      "exact40I40D",
+      "final400I400D"
+    ],
+    "collection": "separate diagnostic/dry service; no added probe in primary event stream",
+    "stages": [
+      128,
+      256,
+      512
+    ],
+    "status": "descriptive stability; no unprovided cutoff invented"
+  },
+  "memory": {
+    "persistent": [
+      "one capacity-sized raw FP32 buffer",
+      "unchanged native kNN norms",
+      "forward and reverse logical maps"
+    ],
+    "D1_extra": "query-only PrefixState ping-pong32bytes/row and max-sized CUB scratch, no database-size*dims copies, tree or index",
+    "peak": "owned allocation ledger plus native resource info and sampled device peak; sampled peak is not exact"
+  },
+  "qualification": [
+    "D0 fixtures",
+    "D1 fixtures",
+    "D0 fixture memcheck",
+    "D0 fixture racecheck",
+    "D0 fixture synccheck",
+    "D1 fixture memcheck",
+    "D1 fixture racecheck",
+    "D1 fixture synccheck",
+    "D0 full A dry",
+    "D1 full A dry+stage probes"
+  ],
+  "max_GPU_starts": 29,
+  "budget_breakdown": {
+    "qualification": 10,
+    "A": 12,
+    "B": 6,
+    "B_stage_sidecar": 1
+  },
+  "stop": "first failure; retain failed/unexecuted jobs; no automatic retry or stage/mix/kNN changes",
+  "novelty": "ENGINEERING_ONLY unless a distinct non-incremental mechanism and same-contract external advantage are independently established; performance GO alone does not admit thesis",
+  "forbidden": [
+    "tree",
+    "rebuild",
+    "stored prefix/index",
+    "dimension permutation",
+    "persistent O(ND) duplicate",
+    "new kNN",
+    "production dispatch",
+    "manuscript or Overleaf edits"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "hardware": {
+    "model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "GPU_count_used": 1,
+    "architecture": "sm_120",
+    "driver": "590.48.01",
+    "memory_total_MiB": 97887,
+    "NUMA_binding": "explicit matching locality; exact node retained in private receipt",
+    "power_limit_W": 600,
+    "no_settings_changed": true,
+    "clocks_locked": false,
+    "clock_observation": "not locked; per-process 200ms telemetry retained privately",
+    "GPU_selection": "idle same-model single card, human-approved; no foreign process signalled"
+  },
+  "software": {
+    "platform": "Linux-6.17.0-20-generic-x86_64-with-glibc2.39",
+    "Python": "3.12.3",
+    "numpy": "1.26.4",
+    "nvcc": "13.1.115",
+    "gxx": "13.3.0",
+    "OMP_NUM_THREADS": "1",
+    "float_flags": [
+      "--ftz=false",
+      "--fmad=false",
+      "-ffp-contract=off",
+      "-fno-fast-math"
+    ],
+    "library_identity": "INPUT_IDENTITY.json dynamic/static SHA256 bindings; version strings not inferred from hashes"
+  },
+  "private_receipt_sha256": {
+    "HOST_PREFLIGHT.txt": "21b29bb4d83be3f52a3868edae090ddd84bf903566185f2b0c7a15a658b0a77f",
+    "code.tar": "3dabb9cbefc7185e47e2659bb165c57f20fad43d26c6b343c9da35d51f242cbb",
+    "code_r2.tar": "e3b3971a632ebcae6e38c7514aefc7706b3143d8c13c689a8ea27d3ce2de3243"
+  }
+}
