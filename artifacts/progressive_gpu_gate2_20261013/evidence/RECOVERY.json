@@ -1,0 +1,25 @@
+{
+  "human_approved": true,
+  "approval_date": "2026-10-13",
+  "retained_failure": "Guard transitive Python import failure before candidate launch or CUDA initialization",
+  "prior_failed_guard_starts": 1,
+  "prior_CUDA_starts": 0,
+  "max_new_starts": 33,
+  "max_total_starts": 34,
+  "actual_total_starts": 33,
+  "failed_result_sha256": "7bd249522b0d299a8e8609a8180106ffedf32d4fe16275637528462d15af0939",
+  "prior_start_ledger_sha256": "5cd49292bdeceea708389d84f29fca3d3ebc58b4691b3ae2dd6b2f67861741d2",
+  "passed_samples_repeated": 0,
+  "CUDA_kernel_and_fixture_unchanged": true,
+  "normalized_all5_candidate_SASS_unchanged": true,
+  "repairs": [
+    "Restore six baseline transitive imports",
+    "Freeze guard/static/source/command/workload identities",
+    "Correct actual P1 resource metadata and complete payload byte lengths",
+    "Parse predicated static opcodes and absolute profiler wrapper path"
+  ],
+  "postprocessing_amendments": [
+    "Recognize official ns/nsecond units; direct raw sums agree",
+    "Preserve initial curation; final curation freezes postprocessor identities and supports a clean campaign without historical recovery; core result JSONs byte-identical"
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "experiment": "GTSPP_20261013_PROGRESSIVE_STAGE_GATE2",
+  "base_commit": "f8d75bc9cad28a9d0c1322ca8750ace723e97e39",
+  "keeper_commit": "939cd2e92f1783b5260f1e987a84b8c61b6f15c3",
+  "plan_sha256": "db0c69ead059e55c6fa26fc20a39cbf47b79879dfe9d09ce7130619a842b731d",
+  "scope": "One static fixed-pool GPU staged feasibility/attribution prototype; no paper novelty,production dispatch or dynamic integration",
+  "workload": {
+    "dataset": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "dtype_layout": "unchanged FP32 little-endian row-major",
+    "coordinate_order": "original0..959",
+    "radius_bits": "0x3f34a3d8",
+    "cutoff_hex": "0x1.fddb427319000p-2",
+    "query_ids": [
+      88406,
+      865632,
+      881748,
+      916533,
+      40158,
+      242468,
+      40486,
+      900387,
+      703226,
+      791039,
+      724874,
+      671829,
+      722418,
+      152899,
+      737995,
+      144573,
+      570909,
+      347206,
+      63744,
+      625378,
+      136857,
+      201233,
+      72436,
+      617423,
+      810945,
+      789615,
+      601856,
+      433080,
+      415755,
+      282095,
+      66651,
+      326654
+    ],
+    "stages": [
+      128,
+      256,
+      512,
+      960
+    ],
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "snapshot": "initial"
+  },
+  "candidate": {
+    "name": "P1_STAGED_COMPACT",
+    "one_version_only": true,
+    "state": "16-byte AoS:FP64 bounded estimate,int32 original row ID,uint32 current-stage ordered replay coordinates",
+    "selection": "stable installed CUB DeviceSelect::Flagged at every boundary",
+    "owner_construction": "Stage1 generates all IDs within each request; no setup survivors",
+    "numerics": "NUMERICS.md outward intervals + exact ordered prefix fallback; retained full hits replay ordered960",
+    "admission_envelope": "finite FP32 abs<=16, D960,N<=1M,no FTZ",
+    "fields": "ascending complete occurrence IDs;FP32 sqrt fields plus charged FP64 cast of FP32 squared scores;original5e-5 scale tolerance;0 FN/FP against ordered oracle"
+  },
+  "pre_GPU_gate": {
+    "admit": "coordinate+owner+state<=1.25GB; also include tuple counter bytes/flags/replay bound in stricter screen",
+    "stop": ">1.50GB",
+    "uncovered": "1.25..1.50GB:UNCLASSIFIED,no implementation"
+  },
+  "novelty": {
+    "classification": "ENGINEERING_ONLY",
+    "rule": "early abandoning,dimension pruning/vertical layouts and compaction already established; bounded diagnostic only,no new-thesis admission"
+  },
+  "hardware": {
+    "model": "NVIDIA RTX PRO6000 Blackwell Server Edition",
+    "SM": 188,
+    "target": "sm_120",
+    "driver": "590.48.01",
+    "nvcc": "13.1 V13.1.115",
+    "NCU": "2025.4.1.0",
+    "NSYS": "2025.5.2.266",
+    "sanitizer": "2025.4.1.0",
+    "single_device": "current empty same-model card chosen live;placement private",
+    "no_settings_changes": true,
+    "isolation": "existing two-sided-starttime static_guard,shared per-device advisory locks plus one campaign flock;first foreign activity stops"
+  },
+  "qualification": {
+    "fixture_iterations": 100,
+    "independent_stream_slots": 2,
+    "synthetic_cases": [
+      "zero",
+      "duplicates",
+      "inclusive equality",
+      "nextafter inside/outside",
+      "reject at each of4stages",
+      "true hit",
+      "empty/all-hit",
+      "ragged count",
+      "last rows",
+      "repeated pointer churn",
+      "subnormal differences"
+    ],
+    "bounded_N": 4096,
+    "target_N": 1000000,
+    "warmup": 8,
+    "measured": 32,
+    "checkpoints": "every complete GPU checkpoint ID against Gate1 required_dims/full scores;all40 original queries",
+    "sanitizers": [
+      "memcheck",
+      "racecheck",
+      "synccheck"
+    ],
+    "sanitizer_scope": "synthetic plus bounded4096 target only;no full-N sanitizer claim"
+  },
+  "measurement": {
+    "primary": "Host request ready -> complete Host output ready",
+    "included": [
+      "query H2D",
+      "all4scans",
+      "all4stable selections",
+      "actual count D2H/sync/next launch",
+      "ordered replay",
+      "final fields",
+      "complete result D2H",
+      "resize/completion"
+    ],
+    "excluded": [
+      "context",
+      "data load",
+      "one-time vector upload/capacity allocation",
+      "validation/export",
+      "profiler overhead"
+    ],
+    "modes": [
+      "B0_READ_ONLY",
+      "B1_STRENGTHENED",
+      "P1_STAGED_COMPACT"
+    ],
+    "fresh_processes_per_mode": 6,
+    "round_orders": [
+      [
+        "B0",
+        "B1",
+        "P1"
+      ],
+      [
+        "P1",
+        "B1",
+        "B0"
+      ],
+      [
+        "B0",
+        "B1",
+        "P1"
+      ],
+      [
+        "P1",
+        "B1",
+        "B0"
+      ],
+      [
+        "B0",
+        "B1",
+        "P1"
+      ],
+      [
+        "P1",
+        "B1",
+        "B0"
+      ]
+    ],
+    "warmup": 8,
+    "queries": 32,
+    "point_estimator": "ratio of medians of6 process mean ACKs",
+    "paired": "six matched-round P1/B1 geometric ratio;bootstrap20000 seed2026101302,process resampling,95% percentile CI",
+    "retained": [
+      "every query ACK",
+      "complete pass wall",
+      "p10/median/p90 of process means",
+      "process paired ratios",
+      "wins",
+      "forward/reverse strata"
+    ],
+    "sustained_scope": "six complete32-query passes,not dynamic/long-running production"
+  },
+  "diagnostics": {
+    "NCU": "fresh independent B1/P1 processes;capture all32 measured queries and sum ALL stage/selection/materialization kernels per query,not just first/easy query;API ranges enabled in diagnostic-only host adapter",
+    "metrics": [
+      "gpu__time_duration.avg",
+      "dram__bytes.sum",
+      "dram__bytes_op_read.sum",
+      "dram__bytes_op_write.sum",
+      "lts__t_bytes.sum",
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+      "sm__warps_active.avg.pct_of_peak_sustained_active"
+    ],
+    "traffic_estimator": "mean of32 all-kernel DRAM totals;also disclose per-query min/p90/max,full DRAM read/write/L2 and all kernel families",
+    "stage_events": "one separate40-query P1 process with scan/selection/output events,host phase and count waits;not primary timings",
+    "NSYS": "one diagnostic-only P1 trace if latency/CI misses GO;CUDA/NVTX without CPU sampling or settings changes;retain launch/copy gaps"
+  },
+  "gates": {
+    "evaluation_order": [
+      "GO",
+      "NO_GO",
+      "BYTE_SAVING_BUT_CONTROL_BOUND",
+      "UNCLASSIFIED"
+    ],
+    "GO_PROGRESSIVE_GPU": "all quality gates AND mean totalDRAM<=1.60e9 AND median-P1/median-B1<=.80 AND paired95%CIupper<.90",
+    "STRONG_GO": "GO plus DRAM<=1.30e9 AND ratio<=.65;label remains GO",
+    "NO_GO_PROGRESSIVE_GPU": "DRAM>2.20e9 OR (ratio>=1 AND no separately isolated>20% control component)",
+    "BYTE_SAVING_BUT_CONTROL_BOUND": "not earlier class AND DRAM<=1.60e9 AND ratio>.90",
+    "UNCLASSIFIED": "all other valid numerical intervals or missing quality/measurement evidence;stop,no auto tuning",
+    "control_component": "event/trace-isolated selection+launch/count/output component,not unexplained residual alone",
+    "persistent_motivation": "selection>=25% of complete ACK is evidence for future design only;no implementation this round",
+    "human_clarification": "2026-10-13 approved GO first,NO_GO precedence over BYTE overlap,gray zones stop,no threshold relaxation"
+  },
+  "budget": {
+    "qualification": 11,
+    "primary": 18,
+    "NCU": 2,
+    "stage_breakdown": 1,
+    "conditional_NSYS": 1,
+    "max_top_level_GPU_starts": 33,
+    "reserve": 0,
+    "retries": "none automatic;retain failed/unexecuted entries and stop on first runtime/isolation/quality/provenance failure"
+  },
+  "forbidden": [
+    "query/radius/stage tuning",
+    "permutations/PCA",
+    "compression/low-bit/TC",
+    "tree/index pruning",
+    "approximation/learning",
+    "persistent/multi-version/Graph kernels",
+    "336event workflow",
+    "manuscript/Overleaf edits",
+    "foreign process signals",
+    "GPU settings changes"
+  ],
+  "publication": "task-owned source,scalar tables,raw-log/report identities and plots only;vectors,full outputs,profiler binaries,placement and credentials stay private"
+}

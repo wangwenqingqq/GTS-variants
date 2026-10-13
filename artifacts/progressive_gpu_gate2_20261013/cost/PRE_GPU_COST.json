@@ -1,0 +1,71 @@
+{
+  "scope": "Pre-GPU modeled logical payload; not measured DRAM",
+  "source_stage_sha256": "fdbc08ad0ab03f7a734ebd618fc82b0dee0544f92184d0011be17a9625f84de3",
+  "queries": 32,
+  "rows": [
+    {
+      "stage": 1,
+      "start": 0,
+      "end": 128,
+      "input_pairs": 32000000,
+      "output_pairs": 20932102,
+      "coordinate_bytes": 16384000000,
+      "owner_bytes": 339728408,
+      "state_bytes": 679456816,
+      "padding_bytes": 339728408,
+      "flag_RW_bytes": 64000000
+    },
+    {
+      "stage": 2,
+      "start": 128,
+      "end": 256,
+      "input_pairs": 20932102,
+      "output_pairs": 4795038,
+      "coordinate_bytes": 10717236224,
+      "owner_bytes": 270365376,
+      "state_bytes": 540730752,
+      "padding_bytes": 270365376,
+      "flag_RW_bytes": 41864204
+    },
+    {
+      "stage": 3,
+      "start": 256,
+      "end": 512,
+      "input_pairs": 4795038,
+      "output_pairs": 258463,
+      "coordinate_bytes": 4910118912,
+      "owner_bytes": 58574308,
+      "state_bytes": 117148616,
+      "padding_bytes": 58574308,
+      "flag_RW_bytes": 9590076
+    },
+    {
+      "stage": 4,
+      "start": 512,
+      "end": 960,
+      "input_pairs": 258463,
+      "output_pairs": 6590,
+      "coordinate_bytes": 463165696,
+      "owner_bytes": 3127916,
+      "state_bytes": 6255832,
+      "padding_bytes": 3127916,
+      "flag_RW_bytes": 516926
+    }
+  ],
+  "coordinate_bytes_per_query": 1014828776.0,
+  "owner_bytes_per_query": 20993625.25,
+  "partial_state_bytes_per_query": 41987250.5,
+  "modeled_total_payload": 1077809651.75,
+  "padding_bytes_per_query": 20993625.25,
+  "flags_RW_bytes_per_query": 3624100.1875,
+  "including_padding_flags": 1102427377.1875,
+  "admitted": true,
+  "not_priced": [
+    "CUB scratch sectors",
+    "query loads and transfers",
+    "ordered refinement rereads (bounded CPU screen pending)",
+    "final materialization",
+    "launch and scalar count sync latency"
+  ],
+  "state": "16-byte AoS:double estimate,int32 original row ID,uint32 refinement coordinates; stage1 emits IDs per request,not setup; producer writes all input states; conservatively charge CUB read all input states and write selected states; stage2+ reads each selected input state"
+}

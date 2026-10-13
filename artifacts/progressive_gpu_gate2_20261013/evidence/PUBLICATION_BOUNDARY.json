@@ -1,0 +1,41 @@
+{
+  "allowed": "Task-owned source,public scalar samples/counts/counters,plots,raw-evidence hash identities",
+  "excluded": [
+    "Full vectors",
+    "Complete raw payloads/checkpoints",
+    "Vendor profiler report binaries",
+    "Host/device placement",
+    "Build/environment paths",
+    "Credentials",
+    "Conversations",
+    "Manuscript/Overleaf material",
+    "Unrelated working-tree files"
+  ],
+  "repository": "wangwenqingqq/GTS-variants",
+  "visibility": "public;preserved",
+  "owner_and_authenticated_account": "wangwenqingqq",
+  "branch": "experiments/external-closure-20261010",
+  "scope": "Existing non-anonymous code/evidence branch only;no merge,visibility change or manuscript publication",
+  "verified_date": "2026-10-13",
+  "sources_and_evidence_reverified": true,
+  "history_audit": {
+    "all_refs_reachable_blobs_scanned": 3901,
+    "all_refs_private_path_or_IP_findings": 178,
+    "secret_findings": 0,
+    "forbidden_attribution_findings": 0,
+    "published_base": "f8d75bc9cad28a9d0c1322ca8750ace723e97e39",
+    "legacy_private_path_findings_reachable_from_published_base": 1,
+    "findings_outside_outgoing_branch": 177,
+    "new_task_ship_set_findings": 0,
+    "action": "Preserve existing non-anonymous public history; push only this branch update. No unrelated refs, history rewrite or claim of whole-repository anonymization/cleanliness.",
+    "broad_anonymity_scanner": {
+      "exit_code": 1,
+      "legacy_all_ref_alert_blobs": 180,
+      "established_public_author_or_citation_emails_and_legacy_paths_flagged": true,
+      "current_branch_legacy_path_alert_blobs": 1,
+      "reflog_only_metadata_alerts": 1,
+      "credential_and_forbidden_attribution_findings": 0,
+      "interpretation": "This existing non-anonymous repository is not declared leak-clean or anonymous. Exact new outgoing files are clean; no legacy blobs or unrelated refs are modified/newly introduced."
+    }
+  }
+}
