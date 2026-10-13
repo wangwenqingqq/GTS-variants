@@ -1,0 +1,21 @@
+{
+  "CPU": "INTEL XEON GOLD6530,128 logical CPUs on shared Blackwell host",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "compiler": "g++13.3.0",
+  "compiler_flags": [
+    "-std=c++17",
+    "-O2",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-associative-math",
+    "-fopenmp",
+    "-shared",
+    "-fPIC"
+  ],
+  "workers": 4,
+  "nice": 10,
+  "CUDA_visible_devices": "empty",
+  "no_GPU_initialization": true,
+  "GPU_clocks_power_libraries": "not changed/not used; historical GPU state is in parent evidence"
+}

@@ -1,0 +1,42 @@
+{
+  "complete": true,
+  "experiment": "M2_INTERVAL_SCREEN",
+  "decision": "KILL_M2",
+  "numeric_pass": true,
+  "novelty_admission": false,
+  "kill_axes": [
+    "known_interval_filter_refine"
+  ],
+  "CPU_screen_quality_pass": true,
+  "new_GPU_quality": "NOT_TESTED",
+  "evidence_state": "partial",
+  "interpretation": "Observed CPU screening counts; counterfactual logical bytes, not DRAM/latency",
+  "representation_bytes": 256526336,
+  "representation_fraction_of_raw": 0.06680373333333334,
+  "representation_code_bytes": 256000000,
+  "representation_boundary_bytes": 526336,
+  "raw_stage12_baseline_bytes_per_query": 846913632.0,
+  "raw_stage12_candidate_bytes_per_query": 181146208.0,
+  "raw_stage12_saving_fraction": 0.7861101756359496,
+  "code_reads_bytes_per_query": 214490384.0,
+  "query_LUT_bytes": 524288,
+  "unchanged_later_coordinate_bytes_per_query": 167915144.0,
+  "known_coordinate_code_LUT_payload_bytes_per_query": 564076024.0,
+  "first_two_stages_per_query_saving_distribution": {
+    "min": 0.5056789386090442,
+    "p10": 0.5534550957847226,
+    "p50": 0.8379086240440765,
+    "p90": 0.9999923259987463,
+    "max": 0.999998000002
+  },
+  "total_verified_range_hits": 6590,
+  "query_object_pairs": 32000000,
+  "omitted_from_payload": [
+    "state/ID/flags/compaction/cache sectors",
+    "kernel/control/waits",
+    "encoding/training/updates",
+    "complete output/release costs"
+  ],
+  "reason": "The concrete8-bit interval screen does not establish a mechanism distinct from VA-file/BOND-style compression",
+  "reopen": "A different non-incremental representation, exactness, dynamic maintenance and same-contract external evidence"
+}

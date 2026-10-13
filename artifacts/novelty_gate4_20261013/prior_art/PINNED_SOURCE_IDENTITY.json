@@ -1,0 +1,46 @@
+{
+  "inspection_date": "2026-10-13",
+  "purpose": "Pinned source content identity; mechanism review only, no external numerical/performance qualification",
+  "sources": [
+    {
+      "id": "S04",
+      "commit": "1a9ddc60d2201c9a44dfca3acead6ee38fbe21dc",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/1a9ddc60d2201c9a44dfca3acead6ee38fbe21dc/faiss/IndexFlat.cpp",
+      "bytes": 31631,
+      "sha256": "d6dc769e26aa520654744cd5bda1b270f7002ccf6c41d074c87dcfc903f6006a",
+      "locator": "IndexFlat search/range; flat_pano_search_core; IndexFlatPanorama add/search/range/remove"
+    },
+    {
+      "id": "S05",
+      "commit": "1a9ddc60d2201c9a44dfca3acead6ee38fbe21dc",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/1a9ddc60d2201c9a44dfca3acead6ee38fbe21dc/faiss/IndexFlatCodes.cpp",
+      "bytes": 10591,
+      "sha256": "c46cca18c9cde52ec10a6f9ca7bf84b27e43da0125f9571e72e9f454fb931505",
+      "locator": "add/remove_ids"
+    },
+    {
+      "id": "S07",
+      "commit": "b9a8f8062d50d9c0ec5ade8752d3027be7ebd1cc",
+      "url": "https://raw.githubusercontent.com/rapidsai/cuvs/b9a8f8062d50d9c0ec5ade8752d3027be7ebd1cc/cpp/include/cuvs/neighbors/brute_force.hpp",
+      "bytes": 38437,
+      "sha256": "c9053ad767a4f6e4f3692e726088efe9b326ff34b8c0602992ef335fc74f6388",
+      "locator": "index ownership/norms, update_dataset, build/search/filter interfaces"
+    },
+    {
+      "id": "S12",
+      "commit": "1a9ddc60d2201c9a44dfca3acead6ee38fbe21dc",
+      "url": "https://raw.githubusercontent.com/facebookresearch/faiss/1a9ddc60d2201c9a44dfca3acead6ee38fbe21dc/faiss/impl/Panorama.h",
+      "bytes": 15860,
+      "sha256": "ad3805132629bd759e5506fdd05ede40175f33e4759cc273332772504c29eebd",
+      "locator": "level layout, cumulative norms, progressive_filter_batch"
+    },
+    {
+      "id": "S14",
+      "commit": "6a66aa7f642d5dcab7cc6c83472b467f147d1db0",
+      "url": "https://raw.githubusercontent.com/cwida/PDX/6a66aa7f642d5dcab7cc6c83472b467f147d1db0/README.md",
+      "bytes": 6385,
+      "sha256": "aaaa44ed7c8839e200893b5de9aa27779f8aab313407d5bb168a43e0743dc87d",
+      "locator": "Current float32/8-bit layout; distinct from2025 paper; not benchmarked"
+    }
+  ]
+}

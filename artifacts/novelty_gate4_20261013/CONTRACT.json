@@ -1,0 +1,219 @@
+{
+  "experiment": "GTSPP_20261013_DISTINCT_MECHANISM_GATE4",
+  "parent_commit": "1341def36d95db3077e09032d88f57c476b386d6",
+  "plan_sha256": "6a87927293ba68b1d3d9a414972f756fff1caf351879e35fc4f0f359731cfab2",
+  "scope": "Novelty admission and CPU-only cheap falsification; no new GPU/E2E performance campaign",
+  "sequence": [
+    "prior-art matrix before code",
+    "three hypotheses frozen",
+    "one CPU sector model M1",
+    "one combined CPU replay of M2/M3",
+    "independent numeric and novelty decisions",
+    "at most one winner; no implementation without all admission gates"
+  ],
+  "workload": {
+    "dataset": "GIST",
+    "N": 1000000,
+    "D": 960,
+    "B": 1,
+    "raw_dtype": "FP32 little-endian row-major",
+    "header": "12B: int32 D,N,metric=2; not part of device row alignment",
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "coordinate_order": "original0..959",
+    "range_qids": [
+      88406,
+      865632,
+      881748,
+      916533,
+      40158,
+      242468,
+      40486,
+      900387,
+      703226,
+      791039,
+      724874,
+      671829,
+      722418,
+      152899,
+      737995,
+      144573,
+      570909,
+      347206,
+      63744,
+      625378,
+      136857,
+      201233,
+      72436,
+      617423,
+      810945,
+      789615,
+      601856,
+      433080,
+      415755,
+      282095,
+      66651,
+      326654
+    ],
+    "radius_bits": "0x3f34a3d8",
+    "range_threshold_hex": "0x1.fddb427319000p-2",
+    "knn_qids": [
+      865632,
+      916533,
+      242468,
+      900387,
+      791039,
+      671829,
+      152899,
+      144573,
+      347206,
+      625378,
+      201233,
+      617423,
+      789615,
+      433080,
+      282095,
+      326654,
+      113261,
+      253501,
+      567980,
+      243009,
+      158331,
+      436365,
+      253948,
+      578183,
+      207668,
+      63628,
+      365631,
+      947190,
+      136075,
+      838933,
+      579390,
+      842555
+    ],
+    "knn_query_selection": "first32 kNN events of original Gate3 A, before outcomes",
+    "knn_k": 8,
+    "self_matches": true,
+    "duplicates": "distinct occurrences retained",
+    "snapshot": "initial only; no mutated-snapshot or mixed-workflow replay"
+  },
+  "m1": {
+    "sector_bytes": 32,
+    "warp_lanes": 32,
+    "dtype_bytes": 4,
+    "stages": [
+      128,
+      256,
+      512,
+      960
+    ],
+    "database_base_alignment": 256,
+    "address_expression": "base+4*(row*960+START+lane+32*iteration)",
+    "primary": "fraction of removable coordinate-sector bytes with unchanged required payload",
+    "kill_if": "headroom<0.20",
+    "sensitivity": "remove all non-coordinate modeled payload including refinement rereads; historical NCU consistency separately, not a universal DRAM floor"
+  },
+  "m2": {
+    "single_representation": "uint8 uniform interval code for each original dimension0..255; fixed FP64 boundaries and unbounded first/last tails",
+    "dimensions": 256,
+    "bits_per_dimension": 8,
+    "stages": [
+      128,
+      256
+    ],
+    "guard_relative_hex": "0x1p-40",
+    "guard_absolute_hex": "0x1p-100",
+    "raw_replay_charge": "256*4*every encoded-screen survivor at256, before continuing later stages",
+    "size_charge": "N*256 +256*257*8; query LUT separate",
+    "quality": "interval containment of all encoded coordinates; every query/object lower bound <= ordered raw prefix at128 and256; no true-hit removal; full fallback membership/scores match oracle",
+    "numeric_pass": "representation_ratio<=0.25 AND raw_stage12_saving>=0.50",
+    "zero_false_positive_meaning": "screen may retain extra candidates; exact fallback result must not emit extras",
+    "dynamic": "not tested; tails are safety design only, no measured maintenance admission"
+  },
+  "m3": {
+    "thresholds": [
+      "oracle final exact eighth score (optimistic/free-threshold ideal only)",
+      "fixed first256-row exact eighth score; full seed reads charged"
+    ],
+    "quality": "all1M full scores bitwise match preserved ordered oracle for each query; every crossing predecessor<=cutoff<crossing; all exact top-k and ties retained; final k8 CPU membership/scores match reference",
+    "primary": "oracle first-crossing coordinate-only saving vs N*D*4",
+    "numeric_pass": "ideal_byte_reduction>=0.40",
+    "report_also": "required_dims histograms/quantiles and frozen four-stage rounded payload for both thresholds; seed cost charged",
+    "knn_ties": "distance then occurrence ID in CPU oracle; never reject equality; not a change to native GPU tie qualification"
+  },
+  "admission": {
+    "all_required": [
+      "non-incremental distinction from nearest art",
+      "direct link to measured traffic or dominant query component",
+      "exact0FN/0FP",
+      "same-semantics external comparator exists"
+    ],
+    "priority": "quality/provenance failure stops as unvalidated; independent numeric kill; independent known-mechanism novelty kill; positive headroom cannot rescue novelty",
+    "selection": "at most one; if multiple distinct admitted candidates, M3 then M2 then M1 by dominant measured bottleneck; no additional sweep",
+    "final_allowed": [
+      "PROMOTE_M1",
+      "PROMOTE_M2",
+      "PROMOTE_M3",
+      "NO_DISTINCT_MECHANISM"
+    ],
+    "bounded_negative": "candidate-specific; not proof of impossibility of all GPU search mechanisms"
+  },
+  "execution": {
+    "hardware": "INTEL XEON GOLD6530,128 logical CPUs on shared Blackwell host",
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "compiler": "g++13.3.0",
+    "compiler_flags": [
+      "-std=c++17",
+      "-O2",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-fno-associative-math",
+      "-fopenmp",
+      "-shared",
+      "-fPIC"
+    ],
+    "CPU_workers": 4,
+    "nice": 10,
+    "max_combined_full_population_processes": 1,
+    "wall_timeout_seconds": 1200,
+    "prequalification": "deterministic boundary/tie fixtures and all range/knn queries on first4096 rows",
+    "GPU_starts": 0,
+    "new_NCU_processes": 0,
+    "GPU_state_changes": false,
+    "do_not_touch": "all foreign processes and all old evidence; no raw input copy/changes",
+    "stop": "first correctness/input/provenance error or timeout; no automatic full-population restart"
+  },
+  "timing": {
+    "public_latency_measurement": false,
+    "scope": "counts/logical byte models only; elapsed CPU replay time for operational provenance, not performance",
+    "historical_Gate2_NCU": "fixed32 query all-kernel totals retained as parent evidence, not a fresh comparator",
+    "historical_Gate3": "UNCLASSIFIED remains frozen; no implicit promotion from Gate4"
+  },
+  "parent_files": {
+    "artifacts/progressive_dynamic_gate3_20261013/evidence/INPUT_IDENTITY.json": "d857bbafe7b84dfcee71921b342abc06b7ea5f248a6111f2f26cd8a72bb360d6",
+    "artifacts/progressive_gpu_gate2_20261013/progressive.cuh": "fa6352c852c609c6e9cea7b2d362aa9bfd451f9c809e520bdeba2bbe47cc16db",
+    "artifacts/progressive_gpu_gate2_20261013/cost/PRE_GPU_COST.json": "cf0e15a9a6423de86cbec1b4bcff15c2fb277fb568b78d21bcb180b8289eacb4",
+    "artifacts/progressive_gpu_gate2_20261013/cost/REPLAY_SCREEN.json": "5e5a39bc6fa53b2a04473a243a5122367b914ad885ad769e10b04897881b4990",
+    "artifacts/progressive_gpu_gate2_20261013/traffic/DRAM_ACCOUNTING.json": "84ff8d7e7a240cafdbcd57e48c5d57da55687c278d2c82fae8d0b9d64855e3eb",
+    "artifacts/exact_representation_gate1_20261012/CONTRACT.json": "df2f078faa936e6568d8bdc5024f40a450e05150e6ac2d126015a9f0c7d51809"
+  },
+  "publication": "task-owned diagnostics, scalar counts/histograms/identities/docs only; raw data/scores/codes/per-pair arrays/private placement stay outside Git; manuscript confidential/unchanged",
+  "external_gate": {
+    "only_after_winner": true,
+    "comparators": [
+      "PDX/PDX-BOND/BOND CPU panel",
+      "Faiss Flat/Panorama CPU panel",
+      "strong GPU exhaustive and current Gate2 GPU panel"
+    ],
+    "no_cross_device_superiority_ratio": true,
+    "same_contract": [
+      "N/D/dtype",
+      "queries",
+      "radius or k",
+      "exact ordered semantic qualification",
+      "complete Host-ready outputs",
+      "same update trace and full maintenance if dynamic"
+    ],
+    "structural_gate": "query>=1.5x OR maintenance>=5x lower OR aux representation>=2x smaller OR joint E2E>=1.3x; not a kernel-only gain"
+  }
+}

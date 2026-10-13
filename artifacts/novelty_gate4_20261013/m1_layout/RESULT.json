@@ -1,0 +1,76 @@
+{
+  "complete": true,
+  "experiment": "M1_SECTOR_MODEL",
+  "GPU_starts": 0,
+  "evidence_state": "theoretical",
+  "queries": 32,
+  "rows": [
+    {
+      "stage": 1,
+      "start": 0,
+      "end": 128,
+      "input_pairs": 32000000,
+      "row_alignment_period": 1,
+      "sectors_per_warp_instruction": [
+        4
+      ],
+      "useful_bytes_per_row": 512,
+      "sector_bytes_per_row": 512,
+      "modeled_sector_bytes": 16384000000
+    },
+    {
+      "stage": 2,
+      "start": 128,
+      "end": 256,
+      "input_pairs": 20932102,
+      "row_alignment_period": 1,
+      "sectors_per_warp_instruction": [
+        4
+      ],
+      "useful_bytes_per_row": 512,
+      "sector_bytes_per_row": 512,
+      "modeled_sector_bytes": 10717236224
+    },
+    {
+      "stage": 3,
+      "start": 256,
+      "end": 512,
+      "input_pairs": 4795038,
+      "row_alignment_period": 1,
+      "sectors_per_warp_instruction": [
+        4
+      ],
+      "useful_bytes_per_row": 1024,
+      "sector_bytes_per_row": 1024,
+      "modeled_sector_bytes": 4910118912
+    },
+    {
+      "stage": 4,
+      "start": 512,
+      "end": 960,
+      "input_pairs": 258463,
+      "row_alignment_period": 1,
+      "sectors_per_warp_instruction": [
+        4
+      ],
+      "useful_bytes_per_row": 1792,
+      "sector_bytes_per_row": 1792,
+      "modeled_sector_bytes": 463165696
+    }
+  ],
+  "useful_coordinate_bytes_per_query": 1014828776.0,
+  "modeled_coordinate_sector_bytes_per_query": 1014828776.0,
+  "coordinate_sector_headroom_fraction": 0.0,
+  "generous_all_noncoordinate_payload_removal_fraction": 0.08020072834676595,
+  "modeled_total_with_refinement_bytes_per_query": 1103315481.1875,
+  "historical_NCU_total_bytes_per_query": 1119337016.0,
+  "historical_difference_fraction": 0.0933661966915601,
+  "historical_difference_is_universal_DRAM_floor": false,
+  "numeric_pass": false,
+  "decision": "KILL_M1",
+  "reason": "Aligned full-warp128B loads consume every requested32B sector; gaps between rows do not overfetch within a warp",
+  "source_hashes": {
+    "artifacts/novelty_gate4_20261013/CONTRACT.json": "bd8b83c5227590ec222038c0f250da6209671096af476066022e6a9a4048b01f",
+    "artifacts/novelty_gate4_20261013/model.py": "ad96108ada98ff8771884ce6d7bab189f1c743f8a29c1474e30fb4b6a60cb49a"
+  }
+}
