@@ -1,0 +1,29 @@
+{
+  "status": "NOT_ADMITTED_NOVELTY_STOP",
+  "dataset": "CIFAR-100",
+  "backbone": "ResNet-18",
+  "embedding_D": 512,
+  "full_embedding_L2_normalized": true,
+  "minimum_requested_seeds": 3,
+  "training_processes": 0,
+  "checkpoint": null,
+  "operational_protocol_frozen": false,
+  "optimizer": null,
+  "epochs": null,
+  "batch_size": null,
+  "augmentation": null,
+  "seed_values": null,
+  "reason": "Core-thesis admission stopped before resolving or launching an operational training protocol; requested scope retained, not executed at a smaller scale",
+  "model": "B1_MRL",
+  "stages": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "loss": "Weighted same task loss at nested prefixes",
+  "official_code_commit": "7ccb42df6be05f3d21d0648aa03099bba46386bf",
+  "prefix_quality_normalization": "Would renormalize each prefix for retrieval, never the exact-distance certificate prefix",
+  "weights": null,
+  "baseline_qualification": "NOT_EXECUTED"
+}

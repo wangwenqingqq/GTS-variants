@@ -1,0 +1,128 @@
+{
+  "experiment": "certificate_cost_20261013_novelty_stop_gate0",
+  "parent_commit": "cc1c0df5ac6d212161c7a3deb63a31b08ec5e303",
+  "plan_sha256": "e2ae68c7a5071da7ef29fa128652e7ef54e171bf6879489cb0a90fc114a9b84c",
+  "scope": "Research admission before paid training; a primary-source overlap audit and exact rational certificate-identity fixture only",
+  "requested_design": {
+    "dataset": "CIFAR-100",
+    "backbone": "ResNet-18",
+    "embedding_D": 512,
+    "metric": "squared L2 of full-L2-normalized embedding",
+    "stages": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "models": [
+      "B0_VANILLA",
+      "B1_MRL",
+      "P1_CERTIFICATE_COST"
+    ],
+    "minimum_training_seeds_per_variant": 3,
+    "P1_lambdas": [
+      0.1,
+      0.3,
+      1.0
+    ],
+    "P1_alpha_weights": [
+      4,
+      2,
+      1
+    ],
+    "validation_lambda_rule": "Only candidates within0.5pp full-D quality drop; minimize mean required_dims; never select on test",
+    "calibration_target_mean_hits": 20,
+    "calibration_queries_disjoint_from_measured_queries": true,
+    "full_quality_primary": "Recall@1",
+    "full_quality_secondary": [
+      "Recall@10",
+      "mAP"
+    ],
+    "certificate_primary": "mean stage-rounded required_dims",
+    "quality_target_vs_MRL_pp": 0.5,
+    "cost_GO_max_ratio": 0.6,
+    "query_mean_p90_GO_max_ratio": 0.7,
+    "CONDITIONAL_cost_ratio_interval": "(0.60,0.80] with retained full quality",
+    "cost_NO_GO_min_exclusive_ratio": 0.8,
+    "quality_NO_GO_drop_pp_exclusive": 1.0,
+    "false_rejection_target": 0,
+    "seed_estimator": "median across at least3 seeds; one successful seed is not GO"
+  },
+  "novelty_gate": {
+    "allowed": [
+      "DISTINCT_ENOUGH_TO_TEST",
+      "SUBSUMED"
+    ],
+    "priority": "Primary-source core-mechanism overlap before training; no rescue by a changed loss label or an unmeasured advantage",
+    "same_setting": "Learned image descriptors, compact-prefix proof, exact full-vector retrieval",
+    "candidate_specific": "The proposed loss v0 is not claimed mathematically identical to the inspected loss; the broad thesis lacks a demonstrated non-incremental distinction from HN",
+    "planned_stop": "If core admission fails, preserve requested design and null performance metrics; no training or CUDA implementation"
+  },
+  "cheap_test": {
+    "id": "certificate_cost_20261013_real_arithmetic_prefix_identity",
+    "type": "Exact Fraction arithmetic fixtures, not trained embeddings or performance",
+    "seed": 2026101305,
+    "D_K_pairs": [
+      [
+        128,
+        8
+      ],
+      [
+        128,
+        16
+      ],
+      [
+        512,
+        64
+      ],
+      [
+        512,
+        128
+      ],
+      [
+        512,
+        256
+      ]
+    ],
+    "suffix_energy_fractions": [
+      "0",
+      "1/32",
+      "1/16",
+      "1/8",
+      "1/4"
+    ],
+    "pairs_per_shape_energy": 64,
+    "thresholds": [
+      "zero",
+      "prefix distance",
+      "midpoint prefix/full",
+      "full distance"
+    ],
+    "invariant": "For HN unit norms with suffix squared norm alpha,2-2*(dot_prefix+alpha) equals prefix squared L2; strict rejection equivalence at inclusive range cutoff; equality retained",
+    "GPU_starts": 0,
+    "training_processes": 0,
+    "CIFAR_queries": 0,
+    "arithmetic": "stdlib Fraction; no approximate rounding or numerical implementation qualification"
+  },
+  "protocol_open_items_not_silently_chosen": [
+    "squared-distance cutoff t vs radius tau notation; loss uses t+m, evaluation uses t=tau^2",
+    "negative label pairs vs full-metric non-hit pairs and training threshold schedule",
+    "optimizer/epochs/batch/augmentation/seed values and CIFAR split/gallery counts",
+    "exact20-hit calibration with tied distances and calibration/gallery protocol",
+    "MRL base task loss/weights and prefix renormalization for quality only; do not renormalize certificate prefixes",
+    "B0 no-obvious-regression bound;0.5-1pp quality gap and unclassified robustness combinations",
+    "later-dimension collapse diagnostic versus rejection criterion"
+  ],
+  "parent_files": {
+    "artifacts/novelty_gate4_20261013/evidence/EXECUTION_CLOSURE.json": "92b08e47808b58c0bc449f88c3301824cd1f063a471d7e080ac9f6f13198c5e6"
+  },
+  "execution_boundary": {
+    "GPU_starts": 0,
+    "new_NCU_processes": 0,
+    "training_processes": 0,
+    "raw_dataset_downloads": 0,
+    "no_dependency_or_hook_installation": true,
+    "old_runs_sources_manuscript_foreign_processes_GPU_settings": "untouched"
+  },
+  "publication": "Only task-owned source review, rational fixtures, null-state receipts and documentation; full upstream sources/private placement stay outside Git; no manuscript"
+}

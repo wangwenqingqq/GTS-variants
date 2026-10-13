@@ -1,0 +1,19 @@
+{
+  "status": "NOT_ADMITTED_NOVELTY_STOP",
+  "dataset": "CIFAR-100",
+  "backbone": "ResNet-18",
+  "embedding_D": 512,
+  "full_embedding_L2_normalized": true,
+  "minimum_requested_seeds": 3,
+  "training_processes": 0,
+  "checkpoint": null,
+  "operational_protocol_frozen": false,
+  "optimizer": null,
+  "epochs": null,
+  "batch_size": null,
+  "augmentation": null,
+  "seed_values": null,
+  "reason": "Core-thesis admission stopped before resolving or launching an operational training protocol; requested scope retained, not executed at a smaller scale",
+  "model": "B0_VANILLA",
+  "loss": "Same full-D task loss across all requested models; concrete metric/contrastive choice not operationally frozen"
+}
