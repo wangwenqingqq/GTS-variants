@@ -1,0 +1,34 @@
+{
+  "analyzer_sha256": "27ffd04b027ef01209c51f0fcb924505875ac8dec65ce0941b25d4b38d5ebbf1",
+  "binary_bytes": 16464,
+  "binary_sha256": "bdcf0b33a5d12f6814724bd1c6d3de18cbee35c098ef140bba27bef959a4d98d",
+  "build_returncode": 0,
+  "checker_sha256": "16fd04977cd66c026e23fc9b671078f3b8671d8f83c1271f6c1e32d2fb7f5e93",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "fixtures_returncode": 0,
+  "fixtures_stdout": "PASS: 272 rows; independent stable-top-k/ordered bits, subset safety, ties, duplicates, equality, signed zero, subnormal, extreme finite, nonfinite and index guards",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-shared",
+    "-fPIC",
+    "-fopenmp",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-frounding-math",
+    "-fno-associative-math"
+  ],
+  "measurement_sources": {
+    "CONTRACT.json": "67edad0fdd72a5da25db87195ce8e06cea1a6a62988f71b4ef081ab90c2f4151",
+    "probe.cpp": "bd3df55b533fe9df5c37c99527a3268ce4369f124848b09720c59fc8d2719697",
+    "run.py": "868e362164c77104ed1905facbfbfa36f539308f00116aa8f0e9831136f421c7",
+    "test_probe.py": "5d8a0f35edfcf4462948415132c9a604120c566aae09a034918416768f906c76"
+  },
+  "new_GPU_starts": 0,
+  "new_NCU_starts": 0,
+  "new_population_starts": 0,
+  "scalar_checker_returncode": 0,
+  "scalar_checker_stdout": "PASS: exact parents/sources, B0 parity, gated populations, 96000000 saved partial checks, counts/ratios/budget/metadata, GO_PROOF_PER_BYTE_ROUTING, no GPU admission",
+  "status": "PASS",
+  "test_source": "fresh whitelist copy on the intended CPU, no installed source fallback"
+}

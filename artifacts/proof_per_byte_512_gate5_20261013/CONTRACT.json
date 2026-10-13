@@ -1,0 +1,465 @@
+{
+  "analysis": {
+    "contribution_concentration": "B0 and C1 partial/full over full>0; exact pooled and per-query median/p90, zero denominators explicitly excluded",
+    "margin": "partial/cutoff for all non-hit rejected and non-hit survivor pairs; exact pooled/per-query quantiles",
+    "overlap": "all 496 query pairs, intersection/128 and Jaccard; unique dimension sets and overlap with B0",
+    "proof_yield": "rejected pairs divided by nominal selected source payload decimal MB; O1 ideal/unpriced, B1 historical480B",
+    "query_quantiles": "linear interpolation, min/p10/median/p90/max; equal query weight"
+  },
+  "base_commit": "ef9df8ecbcba58079117b2c70d6fd178b5aef9fe",
+  "baseline": {
+    "coordinates": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127
+    ],
+    "expected_mean_survivors": 654128.1875,
+    "expected_queries": [
+      {
+        "hits": 1,
+        "query_id": 88406,
+        "survivors": 657953
+      },
+      {
+        "hits": 1,
+        "query_id": 865632,
+        "survivors": 607025
+      },
+      {
+        "hits": 1,
+        "query_id": 881748,
+        "survivors": 775766
+      },
+      {
+        "hits": 1,
+        "query_id": 916533,
+        "survivors": 834986
+      },
+      {
+        "hits": 1,
+        "query_id": 40158,
+        "survivors": 291773
+      },
+      {
+        "hits": 1,
+        "query_id": 242468,
+        "survivors": 711469
+      },
+      {
+        "hits": 1,
+        "query_id": 40486,
+        "survivors": 686540
+      },
+      {
+        "hits": 1114,
+        "query_id": 900387,
+        "survivors": 836465
+      },
+      {
+        "hits": 1,
+        "query_id": 703226,
+        "survivors": 706153
+      },
+      {
+        "hits": 1,
+        "query_id": 791039,
+        "survivors": 884327
+      },
+      {
+        "hits": 2,
+        "query_id": 724874,
+        "survivors": 820952
+      },
+      {
+        "hits": 1,
+        "query_id": 671829,
+        "survivors": 805388
+      },
+      {
+        "hits": 1,
+        "query_id": 722418,
+        "survivors": 265280
+      },
+      {
+        "hits": 1,
+        "query_id": 152899,
+        "survivors": 815818
+      },
+      {
+        "hits": 2,
+        "query_id": 737995,
+        "survivors": 880627
+      },
+      {
+        "hits": 1,
+        "query_id": 144573,
+        "survivors": 811483
+      },
+      {
+        "hits": 1,
+        "query_id": 570909,
+        "survivors": 824374
+      },
+      {
+        "hits": 1,
+        "query_id": 347206,
+        "survivors": 835026
+      },
+      {
+        "hits": 1,
+        "query_id": 63744,
+        "survivors": 835819
+      },
+      {
+        "hits": 1,
+        "query_id": 625378,
+        "survivors": 1
+      },
+      {
+        "hits": 1,
+        "query_id": 136857,
+        "survivors": 324212
+      },
+      {
+        "hits": 1,
+        "query_id": 201233,
+        "survivors": 853244
+      },
+      {
+        "hits": 1,
+        "query_id": 72436,
+        "survivors": 1
+      },
+      {
+        "hits": 1,
+        "query_id": 617423,
+        "survivors": 780796
+      },
+      {
+        "hits": 5443,
+        "query_id": 810945,
+        "survivors": 663091
+      },
+      {
+        "hits": 1,
+        "query_id": 789615,
+        "survivors": 699351
+      },
+      {
+        "hits": 2,
+        "query_id": 601856,
+        "survivors": 650
+      },
+      {
+        "hits": 1,
+        "query_id": 433080,
+        "survivors": 651193
+      },
+      {
+        "hits": 1,
+        "query_id": 415755,
+        "survivors": 754238
+      },
+      {
+        "hits": 1,
+        "query_id": 282095,
+        "survivors": 725584
+      },
+      {
+        "hits": 1,
+        "query_id": 66651,
+        "survivors": 741098
+      },
+      {
+        "hits": 1,
+        "query_id": 326654,
+        "survivors": 851419
+      }
+    ],
+    "expected_total_survivors": 20932102,
+    "name": "B0_FIRST128",
+    "source_bytes_per_object": 512
+  },
+  "execution": {
+    "CPU_workers": 4,
+    "CUDA_VISIBLE_DEVICES": "",
+    "GPU_starts": 0,
+    "Gate5A_timeout_seconds": 3600,
+    "Gate5B_timeout_seconds": 1800,
+    "NCU_starts": 0,
+    "compiler_flags": [
+      "-std=c++17",
+      "-O3",
+      "-shared",
+      "-fPIC",
+      "-fopenmp",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-frounding-math",
+      "-fno-associative-math"
+    ],
+    "failure": "retain evidence and stop; no automatic retry",
+    "nice": 10,
+    "population_processes_max": 2,
+    "qualification": "native corner/random fixtures plus all32 first4096 rows; independent NumPy stable-top128 subset oracle before the full O1 pool"
+  },
+  "experiment": "GTSPP_20261013_PROOF_PER_BYTE_512_GATE5",
+  "forbidden": [
+    "GPU",
+    "PDX layout",
+    "transpose",
+    "kNN",
+    "updates",
+    "learned ordering",
+    "additional dimension subset or budget sweep",
+    "bit/dimension hybrid",
+    "codec",
+    "query/radius changes",
+    "manuscript claims",
+    "foreign process signals",
+    "GPU settings changes"
+  ],
+  "gates": {
+    "GPU": "NOT_RUN for this entire task even if C1 GO. Only GO triggers a separate prior-art routing audit, not CUDA.",
+    "Gate5A": {
+      "NO_COORDINATE_HEADROOM": "O1/B0 >0.80; stop",
+      "STRONG_HEADROOM": "O1_total*2 <= B0_total",
+      "WEAK_HEADROOM": "0.50 < O1/B0 <=0.80; stop"
+    },
+    "Gate5B": {
+      "CONDITIONAL": "0.70 < mean ratio <=0.85; stop",
+      "GO_PROOF_PER_BYTE_ROUTING": "C1_total*10 <= B0_total*7 and p90(per-query C1/B0)<=0.80",
+      "NO_GO_PROOF_PER_BYTE_ROUTING": "mean ratio >0.85; stop",
+      "UNCLASSIFIED": "mean ratio<=0.70 but p90>0.80; stop"
+    },
+    "human_clarification": "2026-10-13: retain WEAK_HEADROOM; mean <=0.70 with p90>0.80 -> UNCLASSIFIED; both stop; exact baseline counts, not rounded integers",
+    "priority": [
+      "quality_or_identity_failure_NO_GO",
+      "Gate5A",
+      "C1_mean_and_p90_GO",
+      "C1_mean_CONDITIONAL",
+      "C1_mean_NO_GO",
+      "uncovered_UNCLASSIFIED_STOP"
+    ]
+  },
+  "known_control": {
+    "name": "B1_BIT4",
+    "prior_mean_survivors": 999909.34375,
+    "prior_total_survivors": 31997099,
+    "remeasured": false,
+    "source_bytes_per_object": 480
+  },
+  "numerics": {
+    "certificate": "ordered FP64 subset sum of the same rounded terms as full original-order oracle; subset order unchanged, nonnegative terms, strict > cutoff",
+    "equality": "inclusive hit at full <= cutoff; partial equality survives",
+    "input": "finite IEEE FP32; nonfinite rejected; signed zero/subnormal preserved",
+    "no_FMA_or_fast_math": true,
+    "oracle_rounding_boundary": "report pairs with |O1 partial-cutoff| <= gamma_960*max(partial,cutoff); if nonzero, stop UNCLASSIFIED instead of asserting ideal top128 optimality",
+    "quality": "zero false rejection; all partials <= frozen full score; new full score bit-equal on all O1 pairs; B0 per-query counts exactly match parents",
+    "safety_proof": "monotonic RN addition and deletion of nonnegative terms imply subset <= frozen ordered full score; verified over every measured pair"
+  },
+  "oracle": {
+    "coordinates": 128,
+    "name": "O1_PAIR_TOP128",
+    "nominal_selected_payload_bytes_per_object": 512,
+    "rank": "descending original FP32-coordinate squared differences in FP64, ties by original dimension index",
+    "sum": "selected terms added in increasing original dimension index",
+    "unpriced": "reads all 960 coordinates and selects separately for each pair; cannot be deployed as a 512-byte algorithm"
+  },
+  "parent_files": {
+    "artifacts/exact_representation_gate1_20261012/bytes/STAGE_ACCOUNTING.json": "fdbc08ad0ab03f7a734ebd618fc82b0dee0544f92184d0011be17a9625f84de3",
+    "artifacts/exact_representation_gate1_20261012/evidence/QUERY_RECORDS.json": "8ee4f9da54e0e55fbb02ff85c56f70f7d5f07d702efcccc9ee698af25c57d5b5",
+    "artifacts/progressive_gpu_gate2_20261013/evidence/INPUT_IDENTITY.json": "a5220dd0480608ae33c06b358b904d860988903c752d1a9c108a6d35e8b9843c",
+    "artifacts/progressive_lossless_gate0_20261013/CONTRACT.json": "e25b27831675428744dfb0bdf42fe8461cb0f1326e65d54de9b0b528dee8e453",
+    "artifacts/progressive_lossless_gate0_20261013/evidence/QUERY_RESULTS.json": "95b6616e1eb48fdafd90290f3a03547cc817b3ae1699d04c74693b1a2c9f8d1a",
+    "artifacts/progressive_lossless_gate0_20261013/model/STAGE_COUNTS.json": "aef90dac6c997a812f59c0e85df1227e1b98688f89a65a6f52503f0119685a74"
+  },
+  "plan_sha256": "26dd24e16cd5e4cfb81f254bb477d8dbe56111fa4d1c699efdcd525a90e8cd8a",
+  "prior_art_admission": "DIAGNOSTIC_ONLY_NOT_A_NEW_ROUTING_MECHANISM",
+  "publication": "code, dataset aggregates, scalar results, manifests and figures only; raw vectors/query coordinates/full proof arrays/placement/source PDFs/plan stay private",
+  "routing": {
+    "additional_ordering_heuristics": 0,
+    "dimension_ID_bytes_per_query": 256,
+    "metadata_bytes": 7680,
+    "moments": "all N rows, deterministic 8192-row FP64 chunk sums; population variance ddof=0 with second pass; persist FP32 mean and variance only",
+    "name": "C1_MOMENT_SCORE",
+    "only_if": "STRONG_HEADROOM",
+    "score": "(FP64(q_j)-FP64(mu_j_FP32))^2+FP64(population_variance_j_FP32)",
+    "selection": "highest 128 scores, ties by increasing dimension index; accumulation in increasing original dimension index",
+    "source_bytes_per_object": 512
+  },
+  "scope": "One CPU-only fixed-source-payload certificate diagnostic. Not GPU physical traffic, latency, a search pipeline, or a novelty claim.",
+  "workload": {
+    "D": 960,
+    "N": 1000000,
+    "coordinate_order": "0..959 unchanged",
+    "cutoff_hex": "0x1.fddb427319000p-2",
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "dataset": "GIST1M",
+    "dtype": "original little-endian FP32",
+    "duplicates": "row occurrence identity; no deduplication; self matches retained",
+    "inclusive_membership": "ordered FP64 sum of squared FP32 differences <= cutoff",
+    "query_count": 32,
+    "query_ids": [
+      88406,
+      865632,
+      881748,
+      916533,
+      40158,
+      242468,
+      40486,
+      900387,
+      703226,
+      791039,
+      724874,
+      671829,
+      722418,
+      152899,
+      737995,
+      144573,
+      570909,
+      347206,
+      63744,
+      625378,
+      136857,
+      201233,
+      72436,
+      617423,
+      810945,
+      789615,
+      601856,
+      433080,
+      415755,
+      282095,
+      66651,
+      326654
+    ],
+    "radius_bits": "0x3f34a3d8",
+    "snapshot": "initial"
+  }
+}

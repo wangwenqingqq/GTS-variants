@@ -1,0 +1,23 @@
+{
+  "candidate_population_rerun": false,
+  "checks": [
+    "all frozen full-score file hashes",
+    "all saved B0/O1/C1 array hashes and sizes",
+    "finite/nonnegative partials",
+    "partial <= full on all pairs",
+    "zero false rejection",
+    "exact survivor counts"
+  ],
+  "distinct_query_object_pairs": 32000000,
+  "earlier_checker_sha256": "1c715838d0f3f36d5aea2e53513e058a182a46983e60049042642ad1c52e30de",
+  "independent_checker_sha256": "16fd04977cd66c026e23fc9b671078f3b8671d8f83c1271f6c1e32d2fb7f5e93",
+  "independent_implementation": "check_artifact.py, distinct from the population and observer code",
+  "new_GPU_starts": 0,
+  "new_NCU_starts": 0,
+  "reanalysis_public_file_hash_matches": 43,
+  "reanalysis_saved_arrays_only": true,
+  "returncode": 0,
+  "saved_partial_checks": 96000000,
+  "status": "PASS",
+  "stdout": "PASS: exact parents/sources, B0 parity, gated populations, 96000000 saved partial checks, counts/ratios/budget/metadata, GO_PROOF_PER_BYTE_ROUTING, no GPU admission\nPASS: independent read-only raw audit, 96000000 partials, no candidate rerun"
+}

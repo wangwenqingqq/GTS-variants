@@ -1,0 +1,22 @@
+{
+  "added_costs": "statistics preprocessing, query scores/top128, indices, scattered coordinate accesses, unknown physical read amplification; O1 selector fully unpriced",
+  "baseline": "remeasured B0, exact per-query parent parity",
+  "candidate": "one query+moment-score selected subset, no per-object metadata",
+  "denominator": "All 32 fixed queries, 1M original rows each; equal query weight. Counts, not timing.",
+  "hypothesis": "At one 512B nominal exact-coordinate payload, selection can provide substantially more safe non-hit certificates than first128.",
+  "implementation_status": "CPU certificate reference correctness-qualified",
+  "mechanism_status": "GO_PROOF_PER_BYTE_ROUTING as fixed-pool nominal-byte diagnostic",
+  "native_geometry": "CPU scalar original-order FP64 with four OpenMP workers; GPU geometry not applicable",
+  "negative_hypothesis": "Oracle lacks headroom or C1 cannot realize enough of it; stop without alternate heuristic.",
+  "new_GPU_starts": 0,
+  "new_NCU_starts": 0,
+  "oracle": "pair-specific top128; unpriced all 960 reads, not an algorithm",
+  "phase_live_set": "CPU O1 two960 FP64 local arrays/worker; raw reference only at validation; C1 stats7680B and selected indices256B/query",
+  "positive_hypothesis": "O1 strong headroom; one moment-score C1 reaches mean and p90 thresholds.",
+  "predicted_effect": "same 128 selected FP32 coordinates but higher exact non-hit certificate yield; physical traffic unresolved",
+  "quality": "zero false rejection and partial<=unchanged ordered full score; O1 complete full-score bit parity",
+  "raw_evidence": "evidence/A and evidence/B registrations, query counts, raw manifests and private saved arrays",
+  "ready_graph": "freeze/novelty triage -> fixtures/first4096 -> A -> STRONG_HEADROOM -> moments/qualification -> B -> GO -> dedicated novelty stop",
+  "reopen_condition": "explicit new distinct mechanism/contract with relevant query-adaptive comparator; no automatic CUDA, heuristic or budget sweep",
+  "thesis_impact": "not distinct enough to implement; no novelty/paper promotion"
+}

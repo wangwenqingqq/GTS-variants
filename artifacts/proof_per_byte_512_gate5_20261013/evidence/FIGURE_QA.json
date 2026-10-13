@@ -1,0 +1,70 @@
+{
+  "plots": [
+    {
+      "name": "survivors_512B",
+      "scope": "B0/C1 selected128 FP32 values; O1 unpriced; B1 historical480B",
+      "canvas_inches": [
+        3.4,
+        2.45
+      ],
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "text_clipping_check": "PASS",
+      "smallest_visible_font_pt": 7.0,
+      "uncertainty": "none: complete fixed pool, not repeated timing"
+    },
+    {
+      "name": "per_query_ratio",
+      "scope": "all32 matched ratios; horizontal line is the0.80 p90 gate, not a per-query requirement",
+      "canvas_inches": [
+        3.4,
+        2.45
+      ],
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "text_clipping_check": "PASS",
+      "smallest_visible_font_pt": 7.0,
+      "uncertainty": "none: complete fixed pool, not repeated timing"
+    },
+    {
+      "name": "proof_yield",
+      "scope": "strict rejections per decimal nominal selected payload MB; no physical traffic claim",
+      "canvas_inches": [
+        3.4,
+        2.45
+      ],
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "text_clipping_check": "PASS",
+      "smallest_visible_font_pt": 7.0,
+      "uncertainty": "none: complete fixed pool, not repeated timing"
+    }
+  ],
+  "visual_inspection": "PASS: all3 full300-DPI renders inspected; annotations/legend outside data borders, readable typesetting, explicit units and scope, no clipped text. Coincident data points intentionally share coordinates; all32 values retained in source/JSON.",
+  "grayscale_safe": "redundant hatch or marker encodings",
+  "data_source": "frozen scalar files",
+  "style_audit": [
+    {
+      "font_and_size_gate": "PASS",
+      "horizontal_zero_origin_gate": "PASS",
+      "helper_findings": [
+        "axis 0 contains positive bars but starts at y=3.59"
+      ],
+      "finding_resolution": "inverted category y-axis is not the horizontal magnitude axis; independent x-origin check passes"
+    },
+    {
+      "font_and_size_gate": "PASS",
+      "horizontal_zero_origin_gate": "not a bar chart",
+      "helper_findings": [],
+      "finding_resolution": "none"
+    },
+    {
+      "font_and_size_gate": "PASS",
+      "horizontal_zero_origin_gate": "PASS",
+      "helper_findings": [
+        "axis 0 contains positive bars but starts at y=3.59"
+      ],
+      "finding_resolution": "inverted category y-axis is not the horizontal magnitude axis; independent x-origin check passes"
+    }
+  ]
+}
