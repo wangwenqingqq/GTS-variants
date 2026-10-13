@@ -1,0 +1,54 @@
+{
+  "denominator": "32 x 1M query-object pairs; equal query weight",
+  "final_survivors": "exact range results; prior survivors require next layer",
+  "rows": [
+    {
+      "cumulative_bits": 4,
+      "incremental_bits": 4,
+      "incremental_bytes_per_object": 480,
+      "input_objects": 32000000,
+      "mean_input_objects_per_query": 1000000.0,
+      "mean_payload_bytes_per_query": 480000000.0,
+      "mean_survivors_per_query": 999909.34375,
+      "payload_bytes": 15360000000,
+      "rejected_objects": 2901,
+      "survivors": 31997099
+    },
+    {
+      "cumulative_bits": 8,
+      "incremental_bits": 4,
+      "incremental_bytes_per_object": 480,
+      "input_objects": 31997099,
+      "mean_input_objects_per_query": 999909.34375,
+      "mean_payload_bytes_per_query": 479956485.0,
+      "mean_survivors_per_query": 67817.0,
+      "payload_bytes": 15358607520,
+      "rejected_objects": 29826955,
+      "survivors": 2170144
+    },
+    {
+      "cumulative_bits": 16,
+      "incremental_bits": 8,
+      "incremental_bytes_per_object": 960,
+      "input_objects": 2170144,
+      "mean_input_objects_per_query": 67817.0,
+      "mean_payload_bytes_per_query": 65104320.0,
+      "mean_survivors_per_query": 216.15625,
+      "payload_bytes": 2083338240,
+      "rejected_objects": 2163227,
+      "survivors": 6917
+    },
+    {
+      "cumulative_bits": 32,
+      "incremental_bits": 16,
+      "incremental_bytes_per_object": 1920,
+      "input_objects": 6917,
+      "mean_input_objects_per_query": 216.15625,
+      "mean_payload_bytes_per_query": 415020.0,
+      "mean_survivors_per_query": 205.9375,
+      "payload_bytes": 13280640,
+      "rejected_objects": 327,
+      "survivors": 6590
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "GPU_profiled_or_paired": false,
+  "candidate": "lossless.cpp plus packed layer source",
+  "contract": "CONTRACT.json",
+  "decision": "NO_GO_LOSSLESS_PROGRESSIVE",
+  "experiment": "GTSPP_20261013_PROGRESSIVE_LOSSLESS_GATE0",
+  "hypothesis": "one query-independent ordered-FP32 source with 4/8/16/32 safe intervals can reduce source payload >=30% versus dimension-progressive",
+  "implementation_status": "CPU reference correctness-qualified only",
+  "invariants": [
+    "same data/query/radius/coordinate order",
+    "zero FN/FP",
+    "full bit recovery",
+    "one candidate source",
+    "size <=1.05x raw"
+  ],
+  "keeper": "frozen dimension-progressive CPU logical checkpoint model",
+  "lifecycle": [
+    "designed",
+    "resource-admissible",
+    "built",
+    "CPU-correct",
+    "full-population-counted",
+    "byte-gate-rejected"
+  ],
+  "mechanism_status": "rejected for fixed format/schedule/workload",
+  "predicted_direction": "fewer distinct source bytes; added bit decode, interval-bound arithmetic, prefix state, flags and possible compaction",
+  "raw_evidence": "evidence/RAW_MANIFEST.json",
+  "reopen": "only an explicitly authorized new distinct-mechanism contract; no automatic tuning",
+  "thesis_impact": "no new abstraction/novelty/performance promotion"
+}

@@ -1,0 +1,39 @@
+{
+  "bridges": {
+    "ENVIRONMENT.json": {
+      "public_bytes": 561,
+      "public_sha256": "cef9c6fb22c79925aa4ebedb946851c7700e3a21ed0312a9e2e9d281dc9d9b2b",
+      "raw_bytes": 1291,
+      "raw_file": "ENVIRONMENT_PRIVATE.json",
+      "raw_sha256": "4d33966680b1ea46650ffa98148a10740bb7103ff31c14241b09c4597a6a47ac",
+      "removed_fields": [
+        "CPU",
+        "CPU_clock_policy",
+        "GPU_clock_or_power_changes",
+        "GPU_power_limit_W",
+        "GPU_selection",
+        "available_RAM_GiB_at_preflight",
+        "available_task_volume_GiB_at_preflight",
+        "driver",
+        "foreign_compute_process",
+        "host_role",
+        "inventoried_GPU_model",
+        "logical_CPU_count",
+        "placement",
+        "population_PID_at_run",
+        "population_exited_before_delivery",
+        "preflight_utc"
+      ]
+    },
+    "REGISTRATION.json": {
+      "public_bytes": 4102,
+      "public_sha256": "9ce2fdb405233311963cbbb72618dee281fbc55dcaba5d34d9294b9149f42da8",
+      "raw_bytes": 4120,
+      "raw_sha256": "81215e8771ff15a875cafffc3059dcafb8cb073b282e6bdb86089b5f32101d4b",
+      "removed_fields": [
+        "pid"
+      ]
+    }
+  },
+  "policy": "curation only; original receipts and measurement sources unchanged"
+}
