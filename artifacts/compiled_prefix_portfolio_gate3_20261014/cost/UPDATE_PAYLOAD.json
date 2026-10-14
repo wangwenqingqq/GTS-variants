@@ -1,0 +1,13 @@
+{
+  "status": "DESIGN_ARITHMETIC_ONLY",
+  "raw_insert_vector_write_bytes": 3840,
+  "four_sidecars_insert_vector_write_bytes": 2048,
+  "total_insert_vector_write_bytes": 5888,
+  "payload_write_overhead_fraction": "8/15",
+  "conditional_dense_swap_moved_row_read_bytes": 5888,
+  "conditional_dense_swap_moved_row_write_bytes": 5888,
+  "delete_swap_scope": "only when a complete live row is moved;metadata/statistics and deleted-vector reads are additional,not quantified here",
+  "synchronization": "raw plus4 sidecars must share identity/mutation visibility;not implemented",
+  "actual_operation_latency": null,
+  "statistics_metadata_IO": null
+}

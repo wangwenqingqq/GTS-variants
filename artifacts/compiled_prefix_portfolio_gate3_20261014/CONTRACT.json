@@ -1,0 +1,87 @@
+{
+  "experiment": "GTSPP_20261014_COMPILED_PREFIX_PORTFOLIO_GATE3",
+  "parent_commit": "de90dcf62ea7d1c536dd4d2c7b7a5a15b5889102",
+  "plan_sha256": "f1842b3d459553ccfaac1f214f56244cb795ae06f2b2dca703f51ad961860767",
+  "scope": "Phase A core-family admission plus stdlib rational cost checks;not a capacity/router/GPU run",
+  "frozen_before_cost_check": true,
+  "candidate_as_proposed": {
+    "name": "CPV4",
+    "K": 4,
+    "prefix_dims": 128,
+    "blocks_per_view": 4,
+    "block_dims": 32,
+    "vector_dtype": "FP32",
+    "N": 1000000,
+    "D": 960,
+    "raw_bytes_per_row": 3840,
+    "sidecar_bytes_per_row_per_view": 512,
+    "four_sidecars_bytes_per_row": 2048,
+    "raw_plus_sidecars_bytes_per_row": 5888,
+    "four_fold_split": "held-out query-list positions index%4;24 train/8 test per fold",
+    "compiler": "greedy training-query sum of best-view survivor@128;source-qid tie;not executed",
+    "router": "moment priority;not executed",
+    "query_reads": "one 128-D sidecar plus complete original960-D row for each survivor;no free reuse of the128-D prefix",
+    "storage_gate": "vector payload total/raw<=1.60;not a complete resident-memory inventory"
+  },
+  "workload_reference": {
+    "dataset": "GIST1M",
+    "N": 1000000,
+    "D": 960,
+    "query_count": 32,
+    "planned_pairs": 32000000,
+    "radius_bits": "0x3f34a3d8",
+    "ordered_full_score_authority": "original-coordinate ordered FP64 from preserved parent;no new candidate score result"
+  },
+  "admission": {
+    "labels": [
+      "DISTINCT_ENOUGH_TO_TEST",
+      "SUBSUMED_PORTFOLIO"
+    ],
+    "family": "fixed materialized coordinate subspaces/access paths -> query-dependent selection or scheduling -> lower-bound candidate filtering -> original full-object exact refinement",
+    "final_scope": "family-level non-incremental admission inference;not literal CPV4 identity or uselessness",
+    "literal_K4_compiler_single_view_moment_router_GPU_identity": "NOT_ESTABLISHED",
+    "stop": "No GIST population,candidate pool,greedy compile,oracle/moment routing,sidecar materialization or GPU candidate"
+  },
+  "prospective_unexecuted_gates": {
+    "capacity_mean_bytes": 700000000,
+    "capacity_p90_bytes": 900000000,
+    "router_mean_bytes": 750000000,
+    "router_p90_bytes": 900000000,
+    "router_mean_bytes_regret": "1.15",
+    "source_strong_bytes": 650000000,
+    "NO_GO_p90_bytes": 1200000000,
+    "keeper_source_bytes_exact": 1014828776,
+    "plan_rounded_NO_GO_mean_bytes": 1014829000,
+    "future_GPU_DRAM_bytes": 850000000,
+    "future_GPU_Host_ready_ms": ".95"
+  },
+  "unresolved_before_any_future_population": [
+    "capacity gray interval and final precedence;asynchronously proposed clarification not used this phase",
+    "exact keeper vs rounded1.014829GB cutoff;neither applied to a candidate this phase",
+    "parent has dimension oracle only;Block32 candidate pool would require a newly registered training-only derivation",
+    "candidate identity/deduplication/ties and physical view coordinate order;proposed clarification not executed",
+    "FP64 rejection and complete original-order raw fallback must be qualified;exact-real lower bound alone is not a floating-point correctness result",
+    "scope of p90 NO_GO across executed routes and mean of per-query byte regrets must be frozen",
+    "actual metadata/moment/ownership/update visibility and resident allocations beyond the stated vector-payload model"
+  ],
+  "execution": {
+    "real_dataset_loaded": false,
+    "population_starts": 0,
+    "GPU_starts": 0,
+    "NCU_starts": 0,
+    "remote_resource_operations": 0,
+    "cost_check": "local Python standard-library Fraction;synthetic algebra only",
+    "compiler_router_views_quality_timing": "NOT_RUN"
+  },
+  "parents": {
+    "artifacts/query_block_order_gate2_20261014/CONTRACT.json": "56255ec1cb52df6bf2ced9ec3422e4352123e7a599dc5da8b6545f8f5ef49b97",
+    "artifacts/query_block_order_gate2_20261014/PUBLIC_MANIFEST.json": "9bb7380738c799b7f4a306aabbda93466206407ffdf72f4f99c88de94873a800",
+    "artifacts/query_block_order_gate2_20261014/DECISION.md": "f8948cfbb646a24e2919ecd43a9ef489ccf667000962f0c38b6229fb614b3c03",
+    "artifacts/exact_gpu_limits_gate1_20261014/CONTRACT.json": "e13939f4dfa9187dd6e1aec75575e0d21bd3ddf1441035cc60c72ec73f81e539",
+    "artifacts/exact_gpu_limits_gate1_20261014/b1_information_floor/QUERY_GLOBAL_ORACLE.json": "8ddf231d4dcf7dac63272c9528f9758756f0d25eea509b531b7aa408211a98d8",
+    "artifacts/exact_gpu_limits_gate1_20261014/b1_information_floor/ORIGINAL_ORDER.json": "2325895e2a564e47db62879d842e00129b574d492f8e17e69168611af5d13c36",
+    "artifacts/progressive_gpu_gate2_20261013/timing/PRIMARY_TIMING.json": "f3409ffa3347dcaf85513d4bb335cecf6e1a04c0c5f2b89d57177dcb3e372589",
+    "artifacts/progressive_gpu_gate2_20261013/traffic/DRAM_ACCOUNTING.json": "84ff8d7e7a240cafdbcd57e48c5d57da55687c278d2c82fae8d0b9d64855e3eb"
+  },
+  "publication": "owned audit prose,contracts,scalar rational checks,links/hashes only;no third-party PDFs/code,page renders,data,raw private logs or manuscript"
+}
