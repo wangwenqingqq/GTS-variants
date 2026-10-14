@@ -1,0 +1,79 @@
+{
+  "id": "CPV4_GATE3_PROSPECTIVE_AMENDMENT_01",
+  "date": "2026-10-14",
+  "parent_commit": "3d470b2f3afa17483fbbc6ff06b7d0d20ebb8c9e",
+  "purpose": "Append two accepted prospective contract clarifications;do not rewrite the closed Phase A evidence",
+  "accepted_scope": "numeric decision precedence,training-only candidate derivation and fixed ascending sidecar coordinates",
+  "unchanged_admission": "SUBSUMED_PORTFOLIO;family-scoped,not literal CPV4 identity or measured ineffectiveness",
+  "prior_art_gate_waived": false,
+  "population_or_GPU_authorized_by_this_amendment": false,
+  "prospective_precedence": [
+    {
+      "priority": 1,
+      "condition": "exactness failure OR oracle-route mean bytes >1014828776 OR p90 bytes of any executed route >1200000000",
+      "decision": "NO_GO_PORTFOLIO",
+      "action": "stop"
+    },
+    {
+      "priority": 2,
+      "condition": "oracle-route mean bytes <=700000000 AND p90 bytes <=900000000",
+      "decision": "PASS_CAPACITY",
+      "action": "only this condition admits prospective moment-route evaluation after separate resource/execution registration"
+    },
+    {
+      "priority": 3,
+      "condition": "capacity PASS;moment-route mean bytes <=750000000 AND p90 bytes <=900000000 AND mean bytes regret vs oracle <=1.15",
+      "decision": "PASS_ROUTER",
+      "action": "no GO unless original prior-art,storage and exactness gates also pass"
+    },
+    {
+      "priority": 4,
+      "condition": "capacity PASS;any router PASS condition fails,after excluding priority1 NO_GO conditions",
+      "decision": "PORTFOLIO_ONLY",
+      "action": "stop;do not replace the router"
+    },
+    {
+      "priority": 5,
+      "condition": "remaining uncovered numeric outcome",
+      "decision": "UNCLASSIFIED",
+      "action": "stop;do not force a published final label or relax thresholds"
+    }
+  ],
+  "keeper_source_bytes_exact": 1014828776,
+  "rounded_keeper_not_used_for_gate": true,
+  "candidate_derivation": {
+    "parent_Block32_oracle_exists": false,
+    "input": "Only the24 training query IDs of each frozen fold may supply parent nonhit per-coordinate mean squared contributions",
+    "block_score": "Sum contributions over each of the30 fixed contiguous32-D blocks",
+    "prefix": "Top4 blocks form a128-D coordinate subset;no extra learned/random/moment-derived subsets",
+    "candidate_identity": "source qid;select four distinct source-qid candidates,not necessarily four unique coordinate subsets",
+    "duplicate_prefix_sets": "retain;charge all four physical buffers and their update payload;no silent deduplication or K change",
+    "held_out_queries": "not used for candidate generation,compiler objective,tuning or view selection during training",
+    "parent_derivation_is_new_execution": "NOT_RUN;requires future registration and identity checks"
+  },
+  "sidecar_coordinate_order": {
+    "approved_order": "ascending original coordinate ID within each fixed materialized sidecar",
+    "query_order": "only choose a view ID;do not produce an online dimension traversal order",
+    "CPU_bound_scope": "same nonnegative rounded squared terms and sequential FP64 additions in original relative order under the preserved authority arithmetic;finite values and identical term generation remain required",
+    "exactness_qualification": "NOT_RUN;complete raw fallback must bitwise match the original ordered-FP64 authority",
+    "GPU_reduction_scope": "not qualified by this approval;warp/tree/reassociated reductions require a separately frozen numerical-safety contract"
+  },
+  "remaining_before_any_new_execution": [
+    "new novelty/mechanism admission or an explicitly separate engineering-study scope",
+    "deterministic block-score ties/reduction arithmetic and complete input/source identities",
+    "p90 estimator and exact mean bytes-regret definition",
+    "metadata/moment maintenance,update visibility and complete cost scope",
+    "fixtures,full-score authority and resource/execution registration"
+  ],
+  "new_real_dataset_loaded": false,
+  "new_population_starts": 0,
+  "new_GPU_starts": 0,
+  "new_NCU_starts": 0,
+  "previous_manifest_and_evidence_unchanged": true,
+  "parents": {
+    "artifacts/compiled_prefix_portfolio_gate3_20261014/CONTRACT.json": "2abfa08a2964baacfbef7b44c57c50d0e69ceff72b27bd91c467231f93017c24",
+    "artifacts/compiled_prefix_portfolio_gate3_20261014/PUBLIC_MANIFEST.json": "32a34c06defe82fdf55923175438649fc8af189f3a0420797fd59f2d145a3b92",
+    "artifacts/compiled_prefix_portfolio_gate3_20261014/evidence/ADMISSION.json": "a2b6b4b8e511ac2bc79503673255e6badc2f689b75ba2d32baa7ea9f6cb37fd4",
+    "artifacts/compiled_prefix_portfolio_gate3_20261014/DECISION.md": "50dd5cc370e4546cad5ebe8b72cb4058b884995d7d20f16fdf66cf409b8c9eee"
+  }
+}
