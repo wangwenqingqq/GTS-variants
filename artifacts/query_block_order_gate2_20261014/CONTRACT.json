@@ -1,0 +1,90 @@
+{
+  "experiment": "GTSPP_20261014_QUERY_BLOCK_ORDER_GATE2",
+  "parent_commit": "70e535f51406376e21469a5756b8824a5ca8e886",
+  "plan_sha256": "995242b90edb01b3fa074431621ed8a3b81d12dfee81cb494ccff7d70e813ce1",
+  "scope": "Phase A mechanism-family admission and rational formula counterexample only;no population or GPU before admission",
+  "before_formula_witness": true,
+  "workload_reference": {
+    "dataset": "GIST1M",
+    "N": 1000000,
+    "D": 960,
+    "queries": 32,
+    "planned_pairs": 32000000,
+    "radius_bits": "0x3f34a3d8",
+    "exact_authority": "original-coordinate ordered FP64;no new candidate quality result"
+  },
+  "candidate_as_proposed": {
+    "name": "QBLOCK32",
+    "blocks": 30,
+    "block_dims": 32,
+    "block_payload_bytes": 128,
+    "row_payload_stride_bytes": 3840,
+    "score": "q_j^2 - 2*q_j*mu_j + nu_j;block sum;descending score and ascending block ID on ties",
+    "dataset_statistics": "mu_j=E[x_j],nu_j=E[x_j^2];not estimated this phase",
+    "schedule": [
+      128,
+      256,
+      512,
+      960
+    ],
+    "planned_moment_payload_bytes": 15360,
+    "O_ND_duplicate_representation_forbidden": true
+  },
+  "admission": {
+    "allowed_labels": [
+      "DISTINCT_ENOUGH_TO_TEST",
+      "SUBSUMED_MECHANISM"
+    ],
+    "core_family": "query-only database statistics -> shared query-specific contiguous dimension-zone order -> exact partial-distance refinement",
+    "SUBSUMED_scope": "flow/core mechanism family,not literal identity of the second-moment formula,physical layout,FP64 arithmetic,GPU implementation,or performance",
+    "non_incremental_requirement": "A variance scoring change,32-lane mapping,Blackwell/CUDA/dataset/stage parameters alone do not constitute a distinct non-incremental mechanism",
+    "missing_formula_match": "NOT_ESTABLISHED is preserved;not inferred absent or identical",
+    "stop_if_subsumed": "No real dataset statistics,C1 orders,32M population,stage/sector execution,updates or CUDA candidate"
+  },
+  "prospective_unexecuted_gates": {
+    "logical_capture_pass": ".70",
+    "logical_capture_strong": ".85",
+    "logical_no_go": "<.50",
+    "source_pass_bytes": 750000000,
+    "source_strong_bytes": 650000000,
+    "source_no_go_bytes": 900000000,
+    "sector_amplification_max": "1.10",
+    "future_GPU_DRAM_target_bytes": 850000000,
+    "future_GPU_Host_ready_target_ms": ".90"
+  },
+  "gates_not_resolved_due_phase_A_stop": [
+    "O0/O1 parent per-coordinate denominator vs request to round all four comparisons to32 dimensions",
+    "capture [0.50,0.70) lacks a final label",
+    "source >0.90GB overlaps LOGICAL_ONLY when logical passes;no priority frozen",
+    "cross-order numerical guard and charged original-order score reconstruction",
+    "conditional sector model does not verify actual device alignment or kernel access geometry",
+    "sum/sumsq/mu/nu ownership,payload and update-version visibility must be frozen before a dynamic claim"
+  ],
+  "formula_witness": {
+    "arithmetic": "exact rational;synthetic two-vector,two-block32 test,not GIST/FP64 candidate",
+    "claims": "algebraic decomposition plus equality in constant block-variance case and nonidentity in heterogeneous block-variance case",
+    "mean_only_comparator": "generic squared-distance-to-mean proxy;not claimed identical to published PDX zone aggregation",
+    "does_not_admit_population": true
+  },
+  "execution": {
+    "real_dataset_loaded": false,
+    "CPU_population_starts": 0,
+    "GPU_starts": 0,
+    "NCU_starts": 0,
+    "remote_resource_operations": 0,
+    "fixtures_only": "local Python stdlib,Fraction;no installs",
+    "statistics_ordering_update_timing": "NOT_RUN"
+  },
+  "parents": {
+    "artifacts/exact_gpu_limits_gate1_20261014/CONTRACT.json": "e13939f4dfa9187dd6e1aec75575e0d21bd3ddf1441035cc60c72ec73f81e539",
+    "artifacts/exact_gpu_limits_gate1_20261014/PUBLIC_MANIFEST.json": "695e8af704dfc4a0cc69fd1c8e4b760eff4fea1cc68bf3fb5eb37e2203807ef3",
+    "artifacts/exact_gpu_limits_gate1_20261014/DECISION.md": "79c7ee5cca0abc972ff49b3b280f8ef810a708b38eb4ffde02f96e9a006ba8e6",
+    "artifacts/exact_gpu_limits_gate1_20261014/b1_information_floor/ORIGINAL_ORDER.json": "2325895e2a564e47db62879d842e00129b574d492f8e17e69168611af5d13c36",
+    "artifacts/exact_gpu_limits_gate1_20261014/b1_information_floor/QUERY_GLOBAL_ORACLE.json": "8ddf231d4dcf7dac63272c9528f9758756f0d25eea509b531b7aa408211a98d8",
+    "artifacts/exact_gpu_limits_gate1_20261014/b1_information_floor/HEADROOM.json": "b51632a60d36d0b060599243f9d2c0b9ef099e83a2868c728f139d024c221771",
+    "artifacts/progressive_gpu_gate2_20261013/timing/PRIMARY_TIMING.json": "f3409ffa3347dcaf85513d4bb335cecf6e1a04c0c5f2b89d57177dcb3e372589",
+    "artifacts/progressive_gpu_gate2_20261013/traffic/DRAM_ACCOUNTING.json": "84ff8d7e7a240cafdbcd57e48c5d57da55687c278d2c82fae8d0b9d64855e3eb",
+    "artifacts/sector_proof_per_byte_gate6_20261014/run.py": "ac4bb0e22e8480b71fb687a894c07e0b9a5a98d33a323202d2377816a7833127"
+  },
+  "publication": "owned audit prose,contracts,formula check and identity manifests only;no third-party PDF/code,raw data,private deployment or manuscript"
+}

@@ -1,0 +1,32 @@
+{
+  "arithmetic": "exact rational,not a FP64 numerical-safety test",
+  "fixture": "synthetic2 vectors x64 coordinates,2 contiguous32-d blocks",
+  "identity": "E[(q-x)^2]=(q-mu)^2+variance",
+  "empirical_expanded_decomposed_equal": true,
+  "heterogeneous_variance": {
+    "mean_only_block_scores": [
+      "4",
+      "1"
+    ],
+    "moment_block_scores": [
+      "4",
+      "101"
+    ],
+    "mean_only_order": [
+      0,
+      1
+    ],
+    "moment_order": [
+      1,
+      0
+    ]
+  },
+  "constant_block_variance_ranking_equal": true,
+  "interpretation": "The score can change rankings;no literal equivalence to a mean-only rule is asserted. It changes the priority statistic,not the partial-distance certificate or zone-visitation mechanism.",
+  "real_dataset_loaded": false,
+  "CPU_population_starts": 0,
+  "GPU_starts": 0,
+  "candidate_quality_latency_traffic": "NOT_RUN",
+  "contract_sha256": "56255ec1cb52df6bf2ced9ec3422e4352123e7a599dc5da8b6545f8f5ef49b97",
+  "executed_source_sha256": "8c1477843e8ed302f2ec5b2e51a7e839feda459a7b6146f1b51866dfe240235b"
+}
