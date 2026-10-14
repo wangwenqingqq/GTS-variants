@@ -1,0 +1,89 @@
+{
+  "axes": {
+    "x": "extra indexed payload beyond the shared FP32 database; decimal bytes",
+    "y": "conditional coordinate/metadata source model; not actual DRAM",
+    "updates": "separate categorical/unknown field, never converted into bytes or assumed free"
+  },
+  "null_means": "UNKNOWN, not zero; unpriced systems are not assigned fabricated plot positions",
+  "rows": [
+    {
+      "system": "Full exact scan",
+      "evidence": "coordinate count plus historical same-campaign GPU timing",
+      "extra_indexed_payload_bytes": 0,
+      "query_source_bytes": 3840000000,
+      "source_scope": "one full FP32 coordinate scan; not actual DRAM",
+      "actual_DRAM_bytes_per_query": 3862198832.0,
+      "historical_static_Host_ready_ms": 2.57311653125,
+      "update_maintenance": "not measured by this static experiment; common base ownership excluded from x axis"
+    },
+    {
+      "system": "Tree/index",
+      "evidence": "historical offline candidate/block identities; no executed layout traffic",
+      "extra_indexed_payload_bytes": null,
+      "query_source_bytes": null,
+      "update_maintenance": "UNKNOWN as a same-contract measured cost",
+      "L0_block256_reach_percent_initial_rebuilt": [
+        99.4633,
+        99.5585
+      ],
+      "L1_L3_block256_reach_percent_initial_rebuilt": [
+        76.5477,
+        63.8589
+      ],
+      "positive_counterexample": "contiguity improves reach at identical candidate identities; not all layouts fail"
+    },
+    {
+      "system": "Progressive",
+      "evidence": "historical source count plus actual GPU timing/NCU, static fixed32 range",
+      "extra_indexed_payload_bytes": 0,
+      "query_source_bytes": 1014828776,
+      "extra_query_workspace_bytes_static": 33000000,
+      "actual_DRAM_bytes_per_query": 1119337016.0,
+      "historical_static_Host_ready_ms": 1.14085521875,
+      "update_maintenance": "separate bounded dynamic A misses service ratio0.85 gate:0.855934141; update-heavy B NOT_RUN",
+      "scope": "x excludes reusable per-query workspace, base IDs and common ownership; no dynamic near-optimality"
+    },
+    {
+      "system": "Compact metadata filter",
+      "evidence": "conditional eager-metadata/full-raw-fallback plane; not realized",
+      "extra_indexed_payload_bytes_range": [
+        1000000,
+        256000000
+      ],
+      "query_source_bytes": null,
+      "model": "extra_bytes + (1-f)*3840000000; f is all-object rejection",
+      "update_maintenance": "UNKNOWN; extra payload is not latency",
+      "actual_rejection_fraction": null
+    },
+    {
+      "system": "Certified INT8 sidecar",
+      "evidence": "design algebra only; parent stopped before population/GPU",
+      "extra_indexed_payload_bytes": 968000000,
+      "query_source_bytes_at_F0": 968000000,
+      "query_source_bytes": null,
+      "model": "968000000 + 3840*F; F includes all final hits and ambiguous objects",
+      "update_maintenance": "UNKNOWN runtime; at least the sidecar is an additional representation to maintain",
+      "actual_fallback_or_rejection": null
+    },
+    {
+      "system": "Cross-query batching",
+      "evidence": "uncapped long-run Poisson algebra, plus historical finite synthetic trace",
+      "extra_indexed_payload_bytes": 0,
+      "extra_query_workspace_bytes": null,
+      "query_source_bytes": null,
+      "ideal_source_at_5000qps_500us": {
+        "numerator": 7680000000,
+        "denominator": 7,
+        "decimal": 1097142857.142857
+      },
+      "historical_finite_synthetic_source_at_5000qps_500us": 1092249600,
+      "update_maintenance": "UNKNOWN; one-version ownership and service backlog not evaluated",
+      "scope": "reference source comparison only; not a complete SLA/dynamic/mixed-output result"
+    }
+  ],
+  "counterexamples": {
+    "sector_probe": "904744352 conditional source B/query;10.8476% below keeper; unpriced retention/reconstruction",
+    "packed_probe": "817666504 conditional source B/query;19.4281% below keeper; p90 robustness and20% gates failed",
+    "lossless_representation": "exact single representation validated;1025475825 source B/query exceeds keeper; no GPU"
+  }
+}

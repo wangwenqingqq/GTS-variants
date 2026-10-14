@@ -1,0 +1,160 @@
+{
+  "rows": [
+    {
+      "lambda_qps": 100,
+      "window_us": 500,
+      "ideal_B": {
+        "numerator": 21,
+        "denominator": 20,
+        "decimal": 1.05
+      },
+      "source_bytes_per_query": {
+        "numerator": 25600000000,
+        "denominator": 7,
+        "decimal": 3657142857.142857
+      },
+      "over_keeper": {
+        "numerator": 3200000000,
+        "denominator": 887975179,
+        "decimal": 3.6037043328212217
+      },
+      "strict_source_win": false
+    },
+    {
+      "lambda_qps": 500,
+      "window_us": 500,
+      "ideal_B": {
+        "numerator": 5,
+        "denominator": 4,
+        "decimal": 1.25
+      },
+      "source_bytes_per_query": {
+        "numerator": 3072000000,
+        "denominator": 1,
+        "decimal": 3072000000.0
+      },
+      "over_keeper": {
+        "numerator": 384000000,
+        "denominator": 126853597,
+        "decimal": 3.027111639569826
+      },
+      "strict_source_win": false
+    },
+    {
+      "lambda_qps": 1000,
+      "window_us": 500,
+      "ideal_B": {
+        "numerator": 3,
+        "denominator": 2,
+        "decimal": 1.5
+      },
+      "source_bytes_per_query": {
+        "numerator": 2560000000,
+        "denominator": 1,
+        "decimal": 2560000000.0
+      },
+      "over_keeper": {
+        "numerator": 320000000,
+        "denominator": 126853597,
+        "decimal": 2.5225930329748554
+      },
+      "strict_source_win": false
+    },
+    {
+      "lambda_qps": 5000,
+      "window_us": 500,
+      "ideal_B": {
+        "numerator": 7,
+        "denominator": 2,
+        "decimal": 3.5
+      },
+      "source_bytes_per_query": {
+        "numerator": 7680000000,
+        "denominator": 7,
+        "decimal": 1097142857.142857
+      },
+      "over_keeper": {
+        "numerator": 960000000,
+        "denominator": 887975179,
+        "decimal": 1.0811112998463666
+      },
+      "strict_source_win": false
+    },
+    {
+      "lambda_qps": 10000,
+      "window_us": 500,
+      "ideal_B": {
+        "numerator": 6,
+        "denominator": 1,
+        "decimal": 6.0
+      },
+      "source_bytes_per_query": {
+        "numerator": 640000000,
+        "denominator": 1,
+        "decimal": 640000000.0
+      },
+      "over_keeper": {
+        "numerator": 80000000,
+        "denominator": 126853597,
+        "decimal": 0.6306482582437138
+      },
+      "strict_source_win": true
+    },
+    {
+      "lambda_qps": 5000,
+      "window_us": 100,
+      "ideal_B": {
+        "numerator": 3,
+        "denominator": 2,
+        "decimal": 1.5
+      },
+      "source_bytes_per_query": {
+        "numerator": 2560000000,
+        "denominator": 1,
+        "decimal": 2560000000.0
+      },
+      "over_keeper": {
+        "numerator": 320000000,
+        "denominator": 126853597,
+        "decimal": 2.5225930329748554
+      },
+      "strict_source_win": false
+    },
+    {
+      "lambda_qps": 10000,
+      "window_us": 2000,
+      "ideal_B": {
+        "numerator": 21,
+        "denominator": 1,
+        "decimal": 21.0
+      },
+      "source_bytes_per_query": {
+        "numerator": 1280000000,
+        "denominator": 7,
+        "decimal": 182857142.85714287
+      },
+      "over_keeper": {
+        "numerator": 160000000,
+        "denominator": 887975179,
+        "decimal": 0.1801852166410611
+      },
+      "strict_source_win": true
+    }
+  ],
+  "break_even_qps_at_500us": {
+    "numerator": 706292806000,
+    "denominator": 126853597,
+    "decimal": 5567.779098924566
+  },
+  "break_even_qps_at_100us": {
+    "numerator": 3531464030000,
+    "denominator": 126853597,
+    "decimal": 27838.89549462283
+  },
+  "break_even_window_us_at_5000qps": {
+    "numerator": 70629280600,
+    "denominator": 126853597,
+    "decimal": 556.7779098924566
+  },
+  "rounding": "Use exact rational thresholds for gates; displayed qps are not rounded admission thresholds."
+}

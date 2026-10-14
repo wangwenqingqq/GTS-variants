@@ -1,0 +1,140 @@
+{
+  "model": {
+    "metadata_bits_per_vector": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "formula": "N*m/8 + (1-f)*3840000000; eager full metadata plus complete raw fallback",
+    "f_denominator": "fraction of all objects safely rejected without raw reads; therefore true-hit score source reads are already included in (1-f)",
+    "equality": "break-even; strict improvement requires f strictly above threshold",
+    "strong_gate": "for every frozen budget <=256B/vector, f_required >=9/10",
+    "human_clarification": "Below90% is B2_BARRIER_NOT_SUPPORTED; no attainable representation is inferred from a free algebraic plane; final uncovered cases stop."
+  },
+  "source_bytes_not_DRAM": true,
+  "rows": [
+    {
+      "bits_per_vector": 8,
+      "bytes_per_vector": 1,
+      "metadata_bytes": 1000000,
+      "break_even_rejection_fraction": {
+        "numerator": 353271403,
+        "denominator": 480000000,
+        "decimal": 0.7359820895833333
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 16,
+      "bytes_per_vector": 2,
+      "metadata_bytes": 2000000,
+      "break_even_rejection_fraction": {
+        "numerator": 117798801,
+        "denominator": 160000000,
+        "decimal": 0.73624250625
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 32,
+      "bytes_per_vector": 4,
+      "metadata_bytes": 4000000,
+      "break_even_rejection_fraction": {
+        "numerator": 353646403,
+        "denominator": 480000000,
+        "decimal": 0.7367633395833333
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 64,
+      "bytes_per_vector": 8,
+      "metadata_bytes": 8000000,
+      "break_even_rejection_fraction": {
+        "numerator": 118048801,
+        "denominator": 160000000,
+        "decimal": 0.73780500625
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 128,
+      "bytes_per_vector": 16,
+      "metadata_bytes": 16000000,
+      "break_even_rejection_fraction": {
+        "numerator": 355146403,
+        "denominator": 480000000,
+        "decimal": 0.7398883395833333
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 256,
+      "bytes_per_vector": 32,
+      "metadata_bytes": 32000000,
+      "break_even_rejection_fraction": {
+        "numerator": 119048801,
+        "denominator": 160000000,
+        "decimal": 0.74405500625
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 512,
+      "bytes_per_vector": 64,
+      "metadata_bytes": 64000000,
+      "break_even_rejection_fraction": {
+        "numerator": 361146403,
+        "denominator": 480000000,
+        "decimal": 0.7523883395833333
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 1024,
+      "bytes_per_vector": 128,
+      "metadata_bytes": 128000000,
+      "break_even_rejection_fraction": {
+        "numerator": 123048801,
+        "denominator": 160000000,
+        "decimal": 0.76905500625
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    },
+    {
+      "bits_per_vector": 2048,
+      "bytes_per_vector": 256,
+      "metadata_bytes": 256000000,
+      "break_even_rejection_fraction": {
+        "numerator": 385146403,
+        "denominator": 480000000,
+        "decimal": 0.8023883395833333
+      },
+      "strong_90_percent_barrier": false,
+      "strict_win": "f must be strictly greater than break-even"
+    }
+  ],
+  "state": "B2_BARRIER_NOT_SUPPORTED",
+  "achievable_representation": "UNKNOWN",
+  "unknown_costs": [
+    "query/control/output",
+    "updates",
+    "metadata access selectivity",
+    "cache/sectors",
+    "fallback implementation"
+  ]
+}
