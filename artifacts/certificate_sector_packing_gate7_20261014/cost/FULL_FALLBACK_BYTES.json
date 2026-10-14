@@ -1,0 +1,144 @@
+{
+  "actual_GPU_traffic": "NOT_MEASURED",
+  "first_stage_FP32_values_retained_without_reread_assumption": true,
+  "formula": "512000000+3328*survivors per query",
+  "full_fallback": "NOT_IMPLEMENTED",
+  "mapping_retention_recompute_spill_cost": "UNKNOWN_NOT_PRICED",
+  "mean_bytes": 817666504.0,
+  "queries": [
+    {
+      "modeled_bytes": 515684096,
+      "query_id": 88406
+    },
+    {
+      "modeled_bytes": 581162496,
+      "query_id": 865632
+    },
+    {
+      "modeled_bytes": 1066594560,
+      "query_id": 881748
+    },
+    {
+      "modeled_bytes": 587728640,
+      "query_id": 916533
+    },
+    {
+      "modeled_bytes": 512841984,
+      "query_id": 40158
+    },
+    {
+      "modeled_bytes": 592857088,
+      "query_id": 242468
+    },
+    {
+      "modeled_bytes": 512003328,
+      "query_id": 40486
+    },
+    {
+      "modeled_bytes": 1880580096,
+      "query_id": 900387
+    },
+    {
+      "modeled_bytes": 1356180480,
+      "query_id": 703226
+    },
+    {
+      "modeled_bytes": 1229959424,
+      "query_id": 791039
+    },
+    {
+      "modeled_bytes": 517451264,
+      "query_id": 724874
+    },
+    {
+      "modeled_bytes": 512013312,
+      "query_id": 671829
+    },
+    {
+      "modeled_bytes": 512009984,
+      "query_id": 722418
+    },
+    {
+      "modeled_bytes": 618179840,
+      "query_id": 152899
+    },
+    {
+      "modeled_bytes": 519018752,
+      "query_id": 737995
+    },
+    {
+      "modeled_bytes": 1433506560,
+      "query_id": 144573
+    },
+    {
+      "modeled_bytes": 512049920,
+      "query_id": 570909
+    },
+    {
+      "modeled_bytes": 2037897984,
+      "query_id": 347206
+    },
+    {
+      "modeled_bytes": 1079201024,
+      "query_id": 63744
+    },
+    {
+      "modeled_bytes": 512003328,
+      "query_id": 625378
+    },
+    {
+      "modeled_bytes": 516219904,
+      "query_id": 136857
+    },
+    {
+      "modeled_bytes": 513417728,
+      "query_id": 201233
+    },
+    {
+      "modeled_bytes": 512003328,
+      "query_id": 72436
+    },
+    {
+      "modeled_bytes": 1144582912,
+      "query_id": 617423
+    },
+    {
+      "modeled_bytes": 1280095744,
+      "query_id": 810945
+    },
+    {
+      "modeled_bytes": 517917184,
+      "query_id": 789615
+    },
+    {
+      "modeled_bytes": 512009984,
+      "query_id": 601856
+    },
+    {
+      "modeled_bytes": 805519616,
+      "query_id": 433080
+    },
+    {
+      "modeled_bytes": 526436864,
+      "query_id": 415755
+    },
+    {
+      "modeled_bytes": 1401008640,
+      "query_id": 282095
+    },
+    {
+      "modeled_bytes": 518492928,
+      "query_id": 66651
+    },
+    {
+      "modeled_bytes": 828699136,
+      "query_id": 326654
+    }
+  ],
+  "ratio_to_strong_baseline": 0.8057186821434792,
+  "scope": "conditional source-byte model only; assumes retained selected FP32 values with no reread. Mapping, original-order reconstruction, retention, recompute and spill costs UNKNOWN; not measured DRAM or complete search.",
+  "strong_GO": false,
+  "strong_baseline_mean_bytes": 1014828776,
+  "strong_baseline_total_bytes_all32": 32474520832,
+  "total_bytes_all32": 26165328128
+}

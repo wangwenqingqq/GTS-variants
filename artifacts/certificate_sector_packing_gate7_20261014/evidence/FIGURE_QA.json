@@ -1,0 +1,61 @@
+{
+  "plots": [
+    {
+      "name": "survivors_packed_vs_original",
+      "scope": "fixed32; nominal512B; C1 scattered/ineligible; O2 pair-specific/unpriced; parent baselines not rerun",
+      "canvas_inches": [
+        3.4,
+        2.6
+      ],
+      "PNG_dpi": 300,
+      "SVG_and_PDF_vector": true,
+      "minimum_font_pt": 7.0,
+      "geometry_and_style_audit": "PASS",
+      "error_bars": "none: deterministic complete fixed pool, not timing repeats"
+    },
+    {
+      "name": "c1_recovery",
+      "scope": "set overlap, not recall or search correctness; all32 evaluation queries shown",
+      "canvas_inches": [
+        3.4,
+        2.55
+      ],
+      "PNG_dpi": 300,
+      "SVG_and_PDF_vector": true,
+      "minimum_font_pt": 7.0,
+      "geometry_and_style_audit": "PASS",
+      "error_bars": "none: deterministic complete fixed pool, not timing repeats"
+    },
+    {
+      "name": "sector_purity",
+      "scope": "equal query weight and16 selected sectors per query; high-value is C1 demand, not measured pair outcome",
+      "canvas_inches": [
+        3.4,
+        2.55
+      ],
+      "PNG_dpi": 300,
+      "SVG_and_PDF_vector": true,
+      "minimum_font_pt": 7.0,
+      "geometry_and_style_audit": "PASS",
+      "error_bars": "none: deterministic complete fixed pool, not timing repeats"
+    },
+    {
+      "name": "conservative_bytes",
+      "scope": "source bytes only; retain/reorder/spill costs unknown; source-payload model not actual DRAM or complete-search cost",
+      "canvas_inches": [
+        3.4,
+        2.55
+      ],
+      "PNG_dpi": 300,
+      "SVG_and_PDF_vector": true,
+      "minimum_font_pt": 7.0,
+      "geometry_and_style_audit": "PASS",
+      "error_bars": "none: deterministic complete fixed pool, not timing repeats"
+    }
+  ],
+  "visual_inspection": "PASS: all4 full300DPI PNGs inspected; zero-origin axes, title/value text, legend, units, hatches and bounds verified",
+  "font_family": "DejaVu Serif; inherited from preceding diagnostics",
+  "grayscale_safe": "hatches or markers redundant with colors",
+  "visual_inspected_date": "2026-10-14",
+  "publication_use": "diagnostic artifact only, no manuscript modification"
+}

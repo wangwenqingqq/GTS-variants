@@ -1,0 +1,23 @@
+{
+  "counterexample": "permuted addition order changes FP64 bits; inverse original-order audit is required, not a tolerance waiver",
+  "repairs": [
+    {
+      "issue": "the native fixture module was missing from the initial staging lookup",
+      "resolution": "completed the module and passed native fixtures before training/population",
+      "step": "local syntax preflight"
+    },
+    {
+      "issue": "relative local source path was resolved from the wrong working directory; the observer was not uploaded/executed",
+      "resolution": "used the exact absolute task source path; failed dispatch log retained privately",
+      "step": "first offline observer dispatch"
+    },
+    {
+      "issue": "observer attempted an exclusive second write of PACKING_QUALITY.json after completing96M saved-array checks",
+      "measurement_changed": false,
+      "population_rerun": false,
+      "resolution": "removed the premature write; ran the repaired read-only observer in a fresh analysis_r2 directory; original directory/log retained",
+      "step": "offline analysis_r1"
+    }
+  ],
+  "scope": "closure-only operational repairs; zero training/population reruns"
+}
