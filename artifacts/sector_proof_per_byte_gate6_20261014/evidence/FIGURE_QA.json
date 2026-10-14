@@ -1,0 +1,85 @@
+{
+  "data_source": "frozen scalar files",
+  "grayscale_safe": "redundant bar/marker encodings; sequential overlap intensity",
+  "plots": [
+    {
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "canvas_inches": [
+        3.4,
+        2.45
+      ],
+      "name": "survivors_sector512",
+      "scope": "nominal16 x 32B; C1 scattered historical/ineligible; O2 full reads unpriced",
+      "smallest_visible_font_pt": 7.0,
+      "text_clipping_check": "PASS",
+      "uncertainty": "none: complete fixed pool, not timing repeats"
+    },
+    {
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "canvas_inches": [
+        3.4,
+        2.45
+      ],
+      "name": "conservative_bytes",
+      "scope": "conditional selected-value reuse source model; retention/spills unknown; exact GO target in JSON",
+      "smallest_visible_font_pt": 7.0,
+      "text_clipping_check": "PASS",
+      "uncertainty": "none: complete fixed pool, not timing repeats"
+    },
+    {
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "canvas_inches": [
+        3.4,
+        2.45
+      ],
+      "name": "per_query_ratio",
+      "scope": "all32 matched ratios; dashed0.50 line is p90 threshold, not parity/per-query gate",
+      "smallest_visible_font_pt": 7.0,
+      "text_clipping_check": "PASS",
+      "uncertainty": "none: complete fixed pool, not timing repeats"
+    },
+    {
+      "PNG_dpi": 300,
+      "SVG_vector": true,
+      "canvas_inches": [
+        3.4,
+        3.05
+      ],
+      "name": "sector_overlap",
+      "scope": "actual32 x 32 intersection fractions; all496 off-diagonal pairs kept, diagonal self=1",
+      "smallest_visible_font_pt": 7.0,
+      "text_clipping_check": "PASS",
+      "uncertainty": "none: complete fixed pool, not timing repeats"
+    }
+  ],
+  "style_audit": [
+    {
+      "helper_findings": [
+        "axis 0 contains positive bars but starts at y=3.59"
+      ],
+      "horizontal_bar_zero_origin": "PASS",
+      "resolution": "inverted category y-axis is not magnitude; independent x-origin verified"
+    },
+    {
+      "helper_findings": [
+        "axis 0 contains positive bars but starts at y=1.49"
+      ],
+      "horizontal_bar_zero_origin": "PASS",
+      "resolution": "inverted category y-axis is not magnitude; independent x-origin verified"
+    },
+    {
+      "helper_findings": [],
+      "horizontal_bar_zero_origin": "not a bar chart",
+      "resolution": "none"
+    },
+    {
+      "helper_findings": [],
+      "horizontal_bar_zero_origin": "not a bar chart",
+      "resolution": "none"
+    }
+  ],
+  "visual_inspection": "PASS: all four 300-DPI renders inspected; counts/model/units readable, annotations inside bars or clear of borders, no clipped text, grayscale redundant encodings. Coincident query points intentionally share coordinates; all32 values retained."
+}

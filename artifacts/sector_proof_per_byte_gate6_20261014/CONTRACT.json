@@ -1,0 +1,370 @@
+{
+  "analysis": {
+    "allowed_auxiliaries": [
+      "sector_set_overlap",
+      "B0_overlap",
+      "contribution_concentration",
+      "S1_margin_by_nonhit_rejected_nonhit_survived_hits"
+    ],
+    "headroom_realization": "(B0_total-S1_total)/(B0_total-O2_total), descriptive only",
+    "zero_full_distance": "exclude and count explicitly for partial/full; not for partial/cutoff"
+  },
+  "base_commit": "15390c8fde1bc922ed3ce7b3df8eef5258753e63",
+  "baseline": {
+    "expected_mean_survivors": 654128.1875,
+    "expected_queries": [
+      {
+        "hits": 1,
+        "query_id": 88406,
+        "survivors": 657953
+      },
+      {
+        "hits": 1,
+        "query_id": 865632,
+        "survivors": 607025
+      },
+      {
+        "hits": 1,
+        "query_id": 881748,
+        "survivors": 775766
+      },
+      {
+        "hits": 1,
+        "query_id": 916533,
+        "survivors": 834986
+      },
+      {
+        "hits": 1,
+        "query_id": 40158,
+        "survivors": 291773
+      },
+      {
+        "hits": 1,
+        "query_id": 242468,
+        "survivors": 711469
+      },
+      {
+        "hits": 1,
+        "query_id": 40486,
+        "survivors": 686540
+      },
+      {
+        "hits": 1114,
+        "query_id": 900387,
+        "survivors": 836465
+      },
+      {
+        "hits": 1,
+        "query_id": 703226,
+        "survivors": 706153
+      },
+      {
+        "hits": 1,
+        "query_id": 791039,
+        "survivors": 884327
+      },
+      {
+        "hits": 2,
+        "query_id": 724874,
+        "survivors": 820952
+      },
+      {
+        "hits": 1,
+        "query_id": 671829,
+        "survivors": 805388
+      },
+      {
+        "hits": 1,
+        "query_id": 722418,
+        "survivors": 265280
+      },
+      {
+        "hits": 1,
+        "query_id": 152899,
+        "survivors": 815818
+      },
+      {
+        "hits": 2,
+        "query_id": 737995,
+        "survivors": 880627
+      },
+      {
+        "hits": 1,
+        "query_id": 144573,
+        "survivors": 811483
+      },
+      {
+        "hits": 1,
+        "query_id": 570909,
+        "survivors": 824374
+      },
+      {
+        "hits": 1,
+        "query_id": 347206,
+        "survivors": 835026
+      },
+      {
+        "hits": 1,
+        "query_id": 63744,
+        "survivors": 835819
+      },
+      {
+        "hits": 1,
+        "query_id": 625378,
+        "survivors": 1
+      },
+      {
+        "hits": 1,
+        "query_id": 136857,
+        "survivors": 324212
+      },
+      {
+        "hits": 1,
+        "query_id": 201233,
+        "survivors": 853244
+      },
+      {
+        "hits": 1,
+        "query_id": 72436,
+        "survivors": 1
+      },
+      {
+        "hits": 1,
+        "query_id": 617423,
+        "survivors": 780796
+      },
+      {
+        "hits": 5443,
+        "query_id": 810945,
+        "survivors": 663091
+      },
+      {
+        "hits": 1,
+        "query_id": 789615,
+        "survivors": 699351
+      },
+      {
+        "hits": 2,
+        "query_id": 601856,
+        "survivors": 650
+      },
+      {
+        "hits": 1,
+        "query_id": 433080,
+        "survivors": 651193
+      },
+      {
+        "hits": 1,
+        "query_id": 415755,
+        "survivors": 754238
+      },
+      {
+        "hits": 1,
+        "query_id": 282095,
+        "survivors": 725584
+      },
+      {
+        "hits": 1,
+        "query_id": 66651,
+        "survivors": 741098
+      },
+      {
+        "hits": 1,
+        "query_id": 326654,
+        "survivors": 851419
+      }
+    ],
+    "expected_total_survivors": 20932102,
+    "name": "B0_FIRST16_SECTORS",
+    "sectors": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "byte_model": {
+    "classification": "source-coordinate-only model; retained partial is safe, but arbitrary subset order may require original-order recomputation for a bit-identical final full score. No complete search implemented.",
+    "exact_full_distance_reconstruction_cost_included": false,
+    "fallback_bytes_per_survivor": 3328,
+    "fallback_dimensions": 832,
+    "first_stage_bytes_per_query": 512000000,
+    "formula": "512000000+3328*survivors per query; aggregate all32 first, exact integer comparisons",
+    "no_full_fallback_implementation": true,
+    "retained_selected_FP32_coordinates_assumed_per_survivor_bytes": 512,
+    "retention_register_shared_spill_cost": "UNKNOWN; not priced or asserted zero",
+    "stage1_selected_payload_reused_without_reread": true,
+    "strong_baseline_mean_bytes": 1014828776,
+    "strong_baseline_total_bytes_all32": 32474520832
+  },
+  "execution": {
+    "CPU_workers": 4,
+    "GPU_starts": 0,
+    "NCU_starts": 0,
+    "Python_optimization_level": 0,
+    "auxiliary_BLAS_workers": 1,
+    "compiler_flags": [
+      "-std=c++17",
+      "-O3",
+      "-shared",
+      "-fPIC",
+      "-fopenmp",
+      "-fno-fast-math",
+      "-ffp-contract=off",
+      "-frounding-math",
+      "-fno-associative-math"
+    ],
+    "failure": "preserve evidence and stop; no automatic retry",
+    "nice": 10,
+    "population_processes_max": 2,
+    "qualification": "native original and sector corner/random fixtures plus independent stable sector selection on all32 x first4096 rows before full populations",
+    "stage_A_timeout_seconds": 3600,
+    "stage_B_timeout_seconds": 1800
+  },
+  "experiment": "GTSPP_20261014_SECTOR_PROOF_PER_BYTE_GATE6",
+  "forbidden": [
+    "CUDA",
+    "NCU",
+    "NSYS",
+    "kNN",
+    "updates",
+    "layout duplication",
+    "transpose",
+    "data reorder",
+    "sector size or budget sweep",
+    "second heuristic",
+    "per-object summaries",
+    "learned scores",
+    "paper changes",
+    "foreign process signals",
+    "GPU settings changes"
+  ],
+  "gates": {
+    "A": "STRONG_SECTOR_HEADROOM when 2*O2_total<=B0_total; WEAK when <=0.80; else NO; nonzero oracle rounding guard -> UNCLASSIFIED",
+    "B": "GO if 5*fallback_total<=4*baseline_total and exact linear p90(S1/B0)<=1/2; CONDITIONAL if fallback_total>0.80baseline and <=baseline; NO_GO if >baseline; strong bytes but p90>1/2 -> UNCLASSIFIED",
+    "GPU": "NOT_RUN; Gate7 outside this task even if numeric/novelty gates pass",
+    "grey_zone": "UNCLASSIFIED and stop, without weakening GO conditions",
+    "prior_art": "dedicated narrow audit only after numerical GO; pre-experiment novelty triage admits characterization only",
+    "quality_precedence": "any safety, identity or correctness failure stops NO_GO; cannot be rescued by counts",
+    "query_quantiles": "linear interpolation; equal query weight; exact fractions for gate"
+  },
+  "geometry": {
+    "CPU_file_header_bytes": 12,
+    "CPU_mmap_alignment_not_a_GPU_measurement": true,
+    "coordinate_bytes": 4,
+    "coordinate_order": "unchanged row-major FP32, sector s covers 8s..8s+7",
+    "device_payload_base_alignment_required": 32,
+    "row_bytes": 3840,
+    "row_sectors": 120,
+    "sector_bytes": 32,
+    "sector_dimensions": 8,
+    "selected_coordinate_bytes_per_object": 512,
+    "selected_sectors": 16
+  },
+  "oracle": {
+    "actual_source_bytes_per_object": 3840,
+    "certificate": "selected original coordinate terms accumulated in increasing original dimension order; never sum preaggregated sectors as certificate",
+    "group_sum": "eight rounded FP64 coordinate terms added in increasing coordinate order",
+    "ideal_numerical_guard": "if abs(partial-cutoff)<=2*gamma_960*max(partial,cutoff), stop UNCLASSIFIED; no universal numerical optimality claim",
+    "name": "O2_PAIR_TOP16_SECTORS",
+    "pair_selection_unpriced": true,
+    "rank": "descending rounded sector sums, equal scores by increasing sector ID"
+  },
+  "parent_files": {
+    "artifacts/exact_representation_gate1_20261012/bytes/STAGE_ACCOUNTING.json": "fdbc08ad0ab03f7a734ebd618fc82b0dee0544f92184d0011be17a9625f84de3",
+    "artifacts/progressive_gpu_gate2_20261013/evidence/INPUT_IDENTITY.json": "a5220dd0480608ae33c06b358b904d860988903c752d1a9c108a6d35e8b9843c",
+    "artifacts/proof_per_byte_512_gate5_20261013/CONTRACT.json": "67edad0fdd72a5da25db87195ce8e06cea1a6a62988f71b4ef081ab90c2f4151",
+    "artifacts/proof_per_byte_512_gate5_20261013/PRIOR_ART_ROUTING.md": "e7cc05fd9eb0460a9d5f1f46212ef25a0aa8850cc4567f2649639261cd028b34",
+    "artifacts/proof_per_byte_512_gate5_20261013/baseline/B0_FIRST128.json": "7145c89d8c537d9a1ab79f055a5d15de4e2ab330007e172d62894b655024b193",
+    "artifacts/proof_per_byte_512_gate5_20261013/oracle/O1_PAIR_TOP128.json": "383d9cd18e3b681c7ee8afd444d8333891c276b2e88366c0495818560a50eded",
+    "artifacts/proof_per_byte_512_gate5_20261013/probe.cpp": "bd3df55b533fe9df5c37c99527a3268ce4369f124848b09720c59fc8d2719697",
+    "artifacts/proof_per_byte_512_gate5_20261013/routing/C1_MOMENT_SCORE.json": "129b7326f10c48db314fd385a6c2535ddd14910e4577ba8547984fd46ec7b294",
+    "artifacts/proof_per_byte_512_gate5_20261013/routing/DATASET_STATS.json": "f53fe80186ca5b47a46128d17c36d1a20ca143126c1092a128b339b2032b53c9",
+    "artifacts/proof_per_byte_512_gate5_20261013/run.py": "868e362164c77104ed1905facbfbfa36f539308f00116aa8f0e9831136f421c7",
+    "artifacts/proof_per_byte_512_gate5_20261013/test_probe.py": "5d8a0f35edfcf4462948415132c9a604120c566aae09a034918416768f906c76"
+  },
+  "plan_sha256": "8e0e5b6d8ecdb8ae3e1b471b187b4f06ce624ffefbd350e69fb06eb164dd5c03",
+  "publication": "task-owned code/scalars/hashes/figures only; raw vectors, queries, proof arrays, placement, source PDFs and input plan remain private",
+  "routing": {
+    "alternative_heuristics": 0,
+    "certificate_order": "selected sectors sorted by ID, then each eight coordinates in increasing order",
+    "coordinate_score": "(FP64(q)-FP64(mean_FP32))^2+FP64(variance_FP32)",
+    "metadata_bytes": 7680,
+    "metadata_source": "unchanged Gate5 FP32 means/population variances; no re-estimation",
+    "moment_binary_sha256": "0aa56d9a2c703e5c5d29064cd752f19a62fb79b61fe60996e0f5aa2683be3fd8",
+    "name": "S1_SECTOR_MOMENT",
+    "per_object_metadata": 0,
+    "query_local_selected_sector_ID_bytes": 32,
+    "rank": "stable descending sector scores; ties by increasing sector ID",
+    "sector_ID_dtype": "little-endian uint16",
+    "sector_score": "eight FP64 coordinate scores added in increasing coordinate order"
+  },
+  "scattered_reference": {
+    "mean_survivors": 41480.0625,
+    "name": "Gate5_C1_SCATTERED",
+    "physical_gate_eligible": false,
+    "remeasured": false,
+    "status": "historical information-only comparison; not an oracle or sector-safe execution"
+  },
+  "scope": "CPU-only fixed-sector certificate characterization; no physical GPU traffic, latency, complete search or novelty claim",
+  "workload": {
+    "D": 960,
+    "N": 1000000,
+    "coordinate_order": "0..959 unchanged",
+    "cutoff_hex": "0x1.fddb427319000p-2",
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "dataset": "GIST1M",
+    "dtype": "original little-endian FP32",
+    "duplicates": "row occurrence identity; no deduplication; self matches retained",
+    "inclusive_membership": "ordered FP64 sum of squared FP32 differences <= cutoff",
+    "query_count": 32,
+    "query_ids": [
+      88406,
+      865632,
+      881748,
+      916533,
+      40158,
+      242468,
+      40486,
+      900387,
+      703226,
+      791039,
+      724874,
+      671829,
+      722418,
+      152899,
+      737995,
+      144573,
+      570909,
+      347206,
+      63744,
+      625378,
+      136857,
+      201233,
+      72436,
+      617423,
+      810945,
+      789615,
+      601856,
+      433080,
+      415755,
+      282095,
+      66651,
+      326654
+    ],
+    "radius_bits": "0x3f34a3d8",
+    "snapshot": "initial"
+  }
+}

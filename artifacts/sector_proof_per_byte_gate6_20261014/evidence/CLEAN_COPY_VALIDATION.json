@@ -1,0 +1,31 @@
+{
+  "Python_optimization_level": 0,
+  "binary_bytes": 20728,
+  "binary_sha256": "5dd12b3924b16931f0ea63bd00450d7d148e32bf7712177226643cba54555509",
+  "build_returncode": 0,
+  "checker_sha256": "d4b55070b91621fe170a018154f524d3ca78121aaf4979d0dfbce70ac71ba462",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "flags": [
+    "-std=c++17",
+    "-O3",
+    "-shared",
+    "-fPIC",
+    "-fopenmp",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-frounding-math",
+    "-fno-associative-math"
+  ],
+  "input_copy": "fresh complete whitelist copy with unchanged parent sources",
+  "measurement_sources": {
+    "CONTRACT.json": "24992725968916903cf37f2d87ce88bc5b2bc877855e837addc0a8608723e34f",
+    "native_check.py": "3ad50b9ea07308dafe9c0f452ee791db91e7f803d6e77b76ef8827110fd00612",
+    "probe.cpp": "7d9f84239540fbf7f99a625973815651580136b8cebf081e18cfdbd0e5dc1292",
+    "run.py": "ac4bb0e22e8480b71fb687a894c07e0b9a5a98d33a323202d2377816a7833127"
+  },
+  "native_fixture_returncode": 0,
+  "native_fixture_stdout": "PASS: 272 rows; independent stable-top-k/ordered bits, subset safety, ties, duplicates, equality, signed zero, subnormal, extreme finite, nonfinite and index guards\nPASS: 272 additional sector rows; ordered bits, stable grouping, safety, ties, equality and guards",
+  "new_GPU_starts": 0,
+  "new_population_starts": 0,
+  "status": "PASS"
+}
