@@ -1,0 +1,13 @@
+{
+  "scope": "dispatch-epoch protocol construction only",
+  "before_dispatch_ACK": "must be visible",
+  "after_dispatch_commit": "not visible in already pinned batch",
+  "read_snapshot": "pin at dispatch, not enqueue",
+  "strict_serial_Q_I_D_trace": "split at I/D barriers; do not silently change to arrival-reordered semantics",
+  "live_ID_row_mapping": "immutable and epoch-owned",
+  "long_writer_freeze_required_by_protocol": false,
+  "no_rebuild_implementation_validated": false,
+  "copy_metadata_reclamation_costs": "UNKNOWN",
+  "updates_executed": 0,
+  "mixed_exact_queries_executed": 0
+}

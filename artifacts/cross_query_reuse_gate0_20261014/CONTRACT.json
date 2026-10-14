@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "registered_utc": "2026-10-14T08:12:24.704143+00:00",
+  "parent_commit": "5d9d982cece30849ce4ddd591fc01c89d67ba546",
+  "plan_sha256": "8a941864a4a5b57d601eaa040be6c1e5a61cf3dacf4854e557000a97095d0ad3",
+  "novelty_admission": "NOT_ADMITTED",
+  "direct_subsumption": "NOT_ESTABLISHED",
+  "bounded_CPU_exception": {
+    "human_confirmed": true,
+    "confirmation_date": "2026-10-14",
+    "scope": "only cheap frozen Poisson opportunity falsification; not novelty/GPU admission"
+  },
+  "estimator_interpretation": {
+    "human_confirmed": true,
+    "primary": "query weighted DB_BYTES*batch_count/query_count",
+    "secondary": "batch weighted E[DB_BYTES/B]",
+    "mean_B": "batch weighted query_count/batch_count; query-experienced size is separate",
+    "NO_GO_priority": true,
+    "uncovered": "UNCLASSIFIED and stop"
+  },
+  "dataset_model": {
+    "name": "GIST1M",
+    "N": 1000000,
+    "D": 960,
+    "dtype": "FP32",
+    "database_bytes": 3840000000,
+    "actual_vectors_loaded": false
+  },
+  "keeper_source_bytes_per_query": 1014828776,
+  "parent_input_sha256": {
+    "artifacts/exact_representation_gate1_20261012/bytes/STAGE_ACCOUNTING.json": "fdbc08ad0ab03f7a734ebd618fc82b0dee0544f92184d0011be17a9625f84de3",
+    "artifacts/progressive_gpu_gate2_20261013/timing/PRIMARY_TIMING.json": "f3409ffa3347dcaf85513d4bb335cecf6e1a04c0c5f2b89d57177dcb3e372589",
+    "artifacts/progressive_gpu_gate2_20261013/traffic/DRAM_ACCOUNTING.json": "84ff8d7e7a240cafdbcd57e48c5d57da55687c278d2c82fae8d0b9d64855e3eb",
+    "artifacts/query_tile_padding_20261012/traffic/DRAM_SCALING.json": "f2aee525efcd4a59e446263fe22784fbf147898292b2a420ddd9ef7b255cf105",
+    "artifacts/progressive_gpu_gate2_20261013/evidence/INPUT_IDENTITY.json": "a5220dd0480608ae33c06b358b904d860988903c752d1a9c108a6d35e8b9843c"
+  },
+  "scheduler": {
+    "name": "window-or-cap",
+    "Bmax": 8,
+    "window_ps": 500000000
+  },
+  "rates_qps": [
+    100,
+    500,
+    1000,
+    5000
+  ],
+  "non_extreme_rates_qps": [
+    100,
+    500,
+    1000
+  ],
+  "queries_per_rate": 100000,
+  "seed_rule": "2026101400+rate; mix shuffle seed=arrival seed+10000000",
+  "arrival_model": "iid exponential gaps, standard-library Random; gaps rounded to integer picoseconds (<=0.5ps/gap)",
+  "timestamp_semantics": "arrival at exactly deadline included before timer; final partial batch drains at ordinary timer; no warmup/drops/synthetic backlog",
+  "query_mix": {
+    "range": 0.5,
+    "knn": 0.5,
+    "counts_each": 50000,
+    "independent_shuffle": true,
+    "actual_queries_evaluated": false
+  },
+  "device_model": "immediate dispatch, zero device service; deliberately optimistic; no total SLA or stability prediction",
+  "source_model": "3.84GB per dispatched batch; not actual DRAM and not total bytes",
+  "unpriced": [
+    "query vectors/state",
+    "distance accumulators",
+    "range flags/counts",
+    "kNN/top-k state",
+    "output",
+    "selection/compaction",
+    "launch/control",
+    "snapshot metadata/update/reclamation",
+    "device backlog/service"
+  ],
+  "thresholds": {
+    "GO": {
+      "novelty": "admitted distinct mechanism required",
+      "mean_B_at_least_two_non_extreme": 4,
+      "p90_collection_wait_ps_max": 500000000,
+      "query_weighted_bytes_max": 750000000,
+      "semantics": "defined without rebuild/long freeze"
+    },
+    "STRONG_GO_auxiliary": {
+      "mean_B_min": 6,
+      "query_weighted_bytes_max": 600000000
+    },
+    "CONDITIONAL": {
+      "mean_B_interval": "[2.5,4)",
+      "bytes_interval": "(750000000,1000000000]"
+    },
+    "NO_GO_any": {
+      "mean_B_lt": "5/2",
+      "query_weighted_bytes_gt": 1000000000,
+      "collection_wait_ps_gt": 500000000
+    }
+  },
+  "allowed_final_labels": [
+    "GO_CROSS_QUERY_REUSE",
+    "CONDITIONAL",
+    "NO_GO_CROSS_QUERY_REUSE",
+    "SUBSUMED_PRIOR_ART"
+  ],
+  "CPU_primary_process_budget": 1,
+  "GPU_process_budget": 0,
+  "remote_compute_process_budget": 0,
+  "python_measurement": "3.9.6",
+  "validation_scope": "synthetic admission model and rational lower bound, not exact-search numerical or GPU correctness"
+}

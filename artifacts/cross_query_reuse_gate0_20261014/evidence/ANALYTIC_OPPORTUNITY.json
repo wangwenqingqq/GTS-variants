@@ -1,0 +1,111 @@
+{
+  "scope": "continuous-Poisson long-run oracle; Decimal60 approximations except explicit rational bounds; not a finite-sample bound",
+  "derivation": "B=min(1+Poisson(lambda/2000),8); E[B]<=1+lambda/2000; long-run bytes/query=DB_BYTES/E[B], not E_batch[DB_BYTES/B].",
+  "bound_proves": "at all frozen rates even uncapped long-run source lower bound exceeds1GB; cap8 cannot improve it",
+  "rows": [
+    {
+      "rate_qps": 100,
+      "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+      "batch_probabilities": [
+        0.951229424500714,
+        0.0475614712250357,
+        0.0011890367806258926,
+        1.981727967709821e-05,
+        2.477159959637276e-07,
+        2.477159959637276e-09,
+        2.0642999663643967e-11,
+        1.4837670558982777e-13
+      ],
+      "mean_B": 1.0499999999999992,
+      "variance_B": 0.049999999999986104,
+      "query_weighted_bytes": 3657142857.1428604,
+      "batch_weighted_E_bytes_over_B": 3745580198.3451643,
+      "exact_mean_upper_bound": {
+        "numerator": 2100,
+        "denominator": 2000
+      },
+      "source_model_lower_bound_fraction": {
+        "numerator": 7680000000000,
+        "denominator": 2100
+      }
+    },
+    {
+      "rate_qps": 500,
+      "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+      "batch_probabilities": [
+        0.7788007830714049,
+        0.19470019576785122,
+        0.024337524470981402,
+        0.00202812703924845,
+        0.00012675793995302814,
+        6.337896997651407e-06,
+        2.640790415688086e-07,
+        9.734521814031624e-09
+      ],
+      "mean_B": 1.2499999996882618,
+      "variance_B": 0.24999999546213705,
+      "query_weighted_bytes": 3072000000.7661276,
+      "batch_weighted_E_bytes_over_B": 3397619972.039754,
+      "exact_mean_upper_bound": {
+        "numerator": 2500,
+        "denominator": 2000
+      },
+      "source_model_lower_bound_fraction": {
+        "numerator": 7680000000000,
+        "denominator": 2500
+      }
+    },
+    {
+      "rate_qps": 1000,
+      "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+      "batch_probabilities": [
+        0.6065306597126334,
+        0.3032653298563167,
+        0.07581633246407918,
+        0.012636055410679864,
+        0.001579506926334983,
+        0.0001579506926334983,
+        1.316255771945819e-05,
+        1.0023796028843001e-06
+      ],
+      "mean_B": 1.499999934188559,
+      "variance_B": 0.49999907103582786,
+      "query_weighted_bytes": 2560000112.3181977,
+      "batch_weighted_E_bytes_over_B": 3021844536.8769264,
+      "exact_mean_upper_bound": {
+        "numerator": 3000,
+        "denominator": 2000
+      },
+      "source_model_lower_bound_fraction": {
+        "numerator": 7680000000000,
+        "denominator": 3000
+      }
+    },
+    {
+      "rate_qps": 5000,
+      "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+      "batch_probabilities": [
+        0.0820849986238988,
+        0.205212496559747,
+        0.25651562069968376,
+        0.21376301724973645,
+        0.13360188578108528,
+        0.06680094289054264,
+        0.027833726204392766,
+        0.014187311990913352
+      ],
+      "mean_B": 3.4942585884481283,
+      "variance_B": 2.4386624042326854,
+      "query_weighted_bytes": 1098945571.0847728,
+      "batch_weighted_E_bytes_over_B": 1410204427.5976968,
+      "exact_mean_upper_bound": {
+        "numerator": 7000,
+        "denominator": 2000
+      },
+      "source_model_lower_bound_fraction": {
+        "numerator": 7680000000000,
+        "denominator": 7000
+      }
+    }
+  ]
+}

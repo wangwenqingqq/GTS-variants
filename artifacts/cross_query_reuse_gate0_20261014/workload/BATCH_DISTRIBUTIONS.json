@@ -1,0 +1,109 @@
+{
+  "mean_and_quantile_weighting": "batch weighted; query experienced mean/fractions separate",
+  "rows": [
+    {
+      "rate_qps": 100,
+      "queries": 100000,
+      "batches": 95296,
+      "batch_counts_B1_to_B8": [
+        90711,
+        4467,
+        117,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mean_B_batch_weighted": 1.0493619879113498,
+      "mean_B_query_experienced": 1.09648,
+      "p50_B_batch_weighted": 1,
+      "p90_B_batch_weighted": 1,
+      "fraction_batches_B_ge_2": 0.048113247145735394,
+      "fraction_batches_B_ge_4": 1.04936198791135e-05,
+      "fraction_batches_B_eq_8": 0.0,
+      "fraction_queries_B_ge_2": 0.09289,
+      "fraction_queries_B_ge_4": 4e-05,
+      "fraction_queries_B_eq_8": 0.0,
+      "mixed_type_batches": 2409
+    },
+    {
+      "rate_qps": 500,
+      "queries": 100000,
+      "batches": 79854,
+      "batch_counts_B1_to_B8": [
+        62029,
+        15695,
+        1951,
+        168,
+        10,
+        1,
+        0,
+        0
+      ],
+      "mean_B_batch_weighted": 1.25228542089313,
+      "mean_B_query_experienced": 1.45342,
+      "p50_B_batch_weighted": 1,
+      "p90_B_batch_weighted": 2,
+      "fraction_batches_B_ge_2": 0.22321987627420042,
+      "fraction_batches_B_ge_4": 0.0022415909033987025,
+      "fraction_batches_B_eq_8": 0.0,
+      "fraction_queries_B_ge_2": 0.37971,
+      "fraction_queries_B_ge_4": 0.00728,
+      "fraction_queries_B_eq_8": 0.0,
+      "mixed_type_batches": 9433
+    },
+    {
+      "rate_qps": 1000,
+      "queries": 100000,
+      "batches": 66616,
+      "batch_counts_B1_to_B8": [
+        40391,
+        20167,
+        5058,
+        909,
+        81,
+        10,
+        0,
+        0
+      ],
+      "mean_B_batch_weighted": 1.5011408670589648,
+      "mean_B_query_experienced": 1.8351,
+      "p50_B_batch_weighted": 1,
+      "p90_B_batch_weighted": 2,
+      "fraction_batches_B_ge_2": 0.39367419238621354,
+      "fraction_batches_B_ge_4": 0.015011408670589648,
+      "fraction_batches_B_eq_8": 0.0,
+      "fraction_queries_B_ge_2": 0.59609,
+      "fraction_queries_B_ge_4": 0.04101,
+      "fraction_queries_B_eq_8": 0.0,
+      "mixed_type_batches": 14802
+    },
+    {
+      "rate_qps": 5000,
+      "queries": 100000,
+      "batches": 28444,
+      "batch_counts_B1_to_B8": [
+        2288,
+        5750,
+        7252,
+        6114,
+        3879,
+        1916,
+        851,
+        394
+      ],
+      "mean_B_batch_weighted": 3.515679932498945,
+      "mean_B_query_experienced": 4.21246,
+      "p50_B_batch_weighted": 3,
+      "p90_B_batch_weighted": 6,
+      "fraction_batches_B_ge_2": 0.9195612431444241,
+      "fraction_batches_B_ge_4": 0.46245253832091127,
+      "fraction_batches_B_eq_8": 0.013851778934045844,
+      "fraction_queries_B_ge_2": 0.97712,
+      "fraction_queries_B_ge_4": 0.64456,
+      "fraction_queries_B_eq_8": 0.03152,
+      "mixed_type_batches": 20289
+    }
+  ]
+}

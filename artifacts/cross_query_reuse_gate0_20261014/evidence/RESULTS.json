@@ -1,0 +1,329 @@
+{
+  "scope": "one synthetic trace/rate; ideal admission only, no device service or update arrivals",
+  "contract_sha256": "005d7274d9eabc99f52d00b401e4c5a3f795c790f1d1d3ded087e472e4abde72",
+  "rows": [
+    {
+      "rate_qps": 100,
+      "seed": 2026101500,
+      "queries": 100000,
+      "batches": 95296,
+      "arrival_horizon_ps": 1000355644028991,
+      "mix_counts": {
+        "range": 50000,
+        "knn": 50000
+      },
+      "batch_counts_B1_to_B8": [
+        90711,
+        4467,
+        117,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mean_B_batch_weighted": 1.0493619879113498,
+      "mean_B_query_experienced": 1.09648,
+      "p50_B_batch_weighted": 1,
+      "p90_B_batch_weighted": 1,
+      "fraction_batches_B_ge_2": 0.048113247145735394,
+      "fraction_batches_B_ge_4": 1.04936198791135e-05,
+      "fraction_batches_B_eq_8": 0.0,
+      "fraction_queries_B_ge_2": 0.09289,
+      "fraction_queries_B_ge_4": 4e-05,
+      "fraction_queries_B_eq_8": 0.0,
+      "mixed_type_batches": 2409,
+      "query_wait_ps": {
+        "mean": 488164878.93244,
+        "p50": 500000000,
+        "p90": 500000000,
+        "p99": 500000000,
+        "max": 500000000
+      },
+      "query_weighted_source_bytes": 3659366400.0,
+      "batch_weighted_E_source_bytes_over_B": 3746826729.348556,
+      "query_weighted_over_keeper": 3.605895385055577,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "mean_B<2.5",
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      },
+      "analytic": {
+        "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+        "batch_probabilities": [
+          0.951229424500714,
+          0.0475614712250357,
+          0.0011890367806258926,
+          1.981727967709821e-05,
+          2.477159959637276e-07,
+          2.477159959637276e-09,
+          2.0642999663643967e-11,
+          1.4837670558982777e-13
+        ],
+        "mean_B": 1.0499999999999992,
+        "variance_B": 0.049999999999986104,
+        "query_weighted_bytes": 3657142857.1428604,
+        "batch_weighted_E_bytes_over_B": 3745580198.3451643,
+        "exact_mean_upper_bound": {
+          "numerator": 2100,
+          "denominator": 2000
+        },
+        "source_model_lower_bound_fraction": {
+          "numerator": 7680000000000,
+          "denominator": 2100
+        }
+      },
+      "raw_trace": {
+        "file": "100qps.csv.gz",
+        "bytes": 1679428,
+        "sha256": "a8f496786d150445627e3c44bf567645883b57f4eb0e2f371596d06ea8dc114e"
+      }
+    },
+    {
+      "rate_qps": 500,
+      "seed": 2026101900,
+      "queries": 100000,
+      "batches": 79854,
+      "arrival_horizon_ps": 200113974712864,
+      "mix_counts": {
+        "range": 50000,
+        "knn": 50000
+      },
+      "batch_counts_B1_to_B8": [
+        62029,
+        15695,
+        1951,
+        168,
+        10,
+        1,
+        0,
+        0
+      ],
+      "mean_B_batch_weighted": 1.25228542089313,
+      "mean_B_query_experienced": 1.45342,
+      "p50_B_batch_weighted": 1,
+      "p90_B_batch_weighted": 2,
+      "fraction_batches_B_ge_2": 0.22321987627420042,
+      "fraction_batches_B_ge_4": 0.0022415909033987025,
+      "fraction_batches_B_eq_8": 0.0,
+      "fraction_queries_B_ge_2": 0.37971,
+      "fraction_queries_B_ge_4": 0.00728,
+      "fraction_queries_B_eq_8": 0.0,
+      "mixed_type_batches": 9433,
+      "query_wait_ps": {
+        "mean": 449712120.67132,
+        "p50": 500000000,
+        "p90": 500000000,
+        "p99": 500000000,
+        "max": 500000000
+      },
+      "query_weighted_source_bytes": 3066393600.0,
+      "batch_weighted_E_source_bytes_over_B": 3393601322.4134045,
+      "query_weighted_over_keeper": 3.0215871608276115,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "mean_B<2.5",
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      },
+      "analytic": {
+        "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+        "batch_probabilities": [
+          0.7788007830714049,
+          0.19470019576785122,
+          0.024337524470981402,
+          0.00202812703924845,
+          0.00012675793995302814,
+          6.337896997651407e-06,
+          2.640790415688086e-07,
+          9.734521814031624e-09
+        ],
+        "mean_B": 1.2499999996882618,
+        "variance_B": 0.24999999546213705,
+        "query_weighted_bytes": 3072000000.7661276,
+        "batch_weighted_E_bytes_over_B": 3397619972.039754,
+        "exact_mean_upper_bound": {
+          "numerator": 2500,
+          "denominator": 2000
+        },
+        "source_model_lower_bound_fraction": {
+          "numerator": 7680000000000,
+          "denominator": 2500
+        }
+      },
+      "raw_trace": {
+        "file": "500qps.csv.gz",
+        "bytes": 1675724,
+        "sha256": "011b2d0938f3852cd94ad07a58bdaaf88b6a4531152a0d31fbc0ba6c7538b004"
+      }
+    },
+    {
+      "rate_qps": 1000,
+      "seed": 2026102400,
+      "queries": 100000,
+      "batches": 66616,
+      "arrival_horizon_ps": 100046093850545,
+      "mix_counts": {
+        "range": 50000,
+        "knn": 50000
+      },
+      "batch_counts_B1_to_B8": [
+        40391,
+        20167,
+        5058,
+        909,
+        81,
+        10,
+        0,
+        0
+      ],
+      "mean_B_batch_weighted": 1.5011408670589648,
+      "mean_B_query_experienced": 1.8351,
+      "p50_B_batch_weighted": 1,
+      "p90_B_batch_weighted": 2,
+      "fraction_batches_B_ge_2": 0.39367419238621354,
+      "fraction_batches_B_ge_4": 0.015011408670589648,
+      "fraction_batches_B_eq_8": 0.0,
+      "fraction_queries_B_ge_2": 0.59609,
+      "fraction_queries_B_ge_4": 0.04101,
+      "fraction_queries_B_eq_8": 0.0,
+      "mixed_type_batches": 14802,
+      "query_wait_ps": {
+        "mean": 417131482.35154,
+        "p50": 500000000,
+        "p90": 500000000,
+        "p99": 500000000,
+        "max": 500000000
+      },
+      "query_weighted_source_bytes": 2558054400.0,
+      "batch_weighted_E_source_bytes_over_B": 3020859373.123574,
+      "query_weighted_over_keeper": 2.5206758622697945,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "mean_B<2.5",
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      },
+      "analytic": {
+        "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+        "batch_probabilities": [
+          0.6065306597126334,
+          0.3032653298563167,
+          0.07581633246407918,
+          0.012636055410679864,
+          0.001579506926334983,
+          0.0001579506926334983,
+          1.316255771945819e-05,
+          1.0023796028843001e-06
+        ],
+        "mean_B": 1.499999934188559,
+        "variance_B": 0.49999907103582786,
+        "query_weighted_bytes": 2560000112.3181977,
+        "batch_weighted_E_bytes_over_B": 3021844536.8769264,
+        "exact_mean_upper_bound": {
+          "numerator": 3000,
+          "denominator": 2000
+        },
+        "source_model_lower_bound_fraction": {
+          "numerator": 7680000000000,
+          "denominator": 3000
+        }
+      },
+      "raw_trace": {
+        "file": "1000qps.csv.gz",
+        "bytes": 1678445,
+        "sha256": "48778e5fd4122367f38bb632df19cc026d85d0e10e8f062c473d11fe04311468"
+      }
+    },
+    {
+      "rate_qps": 5000,
+      "seed": 2026106400,
+      "queries": 100000,
+      "batches": 28444,
+      "arrival_horizon_ps": 19893866772405,
+      "mix_counts": {
+        "range": 50000,
+        "knn": 50000
+      },
+      "batch_counts_B1_to_B8": [
+        2288,
+        5750,
+        7252,
+        6114,
+        3879,
+        1916,
+        851,
+        394
+      ],
+      "mean_B_batch_weighted": 3.515679932498945,
+      "mean_B_query_experienced": 4.21246,
+      "p50_B_batch_weighted": 3,
+      "p90_B_batch_weighted": 6,
+      "fraction_batches_B_ge_2": 0.9195612431444241,
+      "fraction_batches_B_ge_4": 0.46245253832091127,
+      "fraction_batches_B_eq_8": 0.013851778934045844,
+      "fraction_queries_B_ge_2": 0.97712,
+      "fraction_queries_B_ge_4": 0.64456,
+      "fraction_queries_B_eq_8": 0.03152,
+      "mixed_type_batches": 20289,
+      "query_wait_ps": {
+        "mean": 319273674.2008,
+        "p50": 346386843,
+        "p90": 500000000,
+        "p99": 500000000,
+        "max": 500000000
+      },
+      "query_weighted_source_bytes": 1092249600.0,
+      "batch_weighted_E_source_bytes_over_B": 1400618277.5177293,
+      "query_weighted_over_keeper": 1.0762895434490518,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      },
+      "analytic": {
+        "formula": "B=min(1+Poisson(lambda*0.0005),8)",
+        "batch_probabilities": [
+          0.0820849986238988,
+          0.205212496559747,
+          0.25651562069968376,
+          0.21376301724973645,
+          0.13360188578108528,
+          0.06680094289054264,
+          0.027833726204392766,
+          0.014187311990913352
+        ],
+        "mean_B": 3.4942585884481283,
+        "variance_B": 2.4386624042326854,
+        "query_weighted_bytes": 1098945571.0847728,
+        "batch_weighted_E_bytes_over_B": 1410204427.5976968,
+        "exact_mean_upper_bound": {
+          "numerator": 7000,
+          "denominator": 2000
+        },
+        "source_model_lower_bound_fraction": {
+          "numerator": 7680000000000,
+          "denominator": 7000
+        }
+      },
+      "raw_trace": {
+        "file": "5000qps.csv.gz",
+        "bytes": 1675733,
+        "sha256": "155643eb786e937ddc946a8c19ff7e26a3d3d08ee6dbf87016689199651ef007"
+      }
+    }
+  ],
+  "final": "NO_GO_CROSS_QUERY_REUSE",
+  "GPU_starts": 0,
+  "query_state_bytes": "UNKNOWN",
+  "output_bytes": "UNKNOWN",
+  "control_bytes": "UNKNOWN",
+  "actual_DRAM": "NOT_RUN",
+  "Host_ready_latency": "NOT_RUN",
+  "exactness": "NOT_RUN"
+}

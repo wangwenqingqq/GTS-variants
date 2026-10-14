@@ -1,0 +1,30 @@
+{
+  "scope": "reference comparison; original fixed32 range workload, not same-contract mixed range/kNN E2E",
+  "keeper_source_bytes": 1014828776,
+  "keeper_range_Host_ready_ms": 1.14085521875,
+  "strengthened_B1_range_Host_ready_ms": 2.57311653125,
+  "keeper_mixed_or_knn_source_bytes": "UNKNOWN",
+  "new_GPU_performance": "NOT_RUN",
+  "rows": [
+    {
+      "rate_qps": 100,
+      "query_weighted_bytes": 3659366400.0,
+      "over_frozen_range_reference": 3.605895385055577
+    },
+    {
+      "rate_qps": 500,
+      "query_weighted_bytes": 3066393600.0,
+      "over_frozen_range_reference": 3.0215871608276115
+    },
+    {
+      "rate_qps": 1000,
+      "query_weighted_bytes": 2558054400.0,
+      "over_frozen_range_reference": 2.5206758622697945
+    },
+    {
+      "rate_qps": 5000,
+      "query_weighted_bytes": 1092249600.0,
+      "over_frozen_range_reference": 1.0762895434490518
+    }
+  ]
+}

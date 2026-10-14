@@ -1,0 +1,72 @@
+{
+  "scope": "optimistic source model only; not DRAM or total traffic",
+  "DB_SHARED_BYTES_per_batch": 3840000000,
+  "QUERY_STATE_UNKNOWN": true,
+  "OUTPUT_UNKNOWN": true,
+  "CONTROL_UNKNOWN": true,
+  "rows": [
+    {
+      "rate_qps": 100,
+      "query_weighted_bytes": 3659366400.0,
+      "exact_primary_fraction": {
+        "numerator": 365936640000000,
+        "denominator": 100000
+      },
+      "batch_weighted_E_bytes_over_B": 3746826729.348556,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "mean_B<2.5",
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      }
+    },
+    {
+      "rate_qps": 500,
+      "query_weighted_bytes": 3066393600.0,
+      "exact_primary_fraction": {
+        "numerator": 306639360000000,
+        "denominator": 100000
+      },
+      "batch_weighted_E_bytes_over_B": 3393601322.4134045,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "mean_B<2.5",
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      }
+    },
+    {
+      "rate_qps": 1000,
+      "query_weighted_bytes": 2558054400.0,
+      "exact_primary_fraction": {
+        "numerator": 255805440000000,
+        "denominator": 100000
+      },
+      "batch_weighted_E_bytes_over_B": 3020859373.123574,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "mean_B<2.5",
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      }
+    },
+    {
+      "rate_qps": 5000,
+      "query_weighted_bytes": 1092249600.0,
+      "exact_primary_fraction": {
+        "numerator": 109224960000000,
+        "denominator": 100000
+      },
+      "batch_weighted_E_bytes_over_B": 1400618277.5177293,
+      "point_decision": {
+        "label": "NO_GO_CROSS_QUERY_REUSE",
+        "reasons": [
+          "query_weighted_source_bytes>1.0GB"
+        ]
+      }
+    }
+  ]
+}

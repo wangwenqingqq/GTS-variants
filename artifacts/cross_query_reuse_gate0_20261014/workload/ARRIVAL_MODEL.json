@@ -1,0 +1,22 @@
+{
+  "model": "iid exponential gaps rounded to1ps; no device service",
+  "rates_qps": [
+    100,
+    500,
+    1000,
+    5000
+  ],
+  "queries_per_rate": 100000,
+  "mix": {
+    "range": 0.5,
+    "knn": 0.5,
+    "counts_each": 50000,
+    "independent_shuffle": true,
+    "actual_queries_evaluated": false
+  },
+  "seed_rule": "2026101400+rate; mix shuffle seed=arrival seed+10000000",
+  "warmup": 0,
+  "final_partial_batch": "ordinary timer drain",
+  "real_arrivals": false,
+  "GIST_vectors_loaded": false
+}
