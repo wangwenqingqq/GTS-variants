@@ -1,0 +1,174 @@
+{
+  "experiment": "GTSPP_20261015_PDX_BOND_GPU_REALIZABILITY_GATE4_GPU",
+  "scope": "one static B1 exact-range prior-art adapter;no novelty/dynamic/production promotion",
+  "cpu_contract_sha256": "9afe094ddb33a76b27d67ff5db160ed3e009718d283b2142ee560bab1b26fc8d",
+  "cpu_results_sha256": "9b281e468e4bcf88aee93fa6a5ad5cb0b9a42e1adf7ef1ae18afc81769411b03",
+  "CPU_gate": {
+    "logical": "LOGICAL_MODERATE",
+    "source": "SOURCE_WIN",
+    "final": null,
+    "GPU_admitted": true,
+    "GPU_starts": 0,
+    "capture": 0.49738311816121766,
+    "source_bytes": 711680776.0
+  },
+  "global_means_sha256": "fec927e467fcccd353e958a5b1b4ff2110a65bb93379bd475ba07d20bc17ca50",
+  "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+  "qids": [
+    88406,
+    865632,
+    881748,
+    916533,
+    40158,
+    242468,
+    40486,
+    900387,
+    703226,
+    791039,
+    724874,
+    671829,
+    722418,
+    152899,
+    737995,
+    144573,
+    570909,
+    347206,
+    63744,
+    625378,
+    136857,
+    201233,
+    72436,
+    617423,
+    810945,
+    789615,
+    601856,
+    433080,
+    415755,
+    282095,
+    66651,
+    326654
+  ],
+  "hardware": {
+    "model": "NVIDIA RTX PRO6000 Blackwell Server Edition",
+    "target": "sm_120",
+    "driver": "590.48.01",
+    "nvcc": "13.1 V13.1.115",
+    "device": "live-admitted idle single card;private placement",
+    "isolation": "one campaign flock plus preserved per-device/starttime two-sided guard;abort on foreign activity",
+    "no_settings_changes": true
+  },
+  "quality": {
+    "N_bounded": 4096,
+    "N_target": 1000000,
+    "fixture_iterations": 100,
+    "stream_slots": 2,
+    "tools": [
+      "memcheck",
+      "racecheck",
+      "synccheck"
+    ],
+    "complete_checkpoint_IDs": true,
+    "internal_FP64_score_bits": "qualification full-hit PrefixState.sum against original authority",
+    "fields": "preserve FP32 sqrt and FP32-square cast to FP64 observer;bit-exact squared observer and inherited5e-5 scale tolerance",
+    "Graph": "forbidden",
+    "sustained": "six complete32-query passes only"
+  },
+  "measurement": {
+    "scope": "Host request ready -> complete Host output ready",
+    "warmup": 8,
+    "measured_queries_per_process": 32,
+    "processes_per_mode": 6,
+    "orders": [
+      "K/B",
+      "B/K",
+      "K/B",
+      "B/K",
+      "K/B",
+      "B/K"
+    ],
+    "primary_estimator": "ratio of medians of6 process mean ACKs",
+    "paired_estimator": "matched-round geometric ratio",
+    "bootstrap": {
+      "resamples": 20000,
+      "seed": 2026101302,
+      "unit": "matched process rounds",
+      "CI": "95% percentile log-ratio resampling"
+    },
+    "traffic": "independent NCU32-query ALL-kernel sums,arithmetic mean bytes/query",
+    "included": [
+      "query-specific official priority/30-zone sort",
+      "two30-int order/parameter uploads",
+      "all staged scans/FP64 restoration",
+      "CUB compact/count waits",
+      "complete native field generation and Host output"
+    ],
+    "excluded": [
+      "one-time global means/preprocessing",
+      "context/data load/allocation/upload",
+      "qualification checkpoint/authority exports",
+      "profiler overhead"
+    ]
+  },
+  "NCU_metrics": [
+    "gpu__time_duration.avg",
+    "dram__bytes.sum",
+    "dram__bytes_op_read.sum",
+    "dram__bytes_op_write.sum",
+    "lts__t_bytes.sum",
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+    "sm__warps_active.avg.pct_of_peak_sustained_active"
+  ],
+  "max_GPU_starts": 26,
+  "budget": {
+    "qualification": 10,
+    "primary": 12,
+    "NCU": 2,
+    "breakdown": 2,
+    "automatic_retries": 0
+  },
+  "decision_priority_approved": false,
+  "prospective_priority": [
+    "BASELINE_INVALID",
+    "PRIOR_ART_WINS",
+    "LOGICAL_WIN_PHYSICAL_FAIL",
+    "remaining PRIOR_ART_LOSES",
+    "UNCLASSIFIED;stop,not a forced final label"
+  ],
+  "gates": {
+    "win": "latency_ratio<=.90 and DRAM_ratio<=.90 and pairedwins>=5/6 and paired95%CIupper<.97",
+    "strong_secondary": "win and bothratios<=.80",
+    "physical_fail": "source<=800000000 and(DRAM_ratio>=.95 or latency_ratio>=.95)",
+    "remaining_lose": "latency_ratio>=1 and DRAM_ratio>=1",
+    "gray": "all remaining cases UNCLASSIFIED;stop,no threshold relaxation"
+  },
+  "candidate": {
+    "versions": 1,
+    "shape": "8warps/CTA,1warp/row,stable16B tuples",
+    "raw_layout": "single FP32 original row-major",
+    "added_device_order_bytes": 240,
+    "static_Host_mean_bytes": 3840,
+    "exactness_restoration": "original-order selected-subset replay at uncertainty;full original960 replay for retained final hits;charged",
+    "no_retention_shortcut": true
+  },
+  "parents": {
+    "artifacts/progressive_gpu_gate2_20261013/progressive.cuh": "fa6352c852c609c6e9cea7b2d362aa9bfd451f9c809e520bdeba2bbe47cc16db",
+    "artifacts/progressive_gpu_gate2_20261013/fixtures.hpp": "0304b6aa804218b302a03dd4ab820194b76333df4ea7951398dd567fdad9c029",
+    "artifacts/progressive_gpu_gate2_20261013/campaign.py": "ff24c0a9bea9772d3c0a2bfde93b16392e1e7d7e531826ef410cafbd2c52fa45",
+    "artifacts/progressive_gpu_gate2_20261013/curate.py": "101c708e367b7c4e2a8fe936f04a08c3f50d3397557817fa08d82731518a2cc4",
+    "artifacts/progressive_gpu_gate2_20261013/analyze.py": "fb56bcee1a0b28bf5d050b85afc3a6172f76b636006414e70618b0b5a865808f",
+    "artifacts/progressive_gpu_gate2_20261013/prepare.py": "ec9a70d6abd1c79d821e6323066701282c2ff14f0e6f2e5da3e498a66e3b0219",
+    "artifacts/progressive_gpu_gate2_20261013/pre_cost.py": "3ba44408f5212a7f1eefb7e08ff0259e98aebe92dd233823a49c07bda6365561",
+    "artifacts/progressive_gpu_gate2_20261013/static_evidence.py": "6344fa339edcebca18b83420666caed30a5c1db5c635c227b721973e6cee0f27",
+    "artifacts/external_closure/range_service.cu": "53bfd07fe17c5fd0c351032823005ce05b6dc59cf081c433e29a5ad8b2100015",
+    "artifacts/external_closure/static_guard.py": "36e9b8f341093613e8671be47f956ea0ae34de66e2f1723326f81b84fd09a4cb",
+    "artifacts/external_closure/common.py": "bb2ed5e1cced5305831cec13a57b79b4145afc85e4db2dee5af365dcb0dd0103",
+    "artifacts/unified_target_workflow/run.py": "df589fac6fce481098b212e53e8ab2724e3ded280c125a63caef27b143a68509",
+    "artifacts/unified_search_update/run.py": "414c8cbece562832658bac680d4ba33a036a69cb353b8ac9cba1f91ccb85ce50",
+    "artifacts/unified_search_update/protocol.py": "0f816d970fac17bc30d5fdc8c71d71e9081019b5d74942ddba1e3d18b1a66f5f",
+    "artifacts/par_range_update/reproduce.py": "e3647d578dc6381b55481e9bc2fc712af4a9dc1ce1c25fcb0f4e8bb5235d835b",
+    "artifacts/par_range_update/fixtures.py": "8a3a3c2741bedbf01b0dc31afbe31d90b503f73dbd80e8ca98f4bb09c3cf64be",
+    "diagnostics/region_exec_20261008/audit_closure.py": "930330a47f55db83005e2afd4eaad9c56c56405985d481564874c13c7c047381",
+    "artifacts/exact_representation_gate1_20261012/evidence/RAW_IDENTITY.json": "bb2d84c9bf24ee69d04e980bef9a7a3a030428c3976bbae717a0f86ccef191aa"
+  },
+  "stop": "first isolation/provenance/runtime/quality failure;retain failed+unexecuted rows;no automatic retry/tuning"
+}

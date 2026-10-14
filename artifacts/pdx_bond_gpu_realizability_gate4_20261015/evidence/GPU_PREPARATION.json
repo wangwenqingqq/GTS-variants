@@ -1,0 +1,38 @@
+{
+  "status": "PREPARATION_SOURCE_PREFLIGHT_FAILED",
+  "attempt": 1,
+  "GPU_starts": 0,
+  "CUDA_initializations": 0,
+  "nvcc_invocations": 0,
+  "GPU_work_created": false,
+  "failure": "preserved remote dependency snapshot differs from current publication sources;refused before creating GPU work",
+  "mismatches": [
+    {
+      "path": "artifacts/progressive_gpu_gate2_20261013/campaign.py",
+      "expected_sha256": "ff24c0a9bea9772d3c0a2bfde93b16392e1e7d7e531826ef410cafbd2c52fa45",
+      "actual_sha256": "4e1351daf141f2d0d3fa7093d1ea1fdc33aa661ffd81d4037a10c24a74004f64",
+      "missing": false
+    },
+    {
+      "path": "artifacts/progressive_gpu_gate2_20261013/curate.py",
+      "expected_sha256": "101c708e367b7c4e2a8fe936f04a08c3f50d3397557817fa08d82731518a2cc4",
+      "actual_sha256": null,
+      "missing": true
+    },
+    {
+      "path": "artifacts/progressive_gpu_gate2_20261013/prepare.py",
+      "expected_sha256": "ec9a70d6abd1c79d821e6323066701282c2ff14f0e6f2e5da3e498a66e3b0219",
+      "actual_sha256": "08ac593f700f6bc75eda73bb3eca68e77ed3158d0c7945da7010d541372bdd54",
+      "missing": false
+    },
+    {
+      "path": "artifacts/progressive_gpu_gate2_20261013/static_evidence.py",
+      "expected_sha256": "6344fa339edcebca18b83420666caed30a5c1db5c635c227b721973e6cee0f27",
+      "actual_sha256": "6db287dfde79b232697b6c64305d3d51fb84fef97daa5f0528e1cc16a36c1207",
+      "missing": false
+    }
+  ],
+  "kernel_and_range_service_and_guard_sources_matched": true,
+  "recovery": "pending human approval to register a fresh task-owned dependency snapshot;no automatic retry",
+  "decision_priority_confirmation": "pending;no GPU measurement yet"
+}
