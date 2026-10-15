@@ -1,0 +1,830 @@
+[
+  {
+    "job": {
+      "label": "r1_NATIVE_MARKED_R_1",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 1,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014183903686523436,
+      "p50_ACK_ms": 0.014295,
+      "p95_ACK_ms": 0.01593735,
+      "total_ACK_ms": 116.19453899999999,
+      "amortized_us_per_point": 7.091951843261718,
+      "point_updates_per_s": 141004.90557477923
+    }
+  },
+  {
+    "job": {
+      "label": "r1_WAVES_MARKED_R_1",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 1,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014129215698242187,
+      "p50_ACK_ms": 0.014269,
+      "p95_ACK_ms": 0.015933,
+      "total_ACK_ms": 115.746535,
+      "amortized_us_per_point": 7.064607849121093,
+      "point_updates_per_s": 141550.6736335563
+    }
+  },
+  {
+    "job": {
+      "label": "r1_FINAL_MARKED_R_1",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 1,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014324118408203124,
+      "p50_ACK_ms": 0.014371,
+      "p95_ACK_ms": 0.01602145,
+      "total_ACK_ms": 117.343178,
+      "amortized_us_per_point": 7.1620592041015625,
+      "point_updates_per_s": 139624.64865234858
+    }
+  },
+  {
+    "job": {
+      "label": "r1_NATIVE_MARKED_R_512",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 1,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.643095875,
+      "p50_ACK_ms": 1.6066485,
+      "p95_ACK_ms": 1.7793175,
+      "total_ACK_ms": 26.289534,
+      "amortized_us_per_point": 1.6045858154296875,
+      "point_updates_per_s": 623213.7853793832
+    }
+  },
+  {
+    "job": {
+      "label": "r1_WAVES_MARKED_R_512",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 1,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.621710625,
+      "p50_ACK_ms": 1.599694,
+      "p95_ACK_ms": 1.73201425,
+      "total_ACK_ms": 25.94737,
+      "amortized_us_per_point": 1.5837017822265624,
+      "point_updates_per_s": 631432.0102576871
+    }
+  },
+  {
+    "job": {
+      "label": "r1_FINAL_MARKED_R_512",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 1,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.4635765625,
+      "p50_ACK_ms": 0.460374,
+      "p95_ACK_ms": 0.487078,
+      "total_ACK_ms": 7.417225,
+      "amortized_us_per_point": 0.45271148681640627,
+      "point_updates_per_s": 2208912.362777184
+    }
+  },
+  {
+    "job": {
+      "label": "r2_FINAL_MARKED_R_512",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 2,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.4806824375,
+      "p50_ACK_ms": 0.48171600000000003,
+      "p95_ACK_ms": 0.52360425,
+      "total_ACK_ms": 7.690919,
+      "amortized_us_per_point": 0.46941644287109374,
+      "point_updates_per_s": 2130304.583886529
+    }
+  },
+  {
+    "job": {
+      "label": "r2_WAVES_MARKED_R_512",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 2,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.60593025,
+      "p50_ACK_ms": 1.5772095,
+      "p95_ACK_ms": 1.7236552500000002,
+      "total_ACK_ms": 25.694884,
+      "amortized_us_per_point": 1.568291259765625,
+      "point_updates_per_s": 637636.6595000001
+    }
+  },
+  {
+    "job": {
+      "label": "r2_NATIVE_MARKED_R_512",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 2,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.6740306249999999,
+      "p50_ACK_ms": 1.660404,
+      "p95_ACK_ms": 1.769576,
+      "total_ACK_ms": 26.784489999999998,
+      "amortized_us_per_point": 1.6347955322265624,
+      "point_updates_per_s": 611697.2919775588
+    }
+  },
+  {
+    "job": {
+      "label": "r2_FINAL_MARKED_R_1",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 2,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.0141073564453125,
+      "p50_ACK_ms": 0.014245,
+      "p95_ACK_ms": 0.01583135,
+      "total_ACK_ms": 115.567464,
+      "amortized_us_per_point": 7.05367822265625,
+      "point_updates_per_s": 141770.00544028552
+    }
+  },
+  {
+    "job": {
+      "label": "r2_WAVES_MARKED_R_1",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 2,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.01412009521484375,
+      "p50_ACK_ms": 0.014247,
+      "p95_ACK_ms": 0.015914,
+      "total_ACK_ms": 115.67182,
+      "amortized_us_per_point": 7.0600476074218745,
+      "point_updates_per_s": 141642.10436042244
+    }
+  },
+  {
+    "job": {
+      "label": "r2_NATIVE_MARKED_R_1",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 2,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014239527954101562,
+      "p50_ACK_ms": 0.014296,
+      "p95_ACK_ms": 0.01608,
+      "total_ACK_ms": 116.650213,
+      "amortized_us_per_point": 7.119763977050781,
+      "point_updates_per_s": 140454.0941558332
+    }
+  },
+  {
+    "job": {
+      "label": "r3_NATIVE_MARKED_R_1",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 3,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014206090454101563,
+      "p50_ACK_ms": 0.014297,
+      "p95_ACK_ms": 0.016043,
+      "total_ACK_ms": 116.376293,
+      "amortized_us_per_point": 7.103045227050782,
+      "point_updates_per_s": 140784.68713554915
+    }
+  },
+  {
+    "job": {
+      "label": "r3_WAVES_MARKED_R_1",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 3,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014161898559570313,
+      "p50_ACK_ms": 0.014263,
+      "p95_ACK_ms": 0.015972,
+      "total_ACK_ms": 116.014273,
+      "amortized_us_per_point": 7.080949279785156,
+      "point_updates_per_s": 141224.00267077482
+    }
+  },
+  {
+    "job": {
+      "label": "r3_FINAL_MARKED_R_1",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 3,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014057894165039062,
+      "p50_ACK_ms": 0.014213,
+      "p95_ACK_ms": 0.015804,
+      "total_ACK_ms": 115.162269,
+      "amortized_us_per_point": 7.028947082519531,
+      "point_updates_per_s": 142268.81896535054
+    }
+  },
+  {
+    "job": {
+      "label": "r3_NATIVE_MARKED_R_512",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 3,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.6690955625,
+      "p50_ACK_ms": 1.631625,
+      "p95_ACK_ms": 1.7877692500000002,
+      "total_ACK_ms": 26.705529,
+      "amortized_us_per_point": 1.6299761352539062,
+      "point_updates_per_s": 613505.9148238554
+    }
+  },
+  {
+    "job": {
+      "label": "r3_WAVES_MARKED_R_512",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 3,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.6050366875,
+      "p50_ACK_ms": 1.5800554999999998,
+      "p95_ACK_ms": 1.71168775,
+      "total_ACK_ms": 25.680587,
+      "amortized_us_per_point": 1.5674186401367187,
+      "point_updates_per_s": 637991.6471535483
+    }
+  },
+  {
+    "job": {
+      "label": "r3_FINAL_MARKED_R_512",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 3,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.4791645625,
+      "p50_ACK_ms": 0.4835305,
+      "p95_ACK_ms": 0.51399325,
+      "total_ACK_ms": 7.666633,
+      "amortized_us_per_point": 0.46793414306640624,
+      "point_updates_per_s": 2137052.862710397
+    }
+  },
+  {
+    "job": {
+      "label": "r4_FINAL_MARKED_R_512",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 4,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.4646920625,
+      "p50_ACK_ms": 0.4621675,
+      "p95_ACK_ms": 0.5051265,
+      "total_ACK_ms": 7.435073,
+      "amortized_us_per_point": 0.45380084228515627,
+      "point_updates_per_s": 2203609.8367830417
+    }
+  },
+  {
+    "job": {
+      "label": "r4_WAVES_MARKED_R_512",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 4,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.6125046250000001,
+      "p50_ACK_ms": 1.585269,
+      "p95_ACK_ms": 1.7170255,
+      "total_ACK_ms": 25.800074000000002,
+      "amortized_us_per_point": 1.5747115478515625,
+      "point_updates_per_s": 635036.938266146
+    }
+  },
+  {
+    "job": {
+      "label": "r4_NATIVE_MARKED_R_512",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 4,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.6328,
+      "p50_ACK_ms": 1.6077035,
+      "p95_ACK_ms": 1.7402147499999998,
+      "total_ACK_ms": 26.1248,
+      "amortized_us_per_point": 1.59453125,
+      "point_updates_per_s": 627143.5570798628
+    }
+  },
+  {
+    "job": {
+      "label": "r4_FINAL_MARKED_R_1",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 4,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.013950810058593749,
+      "p50_ACK_ms": 0.0140875,
+      "p95_ACK_ms": 0.015722,
+      "total_ACK_ms": 114.28503599999999,
+      "amortized_us_per_point": 6.975405029296875,
+      "point_updates_per_s": 143360.8508466498
+    }
+  },
+  {
+    "job": {
+      "label": "r4_WAVES_MARKED_R_1",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 4,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014085109741210938,
+      "p50_ACK_ms": 0.0142405,
+      "p95_ACK_ms": 0.015883,
+      "total_ACK_ms": 115.385219,
+      "amortized_us_per_point": 7.0425548706054695,
+      "point_updates_per_s": 141993.9238491197
+    }
+  },
+  {
+    "job": {
+      "label": "r4_NATIVE_MARKED_R_1",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 4,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014077780883789063,
+      "p50_ACK_ms": 0.014182,
+      "p95_ACK_ms": 0.0158719,
+      "total_ACK_ms": 115.325181,
+      "amortized_us_per_point": 7.038890441894531,
+      "point_updates_per_s": 142067.84552976335
+    }
+  },
+  {
+    "job": {
+      "label": "r5_NATIVE_MARKED_R_1",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 5,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.015746411987304688,
+      "p50_ACK_ms": 0.015509,
+      "p95_ACK_ms": 0.01806045,
+      "total_ACK_ms": 128.994607,
+      "amortized_us_per_point": 7.873205993652344,
+      "point_updates_per_s": 127013.06187164864
+    }
+  },
+  {
+    "job": {
+      "label": "r5_WAVES_MARKED_R_1",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 5,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.01534088623046875,
+      "p50_ACK_ms": 0.015126,
+      "p95_ACK_ms": 0.01732935,
+      "total_ACK_ms": 125.67254,
+      "amortized_us_per_point": 7.670443115234375,
+      "point_updates_per_s": 130370.56464363655
+    }
+  },
+  {
+    "job": {
+      "label": "r5_FINAL_MARKED_R_1",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 5,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.01847673864746094,
+      "p50_ACK_ms": 0.0153685,
+      "p95_ACK_ms": 0.0266628,
+      "total_ACK_ms": 151.361443,
+      "amortized_us_per_point": 9.238369323730469,
+      "point_updates_per_s": 108244.21117602584
+    }
+  },
+  {
+    "job": {
+      "label": "r5_NATIVE_MARKED_R_512",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 5,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.92002125,
+      "p50_ACK_ms": 1.81006,
+      "p95_ACK_ms": 2.7029375,
+      "total_ACK_ms": 30.72034,
+      "amortized_us_per_point": 1.875020751953125,
+      "point_updates_per_s": 533327.4306208851
+    }
+  },
+  {
+    "job": {
+      "label": "r5_WAVES_MARKED_R_512",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 5,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.8713728125,
+      "p50_ACK_ms": 1.8248015,
+      "p95_ACK_ms": 2.130646,
+      "total_ACK_ms": 29.941965,
+      "amortized_us_per_point": 1.8275125122070313,
+      "point_updates_per_s": 547191.8760174891
+    }
+  },
+  {
+    "job": {
+      "label": "r5_FINAL_MARKED_R_512",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 5,
+      "order": "forward"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.48328974999999996,
+      "p50_ACK_ms": 0.481623,
+      "p95_ACK_ms": 0.51352825,
+      "total_ACK_ms": 7.732635999999999,
+      "amortized_us_per_point": 0.47196264648437497,
+      "point_updates_per_s": 2118811.748024865
+    }
+  },
+  {
+    "job": {
+      "label": "r6_FINAL_MARKED_R_512",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 6,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.467779875,
+      "p50_ACK_ms": 0.45974400000000004,
+      "p95_ACK_ms": 0.5126645,
+      "total_ACK_ms": 7.484478,
+      "amortized_us_per_point": 0.4568162841796875,
+      "point_updates_per_s": 2189063.819814822
+    }
+  },
+  {
+    "job": {
+      "label": "r6_WAVES_MARKED_R_512",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 6,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.7377588125,
+      "p50_ACK_ms": 1.6736375,
+      "p95_ACK_ms": 2.0037325,
+      "total_ACK_ms": 27.804141,
+      "amortized_us_per_point": 1.6970300903320312,
+      "point_updates_per_s": 589264.7429747964
+    }
+  },
+  {
+    "job": {
+      "label": "r6_NATIVE_MARKED_R_512",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 0,
+      "round": 6,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 1.7219266874999999,
+      "p50_ACK_ms": 1.7018475,
+      "p95_ACK_ms": 1.95514225,
+      "total_ACK_ms": 27.550826999999998,
+      "amortized_us_per_point": 1.6815690307617186,
+      "point_updates_per_s": 594682.6931910247
+    }
+  },
+  {
+    "job": {
+      "label": "r6_FINAL_MARKED_R_1",
+      "kind": "micro",
+      "update": "FINAL",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 6,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.014240077758789063,
+      "p50_ACK_ms": 0.014311,
+      "p95_ACK_ms": 0.0160279,
+      "total_ACK_ms": 116.654717,
+      "amortized_us_per_point": 7.1200388793945315,
+      "point_updates_per_s": 140448.671269761
+    }
+  },
+  {
+    "job": {
+      "label": "r6_WAVES_MARKED_R_1",
+      "kind": "micro",
+      "update": "WAVES",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 6,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.01505391943359375,
+      "p50_ACK_ms": 0.014692,
+      "p95_ACK_ms": 0.018072699999999997,
+      "total_ACK_ms": 123.321708,
+      "amortized_us_per_point": 7.526959716796875,
+      "point_updates_per_s": 132855.76615594717
+    }
+  },
+  {
+    "job": {
+      "label": "r6_NATIVE_MARKED_R_1",
+      "kind": "micro",
+      "update": "NATIVE",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 0,
+      "round": 6,
+      "order": "reverse"
+    },
+    "micro": {
+      "mean_ACK_ms": 0.015401615478515625,
+      "p50_ACK_ms": 0.014527,
+      "p95_ACK_ms": 0.019224299999999996,
+      "total_ACK_ms": 126.170034,
+      "amortized_us_per_point": 7.7008077392578125,
+      "point_updates_per_s": 129856.50776633697
+    }
+  }
+]

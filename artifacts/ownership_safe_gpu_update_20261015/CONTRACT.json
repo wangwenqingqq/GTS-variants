@@ -1,0 +1,151 @@
+{
+  "experiment": "GTSPP_20261015_OWNERSHIP_SAFE_UPDATE",
+  "parent_commit": "85b56c7607ec6fd65b3ab535bc9f90bf447e1073",
+  "plan_sha256": "8952f641e6a1ab5de0b87667bedfe50fc2da73945b5c07fa0f951c8d6e6b77db",
+  "parent_manifest_sha256": "e7bc8bd13000998ab5198ac2a0a0e1b51a45072c022c2b16c292543a21f9bd77",
+  "scope": "Strict full-capacity byte-compatible ownership transformation;ordinary safe CUDA batch comparator;no novelty or production admission",
+  "N": 1000000,
+  "D": 960,
+  "B_query": 1,
+  "qids": [
+    88406,
+    865632,
+    881748,
+    916533,
+    40158,
+    242468,
+    40486,
+    900387,
+    703226,
+    791039,
+    724874,
+    671829,
+    722418,
+    152899,
+    737995,
+    144573,
+    570909,
+    347206,
+    63744,
+    625378,
+    136857,
+    201233,
+    72436,
+    617423,
+    810945,
+    789615,
+    601856,
+    433080,
+    415755,
+    282095,
+    66651,
+    326654
+  ],
+  "radius": 0.705625057220459,
+  "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+  "means_sha256": "fec927e467fcccd353e958a5b1b4ff2110a65bb93379bd475ba07d20bc17ca50",
+  "hardware": {
+    "model": "NVIDIA RTX PRO6000 Blackwell Server Edition",
+    "target": "sm_120",
+    "driver": "590.48.01",
+    "nvcc": "13.1 V13.1.115",
+    "placement": "live idle card with matched NUMA;private placement",
+    "no_GPU_settings_changes": true,
+    "nsys": "2025.5.2.266-255236693005v0",
+    "gpu_metrics_set": "gb20x",
+    "gpu_metrics_config_sha256": "5245cbad87b0010c9eedc0bddbaaf2d4dbb578335554a40426f136e38888b3ce",
+    "gpu_metrics_Hz": 10000
+  },
+  "operators": [
+    "I",
+    "D",
+    "R"
+  ],
+  "batch_sizes": [
+    1,
+    32,
+    512
+  ],
+  "micro": {
+    "K": 8192,
+    "bounded_N": 4096,
+    "bounded_K": 2048,
+    "initial_live_N": 1000000,
+    "insert_preparation": "Untimed deleteK in fixed512-row chunks;then8 query warmups before formal insert",
+    "delete": "DeleteK original occurrence IDs,no insertion",
+    "replacement": "K original deletes andK fresh occurrence inserts;ACK per complete batch pair",
+    "payload": "Same inherited W2 victims and coordinate-rotated incoming vectors,firstK only",
+    "queries": "8 warmups plus32 final exact validation queries,all outside micro ACKs",
+    "mean_policy": "Frozen initial PDX means throughout;no eager maintenance"
+  },
+  "whole_service": {
+    "systems": [
+      "S1",
+      "S2_STALE"
+    ],
+    "workload": "Exact unchanged parentW2,500k replacements,1M point updates,160 formal queries,8 warmups",
+    "scope": "segmented events+release,identical parent boundary",
+    "binary": "Pinned immutable parent binaries remeasured,not historical timings"
+  },
+  "instrumentation": {
+    "primary": "Unprofiled Host-ready ACK;candidate audit/counters/plan cost included",
+    "calibration": "36 MARKED R/B1/B512 processes paired to the identical36 primary PLAIN cells;one frozen source/compiler,6rounds",
+    "profile": "NSYS and NCU diagnostic-only,separate targets;no API time equated to pure CPU computation"
+  },
+  "measurement": {
+    "primary": "Whole Host-ready operator ACK;all validation,bookkeeping,audit appends,copy submission and required stream wait included",
+    "micro_excluded": [
+      "setup/predelete/initial upload",
+      "8 warmups",
+      "32 final validation queries",
+      "full final-state validation/export",
+      "release from ACK (separately retained)"
+    ],
+    "replacement": "True pair ACK plus nested delete/insert sub-ACKs;do not add both",
+    "stats": "6-process median of within-process mean,p50,p95;finite samples,not SLA",
+    "paired": "6 matched rounds;median ratios and paired process geometric ratios;20000 bootstrap resamples,seed2026101511;effect size,uncertainty and scope separately reported",
+    "orders": "all micro cells and PLAIN/MARKED pairs forward/reverse alternate6 rounds",
+    "requested_bytes": "Issued payload bytes,not physical traffic",
+    "traffic": "CUPTI actual transfer bytes/durations separate from sampled DRAM interface activity;no exact DRAM/L2 bytes inferred",
+    "kernel_metrics": "Only actual application kernels;none expected inside frozen updates;no invented NCU zero-byte counters",
+    "no_hardware_settings_changes": true,
+    "physical": "Legacy swap/H2D fields explicitly renamed sequential reference quantities;true API/launch/metadata/row payload ledgers distinct;exact traffic only from available profilers"
+  },
+  "stages": {
+    "qualification": 42,
+    "screen": 6,
+    "primary": 192,
+    "shapes": 54,
+    "profile": 10,
+    "calibration": 36
+  },
+  "max_GPU_starts": 340,
+  "automatic_retries": 0,
+  "stop": "First source/isolation/runtime/quality failure;preserve passed/failed/unexecuted entries,no automatic replacement",
+  "decision": "About25% operator and10% W2 are value reference lines,not blanket mechanism vetoes;ordinary batching explaining the gain means engineering-only;uncovered scope stays unknown",
+  "controller_interruption": "Guard is a separate session;controller forwards one SIGINT and awaits finally cleanup. CPU tests cover PID and group signals after observer first-byte readiness.",
+  "brief_sha256": "6c96b69665df134a47b0756576a6c9bcbb49391f6c122c7017655b5bd06bb4e9",
+  "variants": [
+    "NATIVE",
+    "WAVES",
+    "FINAL"
+  ],
+  "semantics": {
+    "primary": "Strict sequential-swap final ownership AND all allocated database vector bytes,including retired rows;all per-ACK visibility and occurrence IDs unchanged",
+    "observable": "Weaker observable equivalence also follows;not substituted for strict compatibility",
+    "invalid": "Empty,duplicate IDs,nonlive,out-of-range and >512 batches rejected before mutation",
+    "concurrency": "Serial Host-ready ACK;no concurrent observers inside an erase"
+  },
+  "mechanisms": {
+    "WAVES": "Native operations partitioned into RAW/WAW/WAR-safe levels,each submitted by CUDA13.1 cudaMemcpyBatchAsync;no copy elimination",
+    "FINAL": "Compose original-tail provenance for ALL changed allocated rows,including retired rows;prove final sources disjoint from distinct destinations;one metadata H2D+one coalesced kernel+one stream sync;nativeB1 and one-final-move dispatch"
+  },
+  "progression": {
+    "CPU": "Exhaustive N<=8 plus randomized/invalid and native full-W2 inventory before CUDA",
+    "qualification": "42 targets;first source/isolation/runtime/quality failure stops",
+    "screen": "2 balanced rounds,three D512 processes each;continue primary if either mechanism improves both native means by about25%,or a recorded broader state-work reduction justifies it;not novelty admission",
+    "primary": "6 balanced rounds of9microcells*3 +5service controls(S1,original frozenPDX CURRENT,new audited NATIVE,WAVES,FINAL);all observations retained;originalCURRENT is the external same-campaign anchor",
+    "extension": "54 synthetic shape processes,6 rounds*3shapes*3variants;both D128/D960 per process",
+    "profile": "6 NSYS(native/WAVES/FINAL D512 andW2) +4NCU(FINAL update +NATIVE/WAVES/FINAL W2 query);separate from public ACK"
+  }
+}
