@@ -1,0 +1,3657 @@
+{
+  "trace_I_1": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 80803063,
+    "operators": {
+      "I": {
+        "ranges": 8192,
+        "totals": {
+          "scope_ns": 76843101,
+          "sync_API_ns": 32175611,
+          "copy_API_ns": 28937482,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 3111716,
+          "other_Host_ns": 12618292,
+          "DMA_union_ns": 3720264,
+          "DMA_sum_ns": 3720264,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 31457280,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 8192,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 8192,
+          "INSERT_SUBMIT_ranges": 8192
+        },
+        "scope_ns_quantiles": {
+          "count": 8192,
+          "mean": 9380.261352539062,
+          "p50": 8899.0,
+          "p95": 11280.8,
+          "maximum": 566057.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 8192
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 807,
+        "mean": 100009.46964064437,
+        "p50": 100000.0,
+        "p95": 100033.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 808,
+          "mean": 0.1905940594059406,
+          "p50": 0.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 808,
+          "mean": 0.5594059405940595,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 808,
+          "mean": 11.325495049504951,
+          "p50": 12.0,
+          "p95": 13.0,
+          "maximum": 50.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 808,
+          "mean": 0.9814356435643564,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 808,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 808,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 8192,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "I",
+      "batch": 1,
+      "ACKs": 8192,
+      "point_updates": 8192,
+      "total_ACK_ns": 79638545.0,
+      "mean_ACK_ms": 0.009721502075195313,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 0,
+        "batch": 1,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 1000000,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 80.811761,
+        "release_ms": 14.430756,
+        "preparation_ms": 2446.804323,
+        "offline_state_export_ms": 821.601704,
+        "formal_H2D_request_bytes": 31457280,
+        "formal_D2D_request_bytes": 0,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.1397280000000003,
+        "CPU_events_system_s": 0.028847999999999985
+      }
+    },
+    "job": {
+      "label": "trace_I_1",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "I",
+      "batch": 1,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_I_32": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 8873077,
+    "operators": {
+      "I": {
+        "ranges": 256,
+        "totals": {
+          "scope_ns": 8726072,
+          "sync_API_ns": 1790817,
+          "copy_API_ns": 5661608,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 748786,
+          "other_Host_ns": 524861,
+          "DMA_union_ns": 1288001,
+          "DMA_sum_ns": 1288001,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 31457280,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 256,
+          "kernels": 0,
+          "copy_API_calls": 256,
+          "sync_API_calls": 256,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 256,
+          "INSERT_SUBMIT_ranges": 256
+        },
+        "scope_ns_quantiles": {
+          "count": 256,
+          "mean": 34086.21875,
+          "p50": 29919.0,
+          "p95": 44508.0,
+          "maximum": 329754.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 256,
+          "cudaStreamSynchronize_v3020": 256
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 88,
+        "mean": 100009.30681818182,
+        "p50": 100000.0,
+        "p95": 100032.65,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 89,
+          "mean": 15.831460674157304,
+          "p50": 16.0,
+          "p95": 22.0,
+          "maximum": 23.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 89,
+          "mean": 0.3707865168539326,
+          "p50": 0.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 89,
+          "mean": 0.9662921348314607,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 89,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 89,
+          "mean": 5.786516853932584,
+          "p50": 6.0,
+          "p95": 8.0,
+          "maximum": 8.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 89,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 89,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 256,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "I",
+      "batch": 32,
+      "ACKs": 256,
+      "point_updates": 8192,
+      "total_ACK_ns": 8813116.0,
+      "mean_ACK_ms": 0.034426234374999996,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 0,
+        "batch": 32,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 1000000,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 8.88102,
+        "release_ms": 8.093082,
+        "preparation_ms": 2413.215927,
+        "offline_state_export_ms": 757.741675,
+        "formal_H2D_request_bytes": 31457280,
+        "formal_D2D_request_bytes": 0,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.029602999999999824,
+        "CPU_events_system_s": 0.007152000000000047
+      }
+    },
+    "job": {
+      "label": "trace_I_32",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "I",
+      "batch": 32,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_I_512": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 6106766,
+    "operators": {
+      "I": {
+        "ranges": 16,
+        "totals": {
+          "scope_ns": 6078555,
+          "sync_API_ns": 125515,
+          "copy_API_ns": 5336122,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 516031,
+          "other_Host_ns": 100887,
+          "DMA_union_ns": 3065479,
+          "DMA_sum_ns": 3065479,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 31457280,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 16,
+          "kernels": 0,
+          "copy_API_calls": 16,
+          "sync_API_calls": 16,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 16,
+          "INSERT_SUBMIT_ranges": 16
+        },
+        "scope_ns_quantiles": {
+          "count": 16,
+          "mean": 379909.6875,
+          "p50": 396424.0,
+          "p95": 471928.0,
+          "maximum": 571753.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 16,
+          "cudaStreamSynchronize_v3020": 16
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 60,
+        "mean": 100009.8,
+        "p50": 100000.0,
+        "p95": 100033.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 61,
+          "mean": 18.80327868852459,
+          "p50": 17.0,
+          "p95": 41.0,
+          "maximum": 42.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 61,
+          "mean": 0.13114754098360656,
+          "p50": 0.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 61,
+          "mean": 0.7540983606557377,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 61,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 61,
+          "mean": 8.491803278688524,
+          "p50": 9.0,
+          "p95": 17.0,
+          "maximum": 17.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 61,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 61,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 16,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "I",
+      "batch": 512,
+      "ACKs": 16,
+      "point_updates": 8192,
+      "total_ACK_ns": 6093836.0,
+      "mean_ACK_ms": 0.38086475,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 0,
+        "batch": 512,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 1000000,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 6.116691,
+        "release_ms": 10.009996,
+        "preparation_ms": 2319.10515,
+        "offline_state_export_ms": 806.416204,
+        "formal_H2D_request_bytes": 31457280,
+        "formal_D2D_request_bytes": 0,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.024611999999999856,
+        "CPU_events_system_s": 0.006801999999999975
+      }
+    },
+    "job": {
+      "label": "trace_I_512",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "I",
+      "batch": 512,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_D_1": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 104559329,
+    "operators": {
+      "D": {
+        "ranges": 8192,
+        "totals": {
+          "scope_ns": 101304858,
+          "sync_API_ns": 42445751,
+          "copy_API_ns": 43858816,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 7721480,
+          "other_Host_ns": 7278811,
+          "DMA_union_ns": 9540537,
+          "DMA_sum_ns": 9540537,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 31457280,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 8192,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 8192,
+          "DELETE_VALIDATE_ranges": 8192,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 8192,
+          "mean": 12366.315673828125,
+          "p50": 10807.0,
+          "p95": 13107.45,
+          "maximum": 8362740.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 8192
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 1044,
+        "mean": 100009.4530651341,
+        "p50": 100000.0,
+        "p95": 100033.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 1045,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 1045,
+          "mean": 0.907177033492823,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 1045,
+          "mean": 0.9119617224880383,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 1045,
+          "mean": 0.8622009569377991,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 1045,
+          "mean": 17.567464114832536,
+          "p50": 20.0,
+          "p95": 22.0,
+          "maximum": 36.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 1045,
+          "mean": 0.9138755980861244,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 1045,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 1045,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 1045,
+          "mean": 0.907177033492823,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 1045,
+          "mean": 0.907177033492823,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 1045,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 1045,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 1045,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 8192,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "D",
+      "batch": 1,
+      "ACKs": 8192,
+      "point_updates": 8192,
+      "total_ACK_ns": 103659951.0,
+      "mean_ACK_ms": 0.012653802612304688,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 1,
+        "batch": 1,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 991808,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 104.567599,
+        "release_ms": 7.762417,
+        "preparation_ms": 2531.695557,
+        "offline_state_export_ms": 733.364299,
+        "formal_H2D_request_bytes": 0,
+        "formal_D2D_request_bytes": 31457280,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.16187900000000033,
+        "CPU_events_system_s": 0.02484099999999989
+      }
+    },
+    "job": {
+      "label": "trace_D_1",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "D",
+      "batch": 1,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_D_32": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 40731417,
+    "operators": {
+      "D": {
+        "ranges": 256,
+        "totals": {
+          "scope_ns": 40580415,
+          "sync_API_ns": 1339041,
+          "copy_API_ns": 35403067,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 3415064,
+          "other_Host_ns": 423243,
+          "DMA_union_ns": 9501711,
+          "DMA_sum_ns": 9501711,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 31457280,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 256,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 256,
+          "DELETE_VALIDATE_ranges": 256,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 256,
+          "mean": 158517.24609375,
+          "p50": 149468.5,
+          "p95": 213655.5,
+          "maximum": 604420.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 256
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 406,
+        "mean": 100009.47290640394,
+        "p50": 100000.0,
+        "p95": 100033.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 407,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 407,
+          "mean": 0.995085995085995,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 407,
+          "mean": 0.9975429975429976,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 407,
+          "mean": 0.9754299754299754,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 407,
+          "mean": 45.37592137592138,
+          "p50": 47.0,
+          "p95": 53.0,
+          "maximum": 55.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 407,
+          "mean": 0.9975429975429976,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 407,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 407,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 407,
+          "mean": 0.995085995085995,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 407,
+          "mean": 0.995085995085995,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 407,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 407,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 407,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 256,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "D",
+      "batch": 32,
+      "ACKs": 256,
+      "point_updates": 8192,
+      "total_ACK_ns": 40674740.0,
+      "mean_ACK_ms": 0.158885703125,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 1,
+        "batch": 32,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 991808,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 40.740122,
+        "release_ms": 7.980599,
+        "preparation_ms": 2315.12535,
+        "offline_state_export_ms": 715.308709,
+        "formal_H2D_request_bytes": 0,
+        "formal_D2D_request_bytes": 31457280,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.07350900000000005,
+        "CPU_events_system_s": 0.013763999999999665
+      }
+    },
+    "job": {
+      "label": "trace_D_32",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "D",
+      "batch": 32,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_D_512": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 39065362,
+    "operators": {
+      "D": {
+        "ranges": 16,
+        "totals": {
+          "scope_ns": 38939415,
+          "sync_API_ns": 89000,
+          "copy_API_ns": 35088374,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 3580591,
+          "other_Host_ns": 181450,
+          "DMA_union_ns": 9515983,
+          "DMA_sum_ns": 9515983,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 31457280,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 16,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 16,
+          "DELETE_VALIDATE_ranges": 16,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 16,
+          "mean": 2433713.4375,
+          "p50": 2288214.5,
+          "p95": 2883125.25,
+          "maximum": 4304292.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 16
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 390,
+        "mean": 100009.43333333333,
+        "p50": 100000.0,
+        "p95": 100032.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 391,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 391,
+          "mean": 0.9923273657289002,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 391,
+          "mean": 0.9923273657289002,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 391,
+          "mean": 0.9667519181585678,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 391,
+          "mean": 47.074168797953966,
+          "p50": 51.0,
+          "p95": 54.0,
+          "maximum": 55.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 391,
+          "mean": 0.9923273657289002,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 391,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 391,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 391,
+          "mean": 0.9923273657289002,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 391,
+          "mean": 0.9923273657289002,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 391,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 391,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 391,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 16,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "D",
+      "batch": 512,
+      "ACKs": 16,
+      "point_updates": 8192,
+      "total_ACK_ns": 38952006.0,
+      "mean_ACK_ms": 2.4345003750000003,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 1,
+        "batch": 512,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 991808,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 39.084817,
+        "release_ms": 8.315344,
+        "preparation_ms": 2322.342754,
+        "offline_state_export_ms": 721.768828,
+        "formal_H2D_request_bytes": 0,
+        "formal_D2D_request_bytes": 31457280,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.07226899999999992,
+        "CPU_events_system_s": 0.011138000000000314
+      }
+    },
+    "job": {
+      "label": "trace_D_512",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "D",
+      "batch": 512,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_R_1": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 180192141,
+    "operators": {
+      "D": {
+        "ranges": 8192,
+        "totals": {
+          "scope_ns": 97339202,
+          "sync_API_ns": 40109237,
+          "copy_API_ns": 41670250,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 8601110,
+          "other_Host_ns": 6958605,
+          "DMA_union_ns": 7783663,
+          "DMA_sum_ns": 7783663,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 31457280,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 8192,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 8192,
+          "DELETE_VALIDATE_ranges": 8192,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 8192,
+          "mean": 11882.226806640625,
+          "p50": 11569.0,
+          "p95": 13606.349999999999,
+          "maximum": 293278.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 8192
+        }
+      },
+      "I": {
+        "ranges": 8192,
+        "totals": {
+          "scope_ns": 74803751,
+          "sync_API_ns": 31591866,
+          "copy_API_ns": 28984371,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 3077428,
+          "other_Host_ns": 11150086,
+          "DMA_union_ns": 3768009,
+          "DMA_sum_ns": 3768009,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 31457280,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 8192,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 8192,
+          "INSERT_SUBMIT_ranges": 8192
+        },
+        "scope_ns_quantiles": {
+          "count": 8192,
+          "mean": 9131.317260742188,
+          "p50": 8934.0,
+          "p95": 9851.8,
+          "maximum": 332082.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 8192
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 1801,
+        "mean": 100009.41976679623,
+        "p50": 100000.0,
+        "p95": 100032.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 1802,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 1802,
+          "mean": 0.9922308546059934,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 1802,
+          "mean": 0.19200887902330743,
+          "p50": 0.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 1802,
+          "mean": 0.8296337402885683,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 1802,
+          "mean": 14.392341842397336,
+          "p50": 14.0,
+          "p95": 17.0,
+          "maximum": 34.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 1802,
+          "mean": 0.9927857935627081,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 1802,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 1802,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 1802,
+          "mean": 0.9922308546059934,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 1802,
+          "mean": 0.9922308546059934,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 1802,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 1802,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 1802,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 16384,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "R",
+      "batch": 1,
+      "ACKs": 8192,
+      "point_updates": 16384,
+      "total_ACK_ns": 179352330.0,
+      "mean_ACK_ms": 0.021893594970703124,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 2,
+        "batch": 1,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 1000000,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 180.1997,
+        "release_ms": 7.901346,
+        "preparation_ms": 2306.219005,
+        "offline_state_export_ms": 799.255038,
+        "formal_H2D_request_bytes": 31457280,
+        "formal_D2D_request_bytes": 31457280,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.2738879999999999,
+        "CPU_events_system_s": 0.05288100000000018
+      }
+    },
+    "job": {
+      "label": "trace_R_1",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 1,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_R_32": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 49536771,
+    "operators": {
+      "D": {
+        "ranges": 256,
+        "totals": {
+          "scope_ns": 41340649,
+          "sync_API_ns": 1276405,
+          "copy_API_ns": 36018139,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 3399342,
+          "other_Host_ns": 646763,
+          "DMA_union_ns": 7815086,
+          "DMA_sum_ns": 7815086,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 31457280,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 256,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 256,
+          "DELETE_VALIDATE_ranges": 256,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 256,
+          "mean": 161486.91015625,
+          "p50": 150159.5,
+          "p95": 162390.0,
+          "maximum": 534891.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 256
+        }
+      },
+      "I": {
+        "ranges": 256,
+        "totals": {
+          "scope_ns": 7947972,
+          "sync_API_ns": 2045862,
+          "copy_API_ns": 5124787,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 372945,
+          "other_Host_ns": 404378,
+          "DMA_union_ns": 1278081,
+          "DMA_sum_ns": 1278081,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 31457280,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 256,
+          "kernels": 0,
+          "copy_API_calls": 256,
+          "sync_API_calls": 256,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 256,
+          "INSERT_SUBMIT_ranges": 256
+        },
+        "scope_ns_quantiles": {
+          "count": 256,
+          "mean": 31046.765625,
+          "p50": 29748.5,
+          "p95": 31983.75,
+          "maximum": 230406.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 256,
+          "cudaStreamSynchronize_v3020": 256
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 494,
+        "mean": 100009.42105263157,
+        "p50": 100000.0,
+        "p95": 100032.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 495,
+          "mean": 2.731313131313131,
+          "p50": 4.0,
+          "p95": 6.0,
+          "maximum": 7.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 495,
+          "mean": 0.9919191919191919,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 495,
+          "mean": 0.4666666666666667,
+          "p50": 0.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 495,
+          "mean": 0.9636363636363636,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 495,
+          "mean": 33.84444444444444,
+          "p50": 33.0,
+          "p95": 47.0,
+          "maximum": 56.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 495,
+          "mean": 1.8525252525252525,
+          "p50": 2.0,
+          "p95": 3.0,
+          "maximum": 3.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 495,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 495,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 495,
+          "mean": 0.9919191919191919,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 495,
+          "mean": 0.9919191919191919,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 495,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 495,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 495,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 512,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "R",
+      "batch": 32,
+      "ACKs": 256,
+      "point_updates": 16384,
+      "total_ACK_ns": 49482974.0,
+      "mean_ACK_ms": 0.1932928671875,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 2,
+        "batch": 32,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 1000000,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 49.542345,
+        "release_ms": 9.755695,
+        "preparation_ms": 2361.720613,
+        "offline_state_export_ms": 739.628933,
+        "formal_H2D_request_bytes": 31457280,
+        "formal_D2D_request_bytes": 31457280,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.08088699999999971,
+        "CPU_events_system_s": 0.014177000000000106
+      }
+    },
+    "job": {
+      "label": "trace_R_32",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 32,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_R_512": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 44113324,
+    "operators": {
+      "D": {
+        "ranges": 16,
+        "totals": {
+          "scope_ns": 39179109,
+          "sync_API_ns": 81697,
+          "copy_API_ns": 35484276,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 3435189,
+          "other_Host_ns": 177947,
+          "DMA_union_ns": 8222663,
+          "DMA_sum_ns": 8222663,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 31457280,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 8192,
+          "kernels": 0,
+          "copy_API_calls": 8192,
+          "sync_API_calls": 16,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 16,
+          "DELETE_VALIDATE_ranges": 16,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 16,
+          "mean": 2448694.3125,
+          "p50": 2293240.5,
+          "p95": 2929810.5,
+          "maximum": 4470744.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 8192,
+          "cudaStreamSynchronize_v3020": 16
+        }
+      },
+      "I": {
+        "ranges": 16,
+        "totals": {
+          "scope_ns": 4753617,
+          "sync_API_ns": 155573,
+          "copy_API_ns": 4175319,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 375750,
+          "other_Host_ns": 46975,
+          "DMA_union_ns": 2643780,
+          "DMA_sum_ns": 2643780,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 31457280,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 16,
+          "kernels": 0,
+          "copy_API_calls": 16,
+          "sync_API_calls": 16,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 16,
+          "INSERT_SUBMIT_ranges": 16
+        },
+        "scope_ns_quantiles": {
+          "count": 16,
+          "mean": 297101.0625,
+          "p50": 294535.5,
+          "p95": 309254.5,
+          "maximum": 325507.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 16,
+          "cudaStreamSynchronize_v3020": 16
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "MICRO_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 440,
+        "mean": 100009.39318181819,
+        "p50": 100000.0,
+        "p95": 100032.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 441,
+          "mean": 2.5510204081632653,
+          "p50": 0.0,
+          "p95": 30.0,
+          "maximum": 41.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 441,
+          "mean": 0.8888888888888888,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 441,
+          "mean": 0.7868480725623582,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 441,
+          "mean": 0.9387755102040817,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 441,
+          "mean": 39.0702947845805,
+          "p50": 47.0,
+          "p95": 50.0,
+          "maximum": 54.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 441,
+          "mean": 2.056689342403628,
+          "p50": 1.0,
+          "p95": 15.0,
+          "maximum": 18.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 441,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 441,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 441,
+          "mean": 0.8888888888888888,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 441,
+          "mean": 0.8888888888888888,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 441,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 441,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 441,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 32,
+      "source": "Independently validated native operator ledger;exact chronological API/payload counts"
+    },
+    "profiled_ACK": {
+      "operator": "R",
+      "batch": 512,
+      "ACKs": 16,
+      "point_updates": 16384,
+      "total_ACK_ns": 43955024.0,
+      "mean_ACK_ms": 2.7471889999999997,
+      "metadata": {
+        "kind": "micro",
+        "N": 1000000,
+        "K": 8192,
+        "op": 2,
+        "batch": 512,
+        "trace": 1,
+        "diagnostic": 1,
+        "final_live": 1000000,
+        "warmup_queries": 8,
+        "final_validation_queries": 32,
+        "events_ms": 44.121531,
+        "release_ms": 7.890277,
+        "preparation_ms": 2341.905154,
+        "offline_state_export_ms": 739.383735,
+        "formal_H2D_request_bytes": 31457280,
+        "formal_D2D_request_bytes": 31457280,
+        "known_device_owned_peak_bytes": 3889036339,
+        "CPU_events_user_s": 0.07567400000000024,
+        "CPU_events_system_s": 0.00889899999999999
+      }
+    },
+    "job": {
+      "label": "trace_R_512",
+      "kind": "micro",
+      "variant": "MARKED",
+      "N": 1000000,
+      "K": 8192,
+      "op": "R",
+      "batch": 512,
+      "diagnostic": 1,
+      "tool": "nsys"
+    }
+  },
+  "trace_service": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 2698365434,
+    "operators": {
+      "D": {
+        "ranges": 977,
+        "totals": {
+          "scope_ns": 2216193413,
+          "sync_API_ns": 4134108,
+          "copy_API_ns": 1994681945,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 204405424,
+          "other_Host_ns": 12971936,
+          "DMA_union_ns": 501761973,
+          "DMA_sum_ns": 501761973,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 1920000000,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 500000,
+          "kernels": 0,
+          "copy_API_calls": 500000,
+          "sync_API_calls": 977,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 977,
+          "DELETE_VALIDATE_ranges": 977,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 977,
+          "mean": 2268365.8270214945,
+          "p50": 2251729.0,
+          "p95": 2309784.2,
+          "maximum": 2934122.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 500000,
+          "cudaStreamSynchronize_v3020": 977
+        }
+      },
+      "I": {
+        "ranges": 977,
+        "totals": {
+          "scope_ns": 300030712,
+          "sync_API_ns": 10398991,
+          "copy_API_ns": 264212800,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 23200619,
+          "other_Host_ns": 2218302,
+          "DMA_union_ns": 167545775,
+          "DMA_sum_ns": 167545775,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 1920000000,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 977,
+          "kernels": 0,
+          "copy_API_calls": 977,
+          "sync_API_calls": 977,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 977,
+          "INSERT_SUBMIT_ranges": 977
+        },
+        "scope_ns_quantiles": {
+          "count": 977,
+          "mean": 307093.87103377684,
+          "p50": 298624.0,
+          "p95": 350627.6,
+          "maximum": 495398.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 977,
+          "cudaStreamSynchronize_v3020": 977
+        }
+      },
+      "Q": {
+        "ranges": 160,
+        "totals": {
+          "scope_ns": 141950355,
+          "sync_API_ns": 1040130,
+          "copy_API_ns": 129028001,
+          "other_API_ns": 6957765,
+          "bookkeeping_Host_ns": 0,
+          "other_Host_ns": 4924459,
+          "DMA_union_ns": 709412,
+          "DMA_sum_ns": 709412,
+          "kernel_union_ns": 124845220,
+          "kernel_sum_ns": 124845220,
+          "H2D_activity_bytes": 652800,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 459768,
+          "memcpy_activities": 1413,
+          "kernels": 1895,
+          "copy_API_calls": 1413,
+          "sync_API_calls": 754,
+          "other_API_calls": 3790,
+          "launch_API_calls": 1895,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 160,
+          "mean": 887189.71875,
+          "p50": 771108.0,
+          "p95": 1603354.9999999998,
+          "maximum": 2562201.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 1413,
+          "cuKernelGetName": 1895,
+          "cudaLaunchKernel_v7000": 1895,
+          "cudaStreamSynchronize_v3020": 754
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": null,
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 26980,
+        "mean": 100009.4161971831,
+        "p50": 100000.0,
+        "p95": 100032.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 26981,
+          "mean": 2.6264408287313294,
+          "p50": 0.0,
+          "p95": 30.0,
+          "maximum": 59.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 26981,
+          "mean": 3.807234720729402,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 87.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 26981,
+          "mean": 3.5238130536303323,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 86.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 26981,
+          "mean": 1.0419183870130833,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 24.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 26981,
+          "mean": 43.647863311219005,
+          "p50": 49.0,
+          "p95": 55.0,
+          "maximum": 100.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 26981,
+          "mean": 2.0187539379563395,
+          "p50": 1.0,
+          "p95": 15.0,
+          "maximum": 21.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 26981,
+          "mean": 1.0096364108076052,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 27.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 26981,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 26981,
+          "mean": 1.5585041325377118,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 23.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 26981,
+          "mean": 4.482042919091213,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 100.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 26981,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 26981,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 26981,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_KERNEL": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "demangledName",
+        "shortName",
+        "mangledName",
+        "launchType",
+        "cacheConfig",
+        "registersPerThread",
+        "gridX",
+        "gridY",
+        "gridZ",
+        "blockX",
+        "blockY",
+        "blockZ",
+        "staticSharedMemory",
+        "dynamicSharedMemory",
+        "localMemoryPerThread",
+        "localMemoryTotal",
+        "gridId",
+        "sharedMemoryExecuted",
+        "graphNodeId",
+        "sharedMemoryLimitConfig",
+        "qmdBulkReleaseDone",
+        "qmdPreexitDone",
+        "qmdLastCtaDone",
+        "graphId",
+        "clusterX",
+        "clusterY",
+        "clusterZ",
+        "clusterSchedulingPolicy",
+        "maxPotentialClusterSize",
+        "maxActiveClusters"
+      ],
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "expected_update_binding": {
+      "per_ACKs": 1954,
+      "mutation_witnesses": 1000000,
+      "mutation_sha256": "774d8453bac5535a48370298eb0e439dcd58910b6ccda4cf8bcb5a99894586d0",
+      "source": "Independent ownership-replayed mutations,exact chronological per-ACK phase/API/payload checks"
+    },
+    "profiled_ACK": {
+      "D": {
+        "ACKs": 977,
+        "total_ACK_ns": 2216829568.0,
+        "rows": 500000
+      },
+      "I": {
+        "ACKs": 977,
+        "total_ACK_ns": 300488988.0,
+        "rows": 500000
+      },
+      "Q": {
+        "ACKs": 160,
+        "total_ACK_ns": 142018295.0,
+        "rows": 160
+      },
+      "metadata": {
+        "service_ms": 2708.2823399999997,
+        "events_ms": 2698.373694,
+        "release_ms": 9.908646,
+        "query_ms": 142.01829499999994,
+        "update_ms_including_statistics": 2517.3185560000034,
+        "other_ms": 39.03684299999668,
+        "cpu_events_user_s": 3.3199419999999997,
+        "cpu_events_system_s": 0.23141299999999987
+      }
+    },
+    "job": {
+      "label": "trace_service",
+      "kind": "service",
+      "variant": "MARKED",
+      "mode": "S2_STALE",
+      "diagnostic": 3,
+      "tool": "nsys"
+    }
+  },
+  "trace_copy": {
+    "scope": "Profiled NVTX function scopes;exclusive Host partition;device time overlaid,not additive;not unprofiled latency",
+    "formal_span_ns": 2524439209,
+    "operators": {
+      "D2D": {
+        "ranges": 16,
+        "totals": {
+          "scope_ns": 23599067,
+          "sync_API_ns": 23190582,
+          "copy_API_ns": 384660,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 0,
+          "other_Host_ns": 23825,
+          "DMA_union_ns": 23155204,
+          "DMA_sum_ns": 23155204,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 0,
+          "D2D_activity_bytes": 17179869184,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 16,
+          "kernels": 0,
+          "copy_API_calls": 16,
+          "sync_API_calls": 16,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 16,
+          "mean": 1474941.6875,
+          "p50": 1471141.0,
+          "p95": 1489367.0,
+          "maximum": 1533662.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 16,
+          "cudaStreamSynchronize_v3020": 16
+        }
+      },
+      "H2D": {
+        "ranges": 16,
+        "totals": {
+          "scope_ns": 2500721834,
+          "sync_API_ns": 379809,
+          "copy_API_ns": 2500209271,
+          "other_API_ns": 0,
+          "bookkeeping_Host_ns": 0,
+          "other_Host_ns": 132754,
+          "DMA_union_ns": 2497996147,
+          "DMA_sum_ns": 2497996147,
+          "kernel_union_ns": 0,
+          "kernel_sum_ns": 0,
+          "H2D_activity_bytes": 17179869184,
+          "D2D_activity_bytes": 0,
+          "other_copy_activity_bytes": 0,
+          "memcpy_activities": 16,
+          "kernels": 0,
+          "copy_API_calls": 16,
+          "sync_API_calls": 16,
+          "other_API_calls": 0,
+          "launch_API_calls": 0,
+          "DELETE_ROWS_ranges": 0,
+          "DELETE_VALIDATE_ranges": 0,
+          "INSERT_OWNERS_ranges": 0,
+          "INSERT_SUBMIT_ranges": 0
+        },
+        "scope_ns_quantiles": {
+          "count": 16,
+          "mean": 156295114.625,
+          "p50": 156292926.5,
+          "p95": 158307101.5,
+          "maximum": 158506447.0
+        },
+        "runtime_API_calls": {
+          "cudaMemcpyAsync_v3020": 16,
+          "cudaStreamSynchronize_v3020": 16
+        }
+      }
+    },
+    "outside_operator_runtime_calls": {
+      "cuProfilerStart": 1
+    },
+    "formal_anchor": "COPY_FORMAL",
+    "prepost_NVTX_ranges_discarded": 0,
+    "unmatched_formal_device_activities": {},
+    "target_device_count": 1,
+    "stream_count": 1,
+    "sampled_GPU_metrics": {
+      "scope": "Unweighted device-wide samples from first operator start through last operator end on the isolated target GPU;not the full formal anchor,not per-ACK or ACK-weighted activity,not traffic bytes",
+      "requested_Hz": 10000,
+      "export_resolution": "Unsigned8-bit integer percentages;zero is a quantized observation,not proof ofzero activity.",
+      "time_spacing_ns": {
+        "count": 25241,
+        "mean": 100009.42458698149,
+        "p50": 100000.0,
+        "p95": 100032.0,
+        "maximum": 100033.0
+      },
+      "fields": {
+        "Async Copy Engine Active 0 [Throughput %]": {
+          "count": 25242,
+          "mean": 25.349853418905,
+          "p50": 31.0,
+          "p95": 40.0,
+          "maximum": 44.0
+        },
+        "Compute Warps in Flight [Throughput %]": {
+          "count": 25242,
+          "mean": 0.785753902226448,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 93.0
+        },
+        "DRAM Read Bandwidth [Throughput %]": {
+          "count": 25242,
+          "mean": 0.7525948815466287,
+          "p50": 0.0,
+          "p95": 1.0,
+          "maximum": 59.0
+        },
+        "DRAM Write Bandwidth [Throughput %]": {
+          "count": 25242,
+          "mean": 1.3252911813643926,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 49.0
+        },
+        "GR Active [Throughput %]": {
+          "count": 25242,
+          "mean": 1.9091593376119167,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 100.0
+        },
+        "PCIe RX Throughput [Throughput %]": {
+          "count": 25242,
+          "mean": 11.184454480627526,
+          "p50": 14.0,
+          "p95": 17.0,
+          "maximum": 18.0
+        },
+        "PCIe TX Throughput [Throughput %]": {
+          "count": 25242,
+          "mean": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "maximum": 1.0
+        },
+        "Pixel Warps in Flight [Throughput %]": {
+          "count": 25242,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "SM Issue [Throughput %]": {
+          "count": 25242,
+          "mean": 0.027652325489263926,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 3.0
+        },
+        "SMs Active [Throughput %]": {
+          "count": 25242,
+          "mean": 0.9118136439267887,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 100.0
+        },
+        "Sync Copy Engine Active [Throughput %]": {
+          "count": 25242,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Tensor Active [Throughput %]": {
+          "count": 25242,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        },
+        "Vertex/Tess/Geometry Warps in Flight [Throughput %]": {
+          "count": 25242,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "exact_DRAM_bytes": null,
+      "exact_L2_bytes": null,
+      "clock_or_scaled_warp_counts_decoded": false,
+      "note": "Only verified percent fields used;raw signed clock exports and scaled warp-average fields are not guessed or converted."
+    },
+    "diagnostics": {
+      "warnings": {
+        "Scheduling unavailable as predeclared": 1,
+        "NVTX completeness warning": 1,
+        "NVTX no-events warning": 1,
+        "CUDA completeness warning": 1,
+        "OSRT completeness warning": 1
+      },
+      "unreviewed_warning_hashes": [],
+      "limitation": "Completeness warnings remain disclosed.Independent expected NVTX/API/payload counts are checked per cell;that does not establish complete OSRT/scheduler or internal-driver visibility."
+    },
+    "table_columns": {
+      "CUPTI_ACTIVITY_KIND_MEMCPY": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "bytes",
+        "copyKind",
+        "deprecatedSrcId",
+        "srcKind",
+        "dstKind",
+        "srcDeviceId",
+        "srcContextId",
+        "dstDeviceId",
+        "dstContextId",
+        "migrationCause",
+        "graphNodeId",
+        "virtualAddress",
+        "copyCount"
+      ],
+      "CUPTI_ACTIVITY_KIND_RUNTIME": [
+        "start",
+        "end",
+        "eventClass",
+        "globalTid",
+        "correlationId",
+        "nameId",
+        "returnValue",
+        "callchainId"
+      ],
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION": [
+        "start",
+        "end",
+        "deviceId",
+        "contextId",
+        "greenContextId",
+        "streamId",
+        "correlationId",
+        "globalPid",
+        "deprecatedSyncType",
+        "syncType",
+        "eventId",
+        "eventSyncId"
+      ],
+      "DIAGNOSTIC_EVENT": [
+        "timestamp",
+        "timestampType",
+        "source",
+        "severity",
+        "text",
+        "globalPid"
+      ],
+      "GPU_METRICS": [
+        "rawTimestamp",
+        "timestamp",
+        "typeId",
+        "metricId",
+        "value"
+      ],
+      "NVTX_EVENTS": [
+        "start",
+        "end",
+        "eventType",
+        "rangeId",
+        "category",
+        "color",
+        "text",
+        "globalTid",
+        "endGlobalTid",
+        "textId",
+        "domainId",
+        "uint64Value",
+        "int64Value",
+        "doubleValue",
+        "uint32Value",
+        "int32Value",
+        "floatValue",
+        "jsonTextId",
+        "jsonText",
+        "binaryData"
+      ],
+      "TARGET_INFO_GPU_METRICS": [
+        "typeId",
+        "sourceId",
+        "typeName",
+        "metricId",
+        "metricName"
+      ]
+    },
+    "profiled_ACK": {
+      "H2D": {
+        "ACKs": 16,
+        "total_ACK_ns": 2500813414.0
+      },
+      "D2D": {
+        "ACKs": 16,
+        "total_ACK_ns": 23621226.0
+      }
+    },
+    "job": {
+      "label": "trace_copy",
+      "kind": "copy",
+      "variant": "MARKED",
+      "tool": "nsys"
+    }
+  }
+}

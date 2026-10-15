@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "new_GPU_starts": 0,
+  "prior_scalar_and_Host_time_totals_unchanged": true,
+  "initial_curation": {
+    "before_execution": true,
+    "GPU_starts": 0,
+    "files": {
+      "audit_stage.py": "7edb188cb6a696eb92968b12b9103701920eac9b6f752c1fe7e574456c1c9913",
+      "primary.py": "971ca0a6724f9239d5127b643f1e72e42248e206040733f0fe52798929b67621",
+      "timeline.py": "f7f38b6aea8e641e1cc26f41860f3753fbc67b57718b0002bdbed38ab6252a3a",
+      "curate.py": "b6430118b82a320a82449291e327621ceb0ac920bc3e4ae65ea87f022c7e9644"
+    },
+    "archive_sha256": "9dc3c8279643251ef33cc01dfecb1938f6191011ce06c38ad43d328795798944"
+  },
+  "hardened_curation": {
+    "before_execution": true,
+    "GPU_starts": 0,
+    "scope": "Offline hardening only;exact inner phase and per-ACK API/mutation binding;no remeasurement or estimator change",
+    "files": {
+      "audit_stage.py": "7edb188cb6a696eb92968b12b9103701920eac9b6f752c1fe7e574456c1c9913",
+      "primary.py": "971ca0a6724f9239d5127b643f1e72e42248e206040733f0fe52798929b67621",
+      "timeline.py": "f523c49b0653d42d0582b2f4e7b8d1b7ade77a8864f2535336c820b528b4bbca",
+      "curate.py": "7e0f981c6a39037c4ab5920ef1434e7ad92f672eeb38f9fff7a84a4fed34d851",
+      "derive.py": "21142150d53556908f8e521e19fe99a9441dc2da5aad4fc6a108e2c5f98ce12f"
+    },
+    "archive_sha256": "9c26dec6056bed8b306da00580a327fda17ceaf33dbebe17c5fe5f908c127aef"
+  },
+  "fixes": [
+    "Exact inner NVTX phase multiset for every update;INSERT_SUBMIT counted,not added to bookkeeping",
+    "Exact chronological update API/payload ledger binding;full-service copy counts from replayed mutations",
+    "Sampled metrics scope clarified;unchanged native timing/statistical estimator"
+  ],
+  "tests": {
+    "negative_phase_API_and_per_ACK": 19,
+    "real_immutable_trace_missing_and_duplicate_phase_rejected": true,
+    "real_trace_negative_tests": 2,
+    "GPU_starts": 0
+  },
+  "derive_CPU_failure": {
+    "preserved": true,
+    "GPU_starts": 0,
+    "failed_source_sha256": "25bbea5cc1d9f39b2b52b5cb5ebcd1143e8c6fee64795d89feddf0dc7ad5dd68",
+    "cause": "update_batches counts delete plus insert native ACKs;incorrect per-kind assertion stopped before emitting output",
+    "corrected_source_sha256": "21142150d53556908f8e521e19fe99a9441dc2da5aad4fc6a108e2c5f98ce12f"
+  },
+  "final_curation_archive_sha256": "99641e42bb0f94cb787fea11554f0877874971fef0912cdbb01fb8144e06189f",
+  "delivery_CPU_test_receipt_sha256": "c4d99ed3dac418656cab9f6202292ea51c8cc5e96ba3ee5a033bedcc46297c39"
+}
