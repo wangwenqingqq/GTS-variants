@@ -1,0 +1,21 @@
+{
+  "human_approved": true,
+  "date": "2026-10-15",
+  "parent_commit": "65d4610e0e095341a9d975ceb69110cecb9e482e",
+  "scope": "fresh current dependency snapshot,re-preflight and compile;continue original GPU gates after confirmed decision/statistics rules",
+  "prior_preparation_failure_sha256": "d97b8e09d6a357580d08c8bc782757eb684877ea333b211cf5d5b875e2427a94",
+  "prior_starts": 0,
+  "prior_nvcc_invocations": 0,
+  "rerun_CPU_population": false,
+  "old_checkpoint_unchanged": true,
+  "decision_priority": [
+    "BASELINE_INVALID",
+    "PRIOR_ART_WINS",
+    "LOGICAL_WIN_PHYSICAL_FAIL",
+    "remaining PRIOR_ART_LOSES",
+    "UNCLASSIFIED;stop"
+  ],
+  "statistical_contract": "six process means,median ratio;paired geometric ratio;fixed seed2026101302,20000 process-bootstrap resamples,95% percentile CI",
+  "max_GPU_starts": 26,
+  "automatic_retries": 0
+}

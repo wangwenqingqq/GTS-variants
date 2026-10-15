@@ -1,0 +1,16 @@
+{
+  "kind": "PRE_EXECUTION_NCU_FRONTEND_ROUTING_CORRECTION",
+  "before_NCU_starts": true,
+  "failed_NCU_or_replaced_samples": 0,
+  "changes": [
+    "absolute /usr/bin/sudo so preserved guard can hash argv0",
+    "explicitly forward PDX_MEANS through sudo env_reset for the same frozen global means"
+  ],
+  "candidate_and_keeper_binaries_changed": false,
+  "query_data_timer_quality_thresholds_changed": false,
+  "GPU_budget_changed": false,
+  "old_controller_preserved": true,
+  "why": "Detected by code-flow preflight before invoking any NCU process;not a tuning attempt or automatic experiment retry",
+  "controller_sha256": "de16ad0ece28f519581927633783a87d3bdbd4a6209578b299cac0c7d0a8621e",
+  "prior_controller_sha256": "ea551367443450b7928358f52ec3a0b01c92365b45ac78441d3ee4fd5c2cbd6f"
+}

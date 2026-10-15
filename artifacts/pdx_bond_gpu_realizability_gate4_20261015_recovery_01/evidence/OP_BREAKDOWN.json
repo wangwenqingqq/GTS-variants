@@ -1,0 +1,2953 @@
+{
+  "scope": "independent event-enabled processes;not primary timings",
+  "modes": {
+    "keeper": {
+      "scope": "Independent event-enabled diagnostic, not primary ACK; residual is not automatically control cost",
+      "queries": [
+        {
+          "query_index": 0,
+          "ack_ms": 0.988005,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 657953,
+              "scan_ms": 0.40668800473213196,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438109
+            },
+            {
+              "stage": 2,
+              "input": 657953,
+              "output": 697,
+              "scan_ms": 0.2764799892902374,
+              "compact_ms": 0.016383999958634377,
+              "host_stage_ms": 0.303206
+            },
+            {
+              "stage": 3,
+              "input": 697,
+              "output": 1,
+              "scan_ms": 0.008991999551653862,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.032329
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15939199924468994,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.180137
+            }
+          ],
+          "scan_ms": 0.8515519928187132,
+          "compact_ms": 0.05113599915057421,
+          "fields_ms": 0.0032319999299943447,
+          "host_output_ms": 0.028135,
+          "unattributed_host_minus_events_ms": 0.08208500810071828
+        },
+        {
+          "query_index": 1,
+          "ack_ms": 0.988438,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 607025,
+              "scan_ms": 0.40463998913764954,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.439382
+            },
+            {
+              "stage": 2,
+              "input": 607025,
+              "output": 9707,
+              "scan_ms": 0.28575998544692993,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.314559
+            },
+            {
+              "stage": 3,
+              "input": 9707,
+              "output": 1,
+              "scan_ms": 0.018112000077962875,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.034303
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15532800555229187,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.16896
+            }
+          ],
+          "scan_ms": 0.8638399802148342,
+          "compact_ms": 0.049087999388575554,
+          "fields_ms": 0.005727999843657017,
+          "host_output_ms": 0.027612,
+          "unattributed_host_minus_events_ms": 0.06978202055293325
+        },
+        {
+          "query_index": 2,
+          "ack_ms": 1.090623,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 775766,
+              "scan_ms": 0.4002560079097748,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.429925
+            },
+            {
+              "stage": 2,
+              "input": 775766,
+              "output": 82210,
+              "scan_ms": 0.3320640027523041,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.364731
+            },
+            {
+              "stage": 3,
+              "input": 82210,
+              "output": 10,
+              "scan_ms": 0.06841599941253662,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.092629
+            },
+            {
+              "stage": 4,
+              "input": 10,
+              "output": 1,
+              "scan_ms": 0.157151997089386,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.172016
+            }
+          ],
+          "scan_ms": 0.9578880071640015,
+          "compact_ms": 0.05526399984955788,
+          "fields_ms": 0.0031999999191612005,
+          "host_output_ms": 0.027755,
+          "unattributed_host_minus_events_ms": 0.07427099306727936
+        },
+        {
+          "query_index": 3,
+          "ack_ms": 1.205838,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 834986,
+              "scan_ms": 0.41760000586509705,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.450449
+            },
+            {
+              "stage": 2,
+              "input": 834986,
+              "output": 131100,
+              "scan_ms": 0.38182398676872253,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.413415
+            },
+            {
+              "stage": 3,
+              "input": 131100,
+              "output": 78,
+              "scan_ms": 0.10857599973678589,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.131027
+            },
+            {
+              "stage": 4,
+              "input": 78,
+              "output": 1,
+              "scan_ms": 0.15907199680805206,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.179967
+            }
+          ],
+          "scan_ms": 1.0670719891786575,
+          "compact_ms": 0.055200000293552876,
+          "fields_ms": 0.005824000108987093,
+          "host_output_ms": 0.027407,
+          "unattributed_host_minus_events_ms": 0.07774201041880247
+        },
+        {
+          "query_index": 4,
+          "ack_ms": 0.798129,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 291773,
+              "scan_ms": 0.3984000086784363,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.428058
+            },
+            {
+              "stage": 2,
+              "input": 291773,
+              "output": 6,
+              "scan_ms": 0.1247360035777092,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.142915
+            },
+            {
+              "stage": 3,
+              "input": 6,
+              "output": 1,
+              "scan_ms": 0.008448000065982342,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.023539
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1573760062456131,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.170961
+            }
+          ],
+          "scan_ms": 0.6889600185677409,
+          "compact_ms": 0.04297599941492081,
+          "fields_ms": 0.0058559998869895935,
+          "host_output_ms": 0.028933,
+          "unattributed_host_minus_events_ms": 0.06033698213034866
+        },
+        {
+          "query_index": 5,
+          "ack_ms": 1.024487,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 711469,
+              "scan_ms": 0.41126400232315063,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.440881
+            },
+            {
+              "stage": 2,
+              "input": 711469,
+              "output": 12387,
+              "scan_ms": 0.32364800572395325,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.352143
+            },
+            {
+              "stage": 3,
+              "input": 12387,
+              "output": 1,
+              "scan_ms": 0.019551999866962433,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.034536
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15744000673294067,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.169922
+            }
+          ],
+          "scan_ms": 0.911904014647007,
+          "compact_ms": 0.051167999394237995,
+          "fields_ms": 0.006144000217318535,
+          "host_output_ms": 0.023432,
+          "unattributed_host_minus_events_ms": 0.05527098574143641
+        },
+        {
+          "query_index": 6,
+          "ack_ms": 0.986736,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 686540,
+              "scan_ms": 0.3989439904689789,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.427085
+            },
+            {
+              "stage": 2,
+              "input": 686540,
+              "output": 17900,
+              "scan_ms": 0.2905600070953369,
+              "compact_ms": 0.016383999958634377,
+              "host_stage_ms": 0.315285
+            },
+            {
+              "stage": 3,
+              "input": 17900,
+              "output": 1,
+              "scan_ms": 0.023520000278949738,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.044733
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15622399747371674,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.170957
+            }
+          ],
+          "scan_ms": 0.8692479953169823,
+          "compact_ms": 0.051167999394237995,
+          "fields_ms": 0.0038079998921602964,
+          "host_output_ms": 0.024972,
+          "unattributed_host_minus_events_ms": 0.06251200539661939
+        },
+        {
+          "query_index": 7,
+          "ack_ms": 1.943547,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 836465,
+              "scan_ms": 0.4007680118083954,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.429438
+            },
+            {
+              "stage": 2,
+              "input": 836465,
+              "output": 381411,
+              "scan_ms": 0.3906239867210388,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.426944
+            },
+            {
+              "stage": 3,
+              "input": 381411,
+              "output": 83270,
+              "scan_ms": 0.35625600814819336,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.378795
+            },
+            {
+              "stage": 4,
+              "input": 83270,
+              "output": 1114,
+              "scan_ms": 0.6338880062103271,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.659578
+            }
+          ],
+          "scan_ms": 1.7815360128879547,
+          "compact_ms": 0.06339200027287006,
+          "fields_ms": 0.007327999919652939,
+          "host_output_ms": 0.045231,
+          "unattributed_host_minus_events_ms": 0.0912909869195222
+        },
+        {
+          "query_index": 8,
+          "ack_ms": 1.248636,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 706153,
+              "scan_ms": 0.4097920060157776,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.439279
+            },
+            {
+              "stage": 2,
+              "input": 706153,
+              "output": 310625,
+              "scan_ms": 0.3028480112552643,
+              "compact_ms": 0.016383999958634377,
+              "host_stage_ms": 0.329749
+            },
+            {
+              "stage": 3,
+              "input": 310625,
+              "output": 2933,
+              "scan_ms": 0.24243199825286865,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.266082
+            },
+            {
+              "stage": 4,
+              "input": 2933,
+              "output": 1,
+              "scan_ms": 0.16172799468040466,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.179888
+            }
+          ],
+          "scan_ms": 1.1168000102043152,
+          "compact_ms": 0.05727999936789274,
+          "fields_ms": 0.0036800000816583633,
+          "host_output_ms": 0.027627,
+          "unattributed_host_minus_events_ms": 0.07087599034613379
+        },
+        {
+          "query_index": 9,
+          "ack_ms": 1.307638,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 884327,
+              "scan_ms": 0.4028800129890442,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.438905
+            },
+            {
+              "stage": 2,
+              "input": 884327,
+              "output": 258964,
+              "scan_ms": 0.40432000160217285,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.43704
+            },
+            {
+              "stage": 3,
+              "input": 258964,
+              "output": 27,
+              "scan_ms": 0.20483200252056122,
+              "compact_ms": 0.012319999746978283,
+              "host_stage_ms": 0.229321
+            },
+            {
+              "stage": 4,
+              "input": 27,
+              "output": 1,
+              "scan_ms": 0.15663999319076538,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.170935
+            }
+          ],
+          "scan_ms": 1.1686720103025436,
+          "compact_ms": 0.05734399985522032,
+          "fields_ms": 0.00559999980032444,
+          "host_output_ms": 0.027773,
+          "unattributed_host_minus_events_ms": 0.07602199004191168
+        },
+        {
+          "query_index": 10,
+          "ack_ms": 1.392347,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 820952,
+              "scan_ms": 0.3989439904689789,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.427447
+            },
+            {
+              "stage": 2,
+              "input": 820952,
+              "output": 410385,
+              "scan_ms": 0.3850879967212677,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.41363
+            },
+            {
+              "stage": 3,
+              "input": 410385,
+              "output": 226,
+              "scan_ms": 0.3155519962310791,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.340237
+            },
+            {
+              "stage": 4,
+              "input": 226,
+              "output": 2,
+              "scan_ms": 0.16195200383663177,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.179676
+            }
+          ],
+          "scan_ms": 1.2615359872579575,
+          "compact_ms": 0.059263999573886395,
+          "fields_ms": 0.0038399999029934406,
+          "host_output_ms": 0.027758,
+          "unattributed_host_minus_events_ms": 0.06770701326516271
+        },
+        {
+          "query_index": 11,
+          "ack_ms": 1.240847,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 805388,
+              "scan_ms": 0.3968000113964081,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.428429
+            },
+            {
+              "stage": 2,
+              "input": 805388,
+              "output": 232903,
+              "scan_ms": 0.37775999307632446,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.405703
+            },
+            {
+              "stage": 3,
+              "input": 232903,
+              "output": 17,
+              "scan_ms": 0.18409599363803864,
+              "compact_ms": 0.012319999746978283,
+              "host_stage_ms": 0.204487
+            },
+            {
+              "stage": 4,
+              "input": 17,
+              "output": 1,
+              "scan_ms": 0.15670399367809296,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.170935
+            }
+          ],
+          "scan_ms": 1.1153599917888641,
+          "compact_ms": 0.05731199961155653,
+          "fields_ms": 0.0050559998489916325,
+          "host_output_ms": 0.027363,
+          "unattributed_host_minus_events_ms": 0.06311900875058774
+        },
+        {
+          "query_index": 12,
+          "ack_ms": 0.781051,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 265280,
+              "scan_ms": 0.3960320055484772,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.425774
+            },
+            {
+              "stage": 2,
+              "input": 265280,
+              "output": 1,
+              "scan_ms": 0.11241599917411804,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.130823
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.008383999578654766,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.023279
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15529599785804749,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.170012
+            }
+          ],
+          "scan_ms": 0.6721280021592975,
+          "compact_ms": 0.04297599941492081,
+          "fields_ms": 0.0027840000111609697,
+          "host_output_ms": 0.027364,
+          "unattributed_host_minus_events_ms": 0.06316299841462081
+        },
+        {
+          "query_index": 13,
+          "ack_ms": 1.204136,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 815818,
+              "scan_ms": 0.4095039963722229,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.438096
+            },
+            {
+              "stage": 2,
+              "input": 815818,
+              "output": 145662,
+              "scan_ms": 0.38099199533462524,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.412866
+            },
+            {
+              "stage": 3,
+              "input": 145662,
+              "output": 1,
+              "scan_ms": 0.11856000125408173,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.142849
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.16412800550460815,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.179173
+            }
+          ],
+          "scan_ms": 1.073183998465538,
+          "compact_ms": 0.05523199960589409,
+          "fields_ms": 0.005760000087320805,
+          "host_output_ms": 0.027526,
+          "unattributed_host_minus_events_ms": 0.06996000184124718
+        },
+        {
+          "query_index": 14,
+          "ack_ms": 1.370562,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 880627,
+              "scan_ms": 0.4124799966812134,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.442253
+            },
+            {
+              "stage": 2,
+              "input": 880627,
+              "output": 344419,
+              "scan_ms": 0.3930880129337311,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.425909
+            },
+            {
+              "stage": 3,
+              "input": 344419,
+              "output": 3,
+              "scan_ms": 0.2664960026741028,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.289395
+            },
+            {
+              "stage": 4,
+              "input": 3,
+              "output": 2,
+              "scan_ms": 0.16390399634838104,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.180236
+            }
+          ],
+          "scan_ms": 1.2359680086374283,
+          "compact_ms": 0.059327999129891396,
+          "fields_ms": 0.006016000173985958,
+          "host_output_ms": 0.02881,
+          "unattributed_host_minus_events_ms": 0.06924999205869442
+        },
+        {
+          "query_index": 15,
+          "ack_ms": 1.440788,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 811483,
+              "scan_ms": 0.4028159976005554,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.43854
+            },
+            {
+              "stage": 2,
+              "input": 811483,
+              "output": 406253,
+              "scan_ms": 0.3677760064601898,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.401613
+            },
+            {
+              "stage": 3,
+              "input": 406253,
+              "output": 55090,
+              "scan_ms": 0.3381119966506958,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.364681
+            },
+            {
+              "stage": 4,
+              "input": 55090,
+              "output": 1,
+              "scan_ms": 0.18227200210094452,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.205157
+            }
+          ],
+          "scan_ms": 1.2909760028123856,
+          "compact_ms": 0.06131199933588505,
+          "fields_ms": 0.0058559998869895935,
+          "host_output_ms": 0.027213,
+          "unattributed_host_minus_events_ms": 0.08264399796473976
+        },
+        {
+          "query_index": 16,
+          "ack_ms": 1.150275,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 824374,
+              "scan_ms": 0.4108799993991852,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.439367
+            },
+            {
+              "stage": 2,
+              "input": 824374,
+              "output": 95277,
+              "scan_ms": 0.38390401005744934,
+              "compact_ms": 0.018432000651955605,
+              "host_stage_ms": 0.413205
+            },
+            {
+              "stage": 3,
+              "input": 95277,
+              "output": 2,
+              "scan_ms": 0.07833600044250488,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.097643
+            },
+            {
+              "stage": 4,
+              "input": 2,
+              "output": 1,
+              "scan_ms": 0.1573439985513687,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.170729
+            }
+          ],
+          "scan_ms": 1.0304640084505081,
+          "compact_ms": 0.05526399984955788,
+          "fields_ms": 0.003648000070825219,
+          "host_output_ms": 0.025734,
+          "unattributed_host_minus_events_ms": 0.06089899162910872
+        },
+        {
+          "query_index": 17,
+          "ack_ms": 1.416214,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 835026,
+              "scan_ms": 0.4042559862136841,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438927
+            },
+            {
+              "stage": 2,
+              "input": 835026,
+              "output": 414300,
+              "scan_ms": 0.39350399374961853,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.425059
+            },
+            {
+              "stage": 3,
+              "input": 414300,
+              "output": 3661,
+              "scan_ms": 0.3195199966430664,
+              "compact_ms": 0.014336000196635723,
+              "host_stage_ms": 0.341946
+            },
+            {
+              "stage": 4,
+              "input": 3661,
+              "output": 1,
+              "scan_ms": 0.16291199624538422,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.179102
+            }
+          ],
+          "scan_ms": 1.2801919728517532,
+          "compact_ms": 0.061343999579548836,
+          "fields_ms": 0.00559999980032444,
+          "host_output_ms": 0.027614,
+          "unattributed_host_minus_events_ms": 0.06907802776837357
+        },
+        {
+          "query_index": 18,
+          "ack_ms": 1.129628,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 835819,
+              "scan_ms": 0.3980799913406372,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.427605
+            },
+            {
+              "stage": 2,
+              "input": 835819,
+              "output": 105407,
+              "scan_ms": 0.36371201276779175,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.391131
+            },
+            {
+              "stage": 3,
+              "input": 105407,
+              "output": 44,
+              "scan_ms": 0.0891840010881424,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.107277
+            },
+            {
+              "stage": 4,
+              "input": 44,
+              "output": 1,
+              "scan_ms": 0.1592320054769516,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.17302
+            }
+          ],
+          "scan_ms": 1.010208010673523,
+          "compact_ms": 0.055200000293552876,
+          "fields_ms": 0.0038079998921602964,
+          "host_output_ms": 0.026961,
+          "unattributed_host_minus_events_ms": 0.060411989140763955
+        },
+        {
+          "query_index": 19,
+          "ack_ms": 0.656293,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 1,
+              "scan_ms": 0.3806400001049042,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.413221
+            },
+            {
+              "stage": 2,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.006271999794989824,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.019499
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.009631999768316746,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.02425
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15625600516796112,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.169771
+            }
+          ],
+          "scan_ms": 0.5528000048361719,
+          "compact_ms": 0.0388799998909235,
+          "fields_ms": 0.006047999951988459,
+          "host_output_ms": 0.026097,
+          "unattributed_host_minus_events_ms": 0.05856499532091619
+        },
+        {
+          "query_index": 20,
+          "ack_ms": 0.82229,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 324212,
+              "scan_ms": 0.3999679982662201,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.429606
+            },
+            {
+              "stage": 2,
+              "input": 324212,
+              "output": 29,
+              "scan_ms": 0.13913600146770477,
+              "compact_ms": 0.012319999746978283,
+              "host_stage_ms": 0.159655
+            },
+            {
+              "stage": 3,
+              "input": 29,
+              "output": 1,
+              "scan_ms": 0.009247999638319016,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.023307
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15942400693893433,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.179108
+            }
+          ],
+          "scan_ms": 0.7077760063111782,
+          "compact_ms": 0.04502399917691946,
+          "fields_ms": 0.005632000043988228,
+          "host_output_ms": 0.027061,
+          "unattributed_host_minus_events_ms": 0.06385799446791407
+        },
+        {
+          "query_index": 21,
+          "ack_ms": 1.062272,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 853244,
+              "scan_ms": 0.40915200114250183,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438478
+            },
+            {
+              "stage": 2,
+              "input": 853244,
+              "output": 8907,
+              "scan_ms": 0.35760000348091125,
+              "compact_ms": 0.018432000651955605,
+              "host_stage_ms": 0.390423
+            },
+            {
+              "stage": 3,
+              "input": 8907,
+              "output": 1,
+              "scan_ms": 0.016448000445961952,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.032516
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1571200042963028,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.170962
+            }
+          ],
+          "scan_ms": 0.9403200093656778,
+          "compact_ms": 0.05324800033122301,
+          "fields_ms": 0.005791999865323305,
+          "host_output_ms": 0.026428,
+          "unattributed_host_minus_events_ms": 0.06291199043777596
+        },
+        {
+          "query_index": 22,
+          "ack_ms": 0.649997,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 1,
+              "scan_ms": 0.37779200077056885,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.411842
+            },
+            {
+              "stage": 2,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.007712000049650669,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.021716
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.008991999551653862,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.021409
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15510399639606476,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.167886
+            }
+          ],
+          "scan_ms": 0.5495999967679381,
+          "compact_ms": 0.0388799998909235,
+          "fields_ms": 0.003648000070825219,
+          "host_output_ms": 0.02333,
+          "unattributed_host_minus_events_ms": 0.05786900327031319
+        },
+        {
+          "query_index": 23,
+          "ack_ms": 1.308858,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 780796,
+              "scan_ms": 0.4103040099143982,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.437162
+            },
+            {
+              "stage": 2,
+              "input": 780796,
+              "output": 333611,
+              "scan_ms": 0.3493120074272156,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.378283
+            },
+            {
+              "stage": 3,
+              "input": 333611,
+              "output": 135,
+              "scan_ms": 0.26015999913215637,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.282164
+            },
+            {
+              "stage": 4,
+              "input": 135,
+              "output": 1,
+              "scan_ms": 0.15987199544906616,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.178927
+            }
+          ],
+          "scan_ms": 1.1796480119228363,
+          "compact_ms": 0.05724800005555153,
+          "fields_ms": 0.0060800001956522465,
+          "host_output_ms": 0.028653,
+          "unattributed_host_minus_events_ms": 0.06588198782596
+        },
+        {
+          "query_index": 24,
+          "ack_ms": 2.582223,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 663091,
+              "scan_ms": 0.3940480053424835,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.425859
+            },
+            {
+              "stage": 2,
+              "input": 663091,
+              "output": 283024,
+              "scan_ms": 0.3052479922771454,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.331901
+            },
+            {
+              "stage": 3,
+              "input": 283024,
+              "output": 64543,
+              "scan_ms": 0.22351999580860138,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.245345
+            },
+            {
+              "stage": 4,
+              "input": 64543,
+              "output": 5443,
+              "scan_ms": 1.4685120582580566,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 1.487063
+            }
+          ],
+          "scan_ms": 2.391328051686287,
+          "compact_ms": 0.05932800006121397,
+          "fields_ms": 0.005183999892324209,
+          "host_output_ms": 0.08291,
+          "unattributed_host_minus_events_ms": 0.12638294836017483
+        },
+        {
+          "query_index": 25,
+          "ack_ms": 0.989389,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 699351,
+              "scan_ms": 0.4115839898586273,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.440656
+            },
+            {
+              "stage": 2,
+              "input": 699351,
+              "output": 1494,
+              "scan_ms": 0.2933120131492615,
+              "compact_ms": 0.016383999958634377,
+              "host_stage_ms": 0.318087
+            },
+            {
+              "stage": 3,
+              "input": 1494,
+              "output": 1,
+              "scan_ms": 0.010048000141978264,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.032335
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15324799716472626,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.166855
+            }
+          ],
+          "scan_ms": 0.8681920003145933,
+          "compact_ms": 0.05113599915057421,
+          "fields_ms": 0.005760000087320805,
+          "host_output_ms": 0.027767,
+          "unattributed_host_minus_events_ms": 0.06430100044751164
+        },
+        {
+          "query_index": 26,
+          "ack_ms": 0.655438,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 650,
+              "scan_ms": 0.3776000142097473,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413348
+            },
+            {
+              "stage": 2,
+              "input": 650,
+              "output": 2,
+              "scan_ms": 0.00825599953532219,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.021693
+            },
+            {
+              "stage": 3,
+              "input": 2,
+              "output": 2,
+              "scan_ms": 0.007424000184983015,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.021003
+            },
+            {
+              "stage": 4,
+              "input": 2,
+              "output": 2,
+              "scan_ms": 0.1552319973707199,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.168909
+            }
+          ],
+          "scan_ms": 0.5485120113007724,
+          "compact_ms": 0.038815999403595924,
+          "fields_ms": 0.003776000114157796,
+          "host_output_ms": 0.026924,
+          "unattributed_host_minus_events_ms": 0.06433398918147382
+        },
+        {
+          "query_index": 27,
+          "ack_ms": 1.324127,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 651193,
+              "scan_ms": 0.411327987909317,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.439965
+            },
+            {
+              "stage": 2,
+              "input": 651193,
+              "output": 265142,
+              "scan_ms": 0.3163520097732544,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.341785
+            },
+            {
+              "stage": 3,
+              "input": 265142,
+              "output": 48346,
+              "scan_ms": 0.2703999876976013,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.290725
+            },
+            {
+              "stage": 4,
+              "input": 48346,
+              "output": 1,
+              "scan_ms": 0.20387199521064758,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.220953
+            }
+          ],
+          "scan_ms": 1.2019519805908203,
+          "compact_ms": 0.057247999124228954,
+          "fields_ms": 0.005824000108987093,
+          "host_output_ms": 0.02721,
+          "unattributed_host_minus_events_ms": 0.059103020175963694
+        },
+        {
+          "query_index": 28,
+          "ack_ms": 1.303956,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 754238,
+              "scan_ms": 0.4047999978065491,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.437598
+            },
+            {
+              "stage": 2,
+              "input": 754238,
+              "output": 331756,
+              "scan_ms": 0.3521920144557953,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.378911
+            },
+            {
+              "stage": 3,
+              "input": 331756,
+              "output": 2,
+              "scan_ms": 0.25676798820495605,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.277326
+            },
+            {
+              "stage": 4,
+              "input": 2,
+              "output": 1,
+              "scan_ms": 0.1658879965543747,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.179897
+            }
+          ],
+          "scan_ms": 1.179647997021675,
+          "compact_ms": 0.05728000029921532,
+          "fields_ms": 0.0046720001846551895,
+          "host_output_ms": 0.026656,
+          "unattributed_host_minus_events_ms": 0.06235600249445428
+        },
+        {
+          "query_index": 29,
+          "ack_ms": 1.089683,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 725584,
+              "scan_ms": 0.4044800102710724,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438229
+            },
+            {
+              "stage": 2,
+              "input": 725584,
+              "output": 66989,
+              "scan_ms": 0.3319360017776489,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.359262
+            },
+            {
+              "stage": 3,
+              "input": 66989,
+              "output": 1,
+              "scan_ms": 0.05926400050520897,
+              "compact_ms": 0.01027199998497963,
+              "host_stage_ms": 0.081735
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15855999290943146,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.178885
+            }
+          ],
+          "scan_ms": 0.9542400054633617,
+          "compact_ms": 0.05318399891257286,
+          "fields_ms": 0.005824000108987093,
+          "host_output_ms": 0.027831,
+          "unattributed_host_minus_events_ms": 0.07643499551507826
+        },
+        {
+          "query_index": 30,
+          "ack_ms": 1.033102,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 741098,
+              "scan_ms": 0.4103359878063202,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.440299
+            },
+            {
+              "stage": 2,
+              "input": 741098,
+              "output": 25646,
+              "scan_ms": 0.3123520016670227,
+              "compact_ms": 0.016383999958634377,
+              "host_stage_ms": 0.339258
+            },
+            {
+              "stage": 3,
+              "input": 25646,
+              "output": 1,
+              "scan_ms": 0.027775999158620834,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.043833
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1592639982700348,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.179225
+            }
+          ],
+          "scan_ms": 0.9097279869019985,
+          "compact_ms": 0.051167999394237995,
+          "fields_ms": 0.004800000227987766,
+          "host_output_ms": 0.026723,
+          "unattributed_host_minus_events_ms": 0.06740601347577568
+        },
+        {
+          "query_index": 31,
+          "ack_ms": 1.176059,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 851419,
+              "scan_ms": 0.40118399262428284,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.429842
+            },
+            {
+              "stage": 2,
+              "input": 851419,
+              "output": 118822,
+              "scan_ms": 0.39212799072265625,
+              "compact_ms": 0.018400000408291817,
+              "host_stage_ms": 0.425752
+            },
+            {
+              "stage": 3,
+              "input": 118822,
+              "output": 60,
+              "scan_ms": 0.09830400347709656,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.117735
+            },
+            {
+              "stage": 4,
+              "input": 60,
+              "output": 1,
+              "scan_ms": 0.15721599757671356,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.171756
+            }
+          ],
+          "scan_ms": 1.0488319844007492,
+          "compact_ms": 0.05523200053721666,
+          "fields_ms": 0.005888000130653381,
+          "host_output_ms": 0.027373,
+          "unattributed_host_minus_events_ms": 0.06610701493138071
+        }
+      ],
+      "means": {
+        "ack_ms": 1.1675503749999998,
+        "scan_ms": 1.040002001915127,
+        "compact_ms": 0.05305999965639785,
+        "fields_ms": 0.005053000008047093,
+        "host_output_ms": 0.02938071875,
+        "unattributed_host_minus_events_ms": 0.06943537342042802
+      },
+      "isolated_compaction_share": 0.045445576304489525
+    },
+    "candidate": {
+      "scope": "Independent event-enabled diagnostic, not primary ACK; residual is not automatically control cost",
+      "queries": [
+        {
+          "query_index": 0,
+          "ack_ms": 0.70144,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 70227,
+              "scan_ms": 0.3839679956436157,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413358
+            },
+            {
+              "stage": 2,
+              "input": 70227,
+              "output": 9,
+              "scan_ms": 0.03593600168824196,
+              "compact_ms": 0.01027199998497963,
+              "host_stage_ms": 0.05679
+            },
+            {
+              "stage": 3,
+              "input": 9,
+              "output": 1,
+              "scan_ms": 0.009535999968647957,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.023428
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15513600409030914,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.169991
+            }
+          ],
+          "scan_ms": 0.5845760013908148,
+          "compact_ms": 0.043007999658584595,
+          "fields_ms": 0.004608000162988901,
+          "host_output_ms": 0.027472,
+          "unattributed_host_minus_events_ms": 0.06924799878761168
+        },
+        {
+          "query_index": 1,
+          "ack_ms": 0.746641,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 96926,
+              "scan_ms": 0.4031359851360321,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438621
+            },
+            {
+              "stage": 2,
+              "input": 96926,
+              "output": 904,
+              "scan_ms": 0.047648001462221146,
+              "compact_ms": 0.01027199998497963,
+              "host_stage_ms": 0.069169
+            },
+            {
+              "stage": 3,
+              "input": 904,
+              "output": 1,
+              "scan_ms": 0.009759999811649323,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.032709
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15305599570274353,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.16695
+            }
+          ],
+          "scan_ms": 0.6135999821126461,
+          "compact_ms": 0.04502399917691946,
+          "fields_ms": 0.007712000049650669,
+          "host_output_ms": 0.029857,
+          "unattributed_host_minus_events_ms": 0.08030501866078377
+        },
+        {
+          "query_index": 2,
+          "ack_ms": 1.081898,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 488113,
+              "scan_ms": 0.4076800048351288,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438209
+            },
+            {
+              "stage": 2,
+              "input": 488113,
+              "output": 155564,
+              "scan_ms": 0.2566399872303009,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.280277
+            },
+            {
+              "stage": 3,
+              "input": 155564,
+              "output": 1,
+              "scan_ms": 0.12908799946308136,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.147399
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15862399339675903,
+              "compact_ms": 0.006175999995321035,
+              "host_stage_ms": 0.179046
+            }
+          ],
+          "scan_ms": 0.9520319849252701,
+          "compact_ms": 0.051135999616235495,
+          "fields_ms": 0.005696000065654516,
+          "host_output_ms": 0.027459,
+          "unattributed_host_minus_events_ms": 0.07303401539283993
+        },
+        {
+          "query_index": 3,
+          "ack_ms": 0.918439,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 362807,
+              "scan_ms": 0.409280002117157,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.437537
+            },
+            {
+              "stage": 2,
+              "input": 362807,
+              "output": 33182,
+              "scan_ms": 0.19232000410556793,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.216881
+            },
+            {
+              "stage": 3,
+              "input": 33182,
+              "output": 7,
+              "scan_ms": 0.033344000577926636,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.056992
+            },
+            {
+              "stage": 4,
+              "input": 7,
+              "output": 1,
+              "scan_ms": 0.1552640050649643,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.169933
+            }
+          ],
+          "scan_ms": 0.7902080118656158,
+          "compact_ms": 0.04707199987024069,
+          "fields_ms": 0.002976000076159835,
+          "host_output_ms": 0.027523,
+          "unattributed_host_minus_events_ms": 0.07818298818798364
+        },
+        {
+          "query_index": 4,
+          "ack_ms": 0.674593,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 15445,
+              "scan_ms": 0.3846080005168915,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413157
+            },
+            {
+              "stage": 2,
+              "input": 15445,
+              "output": 2,
+              "scan_ms": 0.015072000212967396,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.031246
+            },
+            {
+              "stage": 3,
+              "input": 2,
+              "output": 1,
+              "scan_ms": 0.009664000011980534,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.02451
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1542080044746399,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.168978
+            }
+          ],
+          "scan_ms": 0.5635520052164793,
+          "compact_ms": 0.040927999652922153,
+          "fields_ms": 0.005439999978989363,
+          "host_output_ms": 0.027321,
+          "unattributed_host_minus_events_ms": 0.06467299515160918
+        },
+        {
+          "query_index": 5,
+          "ack_ms": 0.894467,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 423148,
+              "scan_ms": 0.4116159975528717,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.439751
+            },
+            {
+              "stage": 2,
+              "input": 423148,
+              "output": 849,
+              "scan_ms": 0.18406400084495544,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.205036
+            },
+            {
+              "stage": 3,
+              "input": 849,
+              "output": 1,
+              "scan_ms": 0.008927999995648861,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.032272
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15932799875736237,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.179103
+            }
+          ],
+          "scan_ms": 0.7639359971508384,
+          "compact_ms": 0.047104000113904476,
+          "fields_ms": 0.006144000217318535,
+          "host_output_ms": 0.028966,
+          "unattributed_host_minus_events_ms": 0.07728300251793863
+        },
+        {
+          "query_index": 6,
+          "ack_ms": 0.667921,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 933,
+              "scan_ms": 0.3845120072364807,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.412707
+            },
+            {
+              "stage": 2,
+              "input": 933,
+              "output": 1,
+              "scan_ms": 0.008063999935984612,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.024348
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.009855999611318111,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.023502
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15423999726772308,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.170107
+            }
+          ],
+          "scan_ms": 0.5566720040515065,
+          "compact_ms": 0.040927999652922153,
+          "fields_ms": 0.0049600000493228436,
+          "host_output_ms": 0.027175,
+          "unattributed_host_minus_events_ms": 0.06536099624624847
+        },
+        {
+          "query_index": 7,
+          "ack_ms": 1.599733,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 552613,
+              "scan_ms": 0.4010240137577057,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.430309
+            },
+            {
+              "stage": 2,
+              "input": 552613,
+              "output": 265094,
+              "scan_ms": 0.28751999139785767,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.315238
+            },
+            {
+              "stage": 3,
+              "input": 265094,
+              "output": 65297,
+              "scan_ms": 0.24156799912452698,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.266129
+            },
+            {
+              "stage": 4,
+              "input": 65297,
+              "output": 1114,
+              "scan_ms": 0.5191680192947388,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.538521
+            }
+          ],
+          "scan_ms": 1.449280023574829,
+          "compact_ms": 0.05721599981188774,
+          "fields_ms": 0.007552000228315592,
+          "host_output_ms": 0.039819,
+          "unattributed_host_minus_events_ms": 0.08568497638496764
+        },
+        {
+          "query_index": 8,
+          "ack_ms": 1.120723,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 439263,
+              "scan_ms": 0.40508800745010376,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.437404
+            },
+            {
+              "stage": 2,
+              "input": 439263,
+              "output": 169972,
+              "scan_ms": 0.20713600516319275,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.231789
+            },
+            {
+              "stage": 3,
+              "input": 169972,
+              "output": 6651,
+              "scan_ms": 0.21382400393486023,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.232244
+            },
+            {
+              "stage": 4,
+              "input": 6651,
+              "output": 1,
+              "scan_ms": 0.16176000237464905,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.180023
+            }
+          ],
+          "scan_ms": 0.9878080189228058,
+          "compact_ms": 0.05315199960023165,
+          "fields_ms": 0.005535999778658152,
+          "host_output_ms": 0.027089,
+          "unattributed_host_minus_events_ms": 0.07422698169830433
+        },
+        {
+          "query_index": 9,
+          "ack_ms": 1.120645,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 695545,
+              "scan_ms": 0.41337600350379944,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.442767
+            },
+            {
+              "stage": 2,
+              "input": 695545,
+              "output": 101400,
+              "scan_ms": 0.3284800052642822,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.353084
+            },
+            {
+              "stage": 3,
+              "input": 101400,
+              "output": 2,
+              "scan_ms": 0.08585599809885025,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.108311
+            },
+            {
+              "stage": 4,
+              "input": 2,
+              "output": 1,
+              "scan_ms": 0.15936000645160675,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.179254
+            }
+          ],
+          "scan_ms": 0.9870720133185387,
+          "compact_ms": 0.05315199960023165,
+          "fields_ms": 0.005663999821990728,
+          "host_output_ms": 0.027632,
+          "unattributed_host_minus_events_ms": 0.07475698725923885
+        },
+        {
+          "query_index": 10,
+          "ack_ms": 0.713645,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 50682,
+              "scan_ms": 0.3925119936466217,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.426106
+            },
+            {
+              "stage": 2,
+              "input": 50682,
+              "output": 1034,
+              "scan_ms": 0.02864000014960766,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.046596
+            },
+            {
+              "stage": 3,
+              "input": 1034,
+              "output": 4,
+              "scan_ms": 0.009855999611318111,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.032748
+            },
+            {
+              "stage": 4,
+              "input": 4,
+              "output": 2,
+              "scan_ms": 0.15609599649906158,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.17096
+            }
+          ],
+          "scan_ms": 0.5871039899066091,
+          "compact_ms": 0.043007999658584595,
+          "fields_ms": 0.005535999778658152,
+          "host_output_ms": 0.027733,
+          "unattributed_host_minus_events_ms": 0.07799701065614817
+        },
+        {
+          "query_index": 11,
+          "ack_ms": 0.665573,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 172,
+              "scan_ms": 0.3840639889240265,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413374
+            },
+            {
+              "stage": 2,
+              "input": 172,
+              "output": 2,
+              "scan_ms": 0.006304000038653612,
+              "compact_ms": 0.006560000125318766,
+              "host_stage_ms": 0.022017
+            },
+            {
+              "stage": 3,
+              "input": 2,
+              "output": 1,
+              "scan_ms": 0.008799999952316284,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.0225
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1552640050649643,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.170133
+            }
+          ],
+          "scan_ms": 0.5544319939799607,
+          "compact_ms": 0.03929599979892373,
+          "fields_ms": 0.0030720001086592674,
+          "host_output_ms": 0.027698,
+          "unattributed_host_minus_events_ms": 0.06877300611245629
+        },
+        {
+          "query_index": 12,
+          "ack_ms": 0.670118,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 4823,
+              "scan_ms": 0.3824959993362427,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413751
+            },
+            {
+              "stage": 2,
+              "input": 4823,
+              "output": 1,
+              "scan_ms": 0.009216000325977802,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.025377
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.008767999708652496,
+              "compact_ms": 0.006175999995321035,
+              "host_stage_ms": 0.024547
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1563200056552887,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.169928
+            }
+          ],
+          "scan_ms": 0.5568000050261617,
+          "compact_ms": 0.04102399991825223,
+          "fields_ms": 0.005504000000655651,
+          "host_output_ms": 0.027339,
+          "unattributed_host_minus_events_ms": 0.06678999505493044
+        },
+        {
+          "query_index": 13,
+          "ack_ms": 0.9218,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 453149,
+              "scan_ms": 0.41516798734664917,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.450829
+            },
+            {
+              "stage": 2,
+              "input": 453149,
+              "output": 12331,
+              "scan_ms": 0.19616000354290009,
+              "compact_ms": 0.014336000196635723,
+              "host_stage_ms": 0.218882
+            },
+            {
+              "stage": 3,
+              "input": 12331,
+              "output": 1,
+              "scan_ms": 0.01926399953663349,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.035392
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15939199924468994,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.179194
+            }
+          ],
+          "scan_ms": 0.7899839896708727,
+          "compact_ms": 0.04915199987590313,
+          "fields_ms": 0.002976000076159835,
+          "host_output_ms": 0.027593,
+          "unattributed_host_minus_events_ms": 0.0796880103770643
+        },
+        {
+          "query_index": 14,
+          "ack_ms": 0.710588,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 51987,
+              "scan_ms": 0.40249601006507874,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.436558
+            },
+            {
+              "stage": 2,
+              "input": 51987,
+              "output": 362,
+              "scan_ms": 0.029983999207615852,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.047218
+            },
+            {
+              "stage": 3,
+              "input": 362,
+              "output": 2,
+              "scan_ms": 0.00979200005531311,
+              "compact_ms": 0.006175999995321035,
+              "host_stage_ms": 0.022471
+            },
+            {
+              "stage": 4,
+              "input": 2,
+              "output": 2,
+              "scan_ms": 0.155008003115654,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.168917
+            }
+          ],
+          "scan_ms": 0.5972800124436617,
+          "compact_ms": 0.04099199967458844,
+          "fields_ms": 0.00470399996265769,
+          "host_output_ms": 0.025493,
+          "unattributed_host_minus_events_ms": 0.06761198791909218
+        },
+        {
+          "query_index": 15,
+          "ack_ms": 1.408594,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 672645,
+              "scan_ms": 0.4183039963245392,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.450388
+            },
+            {
+              "stage": 2,
+              "input": 672645,
+              "output": 337285,
+              "scan_ms": 0.3349120020866394,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.364811
+            },
+            {
+              "stage": 3,
+              "input": 337285,
+              "output": 12742,
+              "scan_ms": 0.3399040102958679,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.364215
+            },
+            {
+              "stage": 4,
+              "input": 12742,
+              "output": 1,
+              "scan_ms": 0.17103999853134155,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.19228
+            }
+          ],
+          "scan_ms": 1.264160007238388,
+          "compact_ms": 0.057247999124228954,
+          "fields_ms": 0.005791999865323305,
+          "host_output_ms": 0.027343,
+          "unattributed_host_minus_events_ms": 0.08139399377205958
+        },
+        {
+          "query_index": 16,
+          "ack_ms": 0.701882,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 49128,
+              "scan_ms": 0.4000000059604645,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.429444
+            },
+            {
+              "stage": 2,
+              "input": 49128,
+              "output": 20,
+              "scan_ms": 0.028416000306606293,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.044595
+            },
+            {
+              "stage": 3,
+              "input": 20,
+              "output": 1,
+              "scan_ms": 0.007648000027984381,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.02148
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1552319973707199,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.169903
+            }
+          ],
+          "scan_ms": 0.5912960036657751,
+          "compact_ms": 0.040927999652922153,
+          "fields_ms": 0.004416000097990036,
+          "host_output_ms": 0.026842,
+          "unattributed_host_minus_events_ms": 0.06524199658331276
+        },
+        {
+          "query_index": 17,
+          "ack_ms": 1.295326,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 629904,
+              "scan_ms": 0.40668800473213196,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438007
+            },
+            {
+              "stage": 2,
+              "input": 629904,
+              "output": 258041,
+              "scan_ms": 0.3072640001773834,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.33277
+            },
+            {
+              "stage": 3,
+              "input": 258041,
+              "output": 4493,
+              "scan_ms": 0.2805759906768799,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.303042
+            },
+            {
+              "stage": 4,
+              "input": 4493,
+              "output": 1,
+              "scan_ms": 0.16687999665737152,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.184328
+            }
+          ],
+          "scan_ms": 1.1614079922437668,
+          "compact_ms": 0.05727999936789274,
+          "fields_ms": 0.004991999827325344,
+          "host_output_ms": 0.027655,
+          "unattributed_host_minus_events_ms": 0.0716460085610151
+        },
+        {
+          "query_index": 18,
+          "ack_ms": 0.945925,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 420449,
+              "scan_ms": 0.40889599919319153,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438443
+            },
+            {
+              "stage": 2,
+              "input": 420449,
+              "output": 29494,
+              "scan_ms": 0.21695999801158905,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.241432
+            },
+            {
+              "stage": 3,
+              "input": 29494,
+              "output": 42,
+              "scan_ms": 0.03478400036692619,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.05606
+            },
+            {
+              "stage": 4,
+              "input": 42,
+              "output": 1,
+              "scan_ms": 0.1570879966020584,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.171001
+            }
+          ],
+          "scan_ms": 0.8177279941737652,
+          "compact_ms": 0.0470399996265769,
+          "fields_ms": 0.005696000065654516,
+          "host_output_ms": 0.027584,
+          "unattributed_host_minus_events_ms": 0.07546100613400342
+        },
+        {
+          "query_index": 19,
+          "ack_ms": 0.665417,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 1,
+              "scan_ms": 0.384768009185791,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413012
+            },
+            {
+              "stage": 2,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.007327999919652939,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.022122
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.009824000298976898,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.023452
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15520000457763672,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.169961
+            }
+          ],
+          "scan_ms": 0.5571200139820576,
+          "compact_ms": 0.03891200013458729,
+          "fields_ms": 0.0037440001033246517,
+          "host_output_ms": 0.027525,
+          "unattributed_host_minus_events_ms": 0.06564098578003053
+        },
+        {
+          "query_index": 20,
+          "ack_ms": 0.693694,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 27966,
+              "scan_ms": 0.3991360068321228,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.428275
+            },
+            {
+              "stage": 2,
+              "input": 27966,
+              "output": 3,
+              "scan_ms": 0.01942400075495243,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.035669
+            },
+            {
+              "stage": 3,
+              "input": 3,
+              "output": 1,
+              "scan_ms": 0.009600000455975533,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.024445
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15427200496196747,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.168137
+            }
+          ],
+          "scan_ms": 0.5824320130050182,
+          "compact_ms": 0.040927999652922153,
+          "fields_ms": 0.005311999935656786,
+          "host_output_ms": 0.027877,
+          "unattributed_host_minus_events_ms": 0.06502198740640286
+        },
+        {
+          "query_index": 21,
+          "ack_ms": 0.847285,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 328310,
+              "scan_ms": 0.40115201473236084,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.43046
+            },
+            {
+              "stage": 2,
+              "input": 328310,
+              "output": 554,
+              "scan_ms": 0.14259199798107147,
+              "compact_ms": 0.01228800043463707,
+              "host_stage_ms": 0.167719
+            },
+            {
+              "stage": 3,
+              "input": 554,
+              "output": 1,
+              "scan_ms": 0.00902399979531765,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.031445
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15942400693893433,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.180264
+            }
+          ],
+          "scan_ms": 0.7121920194476843,
+          "compact_ms": 0.04700799938291311,
+          "fields_ms": 0.0037120000924915075,
+          "host_output_ms": 0.027605,
+          "unattributed_host_minus_events_ms": 0.08437298107691105
+        },
+        {
+          "query_index": 22,
+          "ack_ms": 0.667735,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 1,
+              "scan_ms": 0.38390401005744934,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413159
+            },
+            {
+              "stage": 2,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.0081599997356534,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.022221
+            },
+            {
+              "stage": 3,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.009920000098645687,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.023532
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.155008003115654,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.1689
+            }
+          ],
+          "scan_ms": 0.5569920130074024,
+          "compact_ms": 0.03884799964725971,
+          "fields_ms": 0.0046720001846551895,
+          "host_output_ms": 0.026803,
+          "unattributed_host_minus_events_ms": 0.06722298716068265
+        },
+        {
+          "query_index": 23,
+          "ack_ms": 1.080799,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 486492,
+              "scan_ms": 0.39529600739479065,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.425614
+            },
+            {
+              "stage": 2,
+              "input": 486492,
+              "output": 183401,
+              "scan_ms": 0.25273600220680237,
+              "compact_ms": 0.014303999952971935,
+              "host_stage_ms": 0.278357
+            },
+            {
+              "stage": 3,
+              "input": 183401,
+              "output": 57,
+              "scan_ms": 0.14931200444698334,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.168908
+            },
+            {
+              "stage": 4,
+              "input": 57,
+              "output": 1,
+              "scan_ms": 0.15654399991035461,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.170753
+            }
+          ],
+          "scan_ms": 0.953888013958931,
+          "compact_ms": 0.05110399890691042,
+          "fields_ms": 0.005760000087320805,
+          "host_output_ms": 0.027335,
+          "unattributed_host_minus_events_ms": 0.07004698704683787
+        },
+        {
+          "query_index": 24,
+          "ack_ms": 2.344263,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 320081,
+              "scan_ms": 0.40463998913764954,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438616
+            },
+            {
+              "stage": 2,
+              "input": 320081,
+              "output": 145176,
+              "scan_ms": 0.1438080072402954,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.167242
+            },
+            {
+              "stage": 3,
+              "input": 145176,
+              "output": 41372,
+              "scan_ms": 0.1852799952030182,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.204777
+            },
+            {
+              "stage": 4,
+              "input": 41372,
+              "output": 5443,
+              "scan_ms": 1.4217280149459839,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 1.437731
+            }
+          ],
+          "scan_ms": 2.155456006526947,
+          "compact_ms": 0.051103999838232994,
+          "fields_ms": 0.005280000157654285,
+          "host_output_ms": 0.080458,
+          "unattributed_host_minus_events_ms": 0.1324229934771659
+        },
+        {
+          "query_index": 25,
+          "ack_ms": 0.807851,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 245345,
+              "scan_ms": 0.4052799940109253,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438587
+            },
+            {
+              "stage": 2,
+              "input": 245345,
+              "output": 742,
+              "scan_ms": 0.10547199845314026,
+              "compact_ms": 0.010239999741315842,
+              "host_stage_ms": 0.129787
+            },
+            {
+              "stage": 3,
+              "input": 742,
+              "output": 1,
+              "scan_ms": 0.009344000369310379,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.03281
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15411199629306793,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.168837
+            }
+          ],
+          "scan_ms": 0.6742079891264439,
+          "compact_ms": 0.04502399917691946,
+          "fields_ms": 0.005760000087320805,
+          "host_output_ms": 0.027828,
+          "unattributed_host_minus_events_ms": 0.08285901160931586
+        },
+        {
+          "query_index": 26,
+          "ack_ms": 0.667349,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 33,
+              "scan_ms": 0.3843519985675812,
+              "compact_ms": 0.020479999482631683,
+              "host_stage_ms": 0.413804
+            },
+            {
+              "stage": 2,
+              "input": 33,
+              "output": 2,
+              "scan_ms": 0.006976000033318996,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.022028
+            },
+            {
+              "stage": 3,
+              "input": 2,
+              "output": 2,
+              "scan_ms": 0.01196799986064434,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.025653
+            },
+            {
+              "stage": 4,
+              "input": 2,
+              "output": 2,
+              "scan_ms": 0.15507200360298157,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.168799
+            }
+          ],
+          "scan_ms": 0.5583680020645261,
+          "compact_ms": 0.03884799964725971,
+          "fields_ms": 0.005760000087320805,
+          "host_output_ms": 0.027744,
+          "unattributed_host_minus_events_ms": 0.06437299820089337
+        },
+        {
+          "query_index": 27,
+          "ack_ms": 0.852404,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 234872,
+              "scan_ms": 0.40294399857521057,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438467
+            },
+            {
+              "stage": 2,
+              "input": 234872,
+              "output": 16533,
+              "scan_ms": 0.14108799397945404,
+              "compact_ms": 0.010208000428974628,
+              "host_stage_ms": 0.159509
+            },
+            {
+              "stage": 3,
+              "input": 16533,
+              "output": 11,
+              "scan_ms": 0.02067199908196926,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.043781
+            },
+            {
+              "stage": 4,
+              "input": 11,
+              "output": 1,
+              "scan_ms": 0.1574079990386963,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.172015
+            }
+          ],
+          "scan_ms": 0.7221119906753302,
+          "compact_ms": 0.045024000108242035,
+          "fields_ms": 0.002848000032827258,
+          "host_output_ms": 0.027807,
+          "unattributed_host_minus_events_ms": 0.0824200091836006
+        },
+        {
+          "query_index": 28,
+          "ack_ms": 0.756541,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 55624,
+              "scan_ms": 0.4051840007305145,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.438634
+            },
+            {
+              "stage": 2,
+              "input": 55624,
+              "output": 983,
+              "scan_ms": 0.06444799900054932,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.081608
+            },
+            {
+              "stage": 3,
+              "input": 983,
+              "output": 1,
+              "scan_ms": 0.009568000212311745,
+              "compact_ms": 0.0081599997356534,
+              "host_stage_ms": 0.032677
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.1552319973707199,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.168758
+            }
+          ],
+          "scan_ms": 0.6344319973140955,
+          "compact_ms": 0.04291199892759323,
+          "fields_ms": 0.005727999843657017,
+          "host_output_ms": 0.025241,
+          "unattributed_host_minus_events_ms": 0.07346900391465427
+        },
+        {
+          "query_index": 29,
+          "ack_ms": 1.065484,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 681522,
+              "scan_ms": 0.405023992061615,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.437253
+            },
+            {
+              "stage": 2,
+              "input": 681522,
+              "output": 44287,
+              "scan_ms": 0.33580800890922546,
+              "compact_ms": 0.01635199971497059,
+              "host_stage_ms": 0.363249
+            },
+            {
+              "stage": 3,
+              "input": 44287,
+              "output": 1,
+              "scan_ms": 0.042047999799251556,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.057494
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15721599757671356,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.170768
+            }
+          ],
+          "scan_ms": 0.9400959983468056,
+          "compact_ms": 0.05113599915057421,
+          "fields_ms": 0.003776000114157796,
+          "host_output_ms": 0.027669,
+          "unattributed_host_minus_events_ms": 0.07047600238846252
+        },
+        {
+          "query_index": 30,
+          "ack_ms": 0.750456,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 156230,
+              "scan_ms": 0.3876799941062927,
+              "compact_ms": 0.02051199972629547,
+              "host_stage_ms": 0.417025
+            },
+            {
+              "stage": 2,
+              "input": 156230,
+              "output": 528,
+              "scan_ms": 0.06947200000286102,
+              "compact_ms": 0.01027199998497963,
+              "host_stage_ms": 0.093905
+            },
+            {
+              "stage": 3,
+              "input": 528,
+              "output": 1,
+              "scan_ms": 0.008832000195980072,
+              "compact_ms": 0.008191999979317188,
+              "host_stage_ms": 0.031713
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15507200360298157,
+              "compact_ms": 0.006111999973654747,
+              "host_stage_ms": 0.169939
+            }
+          ],
+          "scan_ms": 0.6210559979081154,
+          "compact_ms": 0.045087999664247036,
+          "fields_ms": 0.0038399999029934406,
+          "host_output_ms": 0.027637,
+          "unattributed_host_minus_events_ms": 0.08047200252464415
+        },
+        {
+          "query_index": 31,
+          "ack_ms": 0.959547,
+          "stages": [
+            {
+              "stage": 1,
+              "input": 1000000,
+              "output": 438351,
+              "scan_ms": 0.41334399580955505,
+              "compact_ms": 0.020447999238967896,
+              "host_stage_ms": 0.441696
+            },
+            {
+              "stage": 2,
+              "input": 438351,
+              "output": 27146,
+              "scan_ms": 0.23024000227451324,
+              "compact_ms": 0.012256000190973282,
+              "host_stage_ms": 0.252864
+            },
+            {
+              "stage": 3,
+              "input": 27146,
+              "output": 1,
+              "scan_ms": 0.029664000496268272,
+              "compact_ms": 0.008224000222980976,
+              "host_stage_ms": 0.045906
+            },
+            {
+              "stage": 4,
+              "input": 1,
+              "output": 1,
+              "scan_ms": 0.15827199816703796,
+              "compact_ms": 0.006144000217318535,
+              "host_stage_ms": 0.172045
+            }
+          ],
+          "scan_ms": 0.8315199967473745,
+          "compact_ms": 0.04707199987024069,
+          "fields_ms": 0.005663999821990728,
+          "host_output_ms": 0.027655,
+          "unattributed_host_minus_events_ms": 0.07529100356039409
+        }
+      ],
+      "means": {
+        "ack_ms": 0.92871175,
+        "scan_ms": 0.8021500025934074,
+        "compact_ms": 0.04617799961124547,
+        "fields_ms": 0.0050260000207345,
+        "host_output_ms": 0.02952428125,
+        "unattributed_host_minus_events_ms": 0.07535774777461263
+      },
+      "isolated_compaction_share": 0.04972263957169215
+    }
+  },
+  "candidate_ordering_CPU_means_ms": {
+    "priority_ms": 0.002788375,
+    "order_submit_ms": 0.00325071875
+  },
+  "ordering_records": [
+    {
+      "invocation": "8",
+      "priority_ms": "0.0025430000000000001",
+      "order_submit_ms": "0.0035379999999999999"
+    },
+    {
+      "invocation": "9",
+      "priority_ms": "0.0025600000000000002",
+      "order_submit_ms": "0.0031359999999999999"
+    },
+    {
+      "invocation": "10",
+      "priority_ms": "0.0026310000000000001",
+      "order_submit_ms": "0.0032320000000000001"
+    },
+    {
+      "invocation": "11",
+      "priority_ms": "0.0027330000000000002",
+      "order_submit_ms": "0.003163"
+    },
+    {
+      "invocation": "12",
+      "priority_ms": "0.0024859999999999999",
+      "order_submit_ms": "0.0031939999999999998"
+    },
+    {
+      "invocation": "13",
+      "priority_ms": "0.0024750000000000002",
+      "order_submit_ms": "0.003209"
+    },
+    {
+      "invocation": "14",
+      "priority_ms": "0.0028479999999999998",
+      "order_submit_ms": "0.003718"
+    },
+    {
+      "invocation": "15",
+      "priority_ms": "0.0028860000000000001",
+      "order_submit_ms": "0.003153"
+    },
+    {
+      "invocation": "16",
+      "priority_ms": "0.0028890000000000001",
+      "order_submit_ms": "0.0033400000000000001"
+    },
+    {
+      "invocation": "17",
+      "priority_ms": "0.0027200000000000002",
+      "order_submit_ms": "0.0030739999999999999"
+    },
+    {
+      "invocation": "18",
+      "priority_ms": "0.002712",
+      "order_submit_ms": "0.0030699999999999998"
+    },
+    {
+      "invocation": "19",
+      "priority_ms": "0.0027829999999999999",
+      "order_submit_ms": "0.0031189999999999998"
+    },
+    {
+      "invocation": "20",
+      "priority_ms": "0.0025370000000000002",
+      "order_submit_ms": "0.0030829999999999998"
+    },
+    {
+      "invocation": "21",
+      "priority_ms": "0.0029150000000000001",
+      "order_submit_ms": "0.0033240000000000001"
+    },
+    {
+      "invocation": "22",
+      "priority_ms": "0.0026199999999999999",
+      "order_submit_ms": "0.0037009999999999999"
+    },
+    {
+      "invocation": "23",
+      "priority_ms": "0.0026059999999999998",
+      "order_submit_ms": "0.0031259999999999999"
+    },
+    {
+      "invocation": "24",
+      "priority_ms": "0.0028879999999999999",
+      "order_submit_ms": "0.0030860000000000002"
+    },
+    {
+      "invocation": "25",
+      "priority_ms": "0.002699",
+      "order_submit_ms": "0.0032139999999999998"
+    },
+    {
+      "invocation": "26",
+      "priority_ms": "0.002637",
+      "order_submit_ms": "0.0030760000000000002"
+    },
+    {
+      "invocation": "27",
+      "priority_ms": "0.0024030000000000002",
+      "order_submit_ms": "0.0031610000000000002"
+    },
+    {
+      "invocation": "28",
+      "priority_ms": "0.002519",
+      "order_submit_ms": "0.0031459999999999999"
+    },
+    {
+      "invocation": "29",
+      "priority_ms": "0.0029390000000000002",
+      "order_submit_ms": "0.0032369999999999999"
+    },
+    {
+      "invocation": "30",
+      "priority_ms": "0.0056449999999999998",
+      "order_submit_ms": "0.0038219999999999999"
+    },
+    {
+      "invocation": "31",
+      "priority_ms": "0.0028379999999999998",
+      "order_submit_ms": "0.0032369999999999999"
+    },
+    {
+      "invocation": "32",
+      "priority_ms": "0.0028379999999999998",
+      "order_submit_ms": "0.0032269999999999998"
+    },
+    {
+      "invocation": "33",
+      "priority_ms": "0.0029710000000000001",
+      "order_submit_ms": "0.003156"
+    },
+    {
+      "invocation": "34",
+      "priority_ms": "0.0026050000000000001",
+      "order_submit_ms": "0.0031180000000000001"
+    },
+    {
+      "invocation": "35",
+      "priority_ms": "0.0025669999999999998",
+      "order_submit_ms": "0.0030690000000000001"
+    },
+    {
+      "invocation": "36",
+      "priority_ms": "0.0026640000000000001",
+      "order_submit_ms": "0.00315"
+    },
+    {
+      "invocation": "37",
+      "priority_ms": "0.002274",
+      "order_submit_ms": "0.0031340000000000001"
+    },
+    {
+      "invocation": "38",
+      "priority_ms": "0.0029859999999999999",
+      "order_submit_ms": "0.003637"
+    },
+    {
+      "invocation": "39",
+      "priority_ms": "0.0028110000000000001",
+      "order_submit_ms": "0.0033730000000000001"
+    }
+  ],
+  "order_submit_scope": "Host submission of two30-int H2D copies;not isolated device-copy duration",
+  "residual_not_automatically_control": true
+}
