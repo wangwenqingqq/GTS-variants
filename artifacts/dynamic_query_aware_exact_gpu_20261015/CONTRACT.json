@@ -1,0 +1,211 @@
+{
+  "experiment": "GTSPP_20261015_DYNAMIC_QUERY_AWARE_EXACT_GPU_SEARCH",
+  "parent_commit": "11b401e551d42657e10c55765afb7b8a0ed7ac9e",
+  "plan_sha256": "dbeb62ac0758da8dcc99f3dab67152651ab8c7108393193f6218aef09c5a913f",
+  "scope": "Exploratory dynamic failure-mode study,not a new ordering mechanism or10k/100k/production admission",
+  "N": 1000000,
+  "D": 960,
+  "B": 1,
+  "qids": [
+    88406,
+    865632,
+    881748,
+    916533,
+    40158,
+    242468,
+    40486,
+    900387,
+    703226,
+    791039,
+    724874,
+    671829,
+    722418,
+    152899,
+    737995,
+    144573,
+    570909,
+    347206,
+    63744,
+    625378,
+    136857,
+    201233,
+    72436,
+    617423,
+    810945,
+    789615,
+    601856,
+    433080,
+    415755,
+    282095,
+    66651,
+    326654
+  ],
+  "radius": 0.705625057220459,
+  "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+  "global_means_sha256": "fec927e467fcccd353e958a5b1b4ff2110a65bb93379bd475ba07d20bc17ca50",
+  "hardware": {
+    "model": "NVIDIA RTX PRO6000 Blackwell Server Edition",
+    "target": "sm_120",
+    "driver": "590.48.01",
+    "nvcc": "13.1 V13.1.115",
+    "placement": "live idle card with matched NUMA;private placement",
+    "no_GPU_settings_changes": true
+  },
+  "systems": {
+    "S0": "one-stage full960 exact-safe warp scan+stableCUB+original-order FP64 restoration",
+    "S1": "frozen128/256/512/960 progressive scan",
+    "S2_STALE": "same PDX-BOND zone32 GPU adapter,frozen initial means",
+    "S2_INC": "same PDX ordering,ordinary eager sum/count maintenance on GPU;not S3/novelty"
+  },
+  "update": {
+    "IDs": "monotone logical occurrences;delete by logicalID only",
+    "storage": "append/swap-last dense rawFP32,one representation;queries only after completed replacement pairs",
+    "batch_max": 512,
+    "visibility": "serial ACK;no overlap/Graph/MVCC",
+    "means": "initial FP32 static mean timesN anchored in FP64;FP64 rowwise add/subtract then FP32 mean;not bitwise NumPy recomputation",
+    "maintenance": "gather actual deleted device rows before mutations;one-owner/dimension FP64 sum kernel;Host mean D2H before ACK;no free Host database lookup for deletions",
+    "alpha": "cumulative distinct original rows replaced / initialN;point rows and batchACKs both reported",
+    "victim_seed": 2026101501,
+    "stationary_source_seed": 2026101502,
+    "W2": "controlled synthetic drift:incoming original victim vector with coordinate zones circularly rotated by15 (480 dimensions);not a natural drift claim"
+  },
+  "workloads": {
+    "W0": {
+      "checkpoints": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "point_replacements": 16,
+      "batch": 1,
+      "pattern": "32 initial queries;4 pairs then32 queries per phase"
+    },
+    "W1": {
+      "checkpoints": [
+        0,
+        16,
+        32,
+        48,
+        64
+      ],
+      "point_replacements": 64,
+      "batch": 1,
+      "pattern": "32 initial queries;16 repetitions of(delete1,insert1,query2)per phase"
+    },
+    "W2": {
+      "checkpoints": [
+        0,
+        50000,
+        200000,
+        350000,
+        500000
+      ],
+      "point_replacements": 500000,
+      "batch": 512,
+      "pattern": "32 queries at0 and each of four complete update-burst checkpoints"
+    }
+  },
+  "queries_per_phase": 32,
+  "phases": 5,
+  "warmup_queries": 8,
+  "exactness": {
+    "authority": "inclusive original-coordinate orderedFP64 full score<=FP64(radius)^2",
+    "membership": "complete IDs,zeroFN/FP,multiplicity",
+    "native": "FP32 full-score cast toFP64 squared observer+FP32 sqrt;bitwise squared and5e-5 scaled native tolerance",
+    "full_hit_internal_FP64": "bitwise checked in qualification",
+    "final": "all actual maps and every final device vector byte outside timer"
+  },
+  "measurement": {
+    "primary": "segmented events+release;not process wall",
+    "included": [
+      "all update payload/mapping/ACK synchronization",
+      "all online priority/sort/order uploads",
+      "all exact scans,restoration,selection and complete Host outputs",
+      "eager statistics within updateACK",
+      "complete service device/maps/retained Host answer/audit-container release"
+    ],
+    "excluded": [
+      "initial data/trace parsing/context/build/upload/statistic preparation",
+      "warmup8",
+      "offline complete validation,answer/raw serialization",
+      "client-owned immutable requests/data containers",
+      "context teardown",
+      "profiler overhead"
+    ],
+    "processes_per_system_workload": 6,
+    "orders": [
+      "forward",
+      "reverse",
+      "forward",
+      "reverse",
+      "forward",
+      "reverse"
+    ],
+    "system_order": [
+      "S0",
+      "S1",
+      "S2_STALE",
+      "S2_INC"
+    ],
+    "primary_estimator": "ratio of medians of6 process aggregate means/totals",
+    "paired": "matched round geometric ratio",
+    "bootstrap_seed": 2026101503,
+    "bootstrap_resamples": 20000,
+    "traffic": "independent query-only NCU,all kernels/all160 formal queries;arithmetic bytes per query,per phase32;one process/cell,no process CI",
+    "statistics_cost": "included updateACK;report measured nested enqueue/tail as nonadditive;incremental tax uses same-round totalupdate ACK difference;separate maintenance outsideupdates=0"
+  },
+  "stages": {
+    "qualification": 32,
+    "primary": 72,
+    "query_NCU": 12,
+    "maintenance_NCU": 1
+  },
+  "max_GPU_starts": 117,
+  "automatic_retries": 0,
+  "qualification": "4 modes x(plain100-iteration/two-independent-stream selftest+memcheck/racecheck/synccheck+bounded4096+W0/W1/W2 fulltarget)",
+  "NCU_metrics": [
+    "gpu__time_duration.avg",
+    "dram__bytes.sum",
+    "dram__bytes_op_read.sum",
+    "dram__bytes_op_write.sum",
+    "lts__t_bytes.sum",
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed",
+    "sm__warps_active.avg.pct_of_peak_sustained_active"
+  ],
+  "decision": "descriptive potentially overlapping outcomes;report interval and material exceptions;no automatic novelty/paper promotion or posthoc singlepoint threshold",
+  "stop": "first source/isolation/runtime/quality failure;retain records and unexecuted jobs;no auto retry or changed frozen inputs",
+  "parents": {
+    "artifacts/exact_representation_gate1_20261012/evidence/RAW_IDENTITY.json": "bb2d84c9bf24ee69d04e980bef9a7a3a030428c3976bbae717a0f86ccef191aa",
+    "artifacts/external_closure/common.py": "bb2ed5e1cced5305831cec13a57b79b4145afc85e4db2dee5af365dcb0dd0103",
+    "artifacts/external_closure/range_service.cu": "53bfd07fe17c5fd0c351032823005ce05b6dc59cf081c433e29a5ad8b2100015",
+    "artifacts/external_closure/static_guard.py": "36e9b8f341093613e8671be47f956ea0ae34de66e2f1723326f81b84fd09a4cb",
+    "artifacts/par_range_update/fixtures.py": "8a3a3c2741bedbf01b0dc31afbe31d90b503f73dbd80e8ca98f4bb09c3cf64be",
+    "artifacts/par_range_update/reproduce.py": "e3647d578dc6381b55481e9bc2fc712af4a9dc1ce1c25fcb0f4e8bb5235d835b",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015/GPU_DESIGN.md": "6bea58b1d8d118d9ba56c79fd4ed872d33171e94f47177129bdba65e312de790",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015/evidence/CPU_DECISION.json": "e576523876952df846132e19c2d2545a34ffc35a8cd76848bda7fd78bd97f1cc",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015/evidence/GPU_PREPARATION.json": "d97b8e09d6a357580d08c8bc782757eb684877ea333b211cf5d5b875e2427a94",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015/pdx.cpp": "60103f18a87f754e3216ff6306f7ea6efcba7aad2bf9bd4e6130e3c14f58e5c7",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015_recovery_01/GPU_CONTRACT.json": "cd47d6afede06fae2666e2b6bbca66388bf6fca610d321dfc4dd762313cc7582",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015_recovery_01/evidence/DRAM.json": "6280261410565be97d685eebbc847e8a2bc0ecf43fc6350143479c78ac4f23ec",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015_recovery_01/evidence/INPUT_IDENTITY.json": "7c3bf8b39e26bbdaa1a66ad6257171a810b15f6415d11ee7dd61e83297212475",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015_recovery_01/evidence/STATIC.json": "f8782fa7ee1a957787da0a9443b4a90acc6bea17c0da0738b2420a6611a3f08f",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015_recovery_01/evidence/TIMING.json": "81d01c1d319c723d95def8882dc947cb2541e054774eec29115286edc1f78ae1",
+    "artifacts/pdx_bond_gpu_realizability_gate4_20261015_recovery_01/gpu_prepare.py": "1371ad138f82ce215413a402dba5e88ada77b8f94d30f764c90fdd1069670b0a",
+    "artifacts/progressive_dynamic_gate3_20261013/oracle.cpp": "67486de9d18521f94d7a0ff13883bafd09b0eabc077fbe8ecea66106c62fd03f",
+    "artifacts/progressive_gpu_gate2_20261013/CONTRACT.json": "edb441c36c43a599a51a93ca575354c99881405666caa1c75c3934362119b464",
+    "artifacts/progressive_gpu_gate2_20261013/analyze.py": "fb56bcee1a0b28bf5d050b85afc3a6172f76b636006414e70618b0b5a865808f",
+    "artifacts/progressive_gpu_gate2_20261013/campaign.py": "ff24c0a9bea9772d3c0a2bfde93b16392e1e7d7e531826ef410cafbd2c52fa45",
+    "artifacts/progressive_gpu_gate2_20261013/curate.py": "101c708e367b7c4e2a8fe936f04a08c3f50d3397557817fa08d82731518a2cc4",
+    "artifacts/progressive_gpu_gate2_20261013/fixtures.hpp": "0304b6aa804218b302a03dd4ab820194b76333df4ea7951398dd567fdad9c029",
+    "artifacts/progressive_gpu_gate2_20261013/pre_cost.py": "3ba44408f5212a7f1eefb7e08ff0259e98aebe92dd233823a49c07bda6365561",
+    "artifacts/progressive_gpu_gate2_20261013/prepare.py": "ec9a70d6abd1c79d821e6323066701282c2ff14f0e6f2e5da3e498a66e3b0219",
+    "artifacts/progressive_gpu_gate2_20261013/progressive.cuh": "fa6352c852c609c6e9cea7b2d362aa9bfd451f9c809e520bdeba2bbe47cc16db",
+    "artifacts/progressive_gpu_gate2_20261013/static_evidence.py": "6344fa339edcebca18b83420666caed30a5c1db5c635c227b721973e6cee0f27",
+    "artifacts/unified_search_update/protocol.py": "0f816d970fac17bc30d5fdc8c71d71e9081019b5d74942ddba1e3d18b1a66f5f",
+    "artifacts/unified_search_update/run.py": "414c8cbece562832658bac680d4ba33a036a69cb353b8ac9cba1f91ccb85ce50",
+    "artifacts/unified_target_workflow/run.py": "df589fac6fce481098b212e53e8ab2724e3ded280c125a63caef27b143a68509",
+    "diagnostics/region_exec_20261008/audit_closure.py": "930330a47f55db83005e2afd4eaad9c56c56405985d481564874c13c7c047381"
+  }
+}

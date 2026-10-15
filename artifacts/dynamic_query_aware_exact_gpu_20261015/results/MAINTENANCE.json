@@ -1,0 +1,87 @@
+{
+  "profile": {
+    "scope": "All INC/W2 update-region kernels;copy-request bytes separate;no profiler latency promotion",
+    "point_updates": 1000000,
+    "update_batches": 1954,
+    "kernel_counts": {
+      "statistics_gather": 977,
+      "statistics_sum": 1954
+    },
+    "total_kernel_metrics": {
+      "DRAM_bytes": 5149728000.0,
+      "DRAM_read_bytes": 5149714432.0,
+      "DRAM_write_bytes": 13568.0,
+      "L2_bytes": 8667951328.0,
+      "kernel_ms": 199.271296
+    },
+    "per_point_update": {
+      "DRAM_bytes": 5149.728,
+      "DRAM_read_bytes": 5149.714432,
+      "DRAM_write_bytes": 0.013568,
+      "L2_bytes": 8667.951328,
+      "kernel_ms": 0.000199271296
+    },
+    "duration_weighted_selected_kernel_percent": {
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": 1.750993700567893,
+      "sm__warps_active.avg.pct_of_peak_sustained_active": 19.07595123544537
+    }
+  },
+  "paired_tax": {
+    "W0": {
+      "estimator": "median of matched-round total update ACK differences;not a separately isolated kernel cost",
+      "paired_difference_ms": [
+        0.2758900000000001,
+        0.3303389999999999,
+        0.2752410000000002,
+        0.27046699999999996,
+        0.30110099999999995,
+        0.306087
+      ],
+      "median_difference_ms": 0.2884955,
+      "paired_difference_95_CI_ms": [
+        0.27285400000000004,
+        0.31821299999999997
+      ],
+      "difference_ms_per_query": 0.001803096875,
+      "difference_us_per_point_update": 9.015484375
+    },
+    "W1": {
+      "estimator": "median of matched-round total update ACK differences;not a separately isolated kernel cost",
+      "paired_difference_ms": [
+        0.9991119999999998,
+        1.1116960000000011,
+        0.9701670000000002,
+        0.9966419999999994,
+        0.9928370000000011,
+        1.111408
+      ],
+      "median_difference_ms": 0.9978769999999996,
+      "paired_difference_95_CI_ms": [
+        0.9815020000000007,
+        1.1115520000000005
+      ],
+      "difference_ms_per_query": 0.006236731249999997,
+      "difference_us_per_point_update": 7.795914062499997
+    },
+    "W2": {
+      "estimator": "median of matched-round total update ACK differences;not a separately isolated kernel cost",
+      "paired_difference_ms": [
+        200.47462299999984,
+        219.07881500000076,
+        217.1562430000049,
+        259.81628399999977,
+        204.23688799999672,
+        223.09407000000306
+      ],
+      "median_difference_ms": 218.11752900000283,
+      "paired_difference_95_CI_ms": [
+        202.35575549999828,
+        241.4551770000014
+      ],
+      "difference_ms_per_query": 1.3632345562500177,
+      "difference_us_per_point_update": 0.21811752900000284
+    }
+  },
+  "standalone_maintenance_ms": 0,
+  "note": "Incremental statistics fully charged within updates;profile kernel durations are diagnostic and not a service denominator"
+}
