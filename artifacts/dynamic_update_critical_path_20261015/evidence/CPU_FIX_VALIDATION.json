@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cases": 27,
+  "negative_mutation_tests": 27,
+  "negative_field_accounting_tests": 14,
+  "source_transform": true,
+  "native_delete_body_roundtrip": true,
+  "unique_destruction_after_sync_both_TRACE": true,
+  "GPU_starts": 0,
+  "initial_CPU_fixture_failure": {
+    "GPU_starts": 0,
+    "reason": "The first mock expected two copies for IDs {0,1},but correct swap-delete semantics yield one;fixture corrected to {0,2}.",
+    "preserved": true
+  },
+  "independent_read_only_fix_review": "Passed all three root-cause fixes;not final publication or GPU admission."
+}

@@ -1,0 +1,143 @@
+--- r1/generate.py
++++ fixed/generate.py
+@@ -16,0 +17,3 @@
++#if TRACE
++    bool active=true;
++#endif
+@@ -24 +27 @@
+-    ~Zone(){
++    void close(){
+@@ -26 +29 @@
+-        nvtxRangePop();
++        if(active){nvtxRangePop();active=false;}
+@@ -28,0 +32 @@
++    ~Zone(){close();}
+@@ -35 +39 @@
+-        '{Zone validate("DELETE_VALIDATE");std::set<int> unique;for(int id:ids)require(id>=0&&id<next&&position.at(id)>=0&&unique.insert(id).second,"live unique delete IDs");}')
++        'Zone validate("DELETE_VALIDATE");std::set<int> unique;for(int id:ids)require(id>=0&&id<next&&position.at(id)>=0&&unique.insert(id).second,"live unique delete IDs");validate.close();')
+--- r1/quality.py
++++ fixed/quality.py
+@@ -20,0 +21,25 @@
++
++
++def distance_fields(dist,sq):
++    assert len(dist)==len(sq) and np.isfinite(dist).all() and np.isfinite(sq).all()
++    assert (dist>=0).all() and (sq>=0).all(), 'Nonnegative Euclidean and squared-distance fields required'
++
++
++def operator_group(group,op,sample,b):
++    kinds=[0,1,2] if op==2 else [1 if op==0 else 0]
++    assert [int(r['kind']) for r in group]==kinds
++    for r in group:
++        kind=int(r['kind']);assert int(r['sample'])==sample and int(r['rows'])==b
++        assert all(np.isfinite(float(r[f])) and float(r[f])>=0 for f in ('ack_ms','delete_ms','insert_ms')) and float(r['ack_ms'])>0
++        assert int(r['sync_calls'])==(2 if kind==2 else 1) and int(r['H2D_bytes'])==(b*3840 if kind!=0 else 0)
++        assert 0<=int(r['D2D_bytes'])<=b*3840 and int(r['D2D_bytes'])%3840==0
++        assert int(r['copy_calls'])==int(r['D2D_bytes'])//3840+int(kind!=0)
++        if kind==0:assert float(r['delete_ms'])==float(r['ack_ms']) and float(r['insert_ms'])==0
++        if kind==1:assert int(r['D2D_bytes'])==0 and float(r['insert_ms'])==float(r['ack_ms']) and float(r['delete_ms'])==0
++    if op==2:
++        delete,insert,pair=group
++        assert float(pair['delete_ms'])==float(delete['ack_ms']) and float(pair['insert_ms'])==float(insert['ack_ms'])
++        assert float(pair['ack_ms'])+1e-9>=float(pair['delete_ms'])+float(pair['insert_ms'])
++        for field in ('D2D_bytes','H2D_bytes','copy_calls','sync_calls'):
++            assert int(pair[field])==int(delete[field])+int(insert[field]), ('Replacement/native accounting',field)
++    return [r for r in group if int(r['kind'])<2]
+@@ -45 +70 @@
+-    assert len(ids)==len(dist)==len(sq) and np.isfinite(dist).all() and np.isfinite(sq).all()
++    assert len(ids)==len(dist)==len(sq);distance_fields(dist,sq)
+@@ -66,10 +91,2 @@
+-        group=rows[sample*(3 if op==2 else 1):(sample+1)*(3 if op==2 else 1)];kinds=[0,1,2] if op==2 else [1 if op==0 else 0]
+-        assert [int(r['kind']) for r in group]==kinds
+-        for r in group:
+-            kind=int(r['kind']);assert int(r['sample'])==sample and int(r['rows'])==b
+-            assert all(np.isfinite(float(r[f])) and float(r[f])>=0 for f in ('ack_ms','delete_ms','insert_ms')) and float(r['ack_ms'])>0
+-            assert int(r['sync_calls'])==(2 if kind==2 else 1) and int(r['H2D_bytes'])==(b*3840 if kind!=0 else 0)
+-            assert int(r['D2D_bytes'])%3840==0 and int(r['copy_calls'])==int(r['D2D_bytes'])//3840+int(kind!=0)
+-            if kind==1:assert int(r['D2D_bytes'])==0
+-            if kind==2:assert float(r['ack_ms'])+1e-9>=float(r['delete_ms'])+float(r['insert_ms'])
+-            if kind<2:native.append(r)
++        group=rows[sample*(3 if op==2 else 1):(sample+1)*(3 if op==2 else 1)]
++        native.extend(operator_group(group,op,sample,b))
+--- r1/test_protocol.py
++++ fixed/test_protocol.py
+@@ -4,0 +5 @@
++import copy
+@@ -9 +10 @@
+-from common import HERE, jobs, save
++from common import HERE, PARENT, jobs, save
+@@ -11,0 +13,66 @@
++from quality import distance_fields, operator_group
++
++
++def source_lifetime(out):
++    source=adapter();erase=source[source.index('    Cost erase('):source.index('    Cost insert(')]
++    native=(PARENT/'service.cu').read_text();native=native[native.index('    Cost erase('):native.index('    Cost insert(')]
++    stripped=erase.replace('\n        Zone operation("U_DELETE");','').replace('Zone validate("DELETE_VALIDATE");','').replace('validate.close();','')
++    stripped=stripped.replace('{Zone owners("DELETE_ROWS");for(int id:ids){','for(int id:ids){').replace('\n        }}','\n        }')
++    assert stripped==native, 'Deleting annotation tokens must recover the exact native erase body'
++    zone=source[source.index('struct Zone {'):].split('};',1)[0]+'};'
++    mock=r'''
++#include <algorithm>
++#include <cassert>
++#include <cstdint>
++#include <set>
++#include <string>
++#include <vector>
++static std::vector<std::string> events,stack;
++static void nvtxRangePushA(const char* name){events.push_back(std::string("push:")+name);stack.push_back(name);}
++static void nvtxRangePop(){assert(!stack.empty());events.push_back("pop:"+stack.back());stack.pop_back();}
++static void require(bool value,const char*){assert(value);}
++static void ck(int value){assert(!value);}
++static int cudaMemcpyAsync(void*,const void*,size_t,int,int){events.push_back("copy");return 0;}
++static int cudaStreamSynchronize(int){events.push_back("sync");return 0;}
++constexpr int cudaMemcpyDeviceToDevice=0;
++struct AuditSet {std::set<int> values;auto insert(int id){return values.insert(id);}~AuditSet(){events.push_back("unique_destroy");}};
++struct Cost {double submit=0,tail=0;};
++struct Mutation {int kind,id,n,row,last,moved,next,after;};
++'''+zone+r'''
++struct Store {
++    struct Plan {float buffer[3*960]{};float* database=buffer;int n=3,stream=0;}p;
++    int next=3;std::vector<int> occurrence{0,1,2},position{0,1,2};std::vector<Mutation> mutations;uint64_t swapped=0;
++'''+erase.replace('std::set<int> unique','AuditSet unique')+r'''
++};
++int main(){Store s;s.erase(std::vector<int>{0,2});
++    auto sync=std::find(events.begin(),events.end(),"sync"),destroy=std::find(events.begin(),events.end(),"unique_destroy");
++    assert(sync!=events.end()&&destroy!=events.end()&&sync<destroy);
++    assert(std::count(events.begin(),events.end(),"copy")==2&&s.p.n==1&&s.mutations.size()==2);
++#if TRACE
++    auto close=std::find(events.begin(),events.end(),"pop:U_DELETE");assert(close!=events.end()&&destroy<close&&stack.empty());
++#endif
++}
++'''
++    (out/'lifetime.cpp').write_text(mock)
++    for trace in (0,1):
++        binary=out/f'lifetime_{trace}'
++        subprocess.run(['g++','-std=c++17','-O2','-DMODE=2',f'-DTRACE={trace}',str(out/'lifetime.cpp'),'-o',str(binary)],check=True)
++        subprocess.run([str(binary)],check=True)
++
++
++def negative_accounting():
++    def rejects(fn):
++        try:fn()
++        except AssertionError:return
++        raise AssertionError('Corrupted fixture was accepted')
++    distance_fields(np.array([0.,1.]),np.array([0.,1.]))
++    for d,s in (([-1.],[1.]),([1.],[-1.]),([np.nan],[1.]),([1.],[np.inf])):
++        rejects(lambda:distance_fields(np.array(d),np.array(s)))
++    fields=('sample','kind','rows','ack_ms','delete_ms','insert_ms','copy_calls','H2D_bytes','D2D_bytes','sync_calls')
++    rows=[dict(zip(fields,v)) for v in ((0,0,32,3.,3.,0.,20,0,20*3840,1),(0,1,32,2.,0.,2.,1,32*3840,0,1),(0,2,32,5.1,3.,2.,21,32*3840,20*3840,2))]
++    assert operator_group(rows,2,0,32)==rows[:2]
++    for row,field,value in ((2,'delete_ms',1.),(2,'insert_ms',1.),(0,'delete_ms',1.),(1,'insert_ms',1.),(0,'insert_ms',1.),(1,'delete_ms',1.),(2,'D2D_bytes',19*3840),(2,'copy_calls',20),(0,'D2D_bytes',-3840),(2,'sync_calls',1)):
++        bad=copy.deepcopy(rows);bad[row][field]=value
++        if field=='D2D_bytes':bad[row]['copy_calls']=value//3840+int(row!=0)
++        rejects(lambda:operator_group(bad,2,0,32))
++    return 14
+@@ -17,0 +85 @@
++    source_lifetime(a.out);negative_checks=negative_accounting()
+@@ -44,2 +112,3 @@
+-    check();save(a.out/'RECEIPT.json',dict(passed=True,cases=total,negative_mutation_tests=total,source_transform=True,GPU_starts=0))
+-    print('PASS:27 replay/batch/operator cases and27 negative witnesses;124 bounded jobs;0 GPU starts')
++    check();save(a.out/'RECEIPT.json',dict(passed=True,cases=total,negative_mutation_tests=total,negative_field_accounting_tests=negative_checks,
++        source_transform=True,native_delete_body_roundtrip=True,unique_destruction_after_sync_both_TRACE=True,GPU_starts=0))
++    print('PASS:27 replay cases,27 negative witnesses,14 field/accounting negatives,native-source roundtrip and2 lifetime checks;124 bounded jobs;0 GPU starts')
