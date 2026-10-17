@@ -1,0 +1,441 @@
+{
+  "CPU_processes": 12,
+  "GPU_starts": 0,
+  "cells": [
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "per_plan_mean_median_us": 44.6540125,
+      "per_plan_p50_median_us": 46.25075,
+      "per_plan_p95_median_us": 48.72705,
+      "process_rounds": 6,
+      "total_planning_max_ms": 53.673076,
+      "total_planning_median_ms": 53.584815000000006,
+      "total_planning_min_ms": 52.907261,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "per_plan_mean_median_us": 54.89590166666667,
+      "per_plan_p50_median_us": 55.45625,
+      "per_plan_p95_median_us": 58.001025,
+      "process_rounds": 6,
+      "total_planning_max_ms": 65.942516,
+      "total_planning_median_ms": 65.875082,
+      "total_planning_min_ms": 65.173829,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "per_plan_mean_median_us": 46.720263029315966,
+      "per_plan_p50_median_us": 47.53975,
+      "per_plan_p95_median_us": 53.239000000000004,
+      "process_rounds": 6,
+      "total_planning_max_ms": 28.859803,
+      "total_planning_median_ms": 28.6862415,
+      "total_planning_min_ms": 28.311219,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "per_plan_mean_median_us": 52.625568403908794,
+      "per_plan_p50_median_us": 52.78075,
+      "per_plan_p95_median_us": 58.594125000000005,
+      "process_rounds": 6,
+      "total_planning_max_ms": 32.567262,
+      "total_planning_median_ms": 32.312099,
+      "total_planning_min_ms": 31.979391,
+      "variant": "GENERIC_DSE"
+    }
+  ],
+  "device_and_service_costs": "UNKNOWN",
+  "passed": true,
+  "processes": [
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 53.443054,
+      "input_run": {
+        "bytes": 169728,
+        "sha256": "88667614a3deda5f554093205721dcd5b6f5d826db05fcc47a426dc0e34818a8"
+      },
+      "mean_plan_us": 44.670092499999996,
+      "p50_plan_us": 46.113,
+      "p95_plan_us": 48.226549999999996,
+      "plans": 1200,
+      "release_ms": 0.161057,
+      "round": 0,
+      "total_ms": 53.604111,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 65.855566,
+      "input_run": {
+        "bytes": 169728,
+        "sha256": "88667614a3deda5f554093205721dcd5b6f5d826db05fcc47a426dc0e34818a8"
+      },
+      "mean_plan_us": 54.93365583333333,
+      "p50_plan_us": 55.666,
+      "p95_plan_us": 58.12774999999999,
+      "plans": 1200,
+      "release_ms": 0.064821,
+      "round": 0,
+      "total_ms": 65.920387,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 53.39886,
+      "input_run": {
+        "bytes": 169728,
+        "sha256": "1cb807c85211085c67085ab91a51cfdba4e4d90de32520e9cbb9f347c2b4a42d"
+      },
+      "mean_plan_us": 44.637932500000005,
+      "p50_plan_us": 46.3965,
+      "p95_plan_us": 50.10444999999999,
+      "plans": 1200,
+      "release_ms": 0.166659,
+      "round": 1,
+      "total_ms": 53.565519,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 65.869814,
+      "input_run": {
+        "bytes": 169728,
+        "sha256": "1cb807c85211085c67085ab91a51cfdba4e4d90de32520e9cbb9f347c2b4a42d"
+      },
+      "mean_plan_us": 54.9367325,
+      "p50_plan_us": 55.706500000000005,
+      "p95_plan_us": 58.63005,
+      "plans": 1200,
+      "release_ms": 0.054265,
+      "round": 1,
+      "total_ms": 65.924079,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 53.450008,
+      "input_run": {
+        "bytes": 169688,
+        "sha256": "43c81974f3299679bd3bef1d8f21914d0883f961befadee2c472a80918808212"
+      },
+      "mean_plan_us": 44.6745025,
+      "p50_plan_us": 46.3645,
+      "p95_plan_us": 49.1752,
+      "plans": 1200,
+      "release_ms": 0.159395,
+      "round": 2,
+      "total_ms": 53.609403,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 65.881813,
+      "input_run": {
+        "bytes": 169688,
+        "sha256": "43c81974f3299679bd3bef1d8f21914d0883f961befadee2c472a80918808212"
+      },
+      "mean_plan_us": 54.95209666666666,
+      "p50_plan_us": 55.5935,
+      "p95_plan_us": 58.31415,
+      "plans": 1200,
+      "release_ms": 0.060703,
+      "round": 2,
+      "total_ms": 65.942516,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 52.745111,
+      "input_run": {
+        "bytes": 169674,
+        "sha256": "ab040b021d2977561ffe93d2dc3e13b32eac011b89c90d8f9f9a34b939c22b70"
+      },
+      "mean_plan_us": 44.08938416666666,
+      "p50_plan_us": 46.195499999999996,
+      "p95_plan_us": 48.29494999999999,
+      "plans": 1200,
+      "release_ms": 0.16215,
+      "round": 3,
+      "total_ms": 52.907261,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 65.114966,
+      "input_run": {
+        "bytes": 169674,
+        "sha256": "ab040b021d2977561ffe93d2dc3e13b32eac011b89c90d8f9f9a34b939c22b70"
+      },
+      "mean_plan_us": 54.31152416666667,
+      "p50_plan_us": 55.153,
+      "p95_plan_us": 57.545449999999995,
+      "plans": 1200,
+      "release_ms": 0.058863,
+      "round": 3,
+      "total_ms": 65.173829,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 53.513891,
+      "input_run": {
+        "bytes": 169750,
+        "sha256": "ed20ab3c2fc33d5d9fdefd7986e187b031cc843acb3e79aad4b107bdea5017bf"
+      },
+      "mean_plan_us": 44.72756333333333,
+      "p50_plan_us": 46.306,
+      "p95_plan_us": 48.741049999999994,
+      "plans": 1200,
+      "release_ms": 0.159185,
+      "round": 4,
+      "total_ms": 53.673076,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 65.763894,
+      "input_run": {
+        "bytes": 169750,
+        "sha256": "ed20ab3c2fc33d5d9fdefd7986e187b031cc843acb3e79aad4b107bdea5017bf"
+      },
+      "mean_plan_us": 54.8581475,
+      "p50_plan_us": 55.319,
+      "p95_plan_us": 57.874300000000005,
+      "plans": 1200,
+      "release_ms": 0.065883,
+      "round": 4,
+      "total_ms": 65.829777,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 53.106943,
+      "input_run": {
+        "bytes": 169729,
+        "sha256": "fe5f386ca43b9fc9c009cb0ee685c14015377c8f315d91b8767bb283d165079d"
+      },
+      "mean_plan_us": 44.3912975,
+      "p50_plan_us": 46.081,
+      "p95_plan_us": 48.71305,
+      "plans": 1200,
+      "release_ms": 0.162614,
+      "round": 5,
+      "total_ms": 53.269557,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_runbook",
+      "build_ms": 65.27951,
+      "input_run": {
+        "bytes": 169729,
+        "sha256": "fe5f386ca43b9fc9c009cb0ee685c14015377c8f315d91b8767bb283d165079d"
+      },
+      "mean_plan_us": 54.45103083333333,
+      "p50_plan_us": 55.0215,
+      "p95_plan_us": 57.347500000000004,
+      "plans": 1200,
+      "release_ms": 0.061727,
+      "round": 5,
+      "total_ms": 65.341237,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 28.452266,
+      "input_run": {
+        "bytes": 86583,
+        "sha256": "129a3ff5bc710d840c36c439a9441bf1cd08a8ebdad160c0dff7e11efe17e0f4"
+      },
+      "mean_plan_us": 46.492983713355045,
+      "p50_plan_us": 47.1315,
+      "p95_plan_us": 54.46945000000001,
+      "plans": 614,
+      "release_ms": 0.094426,
+      "round": 0,
+      "total_ms": 28.546692,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 32.120302,
+      "input_run": {
+        "bytes": 86583,
+        "sha256": "129a3ff5bc710d840c36c439a9441bf1cd08a8ebdad160c0dff7e11efe17e0f4"
+      },
+      "mean_plan_us": 52.37943159609121,
+      "p50_plan_us": 52.1525,
+      "p95_plan_us": 64.80065000000002,
+      "plans": 614,
+      "release_ms": 0.040669,
+      "round": 0,
+      "total_ms": 32.160971,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 28.772613,
+      "input_run": {
+        "bytes": 86582,
+        "sha256": "cdb3790ced1235d1c9c6e36ee78b6e80f6030d77c9e801352e2e256b0aaab1d8"
+      },
+      "mean_plan_us": 47.00293648208469,
+      "p50_plan_us": 47.801,
+      "p95_plan_us": 53.729850000000006,
+      "plans": 614,
+      "release_ms": 0.08719,
+      "round": 1,
+      "total_ms": 28.859803,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 32.52882,
+      "input_run": {
+        "bytes": 86582,
+        "sha256": "cdb3790ced1235d1c9c6e36ee78b6e80f6030d77c9e801352e2e256b0aaab1d8"
+      },
+      "mean_plan_us": 53.04114332247557,
+      "p50_plan_us": 53.241,
+      "p95_plan_us": 58.510850000000005,
+      "plans": 614,
+      "release_ms": 0.038442,
+      "round": 1,
+      "total_ms": 32.567262,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 28.215726,
+      "input_run": {
+        "bytes": 86552,
+        "sha256": "c8db83b4e7bf6680b74c25664a9d240e9338b0e11972e88de838459020b1c4b7"
+      },
+      "mean_plan_us": 46.109477198697064,
+      "p50_plan_us": 47.1535,
+      "p95_plan_us": 52.37095,
+      "plans": 614,
+      "release_ms": 0.095493,
+      "round": 2,
+      "total_ms": 28.311219,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 31.937185,
+      "input_run": {
+        "bytes": 86552,
+        "sha256": "c8db83b4e7bf6680b74c25664a9d240e9338b0e11972e88de838459020b1c4b7"
+      },
+      "mean_plan_us": 52.0836986970684,
+      "p50_plan_us": 52.385999999999996,
+      "p95_plan_us": 57.0127,
+      "plans": 614,
+      "release_ms": 0.042206,
+      "round": 2,
+      "total_ms": 31.979391,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 28.690549,
+      "input_run": {
+        "bytes": 86606,
+        "sha256": "0397ac02feee7d92e339da410051603c66e580122956c675b330f1eb3a8db7cd"
+      },
+      "mean_plan_us": 46.87448859934854,
+      "p50_plan_us": 47.718,
+      "p95_plan_us": 52.74815,
+      "plans": 614,
+      "release_ms": 0.090387,
+      "round": 3,
+      "total_ms": 28.780936,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 32.41897,
+      "input_run": {
+        "bytes": 86606,
+        "sha256": "0397ac02feee7d92e339da410051603c66e580122956c675b330f1eb3a8db7cd"
+      },
+      "mean_plan_us": 52.86323778501629,
+      "p50_plan_us": 52.952,
+      "p95_plan_us": 58.595200000000006,
+      "plans": 614,
+      "release_ms": 0.039058,
+      "round": 3,
+      "total_ms": 32.458028,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 28.492952,
+      "input_run": {
+        "bytes": 86595,
+        "sha256": "d897494ef817bfae3fd4e4b6ca98d162ef6f75f3c1752a4b40a3469008ab0d0a"
+      },
+      "mean_plan_us": 46.56603745928339,
+      "p50_plan_us": 47.3615,
+      "p95_plan_us": 52.28055,
+      "plans": 614,
+      "release_ms": 0.098595,
+      "round": 4,
+      "total_ms": 28.591547,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 32.195808,
+      "input_run": {
+        "bytes": 86595,
+        "sha256": "d897494ef817bfae3fd4e4b6ca98d162ef6f75f3c1752a4b40a3469008ab0d0a"
+      },
+      "mean_plan_us": 52.4959657980456,
+      "p50_plan_us": 52.6415,
+      "p95_plan_us": 58.593050000000005,
+      "plans": 614,
+      "release_ms": 0.036715,
+      "round": 4,
+      "total_ms": 32.232523,
+      "variant": "GENERIC_DSE"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 28.755917,
+      "input_run": {
+        "bytes": 86567,
+        "sha256": "4d03c4bb20b0c5100088119c63ada503ec423b9c8ac2b83d03a1a8fd4484532f"
+      },
+      "mean_plan_us": 46.97835179153094,
+      "p50_plan_us": 47.808499999999995,
+      "p95_plan_us": 55.2918,
+      "plans": 614,
+      "release_ms": 0.088791,
+      "round": 5,
+      "total_ms": 28.844708,
+      "variant": "GENERIC_WAVES"
+    },
+    {
+      "book": "wikipedia-1M_expiration_time_replace_delete_runbook",
+      "build_ms": 32.352482,
+      "input_run": {
+        "bytes": 86567,
+        "sha256": "4d03c4bb20b0c5100088119c63ada503ec423b9c8ac2b83d03a1a8fd4484532f"
+      },
+      "mean_plan_us": 52.755171009771985,
+      "p50_plan_us": 52.92,
+      "p95_plan_us": 64.71495,
+      "plans": 614,
+      "release_ms": 0.039193,
+      "round": 5,
+      "total_ms": 32.391675,
+      "variant": "GENERIC_DSE"
+    }
+  ],
+  "raw_order": "Per-batch forward/reverse variant order balanced over six independent processes",
+  "scope": "Isolated planning build+destruction;signature/replay/input I/O excluded;not ACK or events+release",
+  "scratch_allocator_peak_bytes": "UNKNOWN"
+}

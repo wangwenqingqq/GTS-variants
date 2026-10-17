@@ -1,0 +1,56 @@
+{
+  "study": "GTSPP_20261017_real_trace_dependency_opportunity",
+  "parent_commit": "b2a8d65d35776aee6b72b75bd00b44a5ed7649fd",
+  "stage": "Source admission and CPU structural falsification; no GPU campaign registered",
+  "GPU_starts": 0,
+  "source_selection": {
+    "public_system_replays": ["wikipedia-1M_expiration_time_runbook.yaml", "wikipedia-1M_expiration_time_replace_delete_runbook.yaml", "wikipedia-1M_expiration_time_replace_only_runbook.yaml"],
+    "selection_rule": "All three pinned 1M Wikipedia expiration variants; complete original order and scale; no resampling or best-case selection",
+    "benchmark_provenance": "B: faithful public-system operation replay",
+    "benchmark_distribution": "C: generated expiration/replacement decisions, not a production update trace",
+    "other_source_audits": ["Quake Wikipedia workload", "SPFresh public artifact", "Wikidata vector service"],
+    "wiki_metadata": {
+      "source_grade": "A for observed upstream CMS edits only; not vector-service requests",
+      "project": "English Wikipedia, namespace 0",
+      "UTC_interval": ["2026-10-16T00:00:00Z", "2026-10-16T01:00:00Z"],
+      "types": ["edit", "new"],
+      "maximum_pages": 20,
+      "page_size": 500,
+      "first_page": "Retained pre-registration reachability probe, before computing dependency statistics",
+      "retained_fields": ["rcid", "pageid", "revid", "old_revid", "timestamp", "type"],
+      "not_observed": ["vector IDs or chunking", "vector-index initial membership/layout", "client request or ACK boundaries", "queries/readers", "per-service update versions"],
+      "admission": "Logical repetition and revision-chain checks only; no physical M/F, GPU or service inference"
+    }
+  },
+  "replay_contract": {
+    "initial_state": "Empty, as in the public streaming runner",
+    "insert": "Append source IDs in source order; reject duplicate live IDs",
+    "delete": "Swap-delete source IDs in the runner's ascending range order",
+    "replace": "Stable-ID payload overwrite at its existing row, not invented delete-plus-insert",
+    "visibility": "Each source runner call returns before the next operation; searches remain barriers. No concurrent observer or distributed atomicity claim",
+    "full_state": "Maintain every allocated opaque row token including retired rows, owner/position maps and payload versions; compare all touched rows and prove untouched rows unchanged",
+    "composition_scopes": ["one original delete call", "at most 512 consecutive deletes inside that same call"],
+    "no_crossing": ["source request return", "insert", "replace", "search"],
+    "singleton_control": "Counterfactual stricter per-point visibility only; no same-contract performance comparison",
+    "physical_adapter_boundary": "Packed swap-delete is our explicit structural adapter, not a claim that the source ANN systems use it"
+  },
+  "metrics": {
+    "M": "Actual non-self row-copy commands from the declared sequential adapter",
+    "F": "Final nonidentity original-source assignments from the frozen generic planner",
+    "weighted_elimination": "(sum(M)-sum(F))/sum(M); null when sum(M)=0",
+    "batch_distribution": "Unweighted p50/p90 of per-batch ratios among M>0, separately from weighted elimination",
+    "dependency_edges": "All ordered RAW/WAW/WAR row conflicts, with depth/width of the frozen legal-wave schedule",
+    "source_lifetimes": "Source call-step and mutation-step intervals, not fabricated wall-clock arrival/ACK times",
+    "cost_boundary": "CPU planning-only diagnostics if performed; never full ACK, device time or events+release",
+    "unmeasured": ["GPU activities and hardware traffic", "Query/Update ACK", "full-service throughput/latency", "production applicability"]
+  },
+  "admission": {
+    "GO_MECHANISM_QUESTION": "Requires sourced legal opportunity, quantified same-contract costs and a concrete unresolved nonincremental mechanism contradiction",
+    "missing_vector_ACK_or_workload_authority": "EVIDENCE_INSUFFICIENT; retain useful narrow evidence without a real-vector-service conclusion",
+    "no_forced_GPU_matrix": true,
+    "no_tail_optimization": true,
+    "no_manuscript_change": true,
+    "no_production_dispatch_change": true,
+    "failure_policy": "Preserve input or validation failure; do not silently skip, reorder, relabel or repair a source operation"
+  }
+}

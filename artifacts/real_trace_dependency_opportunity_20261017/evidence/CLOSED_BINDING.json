@@ -1,0 +1,25 @@
+{
+  "CPU_processes": 12,
+  "GPU_starts": 0,
+  "all_CPU_commands_exits_and_outputs_bound": true,
+  "checker_curation": "Archived proof binds the executed v1 checker. Public bind.py derives private placement from hash-bound BUILD instead of embedding it; all other reference sources stay byte-identical. The explicit archived-reference bridge requires the original proof SHA and is rechecked without timed targets.",
+  "checker_reference_sources": {
+    "CONTRACT.json": "6631fd71c6df93f1a31f468a3bf3c24528f096a3bb1615da8d08182d10eba7dd",
+    "CPU_COST_CONTRACT.json": "b27947666405d0aa0e25c40bf08533c94edeeee7c61c73a4ddfdf796cb6f3220",
+    "EVIDENCE_ANCHORS.json": "b7502b721c5c90549f4d0350bc8a908e1e79a2bbd516facfb22691255ab3be07",
+    "SOURCES.json": "2004e6b85e15fa3c55c930716a8980602c0b17d9959ab309682963574e9b0219",
+    "bind.py": "dba297a0fdcd203f836b5e0a5d270ec8f7d66d6a2e758d9072117b23a10d01c0",
+    "capture.py": "4dde6b9d5d29f53dba4c5a242bb374fb7b4c65475fe1beac587d47496c28a89f",
+    "cost.py": "66fbf387a4acd24f688b7ba0b331016765dd42e320f1360de1cd2f63d4598a0a",
+    "metadata.py": "9d7453ebb7c18f581b3d70ff7d560e31f64de8baa9a33bf35ad86ee51e6b8f20",
+    "replay.py": "bcb8a5820849719c8a596f261b3d53fbc6c231ac8e37ab77f5aef8f8c779da41"
+  },
+  "diagnostic_binary_recompiled_identically": true,
+  "independent_replay_and_inputs_byte_identical": true,
+  "metadata_and_costs_independently_recomputed": true,
+  "original_command_paths_bound": true,
+  "passed": true,
+  "proof_sha256": "ba92f4df573385d7d5b13cb93b88400596a5d9371cbf265b15f07f1c7990293d",
+  "raw_files": 135,
+  "scope": "CPU structural and planning evidence only;no GPU or vector-service ACK admission"
+}
