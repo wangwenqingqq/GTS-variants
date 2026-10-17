@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "GPU_starts": 0,
+  "scope": "Independent CPU checks and public-packaging checks;not a second GPU campaign",
+  "checks": {
+    "CPU_MODEL_R1.json": {
+      "result": {
+        "passed": true,
+        "exhaustive": 125664,
+        "random_delete": 576,
+        "arbitrary_generic_copy_sequences": 1000,
+        "entire_capacity": true,
+        "generic_equals_tail": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "d7ab0ea070ec08a0a98f5ca806bfef910362352ac1589dc1c2c2c0b1de0bb270"
+    },
+    "CPU_GENERIC_CPP_R1.json": {
+      "result": {
+        "passed": true,
+        "exhaustive": 125664,
+        "random": 576,
+        "generic_equals_tail": true,
+        "all_allocated_capacity": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "7941ff1ff349d31663dcf178f7f5cb545b1a4a61503ecadded4537981fbfd555"
+    },
+    "CPU_EVIDENCE_R1.json": {
+      "result": {
+        "passed": true,
+        "mutation_field_rejections": 24,
+        "fresh_occurrence_redeletion": true,
+        "native_field_rejections": 3,
+        "paired_estimator": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "e8050a8087626213bff81647b5fc448a0f599c1cad09f38c635bf33940ab80eb"
+    },
+    "PUBLIC_CPU_MODEL_R1.json": {
+      "result": {
+        "passed": true,
+        "exhaustive": 125664,
+        "random_delete": 576,
+        "arbitrary_generic_copy_sequences": 1000,
+        "entire_capacity": true,
+        "generic_equals_tail": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "d7ab0ea070ec08a0a98f5ca806bfef910362352ac1589dc1c2c2c0b1de0bb270"
+    },
+    "PUBLIC_CPU_CPP_R1.json": {
+      "result": {
+        "passed": true,
+        "exhaustive": 125664,
+        "random": 576,
+        "generic_equals_tail": true,
+        "all_allocated_capacity": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "7941ff1ff349d31663dcf178f7f5cb545b1a4a61503ecadded4537981fbfd555"
+    },
+    "PUBLIC_CPU_EVIDENCE_R1.json": {
+      "result": {
+        "passed": true,
+        "mutation_field_rejections": 24,
+        "fresh_occurrence_redeletion": true,
+        "native_field_rejections": 3,
+        "paired_estimator": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "e8050a8087626213bff81647b5fc448a0f599c1cad09f38c635bf33940ab80eb"
+    },
+    "PUBLIC_TRACE_PARITY_R1.json": {
+      "result": {
+        "passed": true,
+        "CPU_census_records": 16,
+        "all_named_payload_SHA256s_equal": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "db1cc93b4414000f8a24ed98d09b7067b04fb10bfcd50ff49ef2baf289c6fc0a"
+    },
+    "PUBLIC_BIND_TESTS_R1.json": {
+      "result": {
+        "passed": true,
+        "tamper_rejections": 10,
+        "missing_unconsumed_payload_rejected": true,
+        "changed_checked_command_guard_rejected": true,
+        "exact_census": true,
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "10781f130a80c2a405607d7cc4b0485f1187e7f70290d9720355a2f5f26d4d0b"
+    },
+    "PUBLIC_PREFLIGHT_TEST_R2.json": {
+      "result": {
+        "GPU_starts": 0,
+        "fixture_only": true,
+        "passed": true,
+        "receipt_and_late_capture_checks": true
+      },
+      "receipt_sha256": "aeebb9443e21e5a6eba8dbdbfa334755a2c63d18de25fcd09659e09f10c37ceb"
+    },
+    "PUBLIC_OPTIMIZED_MODE_R2.json": {
+      "result": {
+        "passed": true,
+        "optimized_mode_rejections": [
+          "test_cpu.py",
+          "trace.py",
+          "prepare.py",
+          "generate.py",
+          "export.py",
+          "plot.py",
+          "analyze.py",
+          "profile.py",
+          "campaign.py",
+          "bind.py",
+          "test_bind.py",
+          "test_evidence.py",
+          "preflight.py",
+          "test_preflight.py"
+        ],
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "cf531e6b250fce00a4a8392a048e8965a497238d2b57493b9a19e35fb83110d9"
+    },
+    "PUBLIC_SEMANTIC_BRIDGE_R1.json": {
+      "result": {
+        "passed": true,
+        "checks": {
+          "protocol.py": "Normal-mode AST exact after removing fail-fast optimized-mode guard",
+          "planners.py": "Normal-mode AST exact after removing fail-fast optimized-mode guard",
+          "generate.py": "Normal-mode AST exact after removing fail-fast optimized-mode guard",
+          "plot.py": "Normal-mode AST exact after removing fail-fast optimized-mode guard",
+          "GPU_CONTRACT.json": "All nondeployment contract fields exact",
+          "analyze.py": "Only independent closure admission inserted;all computation exact",
+          "profile.py": "Only independent closure admission inserted;all computation exact",
+          "prepare.py": "Only reproduction identity-capture invocation inserted after READY"
+        },
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "bb70f8b5708178940157ec6312d6d9dce9fdb20b0f87cc85c1d4d6507bce288e"
+    },
+    "PUBLIC_GUARD_TESTS_R1.json": {
+      "result": {
+        "passed": true,
+        "optimized_mode_rejections": [
+          "test_cpu.py",
+          "trace.py",
+          "prepare.py",
+          "generate.py",
+          "export.py",
+          "plot.py",
+          "analyze.py",
+          "profile.py",
+          "campaign.py",
+          "bind.py",
+          "test_bind.py",
+          "test_evidence.py",
+          "preflight.py"
+        ],
+        "generated_CUDA_adapter_byte_identical": true,
+        "adapter_sha256": "0d0cbd2c9e30021277b322afa68d5aebfdb6976a488a37768f330da807b7f483",
+        "GPU_starts": 0
+      },
+      "receipt_sha256": "aca21e98ce77443e82ce33f02e41cff585450821f19a7c3ac4eccf2407b01542"
+    }
+  }
+}

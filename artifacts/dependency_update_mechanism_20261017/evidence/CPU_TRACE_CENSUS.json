@@ -1,0 +1,1194 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "W2_ORIGINAL",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2048,
+      "final_assignments": 2034,
+      "elimination_ratio": 0.0068359375,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.015257352941176475,
+        "1": 0.0234375
+      },
+      "RAW": 35,
+      "WAW": 14,
+      "WAR": 0,
+      "level_distribution": {
+        "2": 1,
+        "3": 1,
+        "1": 5
+      },
+      "batches_with_elimination": 2,
+      "fresh_occurrence_deletions": 0,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "4c988b1966d97a391b7e71aa9a0701ca9f65f35dd639bea38791425a59f58e73"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "5a0cb2210d3036fdea46e174194cb4dfe031377aea06cd5e752d8f4818c4f178"
+        },
+        "batches.csv": {
+          "bytes": 364,
+          "sha256": "1f63a5a757ed945856b8cfe91162d3da4e37aec0b1d1207bf4d3096b04f9d157"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "5a0cb2210d3036fdea46e174194cb4dfe031377aea06cd5e752d8f4818c4f178"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "UNIFORM_LIVE",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2048,
+      "final_assignments": 1946,
+      "elimination_ratio": 0.0498046875,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.011764705882352943,
+        "0.5": 0.048828125,
+        "0.9": 0.057513786764705886,
+        "1": 0.058823529411764705
+      },
+      "RAW": 114,
+      "WAW": 105,
+      "WAR": 0,
+      "level_distribution": {
+        "2": 4,
+        "3": 3
+      },
+      "batches_with_elimination": 6,
+      "fresh_occurrence_deletions": 342,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "416c69abbc347d380cfd65d53638c8b459f612ef1c727fac4b485583f99dd657"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "7430a24c73f2c58fbb4707b212b0b85da29455c2255bdf8c2ecda58e6cb9895d"
+        },
+        "batches.csv": {
+          "bytes": 377,
+          "sha256": "778a4de88788c298c31be9dbd6016ef586c335870925e23b607973f59fa2d579"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "7430a24c73f2c58fbb4707b212b0b85da29455c2255bdf8c2ecda58e6cb9895d"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "MIX_RECENT8",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2048,
+      "final_assignments": 1928,
+      "elimination_ratio": 0.05859375,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.005825242718446602,
+        "0.5": 0.03431372549019608,
+        "0.9": 0.07304687500000001,
+        "1": 0.080078125
+      },
+      "RAW": 88,
+      "WAW": 125,
+      "WAR": 0,
+      "level_distribution": {
+        "3": 3,
+        "2": 3,
+        "4": 1
+      },
+      "batches_with_elimination": 6,
+      "fresh_occurrence_deletions": 393,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "5144ab4c0a2c75adae615a5e629f9345c7d23601d8d430001c2f33ec3d1d24f4"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "4bb0d3a93a08fa369051c6a64d9e95bb2af846816db6cbe5e6fa2d62fc8c18b9"
+        },
+        "batches.csv": {
+          "bytes": 376,
+          "sha256": "9d2f0f37ad847b49f844840c34ba12d6d284a2391268f98fb7493415173450c7"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "4bb0d3a93a08fa369051c6a64d9e95bb2af846816db6cbe5e6fa2d62fc8c18b9"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "RECENT4",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2047,
+      "final_assignments": 1761,
+      "elimination_ratio": 0.1397166585246703,
+      "per_batch_elimination_quantiles": {
+        "0": 0.029411764705882353,
+        "0.1": 0.04089091947458595,
+        "0.5": 0.049019607843137254,
+        "0.9": 0.18805880014677104,
+        "1": 0.21526418786692758
+      },
+      "RAW": 321,
+      "WAW": 317,
+      "WAR": 0,
+      "level_distribution": {
+        "3": 2,
+        "5": 1,
+        "2": 2,
+        "6": 1,
+        "4": 1
+      },
+      "batches_with_elimination": 7,
+      "fresh_occurrence_deletions": 936,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "ce09d21e4dd5865f0e76809fa73940cad53fa00336bff4918508f602851709ee"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "129b787cabee8a11f6cabcbe8869711d3ffca436fd1cdc7ec6d5ac9726aa4333"
+        },
+        "batches.csv": {
+          "bytes": 380,
+          "sha256": "df1116800db60d13084dbc1143f2bf572d816bff8558dc2cc5b09c107fe549f3"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "129b787cabee8a11f6cabcbe8869711d3ffca436fd1cdc7ec6d5ac9726aa4333"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "W2_ORIGINAL",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2048,
+      "final_assignments": 2034,
+      "elimination_ratio": 0.0068359375,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.015257352941176475,
+        "1": 0.0234375
+      },
+      "RAW": 35,
+      "WAW": 14,
+      "WAR": 0,
+      "level_distribution": {
+        "2": 1,
+        "3": 1,
+        "1": 5
+      },
+      "batches_with_elimination": 2,
+      "fresh_occurrence_deletions": 0,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "4c988b1966d97a391b7e71aa9a0701ca9f65f35dd639bea38791425a59f58e73"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "5a0cb2210d3036fdea46e174194cb4dfe031377aea06cd5e752d8f4818c4f178"
+        },
+        "batches.csv": {
+          "bytes": 364,
+          "sha256": "1f63a5a757ed945856b8cfe91162d3da4e37aec0b1d1207bf4d3096b04f9d157"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "5a0cb2210d3036fdea46e174194cb4dfe031377aea06cd5e752d8f4818c4f178"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "UNIFORM_LIVE",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2047,
+      "final_assignments": 1936,
+      "elimination_ratio": 0.054225696140693724,
+      "per_batch_elimination_quantiles": {
+        "0": 0.009708737864077669,
+        "0.1": 0.015533980582524271,
+        "0.5": 0.029411764705882353,
+        "0.9": 0.07154400073385518,
+        "1": 0.07632093933463796
+      },
+      "RAW": 112,
+      "WAW": 120,
+      "WAR": 0,
+      "level_distribution": {
+        "2": 3,
+        "4": 2,
+        "3": 2
+      },
+      "batches_with_elimination": 7,
+      "fresh_occurrence_deletions": 380,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "a2ea4ff24cc9f382dc65978a3e6bc92399c521c6fe8524c8ed46664f82afdb8e"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "426e2eabeac267ce07fed83f8cafa6e680539efd105ebb664c244d85205dc6fa"
+        },
+        "batches.csv": {
+          "bytes": 375,
+          "sha256": "06cc976af0928b9a06fac3c7e8e5baaf01151da97ec9aa8653926df1589d2d1f"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "426e2eabeac267ce07fed83f8cafa6e680539efd105ebb664c244d85205dc6fa"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "MIX_RECENT8",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2048,
+      "final_assignments": 1943,
+      "elimination_ratio": 0.05126953125,
+      "per_batch_elimination_quantiles": {
+        "0": 0.009708737864077669,
+        "0.1": 0.009765848086807537,
+        "0.5": 0.029411764705882353,
+        "0.9": 0.06640625,
+        "1": 0.06640625
+      },
+      "RAW": 117,
+      "WAW": 109,
+      "WAR": 0,
+      "level_distribution": {
+        "3": 3,
+        "4": 1,
+        "2": 3
+      },
+      "batches_with_elimination": 7,
+      "fresh_occurrence_deletions": 389,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "6f7a7068047b34ccf533d154d93af4b7be67c58a7107ba0c5b37c69bb35042b0"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "a4d634166efb4aee283ed4aea3ef270ba7e8be08d5b1e25eb891cc92c5555076"
+        },
+        "batches.csv": {
+          "bytes": 378,
+          "sha256": "3927ff7b5854161be2b2275c5a54499e20db96adbfb071673a31d6311a51461c"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "a4d634166efb4aee283ed4aea3ef270ba7e8be08d5b1e25eb891cc92c5555076"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 4096,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "RECENT4",
+      "replacements": 2048,
+      "batches": 7,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 204
+        },
+        {
+          "phase": 2,
+          "mutation": 819
+        },
+        {
+          "phase": 3,
+          "mutation": 1433
+        },
+        {
+          "phase": 4,
+          "mutation": 2048
+        }
+      ],
+      "native_moves": 2047,
+      "final_assignments": 1758,
+      "elimination_ratio": 0.1411822178798241,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.017475728155339806,
+        "0.5": 0.049019607843137254,
+        "0.9": 0.18867187500000002,
+        "1": 0.205078125
+      },
+      "RAW": 325,
+      "WAW": 328,
+      "WAR": 0,
+      "level_distribution": {
+        "2": 3,
+        "4": 1,
+        "5": 2,
+        "3": 1
+      },
+      "batches_with_elimination": 6,
+      "fresh_occurrence_deletions": 957,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 8192,
+          "sha256": "3c1ae046017f57a906fbf99499b1ec51de2c1be35e488ffb8c35cdc74ee7b426"
+        },
+        "final_owner.i32": {
+          "bytes": 16384,
+          "sha256": "4637196fea26bf5167b2644b477616a31814447babc0014baa99321020895616"
+        },
+        "batches.csv": {
+          "bytes": 383,
+          "sha256": "54e8455de435711c9a45d10ca2ce7a3443535938416ec4e471da185a9587632c"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 16384,
+          "sha256": "4637196fea26bf5167b2644b477616a31814447babc0014baa99321020895616"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "W2_ORIGINAL",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 500000,
+      "final_assignments": 500000,
+      "elimination_ratio": 0.0,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.0,
+        "1": 0.0
+      },
+      "RAW": 0,
+      "WAW": 0,
+      "WAR": 0,
+      "level_distribution": {
+        "1": 977
+      },
+      "batches_with_elimination": 0,
+      "fresh_occurrence_deletions": 0,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "1056d8c25429144c92fe315ddbbf6d42a8517e5c5d08f53fd694ac31f2f69de8"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "0dcc7bdd45a3895a947502aeaaf11802205222e75b8a1359139dd901e4e29eda"
+        },
+        "batches.csv": {
+          "bytes": 39835,
+          "sha256": "511bfb4d6ea26cb23ceb6fadfacdb648ee654daa79b7ab56cf000f8b52760a8f"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "0dcc7bdd45a3895a947502aeaaf11802205222e75b8a1359139dd901e4e29eda"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "UNIFORM_LIVE",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 500000,
+      "final_assignments": 499869,
+      "elimination_ratio": 0.00026199999999998447,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.001953125,
+        "1": 0.00390625
+      },
+      "RAW": 145,
+      "WAW": 131,
+      "WAR": 0,
+      "level_distribution": {
+        "1": 737,
+        "2": 240
+      },
+      "batches_with_elimination": 123,
+      "fresh_occurrence_deletions": 106972,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "27e53c4ee439b799e43285b06fe8db4d466b570061192e0db2f2fa883b6e462c"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "e6d9f8daaa84ab00ad2687ad1bc00f6c3de4f451394d59f4093346b0f949cbeb"
+        },
+        "batches.csv": {
+          "bytes": 41328,
+          "sha256": "1facdf2556cad1c5f36a3cd2592ae128dcd4ccd4e94cd2655ea2a382987fdf04"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "e6d9f8daaa84ab00ad2687ad1bc00f6c3de4f451394d59f4093346b0f949cbeb"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "MIX_RECENT8",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 499907,
+      "final_assignments": 479197,
+      "elimination_ratio": 0.04142770555323294,
+      "per_batch_elimination_quantiles": {
+        "0": 0.01953125,
+        "0.1": 0.03125,
+        "0.5": 0.041015625,
+        "0.9": 0.05162212573385514,
+        "1": 0.0703125
+      },
+      "RAW": 21590,
+      "WAW": 21280,
+      "WAR": 0,
+      "level_distribution": {
+        "3": 801,
+        "2": 101,
+        "4": 72,
+        "5": 3
+      },
+      "batches_with_elimination": 977,
+      "fresh_occurrence_deletions": 277846,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "7e29049b1cc8ad7b4c21c157cda3f68fc27b7e59967804717c91567eb1d55a95"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "9319e053937bd07ac5e6c17f98c93a95cc7eb66884c7c677bf9dc0f94ffdaae1"
+        },
+        "batches.csv": {
+          "bytes": 44715,
+          "sha256": "b6bafffc0c764767c0e659d44af6f39c65cfb6c5752eb92ffb587f324446c4f6"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "9319e053937bd07ac5e6c17f98c93a95cc7eb66884c7c677bf9dc0f94ffdaae1"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101701,
+      "family": "RECENT4",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 497898,
+      "final_assignments": 279631,
+      "elimination_ratio": 0.43837693664164146,
+      "per_batch_elimination_quantiles": {
+        "0": 0.1171875,
+        "0.1": 0.40980392156862744,
+        "0.5": 0.44509803921568625,
+        "0.9": 0.46771037181996084,
+        "1": 0.494140625
+      },
+      "RAW": 355434,
+      "WAW": 355020,
+      "WAR": 0,
+      "level_distribution": {
+        "4": 1,
+        "5": 4,
+        "6": 8,
+        "8": 29,
+        "9": 120,
+        "7": 18,
+        "10": 246,
+        "11": 267,
+        "12": 162,
+        "14": 27,
+        "13": 81,
+        "15": 10,
+        "16": 3,
+        "17": 1
+      },
+      "batches_with_elimination": 977,
+      "fresh_occurrence_deletions": 498863,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "b1aee53e0976bc054340f7171e567ee4b3bfeddfe70402148d953d2ca1d6673e"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "f099a9ab5de979ccc198e8c81a8fe4cfeb8c8ce38567c989dcf22c52dce7d42f"
+        },
+        "batches.csv": {
+          "bytes": 48439,
+          "sha256": "351c4e9efbf27605bd4d5dc60bdac26e79be85dd92a5dd7fcbb2b69cae37aa37"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "f099a9ab5de979ccc198e8c81a8fe4cfeb8c8ce38567c989dcf22c52dce7d42f"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "W2_ORIGINAL",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 500000,
+      "final_assignments": 500000,
+      "elimination_ratio": 0.0,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.0,
+        "1": 0.0
+      },
+      "RAW": 0,
+      "WAW": 0,
+      "WAR": 0,
+      "level_distribution": {
+        "1": 977
+      },
+      "batches_with_elimination": 0,
+      "fresh_occurrence_deletions": 0,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "1056d8c25429144c92fe315ddbbf6d42a8517e5c5d08f53fd694ac31f2f69de8"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "0dcc7bdd45a3895a947502aeaaf11802205222e75b8a1359139dd901e4e29eda"
+        },
+        "batches.csv": {
+          "bytes": 39835,
+          "sha256": "511bfb4d6ea26cb23ceb6fadfacdb648ee654daa79b7ab56cf000f8b52760a8f"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "0dcc7bdd45a3895a947502aeaaf11802205222e75b8a1359139dd901e4e29eda"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "UNIFORM_LIVE",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 499999,
+      "final_assignments": 499871,
+      "elimination_ratio": 0.00025600051200103113,
+      "per_batch_elimination_quantiles": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.5": 0.0,
+        "0.9": 0.001953125,
+        "1": 0.00390625
+      },
+      "RAW": 142,
+      "WAW": 128,
+      "WAR": 0,
+      "level_distribution": {
+        "1": 745,
+        "2": 230,
+        "3": 2
+      },
+      "batches_with_elimination": 120,
+      "fresh_occurrence_deletions": 106581,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "6395032dd86e4a4c08cd2549882c427fb7366e88929383ce9ff3b1d507a86b5f"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "248369d4da57a8385c842d61a0cd5a185850086aa91e7e0b933f6affbacc5a94"
+        },
+        "batches.csv": {
+          "bytes": 41324,
+          "sha256": "ef4238e9df3423d4696d3c25a9f540160f6819b08a1a7cf1cdd8fbffdcbc1fbb"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "248369d4da57a8385c842d61a0cd5a185850086aa91e7e0b933f6affbacc5a94"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "MIX_RECENT8",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 499905,
+      "final_assignments": 479044,
+      "elimination_ratio": 0.041729928686450424,
+      "per_batch_elimination_quantiles": {
+        "0": 0.017578125,
+        "0.1": 0.03125,
+        "0.5": 0.041015625,
+        "0.9": 0.052734375,
+        "1": 0.068359375
+      },
+      "RAW": 21451,
+      "WAW": 21480,
+      "WAR": 0,
+      "level_distribution": {
+        "3": 796,
+        "4": 88,
+        "2": 92,
+        "5": 1
+      },
+      "batches_with_elimination": 977,
+      "fresh_occurrence_deletions": 278018,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "b0fe33860ef27e9d25ffde4c1d5fe9b89b4e131eb82a55b4f7e330e5fa03341e"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "2ec5123c21f26b60349c8f2a4269e49743c26ffddb55ab8b259abb3f02be32a2"
+        },
+        "batches.csv": {
+          "bytes": 44713,
+          "sha256": "16236bdc3e5a0f9fb314be25e65b4b618b3095dadf313a702fe322d5e06a4a10"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "2ec5123c21f26b60349c8f2a4269e49743c26ffddb55ab8b259abb3f02be32a2"
+        }
+      },
+      "GPU_starts": 0
+    },
+    {
+      "N": 1000000,
+      "batch": 512,
+      "seed": 2026101702,
+      "family": "RECENT4",
+      "replacements": 500000,
+      "batches": 977,
+      "query_windows": [
+        {
+          "phase": 0,
+          "mutation": 0
+        },
+        {
+          "phase": 1,
+          "mutation": 50000
+        },
+        {
+          "phase": 2,
+          "mutation": 200000
+        },
+        {
+          "phase": 3,
+          "mutation": 350000
+        },
+        {
+          "phase": 4,
+          "mutation": 500000
+        }
+      ],
+      "native_moves": 497875,
+      "final_assignments": 279483,
+      "elimination_ratio": 0.43864825508410743,
+      "per_batch_elimination_quantiles": {
+        "0": 0.1015625,
+        "0.1": 0.4070450097847358,
+        "0.5": 0.4470588235294118,
+        "0.9": 0.46842924278733933,
+        "1": 0.4980392156862745
+      },
+      "RAW": 355645,
+      "WAW": 356510,
+      "WAR": 0,
+      "level_distribution": {
+        "4": 1,
+        "5": 3,
+        "6": 8,
+        "7": 16,
+        "9": 108,
+        "8": 53,
+        "11": 257,
+        "10": 200,
+        "13": 85,
+        "12": 188,
+        "14": 42,
+        "15": 11,
+        "16": 5
+      },
+      "batches_with_elimination": 977,
+      "fresh_occurrence_deletions": 498865,
+      "generic_tail_plan_mismatches": 0,
+      "entire_capacity_per_batch_provenance": true,
+      "selection_uses_physical_plan": false,
+      "real_application_trace": false,
+      "files": {
+        "victims.i32": {
+          "bytes": 2000000,
+          "sha256": "5369019276c4bc7f4fecc1339c47ccfd97f0fd0a2c43a1c5d48379b164f90d7f"
+        },
+        "final_owner.i32": {
+          "bytes": 4000000,
+          "sha256": "4d4d907358ac3c9eefdbd18ae3b6e3d8bd7a022b4bc6cbb5f7c631b755edd86b"
+        },
+        "batches.csv": {
+          "bytes": 48429,
+          "sha256": "ad3f3947cba963440ee44eb878d73d6aadb85607b80944fdfbc68ba94d67c641"
+        },
+        "final_capacity_labels.i32": {
+          "bytes": 4000000,
+          "sha256": "4d4d907358ac3c9eefdbd18ae3b6e3d8bd7a022b4bc6cbb5f7c631b755edd86b"
+        }
+      },
+      "GPU_starts": 0
+    }
+  ],
+  "GPU_starts": 0
+}

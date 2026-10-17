@@ -1,0 +1,215 @@
+{
+  "ready": {
+    "passed": true,
+    "registration_sha256": "5b6ce5663c3c759e439abc573b537e54aee1cdd73e924015e8f3b4466a176fb5",
+    "binaries": {
+      "0": "f7e2131c2cceac4981d040233188acedac6e46cfd0d66a046f7bdfc36d1dfef8",
+      "1": "7300bd6e47280a614dfe8ea5f73c92e269a039a21bfeaa76401cd7331f12bd5e"
+    },
+    "oracle_sha256": "1897b3a113a3fe19488fa85d6aa4c49d078faca8c157a672ac11d76dea0fdd4f",
+    "GPU_starts": 0
+  },
+  "static": {
+    "passed": true,
+    "query_SASS_unchanged": true,
+    "records": {
+      "0": {
+        "binary_sha256": "f7e2131c2cceac4981d040233188acedac6e46cfd0d66a046f7bdfc36d1dfef8",
+        "query_functions": {
+          "_Z17progressive_stageILi512ELi960EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "da931f968efc875dd4c6de61d8ab37c1c5275a7e1fdce81af490685ff2db4a1f",
+          "_Z17progressive_stageILi256ELi512EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "89950e9908848a3ab2becc031c6234e2afe4d0a871d72169a30a1cb6ab9301c8",
+          "_Z17progressive_stageILi128ELi256EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "b97805708aaa7d2b8431c51d0618618d613b09a749078fde25dace13043967df",
+          "_Z17progressive_stageILi0ELi128EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "112c5cea83250502ef0c5a1b32c9b02bd6f0bff779fc05291b2467ecb077475f",
+          "_Z18progressive_fieldsPK11PrefixStatePiPfPdi": "f9a5f920fdeb75ed12ac1751d5a1b21c4a3bd3fa9f171131d1a1fbc952602d18"
+        },
+        "resources": {
+          "_ZN3cub18CUB_300104_SM_12006detail4scan23DeviceCompactInitKernelINS0_13ScanTileStateIiLb1EEEPiEEvT_iT0_": {
+            "REG": 10,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail6select23DeviceSelectSweepKernelINS2_10policy_hubI11PrefixStatehiLb0ELNS0_10SelectImplE0EE10Policy1000EPS5_PhS9_PiNS0_13ScanTileStateIiLb1EEENS0_8NullTypeESE_iNS2_19streaming_context_tIlLb1EEELS6_0EEEvT0_T1_T2_T3_T4_T5_T6_T7_iT8_NS1_7vsmem_tE": {
+            "REG": 40,
+            "STACK": 0,
+            "SHARED": 5168,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail6select23DeviceSelectSweepKernelINS2_10policy_hubIihiLb0ELNS0_10SelectImplE0EE10Policy1000EPiPhS8_S8_NS0_13ScanTileStateIiLb1EEENS0_8NullTypeESC_iNS2_19streaming_context_tIlLb1EEELS5_0EEEvT0_T1_T2_T3_T4_T5_T6_T7_iT8_NS1_7vsmem_tE": {
+            "REG": 64,
+            "STACK": 8,
+            "SHARED": 29696,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail8for_each13static_kernelINS2_12policy_hub_t12policy_500_tEiNS2_12op_wrapper_tIi11IndexedCopyN6thrust24THRUST_300104_SM_1200_NS17counting_iteratorIiNS9_11use_defaultESB_SB_NS9_18compile_time_valueILi1EEEEEEEEEvT0_T1_": {
+            "REG": 20,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail11EmptyKernelIvEEvv": {
+            "REG": 4,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17materialize_finalPjPK7RowMoveii": {
+            "REG": 22,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi512ELi960EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 33,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi256ELi512EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 28,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi128ELi256EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 28,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi0ELi128EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 24,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z18progressive_fieldsPK11PrefixStatePiPfPdi": {
+            "REG": 16,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z13fields_kernelPKfPKiS2_PfPdi": {
+            "REG": 15,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z12flags_kernelPKfPiPhidb": {
+            "REG": 14,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          }
+        },
+        "sass_sha256": "b9f63b073be48fa907f92308655522670042cbcd20a264f904171e98c1676f49"
+      },
+      "1": {
+        "binary_sha256": "7300bd6e47280a614dfe8ea5f73c92e269a039a21bfeaa76401cd7331f12bd5e",
+        "query_functions": {
+          "_Z17progressive_stageILi512ELi960EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "da931f968efc875dd4c6de61d8ab37c1c5275a7e1fdce81af490685ff2db4a1f",
+          "_Z17progressive_stageILi256ELi512EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "89950e9908848a3ab2becc031c6234e2afe4d0a871d72169a30a1cb6ab9301c8",
+          "_Z17progressive_stageILi128ELi256EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "b97805708aaa7d2b8431c51d0618618d613b09a749078fde25dace13043967df",
+          "_Z17progressive_stageILi0ELi128EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": "112c5cea83250502ef0c5a1b32c9b02bd6f0bff779fc05291b2467ecb077475f",
+          "_Z18progressive_fieldsPK11PrefixStatePiPfPdi": "f9a5f920fdeb75ed12ac1751d5a1b21c4a3bd3fa9f171131d1a1fbc952602d18"
+        },
+        "resources": {
+          "_ZN3cub18CUB_300104_SM_12006detail4scan23DeviceCompactInitKernelINS0_13ScanTileStateIiLb1EEEPiEEvT_iT0_": {
+            "REG": 10,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail6select23DeviceSelectSweepKernelINS2_10policy_hubI11PrefixStatehiLb0ELNS0_10SelectImplE0EE10Policy1000EPS5_PhS9_PiNS0_13ScanTileStateIiLb1EEENS0_8NullTypeESE_iNS2_19streaming_context_tIlLb1EEELS6_0EEEvT0_T1_T2_T3_T4_T5_T6_T7_iT8_NS1_7vsmem_tE": {
+            "REG": 40,
+            "STACK": 0,
+            "SHARED": 5168,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail6select23DeviceSelectSweepKernelINS2_10policy_hubIihiLb0ELNS0_10SelectImplE0EE10Policy1000EPiPhS8_S8_NS0_13ScanTileStateIiLb1EEENS0_8NullTypeESC_iNS2_19streaming_context_tIlLb1EEELS5_0EEEvT0_T1_T2_T3_T4_T5_T6_T7_iT8_NS1_7vsmem_tE": {
+            "REG": 64,
+            "STACK": 8,
+            "SHARED": 29696,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail8for_each13static_kernelINS2_12policy_hub_t12policy_500_tEiNS2_12op_wrapper_tIi11IndexedCopyN6thrust24THRUST_300104_SM_1200_NS17counting_iteratorIiNS9_11use_defaultESB_SB_NS9_18compile_time_valueILi1EEEEEEEEEvT0_T1_": {
+            "REG": 20,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_ZN3cub18CUB_300104_SM_12006detail11EmptyKernelIvEEvv": {
+            "REG": 4,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17materialize_finalPjPK7RowMoveii": {
+            "REG": 22,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi512ELi960EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 33,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi256ELi512EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 28,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi128ELi256EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 28,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z17progressive_stageILi0ELi128EEvPKfS1_PKiS3_PK11PrefixStatePS4_Phid": {
+            "REG": 24,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z18progressive_fieldsPK11PrefixStatePiPfPdi": {
+            "REG": 16,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z13fields_kernelPKfPKiS2_PfPdi": {
+            "REG": 15,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          },
+          "_Z12flags_kernelPKfPiPhidb": {
+            "REG": 14,
+            "STACK": 0,
+            "SHARED": 0,
+            "LOCAL": 0
+          }
+        },
+        "sass_sha256": "b9f63b073be48fa907f92308655522670042cbcd20a264f904171e98c1676f49"
+      }
+    },
+    "GPU_starts": 0
+  },
+  "generated_source_hashes": {
+    "build/main.cu": "8901031c4eac2ab1105a36ad55539de6598c77a9092235d1bda9796a0a083819",
+    "build/plan.hpp": "f3283f8c5a6892570844185d09ef96ff0dbeb55a379c943ce362a189891774a3",
+    "build/selected.cuh": "3976d270df83efa376fded0fd2c3ab02f4302111617c91fc992459ef03adb867",
+    "build/range_base.cuh": "53bfd07fe17c5fd0c351032823005ce05b6dc59cf081c433e29a5ad8b2100015",
+    "build/candidate.cuh": "75116ba3c2e72894f7f3e628b88fce262506b5e7528da620487fe42bddc8b3ae",
+    "build/validation.cuh": "99f5e4ec82634323ee75477b978208283c528d7aba1f81a1484b82b124e8c3a0",
+    "build/adapter.cuh": "0d0cbd2c9e30021277b322afa68d5aebfdb6976a488a37768f330da807b7f483",
+    "build/bitcheck.cuh": "25246dc882a0a684cfced4bf12a671491e38ac6546da8ea1b9e16dbfb12339f0",
+    "build/generic.hpp": "8ddb126adb95a559af2aa9f8828de6afda079526471935a903941a52bd0db603"
+  },
+  "registration_sha256": "5b6ce5663c3c759e439abc573b537e54aee1cdd73e924015e8f3b4466a176fb5",
+  "GPU_contract_sha256": "17a34d6b6c7e1f0e6aa098d693d624e7d8bb55c1ae088d2394e44b3158e79c8c",
+  "scope": "Two freshly compiled containers,six runtime variants;unchanged query function SASS;not runtime evidence by itself"
+}

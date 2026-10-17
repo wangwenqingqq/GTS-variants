@@ -1,0 +1,87 @@
+{
+  "state": "PUBLIC_COPY_OF_FROZEN_PRE_TARGET_CONTRACT",
+  "parent_commit": "4b413f26cb058d8157c02641eb8bfa2c80f9863c",
+  "purpose": "Bounded mechanism attribution,not a new-thesis admission or production promotion",
+  "novelty_gate": "CPU generic copy propagation exactly matches Tail on all tested plans;no unique assignment-elimination novelty established. GPU study separates engineering,planning and execution;A requires an independently defensible nonincremental difference,not speed alone.",
+  "host": "One selected SM120 GPU after CPU replacement;2xXeon Platinum8575C;GPU-local NUMA placement",
+  "isolation": "One advisory GPU/campaign lock;two-sided owned PID/starttime observer;idle before and after each target;no clocks/power/process changes;first failure stops,no automatic retry",
+  "sources": "Fresh snapshot from parent commit plus this task's named files;all source,generated source,input,binary and oracle hashes frozen in registration/ready before targets",
+  "data": {
+    "dataset": "GIST1M",
+    "N": 1000000,
+    "D": 960,
+    "input": "FP32 row-major",
+    "data_sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "query": "B1 inclusive exact range;radius0.705625057220459;frozen32 query IDs",
+    "incoming": "Identical parent W2 incoming vectors,fresh monotone occurrence IDs",
+    "full_replacements": 500000,
+    "micro_replacements": 8192,
+    "micro_batches": [
+      1,
+      32,
+      512
+    ]
+  },
+  "variants": [
+    "NATIVE",
+    "WAVES",
+    "GENERIC_WAVES",
+    "GENERIC_DSE",
+    "TAIL_GENERIC",
+    "TAIL_CUSTOM"
+  ],
+  "executor": "Official installed CCCL Thrust for_each_n with cuda::par_nosync indexed bit-copy;default native launch policy,no new dependency. Same functor/binary in generic-wave,generic-DSE and Tail-generic paths. Tail-custom uses frozen one128-thread CTA per final row. This is an explicit strong standard-library comparator,not an oracle over all GPU executors.",
+  "planner": "Generic arbitrary-copy original-source propagation versus frozen descending-tail provenance;both sort final assignments by destination and charge a common in-place nonalias certificate. Wave paths retain all native moves and respect physical RAW/WAW levels.",
+  "semantics": "Ordered logical occurrences;full allocated capacity including retired rows;full maps,next ID and mutation witnesses;unchanged append/query visibility and native fields;no indirect layout,tombstones,concurrency or Graph",
+  "workloads": {
+    "families": [
+      "W2_ORIGINAL",
+      "UNIFORM_LIVE",
+      "MIX_RECENT8",
+      "RECENT4"
+    ],
+    "performance_seed": 2026101701,
+    "CPU_structure_seeds": [
+      2026101701,
+      2026101702
+    ],
+    "limitation": "Synthetic logical-age cancellation/recency stress,not real application traces. Timing uncertainty is process-conditional on one fixed trace per family,not across workload realizations. W2 is the unchanged negative control,never averaged away.",
+    "mixed_query_windows": "0,50000,200000,350000,500000 replacements;32 queries per window;8 warmups excluded",
+    "micro_query_windows": "0,2048,4096,6144,8192 replacements;queries separately excluded from per-update ACKs"
+  },
+  "timing": {
+    "clock": "std::chrono::steady_clock Host-call-to-return",
+    "ACK": "Full validation,owner/provenance planning,metadata,H2D/D2D/library dispatch,wait,bookkeeping and local destructor costs included",
+    "replacement": "Outer delete+insert interval including common client operation-ledger work;diagnostic qualification callbacks contaminate only diagnostic timings,never main measurements",
+    "service": "Formal160 queries plus updates and client loop,then release;denominator events+release",
+    "separate_exclusions": "Initial disk input/build,8 warmups,offline full-state/query exports between events and release;identical for all variants",
+    "qualification": "Diagnostic2 additionally checks every changed allocated row after every ACK and exact internal FP64 hit scores;these diagnostic times are not primary evidence",
+    "planning_subtimer": "Owner/move capture and plan construction/certificate;destructors included only in whole ACK,not construction subtimer"
+  },
+  "quality": "All targets complete members/IDs/native rounded-square bits;native distance squared scaled-error<=5e-5 unchanged;diag2 original-order FP64 hit bits;independent all-eight-field mutation replay and final maps;complete allocated GPU capacity byte comparison;fixed stale mean and query-stage ledger",
+  "gates": [
+    "CPU exhaustive/random/full-capacity/provenance tests",
+    "Query SASS function hashes unchanged;compile/resources distinct from runtime",
+    "6 variants:plain selftest and memcheck/initcheck/racecheck/synccheck",
+    "Bounded4096 and full1M qualification on all4 traces;microB1/32/512 qualification",
+    "6 fresh processes per fixed primary cell with forward/reverse order",
+    "NSYS activities for W2 and RECENT4;NCU first matching indexed-copy/custom update kernel only"
+  ],
+  "statistics": {
+    "primary": "Median of6 process means;report all raw values,p10/p90 and sample regressions",
+    "paired": "Candidate/comparator paired geometric mean ratio;fixed seed2026101705,20000 process-pair bootstrap95% CI;process wins and forward/reverse split",
+    "aggregation": "No single pooled average across dependency classes;service and update ACK denominators separate",
+    "interpretation": "CI below1 supports a conditional same-trace win,not novelty.10% service and20% delete are attractive goals,not automatic kill/admission thresholds"
+  },
+  "memory_and_traffic": "4096B explicit update device scratch when allocated. Host RSS includes shared client inputs/plans;isolated plan peak UNKNOWN unless independently measured. Ledger payload is destination-write request bytes,not total DRAM;metadata separate. NSYS actual activities/durations distinct from logical counts. NCU one selected kernel is diagnostic only;whole-service DRAM/L2 UNKNOWN.",
+  "counts": {
+    "qualification": 96,
+    "primary": 252,
+    "profile": 20,
+    "max_GPU_starts": 368
+  },
+  "stop": "First source,build,isolation,runtime,sanitizer or correctness failure:retain all valid/failed/unexecuted records and stop. No silent rerun,replacement,threshold relaxation or budget increase.",
+  "classification": "Report plan A-E with separate structural,engineering and novelty judgments. Missing gates INCONCLUSIVE;generic-equivalent plans forbid exclusive algorithm novelty;negative structural evidence does not negate engineering value. No automatic paper editing or production dispatch change.",
+  "private_frozen_contract_sha256": "17a34d6b6c7e1f0e6aa098d693d624e7d8bb55c1ae088d2394e44b3158e79c8c",
+  "public_curation": "Only deployment label/ordinal/NUMA identifiers redacted;all workload,quality,timing,statistics and budget fields unchanged"
+}

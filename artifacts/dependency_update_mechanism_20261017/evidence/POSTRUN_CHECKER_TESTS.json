@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "scope": "Post-run checker-only fixes;no measured source,raw target,statistics definition or GPU launch changed",
+  "checks": {
+    "passed": true,
+    "tamper_rejections": 25,
+    "missing_unconsumed_payload_rejected": true,
+    "changed_checked_command_guard_rejected": true,
+    "empty_proof_and_missing_source_payload_rejected": true,
+    "extra_physical_stage_entries_rejected": true,
+    "actual_device_mismatch_rejected": true,
+    "derived_result_tampering_rejected": true,
+    "source_outside_work_archive_fixture": true,
+    "exact_census": true,
+    "GPU_starts": 0,
+    "scope": "CPU fixtures,not actual raw mutation"
+  },
+  "versioning": "Measured campaign retains original helper files and preliminary v2;v3 is a separate persistent checker snapshot",
+  "lifecycle": "No logs appended in sealed roots after closure;later recomputation logs live in a new derived_recheck directory"
+}

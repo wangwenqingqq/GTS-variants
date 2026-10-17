@@ -1,0 +1,58 @@
+{
+  "state": "REGISTERED_CPU_GATE0_BEFORE_IMPLEMENTATION",
+  "parent": "4b413f26cb058d8157c02641eb8bfa2c80f9863c",
+  "request_sha256": "cc3d0e170bf7b816c3b8a09159a5982d17429eafcac6979400803eb98a39cd2a",
+  "semantics": {
+    "capacity": "Entire allocated array including retired rows",
+    "ownership": "Ordered unique live logical-occurrence deletions;fresh monotone insertion IDs;exact later append and query visibility",
+    "quality": "Unchanged exact inclusive range membership and native fields;no tolerance relaxation",
+    "scope": "No concurrency,Graph,multi-GPU or production admission"
+  },
+  "cpu_gate0": {
+    "N": [
+      4096,
+      1000000
+    ],
+    "replacement_fraction": 0.5,
+    "batch": 512,
+    "seeds": [
+      2026101701,
+      2026101702
+    ],
+    "families": [
+      "W2_ORIGINAL",
+      "UNIFORM_LIVE",
+      "MIX_RECENT8",
+      "RECENT4"
+    ],
+    "query_boundaries": "0,N/20,N/5,35N/100,N/2",
+    "recency_definition": "Logical insertion-ID age,never current physical row or planned redundancy",
+    "selection": "MIX:50% from last8B logical IDs;RECENT4:100% from last4B;uniform live residual;randomize delete order",
+    "cohort_claim": "Synthetic cancellation/recency stress,not a measured application trace;names do not predeclare measured dependence",
+    "comparators": [
+      "native sequential row labels",
+      "frozen Tail-Provenance",
+      "generic sparse original-source propagation with overwritten-store elimination"
+    ],
+    "claim_limit": "Final assignments are provenance-copy assignments for arbitrary row contents,not data-value deduplication or an unrestricted physical lower bound"
+  },
+  "pre_GPU_gate": "All exhaustive/random/full-capacity CPU checks and per-batch planner equivalence/census pass;otherwise stop and preserve failure",
+  "GPU_registration": "A separate exact source/input/binary/schedule/timing contract must be frozen before any GPU target;no GPU launch authorized by this CPU registration",
+  "planned_gpu_comparators": [
+    "NATIVE",
+    "WAVES",
+    "GENERIC_WAVES",
+    "GENERIC_DSE_THRUST",
+    "TAIL_THRUST",
+    "TAIL_CUSTOM"
+  ],
+  "attribution": [
+    "Same final plan:Thrust fused indexed copy versus existing custom materializer",
+    "Same Thrust executor:dependency-safe uneliminated moves versus composed final moves",
+    "Same executor/final assignments:generic copy propagation versus Tail-specific planning"
+  ],
+  "timing": "Whole Host-call-return ACK including planning,metadata,local destruction,wait and bookkeeping;service events+release;input/build and offline export separately excluded",
+  "statistics": "Six fresh processes with alternating order;median of process means and paired geometric ratio with fixed-seed20000bootstrap95% CI;keep raw order and all regressions",
+  "decision": "Plan A-E labels;targets10% service/20% delete are attractive effect guides,not automatic novelty admission. Correctness failures invalidate;uncovered evidence remains INCONCLUSIVE. No paper claim without a specific nonincremental prior-art difference.",
+  "stop": "First failed source/isolation/runtime/quality gate;no automatic retries;never alter old artifacts or hardware settings"
+}
