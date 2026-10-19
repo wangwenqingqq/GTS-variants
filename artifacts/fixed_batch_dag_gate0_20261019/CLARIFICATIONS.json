@@ -1,0 +1,9 @@
+{
+  "scope": "Pre-solver clarification of the frozen model;no inputs, batch membership, thresholds or source counts changed",
+  "terminal_phase_scope": "For each candidate8-row sector: finish all B filter chains, immediately perform that sector's original-order terminal pass, then discard all query state before the next sector. Never queue terminal masks across sectors.",
+  "terminal_membership": "Conservatively verify every query-point whose rounded guarded depth is30, including nonhits that might be provable at the last zone. This is a declared protocol, not unavoidable verification work.",
+  "terminal_source": "960*32B for each sector having at least one terminal query-point;no filter-to-terminal tile reuse. Independent queries pay this per query-sector; shared schedules pay once per sector.",
+  "full_scan_control": "One complete original-order batched scan with B independent distance accumulators;no second terminal scan. It has more query-coordinate arithmetic than pruning schedules.",
+  "oracle_initial_witness": "Eager-serve-all normalization of PREFIX_TRIE is a feasible witness no longer than the original trie. Oracle UB takes the minimum of that witness and both greedy witnesses.",
+  "state_accounting": "B*8 FP64 partial sums and B bytes of per-query candidate masks are live only within one sector. Query vectors and orders are separate resident inputs. Mask/partial load-store bandwidth, output and GPU residency remain unmeasured."
+}

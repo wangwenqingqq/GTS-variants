@@ -1,0 +1,37 @@
+{
+  "GPU_starts": 0,
+  "groups": [
+    {
+      "B": 2,
+      "feasible_oracle_beats_full_scan": true,
+      "headroom_maximum": 0.10927747819420247,
+      "headroom_proven": 0.10927747819420247,
+      "oracle_exact": true,
+      "primary_lookahead_decision_retained": "MATERIAL_REMAINING_SPACE",
+      "strongest_simple": "GREEDY_FANOUT;equals frozen posthoc envelope on every batch",
+      "strongest_simple_decision": "MATERIAL_REMAINING_SPACE"
+    },
+    {
+      "B": 4,
+      "feasible_oracle_beats_full_scan": true,
+      "headroom_maximum": 0.23421670387065835,
+      "headroom_proven": 0.23421670387065835,
+      "oracle_exact": true,
+      "primary_lookahead_decision_retained": "MATERIAL_REMAINING_SPACE",
+      "strongest_simple": "GREEDY_FANOUT;equals frozen posthoc envelope on every batch",
+      "strongest_simple_decision": "MATERIAL_REMAINING_SPACE"
+    },
+    {
+      "B": 8,
+      "feasible_oracle_beats_full_scan": false,
+      "headroom_maximum": 0.4483847394641954,
+      "headroom_proven": 0.023489167401361755,
+      "oracle_exact": false,
+      "primary_lookahead_decision_retained": "MATERIAL_REMAINING_SPACE",
+      "strongest_simple": "GREEDY_FANOUT;equals frozen posthoc envelope on every batch",
+      "strongest_simple_decision": "UNRESOLVED_AT_10_PERCENT"
+    }
+  ],
+  "passed": true,
+  "scope": "Post-analysis interpretation of predeclared stronger control;not replacement of the frozen primary"
+}
