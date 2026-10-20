@@ -1,0 +1,4678 @@
+{
+  "D": 960,
+  "GPU_starts": 0,
+  "N": 1000000,
+  "decision": "DESCRIPTIVE_ONLY_NO_GPU_OR_INDEX_ADMISSION",
+  "experiment": "GTSPP_20261020_TREE_PARTITION_CERTIFICATE_DIAGNOSIS",
+  "heldout_query_evaluations": 0,
+  "methods": {
+    "KD_MAXSPAN_MEDIAN": {
+      "actual_pruned_fraction": {
+        "count": 32,
+        "maximum": 0.510805,
+        "mean": 0.03955046875,
+        "median": 0.0024399999999999977,
+        "minimum": 0.0,
+        "non_null": 32,
+        "p10": 0.0,
+        "p90": 0.03370009999999999
+      },
+      "actual_pruned_points_total": 1265615,
+      "construction_wall_seconds": 24.77979357598815,
+      "coordinate_proxy_below_full_scan_queries": 9,
+      "coordinate_proxy_saving_fraction": {
+        "count": 32,
+        "maximum": 0.5043014956985044,
+        "mean": 0.031491562258437744,
+        "median": -0.005750994249005714,
+        "minimum": -0.008190991809008175,
+        "non_null": 32,
+        "p10": -0.008190991809008175,
+        "p90": 0.025600074399925597
+      },
+      "hierarchical_capture_mass_ratio": 0.03978654720113634,
+      "levels": [
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": null,
+            "mean": null,
+            "median": null,
+            "minimum": null,
+            "non_null": 0,
+            "p10": null,
+            "p90": null
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 0,
+          "nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "minimum": 1,
+            "non_null": 32,
+            "p10": 1.0,
+            "p90": 1.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.789199806808962,
+            "mean": 6.789199806808962,
+            "median": 6.789199806808962,
+            "minimum": 6.789199806808962,
+            "non_null": 32,
+            "p10": 6.789199806808962,
+            "p90": 6.789199806808962
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.789199806808962,
+            "mean": 6.789199806808962,
+            "median": 6.789199806808962,
+            "minimum": 6.789199806808962,
+            "non_null": 32,
+            "p10": 6.789199806808962,
+            "p90": 6.789199806808962
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 1,
+          "nodes": {
+            "count": 32,
+            "maximum": 2,
+            "mean": 2.0,
+            "median": 2.0,
+            "minimum": 2,
+            "non_null": 32,
+            "p10": 2.0,
+            "p90": 2.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.5,
+            "mean": 0.46875,
+            "median": 0.5,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.5,
+            "p90": 0.5
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 500000,
+            "mean": 468750.0,
+            "median": 500000.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 500000.0,
+            "p90": 500000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 0.9375,
+            "median": 1.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 1.0,
+            "p90": 1.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.418267746077452,
+            "mean": 6.418267746077452,
+            "median": 6.418267746077452,
+            "minimum": 6.418267746077452,
+            "non_null": 32,
+            "p10": 6.418267746077452,
+            "p90": 6.418267746077452
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.462743820579492,
+            "mean": 6.462743820579492,
+            "median": 6.462743820579492,
+            "minimum": 6.462743820579492,
+            "non_null": 32,
+            "p10": 6.462743820579492,
+            "p90": 6.462743820579492
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 2,
+          "nodes": {
+            "count": 32,
+            "maximum": 4,
+            "mean": 4.0,
+            "median": 4.0,
+            "minimum": 4,
+            "non_null": 32,
+            "p10": 4.0,
+            "p90": 4.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.75,
+            "mean": 0.703125,
+            "median": 0.75,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.75,
+            "p90": 0.75
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 750000,
+            "mean": 703125.0,
+            "median": 750000.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 750000.0,
+            "p90": 750000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 3,
+            "mean": 2.8125,
+            "median": 3.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 3.0,
+            "p90": 3.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.001973158576606,
+            "mean": 6.001973158576606,
+            "median": 6.001973158576606,
+            "minimum": 6.001973158576606,
+            "non_null": 32,
+            "p10": 6.001973158576606,
+            "p90": 6.001973158576606
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.474807391253991,
+            "mean": 6.474807391253991,
+            "median": 6.474807391253991,
+            "minimum": 6.474807391253991,
+            "non_null": 32,
+            "p10": 6.474807391253991,
+            "p90": 6.474807391253991
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 31,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 3,
+          "nodes": {
+            "count": 32,
+            "maximum": 8,
+            "mean": 8.0,
+            "median": 8.0,
+            "minimum": 8,
+            "non_null": 32,
+            "p10": 8.0,
+            "p90": 8.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.875,
+            "mean": 0.82421875,
+            "median": 0.875,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.875,
+            "p90": 0.875
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 875000,
+            "mean": 824218.75,
+            "median": 875000.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 875000.0,
+            "p90": 875000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 7,
+            "mean": 6.59375,
+            "median": 7.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 7.0,
+            "p90": 7.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.703861816053342,
+            "mean": 5.703861816053342,
+            "median": 5.703861816053342,
+            "minimum": 5.703861816053342,
+            "non_null": 32,
+            "p10": 5.703861816053342,
+            "p90": 5.703861816053342
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.485333201557342,
+            "mean": 6.485333201557342,
+            "median": 6.485333201557342,
+            "minimum": 6.485333201557342,
+            "non_null": 32,
+            "p10": 6.485333201557342,
+            "p90": 6.485333201557342
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 4,
+          "nodes": {
+            "count": 32,
+            "maximum": 16,
+            "mean": 16.0,
+            "median": 16.0,
+            "minimum": 16,
+            "non_null": 32,
+            "p10": 16.0,
+            "p90": 16.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.9375,
+            "mean": 0.892578125,
+            "median": 0.9375,
+            "minimum": 0.125,
+            "non_null": 32,
+            "p10": 0.9375,
+            "p90": 0.9375
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 937500,
+            "mean": 892578.125,
+            "median": 937500.0,
+            "minimum": 125000,
+            "non_null": 32,
+            "p10": 937500.0,
+            "p90": 937500.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 15,
+            "mean": 14.28125,
+            "median": 15.0,
+            "minimum": 2,
+            "non_null": 32,
+            "p10": 15.0,
+            "p90": 15.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.364859142953257,
+            "mean": 5.364859142953257,
+            "median": 5.364859142953257,
+            "minimum": 5.364859142953257,
+            "non_null": 32,
+            "p10": 5.364859142953257,
+            "p90": 5.364859142953257
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.276925869337972,
+            "mean": 6.276925869337972,
+            "median": 6.276925869337972,
+            "minimum": 6.276925869337972,
+            "non_null": 32,
+            "p10": 6.276925869337972,
+            "p90": 6.276925869337972
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 5,
+          "nodes": {
+            "count": 32,
+            "maximum": 32,
+            "mean": 32.0,
+            "median": 32.0,
+            "minimum": 32,
+            "non_null": 32,
+            "p10": 32.0,
+            "p90": 32.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.96875,
+            "mean": 0.9306640625,
+            "median": 0.96875,
+            "minimum": 0.28125,
+            "non_null": 32,
+            "p10": 0.96875,
+            "p90": 0.96875
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 968750,
+            "mean": 930664.0625,
+            "median": 968750.0,
+            "minimum": 281250,
+            "non_null": 32,
+            "p10": 968750.0,
+            "p90": 968750.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 31,
+            "mean": 29.78125,
+            "median": 31.0,
+            "minimum": 9,
+            "non_null": 32,
+            "p10": 31.0,
+            "p90": 31.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.96445065316972,
+            "mean": 4.96445065316972,
+            "median": 4.96445065316972,
+            "minimum": 4.96445065316972,
+            "non_null": 32,
+            "p10": 4.96445065316972,
+            "p90": 4.96445065316972
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.892754472213322,
+            "mean": 5.892754472213322,
+            "median": 5.892754472213322,
+            "minimum": 5.892754472213322,
+            "non_null": 32,
+            "p10": 5.892754472213322,
+            "p90": 5.892754472213322
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.015873015873015872,
+            "mean": 0.000496031746031746,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.015625,
+            "mean": 0.00048828125,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 15625,
+            "mean": 488.28125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 0.03125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 6,
+          "nodes": {
+            "count": 32,
+            "maximum": 64,
+            "mean": 64.0,
+            "median": 64.0,
+            "minimum": 64,
+            "non_null": 32,
+            "p10": 64.0,
+            "p90": 64.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.984375,
+            "mean": 0.95458984375,
+            "median": 0.984375,
+            "minimum": 0.421875,
+            "non_null": 32,
+            "p10": 0.984375,
+            "p90": 0.984375
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 984375,
+            "mean": 954589.84375,
+            "median": 984375.0,
+            "minimum": 421875,
+            "non_null": 32,
+            "p10": 984375.0,
+            "p90": 984375.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 63,
+            "mean": 61.09375,
+            "median": 63.0,
+            "minimum": 27,
+            "non_null": 32,
+            "p10": 63.0,
+            "p90": 63.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.5641601184129295,
+            "mean": 4.5641601184129295,
+            "median": 4.5641601184129295,
+            "minimum": 4.5641601184129295,
+            "non_null": 32,
+            "p10": 4.5641601184129295,
+            "p90": 4.5641601184129295
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.596639533532211,
+            "mean": 5.596639533532211,
+            "median": 5.596639533532211,
+            "minimum": 5.596639533532211,
+            "non_null": 32,
+            "p10": 5.596639533532211,
+            "p90": 5.596639533532211
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.02362155521086247,
+            "mean": 0.0007381736003394521,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.023437,
+            "mean": 0.00073240625,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 23437,
+            "mean": 732.40625,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 3,
+            "mean": 0.09375,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 7,
+          "nodes": {
+            "count": 32,
+            "maximum": 128,
+            "mean": 128.0,
+            "median": 128.0,
+            "minimum": 128,
+            "non_null": 32,
+            "p10": 128.0,
+            "p90": 128.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.992188,
+            "mean": 0.96777384375,
+            "median": 0.9921875,
+            "minimum": 0.53907,
+            "non_null": 32,
+            "p10": 0.9851562,
+            "p90": 0.992188
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 992188,
+            "mean": 967773.84375,
+            "median": 992187.5,
+            "minimum": 539070,
+            "non_null": 32,
+            "p10": 985156.2,
+            "p90": 992188.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 127,
+            "mean": 123.875,
+            "median": 127.0,
+            "minimum": 69,
+            "non_null": 32,
+            "p10": 126.1,
+            "p90": 127.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.222127129160059,
+            "mean": 4.222127129160059,
+            "median": 4.222127129160059,
+            "minimum": 4.222127129160059,
+            "non_null": 32,
+            "p10": 4.222127129160059,
+            "p90": 4.222127129160059
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.992905203029753,
+            "mean": 4.992905203029753,
+            "median": 4.992905203029753,
+            "minimum": 4.992905203029753,
+            "non_null": 32,
+            "p10": 4.992905203029753,
+            "p90": 4.992905203029753
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.039214209918150215,
+            "mean": 0.00159306786615306,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.039061,
+            "mean": 0.00158684375,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 39061,
+            "mean": 1586.84375,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 10,
+            "mean": 0.40625,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 8,
+          "nodes": {
+            "count": 32,
+            "maximum": 256,
+            "mean": 256.0,
+            "median": 256.0,
+            "minimum": 256,
+            "non_null": 32,
+            "p10": 256.0,
+            "p90": 256.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.996094,
+            "mean": 0.9782719375000001,
+            "median": 0.996094,
+            "minimum": 0.65626,
+            "non_null": 32,
+            "p10": 0.9925776000000001,
+            "p90": 0.996094
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 996094,
+            "mean": 978271.9375,
+            "median": 996094.0,
+            "minimum": 656260,
+            "non_null": 32,
+            "p10": 992577.6,
+            "p90": 996094.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 255,
+            "mean": 250.4375,
+            "median": 255.0,
+            "minimum": 168,
+            "non_null": 32,
+            "p10": 254.1,
+            "p90": 255.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.8851568938107572,
+            "mean": 3.8851568938107572,
+            "median": 3.8851568938107572,
+            "minimum": 3.8851568938107572,
+            "non_null": 32,
+            "p10": 3.8851568938107572,
+            "p90": 3.8851568938107572
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.661705964652753,
+            "mean": 4.661705964652753,
+            "median": 4.661705964652753,
+            "minimum": 4.661705964652753,
+            "non_null": 32,
+            "p10": 4.661705964652753,
+            "p90": 4.661705964652753
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.09784218362680679,
+            "mean": 0.005320622941037988,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0019568234373143452
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.097651,
+            "mean": 0.00530975,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.001953
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 97651,
+            "mean": 5309.75,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 1953.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 50,
+            "mean": 2.71875,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 1.0
+          },
+          "depth": 9,
+          "nodes": {
+            "count": 32,
+            "maximum": 512,
+            "mean": 512.0,
+            "median": 512.0,
+            "minimum": 512,
+            "non_null": 32,
+            "p10": 512.0,
+            "p90": 512.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.998047,
+            "mean": 0.98419246875,
+            "median": 0.998047,
+            "minimum": 0.7422,
+            "non_null": 32,
+            "p10": 0.9962892,
+            "p90": 0.998047
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 998047,
+            "mean": 984192.46875,
+            "median": 998047.0,
+            "minimum": 742200,
+            "non_null": 32,
+            "p10": 996289.2,
+            "p90": 998047.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 511,
+            "mean": 503.90625,
+            "median": 511.0,
+            "minimum": 380,
+            "non_null": 32,
+            "p10": 510.1,
+            "p90": 511.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.55877923943535,
+            "mean": 3.55877923943535,
+            "median": 3.55877923943535,
+            "minimum": 3.55877923943535,
+            "non_null": 32,
+            "p10": 3.55877923943535,
+            "p90": 3.55877923943535
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.38784306694821,
+            "mean": 4.38784306694821,
+            "median": 4.38784306694821,
+            "minimum": 4.38784306694821,
+            "non_null": 32,
+            "p10": 4.38784306694821,
+            "p90": 4.38784306694821
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.20034273485195037,
+            "mean": 0.012674421175367922,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.008696796770444727
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.200147,
+            "mean": 0.01266153125,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.008688300000000003
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 200147,
+            "mean": 12661.53125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 8688.300000000003
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 205,
+            "mean": 12.96875,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 8.900000000000002
+          },
+          "depth": 10,
+          "nodes": {
+            "count": 32,
+            "maximum": 1024,
+            "mean": 1024.0,
+            "median": 1024.0,
+            "minimum": 1024,
+            "non_null": 32,
+            "p10": 1024.0,
+            "p90": 1024.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999024,
+            "mean": 0.9886185625,
+            "median": 0.999023,
+            "minimum": 0.809608,
+            "non_null": 32,
+            "p10": 0.9981446,
+            "p90": 0.999024
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999024,
+            "mean": 988618.5625,
+            "median": 999023.0,
+            "minimum": 809608,
+            "non_null": 32,
+            "p10": 998144.6,
+            "p90": 999024.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 1023,
+            "mean": 1012.34375,
+            "median": 1023.0,
+            "minimum": 829,
+            "non_null": 32,
+            "p10": 1022.1,
+            "p90": 1023.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.2549400292999735,
+            "mean": 3.2549400292999735,
+            "median": 3.2549400292999735,
+            "minimum": 3.2549400292999735,
+            "non_null": 32,
+            "p10": 3.2549400292999735,
+            "p90": 3.2549400292999735
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.081275011397526,
+            "mean": 4.081275011397526,
+            "median": 4.081275011397526,
+            "minimum": 4.081275011397526,
+            "non_null": 32,
+            "p10": 4.081275011397526,
+            "p90": 4.081275011397526
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.3281724763409307,
+            "mean": 0.023639457203911203,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.01689406119592481
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.328012,
+            "mean": 0.02362728125,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.016885800000000003
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 328012,
+            "mean": 23627.28125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 16885.800000000003
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 672,
+            "mean": 48.40625,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 34.60000000000001
+          },
+          "depth": 11,
+          "nodes": {
+            "count": 32,
+            "maximum": 2048,
+            "mean": 2048.0,
+            "median": 2048.0,
+            "minimum": 2048,
+            "non_null": 32,
+            "p10": 2048.0,
+            "p90": 2048.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999512,
+            "mean": 0.99179265625,
+            "median": 0.999512,
+            "minimum": 0.857947,
+            "non_null": 32,
+            "p10": 0.9990727,
+            "p90": 0.999512
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999512,
+            "mean": 991792.65625,
+            "median": 999512.0,
+            "minimum": 857947,
+            "non_null": 32,
+            "p10": 999072.7,
+            "p90": 999512.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 2047,
+            "mean": 2031.1875,
+            "median": 2047.0,
+            "minimum": 1757,
+            "non_null": 32,
+            "p10": 2046.1,
+            "p90": 2047.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 2.975899621009584,
+            "mean": 2.975899621009584,
+            "median": 2.975899621009584,
+            "minimum": 2.975899621009584,
+            "non_null": 32,
+            "p10": 2.975899621009584,
+            "p90": 2.975899621009584
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 3.8608815392045033,
+            "mean": 3.8608815392045033,
+            "median": 3.8608815392045033,
+            "minimum": 3.8608815392045033,
+            "non_null": 32,
+            "p10": 3.8608815392045033,
+            "p90": 3.8608815392045033
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.5004301049456067,
+            "mean": 0.0387978656414591,
+            "median": 0.002440595505303294,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.03324371146559761
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.500308,
+            "mean": 0.0387876875,
+            "median": 0.00244,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.033235600000000004
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 500308,
+            "mean": 38787.6875,
+            "median": 2440.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 33235.600000000006
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 2050,
+            "mean": 158.9375,
+            "median": 10.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 136.20000000000005
+          },
+          "depth": 12,
+          "nodes": {
+            "count": 32,
+            "maximum": 4096,
+            "mean": 4096.0,
+            "median": 4096.0,
+            "minimum": 4096,
+            "non_null": 32,
+            "p10": 4096.0,
+            "p90": 4096.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999756,
+            "mean": 0.994066375,
+            "median": 0.999756,
+            "minimum": 0.891639,
+            "non_null": 32,
+            "p10": 0.9995362999999999,
+            "p90": 0.999756
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999756,
+            "mean": 994066.375,
+            "median": 999756.0,
+            "minimum": 891639,
+            "non_null": 32,
+            "p10": 999536.3,
+            "p90": 999756.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 4095,
+            "mean": 4071.6875,
+            "median": 4095.0,
+            "minimum": 3652,
+            "non_null": 32,
+            "p10": 4094.1,
+            "p90": 4095.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 2.715505387392273,
+            "mean": 2.715505387392273,
+            "median": 2.715505387392273,
+            "minimum": 2.715505387392273,
+            "non_null": 32,
+            "p10": 2.715505387392273,
+            "p90": 2.715505387392273
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 3.532167162558845,
+            "mean": 3.532167162558845,
+            "median": 3.532167162558845,
+            "minimum": 3.532167162558845,
+            "non_null": 32,
+            "p10": 3.532167162558845,
+            "p90": 3.532167162558845
+          }
+        }
+      ],
+      "metrics": {
+        "coordinate_proxy_bytes": {
+          "count": 32,
+          "maximum": 3871457280,
+          "mean": 3719076120.0,
+          "median": 3862087680.0,
+          "minimum": 1903484160,
+          "non_null": 32,
+          "p10": 3741699456.0,
+          "p90": 3871457280.0
+        },
+        "distance_contrast": {
+          "count": 32,
+          "maximum": 0.802528161105999,
+          "mean": 0.4412254616163276,
+          "median": 0.394737410768807,
+          "minimum": 0.17238490373172055,
+          "non_null": 32,
+          "p10": 0.2708723804076488,
+          "p90": 0.6677188499686373
+        },
+        "distance_p10": {
+          "count": 32,
+          "maximum": 3.1577942695163665,
+          "mean": 1.6364254936455038,
+          "median": 1.52615236115909,
+          "minimum": 1.0638096509417878,
+          "non_null": 32,
+          "p10": 1.269849360989725,
+          "p90": 2.130479925915158
+        },
+        "distance_p50": {
+          "count": 32,
+          "maximum": 3.4051275221397526,
+          "mean": 1.9558788627422876,
+          "median": 1.802062355878578,
+          "minimum": 1.5955931601228908,
+          "non_null": 32,
+          "p10": 1.654409344806019,
+          "p90": 2.36278061923737
+        },
+        "distance_p90": {
+          "count": 32,
+          "maximum": 3.823071297958735,
+          "mean": 2.4622074908734666,
+          "median": 2.333896043129328,
+          "minimum": 2.091280624080361,
+          "non_null": 32,
+          "p10": 2.1812170303191376,
+          "p90": 2.78619078222912
+        },
+        "false_prune_nodes": {
+          "count": 32,
+          "maximum": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": 0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "flat_leaf_certificate_capture": {
+          "count": 32,
+          "maximum": 0.5004301049456067,
+          "mean": 0.0387978656414591,
+          "median": 0.002440595505303294,
+          "minimum": 0.0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.03324371146559761
+        },
+        "flat_leaf_certificate_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.500308,
+          "mean": 0.0387876875,
+          "median": 0.00244,
+          "minimum": 0.0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.033235600000000004
+        },
+        "flat_leaf_missed_prunable_points": {
+          "count": 32,
+          "maximum": 999756,
+          "mean": 955278.6875,
+          "median": 996462.0,
+          "minimum": 499448,
+          "non_null": 32,
+          "p10": 910049.1,
+          "p90": 999755.9
+        },
+        "flat_leaf_oracle_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.994066375,
+          "median": 0.999756,
+          "minimum": 0.891639,
+          "non_null": 32,
+          "p10": 0.9995362999999999,
+          "p90": 0.999756
+        },
+        "full_scan_coordinate_bytes": {
+          "count": 32,
+          "maximum": 3840003840,
+          "mean": 3840003840.0,
+          "median": 3840003840.0,
+          "minimum": 3840003840,
+          "non_null": 32,
+          "p10": 3840003840.0,
+          "p90": 3840003840.0
+        },
+        "node_metadata_read_proxy_bytes": {
+          "count": 32,
+          "maximum": 262112,
+          "mean": 257884.0,
+          "median": 262112.0,
+          "minimum": 200608,
+          "non_null": 32,
+          "p10": 259200.0,
+          "p90": 262112.0
+        },
+        "oracle_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.994066375,
+          "median": 0.999756,
+          "minimum": 0.891639,
+          "non_null": 32,
+          "p10": 0.9995362999999999,
+          "p90": 0.999756
+        },
+        "oracle_retained_points": {
+          "count": 32,
+          "maximum": 108361,
+          "mean": 5933.625,
+          "median": 244.0,
+          "minimum": 244,
+          "non_null": 32,
+          "p10": 244.0,
+          "p90": 463.7000000000005
+        },
+        "retained_fraction": {
+          "count": 32,
+          "maximum": 1.0,
+          "mean": 0.96044953125,
+          "median": 0.99756,
+          "minimum": 0.489195,
+          "non_null": 32,
+          "p10": 0.9662999,
+          "p90": 1.0
+        },
+        "retained_points": {
+          "count": 32,
+          "maximum": 1000000,
+          "mean": 960449.53125,
+          "median": 997560.0,
+          "minimum": 489195,
+          "non_null": 32,
+          "p10": 966299.9,
+          "p90": 1000000.0
+        },
+        "true_hits": {
+          "count": 32,
+          "maximum": 5443,
+          "mean": 205.9375,
+          "median": 1.0,
+          "minimum": 1,
+          "non_null": 32,
+          "p10": 1.0,
+          "p90": 2.0
+        },
+        "visited_nodes": {
+          "count": 32,
+          "maximum": 8191,
+          "mean": 8058.875,
+          "median": 8191.0,
+          "minimum": 6269,
+          "non_null": 32,
+          "p10": 8100.0,
+          "p90": 8191.0
+        }
+      },
+      "no_pruning_queries": 7,
+      "oracle_prunable_points_total": 31810124
+    },
+    "RANDOM_BALANCED": {
+      "actual_pruned_fraction": {
+        "count": 32,
+        "maximum": 0.004882999999999971,
+        "mean": 0.0002594374999999975,
+        "median": 0.0,
+        "minimum": 0.0,
+        "non_null": 32,
+        "p10": 0.0,
+        "p90": 0.0
+      },
+      "actual_pruned_points_total": 8302,
+      "construction_wall_seconds": 24.945834234007634,
+      "coordinate_proxy_below_full_scan_queries": 0,
+      "coordinate_proxy_saving_fraction": {
+        "count": 32,
+        "maximum": -0.0033079966920033232,
+        "mean": -0.00793149206850792,
+        "median": -0.008190991809008175,
+        "minimum": -0.008190991809008175,
+        "non_null": 32,
+        "p10": -0.008190991809008175,
+        "p90": -0.008190991809008175
+      },
+      "hierarchical_capture_mass_ratio": 0.0002675892295818572,
+      "levels": [
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": null,
+            "mean": null,
+            "median": null,
+            "minimum": null,
+            "non_null": 0,
+            "p10": null,
+            "p90": null
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 0,
+          "nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "minimum": 1,
+            "non_null": 32,
+            "p10": 1.0,
+            "p90": 1.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.789199806808962,
+            "mean": 6.789199806808962,
+            "median": 6.789199806808962,
+            "minimum": 6.789199806808962,
+            "non_null": 32,
+            "p10": 6.789199806808962,
+            "p90": 6.789199806808962
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.789199806808962,
+            "mean": 6.789199806808962,
+            "median": 6.789199806808962,
+            "minimum": 6.789199806808962,
+            "non_null": 32,
+            "p10": 6.789199806808962,
+            "p90": 6.789199806808962
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 27,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 1,
+          "nodes": {
+            "count": 32,
+            "maximum": 2,
+            "mean": 2.0,
+            "median": 2.0,
+            "minimum": 2,
+            "non_null": 32,
+            "p10": 2.0,
+            "p90": 2.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.5,
+            "mean": 0.421875,
+            "median": 0.5,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.5
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 500000,
+            "mean": 421875.0,
+            "median": 500000.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 500000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 0.84375,
+            "median": 1.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 1.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.534954958591897,
+            "mean": 6.534954958591897,
+            "median": 6.534954958591897,
+            "minimum": 6.534954958591897,
+            "non_null": 32,
+            "p10": 6.534954958591897,
+            "p90": 6.534954958591897
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.738350837165549,
+            "mean": 6.738350837165549,
+            "median": 6.738350837165549,
+            "minimum": 6.738350837165549,
+            "non_null": 32,
+            "p10": 6.738350837165549,
+            "p90": 6.738350837165549
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 2,
+          "nodes": {
+            "count": 32,
+            "maximum": 4,
+            "mean": 4.0,
+            "median": 4.0,
+            "minimum": 4,
+            "non_null": 32,
+            "p10": 4.0,
+            "p90": 4.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.75,
+            "mean": 0.6796875,
+            "median": 0.75,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.5,
+            "p90": 0.75
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 750000,
+            "mean": 679687.5,
+            "median": 750000.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 500000.0,
+            "p90": 750000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 3,
+            "mean": 2.71875,
+            "median": 3.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 2.0,
+            "p90": 3.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.20451728529765,
+            "mean": 6.20451728529765,
+            "median": 6.20451728529765,
+            "minimum": 6.20451728529765,
+            "non_null": 32,
+            "p10": 6.20451728529765,
+            "p90": 6.20451728529765
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.50583782208898,
+            "mean": 6.50583782208898,
+            "median": 6.50583782208898,
+            "minimum": 6.50583782208898,
+            "non_null": 32,
+            "p10": 6.50583782208898,
+            "p90": 6.50583782208898
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 3,
+          "nodes": {
+            "count": 32,
+            "maximum": 8,
+            "mean": 8.0,
+            "median": 8.0,
+            "minimum": 8,
+            "non_null": 32,
+            "p10": 8.0,
+            "p90": 8.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.875,
+            "mean": 0.80859375,
+            "median": 0.875,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.75,
+            "p90": 0.875
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 875000,
+            "mean": 808593.75,
+            "median": 875000.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 750000.0,
+            "p90": 875000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 7,
+            "mean": 6.46875,
+            "median": 7.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 6.0,
+            "p90": 7.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.096546475506403,
+            "mean": 6.096546475506403,
+            "median": 6.096546475506403,
+            "minimum": 6.096546475506403,
+            "non_null": 32,
+            "p10": 6.096546475506403,
+            "p90": 6.096546475506403
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.4053791142489995,
+            "mean": 6.4053791142489995,
+            "median": 6.4053791142489995,
+            "minimum": 6.4053791142489995,
+            "non_null": 32,
+            "p10": 6.4053791142489995,
+            "p90": 6.4053791142489995
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 4,
+          "nodes": {
+            "count": 32,
+            "maximum": 16,
+            "mean": 16.0,
+            "median": 16.0,
+            "minimum": 16,
+            "non_null": 32,
+            "p10": 16.0,
+            "p90": 16.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.9375,
+            "mean": 0.873046875,
+            "median": 0.9375,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.875,
+            "p90": 0.9375
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 937500,
+            "mean": 873046.875,
+            "median": 937500.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 875000.0,
+            "p90": 937500.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 15,
+            "mean": 13.96875,
+            "median": 15.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 14.0,
+            "p90": 15.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.8848532869455195,
+            "mean": 5.8848532869455195,
+            "median": 5.8848532869455195,
+            "minimum": 5.8848532869455195,
+            "non_null": 32,
+            "p10": 5.8848532869455195,
+            "p90": 5.8848532869455195
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.333329186318709,
+            "mean": 6.333329186318709,
+            "median": 6.333329186318709,
+            "minimum": 6.333329186318709,
+            "non_null": 32,
+            "p10": 6.333329186318709,
+            "p90": 6.333329186318709
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 5,
+          "nodes": {
+            "count": 32,
+            "maximum": 32,
+            "mean": 32.0,
+            "median": 32.0,
+            "minimum": 32,
+            "non_null": 32,
+            "p10": 32.0,
+            "p90": 32.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.96875,
+            "mean": 0.9052734375,
+            "median": 0.96875,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.9375,
+            "p90": 0.96875
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 968750,
+            "mean": 905273.4375,
+            "median": 968750.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 937500.0,
+            "p90": 968750.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 31,
+            "mean": 28.96875,
+            "median": 31.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 30.0,
+            "p90": 31.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.610648297187115,
+            "mean": 5.610648297187115,
+            "median": 5.610648297187115,
+            "minimum": 5.610648297187115,
+            "non_null": 32,
+            "p10": 5.610648297187115,
+            "p90": 5.610648297187115
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.212698953115959,
+            "mean": 6.212698953115959,
+            "median": 6.212698953115959,
+            "minimum": 6.212698953115959,
+            "non_null": 32,
+            "p10": 6.212698953115959,
+            "p90": 6.212698953115959
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 6,
+          "nodes": {
+            "count": 32,
+            "maximum": 64,
+            "mean": 64.0,
+            "median": 64.0,
+            "minimum": 64,
+            "non_null": 32,
+            "p10": 64.0,
+            "p90": 64.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.984375,
+            "mean": 0.92138671875,
+            "median": 0.984375,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.96875,
+            "p90": 0.984375
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 984375,
+            "mean": 921386.71875,
+            "median": 984375.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 968750.0,
+            "p90": 984375.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 63,
+            "mean": 58.96875,
+            "median": 63.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 62.0,
+            "p90": 63.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.325650026460977,
+            "mean": 5.325650026460977,
+            "median": 5.325650026460977,
+            "minimum": 5.325650026460977,
+            "non_null": 32,
+            "p10": 5.325650026460977,
+            "p90": 5.325650026460977
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.993614378256509,
+            "mean": 5.993614378256509,
+            "median": 5.993614378256509,
+            "minimum": 5.993614378256509,
+            "non_null": 32,
+            "p10": 5.993614378256509,
+            "p90": 5.993614378256509
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 30,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 7,
+          "nodes": {
+            "count": 32,
+            "maximum": 128,
+            "mean": 128.0,
+            "median": 128.0,
+            "minimum": 128,
+            "non_null": 32,
+            "p10": 128.0,
+            "p90": 128.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.992188,
+            "mean": 0.92944325,
+            "median": 0.992187,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.984375,
+            "p90": 0.992188
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 992188,
+            "mean": 929443.25,
+            "median": 992187.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 984375.0,
+            "p90": 992188.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 127,
+            "mean": 118.96875,
+            "median": 127.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 126.0,
+            "p90": 127.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.032442997432154,
+            "mean": 5.032442997432154,
+            "median": 5.032442997432154,
+            "minimum": 5.032442997432154,
+            "non_null": 32,
+            "p10": 5.032442997432154,
+            "p90": 5.032442997432154
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.726948736744104,
+            "mean": 5.726948736744104,
+            "median": 5.726948736744104,
+            "minimum": 5.726948736744104,
+            "non_null": 32,
+            "p10": 5.726948736744104,
+            "p90": 5.726948736744104
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 31,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 8,
+          "nodes": {
+            "count": 32,
+            "maximum": 256,
+            "mean": 256.0,
+            "median": 256.0,
+            "minimum": 256,
+            "non_null": 32,
+            "p10": 256.0,
+            "p90": 256.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.996094,
+            "mean": 0.93371584375,
+            "median": 0.996094,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.992188,
+            "p90": 0.996094
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 996094,
+            "mean": 933715.84375,
+            "median": 996094.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 992188.0,
+            "p90": 996094.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 255,
+            "mean": 239.03125,
+            "median": 255.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 254.0,
+            "p90": 255.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.759607687827009,
+            "mean": 4.759607687827009,
+            "median": 4.759607687827009,
+            "minimum": 4.759607687827009,
+            "non_null": 32,
+            "p10": 4.759607687827009,
+            "p90": 4.759607687827009
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.505458658647417,
+            "mean": 5.505458658647417,
+            "median": 5.505458658647417,
+            "minimum": 5.505458658647417,
+            "non_null": 32,
+            "p10": 5.505458658647417,
+            "p90": 5.505458658647417
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 31,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 9,
+          "nodes": {
+            "count": 32,
+            "maximum": 512,
+            "mean": 512.0,
+            "median": 512.0,
+            "minimum": 512,
+            "non_null": 32,
+            "p10": 512.0,
+            "p90": 512.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.998047,
+            "mean": 0.93896496875,
+            "median": 0.998047,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.996094,
+            "p90": 0.998047
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 998047,
+            "mean": 938964.96875,
+            "median": 998047.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 996094.0,
+            "p90": 998047.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 511,
+            "mean": 480.75,
+            "median": 511.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 510.0,
+            "p90": 511.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.468753993107876,
+            "mean": 4.468753993107876,
+            "median": 4.468753993107876,
+            "minimum": 4.468753993107876,
+            "non_null": 32,
+            "p10": 4.468753993107876,
+            "p90": 4.468753993107876
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.133603532215314,
+            "mean": 5.133603532215314,
+            "median": 5.133603532215314,
+            "minimum": 5.133603532215314,
+            "non_null": 32,
+            "p10": 5.133603532215314,
+            "p90": 5.133603532215314
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 10,
+          "nodes": {
+            "count": 32,
+            "maximum": 1024,
+            "mean": 1024.0,
+            "median": 1024.0,
+            "minimum": 1024,
+            "non_null": 32,
+            "p10": 1024.0,
+            "p90": 1024.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999024,
+            "mean": 0.9468385312500001,
+            "median": 0.999023,
+            "minimum": 0.001953,
+            "non_null": 32,
+            "p10": 0.9980471000000001,
+            "p90": 0.999024
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999024,
+            "mean": 946838.53125,
+            "median": 999023.0,
+            "minimum": 1953,
+            "non_null": 32,
+            "p10": 998047.1,
+            "p90": 999024.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 1023,
+            "mean": 969.5625,
+            "median": 1023.0,
+            "minimum": 2,
+            "non_null": 32,
+            "p10": 1022.0,
+            "p90": 1023.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.195093122368349,
+            "mean": 4.195093122368349,
+            "median": 4.195093122368349,
+            "minimum": 4.195093122368349,
+            "non_null": 32,
+            "p10": 4.195093122368349,
+            "p90": 4.195093122368349
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.881694821108973,
+            "mean": 4.881694821108973,
+            "median": 4.881694821108973,
+            "minimum": 4.881694821108973,
+            "non_null": 32,
+            "p10": 4.881694821108973,
+            "p90": 4.881694821108973
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.00048823826027101226,
+            "mean": 1.5257445633469133e-05,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.000488,
+            "mean": 1.525e-05,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 488,
+            "mean": 15.25,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 0.03125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 11,
+          "nodes": {
+            "count": 32,
+            "maximum": 2048,
+            "mean": 2048.0,
+            "median": 2048.0,
+            "minimum": 2048,
+            "non_null": 32,
+            "p10": 2048.0,
+            "p90": 2048.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999512,
+            "mean": 0.9573971875,
+            "median": 0.999512,
+            "minimum": 0.067381,
+            "non_null": 32,
+            "p10": 0.999024,
+            "p90": 0.999512
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999512,
+            "mean": 957397.1875,
+            "median": 999512.0,
+            "minimum": 67381,
+            "non_null": 32,
+            "p10": 999024.0,
+            "p90": 999512.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 2047,
+            "mean": 1960.75,
+            "median": 2047.0,
+            "minimum": 138,
+            "non_null": 32,
+            "p10": 2046.0,
+            "p90": 2047.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.9076183605862687,
+            "mean": 3.9076183605862687,
+            "median": 3.9076183605862687,
+            "minimum": 3.9076183605862687,
+            "non_null": 32,
+            "p10": 3.9076183605862687,
+            "p90": 3.9076183605862687
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.5897659427840845,
+            "mean": 4.5897659427840845,
+            "median": 4.5897659427840845,
+            "minimum": 4.5897659427840845,
+            "non_null": 32,
+            "p10": 4.5897659427840845,
+            "p90": 4.5897659427840845
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.00488419174278524,
+            "mean": 0.00024424709629149513,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.004883,
+            "mean": 0.0002441875,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 4883,
+            "mean": 244.1875,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 20,
+            "mean": 1.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 12,
+          "nodes": {
+            "count": 32,
+            "maximum": 4096,
+            "mean": 4096.0,
+            "median": 4096.0,
+            "minimum": 4096,
+            "non_null": 32,
+            "p10": 4096.0,
+            "p90": 4096.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999756,
+            "mean": 0.9695364062499999,
+            "median": 0.999756,
+            "minimum": 0.269781,
+            "non_null": 32,
+            "p10": 0.999512,
+            "p90": 0.999756
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999756,
+            "mean": 969536.40625,
+            "median": 999756.0,
+            "minimum": 269781,
+            "non_null": 32,
+            "p10": 999512.0,
+            "p90": 999756.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 4095,
+            "mean": 3971.21875,
+            "median": 4095.0,
+            "minimum": 1105,
+            "non_null": 32,
+            "p10": 4094.0,
+            "p90": 4095.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.6221530419838457,
+            "mean": 3.6221530419838457,
+            "median": 3.6221530419838457,
+            "minimum": 3.6221530419838457,
+            "non_null": 32,
+            "p10": 3.6221530419838457,
+            "p90": 3.6221530419838457
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.312118293605637,
+            "mean": 4.312118293605637,
+            "median": 4.312118293605637,
+            "minimum": 4.312118293605637,
+            "non_null": 32,
+            "p10": 4.312118293605637,
+            "p90": 4.312118293605637
+          }
+        }
+      ],
+      "metrics": {
+        "coordinate_proxy_bytes": {
+          "count": 32,
+          "maximum": 3871457280,
+          "mean": 3870460800.0,
+          "median": 3871457280.0,
+          "minimum": 3852706560,
+          "non_null": 32,
+          "p10": 3871457280.0,
+          "p90": 3871457280.0
+        },
+        "distance_contrast": {
+          "count": 32,
+          "maximum": 0.802528161105999,
+          "mean": 0.4412254616163276,
+          "median": 0.394737410768807,
+          "minimum": 0.17238490373172055,
+          "non_null": 32,
+          "p10": 0.2708723804076488,
+          "p90": 0.6677188499686373
+        },
+        "distance_p10": {
+          "count": 32,
+          "maximum": 3.1577942695163665,
+          "mean": 1.6364254936455038,
+          "median": 1.52615236115909,
+          "minimum": 1.0638096509417878,
+          "non_null": 32,
+          "p10": 1.269849360989725,
+          "p90": 2.130479925915158
+        },
+        "distance_p50": {
+          "count": 32,
+          "maximum": 3.4051275221397526,
+          "mean": 1.9558788627422876,
+          "median": 1.802062355878578,
+          "minimum": 1.5955931601228908,
+          "non_null": 32,
+          "p10": 1.654409344806019,
+          "p90": 2.36278061923737
+        },
+        "distance_p90": {
+          "count": 32,
+          "maximum": 3.823071297958735,
+          "mean": 2.4622074908734666,
+          "median": 2.333896043129328,
+          "minimum": 2.091280624080361,
+          "non_null": 32,
+          "p10": 2.1812170303191376,
+          "p90": 2.78619078222912
+        },
+        "false_prune_nodes": {
+          "count": 32,
+          "maximum": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": 0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "flat_leaf_certificate_capture": {
+          "count": 32,
+          "maximum": 0.00488419174278524,
+          "mean": 0.00024424709629149513,
+          "median": 0.0,
+          "minimum": 0.0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "flat_leaf_certificate_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.004883,
+          "mean": 0.0002441875,
+          "median": 0.0,
+          "minimum": 0.0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "flat_leaf_missed_prunable_points": {
+          "count": 32,
+          "maximum": 999756,
+          "mean": 969292.21875,
+          "median": 999756.0,
+          "minimum": 269781,
+          "non_null": 32,
+          "p10": 997093.7,
+          "p90": 999756.0
+        },
+        "flat_leaf_oracle_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.9695364062499999,
+          "median": 0.999756,
+          "minimum": 0.269781,
+          "non_null": 32,
+          "p10": 0.999512,
+          "p90": 0.999756
+        },
+        "full_scan_coordinate_bytes": {
+          "count": 32,
+          "maximum": 3840003840,
+          "mean": 3840003840.0,
+          "median": 3840003840.0,
+          "minimum": 3840003840,
+          "non_null": 32,
+          "p10": 3840003840.0,
+          "p90": 3840003840.0
+        },
+        "node_metadata_read_proxy_bytes": {
+          "count": 32,
+          "maximum": 262112,
+          "mean": 262110.0,
+          "median": 262112.0,
+          "minimum": 262048,
+          "non_null": 32,
+          "p10": 262112.0,
+          "p90": 262112.0
+        },
+        "oracle_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.9695364062499999,
+          "median": 0.999756,
+          "minimum": 0.26978100000000005,
+          "non_null": 32,
+          "p10": 0.999512,
+          "p90": 0.999756
+        },
+        "oracle_retained_points": {
+          "count": 32,
+          "maximum": 730219,
+          "mean": 30463.59375,
+          "median": 244.0,
+          "minimum": 244,
+          "non_null": 32,
+          "p10": 244.0,
+          "p90": 488.0
+        },
+        "retained_fraction": {
+          "count": 32,
+          "maximum": 1.0,
+          "mean": 0.9997405625,
+          "median": 1.0,
+          "minimum": 0.995117,
+          "non_null": 32,
+          "p10": 1.0,
+          "p90": 1.0
+        },
+        "retained_points": {
+          "count": 32,
+          "maximum": 1000000,
+          "mean": 999740.5625,
+          "median": 1000000.0,
+          "minimum": 995117,
+          "non_null": 32,
+          "p10": 1000000.0,
+          "p90": 1000000.0
+        },
+        "true_hits": {
+          "count": 32,
+          "maximum": 5443,
+          "mean": 205.9375,
+          "median": 1.0,
+          "minimum": 1,
+          "non_null": 32,
+          "p10": 1.0,
+          "p90": 2.0
+        },
+        "visited_nodes": {
+          "count": 32,
+          "maximum": 8191,
+          "mean": 8190.9375,
+          "median": 8191.0,
+          "minimum": 8189,
+          "non_null": 32,
+          "p10": 8191.0,
+          "p90": 8191.0
+        }
+      },
+      "no_pruning_queries": 30,
+      "oracle_prunable_points_total": 31025165
+    },
+    "SAMPLED_PCA_MEDIAN": {
+      "actual_pruned_fraction": {
+        "count": 32,
+        "maximum": 0.90865,
+        "mean": 0.12121034375000002,
+        "median": 0.03600300000000001,
+        "minimum": 0.00024400000000002198,
+        "non_null": 32,
+        "p10": 0.003881500000000049,
+        "p90": 0.25423430000000014
+      },
+      "actual_pruned_points_total": 3878731,
+      "construction_wall_seconds": 73.92747648601653,
+      "coordinate_proxy_below_full_scan_queries": 25,
+      "coordinate_proxy_saving_fraction": {
+        "count": 32,
+        "maximum": 0.9066480933519067,
+        "mean": 0.11368473006526994,
+        "median": 0.02798497201502803,
+        "minimum": -0.007946992053007973,
+        "non_null": 32,
+        "p10": -0.004298295701704235,
+        "p90": 0.24710045289954724
+      },
+      "hierarchical_capture_mass_ratio": 0.12149485432511584,
+      "levels": [
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": null,
+            "mean": null,
+            "median": null,
+            "minimum": null,
+            "non_null": 0,
+            "p10": null,
+            "p90": null
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 0,
+          "nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "minimum": 1,
+            "non_null": 32,
+            "p10": 1.0,
+            "p90": 1.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.789199806808962,
+            "mean": 6.789199806808962,
+            "median": 6.789199806808962,
+            "minimum": 6.789199806808962,
+            "non_null": 32,
+            "p10": 6.789199806808962,
+            "p90": 6.789199806808962
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.789199806808962,
+            "mean": 6.789199806808962,
+            "median": 6.789199806808962,
+            "minimum": 6.789199806808962,
+            "non_null": 32,
+            "p10": 6.789199806808962,
+            "p90": 6.789199806808962
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 1,
+          "nodes": {
+            "count": 32,
+            "maximum": 2,
+            "mean": 2.0,
+            "median": 2.0,
+            "minimum": 2,
+            "non_null": 32,
+            "p10": 2.0,
+            "p90": 2.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.5,
+            "mean": 0.5,
+            "median": 0.5,
+            "minimum": 0.5,
+            "non_null": 32,
+            "p10": 0.5,
+            "p90": 0.5
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 500000,
+            "mean": 500000.0,
+            "median": 500000.0,
+            "minimum": 500000,
+            "non_null": 32,
+            "p10": 500000.0,
+            "p90": 500000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 1.0,
+            "median": 1.0,
+            "minimum": 1,
+            "non_null": 32,
+            "p10": 1.0,
+            "p90": 1.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 6.102594060633159,
+            "mean": 6.102594060633159,
+            "median": 6.102594060633159,
+            "minimum": 6.102594060633159,
+            "non_null": 32,
+            "p10": 6.102594060633159,
+            "p90": 6.102594060633159
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.399609083490633,
+            "mean": 6.399609083490633,
+            "median": 6.399609083490633,
+            "minimum": 6.399609083490633,
+            "non_null": 32,
+            "p10": 6.399609083490633,
+            "p90": 6.399609083490633
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 2,
+          "nodes": {
+            "count": 32,
+            "maximum": 4,
+            "mean": 4.0,
+            "median": 4.0,
+            "minimum": 4,
+            "non_null": 32,
+            "p10": 4.0,
+            "p90": 4.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.75,
+            "mean": 0.75,
+            "median": 0.75,
+            "minimum": 0.75,
+            "non_null": 32,
+            "p10": 0.75,
+            "p90": 0.75
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 750000,
+            "mean": 750000.0,
+            "median": 750000.0,
+            "minimum": 750000,
+            "non_null": 32,
+            "p10": 750000.0,
+            "p90": 750000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 3,
+            "mean": 3.0,
+            "median": 3.0,
+            "minimum": 3,
+            "non_null": 32,
+            "p10": 3.0,
+            "p90": 3.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 5.482811928069291,
+            "mean": 5.482811928069291,
+            "median": 5.482811928069291,
+            "minimum": 5.482811928069291,
+            "non_null": 32,
+            "p10": 5.482811928069291,
+            "p90": 5.482811928069291
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.253362209601959,
+            "mean": 6.253362209601959,
+            "median": 6.253362209601959,
+            "minimum": 6.253362209601959,
+            "non_null": 32,
+            "p10": 6.253362209601959,
+            "p90": 6.253362209601959
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.14285714285714285,
+            "mean": 0.004464285714285714,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.125,
+            "mean": 0.00390625,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 125000,
+            "mean": 3906.25,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 1,
+            "mean": 0.03125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 3,
+          "nodes": {
+            "count": 32,
+            "maximum": 8,
+            "mean": 8.0,
+            "median": 8.0,
+            "minimum": 8,
+            "non_null": 32,
+            "p10": 8.0,
+            "p90": 8.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.875,
+            "mean": 0.87109375,
+            "median": 0.875,
+            "minimum": 0.75,
+            "non_null": 32,
+            "p10": 0.875,
+            "p90": 0.875
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 875000,
+            "mean": 871093.75,
+            "median": 875000.0,
+            "minimum": 750000,
+            "non_null": 32,
+            "p10": 875000.0,
+            "p90": 875000.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 7,
+            "mean": 6.96875,
+            "median": 7.0,
+            "minimum": 6,
+            "non_null": 32,
+            "p10": 7.0,
+            "p90": 7.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.900742443977553,
+            "mean": 4.900742443977553,
+            "median": 4.900742443977553,
+            "minimum": 4.900742443977553,
+            "non_null": 32,
+            "p10": 4.900742443977553,
+            "p90": 4.900742443977553
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 6.094088243962806,
+            "mean": 6.094088243962806,
+            "median": 6.094088243962806,
+            "minimum": 6.094088243962806,
+            "non_null": 32,
+            "p10": 6.094088243962806,
+            "p90": 6.094088243962806
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.13333333333333333,
+            "mean": 0.00625,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.125,
+            "mean": 0.005859375,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 125000,
+            "mean": 5859.375,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 2,
+            "mean": 0.09375,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 4,
+          "nodes": {
+            "count": 32,
+            "maximum": 16,
+            "mean": 16.0,
+            "median": 16.0,
+            "minimum": 16,
+            "non_null": 32,
+            "p10": 16.0,
+            "p90": 16.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.9375,
+            "mean": 0.931640625,
+            "median": 0.9375,
+            "minimum": 0.8125,
+            "non_null": 32,
+            "p10": 0.9375,
+            "p90": 0.9375
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 937500,
+            "mean": 931640.625,
+            "median": 937500.0,
+            "minimum": 812500,
+            "non_null": 32,
+            "p10": 937500.0,
+            "p90": 937500.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 15,
+            "mean": 14.90625,
+            "median": 15.0,
+            "minimum": 13,
+            "non_null": 32,
+            "p10": 15.0,
+            "p90": 15.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 4.403024530533552,
+            "mean": 4.403024530533552,
+            "median": 4.403024530533552,
+            "minimum": 4.403024530533552,
+            "non_null": 32,
+            "p10": 4.403024530533552,
+            "p90": 4.403024530533552
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.799222417245263,
+            "mean": 5.799222417245263,
+            "median": 5.799222417245263,
+            "minimum": 5.799222417245263,
+            "non_null": 32,
+            "p10": 5.799222417245263,
+            "p90": 5.799222417245263
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.12903225806451613,
+            "mean": 0.007056451612903226,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.125,
+            "mean": 0.0068359375,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 125000,
+            "mean": 6835.9375,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 4,
+            "mean": 0.21875,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 5,
+          "nodes": {
+            "count": 32,
+            "maximum": 32,
+            "mean": 32.0,
+            "median": 32.0,
+            "minimum": 32,
+            "non_null": 32,
+            "p10": 32.0,
+            "p90": 32.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.96875,
+            "mean": 0.9619140625,
+            "median": 0.96875,
+            "minimum": 0.84375,
+            "non_null": 32,
+            "p10": 0.96875,
+            "p90": 0.96875
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 968750,
+            "mean": 961914.0625,
+            "median": 968750.0,
+            "minimum": 843750,
+            "non_null": 32,
+            "p10": 968750.0,
+            "p90": 968750.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 31,
+            "mean": 30.78125,
+            "median": 31.0,
+            "minimum": 27,
+            "non_null": 32,
+            "p10": 31.0,
+            "p90": 31.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.9816078755360675,
+            "mean": 3.9816078755360675,
+            "median": 3.9816078755360675,
+            "minimum": 3.9816078755360675,
+            "non_null": 32,
+            "p10": 3.9816078755360675,
+            "p90": 3.9816078755360675
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.461540909303497,
+            "mean": 5.461540909303497,
+            "median": 5.461540909303497,
+            "minimum": 5.461540909303497,
+            "non_null": 32,
+            "p10": 5.461540909303497,
+            "p90": 5.461540909303497
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.20634920634920634,
+            "mean": 0.012896825396825396,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.203125,
+            "mean": 0.0126953125,
+            "median": 0.0,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 203125,
+            "mean": 12695.3125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 13,
+            "mean": 0.8125,
+            "median": 0.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.0
+          },
+          "depth": 6,
+          "nodes": {
+            "count": 32,
+            "maximum": 64,
+            "mean": 64.0,
+            "median": 64.0,
+            "minimum": 64,
+            "non_null": 32,
+            "p10": 64.0,
+            "p90": 64.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.984375,
+            "mean": 0.978515625,
+            "median": 0.984375,
+            "minimum": 0.890625,
+            "non_null": 32,
+            "p10": 0.984375,
+            "p90": 0.984375
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 984375,
+            "mean": 978515.625,
+            "median": 984375.0,
+            "minimum": 890625,
+            "non_null": 32,
+            "p10": 984375.0,
+            "p90": 984375.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 63,
+            "mean": 62.625,
+            "median": 63.0,
+            "minimum": 57,
+            "non_null": 32,
+            "p10": 63.0,
+            "p90": 63.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.516601021101847,
+            "mean": 3.516601021101847,
+            "median": 3.516601021101847,
+            "minimum": 3.516601021101847,
+            "non_null": 32,
+            "p10": 3.516601021101847,
+            "p90": 3.516601021101847
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 5.142975021227086,
+            "mean": 5.142975021227086,
+            "median": 5.142975021227086,
+            "minimum": 5.142975021227086,
+            "non_null": 32,
+            "p10": 5.142975021227086,
+            "p90": 5.142975021227086
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.3385779711103138,
+            "mean": 0.02682025258848818,
+            "median": 0.007873507843271638,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.015747015686543277
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.335933,
+            "mean": 0.02661071875,
+            "median": 0.007812,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.015624
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 335933,
+            "mean": 26610.71875,
+            "median": 7812.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 15624.0
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 43,
+            "mean": 3.40625,
+            "median": 1.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 2.0
+          },
+          "depth": 7,
+          "nodes": {
+            "count": 32,
+            "maximum": 128,
+            "mean": 128.0,
+            "median": 128.0,
+            "minimum": 128,
+            "non_null": 32,
+            "p10": 128.0,
+            "p90": 128.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.992188,
+            "mean": 0.98730475,
+            "median": 0.9921875,
+            "minimum": 0.90625,
+            "non_null": 32,
+            "p10": 0.992187,
+            "p90": 0.992188
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 992188,
+            "mean": 987304.75,
+            "median": 992187.5,
+            "minimum": 906250,
+            "non_null": 32,
+            "p10": 992187.0,
+            "p90": 992188.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 127,
+            "mean": 126.375,
+            "median": 127.0,
+            "minimum": 116,
+            "non_null": 32,
+            "p10": 127.0,
+            "p90": 127.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 3.1371801538961632,
+            "mean": 3.1371801538961632,
+            "median": 3.1371801538961632,
+            "minimum": 3.1371801538961632,
+            "non_null": 32,
+            "p10": 3.1371801538961632,
+            "p90": 3.1371801538961632
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.636050629667635,
+            "mean": 4.636050629667635,
+            "median": 4.636050629667635,
+            "minimum": 4.636050629667635,
+            "non_null": 32,
+            "p10": 4.636050629667635,
+            "p90": 4.636050629667635
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.5137175808708817,
+            "mean": 0.043259143006438745,
+            "median": 0.011764965721072228,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.03490072222099522
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.511711,
+            "mean": 0.04309015625,
+            "median": 0.011719,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.03476440000000001
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 511711,
+            "mean": 43090.15625,
+            "median": 11719.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 34764.40000000001
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 131,
+            "mean": 11.03125,
+            "median": 3.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 8.900000000000002
+          },
+          "depth": 8,
+          "nodes": {
+            "count": 32,
+            "maximum": 256,
+            "mean": 256.0,
+            "median": 256.0,
+            "minimum": 256,
+            "non_null": 32,
+            "p10": 256.0,
+            "p90": 256.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.996094,
+            "mean": 0.99182140625,
+            "median": 0.996094,
+            "minimum": 0.921877,
+            "non_null": 32,
+            "p10": 0.996093,
+            "p90": 0.996094
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 996094,
+            "mean": 991821.40625,
+            "median": 996094.0,
+            "minimum": 921877,
+            "non_null": 32,
+            "p10": 996093.0,
+            "p90": 996094.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 255,
+            "mean": 253.90625,
+            "median": 255.0,
+            "minimum": 236,
+            "non_null": 32,
+            "p10": 255.0,
+            "p90": 255.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 2.8219194242189225,
+            "mean": 2.8219194242189225,
+            "median": 2.8219194242189225,
+            "minimum": 2.8219194242189225,
+            "non_null": 32,
+            "p10": 2.8219194242189225,
+            "p90": 2.8219194242189225
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 4.173351813463286,
+            "mean": 4.173351813463286,
+            "median": 4.173351813463286,
+            "minimum": 4.173351813463286,
+            "non_null": 32,
+            "p10": 4.173351813463286,
+            "p90": 4.173351813463286
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.6633926057590475,
+            "mean": 0.06060388002733685,
+            "median": 0.016649341666008996,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.07260098973294848
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.662097,
+            "mean": 0.0604845625,
+            "median": 0.016601499999999998,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 0.07245920000000004
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 662097,
+            "mean": 60484.5625,
+            "median": 16601.5,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 72459.20000000004
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 339,
+            "mean": 30.96875,
+            "median": 8.5,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 0.0,
+            "p90": 37.10000000000002
+          },
+          "depth": 9,
+          "nodes": {
+            "count": 32,
+            "maximum": 512,
+            "mean": 512.0,
+            "median": 512.0,
+            "minimum": 512,
+            "non_null": 32,
+            "p10": 512.0,
+            "p90": 512.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.998047,
+            "mean": 0.994323875,
+            "median": 0.998047,
+            "minimum": 0.933596,
+            "non_null": 32,
+            "p10": 0.998046,
+            "p90": 0.998047
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 998047,
+            "mean": 994323.875,
+            "median": 998047.0,
+            "minimum": 933596,
+            "non_null": 32,
+            "p10": 998046.0,
+            "p90": 998047.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 511,
+            "mean": 509.09375,
+            "median": 511.0,
+            "minimum": 478,
+            "non_null": 32,
+            "p10": 511.0,
+            "p90": 511.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 2.5330518296565723,
+            "mean": 2.5330518296565723,
+            "median": 2.5330518296565723,
+            "minimum": 2.5330518296565723,
+            "non_null": 32,
+            "p10": 2.5330518296565723,
+            "p90": 2.5330518296565723
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 3.49615809447955,
+            "mean": 3.49615809447955,
+            "median": 3.49615809447955,
+            "minimum": 3.49615809447955,
+            "non_null": 32,
+            "p10": 3.49615809447955,
+            "p90": 3.49615809447955
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.7761272763489929,
+            "mean": 0.0786047252990527,
+            "median": 0.021502986915229262,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0009769544845313872,
+            "p90": 0.11182184701727893
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.775369,
+            "mean": 0.07851746875,
+            "median": 0.021482,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.000976,
+            "p90": 0.11171270000000005
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 775369,
+            "mean": 78517.46875,
+            "median": 21482.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 976.0,
+            "p90": 111712.70000000006
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 794,
+            "mean": 80.40625,
+            "median": 22.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 1.0,
+            "p90": 114.40000000000006
+          },
+          "depth": 10,
+          "nodes": {
+            "count": 32,
+            "maximum": 1024,
+            "mean": 1024.0,
+            "median": 1024.0,
+            "minimum": 1024,
+            "non_null": 32,
+            "p10": 1024.0,
+            "p90": 1024.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999024,
+            "mean": 0.99591109375,
+            "median": 0.999023,
+            "minimum": 0.943366,
+            "non_null": 32,
+            "p10": 0.9981446,
+            "p90": 0.999024
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999024,
+            "mean": 995911.09375,
+            "median": 999023.0,
+            "minimum": 943366,
+            "non_null": 32,
+            "p10": 998144.6,
+            "p90": 999024.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 1023,
+            "mean": 1019.8125,
+            "median": 1023.0,
+            "minimum": 966,
+            "non_null": 32,
+            "p10": 1022.1,
+            "p90": 1023.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 2.3044391621029487,
+            "mean": 2.3044391621029487,
+            "median": 2.3044391621029487,
+            "minimum": 2.3044391621029487,
+            "non_null": 32,
+            "p10": 2.3044391621029487,
+            "p90": 2.3044391621029487
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 3.054619684231385,
+            "mean": 3.054619684231385,
+            "median": 3.054619684231385,
+            "minimum": 3.054619684231385,
+            "non_null": 32,
+            "p10": 3.054619684231385,
+            "p90": 3.054619684231385
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.8543897966105426,
+            "mean": 0.09845313048476441,
+            "median": 0.0253993949047135,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0020027773553494103,
+            "p90": 0.17428955330201149
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.853972,
+            "mean": 0.0983961875,
+            "median": 0.025387,
+            "minimum": 0.0,
+            "non_null": 32,
+            "p10": 0.0020018,
+            "p90": 0.1742045000000001
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 853972,
+            "mean": 98396.1875,
+            "median": 25387.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 2001.8,
+            "p90": 174204.5000000001
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 1749,
+            "mean": 201.53125,
+            "median": 52.0,
+            "minimum": 0,
+            "non_null": 32,
+            "p10": 4.1,
+            "p90": 356.8000000000002
+          },
+          "depth": 11,
+          "nodes": {
+            "count": 32,
+            "maximum": 2048,
+            "mean": 2048.0,
+            "median": 2048.0,
+            "minimum": 2048,
+            "non_null": 32,
+            "p10": 2048.0,
+            "p90": 2048.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999512,
+            "mean": 0.9969639375,
+            "median": 0.999512,
+            "minimum": 0.952645,
+            "non_null": 32,
+            "p10": 0.9990727,
+            "p90": 0.999512
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999512,
+            "mean": 996963.9375,
+            "median": 999512.0,
+            "minimum": 952645,
+            "non_null": 32,
+            "p10": 999072.7,
+            "p90": 999512.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 2047,
+            "mean": 2041.78125,
+            "median": 2047.0,
+            "minimum": 1951,
+            "non_null": 32,
+            "p10": 2046.1,
+            "p90": 2047.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 2.107720375569963,
+            "mean": 2.107720375569963,
+            "median": 2.107720375569963,
+            "minimum": 2.107720375569963,
+            "non_null": 32,
+            "p10": 2.107720375569963,
+            "p90": 2.107720375569963
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 2.777671963985857,
+            "mean": 2.777671963985857,
+            "median": 2.777671963985857,
+            "minimum": 2.777671963985857,
+            "non_null": 32,
+            "p10": 2.777671963985857,
+            "p90": 2.777671963985857
+          }
+        },
+        {
+          "certificate_capture": {
+            "count": 32,
+            "maximum": 0.9032562977929592,
+            "mean": 0.11934407733074427,
+            "median": 0.035889757100732576,
+            "minimum": 0.0002506054586798844,
+            "non_null": 32,
+            "p10": 0.003636666466689346,
+            "p90": 0.2490696730002122
+          },
+          "certificate_pruned_fraction": {
+            "count": 32,
+            "maximum": 0.903035,
+            "mean": 0.119302875,
+            "median": 0.035880999999999996,
+            "minimum": 0.000244,
+            "non_null": 32,
+            "p10": 0.0036131,
+            "p90": 0.24900890000000014
+          },
+          "certificate_pruned_points": {
+            "count": 32,
+            "maximum": 903035,
+            "mean": 119302.875,
+            "median": 35881.0,
+            "minimum": 244,
+            "non_null": 32,
+            "p10": 3613.1000000000004,
+            "p90": 249008.90000000014
+          },
+          "certificate_rejected_nodes": {
+            "count": 32,
+            "maximum": 3699,
+            "mean": 488.71875,
+            "median": 147.0,
+            "minimum": 1,
+            "non_null": 32,
+            "p10": 14.8,
+            "p90": 1020.1000000000006
+          },
+          "depth": 12,
+          "nodes": {
+            "count": 32,
+            "maximum": 4096,
+            "mean": 4096.0,
+            "median": 4096.0,
+            "minimum": 4096,
+            "non_null": 32,
+            "p10": 4096.0,
+            "p90": 4096.0
+          },
+          "oracle_prunable_fraction": {
+            "count": 32,
+            "maximum": 0.999756,
+            "mean": 0.99765825,
+            "median": 0.999756,
+            "minimum": 0.959237,
+            "non_null": 32,
+            "p10": 0.9995362999999999,
+            "p90": 0.999756
+          },
+          "oracle_prunable_points": {
+            "count": 32,
+            "maximum": 999756,
+            "mean": 997658.25,
+            "median": 999756.0,
+            "minimum": 959237,
+            "non_null": 32,
+            "p10": 999536.3,
+            "p90": 999756.0
+          },
+          "oracle_rejected_nodes": {
+            "count": 32,
+            "maximum": 4095,
+            "mean": 4086.40625,
+            "median": 4095.0,
+            "minimum": 3929,
+            "non_null": 32,
+            "p10": 4094.1,
+            "p90": 4095.0
+          },
+          "radius_mean": {
+            "count": 32,
+            "maximum": 1.9432031747165457,
+            "mean": 1.9432031747165457,
+            "median": 1.9432031747165457,
+            "minimum": 1.9432031747165457,
+            "non_null": 32,
+            "p10": 1.9432031747165457,
+            "p90": 1.9432031747165457
+          },
+          "radius_p90": {
+            "count": 32,
+            "maximum": 2.5857569675586047,
+            "mean": 2.5857569675586047,
+            "median": 2.5857569675586047,
+            "minimum": 2.5857569675586047,
+            "non_null": 32,
+            "p10": 2.5857569675586047,
+            "p90": 2.5857569675586047
+          }
+        }
+      ],
+      "metrics": {
+        "coordinate_proxy_bytes": {
+          "count": 32,
+          "maximum": 3870520320,
+          "mean": 3403454040.0,
+          "median": 3732541440.0,
+          "minimum": 358471680,
+          "non_null": 32,
+          "p10": 2891137152.0,
+          "p90": 3856509312.0
+        },
+        "distance_contrast": {
+          "count": 32,
+          "maximum": 0.802528161105999,
+          "mean": 0.4412254616163276,
+          "median": 0.394737410768807,
+          "minimum": 0.17238490373172055,
+          "non_null": 32,
+          "p10": 0.2708723804076488,
+          "p90": 0.6677188499686373
+        },
+        "distance_p10": {
+          "count": 32,
+          "maximum": 3.1577942695163665,
+          "mean": 1.6364254936455038,
+          "median": 1.52615236115909,
+          "minimum": 1.0638096509417878,
+          "non_null": 32,
+          "p10": 1.269849360989725,
+          "p90": 2.130479925915158
+        },
+        "distance_p50": {
+          "count": 32,
+          "maximum": 3.4051275221397526,
+          "mean": 1.9558788627422876,
+          "median": 1.802062355878578,
+          "minimum": 1.5955931601228908,
+          "non_null": 32,
+          "p10": 1.654409344806019,
+          "p90": 2.36278061923737
+        },
+        "distance_p90": {
+          "count": 32,
+          "maximum": 3.823071297958735,
+          "mean": 2.4622074908734666,
+          "median": 2.333896043129328,
+          "minimum": 2.091280624080361,
+          "non_null": 32,
+          "p10": 2.1812170303191376,
+          "p90": 2.78619078222912
+        },
+        "false_prune_nodes": {
+          "count": 32,
+          "maximum": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "minimum": 0,
+          "non_null": 32,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "flat_leaf_certificate_capture": {
+          "count": 32,
+          "maximum": 0.9032562977929592,
+          "mean": 0.11934407733074427,
+          "median": 0.035889757100732576,
+          "minimum": 0.0002506054586798844,
+          "non_null": 32,
+          "p10": 0.003636666466689346,
+          "p90": 0.2490696730002122
+        },
+        "flat_leaf_certificate_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.903035,
+          "mean": 0.119302875,
+          "median": 0.035880999999999996,
+          "minimum": 0.000244,
+          "non_null": 32,
+          "p10": 0.0036131,
+          "p90": 0.24900890000000014
+        },
+        "flat_leaf_missed_prunable_points": {
+          "count": 32,
+          "maximum": 998292,
+          "mean": 878355.375,
+          "median": 961068.5,
+          "minimum": 96720,
+          "non_null": 32,
+          "p10": 750747.1,
+          "p90": 993873.6
+        },
+        "flat_leaf_oracle_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.99765825,
+          "median": 0.999756,
+          "minimum": 0.959237,
+          "non_null": 32,
+          "p10": 0.9995362999999999,
+          "p90": 0.999756
+        },
+        "full_scan_coordinate_bytes": {
+          "count": 32,
+          "maximum": 3840003840,
+          "mean": 3840003840.0,
+          "median": 3840003840.0,
+          "minimum": 3840003840,
+          "non_null": 32,
+          "p10": 3840003840.0,
+          "p90": 3840003840.0
+        },
+        "node_metadata_read_proxy_bytes": {
+          "count": 32,
+          "maximum": 262112,
+          "mean": 240816.0,
+          "median": 256576.0,
+          "minimum": 64032,
+          "non_null": 32,
+          "p10": 228275.2,
+          "p90": 261785.6
+        },
+        "oracle_prunable_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.99765825,
+          "median": 0.999756,
+          "minimum": 0.959237,
+          "non_null": 32,
+          "p10": 0.9995362999999999,
+          "p90": 0.999756
+        },
+        "oracle_retained_points": {
+          "count": 32,
+          "maximum": 40763,
+          "mean": 2341.75,
+          "median": 244.0,
+          "minimum": 244,
+          "non_null": 32,
+          "p10": 244.0,
+          "p90": 463.7000000000005
+        },
+        "retained_fraction": {
+          "count": 32,
+          "maximum": 0.999756,
+          "mean": 0.8787896562499999,
+          "median": 0.963997,
+          "minimum": 0.09135,
+          "non_null": 32,
+          "p10": 0.7457657,
+          "p90": 0.9961184999999999
+        },
+        "retained_points": {
+          "count": 32,
+          "maximum": 999756,
+          "mean": 878789.65625,
+          "median": 963997.0,
+          "minimum": 91350,
+          "non_null": 32,
+          "p10": 745765.7,
+          "p90": 996118.5
+        },
+        "true_hits": {
+          "count": 32,
+          "maximum": 5443,
+          "mean": 205.9375,
+          "median": 1.0,
+          "minimum": 1,
+          "non_null": 32,
+          "p10": 1.0,
+          "p90": 2.0
+        },
+        "visited_nodes": {
+          "count": 32,
+          "maximum": 8191,
+          "mean": 7525.5,
+          "median": 8018.0,
+          "minimum": 2001,
+          "non_null": 32,
+          "p10": 7133.6,
+          "p90": 8180.8
+        }
+      },
+      "no_pruning_queries": 0,
+      "oracle_prunable_points_total": 31925064
+    }
+  },
+  "paired_against_random": {
+    "KD_MAXSPAN_MEDIAN": {
+      "equal_retained_points": 7,
+      "fewer_retained_points": 25,
+      "more_retained_points": 0
+    },
+    "SAMPLED_PCA_MEDIAN": {
+      "equal_retained_points": 0,
+      "fewer_retained_points": 32,
+      "more_retained_points": 0
+    }
+  },
+  "passed": true,
+  "queries": 32,
+  "scope": "Fixed development-only structural counts and conditional source proxies;not physical traffic or end-to-end timing"
+}
