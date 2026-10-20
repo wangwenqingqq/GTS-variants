@@ -1,0 +1,212 @@
+{
+  "dataset": {
+    "D": 960,
+    "N": 1000000,
+    "dtype": "little-endian FP32",
+    "file_bytes": 3840000012,
+    "layout_on_disk": "row-major;12-byte little-endian int32 header(D,N,metric=2)",
+    "name": "GIST1M",
+    "payload_bytes": 3840000000,
+    "sha256": "f371099f42fea105bed573c67bbfd5b522743220873cf68aa900eb6c44b388e7",
+    "snapshot": "same immutable snapshot as Gate0;self-matches retained"
+  },
+  "decision": {
+    "B8": "Exploratory,does not block B2/B4;no all-B generalization",
+    "Gate2": "Only after complete Gate1 GO;separately test reusable physical compatibility across queries,batches,seeds,datasets and net lookup/repair/update cost;no automatic index or GPU admission",
+    "all_conditions_for_each_of_B2_B4": [
+      "mean_saving>=0.05 (exact integer5%)",
+      "paired bootstrap95% lower>0",
+      "conservative residual gap_capture>=0.25 (exact rational25%)",
+      "max_batch_loss<=0.03 (exact rational3%)",
+      "sum(candidate full source)<sum(batch full scan source)",
+      "no heldout-informed design/selection or altered membership/radius"
+    ],
+    "heldout_gain_disappears": "Close BQSI direction for this mechanism,retain negative evidence and exact scope",
+    "priority": [
+      "correctness,leak,ownership,source-binding failure -> INVALID_STOP",
+      "both B2 and B4 meet every declared condition -> SOURCE_MODEL_GATE1_GO",
+      "otherwise NO_GO_OR_UNCLASSIFIED_STOP;do not weaken thresholds"
+    ],
+    "undefined_residual_or_missing_evidence": "UNCLASSIFIED_STOP;not an implicit pass",
+    "win_LOOKAHEAD_only": "No index admission;engineering diagnostic only"
+  },
+  "development_qids": [
+    88406,
+    865632,
+    881748,
+    916533,
+    40158,
+    242468,
+    40486,
+    900387,
+    703226,
+    791039,
+    724874,
+    671829,
+    722418,
+    152899,
+    737995,
+    144573,
+    570909,
+    347206,
+    63744,
+    625378,
+    136857,
+    201233,
+    72436,
+    617423,
+    810945,
+    789615,
+    601856,
+    433080,
+    415755,
+    282095,
+    66651,
+    326654
+  ],
+  "disclosure": "This is an input/protocol freeze and development reproducibility checkpoint,not completion of Gate1,novelty proof,independent-dataset validation,or measured GPU speedup.",
+  "experiment": "GTSPP_20261020_FIXED_BATCH_ONLINE_GATE1",
+  "fixed_physics": {
+    "authority": "Gate0 CONTRACT.json and CLARIFICATIONS.json unchanged",
+    "full_scan": "3,840,000,000+3960*B source bytes per batch,one original-order scan,no duplicate terminal",
+    "layout": "Hypothetical single coordinate-major FP32 representation;conversion unmeasured",
+    "mask_bytes_per_live_sector": "B",
+    "metadata": "Candidate read-only scheduler metadata input bytes are charged once per batch in full source cost;any reread from source also charged.No oracle/context/depth file is scheduler input. Dynamic state bytes,peak live storage,read/write counts and CPU time reported separately,not called actual DRAM.",
+    "no_cross_tile_or_sector_cache": true,
+    "output_cost": "No real query output generation in Gate1A;later exact verifier must agree fully;source model is not end-to-end latency",
+    "partial_bytes_per_live_sector": "64*B",
+    "per_query_order": "Inherited PDX top3/30 zone order,unchanged arithmetic and guarded exact verifier;query-specific order derivation is not performed in Gate1A",
+    "query_and_order_input_bytes_per_batch": "3960*B",
+    "source_objective": "filter_tile_reads*1024+shared_terminal_union_sectors*30720+3960*B+extra_metadata_input_bytes;INDEPENDENT pays terminal per query-sector",
+    "terminal": "Finish B filter chains within one8-row sector,then original-order960dim verification for union of depth30 sectors,including conservative last-zone nonhits;no free filter/terminal retention",
+    "terminal_source_bytes_per_shared_sector": 30720,
+    "tile_buffers": 1,
+    "tile_dims": 32,
+    "tile_rows": 8,
+    "tile_source_bytes": 1024,
+    "zones": 30
+  },
+  "information_boundary": {
+    "allowed": [
+      "fixed batch IDs and input queries/radii",
+      "complete predeclared per-query zone order",
+      "currently ready tile identities and query membership",
+      "past emitted reads,partial sums,rejections,and finished flags revealed only after execution",
+      "bounded query-local age/history derived from past execution"
+    ],
+    "execution_boundary": "Scheduler receives a ready-only provider;trace storage/oracle process is outside scheduler capability.No depth-key context aggregation for online execution;all125000 sectors per batch must be stepped.",
+    "forbidden": [
+      "future rejection depth or true chain length",
+      "first-safe-crossing arrays or oracle path",
+      "posthoc co-occurrence/context frequency statistics",
+      "heldout results for parameter selection",
+      "cache or planner prefetch of a not-ready query operation"
+    ],
+    "noninterference_test": "Before implementation freeze,use synthetic pairs identical through the current frontier but different future depths:decisions must agree until provider histories differ.",
+    "oracle_is_diagnostic_only": true
+  },
+  "one_shot": {
+    "Gate1A_allowed": "identity-only query extraction;old32 trace replay;no heldout distances,PDX order,depths,oracle or scheduler results",
+    "Gate1A_replay_script": "Only Gate1A subcommands exist;there is no heldout evaluation command",
+    "Gate1B_required_before_heldout": [
+      "development-only candidate mechanism/non-alias review",
+      "ready-only noninterference tests",
+      "exactness and cost accounting checks",
+      "immutable implementation/parameter/baseline source freeze",
+      "primary candidate selection and signed-off bounded execution registration"
+    ],
+    "Gate1C": "One heldout evaluation after all preconditions;exclusive start ticket before any heldout feature/trace derivation;first failure stops,no automatic retries or tuning",
+    "failure_retention": "Keep start,failures,partial outputs and frozen inputs.Any authorized recovery is separately recorded and cannot change semantics or erase failed samples."
+  },
+  "oracle": {
+    "B8": "Exploratory UNRESOLVED unless certified exact;no B8-targeted candidate tuning or extra oracle budget in this protocol",
+    "family": "Minimum tile-read schedule interleaving fixed per-query zone chains,one sector at a time;every emitted symbol serves all currently ready matching queries;no changing orders,no prefetch,one1024B tile buffer",
+    "max_expansions_per_batch": 2000000,
+    "max_expansions_per_context": 4096,
+    "method": "A* with union-of-remaining-symbol lower bound and initial pairwise exact SCS lower bound;feasible upper=min fixed simple witnesses",
+    "order": "Run diagnostic oracle only after candidate outputs are sealed;never expose it to design or scheduler",
+    "scope": "Fixed-chain finite source-model optimum,not an information-theoretic lower bound or a realizable scheduler"
+  },
+  "parent": {
+    "artifact": "fixed_batch_dag_gate0_20261019",
+    "commit": "c49ff3ec40b23798291fde4436009b3ae07a0827",
+    "contract_sha256": "59b984b8c6436961c5240afaa9cf8b7293c556ed962478e09bfd5a70f2ccf851",
+    "publish_manifest_sha256": "4a501c1f4787103584ddb928368104ae99345b80e6a927a8d83a9fc52af6660c"
+  },
+  "phase_at_registration": "GATE1A_INPUT_AND_PROTOCOL_FREEZE_ONLY;candidate implementation freeze pending",
+  "query_selection_sha256": "251a85f5dbd278e1e7a87ab85c873f98eea4bc25b4fd951a154ba12492f7b73d",
+  "radii": {
+    "distribution": "Empirical parent distribution is a point mass:all32 use the same radius;all128 independent draws from this point mass are identical",
+    "new_radius_rule": "Any non-degenerate radius experiment requires a separate pre-outcome protocol;do not replace this cohort or this test",
+    "parent_radius_bits": "0x3f34a3d8",
+    "parent_threshold_hex": "0x1.fddb427319000p-2",
+    "radius_rng": "Not applicable:degenerate distribution;no fabricated multiradius study or radius selection by sharing opportunity"
+  },
+  "resource": {
+    "GPU_starts": 0,
+    "Gate1A_heldout_distance_evaluations": 0,
+    "Gate1A_heldout_evaluation_starts": 0,
+    "Gate1A_population_processes": 28,
+    "automatic_retries": false,
+    "first_failure_stop": true,
+    "foreign_process_changes": false,
+    "installations": false,
+    "max_workers": 4,
+    "nice": 10,
+    "raw_disk_budget_bytes": 2147483648
+  },
+  "sampling": {
+    "batch_counts": {
+      "2": 64,
+      "4": 32,
+      "8": 16
+    },
+    "batch_rule": "Sort query indices by (SHA256(ASCII BQSI-G1A-batch:{batch_seed}:{qid}) bytes,index);consecutive disjoint chunks separately for B2/B4/B8;identical membership for every strategy",
+    "batch_seed": 2026102002,
+    "duplicates": "After identity freeze,byte-identical vector to development or within heldout stops Gate1A;never redraw based on coordinates or outcomes",
+    "population_scope": "Heldout identities versus original32 only;same database-derived query population,not an independent dataset or production arrival trace;not a claim of exclusion from every earlier project experiment",
+    "queries": 128,
+    "query_rule": "For counter=0,1,... SHA256(ASCII BQSI-G1A-query:{query_seed}:{counter});big-endian uint256;reject values>=floor(2^256/N)*N,otherwise value mod N;skip development IDs and repeated IDs until128 accepted;no geometry or outcome access",
+    "query_seed": 2026102001
+  },
+  "scope": "CPU-only future-blind fixed-batch source-cost test;BQSI remains a hypothesis;no index,CUDA,service SLA or manuscript admission",
+  "statistics": {
+    "batch_loss": "(C_batch-F_batch)/F_batch;median and maximum;ties are not wins",
+    "bootstrap": {
+      "interval": "two-sided percentile95%;linear interpolation at0.025/0.975 of sorted replicate savings",
+      "replicates": 20000,
+      "resample": "Python Random(seed).randrange(batch_count),batch_count draws with replacement per replicate;paired costs;one primary candidate only",
+      "seed_rule": "2026102003+B"
+    },
+    "gap_capture": "delta=sum(F)-sum(C);O in[sum(L),sum(U)];if delta>=0 and sum(F)>sum(L),conservative lower=delta/(sum(F)-sum(L));if sum(F)>sum(U),upper=delta/(sum(F)-sum(U));otherwise upper unavailable.Negative delta is failure;zero/negative residual is not silently passed.",
+    "mean_saving": "(sum(FANOUT_full_source)-sum(candidate_full_source))/sum(FANOUT_full_source)",
+    "required_metrics": [
+      "full source bytes/query and filter/terminal/input/metadata breakdown",
+      "every batch cost and paired win rate",
+      "median relative saving and worst batch loss",
+      "certified oracle gap-capture interval",
+      "metadata input bytes,peak scheduler state,state read/write counts,tile buffer bytes",
+      "order construction,scheduler,cost-checker CPU seconds reported separately;not GPU latency"
+    ],
+    "unit": "Paired whole batch within B;report B2,B4,B8 separately,no pooled winner"
+  },
+  "strategies": {
+    "baseline": "FANOUT_ONLINE:maximum current ready fanout,zone ID ascending ties,eagerly serves all ready matching queries",
+    "candidate_limit": 2,
+    "candidate_status": {
+      "LAZY_PLAN_DAG": "DESIGN_ONLY;planning cannot see unexecuted rejection outcomes;aging/state/parameters must be frozen on development32",
+      "PREFIX_REJOIN": "NOT_A_DISTINCT_CANDIDATE_YET:FANOUT already rejoins current ready tiles;must supply a non-alias ready-selection or split mechanism,or drop it"
+    },
+    "controls": [
+      "INDEPENDENT",
+      "PREFIX_TRIE",
+      "GREEDY_FANOUT",
+      "GREEDY_LOOKAHEAD",
+      "BATCH_FULL_SCAN",
+      "CERTIFIED_ORACLE_INTERVAL"
+    ],
+    "development_only": "Original32 only;no heldout vectors,signatures,orders,depths or score inspection for design",
+    "heldout_controls": "Port existing controls without exposing future lengths to decision code;GREEDY_LOOKAHEAD may consult known original order,not future depths",
+    "primary_selection": "Select one distinct candidate on development32 before heldout;record selection rule,all rejected designs,and hashes in IMPLEMENTATION_FREEZE.json.No choosing winner on heldout."
+  }
+}
