@@ -1,0 +1,90 @@
+{
+  "baseline_scope": "All CPU structural reimplementations,not native CUDA execution. Last2 onlyTLoc. Quickjoin-style rectangular ball/window recursion;not an eD-index implementation. Spatial dual AABB is a JZ-family diagnostic,not a faithful JZ Morton/plane hierarchy reproduction;native JZ comparison remains unmeasured.",
+  "candidate": "One binary query ball tree,leaf1;real middle-ID center,max covering radius;fixed median radial split;BFS node pairs. Split larger cardinality,query on ties;annulus rejection on source parent pivot;share distance across source siblings. No future rejection/oracle outcomes.",
+  "counting": {
+    "distance": "All actual metric calls by role:DB build,rebuild,query-tree construction,bounds,partition,verification;candidate verification separately;no free query-plan cost",
+    "frontier": "Breadth-first for every tree/partition method;track both buffers,live records,physical vector capacity payload,ownership IDs and query-tree resident bytes separately. Shared logical query-node frontier=sum query-node cardinalities per source-node task;no DFS trick.",
+    "gate": "Against GTS_PARENT_CACHE and applicable Quickjoin:>=10x query-plan+search metric reduction,or>=10x frontier allocated payload INCLUDING extra query ownership tree AND >=10x logical query-node frontier vs compact GTS_PARENT_CACHE. Dense native GTS flags reported but excluded as a weak packing-only gate.",
+    "output": "All triples sorted and byte-equal to all-pair reference;counts/hashes are not substitutes for full equality checks"
+  },
+  "data": {
+    "DNA_GRCh38_chr1_108": {
+      "definition": "Uppercase real chr1;forward,nonoverlapping108-base windows from offsets0,108,...;ACGT-only;uniform1M without replacement seed2026102100,sorted offsets;not original GTS DNA",
+      "metric": "unit Levenshtein",
+      "radii": [
+        2,
+        4,
+        8
+      ],
+      "source_N": 1000000,
+      "source_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr1.fa.gz"
+    },
+    "TLoc": {
+      "metric": "L2 on FP32-parsed coordinates promoted before subtraction;ordered FP64 squared membership",
+      "radii": [
+        0.01,
+        0.05
+      ],
+      "role": "competition stress only",
+      "source_N": 10000000
+    },
+    "Words": {
+      "metric": "byte-wise unit Levenshtein",
+      "radii": [
+        1,
+        2,
+        3
+      ],
+      "source_N": 611756
+    }
+  },
+  "decision": {
+    "GO": "Every primary Words/DNA cell reaches one >=10x gate against the strongest applicable non-shared competitor;necessary opportunity only,not novelty admission",
+    "MIXED": "Any remaining mix:report all cells,stop without promotion;do not tune/resample",
+    "NO_GO": "No primary cell reaches either gate;stop direction under this implementation/contract,not an impossibility theorem",
+    "invalid": "Any input/source/quality/resource failure => first failure stop;missing/censored is unresolved,not negative"
+  },
+  "experiment": "GTSPP_20261021_SHARED_FRONTIER_CPU_TRACE_GATE0",
+  "methods": [
+    "GTS_LITERAL_CPU",
+    "GTS_PARENT_CACHE_CPU",
+    "SHARED_ANNULUS_CPU",
+    "QUICKJOIN_FAMILY_CPU",
+    "GRID_2D_CPU",
+    "SPATIAL_DUAL_AABB_CPU"
+  ],
+  "novelty": "NOT_ADMITTED:metric partition joins and spatial dual-tree shared traversal already exist;this is a cheap falsification,not a proposed new index. >=10x alone cannot overcome prior-art subsumption.",
+  "numerical": "Integer Levenshtein exact. L2 conservative64*FP64 epsilon norm intervals and semantic radius inflation;no false pruning allowed;grid visits one extra neighbor cell if needed by guard. Native GTS FP32 arithmetic differs;no GPU parity claim.",
+  "parent_commit": "273107502054ef82da6e03b66495537ae56f45c8",
+  "preservation": "Read-only original inputs,new task-owned persistent outputs only;no frozen GIST128 heldout inputs or features;no existing processes/settings modified",
+  "quickjoin": "Rectangle A x B;two random distinct endpoints from union;rho=distance(p1,p2);ball left/right plus inclusive epsilon windows;recurse same sides and2 crossing windows. Product<=400,depth>=64 or nonprogress => exact nested loops. Fixed seed2026102120 per radius;all partition work charged.",
+  "resource": {
+    "CPU_threads": 1,
+    "GPU_starts": 0,
+    "automatic_retries": false,
+    "max_seconds_per_dataset": 1800,
+    "nice": 10,
+    "raw_disk_budget_bytes": 1500000000,
+    "serial": true
+  },
+  "sample": {
+    "B": 256,
+    "N": 65536,
+    "incoming": 32,
+    "queries": "Random(seed).sample(range65536,256);same membership across methods/radii;original source IDs retained",
+    "query_seeds": [
+      2026102101,
+      2026102102
+    ],
+    "rule": "Python3.12 Random(seed).sample(source row IDs,65568),sort;first65536 initial,last32 incoming;no query/metric outcome selection",
+    "seeds": {
+      "DNA_GRCh38_chr1_108": 2026102112,
+      "TLoc": 2026102113,
+      "Words": 2026102111
+    }
+  },
+  "source_adaptation": "GTS order10,leaf capacity20,mid-ID pivot,sorted radial equal partitions,next-sibling lower radius as upper bound;last upper infinite. Ascending immutable-ID ties and sufficient adaptive height replace unspecified CUDA sort ties and unsafe fixed MAX_H3;not GPU timing or bitwise native execution parity.",
+  "spatial": "2D grid side epsilon,3x3 neighbor cells and exact verification;spatial dual tree uses median max-span AABB partitions leaf20,not JZ native plane/Morton implementation. No coordinate embedding for strings.",
+  "task": "Exact directed range join Q x D;self matches retained;all query,data-ID,distance output triples checked",
+  "updates": "After static matrix:delete32 fixed-seed initial IDs outside both query sets,rebuild;append32 reserved source objects,rebuild. Record calls,wall time,nodes,metadata;compare all mid-radius seed1 query outputs to full reference. Full rebuild ACK only,not fine-grained update/concurrency performance."
+}

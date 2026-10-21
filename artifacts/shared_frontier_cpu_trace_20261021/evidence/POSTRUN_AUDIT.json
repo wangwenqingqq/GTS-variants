@@ -1,0 +1,211 @@
+{
+  "GPU_starts": 0,
+  "bindings": {
+    "DNA_GRCh38_chr1_108": {
+      "actual_membership_files": {
+        "DNA_GRCh38_chr1_108.2026102101.qid": {
+          "bytes": 1495,
+          "sha256": "0500025697504f3b04b31591bae0f8b19288e6f86856ef9a1333ce03c1e4ccb4"
+        },
+        "DNA_GRCh38_chr1_108.2026102102.qid": {
+          "bytes": 1491,
+          "sha256": "819f865fa7416ebe53f39b9d4f721d7f6d2f8b8f4b416efb8ecc67ca2466b089"
+        },
+        "DNA_GRCh38_chr1_108.delete": {
+          "bytes": 188,
+          "sha256": "9bd4e7c94128891c8f0a74fcf38c96f597b98129a6aacaa28be8fdd41cf6024c"
+        }
+      },
+      "deterministic_membership_equal": true,
+      "selection": {
+        "bytes": 787298,
+        "sha256": "da23bc1201f9e21e7102b7a6f3e165921bfe7c1676541c45bf4994e052a187f8"
+      },
+      "trace_input": {
+        "bytes": 7598543,
+        "sha256": "6ec392f8eb4b14a6bc9dba19eda5eb6567f1b3c7195c857d4d443840a603dac2"
+      }
+    },
+    "TLoc": {
+      "actual_membership_files": {
+        "TLoc.2026102101.qid": {
+          "bytes": 1495,
+          "sha256": "0500025697504f3b04b31591bae0f8b19288e6f86856ef9a1333ce03c1e4ccb4"
+        },
+        "TLoc.2026102102.qid": {
+          "bytes": 1491,
+          "sha256": "819f865fa7416ebe53f39b9d4f721d7f6d2f8b8f4b416efb8ecc67ca2466b089"
+        },
+        "TLoc.delete": {
+          "bytes": 188,
+          "sha256": "9bd4e7c94128891c8f0a74fcf38c96f597b98129a6aacaa28be8fdd41cf6024c"
+        }
+      },
+      "deterministic_membership_equal": true,
+      "selection": {
+        "bytes": 852847,
+        "sha256": "cead238d8388b0a876b4d20c01387d107d28049746d8e8bcb247462e88e91f8a"
+      },
+      "trace_input": {
+        "bytes": 2150649,
+        "sha256": "92e81f0dc128963618e96c311fae63bf9135cc9e228da61af4968abae1a9fb96"
+      }
+    },
+    "Words": {
+      "actual_membership_files": {
+        "Words.2026102101.qid": {
+          "bytes": 1495,
+          "sha256": "0500025697504f3b04b31591bae0f8b19288e6f86856ef9a1333ce03c1e4ccb4"
+        },
+        "Words.2026102102.qid": {
+          "bytes": 1491,
+          "sha256": "819f865fa7416ebe53f39b9d4f721d7f6d2f8b8f4b416efb8ecc67ca2466b089"
+        },
+        "Words.delete": {
+          "bytes": 188,
+          "sha256": "9bd4e7c94128891c8f0a74fcf38c96f597b98129a6aacaa28be8fdd41cf6024c"
+        }
+      },
+      "deterministic_membership_equal": true,
+      "selection": {
+        "bytes": 782825,
+        "sha256": "df0678d29bb0d0fa1d00498e08697062e378b51e54e36541f6fcd4a93ff82cab"
+      },
+      "trace_input": {
+        "bytes": 1188020,
+        "sha256": "ed2f774ce7ab3f35cdab5b6608bdf89ba7d38997c4319d50630abf72937992a8"
+      }
+    }
+  },
+  "complete": {
+    "bytes": 1516,
+    "sha256": "4b66683a3134f823d20347628b926a8bfa5f225366e9c5c64a6d634016934baf"
+  },
+  "contract": {
+    "bytes": 5902,
+    "sha256": "fd86290a4bbc0d87ab2487683c06b2967dea255335d2795eaae5c50b17cbb225"
+  },
+  "full_output_streams_checked": 90,
+  "input_manifest": {
+    "bytes": 1765,
+    "sha256": "a5526cf2237474c2e83f98bdbd52a38e24b8312c406c603ea6f5f2b7ab719b88"
+  },
+  "membership_limitation": "The original runner did not independently bind qid/delete before launch;post-run exact files,deterministic selections,and all outputs were audited without mutation or rerun.",
+  "passed": true,
+  "processes": 9,
+  "proofs": {
+    "DNA_GRCh38_chr1_108_static_2026102101": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 12,
+      "output_records_checked": 3144,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0
+      ]
+    },
+    "DNA_GRCh38_chr1_108_static_2026102102": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 12,
+      "output_records_checked": 3084,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0
+      ]
+    },
+    "DNA_GRCh38_chr1_108_updates_2026102101": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 6,
+      "output_records_checked": 1554,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0,
+        1,
+        2
+      ]
+    },
+    "TLoc_static_2026102101": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 12,
+      "output_records_checked": 5016,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0
+      ]
+    },
+    "TLoc_static_2026102102": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 12,
+      "output_records_checked": 4860,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0
+      ]
+    },
+    "TLoc_updates_2026102101": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 6,
+      "output_records_checked": 3372,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0,
+        1,
+        2
+      ]
+    },
+    "Words_static_2026102101": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 12,
+      "output_records_checked": 57180,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0
+      ]
+    },
+    "Words_static_2026102102": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 12,
+      "output_records_checked": 45424,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0
+      ]
+    },
+    "Words_updates_2026102101": {
+      "GPU_starts": 0,
+      "full_output_streams_checked": 6,
+      "output_records_checked": 6918,
+      "passed": true,
+      "scope": "Full byte equality to all-pair reference and record membership;reference metric kernel shared,independent DP checked in qualification",
+      "states": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "protected_GIST_heldout_accesses": 0,
+  "qualification": "SELF_TEST_PASS:581 independent DP score pairs;string and L2 complete-output fixtures;0GPU",
+  "seal": {
+    "bytes": 31894,
+    "sha256": "4ca932b97b430da1bcac604bc53f83e46630c9470e980096d2372990a47e6009"
+  },
+  "sealed_bytes": 3483188,
+  "sealed_file_count": 187,
+  "seconds_per_dataset": {
+    "DNA_GRCh38_chr1_108": 325.788347704045,
+    "TLoc": 1.1590876600239426,
+    "Words": 37.54310248198453
+  },
+  "source_freeze": {
+    "bytes": 719,
+    "sha256": "bfea52d0cd14512cb557dced58e71add2ca9a5cd2d5d9539be1c6e7a1c518314"
+  }
+}

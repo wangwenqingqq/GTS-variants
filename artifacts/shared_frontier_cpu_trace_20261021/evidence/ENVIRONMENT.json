@@ -1,0 +1,47 @@
+{
+  "CPU_model": "INTEL(R) XEON(R) PLATINUM 8575C",
+  "GPU_starts": 0,
+  "Python": "3.12.3",
+  "before_compile_and_population": true,
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "$SOURCE/trace.cpp",
+    "-o",
+    "$RUN/trace_cpu"
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "input_directory": "$INPUTS",
+  "input_manifest": {
+    "bytes": 1765,
+    "sha256": "a5526cf2237474c2e83f98bdbd52a38e24b8312c406c603ea6f5f2b7ab719b88"
+  },
+  "nice": 10,
+  "portable_redaction": "Only physical source,input,and output paths replaced;original in private sealed archive.",
+  "sources": {
+    "CONTRACT.json": {
+      "bytes": 5902,
+      "sha256": "fd86290a4bbc0d87ab2487683c06b2967dea255335d2795eaae5c50b17cbb225"
+    },
+    "prepare.py": {
+      "bytes": 4141,
+      "sha256": "3a95b7265d04b8ea2c97e35af3ddc777024dff295249a93a2e3b5d1583621e47"
+    },
+    "run.py": {
+      "bytes": 4700,
+      "sha256": "8b0e3a84ec8712e5ff026062e33b4076c454f54634e069ec21baffbd2aba3fc4"
+    },
+    "trace.cpp": {
+      "bytes": 21156,
+      "sha256": "c1166ed43fff0e659eb25c794f2eb5e360057908a1fe79cb74539472b2d54546"
+    },
+    "verify.py": {
+      "bytes": 3062,
+      "sha256": "f873a692afe73408aef8ead18356cf47b08528116002fc0518f4e2eebf0ed7c7"
+    }
+  },
+  "threads": 1
+}
