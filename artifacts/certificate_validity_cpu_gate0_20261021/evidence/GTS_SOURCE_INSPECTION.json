@@ -1,0 +1,21 @@
+{
+  "actual_source_commit_verified_this_round": false,
+  "files": {
+    "include/update.cuh": {
+      "facts": {
+        "16": "MAX_IN_SIZE=10",
+        "449-539": "Insertion buffer;on threshold compact live payload and call indexConstru.",
+        "546-578": "Deletion prefix scan and findIdx;mark base tombstone or compact insertion buffer.",
+        "584-620": "Query base tree plus insertion buffer,merge outputs."
+      },
+      "sha256": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62"
+    },
+    "src/main.cu": {
+      "sha256": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b"
+    }
+  },
+  "live_remote_files_match_private_snapshot": true,
+  "scope": "Read-only source inspection,not a native execution or performance measurement;upstream code not redistributed.",
+  "upstream_reference_commit": "3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639",
+  "upstream_url": "https://github.com/ZJU-DAILY/GTS"
+}
