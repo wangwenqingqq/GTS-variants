@@ -1,0 +1,16 @@
+{
+  "GPU_starts": 0,
+  "after": {
+    "bytes": 7775,
+    "sha256": "43ab02142af48ed811c5fafb42082add1726d7a5a521cf6557991748b79e69f6"
+  },
+  "before": {
+    "bytes": 7596,
+    "sha256": "640bb0913c198774a7b14b8343889806dbe120efaf51abe3873a5700fefffe7b"
+  },
+  "population_reruns": 0,
+  "raw_full_audit_repeated": true,
+  "reason": "Initial analyzer assumed output basename run despite runner accepting arbitrary new output directories. Derive original root from sealed command and enforce all four argv identities consistently.",
+  "scope": "Postanalysis argv portability only;no frozen execution source or population changed",
+  "summary_byte_equal": true
+}

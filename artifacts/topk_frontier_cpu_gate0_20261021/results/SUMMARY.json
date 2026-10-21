@@ -1,0 +1,759 @@
+{
+  "GPU_starts": 0,
+  "datasets": {
+    "DNA_GRCh38_chr1_108": {
+      "N": 4096,
+      "Q": 64,
+      "complete_method_streams": 30,
+      "episodes": {
+        "DRAIN_OLD_TOPK": {
+          "best_ordinary_lifecycle_metric_calls": 262144,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 65,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 65
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.21482473200000002,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.39154366,
+              "metric_calls": 469117
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 1.0109724420000001,
+              "metric_calls": 1284774
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.21478979500000003,
+              "metric_calls": 275542
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.22944013600000002,
+              "metric_calls": 275518
+            }
+          },
+          "pressure": {
+            "affected_queries": 64,
+            "deletes": 1092,
+            "removed_answers": 1360,
+            "reopened_live_pairs": 65,
+            "reopened_nodes": 2,
+            "reopened_unknown_pairs": 65,
+            "shared_reopened_node_ids": 0,
+            "tau_up_queries": 56,
+            "true_replacements": 1360,
+            "unique_reopened_candidate_ids": 65,
+            "unique_reopened_node_ids": 2
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 65,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 193664,
+            "QUICKJOIN_TOPK_SEEDED": 520498,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 65
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 1360,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.7895393371582031
+        },
+        "RANDOM256": {
+          "best_ordinary_lifecycle_metric_calls": 262144,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 35,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 35
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.214439707,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.336468549,
+              "metric_calls": 401395
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.900835855,
+              "metric_calls": 1147543
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.213486473,
+              "metric_calls": 275542
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.22807147800000002,
+              "metric_calls": 275488
+            }
+          },
+          "pressure": {
+            "affected_queries": 33,
+            "deletes": 256,
+            "removed_answers": 79,
+            "reopened_live_pairs": 35,
+            "reopened_nodes": 1,
+            "reopened_unknown_pairs": 35,
+            "shared_reopened_node_ids": 0,
+            "tau_up_queries": 9,
+            "true_replacements": 79,
+            "unique_reopened_candidate_ids": 35,
+            "unique_reopened_node_ids": 1
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 35,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 125942,
+            "QUICKJOIN_TOPK_SEEDED": 383267,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 35
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 79,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.5312004089355469
+        },
+        "RANDOM_MATCHED": {
+          "best_ordinary_lifecycle_metric_calls": 262144,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 70,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 70
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.214585205,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.345874193,
+              "metric_calls": 410649
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.9015037180000001,
+              "metric_calls": 1148983
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.21443474800000004,
+              "metric_calls": 275542
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.22879443300000002,
+              "metric_calls": 275523
+            }
+          },
+          "pressure": {
+            "affected_queries": 45,
+            "deletes": 1092,
+            "removed_answers": 352,
+            "reopened_live_pairs": 69,
+            "reopened_nodes": 2,
+            "reopened_unknown_pairs": 69,
+            "shared_reopened_node_ids": 0,
+            "tau_up_queries": 29,
+            "true_replacements": 352,
+            "unique_reopened_candidate_ids": 69,
+            "unique_reopened_node_ids": 2
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 70,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 135196,
+            "QUICKJOIN_TOPK_SEEDED": 384707,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 70
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 352,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.5665016174316406
+        },
+        "TARGET256": {
+          "best_ordinary_lifecycle_metric_calls": 262144,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 85,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 85
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.21466980000000002,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.426920788,
+              "metric_calls": 520363
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 1.140520483,
+              "metric_calls": 1450708
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.21419810000000003,
+              "metric_calls": 275542
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.228780214,
+              "metric_calls": 275538
+            }
+          },
+          "pressure": {
+            "affected_queries": 64,
+            "deletes": 256,
+            "removed_answers": 382,
+            "reopened_live_pairs": 85,
+            "reopened_nodes": 2,
+            "reopened_unknown_pairs": 85,
+            "shared_reopened_node_ids": 0,
+            "tau_up_queries": 41,
+            "true_replacements": 382,
+            "unique_reopened_candidate_ids": 85,
+            "unique_reopened_node_ids": 2
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 85,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 244910,
+            "QUICKJOIN_TOPK_SEEDED": 686432,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 85
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 382,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.9850273132324219
+        }
+      },
+      "fivefold_restricted_headroom_on_both_target_episodes": false,
+      "independent_output_score_pairs_DP_checked": 2875,
+      "index_metric_calls": 13398,
+      "index_payload_bytes": 154288,
+      "initial": {
+        "FIXED_TREE_THRESHOLD_ORACLE": {
+          "cache_payload_bytes": 2137132,
+          "metric_calls": 262055
+        },
+        "FULL_RANK_CACHE": {
+          "cache_payload_bytes": 8429440,
+          "metric_calls": 262144
+        },
+        "GTS_CACHED_ROOT_RESTART": {
+          "cache_payload_bytes": 1094336,
+          "metric_calls": 262055
+        },
+        "QUICKJOIN_TOPK_SEEDED": {
+          "cache_payload_bytes": 1094336,
+          "metric_calls": 764276
+        },
+        "RESERVE_K32": {
+          "cache_payload_bytes": 2373632,
+          "metric_calls": 262144
+        },
+        "RETAIN_FRONTIER": {
+          "cache_payload_bytes": 2283392,
+          "metric_calls": 262055
+        }
+      },
+      "k": [
+        1,
+        4,
+        16,
+        64
+      ],
+      "near_restricted_oracle_on_both_target_episodes": true,
+      "retained_initial_pair_coverage": 0.9996604919433594,
+      "reverse_posting_payload_bytes": 103892
+    },
+    "Words": {
+      "N": 4096,
+      "Q": 64,
+      "complete_method_streams": 30,
+      "episodes": {
+        "DRAIN_OLD_TOPK": {
+          "best_ordinary_lifecycle_metric_calls": 255198,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 3939,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 3939
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 1248,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 1248
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 1779,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 1779
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 859,
+              "RESERVE_K32": 10,
+              "RETAIN_FRONTIER": 859
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.044315526,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.054737155999999995,
+              "metric_calls": 431205
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.18231347399999998,
+              "metric_calls": 1283260
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.035796138,
+              "metric_calls": 263384
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.033764086,
+              "metric_calls": 255198
+            }
+          },
+          "pressure": {
+            "affected_queries": 64,
+            "deletes": 998,
+            "removed_answers": 1360,
+            "reopened_live_pairs": 8018,
+            "reopened_nodes": 405,
+            "reopened_unknown_pairs": 7957,
+            "shared_reopened_node_ids": 67,
+            "tau_up_queries": 33,
+            "true_replacements": 1360,
+            "unique_reopened_candidate_ids": 3097,
+            "unique_reopened_node_ids": 230
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 7825,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 183832,
+            "QUICKJOIN_TOPK_SEEDED": 517838,
+            "RESERVE_K32": 10,
+            "RETAIN_FRONTIER": 7825
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 1360,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.689688006959302
+        },
+        "RANDOM256": {
+          "best_ordinary_lifecycle_metric_calls": 247609,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 12,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 12
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 224,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 224
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.044291221000000006,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.044760314,
+              "metric_calls": 371224
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.16384001599999998,
+              "metric_calls": 1170793
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.034715242,
+              "metric_calls": 263374
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.031787214,
+              "metric_calls": 247609
+            }
+          },
+          "pressure": {
+            "affected_queries": 34,
+            "deletes": 256,
+            "removed_answers": 90,
+            "reopened_live_pairs": 287,
+            "reopened_nodes": 32,
+            "reopened_unknown_pairs": 283,
+            "shared_reopened_node_ids": 0,
+            "tau_up_queries": 2,
+            "true_replacements": 90,
+            "unique_reopened_candidate_ids": 280,
+            "unique_reopened_node_ids": 32
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 236,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 123851,
+            "QUICKJOIN_TOPK_SEEDED": 405371,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 236
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 90,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.4992346804841503
+        },
+        "RANDOM_MATCHED": {
+          "best_ordinary_lifecycle_metric_calls": 249574,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 899,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 899
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 345,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 345
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 316,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 316
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 641,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 641
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.04417573400000001,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.047473319,
+              "metric_calls": 381383
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.161440011,
+              "metric_calls": 1174799
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.035303601999999996,
+              "metric_calls": 263374
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.032671398000000004,
+              "metric_calls": 249574
+            }
+          },
+          "pressure": {
+            "affected_queries": 46,
+            "deletes": 998,
+            "removed_answers": 324,
+            "reopened_live_pairs": 2223,
+            "reopened_nodes": 123,
+            "reopened_unknown_pairs": 2206,
+            "shared_reopened_node_ids": 11,
+            "tau_up_queries": 9,
+            "true_replacements": 324,
+            "unique_reopened_candidate_ids": 1846,
+            "unique_reopened_node_ids": 111
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 2201,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 134010,
+            "QUICKJOIN_TOPK_SEEDED": 409377,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 2201
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 324,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.5281359436479762
+        },
+        "TARGET256": {
+          "best_ordinary_lifecycle_metric_calls": 254353,
+          "by_k": {
+            "1": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 4447,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 4447
+            },
+            "16": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 475,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 475
+            },
+            "4": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 2058,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 2058
+            },
+            "64": {
+              "FIXED_TREE_THRESHOLD_ORACLE": 0,
+              "RESERVE_K32": 0,
+              "RETAIN_FRONTIER": 0
+            }
+          },
+          "lifecycle": {
+            "FULL_RANK_CACHE": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.044298055,
+              "metric_calls": 262144
+            },
+            "GTS_CACHED_ROOT_RESTART": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.056595191,
+              "metric_calls": 472730
+            },
+            "QUICKJOIN_TOPK_SEEDED": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.20129840199999996,
+              "metric_calls": 1420343
+            },
+            "RESERVE_K32": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.035758572999999995,
+              "metric_calls": 263374
+            },
+            "RETAIN_FRONTIER": {
+              "complete_output_bytes": 54400,
+              "instrumented_seconds": 0.033079243,
+              "metric_calls": 254353
+            }
+          },
+          "pressure": {
+            "affected_queries": 64,
+            "deletes": 256,
+            "removed_answers": 390,
+            "reopened_live_pairs": 7253,
+            "reopened_nodes": 330,
+            "reopened_unknown_pairs": 7189,
+            "shared_reopened_node_ids": 63,
+            "tau_up_queries": 19,
+            "true_replacements": 390,
+            "unique_reopened_candidate_ids": 3445,
+            "unique_reopened_node_ids": 211
+          },
+          "repair_metric_calls": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 6980,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 225357,
+            "QUICKJOIN_TOPK_SEEDED": 654921,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 6980
+          },
+          "repair_missing_output_pair_floor": {
+            "FIXED_TREE_THRESHOLD_ORACLE": 0,
+            "FULL_RANK_CACHE": 0,
+            "GTS_CACHED_ROOT_RESTART": 390,
+            "RESERVE_K32": 0,
+            "RETAIN_FRONTIER": 0
+          },
+          "retained_vs_threshold_oracle_metric_factor": 1.0,
+          "root_vs_best_lifecycle_factor": 1.8585587746163796
+        }
+      },
+      "fivefold_restricted_headroom_on_both_target_episodes": false,
+      "independent_output_score_pairs_DP_checked": 2928,
+      "index_metric_calls": 13398,
+      "index_payload_bytes": 154288,
+      "initial": {
+        "FIXED_TREE_THRESHOLD_ORACLE": {
+          "cache_payload_bytes": 2032084,
+          "metric_calls": 233975
+        },
+        "FULL_RANK_CACHE": {
+          "cache_payload_bytes": 8429440,
+          "metric_calls": 262144
+        },
+        "GTS_CACHED_ROOT_RESTART": {
+          "cache_payload_bytes": 1094336,
+          "metric_calls": 233975
+        },
+        "QUICKJOIN_TOPK_SEEDED": {
+          "cache_payload_bytes": 1094336,
+          "metric_calls": 765422
+        },
+        "RESERVE_K32": {
+          "cache_payload_bytes": 2334208,
+          "metric_calls": 249976
+        },
+        "RETAIN_FRONTIER": {
+          "cache_payload_bytes": 2219392,
+          "metric_calls": 233975
+        }
+      },
+      "k": [
+        1,
+        4,
+        16,
+        64
+      ],
+      "near_restricted_oracle_on_both_target_episodes": true,
+      "retained_initial_pair_coverage": 0.8925437927246094,
+      "reverse_posting_payload_bytes": 103984
+    }
+  },
+  "decision": "LOCAL_REPAIR_NEAR_RESTRICTED_ORACLE",
+  "full_native_performance_admission": "NOT_EVALUATED",
+  "mechanism_observation": "THRESHOLD_EXPANSION_OBSERVED",
+  "next_boundary": "STOP_FIXED_TREE_REPAIR_FAMILY",
+  "novelty": "NOT_ADMITTED",
+  "scope": "Fixed ten-way tree,retained evaluated-score cache,N4096,Q64,one atomic deletion per independent episode. Oracle has only future tau,not arbitrary new certificates or joint-query execution."
+}
