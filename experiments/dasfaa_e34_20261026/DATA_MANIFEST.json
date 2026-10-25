@@ -1,0 +1,210 @@
+{
+  "seed": 20261026,
+  "inputs": {
+    "T-loc/tloc_10m.txt": {
+      "bytes": 249088574,
+      "sha256": "bf0f3eda7dfd66cc4b414adacd00e5495217d86e29c20bf9c57f1f4ded3adc31"
+    },
+    "T-loc/tloc_1m.npy": {
+      "bytes": 8000128,
+      "sha256": "67079c093d3bdbbf2dd8c8c214ef9ee58e3856797a45db1dcb9368904735fd33"
+    },
+    "deep100m/base.100M.fbin": {
+      "bytes": 38400000008,
+      "sha256": "162cef480f030deead496c745b4214abc3fcbd9849c2561ab1251e84b6904ba4"
+    },
+    "deep100m/query.public.10K.fbin": {
+      "bytes": 3840008,
+      "sha256": "8438fc763f14e0f9741fda15b3e11215aef089ce17d1ad47d53b52a7c9fda5bb"
+    },
+    "word/word.txt": {
+      "bytes": 6921423,
+      "sha256": "72091b6cdd29532d44790ad049afa58eb8582957061fcf5c98b28b9b30c81c1c"
+    }
+  },
+  "cases": [
+    {
+      "family": "tloc",
+      "N": 1000000,
+      "D": 2,
+      "base": "data/tloc10m.fbin",
+      "query": "data/tloc_query.fbin",
+      "source": "real T-loc 10M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/tloc_1000000.oracle",
+      "prefix_sha256": "6c39556fbc1504cd78ce1dd1bed893743801f8afdf4b63b9b871bba5853a8421"
+    },
+    {
+      "family": "tloc",
+      "N": 3000000,
+      "D": 2,
+      "base": "data/tloc10m.fbin",
+      "query": "data/tloc_query.fbin",
+      "source": "real T-loc 10M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/tloc_3000000.oracle",
+      "prefix_sha256": "1573588bd6f5fa3db24f64d46a0a79277700687b0bac9eceb728904409a5a408"
+    },
+    {
+      "family": "tloc",
+      "N": 10000000,
+      "D": 2,
+      "base": "data/tloc10m.fbin",
+      "query": "data/tloc_query.fbin",
+      "source": "real T-loc 10M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/tloc_10000000.oracle",
+      "prefix_sha256": "4defd598e1d8dc650f422ba08c490bebab4bdbe92dfabc92244be95a59b8d6d9"
+    },
+    {
+      "family": "tloc",
+      "N": 30000000,
+      "D": 2,
+      "base": "data/tloc_synthetic100m.fbin",
+      "query": "data/synthetic_query.fbin",
+      "source": "synthetic fitted Gaussian mixture",
+      "synthetic": true,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/tloc_30000000.oracle",
+      "prefix_sha256": "96176561dd68400775862aefae61a6981ecbbb3b607cc365422cf867fc948ea3"
+    },
+    {
+      "family": "tloc",
+      "N": 100000000,
+      "D": 2,
+      "base": "data/tloc_synthetic100m.fbin",
+      "query": "data/synthetic_query.fbin",
+      "source": "synthetic fitted Gaussian mixture",
+      "synthetic": true,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/tloc_100000000.oracle",
+      "prefix_sha256": "ca822575e2df6c3329d12eb889d36e7636eefcbe955d2f96ba2452f778ccf132"
+    },
+    {
+      "family": "deep",
+      "N": 1000000,
+      "D": 96,
+      "base": "data/deep100m.fbin",
+      "query": "data/deep_query.fbin",
+      "source": "Deep-1B official 100M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/deep_1000000.oracle",
+      "prefix_sha256": "8dca9378a247cbcd1f781fffa10b5b8b542fd4a7a470f9063fbdb9f4f2a9ede2"
+    },
+    {
+      "family": "deep",
+      "N": 3000000,
+      "D": 96,
+      "base": "data/deep100m.fbin",
+      "query": "data/deep_query.fbin",
+      "source": "Deep-1B official 100M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/deep_3000000.oracle",
+      "prefix_sha256": "fd10f30055097f328100915734414a764f84f5de04c1bda2e3300a35cda797e1"
+    },
+    {
+      "family": "deep",
+      "N": 10000000,
+      "D": 96,
+      "base": "data/deep100m.fbin",
+      "query": "data/deep_query.fbin",
+      "source": "Deep-1B official 100M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/deep_10000000.oracle",
+      "prefix_sha256": "5e8cfc5380afd6fc5d50437e05ac404c669b5ba650937ed0beee20430432e792"
+    },
+    {
+      "family": "deep",
+      "N": 20000000,
+      "D": 96,
+      "base": "data/deep100m.fbin",
+      "query": "data/deep_query.fbin",
+      "source": "Deep-1B official 100M prefix",
+      "synthetic": false,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "oracle": "data/deep_20000000.oracle",
+      "prefix_sha256": "98b8979c174ae97540bd336ec9ebc47792b956992c0c991c76c6dfd7c020648d"
+    }
+  ],
+  "files": {
+    "data/deep_query.fbin": {
+      "sha256": "5d91604ceb7a6cc5db70a273d26b8e71c2b624646d11f7af03121d0788ad64b4",
+      "bytes": 384008
+    },
+    "data/mixture.json": {
+      "sha256": "06557c79fa4251b990c03b6011bfb9f2587de2281f12db7d30f3aeaa6013bbca",
+      "bytes": 16102
+    },
+    "data/tloc10m.fbin": {
+      "sha256": "d06c38b11433301ac46ef6b63d0b2e355c22bc32889acb8cac3cd1a7fb642ef0",
+      "bytes": 80000008
+    },
+    "data/synthetic_query.fbin": {
+      "sha256": "9aa2e46d1e66663bde4eed0c2cd0caa6929cd74e2fa35829419d643f36ec1a3f",
+      "bytes": 8008
+    },
+    "data/tloc_query.fbin": {
+      "sha256": "5c86e054d45570bc16ba9db074aa63b70483aa012edb9b66fb920dced684807c",
+      "bytes": 8008
+    },
+    "data/tloc_synthetic100m.fbin": {
+      "sha256": "778e64451a1f8337341686bd1e7788b7f77e0fc0b1caf5ec5198d7640163dbef",
+      "bytes": 800000008
+    },
+    "data/deep100m.fbin": {
+      "bytes": 38400000008,
+      "sha256": "162cef480f030deead496c745b4214abc3fcbd9849c2561ab1251e84b6904ba4"
+    }
+  }
+}
