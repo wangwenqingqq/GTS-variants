@@ -1,0 +1,1667 @@
+{
+  "schema": 1,
+  "seed": 20261026,
+  "query_policy": "native-unmodified",
+  "datasets": {
+    "sift": {
+      "n": 1000000,
+      "dim": 128,
+      "metric": 2,
+      "arrival_rows": 100000,
+      "initial_base_rows": 900000,
+      "corpus": {
+        "file": "fbin/sift1m_base.fbin",
+        "sha256": "8c7b3d999ba3133f865af72df078f77c2d248fdb80571d7ea1f1bb8e1750658e"
+      },
+      "query": {
+        "file": "fbin/sift1m_query.fbin",
+        "sha256": "9b0082b67d0ac55b4c7d42216560344567ad87ce3e75a9d5214a0762f1c15d65",
+        "count": 10000,
+        "id_based": false
+      },
+      "split_permutation_sha256": "57df3f67ccd83bb70820d7c5bbd1009f8042aa9ab5ad4b9c11db06532b351726",
+      "query_feature_overlap_rows": 0,
+      "overlap_in_arrival": 0,
+      "overlap_in_base": 0,
+      "input_status": "input-pass",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        }
+      ]
+    },
+    "gist": {
+      "n": 1000000,
+      "dim": 960,
+      "metric": 2,
+      "arrival_rows": 100000,
+      "initial_base_rows": 900000,
+      "corpus": {
+        "file": "fbin/gist1m_base.fbin",
+        "sha256": "fd57967ae1461c453336b9be9621c74a2b5927e74cafa9f5e899a5dc5df6a5b8"
+      },
+      "query": {
+        "file": "fbin/gist1m_query.fbin",
+        "sha256": "220465f0ab851de6890d87ab1dd5081f526da8d214aa7a3849e738e63cad6775",
+        "count": 1000,
+        "id_based": false
+      },
+      "split_permutation_sha256": "57df3f67ccd83bb70820d7c5bbd1009f8042aa9ab5ad4b9c11db06532b351726",
+      "query_feature_overlap_rows": 17,
+      "overlap_in_arrival": 3,
+      "overlap_in_base": 14,
+      "input_status": "input-contract-blocked",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        }
+      ]
+    },
+    "deep": {
+      "n": 1000000,
+      "dim": 96,
+      "metric": 2,
+      "arrival_rows": 100000,
+      "initial_base_rows": 900000,
+      "corpus": {
+        "file": "fbin/deep1m_base.fbin",
+        "sha256": "6e8c2d1587e288459e9cb26052e1c9095b6962977e46ef6137d9e91789df7446"
+      },
+      "query": {
+        "file": "fbin/deep1m_query.fbin",
+        "sha256": "8438fc763f14e0f9741fda15b3e11215aef089ce17d1ad47d53b52a7c9fda5bb",
+        "count": 10000,
+        "id_based": false
+      },
+      "split_permutation_sha256": "57df3f67ccd83bb70820d7c5bbd1009f8042aa9ab5ad4b9c11db06532b351726",
+      "query_feature_overlap_rows": 42,
+      "overlap_in_arrival": 4,
+      "overlap_in_base": 38,
+      "input_status": "input-contract-blocked",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        }
+      ]
+    },
+    "tloc": {
+      "n": 1000000,
+      "dim": 2,
+      "metric": 2,
+      "arrival_rows": 100000,
+      "initial_base_rows": 900000,
+      "corpus": {
+        "file": "T-loc/tloc.txt",
+        "sha256": "a9c71ead1bdab0f254abfcdc8b947db56e3af50c571b3b5ad9fbe607fddb8677"
+      },
+      "query": {
+        "file": "T-loc/tloc_qid.txt",
+        "sha256": "b9b21713a275abbfc6dea59b0fa8cdc2094eb4f315bc7dcde9269510bf069f07",
+        "count": 1000,
+        "id_based": true
+      },
+      "split_permutation_sha256": "57df3f67ccd83bb70820d7c5bbd1009f8042aa9ab5ad4b9c11db06532b351726",
+      "query_feature_overlap_rows": 1000,
+      "overlap_in_arrival": 108,
+      "overlap_in_base": 892,
+      "input_status": "input-contract-blocked",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 10,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 10,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        }
+      ]
+    },
+    "word": {
+      "n": 611756,
+      "dim": 34,
+      "metric": 6,
+      "arrival_rows": 61175,
+      "initial_base_rows": 550581,
+      "corpus": {
+        "file": "word/word.txt",
+        "sha256": "72091b6cdd29532d44790ad049afa58eb8582957061fcf5c98b28b9b30c81c1c"
+      },
+      "query": {
+        "file": "word/word_qid.txt",
+        "sha256": "b9b21713a275abbfc6dea59b0fa8cdc2094eb4f315bc7dcde9269510bf069f07",
+        "count": 1000,
+        "id_based": true
+      },
+      "split_permutation_sha256": "99dea370c0807b8877d17207339f60d59c4778efa622919fee6cb963d494574c",
+      "query_feature_overlap_rows": 1000,
+      "overlap_in_arrival": 100,
+      "overlap_in_base": 900,
+      "input_status": "input-contract-blocked",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        }
+      ]
+    },
+    "protein": {
+      "n": 52799,
+      "dim": 100,
+      "metric": 6,
+      "arrival_rows": 5279,
+      "initial_base_rows": 47520,
+      "corpus": {
+        "file": "dna_barcode/protein.txt",
+        "sha256": "c082541fa5b0725193cd34a6c6457f6aa823524d99c302e38034f6d8639eae40"
+      },
+      "query": {
+        "file": "dna_barcode/protein_qid.txt",
+        "sha256": "faca7fe914557516a20a21039d0f11091327c10394a85b795537a8e31536813c",
+        "count": 1000,
+        "id_based": true
+      },
+      "split_permutation_sha256": "f0a61607dd72d8ae3af7c985f33df256ac5d4156e096146528df0b0349539f49",
+      "query_feature_overlap_rows": 3547,
+      "overlap_in_arrival": 365,
+      "overlap_in_base": 3182,
+      "input_status": "input-contract-blocked",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted",
+            "final_active_cardinality_below_k"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted",
+            "final_active_cardinality_below_k"
+          ],
+          "status": "contract-infeasible"
+        }
+      ]
+    },
+    "chembl": {
+      "n": 50000,
+      "dim": 2048,
+      "metric": 8,
+      "arrival_rows": 5000,
+      "initial_base_rows": 45000,
+      "corpus": {
+        "file": "chembl/chembl_50k.txt",
+        "sha256": "125f5d8887a8786646b34e278ff71137420bf40b2ba7649031bf1295143eb45c"
+      },
+      "query": {
+        "file": "chembl/chembl_50k_qid.txt",
+        "sha256": "c80ec5e8ce8b241a8163b6a1c1eaab66ec8ad7ee07f7b843008ec75f2f5971dc",
+        "count": 1000,
+        "id_based": true
+      },
+      "split_permutation_sha256": "b1154af2e3ed7f5965dd8193b8313fcd46faa3debf94a955a5bead1bed024334",
+      "query_feature_overlap_rows": 1110,
+      "overlap_in_arrival": 109,
+      "overlap_in_base": 1001,
+      "input_status": "input-contract-blocked",
+      "loads": [
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 4000,
+          "deletes": 4000,
+          "queries": 2000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 8000,
+          "deletes": 1000,
+          "queries": 1000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 10000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 1000,
+          "deletes": 8000,
+          "queries": 1000,
+          "reasons": [],
+          "status": "capacity-feasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "random",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "4:4:2",
+          "order": "skew",
+          "k": 8,
+          "inserts": 40000,
+          "deletes": 40000,
+          "queries": 20000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "8:1:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 80000,
+          "deletes": 10000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "random",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted",
+            "final_active_cardinality_below_k"
+          ],
+          "status": "contract-infeasible"
+        },
+        {
+          "length": 100000,
+          "ratio": "1:8:1",
+          "order": "skew",
+          "k": 8,
+          "inserts": 10000,
+          "deletes": 80000,
+          "queries": 10000,
+          "reasons": [
+            "fresh_arrival_exhausted",
+            "final_active_cardinality_below_k"
+          ],
+          "status": "contract-infeasible"
+        }
+      ]
+    }
+  }
+}
