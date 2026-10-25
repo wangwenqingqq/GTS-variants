@@ -1,0 +1,111 @@
+{
+  "word_layout_limits": {
+    "max_original_loader_word_length": 32,
+    "max_frozen_query_word_length": 29,
+    "original_stride": 109,
+    "scan_row_capacity": 41
+  },
+  "original_source_pins_verified_at_end": true,
+  "kokkos_commit": "82799e4577568f9666bde36265ac15d78da3e6c8",
+  "kokkos_release": "4.7.04",
+  "arborx_commit": "3a20eaba22bd8b6c13d6b32064a2086a3ce1c993",
+  "cuda": "13.1.115",
+  "driver": "590.48.01",
+  "arch": "sm_120",
+  "fast_math": false,
+  "gts_nvcc_flags": "-std=c++17 -O2 -arch=sm_120 -rdc=true -lineinfo -Xcompiler=-fno-omit-frame-pointer -Xnvlink=--ignore-host-info -Xptxas=-v",
+  "kokkos_backends": [
+    "CUDA",
+    "SERIAL"
+  ],
+  "native_CXX_standard": 20,
+  "native_target_optimization": "-O2 (last option after Release -O3 -DNDEBUG flags; explicit full-output if/exit checks remain active)",
+  "kokkos_config_sha256": "e20dd3eb541a2e8691e09bb93d4c49fdda2c59dbc6ff163495ac504f93eb41cc",
+  "source_artifacts": {
+    "campaign_quality_support_v4.py": {
+      "sha256": "96019b4e458e2676170a040130fe5c714145f7aaa42caa394c5b1b183be7496b",
+      "bytes": 12249
+    },
+    "quality_campaign_v4.py": {
+      "sha256": "01f94d828b49a0e15bc3747b395f0d215a577d9526e6069daecaf3d13e3d44f7",
+      "bytes": 7247
+    },
+    "bench_io.hpp": {
+      "sha256": "e043d57ca39e05238dd2d6addd8eecdeab72ae17a625cf21b6cdd223a111fa7f",
+      "bytes": 3395
+    },
+    "arborx_bench.cpp": {
+      "sha256": "713ce8c002c891b993fc26feeb4371887964c6a534475a1e68a8ad7628cf51ca",
+      "bytes": 3876
+    },
+    "arborx_count_fast.cpp": {
+      "sha256": "d37da1123039c7ee83c7cc2afe001e3bb116b709440876b6f578df65722a9c60",
+      "bytes": 4015
+    },
+    "build_v3/bench.cu": {
+      "sha256": "cc9e560bc0a656a9ea8381e1d3ea5786371782a9ffe4d386c026bfda4033dcbf",
+      "bytes": 17277
+    },
+    "build_v3/bench_count.cu": {
+      "sha256": "8870a8be5fed85654582e0f73f3477883225ed2ae0a102953f6981bb582ab29c",
+      "bytes": 17278
+    },
+    "build_v3/source_pins.json": {
+      "sha256": "5e2687c59695a4b56562176d9d8bbcb6f59ff6a7af632a65263d21e0e9c79f57",
+      "bytes": 769
+    },
+    "build_v3/source/include/file.cuh": {
+      "sha256": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+      "bytes": 3711
+    },
+    "build_v3/source/include/search.cuh": {
+      "sha256": "431362c1b20edf32141d55d942dfc0254187998a7900c4aafc36629228e7f2a1",
+      "bytes": 35846
+    },
+    "build_v3/source/include/config.cuh": {
+      "sha256": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+      "bytes": 149
+    },
+    "build_v3/source/include/search_naive.cuh": {
+      "sha256": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+      "bytes": 6411
+    },
+    "build_v3/source/include/search_v2.cuh": {
+      "sha256": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+      "bytes": 43094
+    },
+    "build_v3/source/include/update.cuh": {
+      "sha256": "5c75e26848624a124ffe4a588cefd12f234e212174ab32bb2222e6bf0ac5cb09",
+      "bytes": 21891
+    },
+    "build_v3/source/include/tree.cuh": {
+      "sha256": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+      "bytes": 11435
+    },
+    "build_v3/source/src/main.cu": {
+      "sha256": "2d8392f3af4a11034e61ac47478ba4e55df08126120b48713012c95f5040324b",
+      "bytes": 5223
+    }
+  },
+  "native_static_libraries": {
+    "deps/install/lib/libkokkoscontainers.a": {
+      "sha256": "da65d0d207c3e532a4f68b9a0017c02955e3829e5d97df4737dac6f1d52e72bc",
+      "bytes": 57622
+    },
+    "deps/install/lib/libkokkossimd.a": {
+      "sha256": "3bb43cff26cb462e57f753dbba9eff2c277f7874fd90e454e130ad8d13fe0b41",
+      "bytes": 4812
+    },
+    "deps/install/lib/libkokkoscore.a": {
+      "sha256": "39a433c5f76f1cdf27976a909a59ab2c91c8e481820b0b7b5502830133118512",
+      "bytes": 2169964
+    },
+    "deps/install/lib/libkokkosalgorithms.a": {
+      "sha256": "b7d0945c811f42411318ac3e2944a251beb065ae740b75475b032d5e0b4e30bc",
+      "bytes": 5654
+    }
+  },
+  "user_local_install": true,
+  "GPU_settings_changed": false,
+  "normal_timing_binaries_unchanged_during_epoch": true
+}

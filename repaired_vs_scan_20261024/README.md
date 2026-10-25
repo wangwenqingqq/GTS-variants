@@ -1,109 +1,159 @@
-# Repaired GTS versus strong scan: incomplete admission checkpoint
+# Repaired GTS versus strong baselines
 
-**No new GPU comparison ran. GTS++ positioning remains undecided.** Physical
-GPU 0 acquired a foreign VLLM process after the first idle observation. GPU work
-was stopped before the first benchmark launch. A later read-only diagnostic was
-idle; it was retained, not used to restart or replace the stopped attempt.
+**Measured: R improves serial original A, but loses to native-batch exact scan
+on all17 quality-valid workloads. One of18 workloads fails frozen exact IDs.**
+Native Kokkos/ArborX was built and measured; low-dimensional results are mixed.
+This is not an all-gates pass or a universal conclusion about metric trees.
 
-- [Report and all 18 required workloads](REPORT.md)
-- [Frozen contract](CONTRACT.md) and [pre-GPU batching amendment](AMENDMENTS.md)
-- [Machine-readable results](RESULTS.json): all GPU values are null, not zero
-- [GPU admission evidence](evidence/GPU_ADMISSION.json)
-- [Frozen calibration/query IDs](evidence/calibration.json)
-- [Independent CPU oracle manifest](evidence/CPU_ORACLE.json)
-- [Actual native ArborX configuration failure](evidence/ARBORX.json)
-- [Validation scope](evidence/VALIDATION.json)
+- [Main18-row table, intervals, work counts and decision](REPORT.md)
+- [Frozen contract](CONTRACT.md), [append-only amendments](AMENDMENTS.md)
+- [Results and all process summaries](RESULTS.json), [raw samples](evidence/measured_20261025/raw_samples.csv)
+- [Measured evidence](evidence/measured_20261025), [implementation card](DESIGN.md)
+- [Experiment / claim ledger](EXPERIMENTS.md)
 
-## What exists, and what does not
+The original a9bc1c7 admission/no-Kokkos checkpoint records remain in `evidence/`.
+They are historical. Current data are under `evidence/measured_20261025/`; no
+old latency samples are reused. All task changes stay in this new directory.
 
-This directory contains CPU calibration/oracle generation, complete oracle
-structure auditing, small runnable CPU regression checks, and a fail-closed
-read-only GPU admission checker. Both complete input fixtures and eight original
-GTS source files were verified against preserved SHA-256 pins.
+## CPU-only verification of published measurements
 
-It does **not** contain a newly assembled/compiled R CUDA binary, a strong native
-batch scan benchmark, a full campaign runner, GPU output validation, sanitizer
-results, instrumentation counts, or paired latency samples. Existing repair
-source is referenced below rather than copied and represented as a newly
-validated combination. This is not a completed experiment or a runnable GPU
-continuation.
-
-## CPU reproduction
-
-Run from this directory. The full data and large oracle files are external to
-Git; provide the exact Words text and preserved full float32 Tloc binary fixtures
-identified in the contract. Use a fresh scratch directory; never overwrite an
-old run. The oracle is independent full-table integer DP / float64 L2, built
-with assertions enabled, four CPU workers, no CUDA dependency or GPU execution.
+From this directory, with Python3 and a C++17 host compiler:
 
 ```sh
 python3 test_cpu.py
-mkdir "$SCRATCH" "$SCRATCH/bin" "$SCRATCH/logs" "$SCRATCH/fixtures"
-cp "$WORDS" "$SCRATCH/fixtures/words.txt"
-cp "$TLOC_F32BIN" "$SCRATCH/fixtures/tloc.f32bin"
-cp oracle.cpp fixtures.py admission.py test_cpu.py summarize_cpu.py CONTRACT.md "$SCRATCH/"
-(cd "$SCRATCH" && c++ -std=c++17 -O3 -pthread oracle.cpp -o bin/oracle)
-python3 fixtures.py ids "$SCRATCH/fixtures"
-"$SCRATCH/bin/oracle" cal words "$SCRATCH/fixtures/words.txt" \
-  "$SCRATCH/fixtures/words.cal.qid" "$SCRATCH/fixtures/words.cal.json"
-"$SCRATCH/bin/oracle" cal tloc "$SCRATCH/fixtures/tloc.f32bin" \
-  "$SCRATCH/fixtures/tloc.cal.qid" "$SCRATCH/fixtures/tloc.cal.json"
-python3 fixtures.py freeze "$SCRATCH/fixtures"
-# Read radii only from the frozen calibration.json, not test observations.
-python3 - "$SCRATCH" <<'PY'
-import json, subprocess, sys
-from pathlib import Path
-p = Path(sys.argv[1]).resolve()
-for name, v in json.loads((p/'fixtures/calibration.json').read_text())['datasets'].items():
-    data = 'words.txt' if name == 'words' else 'tloc.f32bin'
-    subprocess.run([str(p/'bin/oracle'), 'test', name, str(p/'fixtures'/data),
-                    str(p/f'fixtures/{name}.test.qid'), str(p/f'fixtures/{name}.oracle'),
-                    *map(str, v['radii'])], check=True)
-PY
-python3 summarize_cpu.py "$SCRATCH" "$SCRATCH/CPU_ORACLE.json"
+python3 test_campaign_v4.py
+python3 test_analysis.py       # explicitly synthetic estimator regression only
+python3 verify_evidence.py     # independent check of real published observations
 ```
 
-Verify the two input SHA-256 values in CONTRACT.md **before** reproduction;
-these tools do not download datasets. The recorded run used GNU 13.3.0 on
-x86_64 Linux. Oracle binary hashes are compiler/platform dependent; input,
-query, radius, output and source hashes are recorded separately. Large oracles
-remain in the retained task scratch: Words 466,696,576 bytes, Tloc 32,795,308 bytes.
-The source/header copies, binaries and raw machine/path-bearing diagnostics are
-private local artifacts, not Git payloads. The public evidence is curated and
-hash-bound; ask for the retained artifacts if independent raw-log inspection is
-needed.
+The last command checks one GPU, 360 timed fresh processes, 1080 retained bundles,
+six matched pairs, balanced relative orders, log-t confidence intervals, source
+output hashes, 42 bounded sanitizer runs, 63 count runs and frozen input hashes.
+The full retained binary outputs are external; their hashes are published.
+`audit_full_outputs.py` rechecks every query, including beyond the first failing
+query, against those external CPU/native files without GPU execution. Its result
+is retained as `evidence/measured_20261025/FULL_OUTPUT_CPU_AUDIT.json`.
 
-`admission.py` takes a scratch root with `logs/`, inspects only physical GPU 0,
-uses the existing GPU-0 advisory lock plus a task lock, and never executes a
-benchmark. Exit 75 means occupied/unreadable telemetry. An existing receipt
-prevents overwriting that admission. A successful snapshot is not continuing
-lock ownership or authorization to resume a stopped campaign.
+## Reproduce with the frozen inputs (do not recalibrate)
 
-## Remaining implementation route
+Use fresh scratch on the authorized Linux GPU host. No script downloads private
+input data. Provide the exact Words/Tloc fixtures in CONTRACT.md and frozen
+oracle files, or regenerate only the oracles using the frozen query IDs/radii.
+The recorded compiler was GNU13.3, CUDA13.1.115 / sm120. Original GTS is from
+[ZJU-DAILY/GTS at3bac1b7](https://github.com/ZJU-DAILY/GTS/tree/3bac1b725e92e98e3b69d5cb79ad9c56ccb5e639/Source%20Code/GTS),
+not this backup repository's modified top-level source. Provide its `include/`
+and `src/` as `$ORIGINAL_GTS`; `prepare_cuda.py` verifies all eight SHA256 pins.
 
-Use the pinned original source, not the modified top-level backup implementation.
-Keep all new generated CUDA code in this directory / fresh task scratch.
+Set `$SCRATCH` to a new task-owned directory and `$WORDS` / `$TLOC_F32BIN` /
+`$WORDS_ORACLE` / `$TLOC_ORACLE` to retained fixture paths:
 
-1. Compose fixed workspace/Graph from `diagnostics/graph_query_20260923` and
-   `graph_scale_20260923`, stable selection from `fused_result_20260923` and
-   `fusion_scale_20260924`, and multi-CTA/dead-count removal from
-   `traversal_grid_l2_20260924` / `traversal_count_combo_20260924`.
-2. Generalize multi-CTA traversal to Words without changing original predicates,
-   distance arithmetic or output order. Do not silently substitute a different
-   full-table/rolling distance implementation in A/R.
-3. Reuse the exact rolling-row Words scanner and existing
-   `diagnostics/flat_scan_l2_20260924`; implement strong native scan batching
-   under AMENDMENTS.md, without requiring a metric tree for scan setup.
-4. Implement the common complete-output host-ready timer and CPU-oracle checks,
-   native A/R ordered comparison, boundary sanitizers, Graph stress, and a
-   separate instrumented build. Only then collect six fresh paired rounds.
-5. Native ArborX needs a usable CUDA-enabled Kokkos CMake package. This attempt
-   stopped at native CMake configuration, before any benchmark adapter/build.
-   No dependency was installed and no handwritten substitute was used.
-6. A separately authorized full attempt must start with new idle/lock admission
-   and retain the stopped attempt; never splice old or contaminated observations.
+```sh
+mkdir "$SCRATCH"
+mkdir "$SCRATCH/fixtures" "$SCRATCH/bin" "$SCRATCH/logs" "$SCRATCH/runs"
+cp "$WORDS" "$SCRATCH/fixtures/words.txt"
+cp "$TLOC_F32BIN" "$SCRATCH/fixtures/tloc.f32bin"
+cp evidence/calibration.json evidence/*.cal.json evidence/*.cal.qid \
+   evidence/*.test.qid "$SCRATCH/fixtures/"
+cp "$WORDS_ORACLE" "$SCRATCH/fixtures/words.oracle"
+cp "$TLOC_ORACLE" "$SCRATCH/fixtures/tloc.oracle"
+cp evidence/CPU_ORACLE.json "$SCRATCH/FROZEN_CPU_ORACLE.json"
+c++ -std=c++17 -O3 -pthread oracle.cpp -o "$SCRATCH/bin/oracle"
+```
 
-The original GTS Update API has a `qnum` argument. The preserved repair driver is
-batch-one (serial bundling is not native batching); full-output Q1024 native
-support was not established here. Optional Deep and any paper drafting remain
-out of scope until the required comparison can be completed.
+If complete oracles are unavailable, omit their two `cp` commands and generate
+from the **frozen** calibration file, not `fixtures.py freeze` or test results:
+
+```sh
+python3 - "$SCRATCH" <<'PY'
+import json,subprocess,sys
+from pathlib import Path
+p=Path(sys.argv[1]).resolve()
+for name,v in json.loads((p/'fixtures/calibration.json').read_text())['datasets'].items():
+    data='words.txt' if name=='words' else 'tloc.f32bin'
+    subprocess.run([str(p/'bin/oracle'),'test',name,str(p/'fixtures'/data),
+                    str(p/f'fixtures/{name}.test.qid'),str(p/f'fixtures/{name}.oracle'),
+                    *map(str,v['radii'])],check=True)
+PY
+```
+
+Verify **every** frozen input before building/running (also enforced by the
+campaign); no regenerated radius or changed oracle is accepted:
+
+```sh
+python3 - "$SCRATCH" <<'PY'
+import hashlib,json,sys
+from pathlib import Path
+p=Path(sys.argv[1])
+m=json.loads((p/'FROZEN_CPU_ORACLE.json').read_text())
+for name,v in m['files'].items():
+    if not name.startswith('fixtures/'):continue
+    h=hashlib.sha256()
+    with (p/name).open('rb') as f:
+        for b in iter(lambda:f.read(8<<20),b''):h.update(b)
+    assert h.hexdigest()==v['sha256'],name
+assert hashlib.sha256((p/'fixtures/calibration.json').read_bytes()).hexdigest()==m['calibration_sha256']
+print('PASS frozen fixtures')
+PY
+```
+
+## Builds, admission, gates and six rounds
+
+Compile-only commands do not execute GPU queries. `build_native.sh` clones exact
+Kokkos/ArborX commits and installs only in `$SCRATCH/deps/install`, never system
+locations. It requires internet to fetch those primary-source dependencies, an
+available GNU compiler/CMake/CUDA toolkit, and user write permission.
+
+```sh
+bash build_cuda.sh "$SCRATCH" "$ORIGINAL_GTS"
+bash build_native.sh "$SCRATCH"
+python3 make_bounded.py "$SCRATCH"
+cp campaign_quality_support_v4.py quality_campaign_v4.py "$SCRATCH/"
+```
+
+`quality_campaign_v4.py` is the **measured entry point**. The support module is
+hash-pinned as measured, including its older unused diagnostic entry point;
+do not use that entry point to substitute for the quality-aware campaign.
+The active controller needs Linux `pidfd_open` / `pidfd_send_signal` and
+`compute-sanitizer`. It uses the existing per-device lock namespace
+`/tmp/gtspp_gpu{index}.lock` plus `$SCRATCH/campaign.lock`. Those shared advisory
+lock files must already be provisioned with appropriate user access; do not
+silently create a different lock namespace and race another campaign.
+
+Eligible physical cards are0/1/4/5/6/7 (initial preference5). All arms use one
+admitted UUID for a complete epoch. No compute applications, utilization0% and
+memory<=256MiB are required before launch; polling continues through execution.
+Foreign activity invalidates/retains the entire epoch and restarts all six
+rounds after a fresh admission, not a replacement observation. No foreign
+process is signaled and no GPU settings are changed. Process identity and
+pidfd-bound signaling prevent an ordinary stale/reused PID from being killed.
+
+```sh
+python3 "$SCRATCH/quality_campaign_v4.py" "$SCRATCH" \
+  > "$SCRATCH/logs/quality_campaign.log" 2>&1
+EPOCH=$(cat "$SCRATCH/logs/active_epoch.txt")
+python3 analyze_campaign.py "$EPOCH" "$SCRATCH/analyzed"
+python3 audit_full_outputs.py "$SCRATCH" "$EPOCH" "$SCRATCH/full_output_audit.json"
+```
+
+The full/gates/count phases are run fresh in the same epoch before formal time.
+Output failure excludes that arm from timing, remains explicit in all18 rows,
+and blocks full-matrix acceptance. No automatic radius adjustment, precision
+adapter or post-hoc tolerance relaxation exists. The standalone full-output
+CPU audit currently asserts the **recorded** 60pass/3shared-boundary-failure
+outcome; a different result requires investigation, not editing a receipt.
+
+`collect_evidence.py` curates this retained campaign's paths/logs/hashes for
+publication; it is a measured-layout curator, not a general data downloader or
+license to publish restricted raw inputs. Generated sources and binary hashes
+are compiler/path sensitive; numerical outputs and frozen fixture hashes are
+separately bound. All reproduced GPU observations must come from a new idle,
+locked complete campaign, never be mixed into the published epoch.
+
+## Important limits
+
+A/R are serial bundles, not demonstrated native Q1024 GTS throughput; R/A is not
+against the old author-V2 Q32≈237ms path. One frozen Tloc boundary fails strict
+ID equality. Sanitizers use bounded N2000 fixtures, not full-data memcheck.
+Native ArborX's comparable active-thread denominator is unavailable and stays
+null. Deep1M, per-fix attribution, profiler decomposition and controlled-clock
+experiments were not run. No source/evidence overwrite or main merge occurred.
