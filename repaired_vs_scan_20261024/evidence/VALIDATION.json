@@ -1,0 +1,25 @@
+{
+  "GPU_correctness": "not_run",
+  "GPU_memcheck": "not_run",
+  "GPU_synccheck": "not_run",
+  "GPU_stress": "not_run",
+  "paired_timing_rounds": 0,
+  "work_instrumentation": "not_run",
+  "CPU_validation": {
+    "checks": [
+      "known empty-string and integer edit-distance outputs",
+      "known 2D L2 and duplicate-coordinate outputs",
+      "complete binary oracle parser, including rejection of a negative distance",
+      "deterministic query IDs, disjoint calibration/test IDs",
+      "calibration-only radii and overwrite refusal",
+      "GPU admission parser rejects foreign processes, memory pressure, wrong UUID and malformed telemetry"
+    ],
+    "local": "pass",
+    "remote": "pass",
+    "source": "test_cpu.py",
+    "source_sha256": "6531efc1b522758c5a55a5e8fcf41bf84c3e1e17c215abc08b7bb2ec208f34da",
+    "remote_log_raw_sha256": "c508a14f4107a0512586e2f9341456b6e4b89917d7be3858b96820b6062911bd"
+  },
+  "original_source_pins": "all eight match",
+  "oracle_structure": "all 1024 queries, all three radii, both complete datasets pass; not a GPU validation"
+}

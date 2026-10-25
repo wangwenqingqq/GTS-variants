@@ -1,0 +1,13 @@
+{
+  "source": "https://github.com/arborx/ArborX",
+  "commit": "3a20eaba22bd8b6c13d6b32064a2086a3ce1c993",
+  "command": "cmake -S ArborX -B arborx-build -DARBORX_ENABLE_MPI=OFF -DARBORX_ENABLE_TESTS=OFF -DARBORX_ENABLE_BENCHMARKS=OFF",
+  "exit_code": 1,
+  "failed_at": "find_package(Kokkos 4.5 REQUIRED CONFIG)",
+  "scope": "CMake default search did not locate a usable Kokkos package; this is not proof that no installation exists anywhere",
+  "log": "arborx.configure.log",
+  "log_sha256": "37e402587504322e2d5dd2029e83fba18ccb0507b25a58e8d0447c05ea65dc4c",
+  "benchmark_built": false,
+  "proxy_used": false,
+  "dependencies_installed": false
+}

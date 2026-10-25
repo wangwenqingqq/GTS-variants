@@ -1,0 +1,47 @@
+{
+  "campaign_state": "stopped_before_GPU_execution",
+  "gpu_benchmark_processes": 0,
+  "gpu_samples": 0,
+  "failed_preflight": {
+    "time_utc": "2026-10-25T05:56:21Z",
+    "gpu_index": 0,
+    "uuid": "GPU-9bd364a9-9d88-0b78-ef55-caac6f73d6b1",
+    "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "driver": "590.48.01",
+    "memory_used_MiB": 80752,
+    "utilization_gpu_percent": 0,
+    "foreign_apps": [
+      {
+        "pid": 561143,
+        "name": "VLLM::Worker_TP0",
+        "memory_used_MiB": 80730
+      }
+    ],
+    "admitted": false,
+    "raw_receipt_sha256": "6973f3e0aa64efca588726f08ac41cbe0fb86809757e50f23dd1a725d5427c28",
+    "advisory_lock_held": false
+  },
+  "confirmed_foreign_activity": {
+    "time_utc": "2026-10-25T05:57:50Z",
+    "memory_used_MiB": 80918,
+    "utilization_gpu_percent": 78,
+    "foreign_pid": 561143,
+    "foreign_memory_used_MiB": 80896,
+    "process_start_utc": "2026-10-25T05:53:10Z",
+    "raw_receipt_sha256": "e01ce5b7aee2b0957a1157da870b6e8a203aa9f6bea5b5a1af8c320eee3e580d"
+  },
+  "later_diagnostic_only": {
+    "time_utc": "2026-10-25T05:59:55.340666+00:00",
+    "gpu_index": 0,
+    "gpu_work_launched": false,
+    "advisory_locks_acquired": true,
+    "gpu": "GPU-9bd364a9-9d88-0b78-ef55-caac6f73d6b1, NVIDIA RTX PRO 6000 Blackwell Server Edition, 590.48.01, 14, 0, P8, 35.92, 180, 405\n",
+    "apps": "",
+    "errors": [],
+    "admitted": true
+  },
+  "later_idle_is_not_a_restart_or_replacement": true,
+  "foreign_process_signals_sent": false,
+  "GPU_settings_changed": false,
+  "other_GPU_used": false
+}
