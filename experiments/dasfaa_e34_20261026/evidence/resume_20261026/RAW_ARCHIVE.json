@@ -1,0 +1,19 @@
+{
+  "archive": "poststop_evidence.tar.gz",
+  "sha256": "0b46b02587c05a2880bd5bf6dd77abb307cf4da7c98ec1c582ee5830b434ca0d",
+  "bytes": 238004,
+  "storage": "retained in session A provenance; not published because raw command logs contain host-local paths",
+  "includes": [
+    "new diagnostic epoch full outputs/receipts/telemetry/guard JSONL",
+    "setup and Word oracle guard logs",
+    "source/binary manifests",
+    "initial and final vector input validation",
+    "intentional contract-stop record"
+  ],
+  "not_included": [
+    "old invalid epochs (retained separately)",
+    "raw source datasets",
+    "checkpoints",
+    "credentials"
+  ]
+}

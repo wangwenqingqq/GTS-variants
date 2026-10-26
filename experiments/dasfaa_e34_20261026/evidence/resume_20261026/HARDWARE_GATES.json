@@ -1,0 +1,207 @@
+{
+  "epoch": "epoch_1792979035194278482",
+  "scope": "bounded N2000 complete ID outputs only; not final full-result validation",
+  "gates": [
+    {
+      "arm": "P",
+      "tool": "memcheck",
+      "N": 2000,
+      "Q": 1,
+      "quality": {
+        "results": 8000,
+        "rows": 1000,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "93edd1bb0fd2ee56c076996a054e49374675bbcd4753f29ca24c4bc599b84f5b",
+      "stdout_sha256": "bc8d5ac76a2318b9c475e22fafa93426027f92e20dcada76b9816ff8dba2df3f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "P",
+      "tool": "memcheck",
+      "N": 2000,
+      "Q": 32,
+      "quality": {
+        "results": 8000,
+        "rows": 1000,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "574a73c1f12f3d9188ed902cb1ff9ad412ff5a759c3892e5e99e24185550e7ec",
+      "stdout_sha256": "2f69086d2dc5c48cde4f94273522876e1a79acdb6ab4d9b875954fe15987c507",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "P",
+      "tool": "memcheck",
+      "N": 2000,
+      "Q": 1024,
+      "quality": {
+        "results": 8192,
+        "rows": 1024,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "8051675d3ec498327fd3407a059e0e5575908983c687a1a046c046d38236e88e",
+      "stdout_sha256": "3511270938cc70500e852da0103129c988ab58d7e9d21e5abb556298b3597cde",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "P",
+      "tool": "synccheck",
+      "N": 2000,
+      "Q": 1,
+      "quality": {
+        "results": 8000,
+        "rows": 1000,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "8f68d5a0c4b05fe89e60ffb81cd5822ca71c7cc0709c80726cc1d54b67bcaab0",
+      "stdout_sha256": "34b6fe907f316050fa7c1b27d2d531bafebc55f05fcdfe3d8ce7e27abcace11d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "P",
+      "tool": "synccheck",
+      "N": 2000,
+      "Q": 32,
+      "quality": {
+        "results": 8000,
+        "rows": 1000,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "1e2d245504681b034c8ee973bd379dbca0b6e6ea54e88ec6992acd1d00bb734c",
+      "stdout_sha256": "cb31f4812e7c81ff875da95db9c213e116ad8d955f3a46f1fcf5aa8c5a1bccb7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "P",
+      "tool": "synccheck",
+      "N": 2000,
+      "Q": 1024,
+      "quality": {
+        "results": 8192,
+        "rows": 1024,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "ec17bf05b111f4b608c4dcbe02298c50dba717fe482288c16a6d12123f80724a",
+      "stdout_sha256": "4f22e666f5624305f0d0e0c0fa8caaa91a76a8ccc82dc89aa17f8bb0d4b3db83",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "S",
+      "tool": "memcheck",
+      "N": 2000,
+      "Q": 1,
+      "quality": {
+        "results": 8000,
+        "rows": 1000,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "41c0352c7e276ff395e5f79d430f0ab705da36bf26bddd582f4cc4c4ef236eb0",
+      "stdout_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "arm": "S",
+      "tool": "memcheck",
+      "N": 2000,
+      "Q": 32,
+      "quality": {
+        "results": 8000,
+        "rows": 1000,
+        "invalid_ids": 0,
+        "duplicate_rows": 0,
+        "distance_failures": 0,
+        "tie_aware_recall": 1.0,
+        "correct": true,
+        "oracle": "independent exhaustive CPU FP64 differences",
+        "oracle_k": 8,
+        "tolerance": 1e-05
+      },
+      "receipt_sha256": "505b1feb20987fece9d753be54a2b962618f84c7f0e0a719127cb5563336d1a1",
+      "stdout_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "not_run": [
+    "S memcheck Q1024",
+    "S synccheck all Q",
+    "all full-scale correctness/timing/count processes",
+    "Word GPU",
+    "E3 GPU"
+  ],
+  "formal_timing_started": false,
+  "stop": {
+    "time_unix": 1792980775.0876667,
+    "stop_category": "contract-output-scope",
+    "reason": "P harness returns host IDs but does not materialize returned k distances; full-result timing requires user-approved amendment before new GPU launches",
+    "epoch": "epoch_1792979035194278482",
+    "all_timing_ineligible": true,
+    "formal_timing_started": false,
+    "resource_or_telemetry_failure_observed": false,
+    "no_automatic_retry": true
+  },
+  "resource_observations": {
+    "gpu_guards_exit_codes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "peak_rss_gib": 0.8336677551269531,
+    "minimum_mem_available_gib": 214.9364471435547,
+    "scope": "completed eight diagnostic GPU guards only"
+  }
+}

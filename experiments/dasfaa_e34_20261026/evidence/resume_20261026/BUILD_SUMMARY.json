@@ -1,0 +1,83 @@
+{
+  "build_id": "508d02b2d5b73aa08080d1fc6514a9a1af150c88708999ad16a3b500ac6600af",
+  "compiled_sources": {
+    "source_p/include/file.cuh": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+    "source_p/include/search.cuh": "f924b74d93d205a665fcbf0730ff8e9716832cbf21a5b1b04f4c7ee1b22d7284",
+    "source_p/include/config.cuh": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+    "source_p/include/residual_tuner.cuh": "c3cf65b323aafd87f1245647a4bb60c62b1652ba60eda8e26a9520c900785c76",
+    "source_p/include/residual_pruning.cuh": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+    "source_p/include/update_user_modified.cuh": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4",
+    "source_p/include/update_optimized.cuh": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+    "source_p/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "source_p/include/gpu_timer.cuh": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+    "source_p/include/search_v2.cuh": "1cf8ec247dc36f087b610dfae296b8c29a5a7b3c0a2f777bb26fb815cd442052",
+    "source_p/include/update.cuh": "e1c7725faa3b111bbf596aca65dea0823648f95c54fa311664a6ff6f8f1ebf78",
+    "source_p/include/tree.cuh": "9a30cb13fb988fbd363afbf577d4dcfed965f0cfd413f779a8618ca4d1e30bc2",
+    "source_p/include/mlp_constant.cuh": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+    "source_g/include/file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+    "source_g/include/search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+    "source_g/include/config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+    "source_g/include/search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+    "source_g/include/search_v2.cuh": "f484a40d2dfb74008e86d74a48e8abf2698b56e9da3cfc1f52e23a328fd622de",
+    "source_g/include/update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62",
+    "source_g/include/tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+    "tree_bench.cu": "aeea431516a1677fe307c982773fb0faf2da42b2751d0a28e427a21f3d075b2c"
+  },
+  "binaries": {
+    "tree": {
+      "sha256": "8db22e4ccc85f2587b79ccb35aee28e53c91e580a653c401d186fbde2e4f499a"
+    },
+    "tree_count": {
+      "sha256": "bee426753372b17ecae60d7b94953bb3743ecd7685c0ee179ea39d960944d83e"
+    },
+    "g_tree": {
+      "sha256": "f10a854d64085e84f69f23f7cb0a1559359840e718db78a9dbc7c9cb607935c4"
+    }
+  },
+  "sources": {
+    "P": {
+      "archive_search_sha256": "2268650537923903819c84245ca0b05050636cab59508d114a4033e952cce278",
+      "patch_sha256": "ccb0b634e06b0c4d2ab302144f0fd3fe17eef8b75ba9d2da90a5cb3af418100d",
+      "compiled_search_sha256": "1cf8ec247dc36f087b610dfae296b8c29a5a7b3c0a2f777bb26fb815cd442052",
+      "archive_headers": {
+        "config.cuh": "622d0977e49d80d5791364bc12463de9bce5aaca324d6a681512004c20d100cb",
+        "file.cuh": "b8be03246ec82cadd3228b75a6dfd91c552ccfa3124d2ca9470e28e0031ffd8a",
+        "gpu_timer.cuh": "9a0e8bd60e504a1a6d94c826ce14344a3ae83171d8f2466f0870fbb4a6d6eaef",
+        "mlp_constant.cuh": "cf6545624c0cbc51744b978298e6d138591521c7b600ece8812b6195f735e559",
+        "residual_pruning.cuh": "745a4bd5564b8085c40a48abac625f24dcbacb8a996d29e4cba311dd936e33b2",
+        "residual_tuner.cuh": "c3cf65b323aafd87f1245647a4bb60c62b1652ba60eda8e26a9520c900785c76",
+        "search.cuh": "f924b74d93d205a665fcbf0730ff8e9716832cbf21a5b1b04f4c7ee1b22d7284",
+        "search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+        "search_v2.cuh": "2268650537923903819c84245ca0b05050636cab59508d114a4033e952cce278",
+        "tree.cuh": "9a30cb13fb988fbd363afbf577d4dcfed965f0cfd413f779a8618ca4d1e30bc2",
+        "update.cuh": "e1c7725faa3b111bbf596aca65dea0823648f95c54fa311664a6ff6f8f1ebf78",
+        "update_optimized.cuh": "0eda0fb7556c02aab2dea6bdd24943ef15ec65104ee3a8af436211d0753727bb",
+        "update_user_modified.cuh": "5da75e5433c7a03dec809ae182449bd4f257400424184de0417fb4e3aed29ff4"
+      }
+    },
+    "G": {
+      "archive_search_sha256": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+      "patch_sha256": "1e129c1539df9c9180dbb76603f7db9ade7aa27d0a0bda9e09e46a9ad2e04a40",
+      "compiled_search_sha256": "f484a40d2dfb74008e86d74a48e8abf2698b56e9da3cfc1f52e23a328fd622de",
+      "archive_headers": {
+        "config.cuh": "788987154529da5660c2df912a81abd4c135efad5536a97ef725aa350ac199fc",
+        "file.cuh": "25d72e59e7b1f7b67515032de6471a275c1b0bde6d645a9ac27b79e61c79e8a6",
+        "search.cuh": "b7e717a2d5b27acbfb860f28a26696d283b00a75d06de2d32128ae975627080a",
+        "search_naive.cuh": "88d25d5060d3678d2b0a693b8c935883c9204dc235875a2a5497e772c8738409",
+        "search_v2.cuh": "b7a9c719c9fcd67ffdda8e4583da02341d0bbaa0038121f418873629466cddaf",
+        "tree.cuh": "8e5a5121de663a9ab82b00e7170bbe6f2235daa78e5713248e825d23b050da78",
+        "update.cuh": "4e6eec228dcc1072b3549e3371e819df5f8d7dab2d0d207e821ee9450cf05a62"
+      }
+    }
+  },
+  "G_launch_authorized": false,
+  "cache_policy": "disabled; every fresh process rebuilds outside query timer",
+  "hardware": {
+    "gpu": "RTX PRO6000 Blackwell Server Edition",
+    "gpu_memory_gib": 96,
+    "toolkit": "CUDA13.1.115",
+    "driver": "590.48.01",
+    "target_sm": 120
+  },
+  "raw_build_manifest_sha256": "f607059bc6011e7125a9444865caf718b8e68152e745e5ebdc6791ecdb5a368e"
+}

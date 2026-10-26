@@ -64,7 +64,7 @@ def main(root,epoch,out):
     md+=['','## Measured log latency / log N slopes','','| Family | Source | Q | Arm | N values | Slope |','|---|---|---:|---|---|---:|']
     for r in slopes:md.append(f'| {r["family"]} | {"synthetic" if r["synthetic"] else "real"} | {r["Q"]} | {r["arm"]} | {r["Ns"]} | {r["slope"] if r["slope"] is not None else "unavailable"} |')
     md+=['','## Boundaries and unfinished scope','',
-        '- P/G N>10M is infeasible: workspace chunking (tree_h=8), not run. S retains larger requested N. Coordinate int32 bounds alone do not establish runtime feasibility.',
+        '- P/G N>10M is policy-infeasible (mandated workspace/tree_h=8 label), not run. The incident measured height8 at30M;20M Deep height is not measured. S retains larger N. Coordinate bounds alone do not establish runtime feasibility.',
         '- T-loc1/3/10M are real archived prefixes;30/100M are frozen fitted synthetic mixtures. Slopes never pool the two distributions.',
         '- Deep original queries failed exact-value isolation (16/63/201/379 matching base rows at1/3/10/20M); no substituted query set is presumed authorized.',
         '- G is compile-only/incomplete: native half-free-memory arena can overflow its signed-int slot count on a near-idle96GiB GPU. No G latency/recall is inferred.',

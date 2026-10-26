@@ -1,0 +1,113 @@
+{
+  "seed": 20261026,
+  "source_sha256": "72091b6cdd29532d44790ad049afa58eb8582957061fcf5c98b28b9b30c81c1c",
+  "source_rows": 611756,
+  "query_rows": 1000,
+  "query_distinct_values": 1000,
+  "available_base_rows": 610756,
+  "stride": 109,
+  "maximum_length": 32,
+  "cases": [
+    {
+      "family": "word",
+      "N": 61000,
+      "D": 109,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "base": "data/word_base.strb",
+      "query": "data/word_query.strb",
+      "oracle": "data/word_61000.oracle",
+      "state": "feasible",
+      "query_isolation": {
+        "isolated": true,
+        "indexed_rows_equal_to_query": 0,
+        "query_rows_equal_to_index": 0,
+        "shared_distinct_values": 0
+      }
+    },
+    {
+      "family": "word",
+      "N": 150000,
+      "D": 109,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "base": "data/word_base.strb",
+      "query": "data/word_query.strb",
+      "oracle": "data/word_150000.oracle",
+      "state": "feasible",
+      "query_isolation": {
+        "isolated": true,
+        "indexed_rows_equal_to_query": 0,
+        "query_rows_equal_to_index": 0,
+        "shared_distinct_values": 0
+      }
+    },
+    {
+      "family": "word",
+      "N": 300000,
+      "D": 109,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "base": "data/word_base.strb",
+      "query": "data/word_query.strb",
+      "oracle": "data/word_300000.oracle",
+      "state": "feasible",
+      "query_isolation": {
+        "isolated": true,
+        "indexed_rows_equal_to_query": 0,
+        "query_rows_equal_to_index": 0,
+        "shared_distinct_values": 0
+      }
+    },
+    {
+      "family": "word",
+      "N": 611000,
+      "D": 109,
+      "k": 8,
+      "Q": [
+        1,
+        32,
+        1024
+      ],
+      "base": "data/word_base.strb",
+      "query": "data/word_query.strb",
+      "oracle": "data/word_611000.oracle",
+      "state": "infeasible: insufficient source rows after holdout",
+      "query_isolation": {
+        "isolated": true,
+        "indexed_rows_equal_to_query": 0,
+        "query_rows_equal_to_index": 0,
+        "shared_distinct_values": 0
+      }
+    }
+  ],
+  "source_parser": "raw bytes; LF getline; object ends at first NUL (native strlen)",
+  "source_rows_with_non_ascii": 7,
+  "source_rows_with_embedded_nul": 0,
+  "files": {
+    "data/word_permutation.npy": {
+      "sha256": "1767efd2fa6e0504dc72811cd5babe25b48e2612e799b3519c87c66086ed3bb6",
+      "bytes": 4894176
+    },
+    "data/word_query.strb": {
+      "sha256": "c355cca7e614836a0f40167a1e4a9bebaeb719111932d651cc34b72af7f6100c",
+      "bytes": 113008
+    },
+    "data/word_base.strb": {
+      "sha256": "343ed61eb4eb59318ace1f61f19215aac50834287519947839e53477aad66d42",
+      "bytes": 69015436
+    }
+  }
+}

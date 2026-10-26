@@ -117,3 +117,67 @@ source-row identity separation. Keep the Deep workload rows visible as
 query-isolation-failed, do not run or time them, and do not silently replace the
 queries or oracle. A deterministic public-query filtering amendment has been
 requested from the user; no authorization is presumed.
+
+## 2026-10-26 01:56 UTC — Word byte-semantic phase freeze
+
+Reason: complete the predeclared Word adapter/input freeze before any Word GPU
+result. Word source SHA256 is
+`72091b6cdd29532d44790ad049afa58eb8582957061fcf5c98b28b9b30c81c1c`.
+The actual corpus contains seven rows with non-ASCII bytes and no embedded NUL.
+The first ASCII-only preparation failed before writing any artifact. The
+approved interface now preserves native LF/getline and byte/strlen semantics;
+no decoding substitution, Unicode normalization, filtering, or source mutation
+is used. Seed/permutation remain 20261026. The exact manifest is retained at
+`evidence/resume_20261026/WORD_MANIFEST.json`: base SHA256343ed61e…66d42,
+query SHA256c355cca7…6100c; all61K/150K/300K prefixes have zero exact-string
+query/index matches. Literal611K remains infeasible: only610756 base rows remain
+after1000 held-out queries. Do not substitute610756 as the requested scale.
+
+The new independent exhaustive CPU edit oracle uses byte equality and the same
+Levenshtein distance, with <=32 threads, strict packed-format validation, and
+atomic completed-output publication. Actual61K/150K/300K oracle generation has
+completed under guard with16 threads; full output audits and all GPU gates are
+still required. Its compilation initially encountered a missing optional
+/usr/bin/time wrapper; no oracle child started in that attempt. The direct
+bounded oracle succeeded; no prohibited guard/telemetry/SSH failure occurred.
+
+Vector gate execution remains the corrected fixed epoch; none of these Word
+files changes its frozen runner, scan, oracle, or workload identity. Word GPU
+execution is a separately frozen phase after the vector plan, not a concurrent
+GPU job or a retry of any failed vector configuration. C2/P-approx remain off.
+
+## 2026-10-26 02:04 UTC — policy labels versus measured tree capacity
+
+The mandatory N>10M exclusion is a user-imposed safety cap, not an empirical
+measurement of the tree height of every excluded dataset. The prescribed
+`infeasible: workspace chunking (tree_h=8)` label records the incident-driven
+policy. Height8/zero-chunk was established by the incident's30M case; no20M Deep
+or other excluded tree is launched to test capacity. Native order10/leaf20
+height arithmetic alone does not authorize an exception to the10M cap. Reports
+must not turn this policy exclusion into a measured height8 claim for20M Deep.
+
+## 2026-10-26 02:24 UTC — intentional contract-output HOLD, not a safety-failure retry
+
+Review found the carried-over P timer materializes kIDs but does not read back
+native k-distance output before freeing it; S returns distances and IDs. The
+full-result timing condition therefore needs explicit clarification. A control
+STOP_CAMPAIGN record was created on2026-10-26 at02:12:55UTC; the current guarded
+sanitizer finished normally, and the next step exited at the STOP check before
+launch. No formal timing/full-scale gate ran. No guard97/98, fail-fast3, NVML
+timeout or failed SSH was observed in sessionA. There is no automatic new epoch
+or retry. Both contract questions (complete payload and deterministic Deep
+value-disjoint queries) remain awaiting user direction; no authorization is
+inferred from preselected UI choices. The current epoch is diagnostic only.
+
+Completed bounded evidence: P memcheck/synccheck atQ1/32/1024 and S memcheck at
+Q1/32, all N2000, zero errors and complete-ID tie-aware recall1. The other S
+sanitizers, all full-scale correctness/count/timing, WordGPU and E3 remain not
+run. Final read-only checks matched every frozen vector input/prefix/oracle hash.
+Raw guard/receipt evidence is archived with the hash in RAW_ARCHIVE.json.
+
+The Word phase preparation now covers exact byte-preserving inputs, guarded
+CPU oracles, source/binary/build-log binding, exact interpreter/runtime hashes,
+and per-S JIT cache-container/source hashes anchored to completed steps. These
+are prelaunch integrity procedures, not a waiver of STOP, complete-result
+semantics, or the vector-first order. No runtime/system skill or shared package
+was changed. TanimotoS remains CPU-tested preparatory code, not a GPU result.
