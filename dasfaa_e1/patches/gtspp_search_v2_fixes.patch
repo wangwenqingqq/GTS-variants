@@ -1,0 +1,190 @@
+--- search_v2.cuh.orig	2026-10-25 16:05:54.388623722 +0000
++++ search_v2.cuh	2026-10-25 16:05:54.398889655 +0000
+@@ -1160,6 +1160,7 @@
+ 	qnum_l = min(size_avg / nnum_l, qnum);
+ 	size_a -= qnum_l * nnum_l;
+ 	size_list[1] = qnum_l * nnum_l;
++	if (qnum_l <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at level 1\n"); exit(3); }
+ 	for (int i = 0; i < qnum; i += qnum_l)
+ 	{
+ 		int end = min(i + qnum_l - 1, qnum - 1);
+@@ -1276,6 +1277,7 @@
+ 				int nnum_l_low = pow(TREE_ORDER, cur_level_low);
+ 				int qnum_l_low = min(size_avg_low / nnum_l_low, size_list[cur_level] / nnum_l);
+ 				size_list[cur_level_low] = qnum_l_low * nnum_l_low;
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min(i + qs + qnum_l_low - 1, qe);
+@@ -1296,6 +1298,7 @@
+ 				// printf("size_l: %d, MAX_SIZE: %d,  nnum_l: %d", size_l, MAX_SIZE, nnum_l);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+ 				printf("qnum_l_low: %lu\n", qnum_l_low);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+@@ -1321,6 +1324,7 @@
+ 					  int qnum, int k, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+ 	cout << "Searching..." << endl;
++	update_disk = false; // FIX1: reset per call; the global flag otherwise leaks across calls
+ 
+ 	// if (debug_logs == nullptr){ 
+ 	// 	CHECK(cudaMallocManaged((void **)&debug_logs, MAX_LOGS * sizeof(TrainingSample)));
+@@ -1370,6 +1374,7 @@
+ 	qnum_l = min(size_avg / (nnum_l + nnum_l / TREE_ORDER * 3), qnum);
+ 	size_a -= qnum_l * (nnum_l + nnum_l / TREE_ORDER);
+ 	size_list[1] = qnum_l * (nnum_l + nnum_l / TREE_ORDER);
++	if (qnum_l <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at level 1\n"); exit(3); }
+ 	for (int i = 0; i < qnum; i += qnum_l)
+ 	{
+ 		int end = min(i + qnum_l - 1, qnum - 1);
+@@ -1425,7 +1430,7 @@
+ 			int pnum_level_total = nnum_l / TREE_ORDER;
+ 			// printf("pnum level total: %d\n", pnum_level_total);
+ 
+-			if (update_disk == false && (pnum_level < k || cur_level <= 2))
++			if (pnum_level < k || cur_level <= 2) // FIX2: stateless; prune only where this chunk computed pivot distances
+ 			{
+ 				labelCNode<<<block_num, THREAD_NUM>>>(empty_list, qnum_l, qnum_up, nnum_l, p_list_k, offset_p, offset_up_p, offset_n, qs, qs_up);
+ 				cudaDeviceSynchronize();
+@@ -1543,6 +1548,7 @@
+ 				int nnum_l_low = pow(TREE_ORDER, cur_level_low);
+ 				int qnum_l_low = min(size_avg_low / (nnum_l_low + nnum_l_low / TREE_ORDER * 3), qnum_up);
+ 				size_list[cur_level_low] = qnum_l_low * (nnum_l_low + nnum_l_low / TREE_ORDER * 3);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min(i + qs + qnum_l_low - 1, qe);
+@@ -1563,6 +1569,7 @@
+ 				// printf("size_l: %d, MAX_SIZE: %d,  nnum_l: %d\n", size_l, MAX_SIZE, nnum_l);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+ 				printf("qnum_l_low: %d\n", qnum_l_low);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+@@ -1617,6 +1624,7 @@
+ 				  int qnum, int k, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+ 	cout << "Searching..." << endl;
++	update_disk = false; // FIX1: reset per call; the global flag otherwise leaks across calls
+ 
+ 	CHECK(cudaMallocManaged((void **)&res_dis, qnum * sizeof(float)));
+ 	CHECK(cudaMallocManaged((void **)&size_list, (tree_h + 1) * sizeof(int)));
+@@ -1648,6 +1656,7 @@
+ 	qnum_l = min(size_avg / (nnum_l + nnum_l / TREE_ORDER * 3), qnum);
+ 	size_a -= qnum_l * (nnum_l + nnum_l / TREE_ORDER);
+ 	size_list[1] = qnum_l * (nnum_l + nnum_l / TREE_ORDER);
++	if (qnum_l <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at level 1\n"); exit(3); }
+ 	for (int i = 0; i < qnum; i += qnum_l)
+ 	{
+ 		int end = min(i + qnum_l - 1, qnum - 1);
+@@ -1701,7 +1710,7 @@
+ 			pnum_level = pnum_level / TREE_ORDER;
+ 			int pnum_level_total = nnum_l / TREE_ORDER;
+ 
+-			if (update_disk == false && (pnum_level < k || cur_level <= 2))
++			if (pnum_level < k || cur_level <= 2) // FIX2: stateless; prune only where this chunk computed pivot distances
+ 			{
+ 				labelCNode<<<block_num, THREAD_NUM>>>(empty_list, qnum_l, qnum_up, nnum_l, p_list_k, offset_p, offset_up_p, offset_n, qs, qs_up);
+ 				cudaDeviceSynchronize();
+@@ -1817,6 +1826,7 @@
+ 				int nnum_l_low = pow(TREE_ORDER, cur_level_low);
+ 				int qnum_l_low = min(size_avg_low / (nnum_l_low + nnum_l_low / TREE_ORDER * 3), qnum_up);
+ 				size_list[cur_level_low] = qnum_l_low * (nnum_l_low + nnum_l_low / TREE_ORDER * 3);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min(i + qs + qnum_l_low - 1, qe);
+@@ -1835,6 +1845,7 @@
+ 				size_list[cur_level_low] = size_l * (MAX_SIZE * 3 + 3);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+ 				printf("qnum_l_low: %d\n", qnum_l_low);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+@@ -1861,6 +1872,7 @@
+ 				  int *res_ids, int qnum, int k, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+ 	cout << "Searching..." << endl;
++	update_disk = false; // FIX1: reset per call; the global flag otherwise leaks across calls
+ 
+ 	CHECK(cudaMallocManaged((void **)&res_dis, qnum * k * sizeof(float)));
+ 	CHECK(cudaMallocManaged((void **)&size_list, (tree_h + 1) * sizeof(int)));
+@@ -1892,6 +1904,7 @@
+ 	qnum_l = min(size_avg / (nnum_l + nnum_l / TREE_ORDER * 3), qnum);
+ 	size_a -= qnum_l * (nnum_l + nnum_l / TREE_ORDER);
+ 	size_list[1] = qnum_l * (nnum_l + nnum_l / TREE_ORDER);
++	if (qnum_l <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at level 1\n"); exit(3); }
+ 	for (int i = 0; i < qnum; i += qnum_l)
+ 	{
+ 		int end = min(i + qnum_l - 1, qnum - 1);
+@@ -1945,7 +1958,7 @@
+ 			pnum_level = pnum_level / TREE_ORDER;
+ 			int pnum_level_total = nnum_l / TREE_ORDER;
+ 
+-			if (update_disk == false && (pnum_level < k || cur_level <= 2))
++			if (pnum_level < k || cur_level <= 2) // FIX2: stateless; prune only where this chunk computed pivot distances
+ 			{
+ 				labelCNode<<<block_num, THREAD_NUM>>>(empty_list, qnum_l, qnum_up, nnum_l, p_list_k, offset_p, offset_up_p, offset_n, qs, qs_up);
+ 				cudaDeviceSynchronize();
+@@ -2061,6 +2074,7 @@
+ 				int nnum_l_low = pow(TREE_ORDER, cur_level_low);
+ 				int qnum_l_low = min(size_avg_low / (nnum_l_low + nnum_l_low / TREE_ORDER * 3), qnum_up);
+ 				size_list[cur_level_low] = qnum_l_low * (nnum_l_low + nnum_l_low / TREE_ORDER * 3);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min(i + qs + qnum_l_low - 1, qe);
+@@ -2079,6 +2093,7 @@
+ 				size_list[cur_level_low] = size_l * (MAX_SIZE * 3 + 3);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+ 				printf("qnum_l_low: %d\n", qnum_l_low);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);
+@@ -2105,6 +2120,7 @@
+ 				  int *res_ids, int qnum, int k, int tree_h, int *data_info, int *empty_list, char *data_s, int *size_s)
+ {
+ 	cout << "Searching..." << endl;
++	update_disk = false; // FIX1: reset per call; the global flag otherwise leaks across calls
+ 
+ 	CHECK(cudaMallocManaged((void **)&res_dis, qnum * k * sizeof(float)));
+ 	CHECK(cudaMallocManaged((void **)&size_list, (tree_h + 1) * sizeof(int)));
+@@ -2136,6 +2152,7 @@
+ 	qnum_l = min(size_avg / (nnum_l + nnum_l / TREE_ORDER * 3), qnum);
+ 	size_a -= qnum_l * (nnum_l + nnum_l / TREE_ORDER);
+ 	size_list[1] = qnum_l * (nnum_l + nnum_l / TREE_ORDER);
++	if (qnum_l <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at level 1\n"); exit(3); }
+ 	for (int i = 0; i < qnum; i += qnum_l)
+ 	{
+ 		int end = min(i + qnum_l - 1, qnum - 1);
+@@ -2189,7 +2206,7 @@
+ 			pnum_level = pnum_level / TREE_ORDER;
+ 			int pnum_level_total = nnum_l / TREE_ORDER;
+ 
+-			if (update_disk == false && (pnum_level < k || cur_level <= 2))
++			if (pnum_level < k || cur_level <= 2) // FIX2: stateless; prune only where this chunk computed pivot distances
+ 			{
+ 				labelCNode<<<block_num, THREAD_NUM>>>(empty_list, qnum_l, qnum_up, nnum_l, p_list_k, offset_p, offset_up_p, offset_n, qs, qs_up);
+ 				cudaDeviceSynchronize();
+@@ -2305,6 +2322,7 @@
+ 				int nnum_l_low = pow(TREE_ORDER, cur_level_low);
+ 				int qnum_l_low = min(size_avg_low / (nnum_l_low + nnum_l_low / TREE_ORDER * 3), qnum_up);
+ 				size_list[cur_level_low] = qnum_l_low * (nnum_l_low + nnum_l_low / TREE_ORDER * 3);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min(i + qs + qnum_l_low - 1, qe);
+@@ -2323,6 +2341,7 @@
+ 				size_list[cur_level_low] = size_l * (MAX_SIZE * 3 + 3);
+ 				unsigned long qnum_l_low = size_l / (nnum_l);
+ 				printf("qnum_l_low: %d\n", qnum_l_low);
++				if (qnum_l_low <= 0) { fprintf(stderr, "FAILFAST: kNN workspace cannot hold one query at the next level (tree too tall for the 4 GiB workspace)\n"); exit(3); }
+ 				for (int i = 0; i < qnum_l; i += qnum_l_low)
+ 				{
+ 					int end = min((int)(i + qnum_l_low), qnum_l);

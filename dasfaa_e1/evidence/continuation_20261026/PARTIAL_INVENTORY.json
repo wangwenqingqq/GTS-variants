@@ -1,0 +1,119 @@
+{
+  "recorded_utc": "2026-10-26T01:48:20.645040+00:00",
+  "status": "partial-interrupted",
+  "complete_records": 4,
+  "snapshots": [
+    {
+      "release_date": "2026-06-01",
+      "rows": 37849270,
+      "format": "headerless fp_u64x4 (256 bits), id_i64, popcnt_u16",
+      "all_rows_tree_admissible": false,
+      "reason": "N exceeds mandatory 10M ceiling",
+      "files": {
+        "fingerprints": {
+          "path": "data/prepared/snapshots/2026-06-01/fp_u64x4.bin",
+          "bytes": 1211176640,
+          "sha256": "1ceb7dc33ed10b1fce2dc3e43bd8dbb557b0a2420f9164eb085312f7372d9c4e"
+        },
+        "ids": {
+          "path": "data/prepared/snapshots/2026-06-01/id_i64.bin",
+          "bytes": 302794160,
+          "sha256": "1f149018487d42bbb62390dca04abcff01b997b6420faa79e58731cae0407dae"
+        },
+        "popcounts": {
+          "path": "data/prepared/snapshots/2026-06-01/popcnt_u16.bin",
+          "bytes": 75698540,
+          "sha256": "3b16da3421d5686e502fb16df0224aa73b0733775fe25991ad74c37d41c72fcc"
+        }
+      },
+      "row_count_evidence": "file-size/32, not a semantic all-row parse"
+    },
+    {
+      "release_date": "2026-06-15",
+      "rows": 37871160,
+      "format": "headerless fp_u64x4 (256 bits), id_i64, popcnt_u16",
+      "all_rows_tree_admissible": false,
+      "reason": "N exceeds mandatory 10M ceiling",
+      "files": {
+        "fingerprints": {
+          "path": "data/prepared/snapshots/2026-06-15/fp_u64x4.bin",
+          "bytes": 1211877120,
+          "sha256": "543d940a7ceb3868585bd4d39944c56bde74c9460dfb0559e2831374dae0be25"
+        },
+        "ids": {
+          "path": "data/prepared/snapshots/2026-06-15/id_i64.bin",
+          "bytes": 302969280,
+          "sha256": "f1490fd52bb8c0c39ec4edb3b62e44f781d69ee4577a6aa70090ccc8981579c8"
+        },
+        "popcounts": {
+          "path": "data/prepared/snapshots/2026-06-15/popcnt_u16.bin",
+          "bytes": 75742320,
+          "sha256": "0df5355629910fa74f428c0171af3347d16a3682d4331ca7bcfe7c7fdc9377b3"
+        }
+      },
+      "row_count_evidence": "file-size/32, not a semantic all-row parse"
+    },
+    {
+      "release_date": "2026-07-01",
+      "rows": 40939438,
+      "format": "headerless fp_u64x4 (256 bits), id_i64, popcnt_u16",
+      "all_rows_tree_admissible": false,
+      "reason": "N exceeds mandatory 10M ceiling",
+      "files": {
+        "fingerprints": {
+          "path": "data/prepared/snapshots/2026-07-01/fp_u64x4.bin",
+          "bytes": 1310062016,
+          "sha256": "8388089cb8861e18b3877d74c9402edc25510b4b059c9d2d8af42377fbc72fe7"
+        },
+        "ids": {
+          "path": "data/prepared/snapshots/2026-07-01/id_i64.bin",
+          "bytes": 327515504,
+          "sha256": "9eeb17e98e0bcf7377a5e729af0875d88831d7897732602e19e8e5b41d1bebd7"
+        },
+        "popcounts": {
+          "path": "data/prepared/snapshots/2026-07-01/popcnt_u16.bin",
+          "bytes": 81878876,
+          "sha256": "b88501469a6d420a5b6604ac253b2c56e4f5517804a652123141f470dc6392b0"
+        }
+      },
+      "row_count_evidence": "file-size/32, not a semantic all-row parse"
+    },
+    {
+      "release_date": "2026-07-17",
+      "rows": 40946511,
+      "format": "headerless fp_u64x4 (256 bits), id_i64, popcnt_u16",
+      "all_rows_tree_admissible": false,
+      "reason": "N exceeds mandatory 10M ceiling",
+      "files": {
+        "fingerprints": {
+          "path": "data/prepared/snapshots/2026-07-17/fp_u64x4.bin",
+          "bytes": 1310288352,
+          "sha256": "c74a94df0d0d607d1dd2f4a2368c519b7a62e2c399adbe09fb8b505e77708c15"
+        },
+        "ids": {
+          "path": "data/prepared/snapshots/2026-07-17/id_i64.bin",
+          "bytes": 327572088,
+          "sha256": "f239e2e7bbd5cad11cb3449be717b9c9f0c8df38ab9e9a50a6351958f758bcc8"
+        },
+        "popcounts": {
+          "path": "data/prepared/snapshots/2026-07-17/popcnt_u16.bin",
+          "bytes": 81893022,
+          "sha256": "0b57179494d3db75fc09cf4c9f80f5ce36f4e9addbb2254a7efea1b0e2418469"
+        }
+      },
+      "row_count_evidence": "file-size/32, not a semantic all-row parse"
+    }
+  ],
+  "raw_stdout_sha256": "33b1a0c3dfa7d3d7a61c66890669ef909457d54c8703b774d445b4945ffba0a8",
+  "raw_stderr_bytes": 0,
+  "ssh_client_exit_code": 255,
+  "guard_exit_status_received": false,
+  "remote_process_status": "unknown; no reconnect",
+  "source_command_version": "initial inventory_real_data.py streamed through guard; initial hardcoded paths later replaced by CLI root arguments",
+  "missing": [
+    "three later SureChEMBL snapshot hashes",
+    "ChEMBL37 full count/hash",
+    "protein200k full count/hash",
+    "completion marker"
+  ]
+}
