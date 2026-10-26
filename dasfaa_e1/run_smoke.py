@@ -55,44 +55,47 @@ def run(root,epoch,index,gpu,case,arm,B,limit=0,tool=None,lock_fds=()):
         raise guard.Contaminated('occupied before '+label)
     cmd=guarded_command(command,folder/'resource.guard.jsonl')
     receipt=dict(command=cmd,binary_sha256=guard.sha(binary),case_sha256=guard.sha(case/'case.bin'),
-                 gpu_uuid=gpu,arm=arm,B=B,limit=limit,timing_eligible=False,adapter='range-candidate-topk')
+                 gpu_uuid=gpu,arm=arm,B=B,limit=limit,timing_eligible=False,adapter='native-knn-tombstone-overfetch-exact-delta')
     checks=[]
     problem=None
-    known={}
+    known=guard.job_known()
     start=time.monotonic()
     with (folder/'stdout.log').open('x') as out,(folder/'stderr.log').open('x') as err:
         assert len(lock_fds)==2,'device and campaign lock descriptors required'
         p=subprocess.Popen(cmd,stdout=out,stderr=err,start_new_session=True,pass_fds=lock_fds,
                            env={**os.environ,**THREAD_ENV,'CUDA_VISIBLE_DEVICES':gpu},cwd=root)
-        identity=guard.proc_identity(p.pid)
-        known[p.pid]=identity[1] if identity else None
         receipt['guard_pid']=p.pid
         try:
+            identity=guard.proc_identity(p.pid)
+            known[p.pid]=identity[1] if identity else None
             while p.poll() is None:
-                guard.remember_target(folder,known)
-                # Wait for exit without an extra NVML poll between short tasks.
+                # Ownership is rooted at the subreaper, never an optional PID file.
                 try:
                     p.wait(timeout=guard.POLL_SECONDS)
                     break
                 except subprocess.TimeoutExpired:
-                    guard.remember_target(folder,known)
                     state=guard.snapshot(index)
                     bad=guard.foreign_apps(state,p.pid,known)
                     checks.append(dict(time_utc=state['time_utc'],apps=state['apps'],foreign=bad))
                     if bad:
                         raise guard.Contaminated('foreign application '+label)
+            receipt['exit_code']=p.wait()
+            if guard.owned_children(p,known):
+                problem=RuntimeError('guard exited with surviving descendants; no further launches')
         except BaseException as error:
             problem=error
-            guard.remember_target(folder,known)
-            if p.poll() is None:
+        finally:
+            if problem:
                 receipt['cleanup_complete']=guard.terminate_guarded(p,known)
-        receipt['exit_code']=p.poll() if problem else p.wait()
+                if not receipt['cleanup_complete']:
+                    guard.hold_failed_cleanup(p,known,folder/'CLEANUP_INCOMPLETE.json')
+            receipt.setdefault('exit_code',p.poll())
     receipt['elapsed_s']=time.monotonic()-start
     if problem:
         receipt['exception']=type(problem).__name__+': '+str(problem)
     # Persist and latch mandatory codes before parsing possibly partial output.
     save(folder/'exit_status.json',{'exit_code':receipt['exit_code']})
-    if not problem and receipt['exit_code'] in (3,97,98):
+    if receipt['exit_code'] in (3,97,98):
         save(folder/'receipt.json',receipt)
         check_exit(receipt['exit_code'],label)
     result=folder/'result.json'
@@ -151,6 +154,7 @@ def main():
     guard.STOP_ROOT=a.out
     if (a.out/'STOP_CAMPAIGN.json').exists():
         raise guard.FatalStop('prior STOP_CAMPAIGN.json exists; explicit user resumption required')
+    guard.enable_subreaper()
     subprocess.run(['python3',str(root/'check_no_direct_insert.py')],check=True)
     manifest=json.loads((cases/'SMOKE_PINS.json').read_text())
     manifest=[c for c in manifest if not a.datasets or c['dataset'] in a.datasets]

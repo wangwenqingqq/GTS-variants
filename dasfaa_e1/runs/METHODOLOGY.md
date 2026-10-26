@@ -25,3 +25,17 @@ The experiment does not establish novelty or an end-to-end speedup. It is a
 corrective evaluation of a frozen thesis; no new paper prose or expanded
 contribution is justified. All claims require the exact full-load correctness,
 separate final timing/evaluation and audit gates in CONTRACT.md.
+
+
+## 2026-10-26 native-path amendment (implementation only)
+
+The user-selected native searchIndexKnnV2 path replaces range-candidate top-k
+for dynamic kNN. See CHANGES_native.md and prepare_native.py. G's adaptation
+changes output ID payload/merge only; mandatory fixes and dataset tree height
+apply to both. Native queries overfetch k+tree tombstones, then filter stable IDs
+and merge exact delta based on returned GPU distances. This may be expensive
+and is an explicit operation cost. Static kNN allocation does not by itself
+exercise original C1 update workspace reuse, so isolated C1 attribution is
+unvalidated. Range kernels remain unchanged and require their own complete
+oracle gate. No native CUDA build or runtime validation occurred before the
+mandatory cgroup97/98 stop. All prior range-adapter timings remain ineligible.

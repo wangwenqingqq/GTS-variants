@@ -82,3 +82,16 @@ adapter check is `(N+1)*dim <= INT32_MAX` (non-text payloads).
 A packed implementation could have different addressing, but is not the current
 G/P interface and cannot silently relax this check. The pending inventory must
 be finished only after explicit campaign resumption, with independent guard logs.
+
+
+## 2026-10-26 04:57 UTC — resumed inventory killed by guard
+
+A new streaming, read-only inventory was started under the authoritative guard
+(RSS1GiB, minimum available48GiB, timeout900s). It returned98 after17s because
+cgroup headroom fell to23.8GiB below the guard's24GiB floor; observed peak task
+RSS0.04GiB. Full output was redirected to the E1-only remote resume directory,
+but not downloaded after mandatory stop. It is not a newly verified complete
+inventory. The existing four earlier snapshot hashes remain the only curated
+snapshot evidence. ChEMBL37 count/hash, remaining SureChEMBL hashes and
+protein200k full parse/hash still require completion after explicit resumption.
+No larger corpus replacement, capacity relaxation or query reduction occurred.

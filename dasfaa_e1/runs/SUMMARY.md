@@ -1,17 +1,25 @@
-# E1 continuation summary — stopped, no new GPU results
+# E1 resumption — mandatory guard97/98 stop, no GPU results
 
-## Outcome
+## Conclusion and strongest evidence
 
-**No decision-grade dynamic results exist from this continuation.** A guarded
-CPU inventory SSH session returned 255 after four snapshot records. Remote
-work stopped without reconnecting or retrying. No CUDA build, sanitizer or GPU
-job was launched. The root cause and final remote CPU process state are unknown.
-See [STOP evidence](../evidence/continuation_20261026/STOP_CAMPAIGN.json).
+**No decision-grade dynamic result exists.** Guard refused source upload with97
+(cgroup headroom24.5GiB, required25GiB) despite host MemAvailable212.9GiB.
+The already-running read-only inventory returned98 on its existing connection
+(cgroup headroom23.8GiB<24GiB, peakRSS0.04GiB, elapsed17s). No new remote
+command was issued after the first observed97. No retry, reconnect, new epoch,
+CUDA build, sanitizer or GPU launch occurred. See
+[STOP_CAMPAIGN](../evidence/resume_20261026_0450/STOP_CAMPAIGN.json).
 
-The original frozen contract remains byte-identical to commit `0168a1a`.
-User-authorized changes were appended to [AMENDMENTS](../AMENDMENTS.md).
-All prior P/G repeated-query results remain invalid; old prefix checks are not
-relabelled complete smoke tests.
+The preceding failed inventory's final receipt was recovered first: child
+exit120 after20.041s, not a resource kill. No prior E1 task appeared in the
+recovery process snapshot. This does not establish the original SSH255 cause.
+
+The narrow Linux CPU runner-cancellation/lock composition fixtures passed,
+including setsid/orphan children and injected signal failure, with ordinary
+watchdog child-kill status247 (child-9), not97/98/3. Their scope does NOT prove
+standalone resource-guard timeout/RSS containment, concurrent-fork teardown or
+outer-runner death safety. The GPU hard block remains enabled. Independent
+review confirms this blocker; no full integrity-audit CLEAN verdict is claimed.
 
 ## Required primary matrix (100K, 4:4:2, random, k=8)
 
@@ -44,36 +52,46 @@ uncompleted. P-approx is removed by the user's decision, not an omitted result.
 | B* predicted versus measured optimum | Uncompleted; no calibration/sweep |
 | SIFT-50K historical abort | Unresolved; compaction-ID and leaf-stride bugs are leads, not a literal causal replay |
 
-## Completed local work, with boundaries
+## Completed work and exact gate boundaries
 
-- Audited old logs and source provenance. Both exact mandatory search_v2 patches
-  are reproducibly derived from pinned originals. They are not executed by the
-  existing range-candidate adapter; this is explicitly disclosed.
-- Added real-payload query isolation/90-10 preparation and full workload matrix
-  generation with fresh stable IDs and capacity checks. Real full datasets were
-  not prepared/evaluated in this continuation. ANN GIST=17/Deep=42 feature-match
-  rows remain blocked pending user decision; no silent corpus edits.
-- Added strict fail-stop handling, >=30s NVML snapshot spacing, `timeout 10`,
-  pre-allocation N/int32 guards, partial-result stop ordering and PID ownership
-  regressions. **23 local tests pass**; mock teardown tests are not Linux proof.
-- Independent scope-limited review found no fabrication/evaluator modification,
-  but did NOT clear GPU launch or issue a full-session CLEAN verdict. See
-  [AUDIT_RESULTS](../AUDIT_RESULTS.md).
-- A hard pre-admission block is set in the runner. Linux process-tree
-  teardown/late-fork/lock-lifetime validation remains required. Do not bypass it.
-- Larger real-data inventory is partial; see [INVENTORY](../INVENTORY.md).
+- Frozen CONTRACT.md unchanged: SHA256
+  `36d1d270a5e536d20a3614206fd847d577491e7221bbd4fe6421548ca75ddd28`.
+  All new user decisions were appended before implementation/execution.
+- P/G native kNN implementation selected, both mandated patches derived with
+  exact pins. P numeric queries use external vectors/res_ids; edit/G use an
+  external payload row/QID. G output-only adaptation carries full IDs/distances.
+  Runtime native kNN, full-distance correctness and CUDA compilation are NOT
+  validated. The refused upload did not start its extraction/build command.
+- Native tombstone handling overfetches k+deleted-tree ranks, filters the bitmap
+  and merges exact delta using returned GPU distances. Its full costs stay in
+  operation latency. Native static per-query allocations mean the old C1
+  update-workspace contrast is NOT established by this path.
+- Range kernels were not repaired or validated; query-before-insert range remains
+  pending and must become correctness-failed if complete-output oracle checks fail.
+- Current safety candidate has additional local-only corrections after the exact
+  CPU-tested snapshot. Tested source bytes and hashes are retained separately;
+  do not apply the earlier runtime pass to the later code.
+- GIST/Deep exclusion authorized (expected17/42 corpus rows), full standard query
+  sets retained by the preparer. Actual new real-data manifests are NOT prepared.
+- Larger-corpus inventory was killed; its partial remote output/logs were not
+  fetched after the stop. Existing four snapshot records remain partial evidence.
+  No larger replacement corpus was authorized or admitted.
 
-## Reopen sequence (requires explicit user resumption, not automatic retry)
+## Remaining work and reopen conditions
 
-1. Resolve the SSH failure externally; establish the prior CPU guard's final
-   receipt/process state without starting a new experiment automatically.
-2. Validate bounded Linux guarded-subtree teardown and lock lifetime; only then
-   remove the launch block in a reviewed code change.
-3. Resolve the executed P/G path: retain the documented range-candidate adapter,
-   or implement native dynamic kNN with live-only bounds/full stable-ID output.
-   Do not promote an unused-header patch as an executed correctness repair.
-4. Resolve ANN collision policy; finish the remaining inventory and capacity
-   decision. Freeze actual inputs/hashes by append-only amendments.
-5. Guarded fresh build, all-metric memcheck/synccheck and complete 21-case smoke,
-   then full-output correctness per load. Only passed loads enter six-round
-   paired timing, B* sweep, final separate evaluation and integrity audit.
+1. User explicitly resumes after cgroup headroom is restored/isolated; high host
+   MemAvailable alone is insufficient. Do not lower the guard's24GiB headroom.
+2. Resolve complete process-tree/runner-death containment without editing E4's
+   shared guard. An E1-only hardened guard was proposed, not authorized or used.
+3. Independently review/validate that containment, then clear the GPU block only
+   in an evidence-backed reviewed change. Recheck current code, not prior hashes.
+4. Recover final guard logs and inventory output without relabelling the killed
+   attempt complete; finish inventory and obtain the user's capacity decision.
+5. Fresh guarded build, all-metric memcheck/synccheck, all21complete smoke cases
+   and full per-load outputs, including native distances and added range workloads.
+6. Only passed loads enter B* calibration, six paired rounds/sweep, separate final
+   evaluation, counters, E3static parity and final independent integrity audit.
+
+Deadline2026-11-08 remains unchanged. No missing workload is replaced, shortened
+or extrapolated. All ops/s, p99, ratios/CI, rebuild counts and predicted/optimalB
+remain N/A, not zero. SIFT50K literal historical cause remains unresolved.

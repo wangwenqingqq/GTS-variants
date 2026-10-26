@@ -107,3 +107,30 @@ auditor. This is not an anonymous-artifact or full-history-clean certification;
 the corresponding repository is already public and nonanonymous. Publication
 must preserve the explicit stopped/unvalidated status and may not turn this
 checkpoint into a completed experimental result.
+
+
+## 2026-10-26 resumed-session independent safety review
+
+Verdict: **GPU hard block must stay enabled; no full CLEAN integrity verdict.**
+Read-only reviewer identified standalone guard killpg session escape, outer
+watchdog bypass, unbounded cleanup quarantine, post-Popen/PID-file cleanup
+exceptions, and mandatory97/98/3 latch loss on simultaneous cleanup errors.
+Later local code addresses the last exception/latch findings and attempts to resume the
+watchdog in quarantine; these corrections are local-test-only and were not the
+exact source in the earlier Linux fixture. Fundamental containment blockers
+remain. The fixture pre-created its delayed orphan before cancellation, so it
+is not proof of concurrent-fork teardown. Its positive verdict is restricted
+to runner cancellation and inherited-lock composition.
+
+The resource stop was observed as upload97, then the existing inventory SSH
+returned98. No post-trigger remote action or retry, build or GPU launch occurred.
+No frozen contract/oracle/threshold changed; missing results remain N/A.
+Curated receipts and exact tested sources are in evidence/resume_20261026_0450.
+Full inventory data and final outer guard receipts were not fetched after STOP.
+
+
+Final local checkpoint-publication review found no publication blocker in the
+named staged set. It verified unchanged contract, matching tested/source hashes,
+truthful97/98 ordering boundaries and exclusion of legacy probes. This does not
+clear GPU admission or issue a full CLEAN integrity verdict. Quarantine only
+attempts SIGCONT; its success is not guaranteed, reinforcing the hard block.

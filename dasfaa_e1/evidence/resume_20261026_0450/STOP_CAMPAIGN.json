@@ -1,0 +1,92 @@
+{
+  "recorded_utc": "2026-10-26T04:58:04.883464+00:00",
+  "reason": "authoritative guard refused source upload (97), then existing inventory connection returned guard-killed (98)",
+  "trigger_order": "97 observed first; inventory was already launched before97, received its final status afterward; remote temporal order not re-queried",
+  "upload_exit_code": 97,
+  "upload_stderr": "guard: refused, MemAvailable=212.9 GiB cgroup_headroom=24.5 GiB",
+  "inventory_exit_code": 98,
+  "inventory_stderr": "guard: killed (cgroup headroom 23.8 GiB < 24.0 GiB), peak rss 0.04 GiB, elapsed 17.0 s",
+  "remote_actions_after_first_observed_trigger": 0,
+  "automatic_retries": 0,
+  "new_gpu_launches": 0,
+  "new_cuda_builds": 0,
+  "shared_guard_modified": false,
+  "gpu_launch_block_still_set": true,
+  "full_inventory_complete": false,
+  "inventory_full_output_location": "remote E1 resume directory inventory.jsonl; not fetched after stop",
+  "remote_guard_logs_fetched_after_trigger": false,
+  "paper_results_eligible": false,
+  "resume_requires": "explicit user resumption after cgroup resource pressure is resolved; Linux full guard containment still unvalidated",
+  "local_evidence": {
+    "upload_native.sha256.json": {
+      "sha256": "fc49de255d1fb771ade59eb2073290df4392e6787862ac167bb74acf99892940",
+      "bytes": 2090,
+      "local_mtime_utc": "2026-10-26T04:57:08.017618+00:00"
+    },
+    "recover_status.stdout": {
+      "sha256": "ee76aefc735081e7592d27c970d303626b44ae4908fdd9dd2d2ecabe5d6e693a",
+      "bytes": 21473,
+      "local_mtime_utc": "2026-10-26T04:51:31.238666+00:00"
+    },
+    "initial_tests.log": {
+      "sha256": "6a31b18759d52f74e5e28195c64578f473dafdd524161b4bb777ce0127c28e48",
+      "bytes": 1963,
+      "local_mtime_utc": "2026-10-26T04:53:12.136214+00:00"
+    },
+    "upload_native.stderr": {
+      "sha256": "98cc064bacfcac1d52343167cf616d2f933eb245e15ff468e243a5c9793fe59f",
+      "bytes": 64,
+      "local_mtime_utc": "2026-10-26T04:57:08.110655+00:00"
+    },
+    "inventory.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "local_mtime_utc": "2026-10-26T04:56:51.364047+00:00"
+    },
+    "upload_cpu.stdout": {
+      "sha256": "afca3c178bf7c07f5c639f1e40da8cf6334df2fd01f1a36fd62b5699f38fd8e3",
+      "bytes": 165,
+      "local_mtime_utc": "2026-10-26T04:56:09.510574+00:00"
+    },
+    "linux_test.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "local_mtime_utc": "2026-10-26T04:56:18.337413+00:00"
+    },
+    "inventory.guard.stderr": {
+      "sha256": "0be811dfbc73a9b69eba5a2434e9bde09471f37ec7f5cf5f0ee8f134b7206f61",
+      "bytes": 87,
+      "local_mtime_utc": "2026-10-26T04:57:08.893467+00:00"
+    },
+    "linux_test.stdout": {
+      "sha256": "56e3feb00f6f057930ed06106a810df3cb8df051f17320443bbe09cb6d750057",
+      "bytes": 3009,
+      "local_mtime_utc": "2026-10-26T04:56:19.455919+00:00"
+    },
+    "upload_cpu.sha256.json": {
+      "sha256": "c318425628a38b889d2dccb0774417103d500f2a19c5c73c527e8e388e7a54ab",
+      "bytes": 182,
+      "local_mtime_utc": "2026-10-26T04:56:09.043112+00:00"
+    },
+    "upload_native.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "local_mtime_utc": "2026-10-26T04:57:08.020380+00:00"
+    },
+    "recover_status.py": {
+      "sha256": "a6687b7c4c9f8eb1a9ad1219e3b9dcea6c7c77a531b283161cd482a25b74b078",
+      "bytes": 981,
+      "local_mtime_utc": "2026-10-26T04:51:30.714164+00:00"
+    },
+    "upload_cpu.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "local_mtime_utc": "2026-10-26T04:56:09.045607+00:00"
+    },
+    "recover_status.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "local_mtime_utc": "2026-10-26T04:51:30.714885+00:00"
+    }
+  }
+}

@@ -52,26 +52,65 @@ class SafetyTests(unittest.TestCase):
         self.assertIn('pass_fds=lock_fds',source)
     def test_poll_interval(self):
         self.assertGreaterEqual(g.POLL_SECONDS,30)
-    def test_pre_pidfile_cleanup_keeps_watchdog_alive(self):
-        calls=[]
+    def test_failed_stop_is_not_a_cleanup_pass(self):
         class Watchdog:
             pid=100
-            def wait(self,timeout):
-                calls.append(('reap_watchdog',timeout))
-                return -9
-        def owned(pid,group,known):
-            known[pid]=pid*10
-            return True
-        with patch.object(g,'descendants',return_value=[100,101,102]),patch.object(g,'proc_identity',side_effect=lambda p:(100,p*10)),patch.object(g,'owned_pid',side_effect=owned),patch.object(g,'signal_owned',side_effect=lambda pid,sig,*args:calls.append((pid,sig)) or True):
-            self.assertTrue(g.terminate_guarded(Watchdog(),{100:1000}))
-        self.assertNotIn(100,[c[0] for c in calls])
-        self.assertLess(calls.index((101,g.signal.SIGSTOP)),calls.index((102,g.signal.SIGSTOP)))
-        self.assertLess(calls.index((102,g.signal.SIGKILL)),calls.index((101,g.signal.SIGKILL)))
-        self.assertEqual(calls[-1],('reap_watchdog',5))
+            def poll(self):return None
+        with patch.object(g,'freeze_owned',return_value=False):
+            self.assertFalse(g.terminate_guarded(Watchdog(),{100:1000}))
+
+    def test_all_threads_must_be_stopped(self):
+        with patch.object(g,'proc_identity',return_value=(100,1000)),patch.object(g,'owned_pid',return_value=True),patch.object(g,'thread_states',return_value=['T','R']),patch.object(g,'signal_owned',return_value=True):
+            self.assertFalse(g.freeze_owned(101,100,{101:1000},g.time.monotonic()+.01))
+
+    def test_incomplete_cleanup_cannot_unwind_to_unlock(self):
+        source=Path(r.__file__).read_text()
+        self.assertIn('guard.hold_failed_cleanup(p,known,folder/',source)
+        self.assertIn('guard.enable_subreaper()',source)
+        self.assertIn('known=guard.job_known()',source)
+        self.assertNotIn('guard.remember_target(folder,known)',source)
+        self.assertLess(source.index("        try:\n            identity=guard.proc_identity(p.pid)"),source.index('known[p.pid]=identity[1]'))
+        self.assertLess(source.index('guard.enable_subreaper()'),source.index('guard.acquire(a.out)'))
+
     def test_guard_exit_is_latched_before_summary_parse(self):
         source=Path(r.__file__).read_text()
-        latch=source.index("if not problem and receipt['exit_code'] in (3,97,98):")
+        latch=source.index("if receipt['exit_code'] in (3,97,98):")
         self.assertLess(latch,source.index("json.loads(result.read_text())"))
+    def test_mandatory_code_latches_even_with_post_launch_identity_failure(self):
+        for code in (3,97,98):
+            class Watchdog:
+                pid=100
+                def poll(self):return code
+                def wait(self,timeout=None):return code
+            with tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp);case=root/'case';case.mkdir();epoch=root/'epoch';epoch.mkdir()
+                patches=[patch.object(g,'ensure_launch_memory'),
+                         patch.object(g,'snapshot',return_value={'idle':True,'apps':''}),
+                         patch.object(g,'job_known',return_value={42:420}),
+                         patch.object(g,'sha',return_value='fixture'),
+                         patch.object(g.subprocess,'Popen',return_value=Watchdog()),
+                         patch.object(g,'proc_identity',side_effect=g.IdentityUnavailable('fixture')),
+                         patch.object(g,'terminate_guarded',return_value=True),
+                         patch.object(g,'host_memory',return_value={'MemAvailable':100*(1024**3)})]
+                for item in patches:item.start()
+                try:
+                    with self.assertRaises(g.FatalStop):
+                        r.run(root,epoch,6,'fixture-uuid',case,'D',300,lock_fds=(10,11))
+                    self.assertEqual(g._FATAL['detail']['code'],code)
+                    receipt=__import__('json').loads((epoch/'case_D/receipt.json').read_text())
+                    self.assertTrue(receipt['cleanup_complete'])
+                    self.assertEqual(receipt['exit_code'],code)
+                finally:
+                    for item in reversed(patches):item.stop()
+                    g._FATAL=None
+
+    def test_quarantine_does_not_unlock_on_logging_or_proc_errors(self):
+        class Watchdog:
+            pid=100
+            def poll(self):return 0
+        with patch.object(g,'save',side_effect=OSError('fixture')),patch.object(g,'signal_owned',return_value=True),patch.object(g,'reap_adopted'),patch.object(g,'owned_children',side_effect=[g.IdentityUnavailable('fixture'),[]]):
+            g.hold_failed_cleanup(Watchdog(),{g.os.getpid():42},Path('unused'))
+
     def test_case_header_limits_before_allocation(self):
         root=Path(__file__).resolve().parents[1]
         tmp_root=root/'bin_test_tmp'

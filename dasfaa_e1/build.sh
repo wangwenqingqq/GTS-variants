@@ -15,8 +15,9 @@ import hashlib, json
 from pathlib import Path
 root=Path('.')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-manifest={'executed_query_api':'searchIndexRnnUpdate + exact delta top-k + host merge',
-          'native_static_knn_executed':False,
+manifest={'selected_query_api':'searchIndexKnnV2 + tombstone overfetch + exact delta top-k + GPU-distance host merge',
+          'native_static_knn_selected':True,
+          'runtime_validated':False,
           'timing_eligible':False,
           'binary_sha256':{str(p):sha(p) for p in sorted((root/'bin').iterdir()) if p.is_file()},
           'input_source_sha256':{str(p):sha(p) for arm in ('g','p') for p in sorted((root/f'source_{arm}'/'include').iterdir()) if p.is_file()},

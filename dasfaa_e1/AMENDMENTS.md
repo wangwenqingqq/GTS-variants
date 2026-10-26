@@ -167,3 +167,92 @@ not yet a validated teardown guarantee. Do not clear the launch block without
 bounded Linux race/termination-failure/lock-lifetime regression evidence.
 The native range-vs-kNN decision and GIST/Deep collision decision remain pending.
 No old or new diagnostic observation is promoted to a paper result.
+
+## 2026-10-26 04:55 UTC — explicitly authorized E1 resumption and native kNN
+
+Reason: user authorized in the conversation (用户在对话中授权). This is an
+explicit resumption after the prior SSH-255 stop, not an automatic retry.
+The frozen CONTRACT.md is unchanged; its decision thresholds, workloads,
+oracle and timing scope remain unchanged.
+
+1. P and G dynamic kNN must execute the repaired native kNN path, not the
+   range-candidate adapter. P uses searchIndexKnnV2 with external query payloads,
+   stable IDs and all qnum*k distances. G may receive a minimal output-only
+   ID/distance adaptation analogous to mergeResKnnIds. Both mandatory patches
+   remain correctness fixes, not changes to pruning rules or distance arithmetic.
+   Correct dataset-specific tree height is mandatory. Prior independent probe
+   results do not waive E1's own correctness/sanitizer gates.
+2. Query-before-insert range workloads retain their existing range kernels.
+   Validate every complete result against the active-set oracle in smoke.
+   A failing range subworkload is correctness-failed, not silently repaired.
+3. Remove all corpus rows matching standard GIST/Deep query features (expected
+   17/42), preserving each complete standard query set. Record actual retained
+   N and hashes in manifests before execution. Other approved isolation rules
+   remain unchanged.
+4. First recover the preceding CPU inventory guard's final state and receipt;
+   no new experiment launches during recovery. Then run bounded CPU-only Linux
+   process-tree/late-fork/lock-lifetime regression. Only a passing regression
+   plus reviewed code change can clear the runner's GPU hard block.
+5. Finish read-only ChEMBL37/SureChEMBL/protein200k inventory. No corpus capacity
+   replacement is authorized; insufficient combinations stay contract-infeasible.
+6. Rebuild under guard, run every metric's memcheck/synccheck and all 21 complete
+   smoke cases, then full-output checks per workload. Only passing workloads
+   may enter six paired rounds, B* sweeps, separate evaluation and integrity audit.
+7. All remote commands use the authoritative guard; E1 GPU concurrency is one;
+   N<=10M, RSS<=16GiB, minimum MemAvailable>=48GiB and prelaunch>=64GiB.
+   Guard 97/98, fail-fast 3, NVML timeout or SSH failure stops the campaign with
+   no automatic retry, GPU switch or new epoch. Reuse existing runner admission
+   and locks; no le=qe+1, no C2. Deadline remains 2026-11-08.
+
+### 2026-10-26 04:54 UTC — recovery evidence and native-interface details
+
+The preceding entry's 04:55 heading was an approximate label; the recovery
+command itself ran at 04:51:31 UTC (authoritative remote clock in raw evidence).
+No experiment launched during recovery. Previous inventory guard receipt ends
+with child exit120 after20.041s, not97/98, peakRSS0.0307GiB. No prior E1 task
+appeared in the process snapshot. SSH255's original cause is not established.
+
+Native kNN does not filter tombstones. The minimal dynamic wrapper will request
+min(tree_N, k + deleted_tree_rows), return native IDs AND distances, filter the
+stable-ID delete bitmap, and merge exact delta top-k. This preserves native
+pruning/distance computation but includes potentially large overfetch costs in
+query latency. An insufficient/missing live result remains correctness-failed.
+C1 attribution must be audited: native static kNN may not exercise archival C1
+workspace/single-query update optimizations. Do not relabel a native-path speed
+ratio as isolated C1 evidence without establishing the executed contrast.
+
+For G's native kNN, cap its archival free-memory-dependent temporary workspace
+at4GiB (same cap as P); this avoids signed-int sizing overflow on96GiB devices,
+is not workspace enlargement, and does not alter pruning/distance kernels.
+P uses the external-vector overload for vector metrics; edit uses the native
+external-text-row/QID path because its vector overload does not support strings.
+Optional residual/C2 prediction is disabled without changing base pruning.
+These are prospective implementation boundaries, not correctness results.
+
+## 2026-10-26 04:57 UTC — mandatory resource fail-stop, no GPU promotion
+
+A bounded CPU runner-cancellation/lock composition test completed successfully
+under the authoritative guard. It verified already-created separate-session,
+late/orphaned descendants, missing result.pid, injected signal failure, complete
+subtree absence and lock retention/release. It did NOT establish standalone
+resource-guard timeout/RSS containment, a fork concurrent with teardown, or
+outer-runner death safety. Independent local review requires the GPU hard block
+to remain set. No shared guard file was modified.
+
+A later guarded source-upload command was refused with97: host MemAvailable
+212.9GiB but cgroup headroom24.5GiB, below its required25GiB. This is the first
+observed trigger; no new remote command was issued afterward. The previously
+launched pure read-only inventory then returned98 on its existing connection:
+cgroup headroom23.8GiB<24GiB, peakRSS0.04GiB, elapsed17.0s. Receipt timing does
+not establish which remote event happened first. No automatic retry, reconnect,
+new epoch, GPU switch, build, sanitizer or GPU launch followed. Full inventory
+output and final watchdog logs remain on the remote host and were not fetched
+after the stop. Root cause of other cgroup consumption was not established;
+host MemAvailable is not cgroup headroom and no other task was signaled.
+
+Only local code review, evidence preservation, tests and exact publication may
+continue. Reported times come from local/remote receipts; the brief live update's
+approximate04:59 label should not be treated as an event timestamp. User was
+asked about a possible E1-only hardened guard, but no such authorization has
+been received or used in this continuation. Even a later approval does not
+automatically waive this resource stop or authorize a retry.

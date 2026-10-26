@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "scope": "CPU runner cancellation and inherited-lock composition only",
+  "standalone_resource_guard_daemon_containment_validated": false,
+  "outer_guard_kill_can_bypass_runner_cleanup": true,
+  "gpu_admission_cleared": false,
+  "records": [
+    {
+      "passed": true,
+      "injected_failure_checked": false,
+      "rows": [
+        {
+          "label": "root",
+          "pid": 109626,
+          "ppid": 109625,
+          "sid": 109626
+        },
+        {
+          "label": "separate-session-child",
+          "pid": 109627,
+          "ppid": 109626,
+          "sid": 109627
+        },
+        {
+          "label": "late-orphan-grandchild",
+          "pid": 109628,
+          "ppid": 109621,
+          "sid": 109628
+        }
+      ],
+      "watchdog_exit": 247,
+      "guard_receipt": {
+        "t": 1792990579.1815243,
+        "label": "",
+        "event": "end",
+        "exit_code": -9,
+        "elapsed_s": 0.20405912399291992,
+        "peak_rss_gb": 0.000423431396484375,
+        "min_mem_available_gb": 213.78127670288086
+      },
+      "no_result_pid": true,
+      "inherited_locks_retained": true,
+      "whole_subtree_absent": true,
+      "locks_released_only_after_completion": true,
+      "label": "late_fork_and_locks"
+    },
+    {
+      "passed": true,
+      "injected_failure_checked": true,
+      "rows": [
+        {
+          "label": "root",
+          "pid": 109630,
+          "ppid": 109629,
+          "sid": 109630
+        },
+        {
+          "label": "separate-session-child",
+          "pid": 109631,
+          "ppid": 109630,
+          "sid": 109631
+        },
+        {
+          "label": "late-orphan-grandchild",
+          "pid": 109633,
+          "ppid": 109621,
+          "sid": 109633
+        }
+      ],
+      "watchdog_exit": 247,
+      "guard_receipt": {
+        "t": 1792990579.4734244,
+        "label": "",
+        "event": "end",
+        "exit_code": -9,
+        "elapsed_s": 0.20357680320739746,
+        "peak_rss_gb": 0.00049591064453125,
+        "min_mem_available_gb": 213.96127319335938
+      },
+      "no_result_pid": true,
+      "inherited_locks_retained": true,
+      "whole_subtree_absent": true,
+      "locks_released_only_after_completion": true,
+      "label": "termination_failure_and_locks"
+    }
+  ],
+  "tested_source_sha256": {
+    "gpu_guard.py": "ea0e46224c0607ad2f04ea846c022034f39008e613aa3a7b09ea0149b4ec821c",
+    "test_linux_guard.py": "32b6d8921cdd40f69bf91db91b7d39db23a02dad3febc2dc449ab56e08c80a7b"
+  },
+  "outer_guard_exit_code": 0
+}

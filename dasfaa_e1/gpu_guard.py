@@ -1,5 +1,5 @@
 """Reuse campaign v4 locks/PID ownership; add mandatory v3 fail-stop boundaries."""
-import csv, datetime, fcntl, hashlib, json, os, signal, subprocess, time
+import csv, ctypes, datetime, fcntl, hashlib, json, os, signal, subprocess, sys, time
 from pathlib import Path
 
 ELIGIBLE=(6,7,0,4,5,1,2,3)
@@ -146,38 +146,162 @@ def acquire(root):
     raise NoIdleGPU('no idle GPU in one admission pass; no task launched')
 
 
+_SUBREAPER=False
+
+
+def enable_subreaper():
+    """Retain orphaned setsid descendants inside this serialized runner."""
+    global _SUBREAPER
+    if sys.platform != 'linux':
+        raise RuntimeError('guarded process supervision requires Linux')
+    libc=ctypes.CDLL(None,use_errno=True)
+    if libc.prctl(36,1,0,0,0) != 0:
+        raise OSError(ctypes.get_errno(),'PR_SET_CHILD_SUBREAPER failed')
+    enabled=ctypes.c_int()
+    if libc.prctl(37,ctypes.byref(enabled),0,0,0) != 0 or enabled.value != 1:
+        raise RuntimeError('child subreaper was not enabled')
+    _SUBREAPER=True
+
+
+def job_known():
+    if not _SUBREAPER:
+        raise RuntimeError('enable child subreaper before launching a guarded task')
+    identity=proc_identity(os.getpid())
+    if identity is None:
+        raise IdentityUnavailable('runner identity unavailable')
+    return {os.getpid():identity[1]}
+
+
 def descendants(pid):
-    seen, stack = [], [pid]
+    seen,stack=set(),[pid]
+    result=[]
     while stack:
-        p = stack.pop()
-        seen.append(p)
+        current=stack.pop()
+        if current in seen:continue
+        seen.add(current);result.append(current)
         try:
-            for t in os.listdir(f"/proc/{p}/task"):
-                with open(f"/proc/{p}/task/{t}/children") as f:
-                    stack.extend(int(c) for c in f.read().split())
-        except OSError:
-            pass
-    return seen
+            tasks=os.listdir(f'/proc/{current}/task')
+        except FileNotFoundError:continue
+        except OSError as error:raise IdentityUnavailable('cannot inspect descendant tasks') from error
+        for tid in tasks:
+            try:
+                children=Path(f'/proc/{current}/task/{tid}/children').read_text()
+            except FileNotFoundError:continue
+            except OSError as error:raise IdentityUnavailable('cannot inspect descendant children') from error
+            stack.extend(int(child) for child in children.split())
+    return result
 
 
-def terminate_guarded(p,known):
-    """Keep the watchdog alive; freeze/kill only its verified owned subtree."""
-    history=[]
-    previous=None
-    for _ in range(8):
-        current=descendants(p.pid)[1:]
-        for pid in current:
-            identity=proc_identity(pid)
-            if identity is not None and owned_pid(pid,p.pid,known):
-                signal_owned(pid,signal.SIGSTOP,p.pid,known)
-        history=current
-        if current==previous: break
-        previous=current
-    for pid in reversed(history):
-        signal_owned(pid,signal.SIGKILL,p.pid,known)
+def thread_states(pid,birth):
+    identity=proc_identity(pid)
+    if identity is None or identity[1] != birth:return []
     try:
-        p.wait(timeout=5)
-        return True
-    except subprocess.TimeoutExpired:
-        # Never kill the watchdog while its separate-session command may live.
+        tasks=list(Path(f'/proc/{pid}/task').iterdir())
+    except FileNotFoundError:return []
+    except OSError as error:raise IdentityUnavailable('cannot inspect thread states') from error
+    states=[]
+    for task in tasks:
+        try:
+            text=(task/'stat').read_text()
+        except FileNotFoundError:continue
+        except OSError as error:raise IdentityUnavailable('cannot inspect thread state') from error
+        states.append(text[text.rfind(')')+2:].split()[0])
+    return states
+
+
+def same_process(pid,known):
+    identity=proc_identity(pid)
+    return identity is not None and known.get(pid) == identity[1]
+
+
+def freeze_owned(pid,group,known,deadline):
+    identity=proc_identity(pid)
+    if identity is None:return True
+    if not owned_pid(pid,group,known):return False
+    states=thread_states(pid,identity[1])
+    if all(state in ('T','t','Z','X') for state in states):return True
+    if not signal_owned(pid,signal.SIGSTOP,group,known):
+        return not same_process(pid,known)
+    while time.monotonic() < deadline:
+        if all(state in ('T','t','Z','X') for state in thread_states(pid,identity[1])):
+            return True
+        time.sleep(.005)
+    return False
+
+
+def owned_children(p,known):
+    # This process is dedicated to one serialized task; adopted orphans are owned.
+    anchor=os.getpid() if os.getpid() in known else p.pid
+    result=[]
+    for pid in descendants(anchor):
+        if pid == anchor:continue
+        if owned_pid(pid,p.pid,known):result.append(pid)
+        else:raise IdentityUnavailable('descendant ownership could not be proved')
+    return result
+
+
+def reap_adopted(p,known):
+    for pid in list(known):
+        if pid in (os.getpid(),p.pid):continue
+        try:os.waitpid(pid,os.WNOHANG)
+        except ChildProcessError:pass
+
+
+def terminate_guarded(p,known,timeout=5):
+    """Freeze the entire owned tree before killing; verify absence before unlock."""
+    deadline=time.monotonic()+timeout
+    try:
+        # STOP, unlike KILL, preserves the watchdog and inherited lock descriptors.
+        if p.poll() is None and not freeze_owned(p.pid,p.pid,known,deadline):return False
+        previous=None
+        while time.monotonic() < deadline:
+            current=owned_children(p,known)
+            for pid in current:
+                if pid != p.pid and not freeze_owned(pid,p.pid,known,deadline):return False
+            final=owned_children(p,known)
+            if final == current and current == previous:break
+            previous=current
+        else:return False
+        for pid in reversed(final):
+            if pid == p.pid:continue
+            if same_process(pid,known) and not signal_owned(pid,signal.SIGKILL,p.pid,known):return False
+        # No fork can race this proof: every thread in every parent is stopped.
+        children=[pid for pid in final if pid != p.pid]
+        if p.poll() is None:
+            if children:
+                if not signal_owned(p.pid,signal.SIGCONT,p.pid,known):return False
+            else:
+                # Watchdog was frozen before its child existed, or has no work left.
+                if not signal_owned(p.pid,signal.SIGKILL,p.pid,known):return False
+        try:p.wait(timeout=max(.001,deadline-time.monotonic()))
+        except subprocess.TimeoutExpired:return False
+        while time.monotonic() < deadline:
+            reap_adopted(p,known)
+            residual=owned_children(p,known)
+            live=[pid for pid in known if pid != os.getpid() and same_process(pid,known)]
+            if not residual and not live:return True
+            time.sleep(.005)
         return False
+    except BaseException:
+        return False
+
+
+def hold_failed_cleanup(p,known,receipt_path):
+    """Unvalidated fail-closed quarantine; GPU admission must remain blocked."""
+    # Attempt to resume the watchdog; failure still blocks production clearance.
+    try:signal_owned(p.pid,signal.SIGCONT,p.pid,known)
+    except BaseException:pass
+    try:
+        save(receipt_path,{'cleanup_complete':False,'action':'locks retained; manual intervention required',
+                           'guard_pid':p.pid,'known':known})
+    except BaseException:pass
+    # This cannot be bounded safely with the unchanged outer killpg watchdog.
+    # Never turn a logging/proc/interrupt exception into permission to unlock.
+    while True:
+        try:
+            reap_adopted(p,known)
+            if p.poll() is not None and not owned_children(p,known):
+                if not any(same_process(pid,known) for pid in known if pid != os.getpid()):
+                    return
+            time.sleep(1)
+        except BaseException:pass

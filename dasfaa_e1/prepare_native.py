@@ -1,4 +1,4 @@
-"""Derive range adapters and separately retain pinned, patched static kNN provenance."""
+"""Derive native kNN output adapters and retain the unmodified range path."""
 import hashlib, json, re
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent
@@ -55,10 +55,75 @@ def patch_static_search(name):
     assert 'update_disk = false; // FIX1' in fixed and '// FIX2:' in fixed and 'FAILFAST:' in fixed
     target = ROOT/f'native_{name}'/'search_v2.cuh'
     target.parent.mkdir(exist_ok=True)
-    target.write_text(fixed)
+    adapted = adapt_static_knn(name, fixed)
+    target.write_text(adapted)
     return dict(source_sha256=sha(original), patch_sha256=sha(delta),
-                patched_sha256=sha(fixed.encode()), executed=False,
-                reason='The dynamic adapter executes searchIndexRnnUpdate, not static searchIndexKnnV2.')
+                patched_sha256=sha(fixed.encode()), adapted_sha256=sha(adapted.encode()),
+                selected_for_execution=True, runtime_validated=False,
+                reason='Native searchIndexKnnV2 is selected; CUDA/oracle/sanitizer gates remain separate.')
+
+
+
+def function_body(code, marker):
+    start=code.index(marker); brace=code.index('{',start); end=brace+1; depth=1
+    while depth:
+        depth+=(code[end]=='{')-(code[end]=='}');end+=1
+    return start,brace,end
+
+
+def add_tanimoto(code):
+    at=0
+    while True:
+        hit=re.search(r'else if \(data_info\[2\] == 6\)',code[at:])
+        if not hit:break
+        start=at+hit.start();brace=code.index('{',start);end=brace+1;depth=1
+        while depth:
+            depth+=(code[end]=='{')-(code[end]=='}');end+=1
+        block=code[brace:end]
+        n=re.search(r'int n = size_s\[(.*?)\];',block)
+        if n:
+            left=n.group(1);right=re.search(r'int m = size_s\[(.*?)\];',block).group(1)
+            result=re.search(r'(\w+) = table\[n\]\[m\]',block).group(1)
+            expr=f'e1_tanimoto(data_d + size_t({left})*data_info[0], data_d + size_t({right})*data_info[0], data_info[0])'
+        else:
+            # The external-vector overload explicitly rejects edit distance.
+            result=re.search(r'(\w+) = INFI_DIS',block).group(1)
+            left='data_id' if result=='result' else 'node.pid'
+            expr=f'e1_tanimoto(data_d + size_t({left})*data_info[0], query_data + size_t(qid)*data_info[0], data_info[0])'
+        branch=f"\nelse if (data_info[2] == 8) {{ {result} = {expr}; }}\n"
+        code=code[:end]+branch+code[end:];at=end+len(branch)
+    return code
+
+
+def adapt_static_knn(name, fixed):
+    code=add_tanimoto(fixed)
+    if name=='p':
+        code=code.replace('#include "mlp_constant.cuh"\n','').replace('#include "residual_pruning.cuh"\n','')
+        assert code.count('float delta = rp_predict(dis_lb, disk[qid], cur_level);')==2
+        code=code.replace('float delta = rp_predict(dis_lb, disk[qid], cur_level);','float delta = 0.0f; // E1: C2 removed; native lower bound unchanged.')
+        return code
+    # G retains its distance/pruning kernels. Only carry the object ID payload
+    # through its existing key sort, then decode the sorted key like P.
+    start,brace,end=function_body(code,'__global__ void dataProcessKnn(')
+    body=code[start:end]
+    assert body.count('int data_id = id_list[node.lid + did];')==1
+    body=body.replace('double result = INFI_DIS;','double result = INFI_DIS;\n\t\tint data_id = -1;')
+    body=body.replace('int data_id = id_list[node.lid + did];','data_id = id_list[node.lid + did];')
+    body=body.replace('= bid * MAX_SIZE + did;','= (double)data_id;')
+    code=code[:start]+body+code[end:]
+    psource=ROOT/'source_p/include/search_v2.cuh'
+    pcode=psource.read_text()
+    a,b,e=function_body(pcode,'__global__ void mergeResKnnIds(')
+    code=code[:code.index('// Initialize res.')]+pcode[a:e]+'\n\n'+code[code.index('// Initialize res.'):]
+    start,brace,end=function_body(code,'void searchIndexKnnV2(')
+    body=code[start:end]
+    body=body.replace('int qnum, int k, int tree_h','int *res_ids, int qnum, int k, int tree_h',1)
+    body=body.replace('&res_dis, qnum * sizeof(float)','&res_dis, qnum * k * sizeof(float)')
+    body=body.replace('avail = avail / 2; // Allocate storage space as a half of available space.',
+        'avail = min(avail / 2, size_t(4) * 1024 * 1024 * 1024); // E1: same bounded 4 GiB workspace, never enlarge.')
+    body=body.replace('mergeResKnn<<<','mergeResKnnIds<<<').replace('nnum_up, res_dis, k);','nnum_up, res_ids, res_dis, k);')
+    code=code[:start]+body+code[end:]
+    return code
 
 
 def adapt(name):
@@ -68,21 +133,6 @@ def adapt(name):
     update = (src/'update.cuh').read_text()
     update = update[update.index('__global__ void leafProcessRnnUpdate'):update.index('void updateIndexRnn(')]
     update = update.replace('if (is_delete[data_id] == 0)', 'if (is_delete[e1_stable_ids[data_id]] == 0)')
-    def add_tanimoto(code):
-        at = 0
-        while True:
-            hit = re.search(r'else if \(data_info\[2\] == 6\)', code[at:])
-            if not hit: break
-            start = at + hit.start(); brace = code.index('{', start); end = brace+1; depth=1
-            while depth:
-                depth += (code[end]=='{') - (code[end]=='}'); end+=1
-            block = code[brace:end]
-            left = re.search(r'int n = size_s\[(.*?)\];', block).group(1)
-            right = re.search(r'int m = size_s\[(.*?)\];', block).group(1)
-            result = re.search(r'(\w+) = table\[n\]\[m\]', block).group(1)
-            branch = f"\nelse if (data_info[2] == 8) {{ {result} = e1_tanimoto(data_d + size_t({left})*data_info[0], data_d + size_t({right})*data_info[0], data_info[0]); }}\n"
-            code=code[:end]+branch+code[end:]; at=end+len(branch)
-        return code
     tree=add_tanimoto(tree);search=add_tanimoto(search);update=add_tanimoto(update)
     if name == 'p':
         old = re.search(r'\tMAX_H = computeMaxHeight\(TREE_ORDER, data_info\[1\]\);', tree)
